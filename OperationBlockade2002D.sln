@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OperationBlockade2002D", "OperationBlockade2002D.vcxproj", "{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Debug|x64.ActiveCfg = Debug|x64
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Debug|x64.Build.0 = Debug|x64
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Debug|x86.ActiveCfg = Debug|Win32
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Debug|x86.Build.0 = Debug|Win32
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Release|x64.ActiveCfg = Release|x64
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Release|x64.Build.0 = Release|x64
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Release|x86.ActiveCfg = Release|Win32
+		{CDB58B9A-DC49-45EF-A71F-BCF861410E3C}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FFA2494-2290-45DE-9F70-23AB4F9C3B5E}
+	EndGlobalSection
+EndGlobal

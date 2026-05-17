@@ -1,0 +1,73 @@
+//----- (00403220) --------------------------------------------------------
+int __thiscall sub_403220(void *this)
+{
+  int i; // edi
+  int v3; // eax
+  void *v4; // esi
+  void *v5; // eax
+  int v6; // eax
+  int v7; // esi
+  int k; // edi
+  void *v9; // eax
+  void *v10; // eax
+  int result; // eax
+  int j; // [esp+10h] [ebp-14h]
+
+  *(_DWORD *)this = &off_499098;
+  dword_4B5AB0 = 0;
+  if ( *((_BYTE *)this + 48) )
+  {
+    for ( i = 0; i < *((_DWORD *)this + 10); ++i )
+    {
+      v3 = *((_DWORD *)this + 9);
+      v4 = *(void **)(v3 + 4 * i);
+      if ( v4 )
+      {
+        sub_402CB0(*(_DWORD *)(v3 + 4 * i));
+        sub_4885A6(v4);
+      }
+    }
+  }
+  memset(*((void **)this + 9), 0, 4 * *((_DWORD *)this + 10));
+  v5 = (void *)*((_DWORD *)this + 9);
+  *((_DWORD *)this + 10) = 0;
+  sub_488CEE(v5);
+  *((_DWORD *)this + 11) = 0;
+  *((_DWORD *)this + 9) = 0;
+  if ( *((_BYTE *)this + 32) )
+  {
+    v6 = 0;
+    for ( j = 0; v6 < *((_DWORD *)this + 6); j = v6 )
+    {
+      v7 = *(_DWORD *)(*((_DWORD *)this + 5) + 4 * v6);
+      if ( v7 )
+      {
+        if ( *(_BYTE *)(v7 + 76) )
+        {
+          for ( k = 0; k < *(_DWORD *)(v7 + 68); ++k )
+          {
+            if ( *(_DWORD *)(*(_DWORD *)(v7 + 64) + 4 * k) )
+              sub_403860(1);
+          }
+        }
+        memset(*(void **)(v7 + 64), 0, 4 * *(_DWORD *)(v7 + 68));
+        v9 = *(void **)(v7 + 64);
+        *(_DWORD *)(v7 + 68) = 0;
+        sub_488CEE(v9);
+        *(_DWORD *)(v7 + 72) = 0;
+        *(_DWORD *)(v7 + 64) = 0;
+        sub_4885A6((LPVOID)v7);
+        v6 = j;
+      }
+      ++v6;
+    }
+  }
+  memset(*((void **)this + 5), 0, 4 * *((_DWORD *)this + 6));
+  v10 = (void *)*((_DWORD *)this + 5);
+  *((_DWORD *)this + 6) = 0;
+  result = sub_488CEE(v10);
+  *((_DWORD *)this + 7) = 0;
+  *((_DWORD *)this + 5) = 0;
+  *(_DWORD *)this = &off_499040;
+  return result;
+}

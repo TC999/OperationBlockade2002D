@@ -1,0 +1,31 @@
+//----- (00402300) --------------------------------------------------------
+char __thiscall sub_402300(char *this, int a2, int *a3, int *a4)
+{
+  double v5; // st7
+  int v6; // ecx
+  float v8; // [esp+Ch] [ebp-Ch] BYREF
+  float v9; // [esp+10h] [ebp-8h]
+  float v10; // [esp+14h] [ebp-4h]
+
+  v8 = 0.0;
+  v9 = 0.0;
+  v10 = 0.0;
+  sub_46C5C5(&v8, a2, this + 328);
+  sub_46C5C5(&v8, &v8, this + 264);
+  if ( v10 <= 0.0 || v10 >= 1.0 )
+  {
+    *a4 = 0;
+    *a3 = 0;
+  }
+  else
+  {
+    v9 = v9 * 0.5;
+    v5 = 0.5 - v9;
+    *a3 = (__int64)((v8 * 0.5 + 0.5) * (double)dword_5209F4);
+    v6 = (__int64)(v5 * (double)dword_5209D8);
+    *a4 = v6;
+    if ( *a3 >= 0 && *a3 < dword_5209F4 && (double)v6 >= 0.0 && v6 < dword_5209D8 )
+      return 1;
+  }
+  return 0;
+}

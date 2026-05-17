@@ -1,0 +1,19 @@
+//----- (0047BD85) --------------------------------------------------------
+unsigned int sub_47BD85()
+{
+  unsigned int v0; // kr00_4
+  unsigned int v1; // kr04_4
+  int v2; // edx
+
+  v0 = __readeflags();
+  __writeeflags(v0 ^ 0x200000);
+  v1 = __readeflags();
+  v2 = v0 ^ v1;
+  if ( v0 != v1 )
+  {
+    _EAX = 1;
+    __asm { cpuid }
+    return (_EDX & 0x800000u) >> 23;
+  }
+  return v2;
+}

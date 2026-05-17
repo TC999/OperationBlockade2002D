@@ -1,0 +1,50 @@
+//----- (0040F510) --------------------------------------------------------
+char *__thiscall sub_40F510(char *this)
+{
+  *((_DWORD *)this + 1) = 0;
+  *((_DWORD *)this + 2) = 0;
+  *((_DWORD *)this + 3) = 0;
+  this[16] = 1;
+  *(_DWORD *)this = &off_499040;
+  *((_DWORD *)this + 7) = 0;
+  *((_DWORD *)this + 8) = 0;
+  *((_DWORD *)this + 9) = 0;
+  *((_DWORD *)this + 10) = 0;
+  InitializeCriticalSection((LPCRITICAL_SECTION)(this + 44));
+  *((_DWORD *)this + 17) = 0;
+  *((_DWORD *)this + 18) = 0;
+  *((_DWORD *)this + 19) = 0;
+  this[80] = 0;
+  *((_DWORD *)this + 235) = 0;
+  *((_DWORD *)this + 236) = 0;
+  *(_DWORD *)this = &off_4991B0;
+  dword_4F5CC4 = (int)this;
+  *((_DWORD *)this + 6) = 0;
+  *((_DWORD *)this + 23) = 0;
+  *((_DWORD *)this + 24) = 0;
+  *((_DWORD *)this + 22) = 0;
+  *((_DWORD *)this + 21) = 0;
+  *((_DWORD *)this + 25) = 0;
+  *((_DWORD *)this + 26) = 4;
+  this[108] = 1;
+  this[938] = 0;
+  this[937] = 0;
+  this[936] = 0;
+  *((_DWORD *)this + 237) = 0;
+  *((_DWORD *)this + 238) = 0;
+  this[140] = 0;
+  this[400] = 0;
+  this[660] = 0;
+  InitializeCriticalSection((LPCRITICAL_SECTION)this + 40);
+  InitializeCriticalSection((LPCRITICAL_SECTION)(this + 112));
+  *((_DWORD *)this + 239) = 0;
+  this[920] = 0;
+  *((_DWORD *)this + 34) = 0;
+  *((_DWORD *)this + 246) = 0;
+  *((_DWORD *)this + 5) = 0;
+  this[988] = 0;
+  *((_DWORD *)this + 248) = 0;
+  *((_DWORD *)this + 249) = -1;
+  *((_DWORD *)this + 250) = 0;
+  return this;
+}

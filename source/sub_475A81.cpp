@@ -1,0 +1,14 @@
+//----- (00475A81) --------------------------------------------------------
+signed int __thiscall sub_475A81(_DWORD *this, int a2, int a3, const void *a4)
+{
+  signed int result; // eax
+
+  result = sub_4757B0((int)this, this[1037] + a2, this[1040] + a3, this[1056] != this[1044]);
+  if ( result >= 0 )
+  {
+    result = 16 * this[1044];
+    qmemcpy((void *)(this[1049] + 16 * (this[1036] - this[1050])), a4, result);
+    this[1057] = 1;
+  }
+  return result;
+}

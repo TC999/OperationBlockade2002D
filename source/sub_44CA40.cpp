@@ -1,0 +1,8 @@
+//----- (0044CA40) --------------------------------------------------------
+void *__thiscall sub_44CA40(void *this, char a2)
+{
+  sub_44CA60();
+  if ( (a2 & 1) != 0 )
+    sub_4885A6(this);
+  return this;
+}

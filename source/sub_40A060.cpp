@@ -1,0 +1,8 @@
+//----- (0040A060) --------------------------------------------------------
+char *sub_40A060()
+{
+  byte_4F5B00 = 0;
+  dword_4F5B04 = fopen(File, aW);
+  sub_4282E0(dword_4F5B04 != 0, aFailedToOpenEr, (char)File);
+  return &byte_4F5B00;
+}

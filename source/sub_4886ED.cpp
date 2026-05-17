@@ -1,0 +1,44 @@
+//----- (004886ED) --------------------------------------------------------
+double __usercall sub_4886ED@<st0>(
+        char a1@<zf>,
+        unsigned int a2@<eax>,
+        __int16 a3@<dx>,
+        double result@<st0>,
+        int a5,
+        int a6)
+{
+  char v6; // fps
+
+  if ( a1 )
+  {
+    if ( (a2 & 0xFFFFF) != 0 || a5 )
+    {
+      _convertTOStoQNaN();
+      goto LABEL_16;
+    }
+LABEL_15:
+    result = *(double *)&tbyte_4B2910;
+LABEL_16:
+    if ( dword_522320 )
+      return result;
+LABEL_17:
+    _startOneArgErrorHandling(aAsin, 14);
+    return result;
+  }
+  if ( a3 != 639 )
+    _load_CW();
+  if ( a2 < 0x3FF00000 )
+  {
+    result = atan2(result, sqrt((result + 1.0) * (1.0 - result)));
+    goto LABEL_6;
+  }
+  if ( a2 > 0x3FF00000 || a5 | a6 & 0xFFFFF )
+    goto LABEL_15;
+  result = *(double *)&tbyte_4B291A;
+  if ( a6 < 0 )
+    result = -*(double *)&tbyte_4B291A;
+LABEL_6:
+  if ( !dword_522320 && a3 != 639 && (a3 & 0x20) != 0 && (v6 & 0x20) != 0 )
+    goto LABEL_17;
+  return result;
+}

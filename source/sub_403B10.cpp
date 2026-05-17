@@ -1,0 +1,26 @@
+//----- (00403B10) --------------------------------------------------------
+_DWORD *__thiscall sub_403B10(_DWORD *this)
+{
+  _DWORD *result; // eax
+
+  result = this;
+  *this = &off_4990BC;
+  this[1] = 0;
+  this[2] = 0;
+  this[3] = 0;
+  this[4] = 0;
+  this[5] = 0;
+  this[7] = 0;
+  this[8] = 0;
+  this[10] = 0;
+  this[9] = 0;
+  this[11] = 0;
+  this[12] = 0;
+  this[13] = 0;
+  this[14] = 1;
+  *((_BYTE *)this + 60) = 0;
+  *((_BYTE *)this + 320) = 0;
+  this[145] = 0;
+  this[146] = 0;
+  return result;
+}

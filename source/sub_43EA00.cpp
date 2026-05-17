@@ -1,0 +1,39 @@
+//----- (0043EA00) --------------------------------------------------------
+int __thiscall sub_43EA00(_DWORD *this, const char *a2, int a3, int a4, char a5)
+{
+  int v6; // eax
+  int v7; // eax
+  int v8; // eax
+  int v9; // edx
+  int v10; // edx
+  int v11; // eax
+  int result; // eax
+  char Buffer[64]; // [esp+10h] [ebp-40h] BYREF
+
+  if ( a5 )
+  {
+    v6 = this[30];
+    if ( v6 <= 0 || (v7 = *(_DWORD *)(this[31] + 72 * v6 - 72), v7 != a4) && v7 )
+    {
+      v8 = sub_45E6F0(a4);
+      if ( v8 > -1 )
+      {
+        sprintf(Buffer, "%s:", (const char *)(*(_DWORD *)(dword_520970 + 280) + 352 * v8 + 899));
+        sub_43EA00(Buffer, a3, a4, 0);
+      }
+    }
+  }
+  if ( this[30] == this[29] )
+    sub_43E9B0(this);
+  v9 = this[31] + 72 * this[30];
+  strcpy((char *)(v9 + 8), a2);
+  *(_DWORD *)v9 = a4;
+  *(_DWORD *)(v9 + 4) = a3;
+  v10 = this[28];
+  v11 = this[30] + 1;
+  this[30] = v11;
+  *(_DWORD *)(v10 + 132) = v11;
+  result = this[28];
+  *(_BYTE *)(result + 136) = 1;
+  return result;
+}
