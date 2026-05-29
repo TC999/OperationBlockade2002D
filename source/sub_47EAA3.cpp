@@ -1,5 +1,5 @@
 //----- (0047EAA3) --------------------------------------------------------
-int __usercall sub_47EAA3@<eax>(int a1@<ebx>, jmp_buf Buf)
+int __usercall sub_47EAA3(int a1, jmp_buf Buf)
 {
   int *__attribute__((__org_typedef(jmp_buf))) v2; // esi
   int result; // eax

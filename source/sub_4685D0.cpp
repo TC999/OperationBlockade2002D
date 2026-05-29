@@ -1,5 +1,5 @@
 //----- (004685D0) --------------------------------------------------------
-void __userpurge sub_4685D0(int a1@<ecx>, int a2@<edi>, char *String2, int a4, float a5, float a6, float a7)
+void __userpurge sub_4685D0(int a1, int a2, char *String2, int a4, float a5, float a6, float a7)
 {
   int v8; // ebx
   int v9; // esi

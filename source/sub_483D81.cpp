@@ -1,5 +1,5 @@
 //----- (00483D81) --------------------------------------------------------
-int __usercall sub_483D81@<eax>(_DWORD *a1@<esi>)
+int __usercall sub_483D81(_DWORD *a1)
 {
   int v1; // ebx
   int v2; // eax

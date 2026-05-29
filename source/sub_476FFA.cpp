@@ -1,5 +1,5 @@
 //----- (00476FFA) --------------------------------------------------------
-char __usercall sub_476FFA@<al>(int a1@<esi>)
+char __usercall sub_476FFA(int a1)
 {
   unsigned int *v1; // edi
   unsigned int v2; // eax

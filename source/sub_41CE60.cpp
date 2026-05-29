@@ -1,5 +1,5 @@
 //----- (0041CE60) --------------------------------------------------------
-char __usercall sub_41CE60@<al>(int a1@<ebx>, unsigned int a2)
+char __usercall sub_41CE60(int a1, unsigned int a2)
 {
   unsigned int v2; // esi
   char v3; // dl

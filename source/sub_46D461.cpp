@@ -1,6 +1,6 @@
 //----- (0046D461) --------------------------------------------------------
-int __userpurge sub_46D461@<eax>(
-        char a1@<dil>,
+int __userpurge sub_46D461(
+        char a1,
         int a2,
         int a3,
         int a4,

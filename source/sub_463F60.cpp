@@ -1,5 +1,5 @@
 //----- (00463F60) --------------------------------------------------------
-void __userpurge sub_463F60(int a1@<ecx>, int a2@<edi>, float a3)
+void __userpurge sub_463F60(int a1, int a2, float a3)
 {
   double v4; // st7
   int v5; // ecx

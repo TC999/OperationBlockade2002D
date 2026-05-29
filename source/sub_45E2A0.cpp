@@ -1,5 +1,5 @@
 //----- (0045E2A0) --------------------------------------------------------
-char __userpurge sub_45E2A0@<al>(int a1@<ecx>, int a2@<ebp>, int a3, int a4, int a5, int a6)
+char __userpurge sub_45E2A0(int a1, int a2, int a3, int a4, int a5, int a6)
 {
   char *v7; // eax
   int v8; // eax

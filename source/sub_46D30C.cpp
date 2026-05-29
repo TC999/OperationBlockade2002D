@@ -1,5 +1,5 @@
 //----- (0046D30C) --------------------------------------------------------
-int __userpurge sub_46D30C@<eax>(char a1@<bl>, int a2, int a3, unsigned int a4, int a5)
+int __userpurge sub_46D30C(char a1, int a2, int a3, unsigned int a4, int a5)
 {
   int v5; // esi
   unsigned int v7; // eax

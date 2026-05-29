@@ -1,5 +1,5 @@
 //----- (0047B0C6) --------------------------------------------------------
-unsigned int __usercall sub_47B0C6@<eax>(unsigned __int16 *a1@<eax>, unsigned int *a2)
+unsigned int __usercall sub_47B0C6(unsigned __int16 *a1, unsigned int *a2)
 {
   int v2; // eax
   unsigned __int8 v3; // dl

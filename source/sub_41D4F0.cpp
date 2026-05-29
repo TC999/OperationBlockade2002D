@@ -1,5 +1,5 @@
 //----- (0041D4F0) --------------------------------------------------------
-char __usercall sub_41D4F0@<al>(int a1@<ecx>, int a2@<ebp>)
+char __usercall sub_41D4F0(int a1, int a2)
 {
   char v3; // bl
   int v4; // eax

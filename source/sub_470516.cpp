@@ -1,5 +1,5 @@
 //----- (00470516) --------------------------------------------------------
-int *__usercall sub_470516@<eax>(unsigned int a1@<ebx>, unsigned int a2@<edi>, int a3)
+int *__usercall sub_470516(unsigned int a1, unsigned int a2, int a3)
 {
   int *result; // eax
   int *v4; // esi

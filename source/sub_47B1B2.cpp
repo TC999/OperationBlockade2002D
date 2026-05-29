@@ -1,5 +1,5 @@
 //----- (0047B1B2) --------------------------------------------------------
-float *__usercall sub_47B1B2@<eax>(unsigned __int16 *a1@<edi>, float *a2, float *a3, int a4)
+float *__usercall sub_47B1B2(unsigned __int16 *a1, float *a2, float *a3, int a4)
 {
   int v4; // ebx
   int i; // eax

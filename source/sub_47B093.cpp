@@ -1,5 +1,5 @@
 //----- (0047B093) --------------------------------------------------------
-_WORD *__usercall sub_47B093@<eax>(_BYTE *a1@<eax>, _WORD *a2)
+_WORD *__usercall sub_47B093(_BYTE *a1, _WORD *a2)
 {
   __int16 v2; // cx
   _WORD *result; // eax

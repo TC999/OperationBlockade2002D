@@ -1,5 +1,5 @@
 //----- (00406110) --------------------------------------------------------
-int __userpurge sub_406110@<eax>(_DWORD *a1@<ecx>, int a2@<esi>, int a3, float *a4, int a5, char a6)
+int __userpurge sub_406110(_DWORD *a1, int a2, int a3, float *a4, int a5, char a6)
 {
   int v7; // edi
   int v8; // ebx

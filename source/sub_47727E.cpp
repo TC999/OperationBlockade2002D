@@ -1,5 +1,5 @@
 //----- (0047727E) --------------------------------------------------------
-char __usercall sub_47727E@<al>(char a1@<cl>, int a2@<esi>, char a3)
+char __usercall sub_47727E(char a1, int a2, char a3)
 {
   unsigned __int8 **v3; // ebx
   unsigned __int8 *v4; // eax

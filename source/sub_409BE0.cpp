@@ -1,11 +1,11 @@
 //----- (00409BE0) --------------------------------------------------------
 // positive sp value has been detected, the output may be wrong!
-char __userpurge sub_409BE0@<al>(
-        int a1@<ecx>,
-        int a2@<ebx>,
-        int a3@<ebp>,
-        int a4@<edi>,
-        int a5@<esi>,
+char __userpurge sub_409BE0(
+        int a1,
+        int a2,
+        int a3,
+        int a4,
+        int a5,
         float a6,
         float a7,
         float a8,

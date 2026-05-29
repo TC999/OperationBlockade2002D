@@ -1,9 +1,9 @@
 //----- (004886ED) --------------------------------------------------------
-double __usercall sub_4886ED@<st0>(
-        char a1@<zf>,
-        unsigned int a2@<eax>,
-        __int16 a3@<dx>,
-        double result@<st0>,
+double __usercall sub_4886ED(
+        char a1,
+        unsigned int a2,
+        __int16 a3,
+        double result,
         int a5,
         int a6)
 {

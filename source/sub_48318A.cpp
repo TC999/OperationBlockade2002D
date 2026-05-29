@@ -1,5 +1,5 @@
 //----- (0048318A) --------------------------------------------------------
-int __usercall sub_48318A@<eax>(int *a1@<eax>, int a2@<esi>, int a3)
+int __usercall sub_48318A(int *a1, int a2, int a3)
 {
   int v3; // ebx
   int v4; // ecx

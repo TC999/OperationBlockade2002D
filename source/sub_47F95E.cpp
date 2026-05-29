@@ -1,5 +1,5 @@
 //----- (0047F95E) --------------------------------------------------------
-char __usercall sub_47F95E@<al>(int a1@<esi>)
+char __usercall sub_47F95E(int a1)
 {
   int v1; // edi
   _WORD **v2; // eax

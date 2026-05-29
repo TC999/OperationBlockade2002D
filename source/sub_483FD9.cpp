@@ -1,5 +1,5 @@
 //----- (00483FD9) --------------------------------------------------------
-void __usercall sub_483FD9(int a1@<edi>)
+void __usercall sub_483FD9(int a1)
 {
   int v1; // edx
   int *v2; // ecx

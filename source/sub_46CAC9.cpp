@@ -1,5 +1,5 @@
 //----- (0046CAC9) --------------------------------------------------------
-int __usercall sub_46CAC9@<eax>(int a1@<eax>, _DWORD *a2@<ecx>)
+int __usercall sub_46CAC9(int a1, _DWORD *a2)
 {
   int v3; // edx
   unsigned int v4; // eax

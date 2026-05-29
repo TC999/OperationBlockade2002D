@@ -1,6 +1,6 @@
 //----- (00485FFB) --------------------------------------------------------
-int __usercall sub_485FFB@<eax>(
-        unsigned int *a1@<eax>,
+int __usercall sub_485FFB(
+        unsigned int *a1,
         _DWORD *a2,
         unsigned int a3,
         unsigned int a4,

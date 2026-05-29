@@ -1,7 +1,7 @@
 //----- (004066C0) --------------------------------------------------------
-float *__userpurge sub_4066C0@<eax>(
-        _DWORD *a1@<ecx>,
-        int a2@<esi>,
+float *__userpurge sub_4066C0(
+        _DWORD *a1,
+        int a2,
         _DWORD *a3,
         float *a4,
         float *a5,

@@ -1,5 +1,5 @@
 //----- (004839D0) --------------------------------------------------------
-int __usercall sub_4839D0@<eax>(int a1@<eax>)
+int __usercall sub_4839D0(int a1)
 {
   int v1; // esi
   int result; // eax

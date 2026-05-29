@@ -1,5 +1,5 @@
 //----- (0045ED50) --------------------------------------------------------
-void __userpurge sub_45ED50(_DWORD *a1@<ecx>, int a2@<edi>, _DWORD *a3, _DWORD *a4)
+void __userpurge sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
 {
   _DWORD *v4; // ebp
   int v6; // eax

@@ -1,5 +1,5 @@
 //----- (00443950) --------------------------------------------------------
-int __userpurge sub_443950@<eax>(_DWORD *a1@<ecx>, int a2@<ebx>, int *a3, int *a4, int a5, _DWORD *a6)
+int __userpurge sub_443950(_DWORD *a1, int a2, int *a3, int *a4, int a5, _DWORD *a6)
 {
   int v6; // edi
   int result; // eax

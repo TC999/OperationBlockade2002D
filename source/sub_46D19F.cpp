@@ -1,5 +1,5 @@
 //----- (0046D19F) --------------------------------------------------------
-int __userpurge sub_46D19F@<eax>(char a1@<sil>, int a2, int a3, int *a4, int a5, int a6, int *a7, int a8, int a9)
+int __userpurge sub_46D19F(char a1, int a2, int a3, int *a4, int a5, int a6, int *a7, int a8, int a9)
 {
   int v10; // esi
   char v12; // [esp+0h] [ebp-3Ch]

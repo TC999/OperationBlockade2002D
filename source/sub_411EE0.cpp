@@ -1,5 +1,5 @@
 //----- (00411EE0) --------------------------------------------------------
-int __userpurge sub_411EE0@<eax>(int a1@<ecx>, char a2@<bl>, _DWORD *a3, _DWORD *a4, _DWORD *a5)
+int __userpurge sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
 {
   signed int i; // esi
   char *v7; // ebx

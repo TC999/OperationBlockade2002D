@@ -1,5 +1,5 @@
 //----- (00476CDB) --------------------------------------------------------
-int __usercall sub_476CDB@<eax>(int a1@<esi>)
+int __usercall sub_476CDB(int a1)
 {
   int *v1; // eax
   int v2; // ecx

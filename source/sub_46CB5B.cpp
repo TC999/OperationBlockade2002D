@@ -1,7 +1,7 @@
 //----- (0046CB5B) --------------------------------------------------------
-int __usercall sub_46CB5B@<eax>(
-        int a1@<eax>,
-        char a2@<dil>,
+int __usercall sub_46CB5B(
+        int a1,
+        char a2,
         unsigned int *a3,
         unsigned int *a4,
         unsigned int *a5,

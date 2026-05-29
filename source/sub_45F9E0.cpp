@@ -1,5 +1,5 @@
 //----- (0045F9E0) --------------------------------------------------------
-char __userpurge sub_45F9E0@<al>(int a1@<ecx>, int a2@<edi>, int a3)
+char __userpurge sub_45F9E0(int a1, int a2, int a3)
 {
   double v4; // st7
   double v5; // st7

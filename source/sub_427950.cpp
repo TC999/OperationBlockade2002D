@@ -1,5 +1,5 @@
 //----- (00427950) --------------------------------------------------------
-int __usercall sub_427950@<eax>(int a1@<edi>, void *a2@<esi>)
+int __usercall sub_427950(int a1, void *a2)
 {
   _DWORD *v2; // eax
   _BYTE *v3; // eax

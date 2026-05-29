@@ -1,8 +1,8 @@
 //----- (00407A90) --------------------------------------------------------
-BOOL __userpurge sub_407A90@<eax>(
-        int a1@<ecx>,
-        int a2@<ebx>,
-        int a3@<esi>,
+BOOL __userpurge sub_407A90(
+        int a1,
+        int a2,
+        int a3,
         int a4,
         int a5,
         int a6,
