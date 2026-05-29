@@ -1,14 +1,14 @@
 //----- (00451710) --------------------------------------------------------
-void __thiscall sub_451710(LPVOID *this)
+void __thiscall sub_451710(LPVOID *self)
 {
-  if ( *this )
+  if ( *self )
   {
-    sub_4885A6(*this);
-    *this = 0;
+    sub_4885A6(*self);
+    *self = 0;
   }
-  if ( this[2] )
+  if ( self[2] )
   {
-    sub_4885A6(this[2]);
-    this[2] = 0;
+    sub_4885A6(self[2]);
+    self[2] = 0;
   }
 }

@@ -1,5 +1,5 @@
 //----- (0042A4F0) --------------------------------------------------------
-char __thiscall sub_42A4F0(_DWORD *this, _BYTE *a2)
+char __thiscall sub_42A4F0(_DWORD *self, _BYTE *a2)
 {
   _DWORD *v2; // esi
   char result; // al
@@ -7,8 +7,8 @@ char __thiscall sub_42A4F0(_DWORD *this, _BYTE *a2)
   bool v5; // zf
   int v6; // eax
 
-  v2 = (_DWORD *)*this;
-  if ( *(_DWORD *)*this )
+  v2 = (_DWORD *)*self;
+  if ( *(_DWORD *)*self )
     return 0;
   v4 = *((_BYTE *)v2 + 8);
   v5 = v4 == 0;

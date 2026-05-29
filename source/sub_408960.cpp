@@ -1,5 +1,5 @@
 //----- (00408960) --------------------------------------------------------
-int __thiscall sub_408960(_DWORD *this, float a2)
+int __thiscall sub_408960(_DWORD *self, float a2)
 {
   int v3; // edi
   int result; // eax
@@ -8,16 +8,16 @@ int __thiscall sub_408960(_DWORD *this, float a2)
   int v7; // ecx
 
   v3 = 0;
-  result = this[5];
+  result = self[5];
   if ( result > 0 )
   {
     v5 = 0;
     do
     {
-      v6 = (float *)sub_407190(this, v3, 1);
+      v6 = (float *)sub_407190(self, v3, 1);
       *((_BYTE *)v6 + 78) = 1;
       v6[20] = a2;
-      v7 = *(_DWORD *)(this[6] + v5 + 88);
+      v7 = *(_DWORD *)(self[6] + v5 + 88);
       if ( v7 )
       {
         if ( a2 == 1.0 )
@@ -25,7 +25,7 @@ int __thiscall sub_408960(_DWORD *this, float a2)
         else
           *(_DWORD *)(v7 + 12) = 4;
       }
-      result = this[5];
+      result = self[5];
       ++v3;
       v5 += 96;
     }

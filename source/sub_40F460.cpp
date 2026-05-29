@@ -1,5 +1,5 @@
 //----- (0040F460) --------------------------------------------------------
-char __thiscall sub_40F460(_BYTE *this, int a2, char a3)
+char __thiscall sub_40F460(_BYTE *self, int a2, char a3)
 {
   char result; // al
 
@@ -11,8 +11,8 @@ char __thiscall sub_40F460(_BYTE *this, int a2, char a3)
     {
       if ( a2 == 23 )
       {
-        result = this[416];
-        this[416] = result == 0;
+        result = self[416];
+        self[416] = result == 0;
       }
     }
   }

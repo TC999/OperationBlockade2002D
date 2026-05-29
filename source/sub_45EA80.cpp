@@ -1,5 +1,5 @@
 //----- (0045EA80) --------------------------------------------------------
-int __thiscall sub_45EA80(int this, int a2)
+int __thiscall sub_45EA80(int self, int a2)
 {
   int result; // eax
   int v4; // ebp
@@ -28,7 +28,7 @@ int __thiscall sub_45EA80(int this, int a2)
   int v27; // [esp+68h] [ebp-44h]
   int v28[16]; // [esp+6Ch] [ebp-40h] BYREF
 
-  sub_462F90(this);
+  sub_462F90(self);
   result = a2;
   v4 = 0;
   v12 = -1082130432;
@@ -47,15 +47,15 @@ int __thiscall sub_45EA80(int this, int a2)
   v25 = -1085730853;
   v26 = 1075235812;
   v27 = -1072247836;
-  *(_DWORD *)(this + 524) = a2;
+  *(_DWORD *)(self + 524) = a2;
   if ( a2 > 0 )
   {
-    v5 = (int *)(this + 2356);
+    v5 = (int *)(self + 2356);
     do
     {
-      if ( *(_DWORD *)(this + 524) == 1 )
+      if ( *(_DWORD *)(self + 524) == 1 )
       {
-        v6 = *(float *)(this + 428);
+        v6 = *(float *)(self + 428);
         v10[1] = 0.0;
         v10[2] = 0.0;
         *(v5 - 1) = 0;
@@ -64,15 +64,15 @@ int __thiscall sub_45EA80(int this, int a2)
         *v5 = 0;
         *((float *)v5 + 1) = v7;
       }
-      else if ( *(int *)(this + 520) > 1 )
+      else if ( *(int *)(self + 520) > 1 )
       {
-        v9 = *(float *)(this + 432);
-        v8 = *(float *)(this + 428);
+        v9 = *(float *)(self + 432);
+        v8 = *(float *)(self + 428);
         *(v5 - 1) = 0;
         v10[0] = v8;
         *(float *)v5 = v9;
         v5[1] = LODWORD(v10[0]);
-        sub_401000((float *)v5 - 1, v10[4 * *(_DWORD *)(this + 520) + v4]);
+        sub_401000((float *)v5 - 1, v10[4 * *(_DWORD *)(self + 520) + v4]);
       }
       sub_4074B0((_DWORD *)*(v5 - 3), 0);
       sub_407600((_DWORD *)*(v5 - 3), 0, *(v5 - 1), *v5, v5[1]);
@@ -84,10 +84,10 @@ int __thiscall sub_45EA80(int this, int a2)
       v5[7] = 0;
       v5[6] = 0;
       v5[8] = 0;
-      v5[2] = *(_DWORD *)(this + 424);
-      sub_407690(*(v5 - 3), *(_DWORD *)(this + 440), v28);
+      v5[2] = *(_DWORD *)(self + 424);
+      sub_407690(*(v5 - 3), *(_DWORD *)(self + 440), v28);
       sub_4010D0(v5 - 1, (int)v28);
-      result = *(_DWORD *)(this + 524);
+      result = *(_DWORD *)(self + 524);
       ++v4;
       v5 += 13;
     }

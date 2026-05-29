@@ -1,23 +1,23 @@
 //----- (0043D5D0) --------------------------------------------------------
-char __thiscall sub_43D5D0(int this, char *String1, int a3)
+char __thiscall sub_43D5D0(int self, char *String1, int a3)
 {
   int v5; // esi
   int v6; // edi
   int v7; // eax
 
-  if ( *(_BYTE *)(this + 44) )
+  if ( *(_BYTE *)(self + 44) )
     return 0;
   if ( !String1 )
     return 1;
   if ( !_strcmpi(String1, aResumebutton) )
   {
-    sub_4262D0(*(_DWORD *)(this + 40));
+    sub_4262D0(*(_DWORD *)(self + 40));
     return 1;
   }
   if ( !_strcmpi(String1, aOptionsbutton) )
   {
     strcpy(byte_521688, aIngamemenu);
-    sub_4261C0(*(_DWORD **)(this + 40), aOptions, 0);
+    sub_4261C0(*(_DWORD **)(self + 40), aOptions, 0);
     return 1;
   }
   if ( _strcmpi(String1, aAbortmissionbu) )
@@ -34,13 +34,13 @@ char __thiscall sub_43D5D0(int this, char *String1, int a3)
       else if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
       {
         sub_45AA80(*(_DWORD *)(dword_520970 + 236));
-        sub_4262D0(*(_DWORD *)(this + 40));
+        sub_4262D0(*(_DWORD *)(self + 40));
         return 1;
       }
     }
     return 1;
   }
-  sub_4262D0(*(_DWORD *)(this + 40));
+  sub_4262D0(*(_DWORD *)(self + 40));
   if ( *(_BYTE *)(dword_4F5CC4 + 937) )
   {
     sub_411C50(dword_4F5CC4);

@@ -1,5 +1,5 @@
 //----- (004436D0) --------------------------------------------------------
-_DWORD *__thiscall sub_4436D0(int *this, int a2)
+_DWORD *__thiscall sub_4436D0(int *self, int a2)
 {
   _DWORD *v3; // eax
   int v4; // ecx
@@ -21,12 +21,12 @@ _DWORD *__thiscall sub_4436D0(int *this, int a2)
 
   sub_4229D0(
     "Tank has arrived for boat %d %s: %s",
-    this[364],
-    *(const char **)(this[102] + 4),
+    self[364],
+    *(const char **)(self[102] + 4),
     *(const char **)(*(_DWORD *)(a2 + 412) + 4));
-  v3 = (_DWORD *)this[132];
-  v4 = this[133];
-  v5 = this + 130;
+  v3 = (_DWORD *)self[132];
+  v4 = self[133];
+  v5 = self + 130;
   v6 = v3;
   if ( (v4 - (int)v3) >> 2 )
   {

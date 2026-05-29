@@ -1,9 +1,9 @@
 //----- (004383D0) --------------------------------------------------------
-char *__thiscall sub_4383D0(char *this, int a2)
+char *__thiscall sub_4383D0(char *self, int a2)
 {
   char *result; // eax
 
-  result = &this[140 * a2 + 596];
+  result = &self[140 * a2 + 596];
   *((_DWORD *)result + 24) = 0;
   *((_DWORD *)result + 23) = 0;
   *((_DWORD *)result + 30) = 1065353216;

@@ -1,5 +1,5 @@
 //----- (0045C920) --------------------------------------------------------
-unsigned int __thiscall sub_45C920(_DWORD *this, char *a2, unsigned int a3, _DWORD *a4)
+unsigned int __thiscall sub_45C920(_DWORD *self, char *a2, unsigned int a3, _DWORD *a4)
 {
   _DWORD *v4; // ebx
   char *v5; // ecx
@@ -38,8 +38,8 @@ unsigned int __thiscall sub_45C920(_DWORD *this, char *a2, unsigned int a3, _DWO
   unsigned int v40; // [esp+20h] [ebp+8h]
   char *v41; // [esp+20h] [ebp+8h]
 
-  v4 = this;
-  v5 = (char *)this[2];
+  v4 = self;
+  v5 = (char *)self[2];
   v6 = a3;
   v36 = v4;
   if ( (v4[3] - (int)v5) / 12 >= a3 )

@@ -1,5 +1,5 @@
 //----- (00405C00) --------------------------------------------------------
-char __thiscall sub_405C00(_DWORD *this, int a2)
+char __thiscall sub_405C00(_DWORD *self, int a2)
 {
-  return *(_BYTE *)(this[1] + 172 * a2 + 80);
+  return *(_BYTE *)(self[1] + 172 * a2 + 80);
 }

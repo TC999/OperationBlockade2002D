@@ -1,5 +1,5 @@
 //----- (0040ADB0) --------------------------------------------------------
-unsigned int __thiscall sub_40ADB0(_DWORD *this)
+unsigned int __thiscall sub_40ADB0(_DWORD *self)
 {
   unsigned int v1; // edi
   int i; // ebx
@@ -10,7 +10,7 @@ unsigned int __thiscall sub_40ADB0(_DWORD *this)
   v1 = 0;
   for ( i = 0; ; i += 12 )
   {
-    v3 = this[1] + 24 * this[70];
+    v3 = self[1] + 24 * self[70];
     result = *(_DWORD *)(v3 + 8);
     if ( !result )
       break;

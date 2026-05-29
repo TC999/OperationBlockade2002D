@@ -1,5 +1,5 @@
 //----- (0040FDD0) --------------------------------------------------------
-_DWORD *__thiscall sub_40FDD0(int this, _DWORD *a2, char *String2)
+_DWORD *__thiscall sub_40FDD0(int self, _DWORD *a2, char *String2)
 {
   struct _RTL_CRITICAL_SECTION *v4; // ebp
   int v5; // esi
@@ -9,9 +9,9 @@ _DWORD *__thiscall sub_40FDD0(int this, _DWORD *a2, char *String2)
   int v9; // [esp+28h] [ebp-4h] BYREF
 
   v9 = 0;
-  v4 = (struct _RTL_CRITICAL_SECTION *)(this + 960);
-  EnterCriticalSection((LPCRITICAL_SECTION)(this + 960));
-  v5 = *(_DWORD *)(this + 956);
+  v4 = (struct _RTL_CRITICAL_SECTION *)(self + 960);
+  EnterCriticalSection((LPCRITICAL_SECTION)(self + 960));
+  v5 = *(_DWORD *)(self + 956);
   if ( !v5 )
   {
 LABEL_4:
@@ -27,8 +27,8 @@ LABEL_13:
     if ( !v5 )
       goto LABEL_4;
   }
-  v6 = (*(int (__stdcall **)(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, int *, _DWORD))(**(_DWORD **)(this + 24) + 24))(
-         *(_DWORD *)(this + 24),
+  v6 = (*(int (__stdcall **)(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, int *, _DWORD))(**(_DWORD **)(self + 24) + 24))(
+         *(_DWORD *)(self + 24),
          *(_DWORD *)(v5 + 260),
          *(_DWORD *)(v5 + 264),
          *(_DWORD *)(v5 + 268),
@@ -57,10 +57,10 @@ LABEL_13:
     }
     goto LABEL_13;
   }
-  *(_BYTE *)(this + 936) = 0;
-  *(_BYTE *)(this + 937) = 0;
-  *(_BYTE *)(this + 938) = 1;
-  *(_DWORD *)(this + 940) = 0;
+  *(_BYTE *)(self + 936) = 0;
+  *(_BYTE *)(self + 937) = 0;
+  *(_BYTE *)(self + 938) = 1;
+  *(_DWORD *)(self + 940) = 0;
   sub_488CEE(0);
   result = a2;
   *a2 = 0;

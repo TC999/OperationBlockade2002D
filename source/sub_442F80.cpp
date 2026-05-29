@@ -1,5 +1,5 @@
 //----- (00442F80) --------------------------------------------------------
-_WORD *__thiscall sub_442F80(_DWORD *this, _WORD *a2)
+_WORD *__thiscall sub_442F80(_DWORD *self, _WORD *a2)
 {
   int v3; // ebx
   int v4; // edi
@@ -19,9 +19,9 @@ _WORD *__thiscall sub_442F80(_DWORD *this, _WORD *a2)
   v10 = 0;
   if ( v8 )
   {
-    v4 = this[6];
+    v4 = self[6];
     if ( v4 )
-      v5 = sub_443250(v3, (this[7] - v4) >> 2);
+      v5 = sub_443250(v3, (self[7] - v4) >> 2);
     else
       v5 = sub_443250(v3, 0);
   }
@@ -29,12 +29,12 @@ _WORD *__thiscall sub_442F80(_DWORD *this, _WORD *a2)
   {
     v5 = 0;
   }
-  v6 = this[7];
+  v6 = self[7];
   a2 = (_WORD *)v5;
   v10 = -1;
   sub_44F190(v6, 1, &a2);
   sub_4442A0(a2);
-  sub_428680(this, (int)a2);
+  sub_428680(self, (int)a2);
   if ( *(_BYTE *)(dword_4F5CC4 + 937) )
     (*(void (__thiscall **)(_WORD *, _DWORD))(*(_DWORD *)a2 + 24))(a2, 0);
   return a2;

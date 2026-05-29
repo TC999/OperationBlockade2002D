@@ -1,10 +1,10 @@
 //----- (0043BAF0) --------------------------------------------------------
-const char *__thiscall sub_43BAF0(_DWORD *this, char *String1)
+const char *__thiscall sub_43BAF0(_DWORD *self, char *String1)
 {
   const char *result; // eax
   int v3; // esi
 
-  result = sub_424350(this, aHelptext);
+  result = sub_424350(self, aHelptext);
   v3 = (int)result;
   if ( result )
   {

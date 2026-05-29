@@ -1,12 +1,12 @@
 //----- (00474C42) --------------------------------------------------------
-void __thiscall sub_474C42(int this, int a2, int a3, float *a4)
+void __thiscall sub_474C42(int self, int a2, int a3, float *a4)
 {
   unsigned int v4; // eax
   unsigned int i; // esi
   double v7; // st6
 
-  v4 = *(_DWORD *)(this + 24) + a3 * *(_DWORD *)(this + 4172) + a2 * *(_DWORD *)(this + 4168);
-  for ( i = v4 + 4 * *(_DWORD *)(this + 4176); v4 < i; *(a4 - 1) = 1.0 )
+  v4 = *(_DWORD *)(self + 24) + a3 * *(_DWORD *)(self + 4172) + a2 * *(_DWORD *)(self + 4168);
+  for ( i = v4 + 4 * *(_DWORD *)(self + 4176); v4 < i; *(a4 - 1) = 1.0 )
   {
     *a4 = (double)*(unsigned __int8 *)(v4 + 2) * 0.0039215689;
     a4[1] = (double)*(unsigned __int8 *)(v4 + 1) * 0.0039215689;
@@ -15,6 +15,6 @@ void __thiscall sub_474C42(int this, int a2, int a3, float *a4)
     a4 += 4;
     *(a4 - 2) = v7 * 0.0039215689;
   }
-  if ( *(_DWORD *)(this + 16) )
-    sub_4735E3((float *)this, &a4[-4 * *(_DWORD *)(this + 4176)]);
+  if ( *(_DWORD *)(self + 16) )
+    sub_4735E3((float *)self, &a4[-4 * *(_DWORD *)(self + 4176)]);
 }

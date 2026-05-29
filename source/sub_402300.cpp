@@ -1,5 +1,5 @@
 //----- (00402300) --------------------------------------------------------
-char __thiscall sub_402300(char *this, int a2, int *a3, int *a4)
+char __thiscall sub_402300(char *self, int a2, int *a3, int *a4)
 {
   double v5; // st7
   int v6; // ecx
@@ -10,8 +10,8 @@ char __thiscall sub_402300(char *this, int a2, int *a3, int *a4)
   v8 = 0.0;
   v9 = 0.0;
   v10 = 0.0;
-  sub_46C5C5(&v8, a2, this + 328);
-  sub_46C5C5(&v8, &v8, this + 264);
+  sub_46C5C5(&v8, a2, self + 328);
+  sub_46C5C5(&v8, &v8, self + 264);
   if ( v10 <= 0.0 || v10 >= 1.0 )
   {
     *a4 = 0;

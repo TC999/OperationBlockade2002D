@@ -1,10 +1,10 @@
 //----- (00448C20) --------------------------------------------------------
-int __thiscall sub_448C20(int this)
+int __thiscall sub_448C20(int self)
 {
-  sub_4885A6(*(LPVOID *)(this + 40));
-  *(_DWORD *)(this + 40) = 0;
-  *(_DWORD *)(this + 44) = 0;
-  *(_DWORD *)(this + 48) = 0;
-  nullsub_1(this + 16);
-  return nullsub_1(this + 4);
+  sub_4885A6(*(LPVOID *)(self + 40));
+  *(_DWORD *)(self + 40) = 0;
+  *(_DWORD *)(self + 44) = 0;
+  *(_DWORD *)(self + 48) = 0;
+  nullsub_1(self + 16);
+  return nullsub_1(self + 4);
 }

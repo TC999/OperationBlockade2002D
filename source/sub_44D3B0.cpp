@@ -1,5 +1,5 @@
 //----- (0044D3B0) --------------------------------------------------------
-int __thiscall sub_44D3B0(_DWORD *this, int a2)
+int __thiscall sub_44D3B0(_DWORD *self, int a2)
 {
   int result; // eax
   int v4; // esi
@@ -53,7 +53,7 @@ int __thiscall sub_44D3B0(_DWORD *this, int a2)
     {
       v10 = 1.0;
     }
-    v12 = this[7494];
+    v12 = self[7494];
     v18 = 0;
     (*(void (__stdcall **)(int, _DWORD, int, int *, _DWORD))(*(_DWORD *)v12 + 44))(v12, 0, 96, &v18, 0);
     v13 = (unsigned int)(__int64)(v10 * 255.0) << 24;
@@ -97,7 +97,7 @@ int __thiscall sub_44D3B0(_DWORD *this, int a2)
     *(_DWORD *)(v18 + 84) = v13 | 0xFFFFFF;
     *(_DWORD *)(v18 + 88) = 0;
     *(_DWORD *)(v18 + 92) = 1065353216;
-    (*(void (__stdcall **)(_DWORD))(*(_DWORD *)this[7494] + 48))(this[7494]);
+    (*(void (__stdcall **)(_DWORD))(*(_DWORD *)self[7494] + 48))(self[7494]);
     memset(&v22[11], 0, 16);
     memset(&v22[6], 0, 16);
     memset(&v22[1], 0, 16);
@@ -112,9 +112,9 @@ int __thiscall sub_44D3B0(_DWORD *this, int a2)
     (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int))(**(_DWORD **)ArgList + 332))(
       *(_DWORD *)ArgList,
       0,
-      this[7494],
+      self[7494],
       24);
-    (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 340))(*(_DWORD *)ArgList, this[7495], 0);
+    (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 340))(*(_DWORD *)ArgList, self[7495], 0);
     (*(void (__stdcall **)(_DWORD, int, _DWORD, int, _DWORD, int))(**(_DWORD **)ArgList + 284))(
       *(_DWORD *)ArgList,
       4,

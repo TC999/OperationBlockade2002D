@@ -1,5 +1,5 @@
 //----- (00403220) --------------------------------------------------------
-int __thiscall sub_403220(void *this)
+int __thiscall sub_403220(void *self)
 {
   int i; // edi
   int v3; // eax
@@ -13,13 +13,13 @@ int __thiscall sub_403220(void *this)
   int result; // eax
   int j; // [esp+10h] [ebp-14h]
 
-  *(_DWORD *)this = &off_499098;
+  *(_DWORD *)self = &off_499098;
   dword_4B5AB0 = 0;
-  if ( *((_BYTE *)this + 48) )
+  if ( *((_BYTE *)self + 48) )
   {
-    for ( i = 0; i < *((_DWORD *)this + 10); ++i )
+    for ( i = 0; i < *((_DWORD *)self + 10); ++i )
     {
-      v3 = *((_DWORD *)this + 9);
+      v3 = *((_DWORD *)self + 9);
       v4 = *(void **)(v3 + 4 * i);
       if ( v4 )
       {
@@ -28,18 +28,18 @@ int __thiscall sub_403220(void *this)
       }
     }
   }
-  memset(*((void **)this + 9), 0, 4 * *((_DWORD *)this + 10));
-  v5 = (void *)*((_DWORD *)this + 9);
-  *((_DWORD *)this + 10) = 0;
+  memset(*((void **)self + 9), 0, 4 * *((_DWORD *)self + 10));
+  v5 = (void *)*((_DWORD *)self + 9);
+  *((_DWORD *)self + 10) = 0;
   sub_488CEE(v5);
-  *((_DWORD *)this + 11) = 0;
-  *((_DWORD *)this + 9) = 0;
-  if ( *((_BYTE *)this + 32) )
+  *((_DWORD *)self + 11) = 0;
+  *((_DWORD *)self + 9) = 0;
+  if ( *((_BYTE *)self + 32) )
   {
     v6 = 0;
-    for ( j = 0; v6 < *((_DWORD *)this + 6); j = v6 )
+    for ( j = 0; v6 < *((_DWORD *)self + 6); j = v6 )
     {
-      v7 = *(_DWORD *)(*((_DWORD *)this + 5) + 4 * v6);
+      v7 = *(_DWORD *)(*((_DWORD *)self + 5) + 4 * v6);
       if ( v7 )
       {
         if ( *(_BYTE *)(v7 + 76) )
@@ -62,12 +62,12 @@ int __thiscall sub_403220(void *this)
       ++v6;
     }
   }
-  memset(*((void **)this + 5), 0, 4 * *((_DWORD *)this + 6));
-  v10 = (void *)*((_DWORD *)this + 5);
-  *((_DWORD *)this + 6) = 0;
+  memset(*((void **)self + 5), 0, 4 * *((_DWORD *)self + 6));
+  v10 = (void *)*((_DWORD *)self + 5);
+  *((_DWORD *)self + 6) = 0;
   result = sub_488CEE(v10);
-  *((_DWORD *)this + 7) = 0;
-  *((_DWORD *)this + 5) = 0;
-  *(_DWORD *)this = &off_499040;
+  *((_DWORD *)self + 7) = 0;
+  *((_DWORD *)self + 5) = 0;
+  *(_DWORD *)self = &off_499040;
   return result;
 }

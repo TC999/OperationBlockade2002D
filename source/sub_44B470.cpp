@@ -1,5 +1,5 @@
 //----- (0044B470) --------------------------------------------------------
-int __thiscall sub_44B470(_DWORD **this)
+int __thiscall sub_44B470(_DWORD **self)
 {
-  return (*(int (__thiscall **)(_DWORD *))(*this[5] + 8))(this[5]);
+  return (*(int (__thiscall **)(_DWORD *))(*self[5] + 8))(self[5]);
 }

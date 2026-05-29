@@ -1,5 +1,5 @@
 //----- (00423120) --------------------------------------------------------
-double __thiscall sub_423120(int *this)
+double __thiscall sub_423120(int *self)
 {
   int v1; // edx
   double v2; // st7
@@ -9,12 +9,12 @@ double __thiscall sub_423120(int *this)
   float *v6; // eax
   double v7; // st5
 
-  v1 = this[1];
+  v1 = self[1];
   v2 = 0.0;
   v3 = 0.0;
   if ( v1 > 1 )
   {
-    v4 = *this;
+    v4 = *self;
     v5 = v1 - 1;
     v6 = (float *)(v4 + 8);
     do

@@ -1,5 +1,5 @@
 //----- (0045EE50) --------------------------------------------------------
-int __thiscall sub_45EE50(int this, int a2)
+int __thiscall sub_45EE50(int self, int a2)
 {
   int result; // eax
   unsigned int i; // edi
@@ -10,27 +10,27 @@ int __thiscall sub_45EE50(int this, int a2)
   int v9; // ebp
   int v10; // edx
 
-  *(_BYTE *)(this + 2645) = 0;
-  result = *(_DWORD *)(this + 2568);
+  *(_BYTE *)(self + 2645) = 0;
+  result = *(_DWORD *)(self + 2568);
   if ( result
-    && a2 < (unsigned int)((*(_DWORD *)(this + 2572) - result) >> 3)
+    && a2 < (unsigned int)((*(_DWORD *)(self + 2572) - result) >> 3)
     && a2 >= 0
-    && (*(_DWORD *)(this + 2572) - result) >> 3 )
+    && (*(_DWORD *)(self + 2572) - result) >> 3 )
   {
-    *(_DWORD *)(this + 2580) = a2;
-    for ( i = 0; ; *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 2568) + 8 * i - 8) + 652) + 36) = 0 )
+    *(_DWORD *)(self + 2580) = a2;
+    for ( i = 0; ; *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 2568) + 8 * i - 8) + 652) + 36) = 0 )
     {
-      v5 = *(_DWORD *)(this + 2568);
-      if ( !v5 || i >= (*(_DWORD *)(this + 2572) - v5) >> 3 )
+      v5 = *(_DWORD *)(self + 2568);
+      if ( !v5 || i >= (*(_DWORD *)(self + 2572) - v5) >> 3 )
         break;
       v6 = *(_DWORD *)(*(_DWORD *)(v5 + 8 * i) + 652);
-      v7 = *(_DWORD *)(this + 2580);
+      v7 = *(_DWORD *)(self + 2580);
       LOBYTE(v7) = i == v7;
       (*(void (__thiscall **)(int, int))(*(_DWORD *)v6 + 24))(v6, v7);
       ++i;
-      *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 2568) + 8 * i - 8) + 652) + 32) = 0;
+      *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 2568) + 8 * i - 8) + 652) + 32) = 0;
     }
-    v8 = this + 2720;
+    v8 = self + 2720;
     v9 = 100;
     do
     {
@@ -44,19 +44,19 @@ int __thiscall sub_45EE50(int this, int a2)
       --v9;
     }
     while ( v9 );
-    *(_DWORD *)(this + 2660) = 0;
-    *(_DWORD *)(this + 2664) = 0;
-    *(_BYTE *)(this + 2668) = 0;
-    *(_DWORD *)(this + 2672) = 0;
-    memset((void *)(this + 2676), 0, 0x2Cu);
-    v10 = *(_DWORD *)(this + 2580);
-    *(_BYTE *)(this + 2647) = 0;
-    *(_DWORD *)(this + 2648) = 0;
-    *(_DWORD *)(this + 2656) = 0;
-    *(_DWORD *)(this + 2652) = 0;
+    *(_DWORD *)(self + 2660) = 0;
+    *(_DWORD *)(self + 2664) = 0;
+    *(_BYTE *)(self + 2668) = 0;
+    *(_DWORD *)(self + 2672) = 0;
+    memset((void *)(self + 2676), 0, 0x2Cu);
+    v10 = *(_DWORD *)(self + 2580);
+    *(_BYTE *)(self + 2647) = 0;
+    *(_DWORD *)(self + 2648) = 0;
+    *(_DWORD *)(self + 2656) = 0;
+    *(_DWORD *)(self + 2652) = 0;
     return sub_436A40(
              *(_DWORD *)(dword_520970 + 224),
-             *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 2568) + 8 * v10) + 300) - 1);
+             *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 2568) + 8 * v10) + 300) - 1);
   }
   return result;
 }

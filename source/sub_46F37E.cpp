@@ -1,5 +1,5 @@
 //----- (0046F37E) --------------------------------------------------------
-int __thiscall sub_46F37E(_DWORD *this)
+int __thiscall sub_46F37E(_DWORD *self)
 {
   _WORD *v2; // ecx
   _DWORD *v3; // eax
@@ -23,9 +23,9 @@ int __thiscall sub_46F37E(_DWORD *this)
   unsigned __int16 *v22; // [esp+20h] [ebp-8h]
   _WORD *v23; // [esp+24h] [ebp-4h]
 
-  v2 = *(_WORD **)(this[1] + 24);
-  v16 = this;
-  v3 = (_DWORD *)*this;
+  v2 = *(_WORD **)(self[1] + 24);
+  v16 = self;
+  v3 = (_DWORD *)*self;
   v4 = (unsigned __int16 *)v3[6];
   v5 = v3[1042];
   v6 = (unsigned __int16 *)((char *)v4 + v5 * v3[1045]);

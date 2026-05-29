@@ -1,5 +1,5 @@
 //----- (00429240) --------------------------------------------------------
-int __thiscall sub_429240(int this, int a2)
+int __thiscall sub_429240(int self, int a2)
 {
   int v2; // esi
   Concurrency::details::TaskStack *v4; // eax
@@ -14,14 +14,14 @@ int __thiscall sub_429240(int this, int a2)
   v2 = a2 + 1;
   if ( a2 + 1 >= 8 )
   {
-    if ( v2 < 2 * *(_DWORD *)(this + 8) )
-      v2 = 2 * *(_DWORD *)(this + 8);
+    if ( v2 < 2 * *(_DWORD *)(self + 8) )
+      v2 = 2 * *(_DWORD *)(self + 8);
   }
   else
   {
     v2 = 8;
   }
-  *(_DWORD *)(this + 8) = v2;
+  *(_DWORD *)(self + 8) = v2;
   v4 = (Concurrency::details::TaskStack *)operator new(272 * v2);
   v5 = v4;
   if ( v4 )
@@ -45,18 +45,18 @@ int __thiscall sub_429240(int this, int a2)
     v5 = 0;
   }
   v9 = 0;
-  if ( *(int *)(this + 4) > 0 )
+  if ( *(int *)(self + 4) > 0 )
   {
     v10 = 0;
     do
     {
       ++v9;
-      qmemcpy((char *)v5 + v10, (const void *)(*(_DWORD *)this + v10), 0x110u);
+      qmemcpy((char *)v5 + v10, (const void *)(*(_DWORD *)self + v10), 0x110u);
       v10 += 272;
     }
-    while ( v9 < *(_DWORD *)(this + 4) );
+    while ( v9 < *(_DWORD *)(self + 4) );
   }
-  result = sub_4885A6(*(LPVOID *)this);
-  *(_DWORD *)this = v5;
+  result = sub_4885A6(*(LPVOID *)self);
+  *(_DWORD *)self = v5;
   return result;
 }

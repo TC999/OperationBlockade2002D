@@ -1,5 +1,5 @@
 //----- (0040E5D0) --------------------------------------------------------
-double __thiscall sub_40E5D0(float *this)
+double __thiscall sub_40E5D0(float *self)
 {
-  return *this * *this + this[1] * this[1] + this[2] * this[2];
+  return *self * *self + self[1] * self[1] + self[2] * self[2];
 }

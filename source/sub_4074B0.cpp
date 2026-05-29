@@ -1,9 +1,9 @@
 //----- (004074B0) --------------------------------------------------------
-int __thiscall sub_4074B0(_DWORD *this, int a2)
+int __thiscall sub_4074B0(_DWORD *self, int a2)
 {
   _BYTE *v3; // eax
 
-  v3 = sub_407190(this, a2, 1);
+  v3 = sub_407190(self, a2, 1);
   v3[2] = 1;
   *((_DWORD *)v3 + 15) = 0;
   *((_DWORD *)v3 + 14) = 0;
@@ -21,5 +21,5 @@ int __thiscall sub_4074B0(_DWORD *this, int a2)
   *((_DWORD *)v3 + 11) = 1065353216;
   *((_DWORD *)v3 + 6) = 1065353216;
   *((_DWORD *)v3 + 1) = 1065353216;
-  return sub_407120(this, a2);
+  return sub_407120(self, a2);
 }

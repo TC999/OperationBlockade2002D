@@ -1,5 +1,5 @@
 //----- (0042FB40) --------------------------------------------------------
-int __thiscall sub_42FB40(_DWORD *this, int a2, int a3, float a4, int a5)
+int __thiscall sub_42FB40(_DWORD *self, int a2, int a3, float a4, int a5)
 {
   int result; // eax
   unsigned int i; // esi
@@ -9,8 +9,8 @@ int __thiscall sub_42FB40(_DWORD *this, int a2, int a3, float a4, int a5)
   result = 0;
   for ( i = 0; ; ++i )
   {
-    v8 = this[6];
-    if ( !v8 || i >= (this[7] - v8) >> 2 )
+    v8 = self[6];
+    if ( !v8 || i >= (self[7] - v8) >> 2 )
       break;
     v9 = *(_DWORD *)(v8 + 4 * i);
     if ( *(_BYTE *)(v9 + 16) )

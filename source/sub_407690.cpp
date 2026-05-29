@@ -1,9 +1,9 @@
 //----- (00407690) --------------------------------------------------------
-int __thiscall sub_407690(int this, int a2, _DWORD *a3)
+int __thiscall sub_407690(int self, int a2, _DWORD *a3)
 {
   int result; // eax
 
-  if ( a2 < 0 || a2 >= *(_DWORD *)(this + 20) )
+  if ( a2 < 0 || a2 >= *(_DWORD *)(self + 20) )
   {
     result = (int)a3;
     a3[14] = 0;
@@ -25,9 +25,9 @@ int __thiscall sub_407690(int this, int a2, _DWORD *a3)
   }
   else
   {
-    sub_406F00((float *)this, a2);
+    sub_406F00((float *)self, a2);
     result = 96 * a2;
-    qmemcpy(a3, (const void *)(96 * a2 + *(_DWORD *)(this + 24) + 16), 0x40u);
+    qmemcpy(a3, (const void *)(96 * a2 + *(_DWORD *)(self + 24) + 16), 0x40u);
   }
   return result;
 }

@@ -1,5 +1,5 @@
 //----- (00462520) --------------------------------------------------------
-char __thiscall sub_462520(_DWORD *this, int a2, int a3)
+char __thiscall sub_462520(_DWORD *self, int a2, int a3)
 {
   int v3; // eax
   int v5; // ebx
@@ -15,10 +15,10 @@ char __thiscall sub_462520(_DWORD *this, int a2, int a3)
 
   v3 = 0;
   v5 = -1;
-  v6 = this[2946];
+  v6 = self[2946];
   if ( v6 > 0 )
   {
-    v7 = (_DWORD *)this[2945];
+    v7 = (_DWORD *)self[2945];
     while ( *v7 != a2 )
     {
       ++v3;
@@ -29,15 +29,15 @@ char __thiscall sub_462520(_DWORD *this, int a2, int a3)
     v5 = v3;
   }
 LABEL_7:
-  v8 = (int)&this[88 * this[128] + 220];
+  v8 = (int)&self[88 * self[128] + 220];
   if ( a3 )
   {
-    v9 = this[130];
+    v9 = self[130];
     v8 = 0;
     v10 = 0;
     if ( v9 > 0 )
     {
-      v11 = this + 222;
+      v11 = self + 222;
       while ( *v11 != a3 )
       {
         ++v10;
@@ -45,7 +45,7 @@ LABEL_7:
         if ( v10 >= v9 )
           goto LABEL_14;
       }
-      v8 = (int)&this[88 * v10 + 220];
+      v8 = (int)&self[88 * v10 + 220];
     }
   }
 LABEL_14:
@@ -59,14 +59,14 @@ LABEL_14:
   {
     ++*(_DWORD *)(v8 + 4 * v5 + 92);
     *(_DWORD *)(v8 + 348) += *(_DWORD *)(a2 + 296);
-    v12 = this[129];
+    v12 = self[129];
     if ( v12 > -1 )
     {
-      v12 = 352 * this[128];
-      if ( (_DWORD *)v8 == (_DWORD *)((char *)this + v12 + 880) && *(int *)(a2 + 296) > 200 )
+      v12 = 352 * self[128];
+      if ( (_DWORD *)v8 == (_DWORD *)((char *)self + v12 + 880) && *(int *)(a2 + 296) > 200 )
       {
-        sub_402FC0(this[649]);
-        LOBYTE(v12) = sub_4030B0((_DWORD *)this[649], 0, aChatterenemyki, -1);
+        sub_402FC0(self[649]);
+        LOBYTE(v12) = sub_4030B0((_DWORD *)self[649], 0, aChatterenemyki, -1);
       }
     }
   }

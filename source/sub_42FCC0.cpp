@@ -1,5 +1,5 @@
 //----- (0042FCC0) --------------------------------------------------------
-int __thiscall sub_42FCC0(_DWORD *this, int a2, int a3, int a4)
+int __thiscall sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
 {
   int v5; // eax
   int v7; // [esp-Ch] [ebp-34h]
@@ -17,13 +17,13 @@ int __thiscall sub_42FCC0(_DWORD *this, int a2, int a3, int a4)
   else
     v5 = 0;
   v9 = v5;
-  v7 = this[7];
+  v7 = self[7];
   v13 = -1;
   sub_44F190(v7, 1, &v9);
-  *(_DWORD *)(v9 + 392) = this[13];
+  *(_DWORD *)(v9 + 392) = self[13];
   v8 = v9;
-  ++this[13];
-  sub_428680(this, v8);
+  ++self[13];
+  sub_428680(self, v8);
   *(_BYTE *)(v9 + 460) = a4 <= -1;
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {

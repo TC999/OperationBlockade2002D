@@ -1,5 +1,5 @@
 //----- (004151F0) --------------------------------------------------------
-int __thiscall sub_4151F0(int this)
+int __thiscall sub_4151F0(int self)
 {
   int i; // ebp
   int v3; // eax
@@ -7,11 +7,11 @@ int __thiscall sub_4151F0(int this)
   void *v5; // eax
   int result; // eax
 
-  if ( *(_BYTE *)(this + 32) )
+  if ( *(_BYTE *)(self + 32) )
   {
-    for ( i = 0; i < *(_DWORD *)(this + 24); ++i )
+    for ( i = 0; i < *(_DWORD *)(self + 24); ++i )
     {
-      v3 = *(_DWORD *)(this + 20);
+      v3 = *(_DWORD *)(self + 20);
       v4 = *(void **)(v3 + 4 * i);
       if ( v4 )
       {
@@ -20,11 +20,11 @@ int __thiscall sub_4151F0(int this)
       }
     }
   }
-  memset(*(void **)(this + 20), 0, 4 * *(_DWORD *)(this + 24));
-  v5 = *(void **)(this + 20);
-  *(_DWORD *)(this + 24) = 0;
+  memset(*(void **)(self + 20), 0, 4 * *(_DWORD *)(self + 24));
+  v5 = *(void **)(self + 20);
+  *(_DWORD *)(self + 24) = 0;
   result = sub_488CEE(v5);
-  *(_DWORD *)(this + 28) = 0;
-  *(_DWORD *)(this + 20) = 0;
+  *(_DWORD *)(self + 28) = 0;
+  *(_DWORD *)(self + 20) = 0;
   return result;
 }

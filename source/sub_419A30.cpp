@@ -1,5 +1,5 @@
 //----- (00419A30) --------------------------------------------------------
-char __thiscall sub_419A30(_DWORD *this, float a2, float a3, float a4)
+char __thiscall sub_419A30(_DWORD *self, float a2, float a3, float a4)
 {
   int v5; // ebx
   int v6; // edi
@@ -14,9 +14,9 @@ char __thiscall sub_419A30(_DWORD *this, float a2, float a3, float a4)
   _BYTE v16[12]; // [esp+34h] [ebp-FA0h] BYREF
   char v17; // [esp+40h] [ebp-F94h] BYREF
 
-  v5 = this[1033];
-  qmemcpy(v16, this + 33, 4 * ((unsigned int)(20 * v5) >> 2));
-  sub_4164A0(this, 0);
+  v5 = self[1033];
+  qmemcpy(v16, self + 33, 4 * ((unsigned int)(20 * v5) >> 2));
+  sub_4164A0(self, 0);
   v6 = 0;
   if ( v5 <= 0 )
     return 1;
@@ -31,7 +31,7 @@ char __thiscall sub_419A30(_DWORD *this, float a2, float a3, float a4)
     v15[0] = v8 + *(i - 2);
     v15[1] = v10 + *(i - 1);
     v15[2] = v11 + *i;
-    if ( !sub_416350((int)this, v15, 1) )
+    if ( !sub_416350((int)self, v15, 1) )
       break;
     if ( ++v6 >= v5 )
       return 1;

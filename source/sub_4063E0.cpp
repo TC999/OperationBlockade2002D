@@ -1,5 +1,5 @@
 //----- (004063E0) --------------------------------------------------------
-float *__thiscall sub_4063E0(_DWORD *this, int a2, void *a3, float *a4, float a5, int a6)
+float *__thiscall sub_4063E0(_DWORD *self, int a2, void *a3, float *a4, float a5, int a6)
 {
   int v6; // ebp
   int v7; // edx
@@ -29,14 +29,14 @@ float *__thiscall sub_4063E0(_DWORD *this, int a2, void *a3, float *a4, float a5
   _BYTE v31[64]; // [esp+124h] [ebp-80h] BYREF
   _BYTE v32[64]; // [esp+164h] [ebp-40h] BYREF
 
-  v6 = this[1] + 172 * a2;
-  v7 = this[12];
+  v6 = self[1] + 172 * a2;
+  v7 = self[12];
   v8 = a5 < (double)*(float *)(v7 + 4 * a6);
   v9 = a5 == *(float *)(v7 + 4 * a6);
   v10 = (float *)(v7 + 4 * a6);
   if ( !v8 && !v9 )
     a5 = *v10;
-  v11 = this[11];
+  v11 = self[11];
   v12 = a5 < (double)*(float *)(v11 + 4 * a6);
   v13 = (float *)(v11 + 4 * a6);
   if ( v12 )

@@ -1,10 +1,10 @@
 //----- (0044E910) --------------------------------------------------------
-int __thiscall sub_44E910(_DWORD *this)
+int __thiscall sub_44E910(_DWORD *self)
 {
   int result; // eax
 
-  result = this[1];
+  result = self[1];
   if ( result )
-    return (this[2] - result) / 268;
+    return (self[2] - result) / 268;
   return result;
 }

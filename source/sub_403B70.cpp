@@ -1,18 +1,18 @@
 //----- (00403B70) --------------------------------------------------------
-int __thiscall sub_403B70(_DWORD *this)
+int __thiscall sub_403B70(_DWORD *self)
 {
   int result; // eax
 
-  result = this[14] - 1;
-  this[14] = result;
+  result = self[14] - 1;
+  self[14] = result;
   if ( result <= 0 )
   {
-    if ( this[146] )
-      result = sub_406A50(this);
-    if ( this )
+    if ( self[146] )
+      result = sub_406A50(self);
+    if ( self )
     {
-      sub_403B60(this);
-      return sub_4885A6(this);
+      sub_403B60(self);
+      return sub_4885A6(self);
     }
   }
   return result;

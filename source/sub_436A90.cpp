@@ -1,5 +1,5 @@
 //----- (00436A90) --------------------------------------------------------
-int __thiscall sub_436A90(int this)
+int __thiscall sub_436A90(int self)
 {
   int v2; // ebx
   int v3; // edi
@@ -39,12 +39,12 @@ int __thiscall sub_436A90(int this)
 
   v2 = 0;
   v3 = sub_421B20(1) + 2;
-  if ( *(int *)(this + 704) > 0 )
+  if ( *(int *)(self + 704) > 0 )
   {
     v33 = 0;
     do
     {
-      v4 = *(int **)(*(_DWORD *)(this + 700) + 4 * v2);
+      v4 = *(int **)(*(_DWORD *)(self + 700) + 4 * v2);
       v5 = v4[1] - v3;
       v4[1] = v5;
       if ( v5 > 100 )
@@ -74,23 +74,23 @@ int __thiscall sub_436A90(int this)
           sub_4885A6(v34);
         }
         sub_437540(v4[4]);
-        if ( v2 >= *(_DWORD *)(this + 704) )
+        if ( v2 >= *(_DWORD *)(self + 704) )
           break;
-        if ( *(_BYTE *)(this + 712) )
-          sub_4885A6(*(LPVOID *)(*(_DWORD *)(this + 700) + 4 * v2));
-        v7 = *(_DWORD *)(this + 704) - 1;
-        *(_DWORD *)(this + 704) = v7;
+        if ( *(_BYTE *)(self + 712) )
+          sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 700) + 4 * v2));
+        v7 = *(_DWORD *)(self + 704) - 1;
+        *(_DWORD *)(self + 704) = v7;
         if ( v2 != v7 )
         {
           memcpy(
-            (void *)(*(_DWORD *)(this + 700) + 4 * v2),
-            (const void *)(*(_DWORD *)(this + 700) + 4 * v2 + 4),
+            (void *)(*(_DWORD *)(self + 700) + 4 * v2),
+            (const void *)(*(_DWORD *)(self + 700) + 4 * v2 + 4),
             4 * (v7 + v33));
-          *(_DWORD *)(*(_DWORD *)(this + 700) + 4 * *(_DWORD *)(this + 704)) = 0;
+          *(_DWORD *)(*(_DWORD *)(self + 700) + 4 * *(_DWORD *)(self + 704)) = 0;
         }
       }
     }
-    while ( v2 < *(_DWORD *)(this + 704) );
+    while ( v2 < *(_DWORD *)(self + 704) );
   }
   v11 = (int *)operator new(0x14u);
   *v11 = 10;
@@ -118,23 +118,23 @@ int __thiscall sub_436A90(int this)
   v26 = (float)v35;
   sub_413090(v16, v26, v28, v30, v32);
   sub_413240(1092616192, 1092930765, 255, 0);
-  v17 = *(_DWORD *)(this + 708);
-  v18 = *(_DWORD *)(this + 704) + 1;
-  *(_DWORD *)(this + 704) = v18;
+  v17 = *(_DWORD *)(self + 708);
+  v18 = *(_DWORD *)(self + 704) + 1;
+  *(_DWORD *)(self + 704) = v18;
   if ( v18 > v17 )
   {
-    v19 = *(void **)(this + 700);
+    v19 = *(void **)(self + 700);
     v20 = v17 + 8;
-    *(_DWORD *)(this + 708) = v20;
+    *(_DWORD *)(self + 708) = v20;
     v21 = sub_488DD7(v19, 4 * v20);
     if ( v21 )
     {
-      v22 = *(_DWORD *)(this + 704);
-      v23 = *(_DWORD *)(this + 708) - v22;
-      *(_DWORD *)(this + 700) = v21;
+      v22 = *(_DWORD *)(self + 704);
+      v23 = *(_DWORD *)(self + 708) - v22;
+      *(_DWORD *)(self + 700) = v21;
       memset((void *)(v21 + 4 * v22), 0, 4 * v23);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 700) + 4 * *(_DWORD *)(this + 704) - 4) = v11;
+  *(_DWORD *)(*(_DWORD *)(self + 700) + 4 * *(_DWORD *)(self + 704) - 4) = v11;
   return v11[2];
 }

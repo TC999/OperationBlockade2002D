@@ -1,5 +1,5 @@
 //----- (0041C3C0) --------------------------------------------------------
-void __thiscall sub_41C3C0(int this, float a2, float a3, int a4)
+void __thiscall sub_41C3C0(int self, float a2, float a3, int a4)
 {
   double v5; // st7
   long double v6; // st7
@@ -13,14 +13,14 @@ void __thiscall sub_41C3C0(int this, float a2, float a3, int a4)
   float v14; // [esp+14h] [ebp+4h]
   float v15; // [esp+18h] [ebp+8h]
 
-  v13 = sub_41C2F0((float *)this, a2);
-  v15 = sub_41C2F0((float *)this, a3);
-  if ( *(_BYTE *)(this + 8) )
+  v13 = sub_41C2F0((float *)self, a2);
+  v15 = sub_41C2F0((float *)self, a3);
+  if ( *(_BYTE *)(self + 8) )
   {
     v9 = v13 - v15;
-    v12 = sub_41C2F0((float *)this, v9);
+    v12 = sub_41C2F0((float *)self, v9);
     v10 = v15 - v13;
-    v14 = sub_41C2F0((float *)this, v10);
+    v14 = sub_41C2F0((float *)self, v10);
     if ( v12 >= (double)v14 )
       v5 = v14;
     else

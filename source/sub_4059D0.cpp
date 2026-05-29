@@ -1,5 +1,5 @@
 //----- (004059D0) --------------------------------------------------------
-int __thiscall sub_4059D0(_DWORD *this, int a2)
+int __thiscall sub_4059D0(_DWORD *self, int a2)
 {
-  return *(_DWORD *)(this[1] + 172 * a2 + 20);
+  return *(_DWORD *)(self[1] + 172 * a2 + 20);
 }

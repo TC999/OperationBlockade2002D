@@ -1,5 +1,5 @@
 //----- (004164D0) --------------------------------------------------------
-void __thiscall sub_4164D0(float *this)
+void __thiscall sub_4164D0(float *self)
 {
   int v2; // eax
   int v3; // eax
@@ -13,12 +13,12 @@ void __thiscall sub_4164D0(float *this)
   float v11; // [esp+8h] [ebp-8h]
   float v12; // [esp+Ch] [ebp-4h]
 
-  v2 = *((_DWORD *)this + 1033);
+  v2 = *((_DWORD *)self + 1033);
   if ( v2 > 1 )
   {
     v3 = 5 * v2;
-    v4 = this[v3 + 30] - this[v3 + 25];
-    v5 = this[v3 + 29] - this[v3 + 24];
+    v4 = self[v3 + 30] - self[v3 + 25];
+    v5 = self[v3 + 29] - self[v3 + 24];
     v12 = 0.0;
     v10 = v5;
     v11 = v4;
@@ -28,7 +28,7 @@ void __thiscall sub_4164D0(float *this)
     {
       v7 = v11;
       v8 = v12;
-      v9 = this + 30;
+      v9 = self + 30;
       *v9 = v10;
       v9[1] = v7;
       v9[2] = v8;

@@ -1,5 +1,5 @@
 //----- (004139B0) --------------------------------------------------------
-char __thiscall sub_4139B0(_DWORD *this)
+char __thiscall sub_4139B0(_DWORD *self)
 {
   int i; // esi
   _BYTE *v2; // edx
@@ -7,7 +7,7 @@ char __thiscall sub_4139B0(_DWORD *this)
 
   for ( i = 0; i < 98304; i += 192 )
   {
-    v2 = (_BYTE *)(i + this[6]);
+    v2 = (_BYTE *)(i + self[6]);
     result = v2[4];
     if ( result )
     {

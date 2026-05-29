@@ -1,5 +1,5 @@
 //----- (0040C1F0) --------------------------------------------------------
-_DWORD *__thiscall sub_40C1F0(_DWORD **this, _DWORD *a2, int a3, char a4)
+_DWORD *__thiscall sub_40C1F0(_DWORD **self, _DWORD *a2, int a3, char a4)
 {
   _DWORD *v4; // esi
   int v5; // eax
@@ -8,8 +8,8 @@ _DWORD *__thiscall sub_40C1F0(_DWORD **this, _DWORD *a2, int a3, char a4)
   _DWORD v8[2]; // [esp+24h] [ebp-8h] BYREF
 
   v8[0] = 0;
-  v4 = this + 4;
-  v5 = (*(int (__stdcall **)(_DWORD *, void *, _DWORD **, _DWORD))(*this[2] + 12))(this[2], &unk_499E34, this + 4, 0);
+  v4 = self + 4;
+  v5 = (*(int (__stdcall **)(_DWORD *, void *, _DWORD **, _DWORD))(*self[2] + 12))(self[2], &unk_499E34, self + 4, 0);
   if ( v5 < 0 )
   {
     v7 = aCouldnTObtainM;

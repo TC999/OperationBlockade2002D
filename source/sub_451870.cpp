@@ -1,6 +1,6 @@
 //----- (00451870) --------------------------------------------------------
-int __thiscall sub_451870(_DWORD *this)
+int __thiscall sub_451870(_DWORD *self)
 {
-  sub_4517D0((_DWORD *)dword_5216EC[this[73]]);
-  return sub_4690E0(this);
+  sub_4517D0((_DWORD *)dword_5216EC[self[73]]);
+  return sub_4690E0(self);
 }

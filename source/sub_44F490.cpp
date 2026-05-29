@@ -1,5 +1,5 @@
 //----- (0044F490) --------------------------------------------------------
-_DWORD *__thiscall sub_44F490(_DWORD *this, _DWORD *a2)
+_DWORD *__thiscall sub_44F490(_DWORD *self, _DWORD *a2)
 {
   _DWORD *v3; // edi
   char *v4; // esi
@@ -37,15 +37,15 @@ _DWORD *__thiscall sub_44F490(_DWORD *this, _DWORD *a2)
   char *i; // eax
   char *v38; // [esp+18h] [ebp+4h]
 
-  v3 = this;
-  if ( this == a2 )
+  v3 = self;
+  if ( self == a2 )
     return v3;
   v4 = (char *)a2[1];
   if ( v4 )
     v5 = (a2[2] - (int)v4) / 268;
   else
     v5 = 0;
-  v6 = this[1];
+  v6 = self[1];
   if ( v6 )
     v7 = (v3[2] - v6) / 268;
   else
@@ -66,7 +66,7 @@ _DWORD *__thiscall sub_44F490(_DWORD *this, _DWORD *a2)
         qmemcpy(v12, v11, 0x10Cu);
       }
       while ( v9 != v8 );
-      v3 = this;
+      v3 = self;
     }
     v13 = a2[1];
     if ( v13 )
@@ -104,7 +104,7 @@ _DWORD *__thiscall sub_44F490(_DWORD *this, _DWORD *a2)
       if ( v35 )
       {
         qmemcpy(v35, i, 0x10Cu);
-        v3 = this;
+        v3 = self;
       }
       i += 268;
     }
@@ -131,17 +131,17 @@ _DWORD *__thiscall sub_44F490(_DWORD *this, _DWORD *a2)
     }
     while ( v20 != v21 );
   }
-  v25 = this;
+  v25 = self;
   v38 = (char *)a2[2];
   v24 = v38;
-  v26 = (char *)this[2];
+  v26 = (char *)self[2];
   for ( j = v21; j != v24; v26 += 268 )
   {
     if ( v26 )
     {
       qmemcpy(v26, j, 0x10Cu);
       v24 = v38;
-      v25 = this;
+      v25 = self;
     }
     j += 268;
   }

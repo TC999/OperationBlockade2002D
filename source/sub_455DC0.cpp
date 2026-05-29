@@ -1,5 +1,5 @@
 //----- (00455DC0) --------------------------------------------------------
-int __thiscall sub_455DC0(_DWORD *this, int a2)
+int __thiscall sub_455DC0(_DWORD *self, int a2)
 {
   unsigned int i; // edi
   int result; // eax
@@ -13,8 +13,8 @@ int __thiscall sub_455DC0(_DWORD *this, int a2)
   }
   for ( i = 0; ; ++i )
   {
-    result = this[100];
-    if ( !result || i >= (this[101] - result) >> 2 )
+    result = self[100];
+    if ( !result || i >= (self[101] - result) >> 2 )
       break;
     if ( *(_DWORD *)(*(_DWORD *)(result + 4 * i) + 400) == a2 )
       sub_456370();

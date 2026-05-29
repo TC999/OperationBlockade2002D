@@ -1,12 +1,12 @@
 //----- (00463110) --------------------------------------------------------
-int __thiscall sub_463110(_DWORD *this)
+int __thiscall sub_463110(_DWORD *self)
 {
   int result; // eax
   int v2; // edx
 
-  result = 88 * this[128];
-  v2 = (int)&this[result + 220];
-  if ( &this[result] != (_DWORD *)-880 )
+  result = 88 * self[128];
+  v2 = (int)&self[result + 220];
+  if ( &self[result] != (_DWORD *)-880 )
   {
     result = 0;
     *(_DWORD *)(v2 + 348) = 0;

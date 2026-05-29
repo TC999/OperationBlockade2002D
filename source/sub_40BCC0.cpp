@@ -1,5 +1,5 @@
 //----- (0040BCC0) --------------------------------------------------------
-int *__thiscall sub_40BCC0(int *this, int *a2)
+int *__thiscall sub_40BCC0(int *self, int *a2)
 {
   int *v2; // ebp
   _DWORD *v3; // edi
@@ -32,15 +32,15 @@ int *__thiscall sub_40BCC0(int *this, int *a2)
   _DWORD *v30; // ecx
   _DWORD *i; // eax
 
-  v2 = this;
-  if ( this == a2 )
+  v2 = self;
+  if ( self == a2 )
     return v2;
   v3 = (_DWORD *)a2[1];
   if ( v3 )
     v4 = (a2[2] - (int)v3) / 12;
   else
     v4 = 0;
-  v5 = (_DWORD *)this[1];
+  v5 = (_DWORD *)self[1];
   if ( v5 )
     v6 = (v2[2] - (int)v5) / 12;
   else
@@ -62,7 +62,7 @@ int *__thiscall sub_40BCC0(int *this, int *a2)
         v10[2] = v9[2];
       }
       while ( v8 != v7 );
-      v2 = this;
+      v2 = self;
     }
     v11 = a2[1];
     if ( v11 )
@@ -129,7 +129,7 @@ int *__thiscall sub_40BCC0(int *this, int *a2)
       v20[2] = v19[2];
     }
     while ( v17 != v18 );
-    v2 = this;
+    v2 = self;
   }
   v21 = (_DWORD *)a2[2];
   v22 = (_DWORD *)v2[2];
@@ -139,7 +139,7 @@ int *__thiscall sub_40BCC0(int *this, int *a2)
     {
       *v22 = *j;
       v22[1] = j[1];
-      v2 = this;
+      v2 = self;
       v22[2] = j[2];
     }
     j += 3;

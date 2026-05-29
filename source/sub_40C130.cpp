@@ -1,5 +1,5 @@
 //----- (0040C130) --------------------------------------------------------
-_DWORD *__thiscall sub_40C130(_DWORD **this, _DWORD *a2, int a3, char a4)
+_DWORD *__thiscall sub_40C130(_DWORD **self, _DWORD *a2, int a3, char a4)
 {
   _DWORD *v4; // esi
   int v5; // eax
@@ -8,8 +8,8 @@ _DWORD *__thiscall sub_40C130(_DWORD **this, _DWORD *a2, int a3, char a4)
   char *v8; // [esp+14h] [ebp-24h]
   _DWORD v9[5]; // [esp+24h] [ebp-14h] BYREF
 
-  v4 = this + 3;
-  v5 = (*(int (__stdcall **)(_DWORD *, void *, _DWORD **, _DWORD))(*this[2] + 12))(this[2], &unk_499E24, this + 3, 0);
+  v4 = self + 3;
+  v5 = (*(int (__stdcall **)(_DWORD *, void *, _DWORD **, _DWORD))(*self[2] + 12))(self[2], &unk_499E24, self + 3, 0);
   if ( v5 < 0 )
   {
     v8 = aCanTObtainKeyb;

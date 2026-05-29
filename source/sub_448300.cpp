@@ -1,5 +1,5 @@
 //----- (00448300) --------------------------------------------------------
-_DWORD *__thiscall sub_448300(_DWORD *this, _DWORD *a2, int *a3)
+_DWORD *__thiscall sub_448300(_DWORD *self, _DWORD *a2, int *a3)
 {
   int *v3; // edx
   _DWORD *result; // eax
@@ -9,7 +9,7 @@ _DWORD *__thiscall sub_448300(_DWORD *this, _DWORD *a2, int *a3)
 
   v3 = a3;
   result = a2;
-  v5 = (int *)this[2];
+  v5 = (int *)self[2];
   v6 = a2;
   if ( a3 != v5 )
   {
@@ -20,6 +20,6 @@ _DWORD *__thiscall sub_448300(_DWORD *this, _DWORD *a2, int *a3)
     }
     while ( v3 != v5 );
   }
-  this[2] = v6;
+  self[2] = v6;
   return result;
 }

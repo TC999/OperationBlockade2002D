@@ -1,5 +1,5 @@
 //----- (0044B870) --------------------------------------------------------
-char *__thiscall sub_44B870(char *this, char *a2)
+char *__thiscall sub_44B870(char *self, char *a2)
 {
   char *v2; // esi
   double v4; // st7
@@ -62,70 +62,70 @@ char *__thiscall sub_44B870(char *this, char *a2)
   int v62; // [esp+280h] [ebp-4h]
 
   v2 = a2;
-  v54 = this;
+  v54 = self;
   sub_468FF0(a2);
   v62 = 0;
-  this[332] = v47;
-  *((_DWORD *)this + 84) = 0;
-  *((_DWORD *)this + 85) = 0;
-  *((_DWORD *)this + 86) = 0;
+  self[332] = v47;
+  *((_DWORD *)self + 84) = 0;
+  *((_DWORD *)self + 85) = 0;
+  *((_DWORD *)self + 86) = 0;
   LOBYTE(v62) = 1;
-  *(_DWORD *)this = &off_499A74;
-  this[292] = 1;
+  *(_DWORD *)self = &off_499A74;
+  self[292] = 1;
   if ( sub_40ABC0(a2, aAlwaysloaded, 0) )
-    sub_40B130(a2, aAlwaysloaded, this + 292);
-  this[293] = 0;
+    sub_40B130(a2, aAlwaysloaded, self + 292);
+  self[293] = 0;
   if ( sub_40ABC0(a2, aStreaming, 0) )
-    sub_40B130(a2, aStreaming, this + 293);
-  this[294] = 0;
+    sub_40B130(a2, aStreaming, self + 293);
+  self[294] = 0;
   if ( sub_40ABC0(a2, aLooping, 0) )
-    sub_40B130(a2, aLooping, this + 294);
-  *((_DWORD *)this + 74) = 1050253722;
+    sub_40B130(a2, aLooping, self + 294);
+  *((_DWORD *)self + 74) = 1050253722;
   if ( sub_40ABC0(a2, aFadepercent, 0) )
-    sub_40AF60(a2, aFadepercent, (float *)this + 74);
-  this[300] = 0;
+    sub_40AF60(a2, aFadepercent, (float *)self + 74);
+  self[300] = 0;
   if ( sub_40ABC0(a2, aDontduplicate, 0) )
-    sub_40B130(a2, aDontduplicate, this + 300);
-  this[301] = 0;
-  this[330] = 0;
+    sub_40B130(a2, aDontduplicate, self + 300);
+  self[301] = 0;
+  self[330] = 0;
   if ( sub_40ABC0(a2, aEngine, 0) )
-    sub_40B130(a2, aEngine, this + 301);
-  if ( this[301] )
+    sub_40B130(a2, aEngine, self + 301);
+  if ( self[301] )
   {
-    *((_DWORD *)this + 78) = 1065353216;
-    *((_DWORD *)this + 79) = 1065353216;
-    *((_DWORD *)this + 80) = 1065353216;
-    *((_DWORD *)this + 81) = 1065353216;
-    this[294] = 1;
-    this[330] = 1;
-    *((_DWORD *)this + 76) = 0;
-    *((_DWORD *)this + 77) = 0;
+    *((_DWORD *)self + 78) = 1065353216;
+    *((_DWORD *)self + 79) = 1065353216;
+    *((_DWORD *)self + 80) = 1065353216;
+    *((_DWORD *)self + 81) = 1065353216;
+    self[294] = 1;
+    self[330] = 1;
+    *((_DWORD *)self + 76) = 0;
+    *((_DWORD *)self + 77) = 0;
     if ( sub_40ABC0(a2, aEnginefade, 0) )
     {
       sub_40B1B0((char)aEnginefade, (int)&v48);
       v4 = v49;
       if ( *(float *)&v48 >= (double)v49 )
       {
-        *((float *)this + 79) = *(float *)&v48;
-        *((float *)this + 78) = v4;
+        *((float *)self + 79) = *(float *)&v48;
+        *((float *)self + 78) = v4;
       }
       else
       {
-        *((float *)this + 76) = *(float *)&v48;
-        *((float *)this + 77) = v4;
+        *((float *)self + 76) = *(float *)&v48;
+        *((float *)self + 77) = v4;
       }
     }
     if ( sub_40ABC0(a2, aEnginepitch, 0) )
-      sub_40B1D0((char)aEnginepitch, (int)(this + 320), (int)(this + 324));
+      sub_40B1D0((char)aEnginepitch, (int)(self + 320), (int)(self + 324));
   }
   if ( sub_40ABC0(a2, aDoppler_0, 0) )
-    sub_40B130(a2, aDoppler_0, this + 330);
-  this[328] = 0;
+    sub_40B130(a2, aDoppler_0, self + 330);
+  self[328] = 0;
   if ( sub_40ABC0(a2, aBomb, 0) )
-    sub_40B130(a2, aBomb, this + 328);
-  this[329] = this[294];
+    sub_40B130(a2, aBomb, self + 328);
+  self[329] = self[294];
   if ( sub_40ABC0(a2, aDiewithpe, 0) )
-    sub_40B130(a2, aDiewithpe, this + 329);
+    sub_40B130(a2, aDiewithpe, self + 329);
   if ( sub_40AE00(a2, aRange) <= 1 )
     v5 = 1;
   else
@@ -135,19 +135,19 @@ char *__thiscall sub_44B870(char *this, char *a2)
   v57 = 0;
   v58 = 0;
   v59 = 0;
-  v7 = *((_DWORD *)this + 84);
+  v7 = *((_DWORD *)self + 84);
   LOBYTE(v62) = 2;
   if ( v7 )
-    v6 = (*((_DWORD *)this + 85) - v7) / 40;
+    v6 = (*((_DWORD *)self + 85) - v7) / 40;
   if ( v6 >= v5 )
   {
-    if ( v5 < sub_44E980(this + 332) )
-      sub_44F0E0(*((_DWORD *)this + 84) + 40 * v5, *((_DWORD *)this + 85));
+    if ( v5 < sub_44E980(self + 332) )
+      sub_44F0E0(*((_DWORD *)self + 84) + 40 * v5, *((_DWORD *)self + 85));
   }
   else
   {
-    v48 = *((int *)this + 85);
-    v8 = sub_44E980(this + 332);
+    v48 = *((int *)self + 85);
+    v8 = sub_44E980(self + 332);
     sub_44ED60(v48, v5 - v8, v55);
   }
   LOBYTE(v62) = 1;
@@ -156,21 +156,21 @@ char *__thiscall sub_44B870(char *this, char *a2)
   v51 = 0;
   while ( 1 )
   {
-    v10 = *((_DWORD *)this + 84);
-    if ( !v10 || v51 >= (*((_DWORD *)this + 85) - v10) / 40 )
+    v10 = *((_DWORD *)self + 84);
+    if ( !v10 || v51 >= (*((_DWORD *)self + 85) - v10) / 40 )
       break;
-    *(_DWORD *)(v9 + *((_DWORD *)this + 84)) = 1133903872;
-    *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 4) = 1189765120;
+    *(_DWORD *)(v9 + *((_DWORD *)self + 84)) = 1133903872;
+    *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 4) = 1189765120;
     if ( sub_40ABC0(v2, aRange, 0) )
-      sub_40B1B0((char)aRange, *((_DWORD *)this + 84) + v9);
-    *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 8) = 0;
-    *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 12) = 1065353216;
+      sub_40B1B0((char)aRange, *((_DWORD *)self + 84) + v9);
+    *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 8) = 0;
+    *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 12) = 1065353216;
     if ( sub_40ABC0(v2, aVolume_0, 0) )
-      sub_40B1B0((char)aVolume_0, v9 + *((_DWORD *)this + 84) + 8);
-    *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 16) = 1065353216;
-    *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 20) = 1065353216;
+      sub_40B1B0((char)aVolume_0, v9 + *((_DWORD *)self + 84) + 8);
+    *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 16) = 1065353216;
+    *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 20) = 1065353216;
     if ( sub_40ABC0(v2, aPitch, 0) )
-      sub_40B1B0((char)aPitch, v9 + *((_DWORD *)this + 84) + 16);
+      sub_40B1B0((char)aPitch, v9 + *((_DWORD *)self + 84) + 16);
     if ( sub_422BA0(AppName, aLoadsounds, 1) )
     {
       if ( !sub_40ACC0(v2, aSound, aRange) || !sub_40AD80(aSound) )
@@ -180,7 +180,7 @@ char *__thiscall sub_44B870(char *this, char *a2)
           do
           {
             sub_40AFC0(aSound, (int)&v50);
-            v22 = *((_DWORD *)this + 84);
+            v22 = *((_DWORD *)self + 84);
             v23 = v9 + v22 + 24;
             v24 = *(_DWORD *)(v9 + v22 + 28);
             if ( v24 )
@@ -206,15 +206,15 @@ char *__thiscall sub_44B870(char *this, char *a2)
                 v28 = 0;
               sub_44E9E0(*(_DWORD *)(v23 + 8), v26 - v28, v61);
             }
-            *(_DWORD *)(*(_DWORD *)(v9 + *((_DWORD *)this + 84) + 28) + 268 * v45) = 0;
-            v48 = *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 28) + 268 * v45 + 4;
+            *(_DWORD *)(*(_DWORD *)(v9 + *((_DWORD *)self + 84) + 28) + 268 * v45) = 0;
+            v48 = *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 28) + 268 * v45 + 4;
             strcpy((char *)v48, (const char *)v50);
-            *(_DWORD *)(*(_DWORD *)(v9 + *((_DWORD *)this + 84) + 28) + 268 * v45 + 264) = 0;
+            *(_DWORD *)(*(_DWORD *)(v9 + *((_DWORD *)self + 84) + 28) + 268 * v45 + 264) = 0;
             v2 = a2;
           }
           while ( sub_40ACC0(a2, aSound, aRange) );
         }
-        v29 = *((_DWORD *)this + 84);
+        v29 = *((_DWORD *)self + 84);
         v30 = *(_DWORD *)(v9 + v29 + 28);
         if ( v30 )
           v31 = (*(_DWORD *)(v9 + v29 + 32) - v30) / 268;
@@ -230,7 +230,7 @@ char *__thiscall sub_44B870(char *this, char *a2)
         *(float *)&v48 = 0.0;
         while ( 1 )
         {
-          v34 = *((_DWORD *)this + 84);
+          v34 = *((_DWORD *)self + 84);
           v35 = *(_DWORD *)(v9 + v34 + 28);
           v36 = v9 + v34;
           if ( !v35 || v46 >= (*(_DWORD *)(v36 + 32) - v35) / 268 )
@@ -247,7 +247,7 @@ char *__thiscall sub_44B870(char *this, char *a2)
         do
         {
           sub_40B420(v2, aSound, (float *)&v52, (const char **)&v50);
-          v11 = *((_DWORD *)this + 84);
+          v11 = *((_DWORD *)self + 84);
           v12 = v9 + v11 + 24;
           v13 = *(_DWORD *)(v9 + v11 + 28);
           if ( v13 )
@@ -273,10 +273,10 @@ char *__thiscall sub_44B870(char *this, char *a2)
               v17 = 0;
             sub_44E9E0(*(_DWORD *)(v12 + 8), v43 - v17, v60);
           }
-          *(float *)(*(_DWORD *)(v9 + *((_DWORD *)this + 84) + 28) + 268 * v14) = *(float *)&v52 * 0.0099999998;
-          v48 = *(_DWORD *)(v9 + *((_DWORD *)this + 84) + 28) + 268 * v14 + 4;
+          *(float *)(*(_DWORD *)(v9 + *((_DWORD *)self + 84) + 28) + 268 * v14) = *(float *)&v52 * 0.0099999998;
+          v48 = *(_DWORD *)(v9 + *((_DWORD *)self + 84) + 28) + 268 * v14 + 4;
           strcpy((char *)v48, (const char *)v50);
-          *(_DWORD *)(*(_DWORD *)(v9 + *((_DWORD *)this + 84) + 28) + 268 * v14 + 264) = 0;
+          *(_DWORD *)(*(_DWORD *)(v9 + *((_DWORD *)self + 84) + 28) + 268 * v14 + 264) = 0;
           v2 = a2;
         }
         while ( sub_40ACC0(a2, aSound, aRange) );
@@ -284,7 +284,7 @@ char *__thiscall sub_44B870(char *this, char *a2)
       v18 = 0;
       v19 = 0.0;
       v44 = 0;
-      v20 = v9 + *((_DWORD *)this + 84);
+      v20 = v9 + *((_DWORD *)self + 84);
       while ( 1 )
       {
         v48 = v18;
@@ -295,7 +295,7 @@ char *__thiscall sub_44B870(char *this, char *a2)
         v18 = v48 + 268;
         ++v44;
       }
-      sub_40A120(v19 <= 1.0, aPercentsForThe, *((_DWORD *)this + 1), v2 + 16);
+      sub_40A120(v19 <= 1.0, aPercentsForThe, *((_DWORD *)self + 1), v2 + 16);
       v9 += 40;
       ++v51;
     }
@@ -306,24 +306,24 @@ LABEL_93:
       ++v51;
     }
   }
-  if ( this[301] )
+  if ( self[301] )
   {
-    v38 = *((_DWORD *)this + 84);
+    v38 = *((_DWORD *)self + 84);
     if ( v38 )
-      v39 = (*((_DWORD *)this + 85) - v38) / 40;
+      v39 = (*((_DWORD *)self + 85) - v38) / 40;
     else
       v39 = 0;
-    v40 = *((_DWORD *)this + 84);
+    v40 = *((_DWORD *)self + 84);
     if ( v40 )
-      v41 = (*((_DWORD *)this + 85) - v40) / 40;
+      v41 = (*((_DWORD *)self + 85) - v40) / 40;
     else
       v41 = 0;
     sub_40A120(
       v41 == 1,
       "engine sounds must have only one set of sounds (you have %d sound ranges), see %s : %s",
       v39,
-      *((const char **)this + 1),
+      *((const char **)self + 1),
       v2 + 16);
   }
-  return this;
+  return self;
 }

@@ -1,26 +1,26 @@
 //----- (00403A90) --------------------------------------------------------
-void __thiscall sub_403A90(void *this)
+void __thiscall sub_403A90(void *self)
 {
   int v2; // eax
   int v3; // eax
 
-  v2 = *((_DWORD *)this + 11);
+  v2 = *((_DWORD *)self + 11);
   if ( v2 )
   {
     (*(void (__stdcall **)(int))(*(_DWORD *)v2 + 8))(v2);
-    *((_DWORD *)this + 11) = 0;
+    *((_DWORD *)self + 11) = 0;
   }
-  v3 = *((_DWORD *)this + 9);
+  v3 = *((_DWORD *)self + 9);
   if ( v3 )
   {
-    (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v3 + 8))(*((_DWORD *)this + 9));
-    *((_DWORD *)this + 9) = 0;
+    (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v3 + 8))(*((_DWORD *)self + 9));
+    *((_DWORD *)self + 9) = 0;
   }
-  if ( *((_DWORD *)this + 4) )
+  if ( *((_DWORD *)self + 4) )
   {
-    sub_488CEE(*((LPVOID *)this + 4));
-    *((_DWORD *)this + 4) = 0;
+    sub_488CEE(*((LPVOID *)self + 4));
+    *((_DWORD *)self + 4) = 0;
   }
-  sub_4885A6(*((LPVOID *)this + 2));
-  *((_DWORD *)this + 2) = 0;
+  sub_4885A6(*((LPVOID *)self + 2));
+  *((_DWORD *)self + 2) = 0;
 }

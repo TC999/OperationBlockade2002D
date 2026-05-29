@@ -1,5 +1,5 @@
 //----- (00469370) --------------------------------------------------------
-unsigned int __thiscall sub_469370(int this, int a2)
+unsigned int __thiscall sub_469370(int self, int a2)
 {
   int v2; // esi
   unsigned int result; // eax
@@ -15,26 +15,26 @@ unsigned int __thiscall sub_469370(int this, int a2)
   v2 = 0;
   for ( i = 0; ; ++i )
   {
-    result = *(_DWORD *)(this + 280);
+    result = *(_DWORD *)(self + 280);
     if ( !result )
       break;
-    v5 = *(_DWORD *)(this + 284) - result;
+    v5 = *(_DWORD *)(self + 284) - result;
     result = i;
     if ( i >= v5 >> 4 )
       break;
-    v6 = *(_DWORD *)(this + 280);
+    v6 = *(_DWORD *)(self + 280);
     if ( !*(_DWORD *)(v2 + v6 + 4) )
     {
       *(_DWORD *)(v2 + v6 + 4) = sub_469650(*(char **)(v2 + v6 + 8), *(char **)(v2 + v6 + 12), 1);
       sub_40A120(
-        *(_DWORD *)(*(_DWORD *)(this + 280) + v2 + 4) != 0,
+        *(_DWORD *)(*(_DWORD *)(self + 280) + v2 + 4) != 0,
         "could not find type info for %s, see %s",
-        *(const char **)(*(_DWORD *)(this + 280) + v2 + 8),
-        *(const char **)(this + 4));
-      v7 = *(_DWORD *)(this + 280);
+        *(const char **)(*(_DWORD *)(self + 280) + v2 + 8),
+        *(const char **)(self + 4));
+      v7 = *(_DWORD *)(self + 280);
       if ( **(_DWORD **)(v2 + v7) )
       {
-        v11 = *(const char **)(this + 4);
+        v11 = *(const char **)(self + 4);
         v10 = *(const char **)(*(_DWORD *)(v2 + v7 + 4) + 12);
         v9 = *(char **)(v2 + v7 + 12);
         v8 = sub_4696E0(*(_DWORD *)(v2 + v7 + 4), v9);
@@ -44,13 +44,13 @@ unsigned int __thiscall sub_469370(int this, int a2)
           v9,
           v10,
           v11,
-          (const char *)(this + 16));
+          (const char *)(self + 16));
       }
-      **(_DWORD **)(v2 + *(_DWORD *)(this + 280)) = *(_DWORD *)(v2 + *(_DWORD *)(this + 280) + 4);
-      sub_4885A6(*(LPVOID *)(*(_DWORD *)(this + 280) + v2 + 8));
-      *(_DWORD *)(*(_DWORD *)(this + 280) + v2 + 8) = 0;
-      sub_4885A6(*(LPVOID *)(*(_DWORD *)(this + 280) + v2 + 12));
-      *(_DWORD *)(*(_DWORD *)(this + 280) + v2 + 12) = 0;
+      **(_DWORD **)(v2 + *(_DWORD *)(self + 280)) = *(_DWORD *)(v2 + *(_DWORD *)(self + 280) + 4);
+      sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 280) + v2 + 8));
+      *(_DWORD *)(*(_DWORD *)(self + 280) + v2 + 8) = 0;
+      sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 280) + v2 + 12));
+      *(_DWORD *)(*(_DWORD *)(self + 280) + v2 + 12) = 0;
     }
     v2 += 16;
   }

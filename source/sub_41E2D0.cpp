@@ -1,5 +1,5 @@
 //----- (0041E2D0) --------------------------------------------------------
-int __thiscall sub_41E2D0(_DWORD *this, int a2, char a3, char a4)
+int __thiscall sub_41E2D0(_DWORD *self, int a2, char a3, char a4)
 {
   int v5; // eax
   int i; // esi
@@ -7,7 +7,7 @@ int __thiscall sub_41E2D0(_DWORD *this, int a2, char a3, char a4)
   _DWORD *v9; // eax
 
   v5 = 0;
-  for ( i = this[9]; *(_DWORD *)(i + 8); i += 140 )
+  for ( i = self[9]; *(_DWORD *)(i + 8); i += 140 )
   {
     if ( ++v5 >= 128 )
       return 0;
@@ -33,7 +33,7 @@ int __thiscall sub_41E2D0(_DWORD *this, int a2, char a3, char a4)
   sub_41D790();
   *(_BYTE *)(i + 52) = a3;
   *(_BYTE *)(i + 24) = a4;
-  v9 = sub_409960((_DWORD *)dword_520970, (int)this);
+  v9 = sub_409960((_DWORD *)dword_520970, (int)self);
   *(_DWORD *)(i + 4) = v9;
   v9[10] = i;
   *(_DWORD *)(i + 64) = 1065353216;

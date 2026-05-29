@@ -1,11 +1,11 @@
 //----- (00406A50) --------------------------------------------------------
-int __thiscall sub_406A50(_DWORD *this, int a2)
+int __thiscall sub_406A50(_DWORD *self, int a2)
 {
   int result; // eax
   int v3; // esi
   int v4; // edx
 
-  result = this[5];
+  result = self[5];
   v3 = 0;
   if ( result )
   {
@@ -22,7 +22,7 @@ int __thiscall sub_406A50(_DWORD *this, int a2)
     if ( v3 )
       *(_DWORD *)(v3 + 580) = v4;
     else
-      this[5] = v4;
+      self[5] = v4;
   }
   return result;
 }

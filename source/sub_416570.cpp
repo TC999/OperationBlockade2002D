@@ -1,5 +1,5 @@
 //----- (00416570) --------------------------------------------------------
-int __thiscall sub_416570(float *this)
+int __thiscall sub_416570(float *self)
 {
   float *v1; // esi
   float v2; // edx
@@ -173,10 +173,10 @@ int __thiscall sub_416570(float *this)
   float v170; // [esp+A4h] [ebp-8h]
   float v171; // [esp+A8h] [ebp-4h]
 
-  v1 = this;
-  v106 = this[61] + this[61];
-  v76 = this[60] + this[60];
-  v43 = this[59] + this[59];
+  v1 = self;
+  v106 = self[61] + self[61];
+  v76 = self[60] + self[60];
+  v43 = self[59] + self[59];
   sub_40F4A0(LODWORD(v43), LODWORD(v76), LODWORD(v106));
   v107 = v1[56] * -10.0;
   v77 = v1[55] * -10.0;

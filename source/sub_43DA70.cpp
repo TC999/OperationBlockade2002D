@@ -1,5 +1,5 @@
 //----- (0043DA70) --------------------------------------------------------
-int __thiscall sub_43DA70(_DWORD *this)
+int __thiscall sub_43DA70(_DWORD *self)
 {
   _DWORD *v2; // esi
   int v3; // ebp
@@ -16,9 +16,9 @@ int __thiscall sub_43DA70(_DWORD *this)
   char ArgList[4]; // [esp+18h] [ebp-8h]
   int v15; // [esp+1Ch] [ebp-4h]
 
-  v2 = this + 21;
+  v2 = self + 21;
   v3 = 0;
-  v4 = this + 21;
+  v4 = self + 21;
   v5 = 4;
   do
   {
@@ -30,7 +30,7 @@ int __thiscall sub_43DA70(_DWORD *this)
     *(_BYTE *)(v4[3] + 44) = 0;
   }
   while ( v5 );
-  v13 = this[12];
+  v13 = self[12];
   v11 = 0;
   v15 = *(_DWORD *)(*(_DWORD *)(dword_520970 + 280) + 11784);
   if ( v15 > 0 )
@@ -77,12 +77,12 @@ int __thiscall sub_43DA70(_DWORD *this)
   result = v13;
   if ( !v13 )
   {
-    *(_BYTE *)(this[v3 + 17] + 44) = 1;
-    *(_BYTE *)(this[v3 + 21] + 44) = 1;
-    *(_BYTE *)(this[v3 + 25] + 44) = 1;
-    sub_424300(this[v3 + 17], 0, aHealth_0, 1);
-    sub_421110(*(LPVOID **)(this[v3 + 21] + 112), aHealth_0);
-    return sub_421190(*(_DWORD *)(this[v3 + 25] + 112), "%d", (unsigned int)(__int64)v12);
+    *(_BYTE *)(self[v3 + 17] + 44) = 1;
+    *(_BYTE *)(self[v3 + 21] + 44) = 1;
+    *(_BYTE *)(self[v3 + 25] + 44) = 1;
+    sub_424300(self[v3 + 17], 0, aHealth_0, 1);
+    sub_421110(*(LPVOID **)(self[v3 + 21] + 112), aHealth_0);
+    return sub_421190(*(_DWORD *)(self[v3 + 25] + 112), "%d", (unsigned int)(__int64)v12);
   }
   return result;
 }

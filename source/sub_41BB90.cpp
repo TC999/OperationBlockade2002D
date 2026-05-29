@@ -1,18 +1,18 @@
 //----- (0041BB90) --------------------------------------------------------
-int __thiscall sub_41BB90(_DWORD *this)
+int __thiscall sub_41BB90(_DWORD *self)
 {
   int v1; // esi
   _DWORD *v2; // edi
   int result; // eax
 
-  *this = -1;
-  this[1] = -1;
-  this[2] = -1;
-  this[4] = -1;
-  this[5] = -1;
-  this[6] = -1;
+  *self = -1;
+  self[1] = -1;
+  self[2] = -1;
+  self[4] = -1;
+  self[5] = -1;
+  self[6] = -1;
   v1 = 0;
-  v2 = this + 15;
+  v2 = self + 15;
   do
   {
     *(v2 - 8) = 0;

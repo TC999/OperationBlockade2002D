@@ -1,5 +1,5 @@
 //----- (00408F30) --------------------------------------------------------
-int __thiscall sub_408F30(_DWORD *this)
+int __thiscall sub_408F30(_DWORD *self)
 {
-  return this[21];
+  return self[21];
 }

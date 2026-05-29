@@ -1,5 +1,5 @@
 //----- (00469700) --------------------------------------------------------
-int __thiscall sub_469700(_DWORD *this, int a2, const char *a3)
+int __thiscall sub_469700(_DWORD *self, int a2, const char *a3)
 {
   char *v4; // eax
   int v5; // eax
@@ -13,26 +13,26 @@ int __thiscall sub_469700(_DWORD *this, int a2, const char *a3)
 
   v4 = (char *)operator new(0x80u);
   *(_DWORD *)(a2 + 4) = v4;
-  sprintf(v4, "%s %d", a3, this[9]);
-  v5 = this[7];
-  v6 = this[6] + 1;
-  this[6] = v6;
+  sprintf(v4, "%s %d", a3, self[9]);
+  v5 = self[7];
+  v6 = self[6] + 1;
+  self[6] = v6;
   if ( v6 > v5 )
   {
-    v7 = (void *)this[5];
+    v7 = (void *)self[5];
     v8 = v5 + 8;
-    this[7] = v8;
+    self[7] = v8;
     v9 = sub_488DD7(v7, 4 * v8);
     if ( v9 )
     {
-      v10 = this[6];
-      v11 = this[7] - v10;
-      this[5] = v9;
+      v10 = self[6];
+      v11 = self[7] - v10;
+      self[5] = v9;
       memset((void *)(v9 + 4 * v10), 0, 4 * v11);
     }
   }
-  *(_DWORD *)(this[5] + 4 * this[6] - 4) = a2;
-  result = this[9] + 1;
-  this[9] = result;
+  *(_DWORD *)(self[5] + 4 * self[6] - 4) = a2;
+  result = self[9] + 1;
+  self[9] = result;
   return result;
 }

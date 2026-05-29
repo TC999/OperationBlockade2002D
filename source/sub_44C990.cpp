@@ -1,10 +1,10 @@
 //----- (0044C990) --------------------------------------------------------
-int __thiscall sub_44C990(LPVOID *this)
+int __thiscall sub_44C990(LPVOID *self)
 {
-  *this = &off_499AA4;
-  sub_4885A6(this[75]);
-  this[75] = 0;
-  this[76] = 0;
-  this[77] = 0;
-  return sub_4690A0(this);
+  *self = &off_499AA4;
+  sub_4885A6(self[75]);
+  self[75] = 0;
+  self[76] = 0;
+  self[77] = 0;
+  return sub_4690A0(self);
 }

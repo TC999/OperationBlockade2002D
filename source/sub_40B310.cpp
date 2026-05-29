@@ -1,5 +1,5 @@
 //----- (0040B310) --------------------------------------------------------
-char __thiscall sub_40B310(const char *this, char *ArgList, _DWORD *a3, const char **a4)
+char __thiscall sub_40B310(const char *self, char *ArgList, _DWORD *a3, const char **a4)
 {
   int v5; // eax
   const char *v6; // esi
@@ -24,8 +24,8 @@ char __thiscall sub_40B310(const char *this, char *ArgList, _DWORD *a3, const ch
       if ( v8 == 46 || v8 == 45 || !v8 )
         break;
     }
-    v9 = this + 16;
-    sub_40A120(v6[i] != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, this + 16);
+    v9 = self + 16;
+    sub_40A120(v6[i] != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, self + 16);
     LOBYTE(v5) = v6[i];
     if ( (_BYTE)v5 )
     {

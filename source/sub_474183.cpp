@@ -1,5 +1,5 @@
 //----- (00474183) --------------------------------------------------------
-int __thiscall sub_474183(float *this, int a2, int a3, float *a4)
+int __thiscall sub_474183(float *self, int a2, int a3, float *a4)
 {
   int result; // eax
   _BYTE *i; // esi
@@ -15,15 +15,15 @@ int __thiscall sub_474183(float *this, int a2, int a3, float *a4)
   float *v16; // [esp+2Ch] [ebp+Ch]
 
   v14 = 0;
-  result = a3 * *((_DWORD *)this + 1043);
-  for ( i = (_BYTE *)(*((_DWORD *)this + 6) + result + a2 * *((_DWORD *)this + 1042));
-        v14 < *((_DWORD *)this + 1044);
+  result = a3 * *((_DWORD *)self + 1043);
+  for ( i = (_BYTE *)(*((_DWORD *)self + 6) + result + a2 * *((_DWORD *)self + 1042));
+        v14 < *((_DWORD *)self + 1044);
         result = v14 )
   {
     v7 = 0;
     v13 = 3.4028235e38;
     v15 = 0;
-    v16 = this + 12;
+    v16 = self + 12;
     do
     {
       sub_473397(a4, &v9, v16);

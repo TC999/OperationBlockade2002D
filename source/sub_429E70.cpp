@@ -1,5 +1,5 @@
 //----- (00429E70) --------------------------------------------------------
-bool __thiscall sub_429E70(_DWORD *this, _BYTE *a2, int a3)
+bool __thiscall sub_429E70(_DWORD *self, _BYTE *a2, int a3)
 {
   _DWORD *v3; // esi
   int v5; // eax
@@ -13,8 +13,8 @@ bool __thiscall sub_429E70(_DWORD *this, _BYTE *a2, int a3)
   char v13; // [esp+7h] [ebp-5h] BYREF
   int v14; // [esp+8h] [ebp-4h]
 
-  v3 = (_DWORD *)*this;
-  if ( *(_DWORD *)*this )
+  v3 = (_DWORD *)*self;
+  if ( *(_DWORD *)*self )
     return 0;
   do
   {

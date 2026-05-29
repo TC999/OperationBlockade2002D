@@ -1,5 +1,5 @@
 //----- (00476004) --------------------------------------------------------
-int __thiscall sub_476004(_DWORD *this, unsigned int a2, unsigned int a3, int a4)
+int __thiscall sub_476004(_DWORD *self, unsigned int a2, unsigned int a3, int a4)
 {
   int result; // eax
   unsigned int v6; // edi
@@ -20,59 +20,59 @@ int __thiscall sub_476004(_DWORD *this, unsigned int a2, unsigned int a3, int a4
   int v21; // [esp+4Ch] [ebp-4h]
   BOOL v22; // [esp+60h] [ebp+10h]
 
-  if ( !this[1061] )
+  if ( !self[1061] )
     return -2147024882;
-  if ( a2 < this[1054] || a2 >= this[1056] )
+  if ( a2 < self[1054] || a2 >= self[1056] )
   {
     v6 = a3;
   }
   else
   {
     v6 = a3;
-    if ( a3 >= this[1057] && a3 < this[1058] )
+    if ( a3 >= self[1057] && a3 < self[1058] )
       return 0;
   }
-  result = sub_475CAA(this);
+  result = sub_475CAA(self);
   if ( result >= 0 )
   {
-    this[1056] = (a2 & 0xFFFFFFFC) + 4;
-    this[1058] = v6 + 1;
-    v7 = this[1065] <= (a2 & 0xFFFFFFFC);
-    this[1054] = a2 & 0xFFFFFFFC;
-    this[1057] = v6;
+    self[1056] = (a2 & 0xFFFFFFFC) + 4;
+    self[1058] = v6 + 1;
+    v7 = self[1065] <= (a2 & 0xFFFFFFFC);
+    self[1054] = a2 & 0xFFFFFFFC;
+    self[1057] = v6;
     if ( v7 )
     {
-      this[1065] = a2 & 0xFFFFFFFC;
+      self[1065] = a2 & 0xFFFFFFFC;
       if ( !a4 )
         return 0;
     }
-    v8 = this[1];
+    v8 = self[1];
     v22 = v8 == 844388420 || v8 == 877942852;
-    v9 = this[1053];
-    if ( v9 >= this[1055] )
+    v9 = self[1053];
+    if ( v9 >= self[1055] )
       return 0;
 LABEL_19:
-    v10 = this[1];
+    v10 = self[1];
     switch ( v10 )
     {
       case 827611204:
-        sub_47B039(this[6] + v6 * this[1043] + this[1042] * (a2 >> 2) + 8 * (v9 >> 2), v18);
+        sub_47B039(self[6] + v6 * self[1043] + self[1042] * (a2 >> 2) + 8 * (v9 >> 2), v18);
         break;
       case 844388420:
       case 861165636:
-        sub_47B9A3(this[6] + 16 * (v9 >> 2) + v6 * this[1043] + this[1042] * (a2 >> 2), v18);
+        sub_47B9A3(self[6] + 16 * (v9 >> 2) + v6 * self[1043] + self[1042] * (a2 >> 2), v18);
         break;
       case 877942852:
       case 894720068:
-        sub_47B9F1(this[6] + 16 * (v9 >> 2) + v6 * this[1043] + this[1042] * (a2 >> 2), v18);
+        sub_47B9F1(self[6] + 16 * (v9 >> 2) + v6 * self[1043] + self[1042] * (a2 >> 2), v18);
         break;
     }
     v11 = v18;
-    v12 = this + 1049;
+    v12 = self + 1049;
     v20 = 4;
     while ( 1 )
     {
-      v13 = v9 - this[1053];
+      v13 = v9 - self[1053];
       v21 = 4;
       v14 = (float *)(*v12 + 16 * v13);
       do
@@ -123,7 +123,7 @@ LABEL_43:
       if ( !--v20 )
       {
         v9 += 4;
-        if ( v9 < this[1055] )
+        if ( v9 < self[1055] )
         {
           v6 = a3;
           goto LABEL_19;

@@ -1,5 +1,5 @@
 //----- (00430BC0) --------------------------------------------------------
-int __thiscall sub_430BC0(int this, int *a2, int *a3, int a4, int *a5)
+int __thiscall sub_430BC0(int self, int *a2, int *a3, int a4, int *a5)
 {
   float v5; // ebp
   int *v7; // ebx
@@ -22,12 +22,12 @@ int __thiscall sub_430BC0(int this, int *a2, int *a3, int a4, int *a5)
 
   v5 = *(float *)&a4;
   v16 = *(_DWORD *)(*(_DWORD *)(a4 + 4) + 300);
-  if ( !*(_BYTE *)(this + 16) )
+  if ( !*(_BYTE *)(self + 16) )
     return 0;
   v7 = a5;
-  if ( !sub_407710(*(float **)(this + 432), *a2, a2[1], a2[2], *a3, a3[1], a3[2], &a4, (int)a5) )
+  if ( !sub_407710(*(float **)(self + 432), *a2, a2[1], a2[2], *a3, a3[1], a3[2], &a4, (int)a5) )
     return 0;
-  v8 = *(_DWORD *)(this + 428);
+  v8 = *(_DWORD *)(self + 428);
   v9 = 0;
   v10 = (_DWORD *)(v8 + 628);
   while ( !*((_BYTE *)v10 - 4) || a4 != *v10 )
@@ -41,7 +41,7 @@ int __thiscall sub_430BC0(int this, int *a2, int *a3, int a4, int *a5)
   {
     if ( !*(_BYTE *)(LODWORD(v5) + 124) )
     {
-      v17[3] = *(_WORD *)(this + 392);
+      v17[3] = *(_WORD *)(self + 392);
       v18 = v9;
       v19 = *v7;
       v20 = v7[1];
@@ -60,7 +60,7 @@ int __thiscall sub_430BC0(int this, int *a2, int *a3, int a4, int *a5)
     sub_430F00(v9, (int)v7, *(float *)(v12 + 300), v13);
   }
 LABEL_13:
-  v14 = *(_DWORD *)(this + 432);
+  v14 = *(_DWORD *)(self + 432);
   memset(&v24[11], 0, 16);
   memset(&v24[6], 0, 16);
   memset(&v24[1], 0, 16);

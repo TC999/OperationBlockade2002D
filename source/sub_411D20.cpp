@@ -1,5 +1,5 @@
 //----- (00411D20) --------------------------------------------------------
-int __thiscall sub_411D20(_DWORD *this)
+int __thiscall sub_411D20(_DWORD *self)
 {
   struct _RTL_CRITICAL_SECTION *v2; // ebx
   int *v3; // eax
@@ -12,21 +12,21 @@ int __thiscall sub_411D20(_DWORD *this)
   int v10; // eax
   int v11; // eax
 
-  v2 = (struct _RTL_CRITICAL_SECTION *)(this + 11);
+  v2 = (struct _RTL_CRITICAL_SECTION *)(self + 11);
   while ( 1 )
   {
     EnterCriticalSection(v2);
-    v3 = (int *)this[8];
+    v3 = (int *)self[8];
     if ( !v3 )
       break;
     v4 = *v3;
     v5 = v3[1];
     *v3 = 0;
-    v3[1] = this[7];
-    this[7] = v3;
-    this[8] = v5;
+    v3[1] = self[7];
+    self[7] = v3;
+    self[8] = v5;
     if ( !v5 )
-      this[9] = 0;
+      self[9] = 0;
     LeaveCriticalSection(v2);
     if ( !v4 )
       goto LABEL_12;
@@ -37,7 +37,7 @@ int __thiscall sub_411D20(_DWORD *this)
       {
         v7 = *(_DWORD *)(v6 + 6);
         if ( v7 )
-          sub_411BB0((int)this, *(_DWORD *)(v7 + 8));
+          sub_411BB0((int)self, *(_DWORD *)(v7 + 8));
       }
     }
     sub_4113D0(v4);
@@ -46,12 +46,12 @@ int __thiscall sub_411D20(_DWORD *this)
 LABEL_12:
   while ( 1 )
   {
-    result = this[18];
+    result = self[18];
     if ( result <= 0 )
       break;
     --result;
-    v9 = *(_DWORD *)(this[17] + 4 * result);
-    this[18] = result;
+    v9 = *(_DWORD *)(self[17] + 4 * result);
+    self[18] = result;
     if ( !v9 )
       break;
     if ( *(_WORD *)(v9 + 12) == 0xFF00 )
@@ -61,7 +61,7 @@ LABEL_12:
       {
         v11 = *(_DWORD *)(v10 + 6);
         if ( v11 )
-          sub_411BB0((int)this, *(_DWORD *)(v11 + 8));
+          sub_411BB0((int)self, *(_DWORD *)(v11 + 8));
       }
     }
     sub_4113D0(v9);

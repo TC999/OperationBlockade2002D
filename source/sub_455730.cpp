@@ -1,8 +1,8 @@
 //----- (00455730) --------------------------------------------------------
-void __thiscall sub_455730(_DWORD *this)
+void __thiscall sub_455730(_DWORD *self)
 {
-  *(_BYTE *)this = HIBYTE(this);
-  this[1] = 0;
-  this[2] = 0;
-  this[3] = 0;
+  *(_BYTE *)self = HIBYTE(self);
+  self[1] = 0;
+  self[2] = 0;
+  self[3] = 0;
 }

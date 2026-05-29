@@ -1,5 +1,5 @@
 //----- (0045B3E0) --------------------------------------------------------
-char __thiscall sub_45B3E0(int this, float *a2)
+char __thiscall sub_45B3E0(int self, float *a2)
 {
   int v2; // ebp
   int v3; // edi
@@ -11,9 +11,9 @@ char __thiscall sub_45B3E0(int this, float *a2)
   int v10; // eax
   float *v11; // edx
 
-  if ( *(_DWORD *)(this + 100) != 6 )
+  if ( *(_DWORD *)(self + 100) != 6 )
     return 0;
-  v2 = *(_DWORD *)(this + 104);
+  v2 = *(_DWORD *)(self + 104);
   if ( v2 == -1 )
     return 0;
   v3 = 0;
@@ -36,12 +36,12 @@ char __thiscall sub_45B3E0(int this, float *a2)
     }
     ++v3;
   }
-  v10 = *(_DWORD *)(this + 76);
+  v10 = *(_DWORD *)(self + 76);
   if ( *(_DWORD *)(v10 + 440) != v2 )
     return 0;
   v11 = *(float **)(*(_DWORD *)(v10 + 408) + 4 * v2);
   if ( *v11 == 0.0 )
     return 0;
-  *a2 = *v11 - *(float *)(this + 108);
+  *a2 = *v11 - *(float *)(self + 108);
   return 1;
 }

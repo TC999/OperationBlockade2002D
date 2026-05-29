@@ -1,5 +1,5 @@
 //----- (0040BFE0) --------------------------------------------------------
-_DWORD *__thiscall sub_40BFE0(_BYTE *this, _DWORD *a2, int a3, int a4, int a5)
+_DWORD *__thiscall sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
 {
   int v6; // eax
   _DWORD *v7; // esi
@@ -15,10 +15,10 @@ _DWORD *__thiscall sub_40BFE0(_BYTE *this, _DWORD *a2, int a3, int a4, int a5)
   int v18; // [esp+24h] [ebp-4h]
 
   v14 = 0;
-  v6 = ((int (__stdcall *)(int, int, _BYTE *, _DWORD))DirectInputCreateA)(a3, 768, this + 8, 0);
+  v6 = ((int (__stdcall *)(int, int, _BYTE *, _DWORD))DirectInputCreateA)(a3, 768, self + 8, 0);
   if ( v6 >= 0 )
   {
-    sub_40C130(this, &v14, a4, a5);
+    sub_40C130(self, &v14, a4, a5);
     v18 = 0;
     if ( v14 )
     {
@@ -35,7 +35,7 @@ _DWORD *__thiscall sub_40BFE0(_BYTE *this, _DWORD *a2, int a3, int a4, int a5)
     else
     {
       sub_4229D0(aInitializedKey, v12);
-      sub_40C1F0(this, &v16, a4, a5);
+      sub_40C1F0(self, &v16, a4, a5);
       LOBYTE(v18) = 1;
       if ( v16 )
       {
@@ -54,7 +54,7 @@ _DWORD *__thiscall sub_40BFE0(_BYTE *this, _DWORD *a2, int a3, int a4, int a5)
       {
         sub_4229D0(aInitializedMou, v13);
         v10 = v17;
-        this[292] = 1;
+        self[292] = 1;
         v7 = a2;
         *a2 = 0;
         a2[1] = 0;

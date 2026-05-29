@@ -1,5 +1,5 @@
 //----- (00448390) --------------------------------------------------------
-int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a4)
+int __thiscall sub_448390(_DWORD *self, char *a2, unsigned int a3, const void *a4)
 {
   _DWORD *v4; // esi
   char *v6; // ebx
@@ -40,9 +40,9 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
   char *v42; // [esp+24h] [ebp+8h]
   char *v43; // [esp+28h] [ebp+Ch]
 
-  v4 = this;
-  v6 = (char *)this[2];
-  if ( (this[3] - (int)v6) / 260 >= a3 )
+  v4 = self;
+  v6 = (char *)self[2];
+  if ( (self[3] - (int)v6) / 260 >= a3 )
   {
     v21 = a2;
     result = 2114445439 * (v6 - a2);
@@ -50,7 +50,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
     {
       if ( a3 )
       {
-        v42 = (char *)this[2];
+        v42 = (char *)self[2];
         v30 = 260 * a3;
         for ( i = &v6[-260 * a3]; i != v6; v42 += 260 )
         {
@@ -58,7 +58,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
           {
             qmemcpy(v42, i, 0x104u);
             v21 = a2;
-            v4 = this;
+            v4 = self;
           }
           i += 260;
         }
@@ -73,7 +73,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
             qmemcpy(v32, v33, 0x104u);
           }
           while ( v33 != a2 );
-          v4 = this;
+          v4 = self;
           v21 = a2;
         }
         v34 = &v21[v30];
@@ -87,7 +87,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
             qmemcpy(v35, a4, 0x104u);
           }
           while ( (char *)result != v34 );
-          v4 = this;
+          v4 = self;
         }
         v4[2] += v30;
       }
@@ -107,7 +107,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
           {
             qmemcpy(v23, v41, 0x104u);
             v21 = a2;
-            v4 = this;
+            v4 = self;
             v24 = v41;
           }
           v24 += 260;
@@ -123,7 +123,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
         {
           qmemcpy(v25, a4, 0x104u);
           v21 = a2;
-          v4 = this;
+          v4 = self;
         }
         v25 += 260;
       }
@@ -138,7 +138,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
           qmemcpy(v29, a4, 0x104u);
         }
         while ( v28 != v27 );
-        v4 = this;
+        v4 = self;
       }
       result = v39 + v4[2];
       v4[2] = result;
@@ -146,7 +146,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
   }
   else
   {
-    v7 = this[1];
+    v7 = self[1];
     if ( !v7 || (v8 = (int)&v6[-v7] / 260, a3 >= v8) )
       v8 = a3;
     if ( v7 )
@@ -164,7 +164,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
       if ( v11 )
       {
         qmemcpy(v11, k, 0x104u);
-        v4 = this;
+        v4 = self;
       }
       k += 260;
     }
@@ -177,7 +177,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
         if ( v13 )
         {
           qmemcpy(v13, a4, 0x104u);
-          v4 = this;
+          v4 = self;
         }
         v13 += 260;
         --v14;
@@ -196,7 +196,7 @@ int __thiscall sub_448390(_DWORD *this, char *a2, unsigned int a3, const void *a
         if ( v16 )
         {
           qmemcpy(v16, v17, 0x104u);
-          v4 = this;
+          v4 = self;
           v15 = v40;
           v16 = v43;
         }

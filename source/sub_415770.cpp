@@ -1,5 +1,5 @@
 //----- (00415770) --------------------------------------------------------
-int __thiscall sub_415770(int this, float *a2, float *a3, int a4, int a5)
+int __thiscall sub_415770(int self, float *a2, float *a3, int a4, int a5)
 {
   double v5; // st7
   double v6; // st6
@@ -16,48 +16,48 @@ int __thiscall sub_415770(int this, float *a2, float *a3, int a4, int a5)
   float v17; // [esp+20h] [ebp+4h]
   float v18; // [esp+20h] [ebp+4h]
 
-  *(_BYTE *)(this + 4148) = 0;
+  *(_BYTE *)(self + 4148) = 0;
   if ( a2 )
   {
-    *(_BYTE *)(this + 4148) = 1;
+    *(_BYTE *)(self + 4148) = 1;
     v14 = a2[1] - a3[1];
     v15 = a2[2] - a3[2];
     v8 = (*a2 - *a3) * 0.5;
-    *(float *)(this + 4152) = v8;
+    *(float *)(self + 4152) = v8;
     v10 = v14 * 0.5;
-    *(float *)(this + 4156) = v10;
+    *(float *)(self + 4156) = v10;
     v12 = v15 * 0.5;
-    *(float *)(this + 4160) = v12;
-    v9 = *a2 - *(float *)(this + 4152);
-    v11 = a2[1] - *(float *)(this + 4156);
-    v13 = a2[2] - *(float *)(this + 4160);
+    *(float *)(self + 4160) = v12;
+    v9 = *a2 - *(float *)(self + 4152);
+    v11 = a2[1] - *(float *)(self + 4156);
+    v13 = a2[2] - *(float *)(self + 4160);
     v5 = 0.0;
-    v6 = *(float *)(this + 4152);
-    *(float *)(this + 4164) = v9;
-    *(float *)(this + 4168) = v11;
-    *(float *)(this + 4172) = v13;
+    v6 = *(float *)(self + 4152);
+    *(float *)(self + 4164) = v9;
+    *(float *)(self + 4168) = v11;
+    *(float *)(self + 4172) = v13;
     if ( v6 >= 0.0 )
-      v5 = *(float *)(this + 4152);
-    if ( v5 <= *(float *)(this + 4156) )
-      v5 = *(float *)(this + 4156);
-    if ( v5 <= *(float *)(this + 4160) )
-      v5 = *(float *)(this + 4160);
-    v16 = v5 + *(float *)(this + 4164);
+      v5 = *(float *)(self + 4152);
+    if ( v5 <= *(float *)(self + 4156) )
+      v5 = *(float *)(self + 4156);
+    if ( v5 <= *(float *)(self + 4160) )
+      v5 = *(float *)(self + 4160);
+    v16 = v5 + *(float *)(self + 4164);
     if ( v5 <= v16 )
       v5 = v16;
-    v17 = v5 + *(float *)(this + 4168);
+    v17 = v5 + *(float *)(self + 4168);
     if ( v5 <= v17 )
       v5 = v17;
-    v18 = v5 + *(float *)(this + 4172);
+    v18 = v5 + *(float *)(self + 4172);
     if ( v5 <= v18 )
       v5 = v18;
-    *(float *)(this + 4176) = v5 * 1.2;
+    *(float *)(self + 4176) = v5 * 1.2;
   }
-  *(_DWORD *)(this + 16) = 0;
-  *(_DWORD *)(this + 4132) = 0;
-  memset((void *)(this + 132), 0, 0xFA0u);
+  *(_DWORD *)(self + 16) = 0;
+  *(_DWORD *)(self + 4132) = 0;
+  memset((void *)(self + 132), 0, 0xFA0u);
   result = a5;
-  *(_DWORD *)(this + 4) = a4;
-  *(_DWORD *)(this + 8) = a5;
+  *(_DWORD *)(self + 4) = a4;
+  *(_DWORD *)(self + 8) = a5;
   return result;
 }

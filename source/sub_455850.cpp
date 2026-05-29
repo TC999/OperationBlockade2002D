@@ -1,5 +1,5 @@
 //----- (00455850) --------------------------------------------------------
-int __thiscall sub_455850(int *this, int a2, int *a3, int a4)
+int __thiscall sub_455850(int *self, int a2, int *a3, int a4)
 {
   int *v4; // esi
   int v5; // edi
@@ -30,7 +30,7 @@ int __thiscall sub_455850(int *this, int a2, int *a3, int a4)
   int v32; // [esp+40h] [ebp+4h]
   _DWORD *v33; // [esp+44h] [ebp+8h]
 
-  v4 = this;
+  v4 = self;
   v5 = a4;
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {
@@ -48,10 +48,10 @@ int __thiscall sub_455850(int *this, int a2, int *a3, int a4)
   {
     v8 = v4[100];
     if ( v8 )
-      v9 = sub_4560B0((int)v7, a2, a3, (this[101] - v8) >> 2, v5);
+      v9 = sub_4560B0((int)v7, a2, a3, (self[101] - v8) >> 2, v5);
     else
       v9 = sub_4560B0((int)v7, a2, a3, 0, v5);
-    v4 = this;
+    v4 = self;
   }
   else
   {
@@ -98,5 +98,5 @@ int __thiscall sub_455850(int *this, int a2, int *a3, int a4)
     v11[1] = (int)v33;
     v11[2] = (int)&v33[v21 + 1];
   }
-  return sub_428680(this, a4);
+  return sub_428680(self, a4);
 }

@@ -1,10 +1,10 @@
 //----- (004286C0) --------------------------------------------------------
-int __thiscall sub_4286C0(_DWORD *this, int a2)
+int __thiscall sub_4286C0(_DWORD *self, int a2)
 {
   int result; // eax
   int v3; // edx
 
-  result = this[3];
+  result = self[3];
   v3 = 0;
   if ( result )
   {
@@ -25,7 +25,7 @@ int __thiscall sub_4286C0(_DWORD *this, int a2)
     else
     {
       result = *(_DWORD *)(result + 8);
-      this[3] = result;
+      self[3] = result;
     }
     *(_DWORD *)(a2 + 4) = 0;
   }

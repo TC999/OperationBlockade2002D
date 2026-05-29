@@ -1,5 +1,5 @@
 //----- (00406F00) --------------------------------------------------------
-char __thiscall sub_406F00(float *this, int a2)
+char __thiscall sub_406F00(float *self, int a2)
 {
   int v4; // ecx
   _DWORD *v5; // esi
@@ -12,9 +12,9 @@ char __thiscall sub_406F00(float *this, int a2)
   int v13; // [esp+18h] [ebp+4h]
   float v14; // [esp+18h] [ebp+4h]
 
-  v4 = *(_DWORD *)(*((_DWORD *)this + 7) + 4);
+  v4 = *(_DWORD *)(*((_DWORD *)self + 7) + 4);
   v12 = (_BYTE *)(v4 + 172 * a2);
-  v5 = (_DWORD *)(*((_DWORD *)this + 6) + 96 * a2);
+  v5 = (_DWORD *)(*((_DWORD *)self + 6) + 96 * a2);
   v6 = a2;
   v7 = v5[23];
   if ( a2 <= -1 )
@@ -22,7 +22,7 @@ char __thiscall sub_406F00(float *this, int a2)
   while ( 1 )
   {
     v13 = v4 + 172 * v6;
-    if ( !*(_BYTE *)(96 * v6 + *((_DWORD *)this + 6) + 85) )
+    if ( !*(_BYTE *)(96 * v6 + *((_DWORD *)self + 6) + 85) )
       break;
     if ( v7 && *(_BYTE *)v7 )
       LOBYTE(v6) = *(_BYTE *)(v7 + 1);
@@ -63,9 +63,9 @@ char __thiscall sub_406F00(float *this, int a2)
     v14 = *(float *)(v7 + 72);
   else
 LABEL_15:
-    v14 = this[8];
+    v14 = self[8];
   v8 = v5 + 4;
-  sub_4063E0(*((_DWORD **)this + 7), a2, v5 + 4, (float *)v5 + 20, v14, *((_DWORD *)this + 11));
+  sub_4063E0(*((_DWORD **)self + 7), a2, v5 + 4, (float *)v5 + 20, v14, *((_DWORD *)self + 11));
   if ( !v7 )
     goto LABEL_23;
   if ( *(_BYTE *)(v7 + 69) )
@@ -96,8 +96,8 @@ LABEL_24:
   if ( v9 && *((int *)v10 + 7) >= 0 )
   {
     sub_406F00(*((float *)v10 + 7));
-    sub_46B97C(v8, v8, 96 * *((_DWORD *)v10 + 7) + *((_DWORD *)this + 6) + 16);
-    *((float *)v5 + 20) = *(float *)(96 * *((_DWORD *)v10 + 7) + *((_DWORD *)this + 6) + 80) * *((float *)v5 + 20);
+    sub_46B97C(v8, v8, 96 * *((_DWORD *)v10 + 7) + *((_DWORD *)self + 6) + 16);
+    *((float *)v5 + 20) = *(float *)(96 * *((_DWORD *)v10 + 7) + *((_DWORD *)self + 6) + 80) * *((float *)v5 + 20);
   }
   if ( _strcmpi(*((const char **)v10 + 2), aSky08) && _strcmpi(*((const char **)v10 + 2), aCloud08) )
     _strcmpi(*((const char **)v10 + 2), aMesh05);

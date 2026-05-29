@@ -1,5 +1,5 @@
 //----- (00443180) --------------------------------------------------------
-__int16 __thiscall sub_443180(_DWORD *this, int a2)
+__int16 __thiscall sub_443180(_DWORD *self, int a2)
 {
   unsigned int v2; // eax
   int v3; // edx
@@ -7,15 +7,15 @@ __int16 __thiscall sub_443180(_DWORD *this, int a2)
   if ( *(_WORD *)(a2 + 12) == 513 )
   {
     LOWORD(v2) = (unsigned __int16)sub_442F80(
-                                     this,
+                                     self,
                                      *(_WORD **)(*(_DWORD *)(*(_DWORD *)(dword_520970 + 200) + 20)
                                                + 4 * *(unsigned __int16 *)(*(_DWORD *)(a2 + 16) + 6)));
   }
   else
   {
     v2 = *(unsigned __int16 *)(*(_DWORD *)(a2 + 16) + 6);
-    v3 = this[6];
-    if ( v3 && v2 < (this[7] - v3) >> 2 )
+    v3 = self[6];
+    if ( v3 && v2 < (self[7] - v3) >> 2 )
       LOWORD(v2) = (*(int (__thiscall **)(_DWORD, int))(**(_DWORD **)(v3 + 4 * v2) + 28))(*(_DWORD *)(v3 + 4 * v2), a2);
   }
   return v2;

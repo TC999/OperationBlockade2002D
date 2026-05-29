@@ -1,5 +1,5 @@
 //----- (0040AF60) --------------------------------------------------------
-float *__thiscall sub_40AF60(const char *this, char *ArgList, float *a3)
+float *__thiscall sub_40AF60(const char *self, char *ArgList, float *a3)
 {
   float *result; // eax
   const char *v5; // esi
@@ -13,7 +13,7 @@ float *__thiscall sub_40AF60(const char *this, char *ArgList, float *a3)
   {
     v6 = *(_BYTE *)result;
     v7 = *v5 >= 48 && v6 <= 57 || v6 == 45 || v6 == 43 || v6 == 46;
-    sub_40A120(v7, "%s = %s, float expected, see %s", ArgList, v5, this + 16);
+    sub_40A120(v7, "%s = %s, float expected, see %s", ArgList, v5, self + 16);
     v8 = atof(v5);
     result = a3;
     *a3 = v8;

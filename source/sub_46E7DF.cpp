@@ -1,5 +1,5 @@
 //----- (0046E7DF) --------------------------------------------------------
-int __thiscall sub_46E7DF(_DWORD *this)
+int __thiscall sub_46E7DF(_DWORD *self)
 {
   _DWORD *v1; // edi
   unsigned int v2; // esi
@@ -21,14 +21,14 @@ int __thiscall sub_46E7DF(_DWORD *this)
   unsigned int v19; // [esp+18h] [ebp-8h]
   char *i; // [esp+1Ch] [ebp-4h]
 
-  v1 = (_DWORD *)*this;
-  v2 = *(_DWORD *)(*this + 4148);
-  v18 = *(_DWORD *)(*this + 4144);
+  v1 = (_DWORD *)*self;
+  v2 = *(_DWORD *)(*self + 4148);
+  v18 = *(_DWORD *)(*self + 4144);
   if ( (((unsigned __int8)v2
-       | (unsigned __int8)(*(_BYTE *)(*this + 4144) | *(_BYTE *)(*this + 4152) | *(_BYTE *)(*this + 4156)))
+       | (unsigned __int8)(*(_BYTE *)(*self + 4144) | *(_BYTE *)(*self + 4152) | *(_BYTE *)(*self + 4156)))
       & 3) != 0 )
     return -2147467259;
-  v4 = this[1];
+  v4 = self[1];
   v5 = *(_DWORD *)(v4 + 4148);
   v15 = *(_DWORD *)(v4 + 4144);
   if ( (((unsigned __int8)v5 | (unsigned __int8)(v15 | *(_BYTE *)(v4 + 4152) | *(_BYTE *)(v4 + 4156))) & 3) != 0 )
@@ -54,7 +54,7 @@ int __thiscall sub_46E7DF(_DWORD *this)
   if ( *(_DWORD *)(v4 + 4184) )
   {
     v7 = *(_DWORD *)(v4 + 4180);
-    v8 = this;
+    v8 = self;
     do
     {
       v19 = 0;

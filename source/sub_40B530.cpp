@@ -1,5 +1,5 @@
 //----- (0040B530) --------------------------------------------------------
-char __thiscall sub_40B530(const char *this, char *ArgList, _DWORD *a3, _DWORD *a4, const char **a5)
+char __thiscall sub_40B530(const char *self, char *ArgList, _DWORD *a3, _DWORD *a4, const char **a5)
 {
   const char *v6; // esi
   char result; // al
@@ -27,8 +27,8 @@ char __thiscall sub_40B530(const char *this, char *ArgList, _DWORD *a3, _DWORD *
       if ( v9 == 46 || v9 == 45 || !v9 )
         break;
     }
-    v10 = this + 16;
-    sub_40A120(v6[i] != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, this + 16);
+    v10 = self + 16;
+    sub_40A120(v6[i] != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, self + 16);
     result = v6[i];
     if ( result )
     {

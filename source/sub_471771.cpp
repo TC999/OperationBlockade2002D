@@ -1,5 +1,5 @@
 //----- (00471771) --------------------------------------------------------
-int __thiscall sub_471771(_DWORD *this, int a2, int a3)
+int __thiscall sub_471771(_DWORD *self, int a2, int a3)
 {
   int v3; // esi
   _DWORD *v4; // eax
@@ -30,7 +30,7 @@ int __thiscall sub_471771(_DWORD *this, int a2, int a3)
   const void **v30; // [esp+278h] [ebp-8h]
   _DWORD *v31; // [esp+27Ch] [ebp-4h]
 
-  v31 = this;
+  v31 = self;
   v23 = sub_4789FA(v20);
   v20[0] = sub_4716F6;
   v21 = nullsub_2;

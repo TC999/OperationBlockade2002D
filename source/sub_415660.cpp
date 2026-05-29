@@ -1,23 +1,23 @@
 //----- (00415660) --------------------------------------------------------
-_DWORD *__thiscall sub_415660(_DWORD *this, int a2)
+_DWORD *__thiscall sub_415660(_DWORD *self, int a2)
 {
   _DWORD *result; // eax
   _DWORD *v3; // ecx
   int v4; // esi
 
-  result = this;
-  this[2] = 0;
-  this[9] = 0;
-  this[4] = 0;
-  this[10] = 0;
-  this[1033] = 0;
-  this[1034] = 0;
-  this[11] = 0;
-  this[1035] = 0;
-  *this = a2;
-  this[5] = 1065353216;
-  *((_BYTE *)this + 12) = 1;
-  v3 = this + 35;
+  result = self;
+  self[2] = 0;
+  self[9] = 0;
+  self[4] = 0;
+  self[10] = 0;
+  self[1033] = 0;
+  self[1034] = 0;
+  self[11] = 0;
+  self[1035] = 0;
+  *self = a2;
+  self[5] = 1065353216;
+  *((_BYTE *)self + 12) = 1;
+  v3 = self + 35;
   v4 = 200;
   do
   {

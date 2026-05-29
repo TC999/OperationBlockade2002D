@@ -1,5 +1,5 @@
 //----- (004375C0) --------------------------------------------------------
-int __thiscall sub_4375C0(void *this, char *String1)
+int __thiscall sub_4375C0(void *self, char *String1)
 {
   int result; // eax
   LPVOID *v4; // eax
@@ -8,7 +8,7 @@ int __thiscall sub_4375C0(void *this, char *String1)
   {
     *(_BYTE *)(*(_DWORD *)(dword_520970 + 280) + 2552) = *(_BYTE *)(*(_DWORD *)(dword_520970 + 280) + 2552) == 0;
 LABEL_5:
-    v4 = (LPVOID *)sub_436A90((int)this);
+    v4 = (LPVOID *)sub_436A90((int)self);
     return sub_421110(v4, aCheatCodeEnabl);
   }
   result = _strcmpi(String1, aSayUncle);

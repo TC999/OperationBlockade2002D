@@ -1,5 +1,5 @@
 //----- (00462B20) --------------------------------------------------------
-_DWORD *__thiscall sub_462B20(_DWORD *this)
+_DWORD *__thiscall sub_462B20(_DWORD *self)
 {
   _DWORD *result; // eax
   int v3; // ebp
@@ -28,11 +28,11 @@ _DWORD *__thiscall sub_462B20(_DWORD *this)
   int v26[16]; // [esp+40h] [ebp-80h] BYREF
   int v27[16]; // [esp+80h] [ebp-40h] BYREF
 
-  result = *(_DWORD **)(this[642] + 8 * this[645]);
+  result = *(_DWORD **)(self[642] + 8 * self[645]);
   if ( (int)result[202] >= 0 && (int)result[203] >= 0 )
   {
     v3 = 0;
-    result = this + 680;
+    result = self + 680;
     while ( *(_BYTE *)result )
     {
       ++v3;
@@ -42,7 +42,7 @@ _DWORD *__thiscall sub_462B20(_DWORD *this)
     }
     v17 = 0;
     v18 = 0;
-    v4 = &this[22 * v3];
+    v4 = &self[22 * v3];
     v19 = 0;
     v16 = v4;
     v13 = 0.0;
@@ -52,7 +52,7 @@ _DWORD *__thiscall sub_462B20(_DWORD *this)
     *((_BYTE *)v4 + 2720) = 1;
     v15 = 0.0;
     sub_406BE0(v27);
-    v5 = *(_DWORD *)(this[642] + 8 * this[645]);
+    v5 = *(_DWORD *)(self[642] + 8 * self[645]);
     sub_407690(*(_DWORD *)(v5 + 652), *(_DWORD *)(v5 + 812), v27);
     sub_46C5C5(&v17, &v17, v27);
     sub_46B976(&v13, &v13, v27);
@@ -71,7 +71,7 @@ _DWORD *__thiscall sub_462B20(_DWORD *this)
     *((float *)v4 + 1) = v22;
     v23 = v7;
     *((float *)v4 + 2) = v23;
-    v8 = *(_DWORD *)(this[642] + 8 * this[645]);
+    v8 = *(_DWORD *)(self[642] + 8 * self[645]);
     v9 = *(_DWORD *)(v8 + 808);
     if ( v9 >= 0 )
       sub_407690(*(_DWORD *)(v8 + 652), v9, v27);
@@ -80,7 +80,7 @@ _DWORD *__thiscall sub_462B20(_DWORD *this)
     v26[13] = v18;
     v26[14] = v19;
     qmemcpy(v16 + 681, v26, 0x40u);
-    v10 = sub_409960((_DWORD *)dword_520970, (int)this);
+    v10 = sub_409960((_DWORD *)dword_520970, (int)self);
     v11 = v20;
     v16[701] = v10;
     v10[10] = v11;

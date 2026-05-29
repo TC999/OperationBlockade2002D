@@ -1,5 +1,5 @@
 //----- (0046F1AB) --------------------------------------------------------
-int __thiscall sub_46F1AB(_DWORD *this)
+int __thiscall sub_46F1AB(_DWORD *self)
 {
   _BYTE *v1; // ebx
   int v2; // eax
@@ -18,11 +18,11 @@ int __thiscall sub_46F1AB(_DWORD *this)
   _BYTE *v16; // [esp+14h] [ebp-8h]
   unsigned __int8 *v17; // [esp+18h] [ebp-4h]
 
-  v1 = *(_BYTE **)(this[1] + 24);
-  v2 = *this;
-  v3 = *(unsigned __int8 **)(*this + 24);
-  v4 = *(_DWORD *)(*this + 4168);
-  v5 = &v3[v4 * *(_DWORD *)(*this + 4180)];
+  v1 = *(_BYTE **)(self[1] + 24);
+  v2 = *self;
+  v3 = *(unsigned __int8 **)(*self + 24);
+  v4 = *(_DWORD *)(*self + 4168);
+  v5 = &v3[v4 * *(_DWORD *)(*self + 4180)];
   while ( 1 )
   {
     v14 = v1;
@@ -45,9 +45,9 @@ int __thiscall sub_46F1AB(_DWORD *this)
       *v12 = v11 >> 2;
       v7 = v15 + 2;
     }
-    v1 = &v14[*(_DWORD *)(this[1] + 4168)];
-    v2 = *this;
-    v4 = *(_DWORD *)(*this + 4168);
+    v1 = &v14[*(_DWORD *)(self[1] + 4168)];
+    v2 = *self;
+    v4 = *(_DWORD *)(*self + 4168);
     v3 += 2 * v4;
   }
   return 0;

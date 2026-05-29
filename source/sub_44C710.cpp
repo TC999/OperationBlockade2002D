@@ -1,6 +1,6 @@
 //----- (0044C710) --------------------------------------------------------
-int __thiscall sub_44C710(void *this)
+int __thiscall sub_44C710(void *self)
 {
-  *(_DWORD *)this = &off_499A98;
-  return sub_4690A0(this);
+  *(_DWORD *)self = &off_499A98;
+  return sub_4690A0(self);
 }

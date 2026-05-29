@@ -1,13 +1,13 @@
 //----- (00428E30) --------------------------------------------------------
-int __thiscall sub_428E30(_DWORD *this)
+int __thiscall sub_428E30(_DWORD *self)
 {
   void *v1; // esi
   int result; // eax
 
-  v1 = (void *)*this;
-  if ( *this )
+  v1 = (void *)*self;
+  if ( *self )
   {
-    sub_428E50(*this);
+    sub_428E50(*self);
     return sub_4885A6(v1);
   }
   return result;

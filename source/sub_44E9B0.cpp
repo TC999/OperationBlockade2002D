@@ -1,8 +1,8 @@
 //----- (0044E9B0) --------------------------------------------------------
-void __thiscall sub_44E9B0(LPVOID *this)
+void __thiscall sub_44E9B0(LPVOID *self)
 {
-  sub_4885A6(this[1]);
-  this[1] = 0;
-  this[2] = 0;
-  this[3] = 0;
+  sub_4885A6(self[1]);
+  self[1] = 0;
+  self[2] = 0;
+  self[3] = 0;
 }

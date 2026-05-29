@@ -1,26 +1,26 @@
 //----- (00403B10) --------------------------------------------------------
-_DWORD *__thiscall sub_403B10(_DWORD *this)
+_DWORD *__thiscall sub_403B10(_DWORD *self)
 {
   _DWORD *result; // eax
 
-  result = this;
-  *this = &off_4990BC;
-  this[1] = 0;
-  this[2] = 0;
-  this[3] = 0;
-  this[4] = 0;
-  this[5] = 0;
-  this[7] = 0;
-  this[8] = 0;
-  this[10] = 0;
-  this[9] = 0;
-  this[11] = 0;
-  this[12] = 0;
-  this[13] = 0;
-  this[14] = 1;
-  *((_BYTE *)this + 60) = 0;
-  *((_BYTE *)this + 320) = 0;
-  this[145] = 0;
-  this[146] = 0;
+  result = self;
+  *self = &off_4990BC;
+  self[1] = 0;
+  self[2] = 0;
+  self[3] = 0;
+  self[4] = 0;
+  self[5] = 0;
+  self[7] = 0;
+  self[8] = 0;
+  self[10] = 0;
+  self[9] = 0;
+  self[11] = 0;
+  self[12] = 0;
+  self[13] = 0;
+  self[14] = 1;
+  *((_BYTE *)self + 60) = 0;
+  *((_BYTE *)self + 320) = 0;
+  self[145] = 0;
+  self[146] = 0;
   return result;
 }

@@ -1,5 +1,5 @@
 //----- (00412AB0) --------------------------------------------------------
-_DWORD *__thiscall sub_412AB0(_DWORD *this)
+_DWORD *__thiscall sub_412AB0(_DWORD *self)
 {
   _DWORD *v2; // ebp
   _DWORD *v3; // edi
@@ -8,39 +8,39 @@ _DWORD *__thiscall sub_412AB0(_DWORD *this)
   char *v7; // [esp+34h] [ebp-28h]
   _DWORD v8[5]; // [esp+48h] [ebp-14h] BYREF
 
-  v8[1] = this;
-  this[1] = 0;
-  this[2] = 0;
-  this[3] = 0;
-  *((_BYTE *)this + 16) = 1;
-  v2 = this + 29;
-  this[7] = 1132396544;
-  this[8] = 1132396544;
-  v3 = this + 30;
-  this[12] = 1065353216;
-  this[13] = 1065353216;
-  this[5] = 0;
-  this[18] = -1082130432;
-  this[19] = -1082130432;
-  this[6] = 0;
-  this[9] = 0;
-  this[10] = 0;
-  this[11] = 0;
-  this[17] = 0;
-  this[20] = 255;
-  this[21] = 255;
-  this[22] = 255;
-  this[23] = 255;
-  this[24] = 255;
-  this[25] = 255;
-  *((_BYTE *)this + 104) = 0;
-  *((_BYTE *)this + 105) = 0;
-  this[27] = 0;
-  *((_BYTE *)this + 112) = 1;
-  this[29] = 0;
-  this[30] = 0;
-  *this = &off_4991D4;
-  v7 = (char *)(this + 30);
+  v8[1] = self;
+  self[1] = 0;
+  self[2] = 0;
+  self[3] = 0;
+  *((_BYTE *)self + 16) = 1;
+  v2 = self + 29;
+  self[7] = 1132396544;
+  self[8] = 1132396544;
+  v3 = self + 30;
+  self[12] = 1065353216;
+  self[13] = 1065353216;
+  self[5] = 0;
+  self[18] = -1082130432;
+  self[19] = -1082130432;
+  self[6] = 0;
+  self[9] = 0;
+  self[10] = 0;
+  self[11] = 0;
+  self[17] = 0;
+  self[20] = 255;
+  self[21] = 255;
+  self[22] = 255;
+  self[23] = 255;
+  self[24] = 255;
+  self[25] = 255;
+  *((_BYTE *)self + 104) = 0;
+  *((_BYTE *)self + 105) = 0;
+  self[27] = 0;
+  *((_BYTE *)self + 112) = 1;
+  self[29] = 0;
+  self[30] = 0;
+  *self = &off_4991D4;
+  v7 = (char *)(self + 30);
   v4 = **(_DWORD **)ArgList;
   v8[4] = 0;
   if ( (*(int (__stdcall **)(_DWORD, int, int, int, int, char *))(v4 + 96))(*(_DWORD *)ArgList, 12, 8, 101, 1, v7) )
@@ -72,6 +72,6 @@ _DWORD *__thiscall sub_412AB0(_DWORD *this)
     *(_WORD *)(v8[0] + 10) = 2;
     (*(void (__stdcall **)(_DWORD))(*(_DWORD *)*v3 + 48))(*v3);
   }
-  this[31] = 0;
-  return this;
+  self[31] = 0;
+  return self;
 }

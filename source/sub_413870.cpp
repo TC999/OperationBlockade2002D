@@ -1,5 +1,5 @@
 //----- (00413870) --------------------------------------------------------
-_DWORD *__thiscall sub_413870(_DWORD *this, int a2)
+_DWORD *__thiscall sub_413870(_DWORD *self, int a2)
 {
   int v2; // edx
   int v3; // eax
@@ -8,7 +8,7 @@ _DWORD *__thiscall sub_413870(_DWORD *this, int a2)
   long double v7; // st7
   long double v8; // st7
 
-  v2 = this[6];
+  v2 = self[6];
   v3 = 0;
   for ( i = (_BYTE *)(v2 + 4); *i; i += 192 )
   {

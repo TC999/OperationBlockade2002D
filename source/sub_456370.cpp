@@ -1,5 +1,5 @@
 //----- (00456370) --------------------------------------------------------
-void __thiscall sub_456370(int this)
+void __thiscall sub_456370(int self)
 {
   _DWORD *v2; // eax
   int v3; // edx
@@ -20,35 +20,35 @@ void __thiscall sub_456370(int this)
   float v18; // [esp+Ch] [ebp-14h]
   float v19; // [esp+Ch] [ebp-14h]
 
-  if ( *(float *)(this + 1340) > 0.0 )
+  if ( *(float *)(self + 1340) > 0.0 )
   {
-    *(_DWORD *)(this + 440) = 0;
-    *(_DWORD *)(this + 444) = 1065353216;
-    *(_DWORD *)(this + 448) = 0;
-    v2 = *(_DWORD **)(this + 392);
+    *(_DWORD *)(self + 440) = 0;
+    *(_DWORD *)(self + 444) = 1065353216;
+    *(_DWORD *)(self + 448) = 0;
+    v2 = *(_DWORD **)(self + 392);
     v3 = v2[77];
-    *(_DWORD *)(this + 456) = 1;
-    *(_DWORD *)(this + 452) = v3;
+    *(_DWORD *)(self + 456) = 1;
+    *(_DWORD *)(self + 452) = v3;
     v4 = v2[98];
     if ( v4 )
       v5 = (v2[99] - v4) >> 3;
     else
       v5 = 0;
     v6 = rand() % v5;
-    v7 = *(_DWORD *)(this + 392);
-    v8 = 16 * *(_DWORD *)(this + 456);
-    *(_DWORD *)(this + 460) = v6;
+    v7 = *(_DWORD *)(self + 392);
+    v8 = 16 * *(_DWORD *)(self + 456);
+    *(_DWORD *)(self + 460) = v6;
     v9 = *(_DWORD *)(*(_DWORD *)(v8 + v7 + 376) + 8 * v6 + 4);
-    *(_DWORD *)(this + 468) = 0;
-    *(_DWORD *)(this + 464) = v9;
-    *(_DWORD *)(this + 484) = 0;
-    sub_41C060((_DWORD *)(this + 492), 1065353216, -1077342245, 1070141403);
-    sub_41C0B0((_DWORD *)(this + 492), 0.0);
-    sub_41C0B0((_DWORD *)(this + 492), 0.0);
-    sub_41C0B0((_DWORD *)(this + 492), 0.0);
-    sub_41C0B0((_DWORD *)(this + 492), 0.0);
-    v10 = *(_DWORD *)(this + 392);
-    *(_DWORD *)(this + 1328) = 0;
+    *(_DWORD *)(self + 468) = 0;
+    *(_DWORD *)(self + 464) = v9;
+    *(_DWORD *)(self + 484) = 0;
+    sub_41C060((_DWORD *)(self + 492), 1065353216, -1077342245, 1070141403);
+    sub_41C0B0((_DWORD *)(self + 492), 0.0);
+    sub_41C0B0((_DWORD *)(self + 492), 0.0);
+    sub_41C0B0((_DWORD *)(self + 492), 0.0);
+    sub_41C0B0((_DWORD *)(self + 492), 0.0);
+    v10 = *(_DWORD *)(self + 392);
+    *(_DWORD *)(self + 1328) = 0;
     v11 = *(_DWORD *)(v10 + 296);
     if ( v11 )
     {
@@ -58,33 +58,33 @@ void __thiscall sub_456370(int this)
         v19 = *(float *)(v10 + 360);
         if ( v17 == v19 )
         {
-          *(_BYTE *)(this + 1368) = 0;
-          *(float *)(this + 1364) = v17;
+          *(_BYTE *)(self + 1368) = 0;
+          *(float *)(self + 1364) = v17;
         }
         else
         {
           v14 = rand();
-          *(_BYTE *)(this + 1368) = 0;
-          *(float *)(this + 1364) = fabs((double)v14 * 0.000030518509) * (v19 - v17) + v17;
+          *(_BYTE *)(self + 1368) = 0;
+          *(float *)(self + 1364) = fabs((double)v14 * 0.000030518509) * (v19 - v17) + v17;
         }
       }
     }
     else
     {
-      *(_BYTE *)(this + 1344) = 0;
+      *(_BYTE *)(self + 1344) = 0;
       v15 = *(float *)(v10 + 344);
       if ( 0.0 == v15 )
         v12 = 0.0;
       else
         v12 = fabs((double)rand() * 0.000030518509) * v15;
-      v13 = *(_DWORD *)(this + 392);
-      *(float *)(this + 1348) = v12;
+      v13 = *(_DWORD *)(self + 392);
+      *(float *)(self + 1348) = v12;
       v16 = *(float *)(v13 + 348);
       v18 = *(float *)(v13 + 352);
       if ( v16 == v18 )
-        *(float *)(this + 1356) = v16;
+        *(float *)(self + 1356) = v16;
       else
-        *(float *)(this + 1356) = fabs((double)rand() * 0.000030518509) * (v18 - v16) + v16;
+        *(float *)(self + 1356) = fabs((double)rand() * 0.000030518509) * (v18 - v16) + v16;
     }
   }
 }

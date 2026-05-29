@@ -1,5 +1,5 @@
 //----- (00407F00) --------------------------------------------------------
-bool __thiscall sub_407F00(int this, int a2, int *a3, float a4, int *a5, float *a6)
+bool __thiscall sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
 {
   int v7; // ecx
   int v8; // esi
@@ -40,9 +40,9 @@ bool __thiscall sub_407F00(int this, int a2, int *a3, float a4, int *a5, float *
   int v44; // [esp+86h] [ebp-44h]
   _BYTE v45[64]; // [esp+8Ah] [ebp-40h] BYREF
 
-  sub_406F00((float *)this, a2);
-  v7 = *(_DWORD *)(*(_DWORD *)(this + 28) + 4);
-  v8 = *(_DWORD *)(this + 24) + 96 * a2;
+  sub_406F00((float *)self, a2);
+  v7 = *(_DWORD *)(*(_DWORD *)(self + 28) + 4);
+  v8 = *(_DWORD *)(self + 24) + 96 * a2;
   v23 = *(int *)v8;
   v9 = *(float *)(v8 + 12);
   v24 = *(float *)(v8 + 4);

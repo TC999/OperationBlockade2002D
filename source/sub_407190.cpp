@@ -1,16 +1,16 @@
 //----- (00407190) --------------------------------------------------------
-void *__thiscall sub_407190(_DWORD *this, int a2, char a3)
+void *__thiscall sub_407190(_DWORD *self, int a2, char a3)
 {
   int v3; // esi
   void *v4; // edx
   int v5; // ebp
   int v6; // eax
 
-  if ( a2 < 0 || a2 > this[5] )
+  if ( a2 < 0 || a2 > self[5] )
     return 0;
-  v3 = this[6] + 96 * a2;
+  v3 = self[6] + 96 * a2;
   v4 = *(void **)(v3 + 92);
-  v5 = *(_DWORD *)(this[7] + 4) + 172 * a2;
+  v5 = *(_DWORD *)(self[7] + 4) + 172 * a2;
   if ( !v4 )
   {
     if ( a3 )

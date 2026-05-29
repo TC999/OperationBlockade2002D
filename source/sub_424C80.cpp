@@ -1,5 +1,5 @@
 //----- (00424C80) --------------------------------------------------------
-void __thiscall sub_424C80(_DWORD *this, int a2)
+void __thiscall sub_424C80(_DWORD *self, int a2)
 {
   _DWORD *v4; // ecx
   int v5; // eax
@@ -60,7 +60,7 @@ LABEL_13:
   v12 = (double)v9 / v22;
   sub_413130(LODWORD(v12), LODWORD(v13), LODWORD(v15), LODWORD(v17));
 LABEL_14:
-  if ( a2 != this[14] )
+  if ( a2 != self[14] )
   {
     v11 = *(_DWORD *)(a2 + 48);
     v19 = (float)(*(_DWORD *)(a2 + 52) + *(_DWORD *)(a2 + 60));

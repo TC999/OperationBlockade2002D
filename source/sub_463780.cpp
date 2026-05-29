@@ -1,5 +1,5 @@
 //----- (00463780) --------------------------------------------------------
-unsigned int __thiscall sub_463780(_DWORD *this)
+unsigned int __thiscall sub_463780(_DWORD *self)
 {
   int v2; // eax
   double v3; // st7
@@ -19,9 +19,9 @@ unsigned int __thiscall sub_463780(_DWORD *this)
     v3 = *(float *)(v2 + 256);
   else
     v3 = 100.0;
-  v4 = this[128];
+  v4 = self[128];
   if ( v4 >= 0 )
-    v5 = *(float *)&this[88 * v4 + 231];
+    v5 = *(float *)&self[88 * v4 + 231];
   else
     v5 = 0.0;
   if ( v3 == 0.0 )
@@ -29,11 +29,11 @@ unsigned int __thiscall sub_463780(_DWORD *this)
   else
     *(float *)&v11 = v5 / v3;
   if ( v4 >= 0 )
-    v6 = this[88 * v4 + 307];
+    v6 = self[88 * v4 + 307];
   else
     v6 = 0;
   *(_DWORD *)ArgList = v6;
-  v7 = this[129];
+  v7 = self[129];
   v10 = v4;
   if ( v7 <= -1 )
   {
@@ -42,9 +42,9 @@ unsigned int __thiscall sub_463780(_DWORD *this)
   }
   else
   {
-    v13 = this[13 * v7 + 593];
-    v14 = this[13 * v7 + 592];
+    v13 = self[13 * v7 + 593];
+    v14 = self[13 * v7 + 592];
   }
   sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x603, v9, 26, 8, 1000);
-  return sub_436EC0(*(_DWORD **)(dword_520970 + 224), this[88 * this[128] + 221], v11, *(int *)ArgList);
+  return sub_436EC0(*(_DWORD **)(dword_520970 + 224), self[88 * self[128] + 221], v11, *(int *)ArgList);
 }

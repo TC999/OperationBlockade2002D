@@ -1,5 +1,5 @@
 //----- (00448B20) --------------------------------------------------------
-char *__thiscall sub_448B20(_DWORD *this, char *a2, char *a3)
+char *__thiscall sub_448B20(_DWORD *self, char *a2, char *a3)
 {
   char *v3; // eax
   char *v4; // ebx
@@ -12,7 +12,7 @@ char *__thiscall sub_448B20(_DWORD *this, char *a2, char *a3)
 
   v3 = a3;
   v4 = a2;
-  v6 = (char *)this[2];
+  v6 = (char *)self[2];
   if ( a3 != v6 )
   {
     do
@@ -25,10 +25,10 @@ char *__thiscall sub_448B20(_DWORD *this, char *a2, char *a3)
     }
     while ( v3 != v6 );
   }
-  v9 = (char *)this[2];
+  v9 = (char *)self[2];
   for ( i = v4; i != v9; i += 860 )
     sub_444A90(i);
   result = a2;
-  this[2] = v4;
+  self[2] = v4;
   return result;
 }

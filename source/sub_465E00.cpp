@@ -1,5 +1,5 @@
 //----- (00465E00) --------------------------------------------------------
-int __thiscall sub_465E00(_DWORD *this, int a2, int a3)
+int __thiscall sub_465E00(_DWORD *self, int a2, int a3)
 {
   int v4; // edi
   int v5; // eax
@@ -15,9 +15,9 @@ int __thiscall sub_465E00(_DWORD *this, int a2, int a3)
   v13 = 0;
   if ( v9 )
   {
-    v4 = this[6];
+    v4 = self[6];
     if ( v4 )
-      v5 = sub_465FF0(a2, (this[7] - v4) >> 2);
+      v5 = sub_465FF0(a2, (self[7] - v4) >> 2);
     else
       v5 = sub_465FF0(a2, 0);
   }
@@ -25,12 +25,12 @@ int __thiscall sub_465E00(_DWORD *this, int a2, int a3)
   {
     v5 = 0;
   }
-  v6 = (_DWORD *)this[7];
+  v6 = (_DWORD *)self[7];
   v8 = v5;
   v13 = -1;
-  sub_44F190((int)(this + 5), v6, 1u, &v8);
+  sub_44F190((int)(self + 5), v6, 1u, &v8);
   sub_466AA0(v8);
-  sub_428680(this, v8);
+  sub_428680(self, v8);
   if ( a3 <= -1 )
   {
     *(_BYTE *)(v8 + 436) = 1;

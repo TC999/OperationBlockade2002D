@@ -1,5 +1,5 @@
 //----- (00472B0B) --------------------------------------------------------
-int __thiscall sub_472B0B(int this, const WCHAR *lpWideCharStr, LPSTR lpMultiByteStr)
+int __thiscall sub_472B0B(int self, const WCHAR *lpWideCharStr, LPSTR lpMultiByteStr)
 {
   void *v5; // esp
   HANDLE FileW; // eax
@@ -31,13 +31,13 @@ int __thiscall sub_472B0B(int this, const WCHAR *lpWideCharStr, LPSTR lpMultiByt
     else
 LABEL_8:
       FileW = CreateFileA((LPCSTR)lpWideCharStr, 0x80000000, 1u, 0, 3u, 0x10000000u, 0);
-    *(_DWORD *)this = FileW;
+    *(_DWORD *)self = FileW;
     if ( FileW == (HANDLE)-1
       || (FileMappingA = CreateFileMappingA(FileW, 0, 2u, 0, 0, 0),
-          *(_DWORD *)(this + 4) = FileMappingA,
+          *(_DWORD *)(self + 4) = FileMappingA,
           FileMappingA == (HANDLE)-1)
-      || (v8 = MapViewOfFile(FileMappingA, 4u, 0, 0, 0), (*(_DWORD *)(this + 8) = v8) == 0)
-      || (FileSize = GetFileSize(*(HANDLE *)this, 0), *(_DWORD *)(this + 12) = FileSize, FileSize == -1) )
+      || (v8 = MapViewOfFile(FileMappingA, 4u, 0, 0, 0), (*(_DWORD *)(self + 8) = v8) == 0)
+      || (FileSize = GetFileSize(*(HANDLE *)self, 0), *(_DWORD *)(self + 12) = FileSize, FileSize == -1) )
     {
       LastError = GetLastError();
       FormatMessageA(0x1100u, 0, LastError, 0, Buffer, 0, 0);

@@ -1,5 +1,5 @@
 //----- (0045F520) --------------------------------------------------------
-double __thiscall sub_45F520(int this)
+double __thiscall sub_45F520(int self)
 {
   int v1; // eax
   int v2; // esi
@@ -11,7 +11,7 @@ double __thiscall sub_45F520(int this)
   unsigned int v8; // edx
   int v9; // eax
 
-  v1 = *(_DWORD *)(this + 2636);
+  v1 = *(_DWORD *)(self + 2636);
   v2 = *(_DWORD *)(v1 + 844);
   if ( v2 )
     v3 = *(_BYTE *)(v2 + 32);
@@ -20,19 +20,19 @@ double __thiscall sub_45F520(int this)
   if ( v1 && v3 )
   {
     v4 = *(float *)(v1 + 308);
-    v5 = *(float *)(this + 2640);
+    v5 = *(float *)(self + 2640);
   }
   else
   {
-    v6 = *(_DWORD *)(this + 2568);
+    v6 = *(_DWORD *)(self + 2568);
     if ( v6 )
-      v7 = (*(_DWORD *)(this + 2572) - v6) >> 3;
+      v7 = (*(_DWORD *)(self + 2572) - v6) >> 3;
     else
       v7 = 0;
-    v8 = *(_DWORD *)(this + 2580);
+    v8 = *(_DWORD *)(self + 2580);
     if ( v8 >= v7 )
       return 1.0;
-    v9 = *(_DWORD *)(this + 2568);
+    v9 = *(_DWORD *)(self + 2568);
     v4 = *(float *)(*(_DWORD *)(v9 + 8 * v8) + 308);
     v5 = *(float *)(v9 + 8 * v8 + 4);
   }

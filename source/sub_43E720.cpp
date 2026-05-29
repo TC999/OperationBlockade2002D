@@ -1,5 +1,5 @@
 //----- (0043E720) --------------------------------------------------------
-bool __thiscall sub_43E720(int this)
+bool __thiscall sub_43E720(int self)
 {
   const char *v2; // edi
   const char *v3; // ebp
@@ -16,40 +16,40 @@ bool __thiscall sub_43E720(int this)
   int v15; // [esp+1Ah] [ebp-Ah] BYREF
   int v16; // [esp+1Eh] [ebp-6h] BYREF
 
-  sub_424630(*(int **)(this + 40));
-  *(_DWORD *)(*(_DWORD *)(this + 52) + 132) = 0;
-  *(_DWORD *)(*(_DWORD *)(this + 112) + 132) = 0;
-  *(_DWORD *)(this + 120) = 0;
-  v2 = sub_424350((_DWORD *)this, aHostipleft);
-  v3 = sub_424350((_DWORD *)this, aHostipright);
-  v4 = sub_424350((_DWORD *)this, aHostip_0);
+  sub_424630(*(int **)(self + 40));
+  *(_DWORD *)(*(_DWORD *)(self + 52) + 132) = 0;
+  *(_DWORD *)(*(_DWORD *)(self + 112) + 132) = 0;
+  *(_DWORD *)(self + 120) = 0;
+  v2 = sub_424350((_DWORD *)self, aHostipleft);
+  v3 = sub_424350((_DWORD *)self, aHostipright);
+  v4 = sub_424350((_DWORD *)self, aHostip_0);
   *((_BYTE *)v2 + 44) = byte_521684 == 0;
   *((_BYTE *)v3 + 44) = byte_521684 == 0;
   *((_BYTE *)v4 + 44) = byte_521684 == 0;
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {
-    *(_DWORD *)(this + 100) = sub_422BA0(AppName, aMultiplayermis, 0);
-    v5 = sub_424350((_DWORD *)this, aMonth);
+    *(_DWORD *)(self + 100) = sub_422BA0(AppName, aMultiplayermis, 0);
+    v5 = sub_424350((_DWORD *)self, aMonth);
     if ( v5 )
     {
-      v6 = (const char *)sub_45A870(*(_DWORD *)(this + 100));
+      v6 = (const char *)sub_45A870(*(_DWORD *)(self + 100));
       sub_421110(*((LPVOID **)v5 + 28), v6);
     }
-    *(_DWORD *)(this + 104) = sub_422BA0(AppName, aMultiplayersky, 0);
-    v7 = sub_424350((_DWORD *)this, aTimeOfDay);
+    *(_DWORD *)(self + 104) = sub_422BA0(AppName, aMultiplayersky, 0);
+    v7 = sub_424350((_DWORD *)self, aTimeOfDay);
     if ( v7 )
     {
-      v8 = (const char *)sub_464800(*(_DWORD *)(this + 104));
+      v8 = (const char *)sub_464800(*(_DWORD *)(self + 104));
       sub_421110(*((LPVOID **)v7 + 28), v8);
     }
     *(_BYTE *)(dword_4F5CC4 + 108) = 1;
-    *(_BYTE *)(*(_DWORD *)(this + 64) + 44) = 1;
-    *(_BYTE *)(*(_DWORD *)(this + 60) + 44) = 1;
+    *(_BYTE *)(*(_DWORD *)(self + 64) + 44) = 1;
+    *(_BYTE *)(*(_DWORD *)(self + 60) + 44) = 1;
   }
   else
   {
-    *(_BYTE *)(*(_DWORD *)(this + 64) + 44) = 0;
-    *(_BYTE *)(*(_DWORD *)(this + 60) + 44) = 0;
+    *(_BYTE *)(*(_DWORD *)(self + 64) + 44) = 0;
+    *(_BYTE *)(*(_DWORD *)(self + 60) + 44) = 0;
   }
   sub_411EE0(dword_4F5CC4, 0, &v14, &v16, &v15);
   v9 = 0;

@@ -1,15 +1,15 @@
 //----- (004262D0) --------------------------------------------------------
-int __thiscall sub_4262D0(int this)
+int __thiscall sub_4262D0(int self)
 {
   int v2; // esi
   int result; // eax
 
   sub_4229D0(aUiHiding);
-  sub_4246F0((LPVOID **)this);
-  v2 = *(_DWORD *)(this + 52);
+  sub_4246F0((LPVOID **)self);
+  v2 = *(_DWORD *)(self + 52);
   if ( v2 )
   {
-    *(_DWORD *)(this + 52) = 0;
+    *(_DWORD *)(self + 52) = 0;
     (*(void (__thiscall **)(int))(*(_DWORD *)v2 + 40))(v2);
     (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v2 + 24))(v2, 0);
     result = dword_520970;

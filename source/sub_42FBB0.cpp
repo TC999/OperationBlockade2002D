@@ -1,5 +1,5 @@
 //----- (0042FBB0) --------------------------------------------------------
-int __thiscall sub_42FBB0(_DWORD *this, int a2, float a3, float a4, int a5, int a6)
+int __thiscall sub_42FBB0(_DWORD *self, int a2, float a3, float a4, int a5, int a6)
 {
   unsigned int i; // edi
   int result; // eax
@@ -7,8 +7,8 @@ int __thiscall sub_42FBB0(_DWORD *this, int a2, float a3, float a4, int a5, int 
 
   for ( i = 0; ; ++i )
   {
-    result = this[6];
-    if ( !result || i >= (this[7] - result) >> 2 )
+    result = self[6];
+    if ( !result || i >= (self[7] - result) >> 2 )
       break;
     v9 = *(_DWORD *)(result + 4 * i);
     if ( *(_BYTE *)(v9 + 16) )

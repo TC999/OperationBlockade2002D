@@ -1,5 +1,5 @@
 //----- (00456F30) --------------------------------------------------------
-int __thiscall sub_456F30(int this, float a2)
+int __thiscall sub_456F30(int self, float a2)
 {
   int v3; // eax
   __int64 v4; // rax
@@ -11,58 +11,58 @@ int __thiscall sub_456F30(int this, float a2)
   int v10; // eax
   int v12; // [esp+10h] [ebp+4h]
 
-  v3 = *(_DWORD *)(this + 392);
-  *(_BYTE *)(this + 488) = 0;
+  v3 = *(_DWORD *)(self + 392);
+  *(_BYTE *)(self + 488) = 0;
   HIDWORD(v4) = *(_DWORD *)(v3 + 292);
-  LODWORD(v4) = *(_DWORD *)(this + 456);
+  LODWORD(v4) = *(_DWORD *)(self + 456);
   v5 = dword_5216EC[HIDWORD(v4)];
   if ( (_DWORD)v4 )
   {
     if ( (int)v4 < 12 )
     {
-      v9 = a2 + *(float *)(this + 484);
-      v10 = *(_DWORD *)(this + 464);
-      *(float *)(this + 484) = v9;
+      v9 = a2 + *(float *)(self + 484);
+      v10 = *(_DWORD *)(self + 464);
+      *(float *)(self + 484) = v9;
       v12 = *(_DWORD *)(12 * v10 + *(_DWORD *)(v5 + 8) + 4);
       if ( (int)(__int64)(v9 * 15.0) >= v12 )
       {
         do
         {
-          *(_BYTE *)(this + 488) = 1;
-          *(float *)(this + 484) = *(float *)(this + 484) - (double)v12 * 0.06666667;
+          *(_BYTE *)(self + 488) = 1;
+          *(float *)(self + 484) = *(float *)(self + 484) - (double)v12 * 0.06666667;
           v12 = *(_DWORD *)(12 * v10 + *(_DWORD *)(v5 + 8) + 4);
         }
-        while ( (int)(__int64)(*(float *)(this + 484) * 15.0) >= v12 );
+        while ( (int)(__int64)(*(float *)(self + 484) * 15.0) >= v12 );
       }
-      v4 = (__int64)(*(float *)(this + 484) * 15.0);
-      *(_DWORD *)(this + 468) = v4;
+      v4 = (__int64)(*(float *)(self + 484) * 15.0);
+      *(_DWORD *)(self + 468) = v4;
     }
     else
     {
-      v4 = (__int64)(*(float *)(this + 484) * 15.0);
-      v6 = *(_DWORD *)(this + 464);
-      *(_DWORD *)(this + 468) = v4;
+      v4 = (__int64)(*(float *)(self + 484) * 15.0);
+      v6 = *(_DWORD *)(self + 464);
+      *(_DWORD *)(self + 468) = v4;
       if ( (int)v4 < *(_DWORD *)(12 * v6 + *(_DWORD *)(v5 + 8) + 4) - 1 )
       {
-        v7 = a2 + *(float *)(this + 484);
-        *(float *)(this + 484) = v7;
+        v7 = a2 + *(float *)(self + 484);
+        *(float *)(self + 484) = v7;
         v4 = (__int64)(v7 * 15.0);
-        *(_DWORD *)(this + 468) = v4;
+        *(_DWORD *)(self + 468) = v4;
         v8 = *(_DWORD *)(12 * v6 + *(_DWORD *)(v5 + 8) + 4);
         if ( (int)v4 >= v8 )
         {
           LODWORD(v4) = v8 - 1;
-          *(_BYTE *)(this + 488) = 1;
-          *(_DWORD *)(this + 468) = v8 - 1;
-          *(float *)(this + 484) = (double)(v8 - 1) * 0.06666667;
+          *(_BYTE *)(self + 488) = 1;
+          *(_DWORD *)(self + 468) = v8 - 1;
+          *(float *)(self + 484) = (double)(v8 - 1) * 0.06666667;
         }
       }
     }
   }
   else
   {
-    *(_DWORD *)(this + 468) = 0;
-    *(_BYTE *)(this + 488) = 1;
+    *(_DWORD *)(self + 468) = 0;
+    *(_BYTE *)(self + 488) = 1;
   }
   return v4;
 }

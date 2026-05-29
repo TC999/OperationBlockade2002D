@@ -1,5 +1,5 @@
 //----- (00465CF0) --------------------------------------------------------
-int __thiscall sub_465CF0(_DWORD *this, int a2, int a3, int a4, float a5)
+int __thiscall sub_465CF0(_DWORD *self, int a2, int a3, int a4, float a5)
 {
   int result; // eax
   unsigned int i; // esi
@@ -8,10 +8,10 @@ int __thiscall sub_465CF0(_DWORD *this, int a2, int a3, int a4, float a5)
   result = 0;
   for ( i = 0; ; ++i )
   {
-    v8 = this[6];
+    v8 = self[6];
     if ( !v8 )
       break;
-    if ( i >= (this[7] - v8) >> 2 )
+    if ( i >= (self[7] - v8) >> 2 )
       break;
     if ( *(_BYTE *)(*(_DWORD *)(v8 + 4 * i) + 16) )
     {

@@ -1,5 +1,5 @@
 //----- (0046F497) --------------------------------------------------------
-int __thiscall sub_46F497(_DWORD *this)
+int __thiscall sub_46F497(_DWORD *self)
 {
   int v1; // edx
   int v2; // eax
@@ -26,11 +26,11 @@ int __thiscall sub_46F497(_DWORD *this)
   _WORD *v25; // [esp+2Ch] [ebp-8h]
   int v26; // [esp+30h] [ebp-4h]
 
-  v1 = *this;
-  v2 = this[1];
-  v3 = *(unsigned __int16 **)(*this + 24);
-  v4 = *(_DWORD *)(*this + 4180);
-  v5 = *(_DWORD *)(*this + 4168);
+  v1 = *self;
+  v2 = self[1];
+  v3 = *(unsigned __int16 **)(*self + 24);
+  v4 = *(_DWORD *)(*self + 4180);
+  v5 = *(_DWORD *)(*self + 4168);
   v6 = (unsigned __int16 *)((char *)v3 + v5 * v4);
   v7 = *(_WORD **)(v2 + 24);
   v21 = v7;
@@ -69,9 +69,9 @@ int __thiscall sub_46F497(_DWORD *this)
       v3 = v20;
       v6 = i;
     }
-    v7 = (_WORD *)((char *)v7 + *(_DWORD *)(this[1] + 4168));
-    v1 = *this;
-    v5 = *(_DWORD *)(*this + 4168);
+    v7 = (_WORD *)((char *)v7 + *(_DWORD *)(self[1] + 4168));
+    v1 = *self;
+    v5 = *(_DWORD *)(*self + 4168);
     v3 += v5;
     v21 = v7;
   }

@@ -1,5 +1,5 @@
 //----- (0044A730) --------------------------------------------------------
-char __thiscall sub_44A730(int this, int a2)
+char __thiscall sub_44A730(int self, int a2)
 {
   _DWORD *v2; // edi
   int v3; // esi
@@ -65,10 +65,10 @@ char __thiscall sub_44A730(int this, int a2)
   int v65[3]; // [esp+98h] [ebp-4Ch] BYREF
   int v66[16]; // [esp+A4h] [ebp-40h] BYREF
 
-  v2 = (_DWORD *)this;
+  v2 = (_DWORD *)self;
   v50 = 2024;
-  v3 = this + 128;
-  *(float *)(this + 24) = *(float *)&a2 + *(float *)(this + 24);
+  v3 = self + 128;
+  *(float *)(self + 24) = *(float *)&a2 + *(float *)(self + 24);
   while ( 1 )
   {
     if ( !*(_BYTE *)(v3 - 96) )
@@ -251,7 +251,7 @@ LABEL_40:
       }
     }
     v29 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v3 - 92) + 344) + 4 * v25 + 292);
-    if ( v29 || (v29 = *(_DWORD *)(this + 20)) != 0 && (v29 = *(_DWORD *)(v29 + 4 * v25 + 292)) != 0 )
+    if ( v29 || (v29 = *(_DWORD *)(self + 20)) != 0 && (v29 = *(_DWORD *)(v29 + 4 * v25 + 292)) != 0 )
     {
       memset(v62, 0, sizeof(v62));
       v29 = sub_44DF20(*(float *)&v29, COERCE_FLOAT(&v46), (int)v62);
@@ -310,7 +310,7 @@ LABEL_64:
 LABEL_75:
     v3 += 136;
     if ( !--v50 )
-      return sub_428620((_DWORD *)this, a2);
-    v2 = (_DWORD *)this;
+      return sub_428620((_DWORD *)self, a2);
+    v2 = (_DWORD *)self;
   }
 }

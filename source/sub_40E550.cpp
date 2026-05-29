@@ -1,7 +1,7 @@
 //----- (0040E550) --------------------------------------------------------
-void __thiscall sub_40E550(float *this, float a2)
+void __thiscall sub_40E550(float *self, float a2)
 {
-  *this = a2 * *this;
-  this[1] = a2 * this[1];
-  this[2] = a2 * this[2];
+  *self = a2 * *self;
+  self[1] = a2 * self[1];
+  self[2] = a2 * self[2];
 }

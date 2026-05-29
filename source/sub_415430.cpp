@@ -1,5 +1,5 @@
 //----- (00415430) --------------------------------------------------------
-char __thiscall sub_415430(_DWORD *this, int a2)
+char __thiscall sub_415430(_DWORD *self, int a2)
 {
   int v3; // eax
   int i; // edi
@@ -27,9 +27,9 @@ char __thiscall sub_415430(_DWORD *this, int a2)
   if ( v3 > 6 )
     v15 = (1.0 - *(float *)(a2 + 16)) * *(float *)(a2 + 4288) + (double)(v3 - 7) * *(float *)(a2 + 4288);
   sub_4183A0(a2, v15);
-  for ( i = 0; i < this[6]; ++i )
+  for ( i = 0; i < self[6]; ++i )
   {
-    v5 = *(_DWORD *)(this[5] + 4 * i);
+    v5 = *(_DWORD *)(self[5] + 4 * i);
     if ( v5 != a2 && *(_BYTE *)(v5 + 4148) && *(_DWORD *)(v5 + 4144) == *(_DWORD *)(a2 + 4144) )
       sub_4183A0(a2, v15);
   }
@@ -39,19 +39,19 @@ char __thiscall sub_415430(_DWORD *this, int a2)
   {
     v6 = 0;
     v15 = v15 + 0.1;
-    if ( (int)this[6] > 0 )
+    if ( (int)self[6] > 0 )
       break;
 LABEL_18:
     v8 = 0;
     for ( j = 0; ; j += 60 )
     {
-      v10 = this[14];
-      if ( !v10 || v8 >= (this[15] - v10) / 60 )
+      v10 = self[14];
+      if ( !v10 || v8 >= (self[15] - v10) / 60 )
         break;
       if ( sub_40D330(
-             (float *)(j + this[14]),
-             (float *)(j + this[14] + 12),
-             (float *)(j + this[14] + 48),
+             (float *)(j + self[14]),
+             (float *)(j + self[14] + 12),
+             (float *)(j + self[14] + 48),
              (float *)v17,
              (float *)v20,
              (float *)v16) )
@@ -63,8 +63,8 @@ LABEL_18:
     v11 = 0;
     for ( k = 0; ; k += 16 )
     {
-      v13 = this[10];
-      if ( !v13 || v11 >= (this[11] - v13) >> 4 )
+      v13 = self[10];
+      if ( !v13 || v11 >= (self[11] - v13) >> 4 )
         break;
       if ( sub_40D900(k + v13, *(float *)(k + v13 + 12), (float *)v17, (float *)v20, (float *)v16) )
         return 0;
@@ -75,7 +75,7 @@ LABEL_18:
   }
   while ( 1 )
   {
-    v7 = *(_DWORD *)(this[5] + 4 * v6);
+    v7 = *(_DWORD *)(self[5] + 4 * v6);
     if ( v7 != a2
       && *(_BYTE *)(v7 + 4148)
       && *(_DWORD *)(v7 + 4144) == *(_DWORD *)(a2 + 4144)
@@ -84,7 +84,7 @@ LABEL_18:
     {
       return 0;
     }
-    if ( ++v6 >= this[6] )
+    if ( ++v6 >= self[6] )
       goto LABEL_18;
   }
 }

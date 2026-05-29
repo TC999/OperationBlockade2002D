@@ -1,5 +1,5 @@
 //----- (00470616) --------------------------------------------------------
-int __thiscall sub_470616(int **this)
+int __thiscall sub_470616(int **self)
 {
   int **v1; // esi
   int *v2; // edx
@@ -75,18 +75,18 @@ int __thiscall sub_470616(int **this)
 
   v68 = 0;
   v67 = 0;
-  v1 = this;
-  v2 = this[1];
+  v1 = self;
+  v2 = self[1];
   v3 = v2[2] == 1;
-  v58 = this;
+  v58 = self;
   if ( !v3 )
     return -2147467259;
-  if ( (*this)[2] != 1 )
+  if ( (*self)[2] != 1 )
     return -2147467259;
-  v4 = (unsigned int)this[2];
+  v4 = (unsigned int)self[2];
   if ( (_BYTE)v4 != 3 )
     return -2147467259;
-  v5 = (*this)[1044];
+  v5 = (*self)[1044];
   v6 = v2[1044];
   v69 = ((v4 >> 17) & 1) == 0;
   v7 = sub_470516(v6, v5, (v4 & 0x10000) == 0);

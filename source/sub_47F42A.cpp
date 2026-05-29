@@ -1,16 +1,16 @@
 //----- (0047F42A) --------------------------------------------------------
-_DWORD *__thiscall sub_47F42A(_DWORD *this)
+_DWORD *__thiscall sub_47F42A(_DWORD *self)
 {
   _DWORD *result; // eax
   bool v2; // cf
   int v3; // ecx
   int v4; // ecx
 
-  result = (_DWORD *)this[97];
-  if ( (int)this[72] <= 1 )
+  result = (_DWORD *)self[97];
+  if ( (int)self[72] <= 1 )
   {
-    v2 = this[32] < (unsigned int)(this[70] - 1);
-    v3 = this[73];
+    v2 = self[32] < (unsigned int)(self[70] - 1);
+    v3 = self[73];
     if ( v2 )
       v4 = *(_DWORD *)(v3 + 12);
     else

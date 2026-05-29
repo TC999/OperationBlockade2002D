@@ -1,14 +1,14 @@
 //----- (00411BB0) --------------------------------------------------------
-void __thiscall sub_411BB0(int this, int a2)
+void __thiscall sub_411BB0(int self, int a2)
 {
   struct _RTL_CRITICAL_SECTION *v3; // ebx
   int *v4; // esi
   int *v5; // eax
   int v6; // ecx
 
-  v3 = (struct _RTL_CRITICAL_SECTION *)(this + 112);
-  EnterCriticalSection((LPCRITICAL_SECTION)(this + 112));
-  v4 = *(int **)(this + 136);
+  v3 = (struct _RTL_CRITICAL_SECTION *)(self + 112);
+  EnterCriticalSection((LPCRITICAL_SECTION)(self + 112));
+  v4 = *(int **)(self + 136);
   v5 = 0;
   if ( v4 )
   {
@@ -26,8 +26,8 @@ void __thiscall sub_411BB0(int this, int a2)
       if ( v5 )
         v5[2077] = v4[2077];
       else
-        *(_DWORD *)(this + 136) = v4[2077];
-      InterlockedDecrement((volatile LONG *)(this + 100));
+        *(_DWORD *)(self + 136) = v4[2077];
+      InterlockedDecrement((volatile LONG *)(self + 100));
       sub_4119F0((int)v4);
       sub_4885A6(v4);
     }

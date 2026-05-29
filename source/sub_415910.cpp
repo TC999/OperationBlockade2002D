@@ -1,5 +1,5 @@
 //----- (00415910) --------------------------------------------------------
-char __thiscall sub_415910(void *this)
+char __thiscall sub_415910(void *self)
 {
-  return sub_415330(*(_DWORD *)(dword_520970 + 244), this);
+  return sub_415330(*(_DWORD *)(dword_520970 + 244), self);
 }

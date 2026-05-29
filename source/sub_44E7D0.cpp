@@ -1,5 +1,5 @@
 //----- (0044E7D0) --------------------------------------------------------
-char __thiscall sub_44E7D0(_DWORD *this, int a2)
+char __thiscall sub_44E7D0(_DWORD *self, int a2)
 {
   int v2; // eax
   _DWORD *v3; // esi
@@ -11,15 +11,15 @@ char __thiscall sub_44E7D0(_DWORD *this, int a2)
   int v9; // ebx
   int v10; // ecx
 
-  v2 = this[53 * a2 + 6];
-  v3 = &this[53 * a2 + 6];
+  v2 = self[53 * a2 + 6];
+  v3 = &self[53 * a2 + 6];
   if ( v2 )
   {
-    v2 = this[53 * a2 + 7];
+    v2 = self[53 * a2 + 7];
     if ( *(_DWORD *)(v2 + 292) )
     {
       v4 = 0;
-      for ( i = (_BYTE **)&this[53 * a2 + 8]; ; ++i )
+      for ( i = (_BYTE **)&self[53 * a2 + 8]; ; ++i )
       {
         v6 = *(_DWORD *)(v3[1] + 292);
         v7 = *(_DWORD *)(v6 + 296);

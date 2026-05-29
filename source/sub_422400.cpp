@@ -1,5 +1,5 @@
 //----- (00422400) --------------------------------------------------------
-int __thiscall sub_422400(_DWORD *this, char *String1, char a3)
+int __thiscall sub_422400(_DWORD *self, char *String1, char a3)
 {
   int v4; // esi
   char *v5; // ebx
@@ -19,7 +19,7 @@ int __thiscall sub_422400(_DWORD *this, char *String1, char a3)
   _DWORD v21[4]; // [esp+38h] [ebp-14h] BYREF
   int v22; // [esp+48h] [ebp-4h]
 
-  v4 = this[5];
+  v4 = self[5];
   if ( v4 )
   {
     while ( 1 )
@@ -111,10 +111,10 @@ LABEL_7:
         v13 = sub_4221E0(v12);
       else
         v13 = 0;
-      *(_DWORD *)(v13 + 20) = this;
-      *(_DWORD *)(v13 + 16) = this[5];
+      *(_DWORD *)(v13 + 20) = self;
+      *(_DWORD *)(v13 + 16) = self[5];
       v14 = v15;
-      this[5] = v13;
+      self[5] = v13;
       *(_DWORD *)(v13 + 8) = v14;
       v16 = (char *)operator new(strlen(String1) + 1);
       *(_DWORD *)(v13 + 12) = v16;

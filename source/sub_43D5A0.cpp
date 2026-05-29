@@ -1,5 +1,5 @@
 //----- (0043D5A0) --------------------------------------------------------
-void __thiscall sub_43D5A0(_BYTE *this)
+void __thiscall sub_43D5A0(_BYTE *self)
 {
-  this[44] = 1;
+  self[44] = 1;
 }

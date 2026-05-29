@@ -1,5 +1,5 @@
 //----- (0044E6F0) --------------------------------------------------------
-int __thiscall sub_44E6F0(_DWORD *this, int a2, const void *a3, _DWORD *a4)
+int __thiscall sub_44E6F0(_DWORD *self, int a2, const void *a3, _DWORD *a4)
 {
   int result; // eax
   int v6; // edx
@@ -12,14 +12,14 @@ int __thiscall sub_44E6F0(_DWORD *this, int a2, const void *a3, _DWORD *a4)
   int v13; // edi
   _DWORD *v14; // eax
 
-  result = sub_44D770(this, a2);
+  result = sub_44D770(self, a2);
   if ( result != -1 )
   {
-    v6 = (int)&this[53 * result + 6];
-    if ( *(_DWORD *)(this[53 * result + 7] + 292) )
+    v6 = (int)&self[53 * result + 6];
+    if ( *(_DWORD *)(self[53 * result + 7] + 292) )
     {
       v7 = 0;
-      for ( i = (int)&this[53 * result + 8]; ; i += 4 )
+      for ( i = (int)&self[53 * result + 8]; ; i += 4 )
       {
         v9 = *(_DWORD *)(*(_DWORD *)(v6 + 4) + 292);
         v10 = *(_DWORD *)(v9 + 296);

@@ -1,5 +1,5 @@
 //----- (00473703) --------------------------------------------------------
-int __thiscall sub_473703(_DWORD *this, int a2, int a3, int a4)
+int __thiscall sub_473703(_DWORD *self, int a2, int a3, int a4)
 {
   int *v4; // edx
   unsigned int v5; // edi
@@ -14,10 +14,10 @@ int __thiscall sub_473703(_DWORD *this, int a2, int a3, int a4)
   float v15; // [esp+30h] [ebp+10h]
   float v16; // [esp+30h] [ebp+10h]
 
-  v4 = (int *)(this[6] + a3 * this[1043] + a2 * this[1042]);
-  v11 = this[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
+  v4 = (int *)(self[6] + a3 * self[1043] + a2 * self[1042]);
+  v11 = self[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
   v5 = 0;
-  v6 = this[1044] == 0;
+  v6 = self[1044] == 0;
   dword_52230C = a3;
   if ( !v6 )
   {
@@ -35,7 +35,7 @@ int __thiscall sub_473703(_DWORD *this, int a2, int a3, int a4)
       *v4++ = (int)v16 | ((v10 | ((v8 | ((int)v13 << 8)) << 8)) << 8);
       ++v5;
     }
-    while ( v5 < this[1044] );
+    while ( v5 < self[1044] );
   }
   return a3;
 }

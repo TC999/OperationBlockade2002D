@@ -1,5 +1,5 @@
 //----- (0040B840) --------------------------------------------------------
-unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4)
+unsigned int __thiscall sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
 {
   int v4; // esi
   unsigned int v5; // edi
@@ -37,10 +37,10 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
   int v38; // [esp+20h] [ebp+4h]
   int v39; // [esp+24h] [ebp+8h]
 
-  v4 = this[2];
+  v4 = self[2];
   v5 = a3;
-  v34 = this;
-  if ( (this[3] - v4) / 24 >= a3 )
+  v34 = self;
+  if ( (self[3] - v4) / 24 >= a3 )
   {
     result = (unsigned int)((unsigned __int64)(715827883LL * (v4 - a2)) >> 32) >> 31;
     if ( (v4 - a2) / 24 >= a3 )
@@ -49,7 +49,7 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
       {
         result = 24 * a3;
         v27 = v4 - 24 * a3;
-        v28 = this[2];
+        v28 = self[2];
         if ( v27 != v4 )
         {
           do
@@ -59,10 +59,10 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
             v28 += 24;
           }
           while ( v27 != v4 );
-          this = v34;
+          self = v34;
           result = 24 * a3;
         }
-        v29 = this[2];
+        v29 = self[2];
         v30 = v29 - result;
         if ( a2 != v29 - result )
         {
@@ -76,7 +76,7 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
             *(_BYTE *)(v29 + 20) = *(_BYTE *)(v30 + 20);
           }
           while ( v30 != a2 );
-          this = v34;
+          self = v34;
           result = 24 * a3;
         }
         v32 = result + a2;
@@ -91,10 +91,10 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
             v33 += 24;
           }
           while ( v33 != v32 );
-          this = v34;
+          self = v34;
           result = 24 * a3;
         }
-        this[2] += result;
+        self[2] += result;
       }
     }
     else
@@ -111,9 +111,9 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
           v39 += 24;
         }
         while ( v22 != v4 );
-        this = v34;
+        self = v34;
       }
-      v23 = this[2];
+      v23 = self[2];
       for ( i = v5 - (v23 - a2) / 24; i; --i )
       {
         sub_40BBF0(v23, a4);
@@ -139,7 +139,7 @@ unsigned int __thiscall sub_40B840(_DWORD *this, int a2, unsigned int a3, int a4
   }
   else
   {
-    v6 = this[1];
+    v6 = self[1];
     if ( !v6 || (v7 = (v4 - v6) / 24, a3 >= v7) )
       v7 = a3;
     if ( v6 )

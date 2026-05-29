@@ -1,5 +1,5 @@
 //----- (0047264E) --------------------------------------------------------
-int __thiscall sub_47264E(int *this, _DWORD *a2, unsigned int a3)
+int __thiscall sub_47264E(int *self, _DWORD *a2, unsigned int a3)
 {
   int *v3; // edx
   int v5; // ecx
@@ -28,7 +28,7 @@ int __thiscall sub_47264E(int *this, _DWORD *a2, unsigned int a3)
   unsigned int v29; // [esp+48h] [ebp+Ch]
   unsigned int v30; // [esp+48h] [ebp+Ch]
 
-  v3 = this;
+  v3 = self;
   if ( a3 < 4 )
     return -2147467259;
   if ( *a2 != 542327876 )
@@ -38,10 +38,10 @@ int __thiscall sub_47264E(int *this, _DWORD *a2, unsigned int a3)
     return -2147467259;
   v30 = v29 - 124;
   v23 = a2 + 32;
-  this[3] = 0;
-  this[4] = 0;
-  this[5] = a2[4];
-  this[6] = a2[3];
+  self[3] = 0;
+  self[4] = 0;
+  self[5] = a2[4];
+  self[6] = a2[3];
   v5 = a2[28] & 0xFC00;
   if ( v5 == 64512 )
   {
@@ -85,7 +85,7 @@ LABEL_38:
           v10 = 0;
         if ( !v10 )
           return -2147024882;
-        v3 = this;
+        v3 = self;
         v25[11] = v10;
         v25 = (int *)v10;
       }
@@ -107,7 +107,7 @@ LABEL_38:
               v11 = 0;
             if ( !v11 )
               return -2147024882;
-            v3 = this;
+            v3 = self;
             v24[10] = (int)v11;
             v24 = v11;
           }

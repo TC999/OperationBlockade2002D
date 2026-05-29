@@ -1,5 +1,5 @@
 //----- (00403920) --------------------------------------------------------
-int __thiscall sub_403920(int this)
+int __thiscall sub_403920(int self)
 {
   int v2; // ebp
   int v3; // eax
@@ -11,13 +11,13 @@ int __thiscall sub_403920(int this)
   int result; // eax
   int i; // [esp+Ch] [ebp-4h]
 
-  if ( *(_BYTE *)(this + 76) )
+  if ( *(_BYTE *)(self + 76) )
   {
     v2 = 0;
     v3 = 0;
-    for ( i = 0; v3 < *(_DWORD *)(this + 68); i = v3 )
+    for ( i = 0; v3 < *(_DWORD *)(self + 68); i = v3 )
     {
-      v4 = *(_DWORD *)(*(_DWORD *)(this + 64) + 4 * v3);
+      v4 = *(_DWORD *)(*(_DWORD *)(self + 64) + 4 * v3);
       if ( v4 )
       {
         if ( *(_BYTE *)(v4 + 292) )
@@ -51,11 +51,11 @@ int __thiscall sub_403920(int this)
       ++v3;
     }
   }
-  memset(*(void **)(this + 64), 0, 4 * *(_DWORD *)(this + 68));
-  v8 = *(void **)(this + 64);
-  *(_DWORD *)(this + 68) = 0;
+  memset(*(void **)(self + 64), 0, 4 * *(_DWORD *)(self + 68));
+  v8 = *(void **)(self + 64);
+  *(_DWORD *)(self + 68) = 0;
   result = sub_488CEE(v8);
-  *(_DWORD *)(this + 72) = 0;
-  *(_DWORD *)(this + 64) = 0;
+  *(_DWORD *)(self + 72) = 0;
+  *(_DWORD *)(self + 64) = 0;
   return result;
 }

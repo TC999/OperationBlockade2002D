@@ -1,5 +1,5 @@
 //----- (0044F0E0) --------------------------------------------------------
-_DWORD *__thiscall sub_44F0E0(_DWORD *this, _DWORD *a2, _DWORD *a3)
+_DWORD *__thiscall sub_44F0E0(_DWORD *self, _DWORD *a2, _DWORD *a3)
 {
   _DWORD *result; // eax
   _DWORD *v4; // edi
@@ -13,8 +13,8 @@ _DWORD *__thiscall sub_44F0E0(_DWORD *this, _DWORD *a2, _DWORD *a3)
 
   result = a2;
   v4 = a3;
-  v10 = this;
-  v11 = (_DWORD *)this[2];
+  v10 = self;
+  v11 = (_DWORD *)self[2];
   v5 = a2;
   if ( a3 != v11 )
   {
@@ -34,14 +34,14 @@ _DWORD *__thiscall sub_44F0E0(_DWORD *this, _DWORD *a2, _DWORD *a3)
       v6 += 10;
     }
     while ( v4 != v11 );
-    this = v10;
+    self = v10;
     result = a2;
   }
-  v8 = (_DWORD *)this[2];
+  v8 = (_DWORD *)self[2];
   v9 = (int)v5;
   if ( v5 == v8 )
   {
-    this[2] = v5;
+    self[2] = v5;
   }
   else
   {

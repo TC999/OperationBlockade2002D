@@ -1,5 +1,5 @@
 //----- (0043EB00) --------------------------------------------------------
-char __thiscall sub_43EB00(int this, int a2)
+char __thiscall sub_43EB00(int self, int a2)
 {
   int v3; // eax
   int v4; // ebp
@@ -55,7 +55,7 @@ char __thiscall sub_43EB00(int this, int a2)
       v15 = AppName;
 LABEL_34:
       strcpy(byte_521180, v15);
-      LOBYTE(v3) = sub_4261C0(*(_DWORD **)(this + 40), aErrormsg, 0);
+      LOBYTE(v3) = sub_4261C0(*(_DWORD **)(self + 40), aErrormsg, 0);
     }
   }
   else if ( (unsigned __int16)v3 == 65281 )
@@ -65,7 +65,7 @@ LABEL_34:
     {
       v3 = *(_DWORD *)(v4 + 6);
       if ( v3 )
-        LOBYTE(v3) = sub_43E0C0((_DWORD *)this);
+        LOBYTE(v3) = sub_43E0C0((_DWORD *)self);
     }
   }
   else
@@ -77,7 +77,7 @@ LABEL_34:
         v3 = sub_45E6F0(*(_DWORD *)(a2 + 4));
         if ( v3 > -1 )
           LOBYTE(v3) = sub_43EA00(
-                         (_DWORD *)this,
+                         (_DWORD *)self,
                          (const char *)(v4 + 6),
                          *(_DWORD *)(*(_DWORD *)(dword_520970 + 280) + 352 * v3 + 892),
                          *(_DWORD *)(a2 + 4),
@@ -87,30 +87,30 @@ LABEL_34:
         LOBYTE(v3) = *(_BYTE *)(dword_4F5CC4 + 936);
         if ( !(_BYTE)v3 )
         {
-          *(_DWORD *)(this + 100) = *(_DWORD *)(v4 + 6);
-          *(_DWORD *)(this + 104) = *(_DWORD *)(v4 + 10);
-          *(_DWORD *)(this + 108) = *(_DWORD *)(v4 + 14);
-          v6 = sub_424350((_DWORD *)this, aMonth);
-          v7 = (const char *)sub_45A870(*(_DWORD *)(this + 100));
+          *(_DWORD *)(self + 100) = *(_DWORD *)(v4 + 6);
+          *(_DWORD *)(self + 104) = *(_DWORD *)(v4 + 10);
+          *(_DWORD *)(self + 108) = *(_DWORD *)(v4 + 14);
+          v6 = sub_424350((_DWORD *)self, aMonth);
+          v7 = (const char *)sub_45A870(*(_DWORD *)(self + 100));
           sub_421110(*((LPVOID **)v6 + 28), v7);
-          v8 = sub_424350((_DWORD *)this, aTimeOfDay);
-          v9 = (const char *)sub_464800(*(_DWORD *)(this + 104));
+          v8 = sub_424350((_DWORD *)self, aTimeOfDay);
+          v9 = (const char *)sub_464800(*(_DWORD *)(self + 104));
           sub_421110(*((LPVOID **)v8 + 28), v9);
-          v3 = *(_DWORD *)(this + 108);
+          v3 = *(_DWORD *)(self + 108);
           if ( v3 )
           {
             if ( v3 == 1 )
             {
-              LOBYTE(v3) = sub_421110(*(LPVOID **)(*(_DWORD *)(this + 88) + 112), aSoldier);
+              LOBYTE(v3) = sub_421110(*(LPVOID **)(*(_DWORD *)(self + 88) + 112), aSoldier);
             }
             else if ( v3 == 2 )
             {
-              LOBYTE(v3) = sub_421110(*(LPVOID **)(*(_DWORD *)(this + 88) + 112), aVeteran);
+              LOBYTE(v3) = sub_421110(*(LPVOID **)(*(_DWORD *)(self + 88) + 112), aVeteran);
             }
           }
           else
           {
-            LOBYTE(v3) = sub_421110(*(LPVOID **)(*(_DWORD *)(this + 88) + 112), aRecruit);
+            LOBYTE(v3) = sub_421110(*(LPVOID **)(*(_DWORD *)(self + 88) + 112), aRecruit);
           }
         }
         break;
@@ -152,7 +152,7 @@ LABEL_34:
         LOBYTE(v3) = *(_BYTE *)(dword_4F5CC4 + 936);
         if ( (_BYTE)v3 )
         {
-          sub_411EE0(dword_4F5CC4, this, ArgList, &v22, &v24);
+          sub_411EE0(dword_4F5CC4, self, ArgList, &v22, &v24);
           v3 = *(_DWORD *)(v4 + 10);
           if ( v3 != v24 || *(_DWORD *)(v4 + 14) != v22 || *(_DWORD *)(v4 + 6) != *(_DWORD *)ArgList )
           {

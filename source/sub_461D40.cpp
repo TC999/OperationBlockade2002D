@@ -1,5 +1,5 @@
 //----- (00461D40) --------------------------------------------------------
-int __thiscall sub_461D40(int this, int *a2, int *a3, int a4, _DWORD *a5)
+int __thiscall sub_461D40(int self, int *a2, int *a3, int a4, _DWORD *a5)
 {
   int v5; // eax
   int v6; // ebp
@@ -31,10 +31,10 @@ int __thiscall sub_461D40(int this, int *a2, int *a3, int a4, _DWORD *a5)
   float v34; // [esp+40h] [ebp+8h]
   float v35; // [esp+40h] [ebp+8h]
 
-  v5 = *(_DWORD *)(this + 516);
+  v5 = *(_DWORD *)(self + 516);
   if ( v5 < 0 )
     return 0;
-  v6 = this + 4 * (v5 + 4 * (3 * v5 + 135) + 45);
+  v6 = self + 4 * (v5 + 4 * (3 * v5 + 135) + 45);
   v7 = *(_DWORD *)(v6 + 20);
   v25[0] = *(_DWORD *)(v6 + 12);
   v8 = *a3;
@@ -83,26 +83,26 @@ LABEL_12:
   a5[2] = *(_DWORD *)(v6 + 20);
   v18 = *(_DWORD *)(a4 + 4);
   v33 = *(float *)(v18 + 300);
-  if ( *(_BYTE *)(v18 + 312) || (v19 = fabs(v29), v30 = v19, v19 <= *(float *)(this + 460)) )
+  if ( *(_BYTE *)(v18 + 312) || (v19 = fabs(v29), v30 = v19, v19 <= *(float *)(self + 460)) )
   {
     sub_462090(v33);
     return 4;
   }
-  else if ( v30 >= (double)*(float *)(this + 464) )
+  else if ( v30 >= (double)*(float *)(self + 464) )
   {
-    v35 = *(float *)(this + 468) * 0.0099999998 * v33;
+    v35 = *(float *)(self + 468) * 0.0099999998 * v33;
     sub_462090(v35);
     return 4;
   }
   else
   {
-    v20 = *(float *)(this + 460);
-    v21 = *(float *)(this + 464) - v20;
+    v20 = *(float *)(self + 460);
+    v21 = *(float *)(self + 464) - v20;
     if ( v21 == 0.0 )
       v22 = 0.0;
     else
       v22 = (v30 - v20) / v21;
-    v34 = (v22 * *(float *)(this + 468) + (1.0 - v22) * 100.0) * 0.0099999998 * v33;
+    v34 = (v22 * *(float *)(self + 468) + (1.0 - v22) * 100.0) * 0.0099999998 * v33;
     sub_462090(v34);
     return 4;
   }

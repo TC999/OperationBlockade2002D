@@ -1,5 +1,5 @@
 //----- (00408660) --------------------------------------------------------
-bool __thiscall sub_408660(_DWORD *this, int a2)
+bool __thiscall sub_408660(_DWORD *self, int a2)
 {
-  return *(_BYTE *)(96 * a2 + this[6] + 84) == 0;
+  return *(_BYTE *)(96 * a2 + self[6] + 84) == 0;
 }

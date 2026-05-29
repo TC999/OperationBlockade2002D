@@ -1,5 +1,5 @@
 //----- (00458A00) --------------------------------------------------------
-int __thiscall sub_458A00(_DWORD *this, int a2)
+int __thiscall sub_458A00(_DWORD *self, int a2)
 {
-  return this[1] + 8 * a2;
+  return self[1] + 8 * a2;
 }

@@ -1,5 +1,5 @@
 //----- (00436EC0) --------------------------------------------------------
-unsigned int __thiscall sub_436EC0(_DWORD *this, unsigned int a2, int a3, int ArgList)
+unsigned int __thiscall sub_436EC0(_DWORD *self, unsigned int a2, int a3, int ArgList)
 {
   unsigned int result; // eax
   _DWORD *v5; // esi
@@ -14,9 +14,9 @@ unsigned int __thiscall sub_436EC0(_DWORD *this, unsigned int a2, int a3, int Ar
   result = a2;
   if ( a2 < 4 )
   {
-    v5 = &this[13 * a2 + 12];
-    this[13 * a2 + 15] = a3;
-    sub_421110((LPVOID *)this[13 * a2 + 23], aScore);
+    v5 = &self[13 * a2 + 12];
+    self[13 * a2 + 15] = a3;
+    sub_421110((LPVOID *)self[13 * a2 + 23], aScore);
     v6 = v5[11];
     v11 = v5[1] + 60;
     v12 = *(int *)(v6 + 28);

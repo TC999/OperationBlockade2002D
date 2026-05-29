@@ -1,5 +1,5 @@
 //----- (004376B0) --------------------------------------------------------
-_DWORD *__thiscall sub_4376B0(_DWORD *this, int a2)
+_DWORD *__thiscall sub_4376B0(_DWORD *self, int a2)
 {
   int v3; // ebx
   int v4; // ecx
@@ -18,12 +18,12 @@ _DWORD *__thiscall sub_4376B0(_DWORD *this, int a2)
   char Buffer[64]; // [esp+64h] [ebp-4Ch] BYREF
   int v19; // [esp+ACh] [ebp-4h]
 
-  v16[16] = this;
-  sub_403B10(this);
+  v16[16] = self;
+  sub_403B10(self);
   v3 = 0;
   v19 = 0;
   v4 = 13;
-  v5 = this + 176;
+  v5 = self + 176;
   do
   {
     *(v5 - 2) = 0;
@@ -33,10 +33,10 @@ _DWORD *__thiscall sub_4376B0(_DWORD *this, int a2)
     --v4;
   }
   while ( v4 );
-  *this = &off_499508;
-  this[148] = a2;
-  sub_403D90((char *)this, aMapMapworksPf3);
-  sub_403E30((int)this);
+  *self = &off_499508;
+  self[148] = a2;
+  sub_403D90((char *)self, aMapMapworksPf3);
+  sub_403E30((int)self);
   v6 = operator new(0x15Cu);
   LOBYTE(v19) = 1;
   if ( v6 )
@@ -44,32 +44,32 @@ _DWORD *__thiscall sub_4376B0(_DWORD *this, int a2)
   else
     v7 = 0;
   LOBYTE(v19) = 0;
-  this[609] = v7;
+  self[609] = v7;
   sub_41C760((int)v7, aSoundsWarmapEx);
-  sub_41CA40(this[609]);
+  sub_41CA40(self[609]);
   v13 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
-  sub_41CFD0(this[609], v13);
-  memset(this + 149, 0, 0x71Cu);
+  sub_41CFD0(self[609], v13);
+  memset(self + 149, 0, 0x71Cu);
   v15 = 0;
   v14 = 0;
   v8 = (const char **)off_4AA5F0;
-  v9 = this + 169;
+  v9 = self + 169;
   do
   {
     for ( *v9 = 0; ; ++*v9 )
     {
       sprintf(Buffer, "%s %03d", *v8, *v9);
-      v10 = sub_405A30(this, Buffer, -1, 1);
+      v10 = sub_405A30(self, Buffer, -1, 1);
       if ( v10 < 0 )
         break;
-      this[v3 + 149 + *v9] = v10;
+      self[v3 + 149 + *v9] = v10;
     }
     if ( (int)v8 < (int)&off_4AA620 )
     {
       sprintf(Buffer, "Allied Flag%02d", v15 + 1);
-      v9[1] = sub_405A30(this, Buffer, -1, 1);
+      v9[1] = sub_405A30(self, Buffer, -1, 1);
       sprintf(Buffer, "Enemy Flag%02d", v15 + 1);
-      v9[2] = sub_405A30(this, Buffer, -1, 1);
+      v9[2] = sub_405A30(self, Buffer, -1, 1);
       v12 = v9[1];
       memset(&v16[11], 0, 16);
       memset(&v16[6], 0, 16);
@@ -78,7 +78,7 @@ _DWORD *__thiscall sub_4376B0(_DWORD *this, int a2)
       v16[10] = 1065353216;
       v16[5] = 1065353216;
       v16[0] = 1065353216;
-      sub_404F60(this, v12, v16, &v17);
+      sub_404F60(self, v12, v16, &v17);
       sub_46C5C5(v9 + 5, v9 + 5, v16);
       v3 = v14;
     }
@@ -92,10 +92,10 @@ _DWORD *__thiscall sub_4376B0(_DWORD *this, int a2)
     v14 = v3;
   }
   while ( (int)v8 < (int)&dword_4AA624 );
-  this[604] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapblasthalo);
-  this[605] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapexplode);
-  this[606] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapexplodespar);
-  this[607] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapshellexplod);
-  this[608] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapshellexplod_0);
-  return this;
+  self[604] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapblasthalo);
+  self[605] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapexplode);
+  self[606] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapexplodespar);
+  self[607] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapshellexplod);
+  self[608] = sub_413830(*(_DWORD **)(dword_520970 + 116), aMapshellexplod_0);
+  return self;
 }

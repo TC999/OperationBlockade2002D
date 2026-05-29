@@ -1,5 +1,5 @@
 //----- (00408880) --------------------------------------------------------
-int __thiscall sub_408880(_DWORD *this)
+int __thiscall sub_408880(_DWORD *self)
 {
-  return this[11];
+  return self[11];
 }

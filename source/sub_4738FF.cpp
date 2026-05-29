@@ -1,5 +1,5 @@
 //----- (004738FF) --------------------------------------------------------
-int __thiscall sub_4738FF(_DWORD *this, int a2, int a3, int a4)
+int __thiscall sub_4738FF(_DWORD *self, int a2, int a3, int a4)
 {
   _WORD *v4; // edx
   unsigned int v5; // edi
@@ -12,10 +12,10 @@ int __thiscall sub_4738FF(_DWORD *this, int a2, int a3, int a4)
   float v13; // [esp+28h] [ebp+10h]
   float v14; // [esp+28h] [ebp+10h]
 
-  v4 = (_WORD *)(this[6] + a3 * this[1043] + a2 * this[1042]);
-  v10 = this[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
+  v4 = (_WORD *)(self[6] + a3 * self[1043] + a2 * self[1042]);
+  v10 = self[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
   v5 = 0;
-  v6 = this[1044] == 0;
+  v6 = self[1044] == 0;
   dword_52230C = a2;
   if ( !v6 )
   {
@@ -31,7 +31,7 @@ int __thiscall sub_4738FF(_DWORD *this, int a2, int a3, int a4)
       *v4++ = (int)v12 | (32 * ((int)v14 | ((_WORD)v8 << 6)));
       ++v5;
     }
-    while ( v5 < this[1044] );
+    while ( v5 < self[1044] );
   }
   return a2;
 }

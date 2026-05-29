@@ -1,5 +1,5 @@
 //----- (00458A10) --------------------------------------------------------
-int __thiscall sub_458A10(int *this, _DWORD *a2)
+int __thiscall sub_458A10(int *self, _DWORD *a2)
 {
   _DWORD *v3; // eax
   _DWORD *v4; // edi
@@ -18,18 +18,18 @@ int __thiscall sub_458A10(int *this, _DWORD *a2)
   int v17; // [esp+Ch] [ebp-8h]
   int v18; // [esp+10h] [ebp-4h]
 
-  v3 = (_DWORD *)this[2];
+  v3 = (_DWORD *)self[2];
   v4 = v3;
-  if ( (this[3] - (int)v3) >> 3 )
+  if ( (self[3] - (int)v3) >> 3 )
   {
     sub_458C00(v3, v3, v3 + 2);
-    sub_458C40((_DWORD *)this[2], (_DWORD *)(1 - ((this[2] - (int)v4) >> 3)), a2);
-    v15 = this[2];
+    sub_458C40((_DWORD *)self[2], (_DWORD *)(1 - ((self[2] - (int)v4) >> 3)), a2);
+    v15 = self[2];
     v16 = v4;
     if ( v4 == (_DWORD *)v15 )
     {
-      result = this[2] + 8;
-      this[2] = result;
+      result = self[2] + 8;
+      self[2] = result;
     }
     else
     {
@@ -40,13 +40,13 @@ int __thiscall sub_458A10(int *this, _DWORD *a2)
         v16 += 2;
       }
       while ( v16 != (_DWORD *)v15 );
-      result = this[2] + 8;
-      this[2] = result;
+      result = self[2] + 8;
+      self[2] = result;
     }
   }
   else
   {
-    v5 = this[1];
+    v5 = self[1];
     if ( !v5 || (v6 = ((int)v3 - v5) >> 3, v6 <= 1) )
       v6 = 1;
     if ( v5 )
@@ -58,7 +58,7 @@ int __thiscall sub_458A10(int *this, _DWORD *a2)
     if ( v8 < 0 )
       v8 = 0;
     v9 = operator new(8 * v8);
-    v10 = (_DWORD *)this[1];
+    v10 = (_DWORD *)self[1];
     v17 = (int)v9;
     for ( i = v9; v10 != v4; i += 2 )
     {
@@ -66,23 +66,23 @@ int __thiscall sub_458A10(int *this, _DWORD *a2)
       v10 += 2;
     }
     sub_458C40(i, (_DWORD *)1, a2);
-    sub_458C00(v4, (_DWORD *)this[2], i + 2);
-    nullsub_8(this[1], this[2]);
-    sub_4885A6((LPVOID)this[1]);
-    v12 = this[1];
-    this[3] = v17 + 8 * v18;
+    sub_458C00(v4, (_DWORD *)self[2], i + 2);
+    nullsub_8(self[1], self[2]);
+    sub_4885A6((LPVOID)self[1]);
+    v12 = self[1];
+    self[3] = v17 + 8 * v18;
     if ( v12 )
     {
-      v14 = this[2];
-      this[1] = v17;
+      v14 = self[2];
+      self[1] = v17;
       result = v17 + 8 * ((v14 - v12) >> 3) + 8;
-      this[2] = result;
+      self[2] = result;
     }
     else
     {
-      this[1] = v17;
+      self[1] = v17;
       result = v17 + 8;
-      this[2] = v17 + 8;
+      self[2] = v17 + 8;
     }
   }
   return result;

@@ -1,5 +1,5 @@
 //----- (0047362B) --------------------------------------------------------
-int __thiscall sub_47362B(_DWORD *this, int a2, int a3, int a4)
+int __thiscall sub_47362B(_DWORD *self, int a2, int a3, int a4)
 {
   _BYTE *v4; // edx
   int v5; // ebx
@@ -11,10 +11,10 @@ int __thiscall sub_47362B(_DWORD *this, int a2, int a3, int a4)
   float v12; // [esp+28h] [ebp+10h]
   float v13; // [esp+28h] [ebp+10h]
 
-  v4 = (_BYTE *)(this[6] + a3 * this[1043] + a2 * this[1042]);
-  v5 = this[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
+  v4 = (_BYTE *)(self[6] + a3 * self[1043] + a2 * self[1042]);
+  v5 = self[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
   v6 = 0;
-  v7 = this[1044] == 0;
+  v7 = self[1044] == 0;
   dword_52230C = a2;
   if ( !v7 )
   {
@@ -32,7 +32,7 @@ int __thiscall sub_47362B(_DWORD *this, int a2, int a3, int a4)
       ++v6;
       v8 += 4;
     }
-    while ( v6 < this[1044] );
+    while ( v6 < self[1044] );
   }
   return a2;
 }

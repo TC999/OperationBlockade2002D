@@ -1,5 +1,5 @@
 //----- (0046F081) --------------------------------------------------------
-int __thiscall sub_46F081(_DWORD *this)
+int __thiscall sub_46F081(_DWORD *self)
 {
   _BYTE *v2; // ecx
   _DWORD *v3; // eax
@@ -19,9 +19,9 @@ int __thiscall sub_46F081(_DWORD *this)
   _BYTE *v18; // [esp+24h] [ebp-Ch]
   _BYTE *v19; // [esp+28h] [ebp-8h]
 
-  v2 = *(_BYTE **)(this[1] + 24);
-  v12 = this;
-  v3 = (_DWORD *)*this;
+  v2 = *(_BYTE **)(self[1] + 24);
+  v12 = self;
+  v3 = (_DWORD *)*self;
   v4 = v3[1042];
   v5 = (_BYTE *)v3[6];
   v6 = &v5[v4 * v3[1045]];

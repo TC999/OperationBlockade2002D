@@ -1,5 +1,5 @@
 //----- (00456A40) --------------------------------------------------------
-char __thiscall sub_456A40(int this, float *a2, int a3, float a4, int a5, int a6)
+char __thiscall sub_456A40(int self, float *a2, int a3, float a4, int a5, int a6)
 {
   int v7; // eax
   float *v8; // ecx
@@ -34,16 +34,16 @@ char __thiscall sub_456A40(int this, float *a2, int a3, float a4, int a5, int a6
 
   *(float *)&v18 = 0.0;
   v19 = 0.0;
-  v7 = *(_DWORD *)(this + 392);
+  v7 = *(_DWORD *)(self + 392);
   v20 = 0.0;
-  v8 = (float *)(*(_DWORD *)(*(_DWORD *)(dword_5216EC[*(_DWORD *)(v7 + 292)] + 8) + 12 * *(_DWORD *)(this + 464) + 8)
-               + 36 * *(_DWORD *)(this + 468));
-  *(float *)&v16 = *(float *)(v7 + 320) * *(float *)(v7 + 316) + *(float *)(this + 436);
+  v8 = (float *)(*(_DWORD *)(*(_DWORD *)(dword_5216EC[*(_DWORD *)(v7 + 292)] + 8) + 12 * *(_DWORD *)(self + 464) + 8)
+               + 36 * *(_DWORD *)(self + 468));
+  *(float *)&v16 = *(float *)(v7 + 320) * *(float *)(v7 + 316) + *(float *)(self + 436);
   result = sub_420B50(
              a2,
              *(float *)&a3,
-             *(_DWORD *)(this + 428),
-             *(_DWORD *)(this + 432),
+             *(_DWORD *)(self + 428),
+             *(_DWORD *)(self + 432),
              v16,
              *(float *)(v7 + 316),
              0.0,
@@ -57,7 +57,7 @@ char __thiscall sub_456A40(int this, float *a2, int a3, float a4, int a5, int a6
   {
     if ( *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
     {
-      v28 = *(_DWORD *)(this + 396);
+      v28 = *(_DWORD *)(self + 396);
       v21 = v18;
       v32 = *(float *)&a3 * a4;
       v10 = *(float *)&v18 - *a2;
@@ -91,7 +91,7 @@ char __thiscall sub_456A40(int this, float *a2, int a3, float a4, int a5, int a6
       v23 = v20 - v15;
       v26 = v23;
       v17 = *(float *)&a3 * a4;
-      return sub_456C50(this, &v18, LODWORD(v17), 1, &v24);
+      return sub_456C50(self, &v18, LODWORD(v17), 1, &v24);
     }
   }
   return result;

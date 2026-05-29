@@ -1,5 +1,5 @@
 //----- (004379D0) --------------------------------------------------------
-int __thiscall sub_4379D0(int *this, int a2, int a3, int a4)
+int __thiscall sub_4379D0(int *self, int a2, int a3, int a4)
 {
   int v5; // eax
   int v6; // ebp
@@ -13,11 +13,11 @@ int __thiscall sub_4379D0(int *this, int a2, int a3, int a4)
   int v14; // [esp+60h] [ebp+Ch]
 
   sub_405C40(a2, a3, a4);
-  v5 = this[2];
+  v5 = self[2];
   v6 = 0;
   if ( v5 > 0 )
   {
-    v7 = this[1];
+    v7 = self[1];
     do
     {
       if ( a2 == v7 )
@@ -27,7 +27,7 @@ int __thiscall sub_4379D0(int *this, int a2, int a3, int a4)
     }
     while ( v6 < v5 );
   }
-  v8 = this + 169;
+  v8 = self + 169;
   v14 = 13;
   do
   {

@@ -1,5 +1,5 @@
 //----- (0044A490) --------------------------------------------------------
-int __thiscall sub_44A490(char *this, int a2, _DWORD *a3, float *a4, char a5, char a6)
+int __thiscall sub_44A490(char *self, int a2, _DWORD *a3, float *a4, char a5, char a6)
 {
   unsigned int i; // edi
   int result; // eax
@@ -32,7 +32,7 @@ int __thiscall sub_44A490(char *this, int a2, _DWORD *a3, float *a4, char a5, ch
       break;
     if ( i >= (*(_DWORD *)(a2 + 312) - result) >> 2 )
       break;
-    result = sub_449C10(this);
+    result = sub_449C10(self);
     if ( result == -1 )
       break;
     v25 = fabs((double)rand() * 0.000030518509);
@@ -86,7 +86,7 @@ int __thiscall sub_44A490(char *this, int a2, _DWORD *a3, float *a4, char a5, ch
     *(float *)&v29[1] = v24 + v24 - 1.0;
     *(float *)&v29[2] = v22 + v22 - 1.0;
     sub_46B970(v29, v29);
-    sub_449C40(this, *(_DWORD *)(*(_DWORD *)(a2 + 308) + 4 * i), a3, &v26, a5, a6, 3.1415927, (int)v29);
+    sub_449C40(self, *(_DWORD *)(*(_DWORD *)(a2 + 308) + 4 * i), a3, &v26, a5, a6, 3.1415927, (int)v29);
   }
   return result;
 }

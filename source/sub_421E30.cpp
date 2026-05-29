@@ -1,5 +1,5 @@
 //----- (00421E30) --------------------------------------------------------
-int __thiscall sub_421E30(_DWORD **this, float a2, float a3, float a4, int a5, float *a6)
+int __thiscall sub_421E30(_DWORD **self, float a2, float a3, float a4, int a5, float *a6)
 {
   double v7; // st7
   double v8; // st6
@@ -9,7 +9,7 @@ int __thiscall sub_421E30(_DWORD **this, float a2, float a3, float a4, int a5, f
   float v12; // [esp+30h] [ebp-4h]
   float v13; // [esp+38h] [ebp+4h]
 
-  (*(void (__stdcall **)(_DWORD *, _DWORD, int, float **, _DWORD))(*this[13] + 44))(this[13], 0, 112, &v10, 0);
+  (*(void (__stdcall **)(_DWORD *, _DWORD, int, float **, _DWORD))(*self[13] + 44))(self[13], 0, 112, &v10, 0);
   v12 = a2 + 0.5;
   v11 = a3 + 0.5;
   v13 = floor(a2 + a6[5] + 0.5) + 0.5;
@@ -43,7 +43,7 @@ int __thiscall sub_421E30(_DWORD **this, float a2, float a3, float a4, int a5, f
   *((_DWORD *)v10 + 25) = a5;
   v10[26] = a6[3];
   v10[27] = a6[4];
-  (*(void (__stdcall **)(_DWORD *))(*this[13] + 48))(this[13]);
+  (*(void (__stdcall **)(_DWORD *))(*self[13] + 48))(self[13]);
   (*(void (__stdcall **)(_DWORD, int, _DWORD, int, _DWORD, int))(**(_DWORD **)ArgList + 284))(
     *(_DWORD *)ArgList,
     4,

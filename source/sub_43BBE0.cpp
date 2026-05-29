@@ -1,9 +1,9 @@
 //----- (0043BBE0) --------------------------------------------------------
-char __thiscall sub_43BBE0(_DWORD *this)
+char __thiscall sub_43BBE0(_DWORD *self)
 {
   char v2[260]; // [esp+Ch] [ebp-104h] BYREF
 
-  strcpy(v2, *(const char **)(*((_DWORD *)sub_424350(this, aNameedit) + 28) + 8));
+  strcpy(v2, *(const char **)(*((_DWORD *)sub_424350(self, aNameedit) + 28) + 8));
   if ( !strcmp(v2, AppName) )
     return 0;
   strcpy(String, v2);

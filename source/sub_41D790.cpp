@@ -1,5 +1,5 @@
 //----- (0041D790) --------------------------------------------------------
-void __thiscall sub_41D790(_DWORD *this)
+void __thiscall sub_41D790(_DWORD *self)
 {
-  ++this[69];
+  ++self[69];
 }

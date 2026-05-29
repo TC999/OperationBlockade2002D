@@ -1,5 +1,5 @@
 //----- (0043B730) --------------------------------------------------------
-int __thiscall sub_43B730(int this)
+int __thiscall sub_43B730(int self)
 {
   int v2; // edi
   int v3; // ebp
@@ -16,13 +16,13 @@ int __thiscall sub_43B730(int this)
   int v14; // eax
   int v16; // [esp+10h] [ebp-4h]
 
-  sub_424630(*(int **)(this + 40));
+  sub_424630(*(int **)(self + 40));
   v2 = *(_DWORD *)(16 * *(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 20) + *(_DWORD *)(dword_520970 + 236) + 28);
   v3 = *(_DWORD *)(*(_DWORD *)(dword_520970 + 280) + 496);
   v16 = v3;
   if ( sub_422BA0(AppName, aShowalllevels, 0) )
     v3 = v2 - 1;
-  v4 = sub_424350((_DWORD *)this, aLevellist);
+  v4 = sub_424350((_DWORD *)self, aLevellist);
   v5 = v3 + 2;
   *((_DWORD *)v4 + 32) = 0;
   if ( v3 + 2 >= v2 )
@@ -43,7 +43,7 @@ int __thiscall sub_43B730(int this)
     while ( v6 > v8 + v7 - 1 );
   }
   *((_BYTE *)v4 + 136) = 1;
-  v9 = sub_424350((_DWORD *)this, aLevelhighscore);
+  v9 = sub_424350((_DWORD *)self, aLevelhighscore);
   v10 = *((_DWORD *)v4 + 31);
   v11 = *(_DWORD *)(dword_520970 + 280);
   if ( v10 > *(_DWORD *)(v11 + 496) )
@@ -51,8 +51,8 @@ int __thiscall sub_43B730(int this)
   else
     v12 = *(_DWORD *)(*(_DWORD *)(v11 + 508) + 4 * v10);
   sub_421190(*((_DWORD *)v9 + 28), "%d", v12);
-  v13 = sub_424350((_DWORD *)this, aGamescore);
+  v13 = sub_424350((_DWORD *)self, aGamescore);
   v14 = sub_45EA60(*(_DWORD *)(dword_520970 + 280));
   sub_421190(*((_DWORD *)v13 + 28), "%d", v14);
-  return sub_43B9E0(this);
+  return sub_43B9E0(self);
 }

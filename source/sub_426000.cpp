@@ -1,17 +1,17 @@
 //----- (00426000) --------------------------------------------------------
-const char *__thiscall sub_426000(_DWORD *this, char *String2)
+const char *__thiscall sub_426000(_DWORD *self, char *String2)
 {
   int v3; // ebp
   int v4; // esi
   const char *v5; // edi
 
-  v3 = this[6];
+  v3 = self[6];
   v4 = 0;
   if ( v3 <= 0 )
     return 0;
   while ( 1 )
   {
-    v5 = *(const char **)(this[5] + 4 * v4);
+    v5 = *(const char **)(self[5] + 4 * v4);
     if ( !_strcmpi(v5, String2) )
       break;
     if ( ++v4 >= v3 )

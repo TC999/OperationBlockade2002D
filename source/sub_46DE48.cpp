@@ -1,5 +1,5 @@
 //----- (0046DE48) --------------------------------------------------------
-int __thiscall sub_46DE48(_DWORD *this)
+int __thiscall sub_46DE48(_DWORD *self)
 {
   _DWORD *v2; // edx
   int v3; // edi
@@ -52,31 +52,31 @@ int __thiscall sub_46DE48(_DWORD *this)
   float *v51; // [esp+44h] [ebp-10h]
   unsigned int v52; // [esp+44h] [ebp-10h]
 
-  v2 = (_DWORD *)this[1];
+  v2 = (_DWORD *)self[1];
   v45 = 0;
   v50 = 0;
   v48 = 0;
   v39 = 0;
   if ( v2[2] != 1 )
     return -2147467259;
-  v3 = *this;
-  if ( *(_DWORD *)(*this + 8) != 1 || v2[1046] != 1 || *(_DWORD *)(v3 + 4184) != 1 )
+  v3 = *self;
+  if ( *(_DWORD *)(*self + 8) != 1 || v2[1046] != 1 || *(_DWORD *)(v3 + 4184) != 1 )
     return -2147467259;
-  v4 = ((this[2] >> 17) & 1) == 0;
-  v5 = sub_46DAFE(*(_DWORD *)(v3 + 4176), v2[1044], (this[2] & 0x10000) == 0);
+  v4 = ((self[2] >> 17) & 1) == 0;
+  v5 = sub_46DAFE(*(_DWORD *)(v3 + 4176), v2[1044], (self[2] & 0x10000) == 0);
   v41 = v5;
-  if ( v5 && (v45 = sub_46DAFE(*(_DWORD *)(*this + 4180), *(_DWORD *)(this[1] + 4180), v4)) != 0 )
+  if ( v5 && (v45 = sub_46DAFE(*(_DWORD *)(*self + 4180), *(_DWORD *)(self[1] + 4180), v4)) != 0 )
   {
     v43 = (unsigned int)v5 + *v5;
     v6 = (unsigned int)v45 + *v45;
     v35 = v6;
-    v7 = operator new(4 * *(_DWORD *)(this[1] + 4180));
+    v7 = operator new(4 * *(_DWORD *)(self[1] + 4180));
     v50 = v7;
     if ( !v7 )
       goto LABEL_48;
     v49 = 0;
-    memset(v7, 0, 4 * *(_DWORD *)(this[1] + 4180));
-    v8 = *(_DWORD *)(*this + 4176);
+    memset(v7, 0, 4 * *(_DWORD *)(self[1] + 4180));
+    v8 = *(_DWORD *)(*self + 4176);
     v9 = (float *)operator new(16 * v8);
     v40 = v9;
     if ( v9 )
@@ -118,7 +118,7 @@ int __thiscall sub_46DE48(_DWORD *this)
                   v13 = (void **)operator new(0xCu);
                   if ( !v13 )
                     goto LABEL_48;
-                  v14 = *(_DWORD *)(this[1] + 4176);
+                  v14 = *(_DWORD *)(self[1] + 4176);
                   v15 = operator new(16 * v14);
                   v37 = v15;
                   if ( v15 )
@@ -137,7 +137,7 @@ int __thiscall sub_46DE48(_DWORD *this)
                     goto LABEL_48;
                   }
                 }
-                memset(*v13, 0, 16 * *(_DWORD *)(this[1] + 4176));
+                memset(*v13, 0, 16 * *(_DWORD *)(self[1] + 4176));
                 *((float *)v13 + 1) = 0.0;
                 v13[2] = 0;
                 ++v49;
@@ -147,7 +147,7 @@ int __thiscall sub_46DE48(_DWORD *this)
               v51 += 2;
             }
             while ( v51 < v11 );
-            (*(void (__thiscall **)(_DWORD, int, _DWORD, float *))(*(_DWORD *)*this + 4))(*this, v44, 0, v47);
+            (*(void (__thiscall **)(_DWORD, int, _DWORD, float *))(*(_DWORD *)*self + 4))(*self, v44, 0, v47);
             v17 = (float *)(v41 + 1);
             if ( (unsigned int)(v41 + 1) < v43 )
             {
@@ -196,8 +196,8 @@ int __thiscall sub_46DE48(_DWORD *this)
               v27[1] = v28;
               if ( v28 + 0.0000099999997 >= 1.0 )
               {
-                (*(void (__thiscall **)(_DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)this[1] + 8))(
-                  this[1],
+                (*(void (__thiscall **)(_DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)self[1] + 8))(
+                  self[1],
                   *(_DWORD *)v26,
                   0,
                   *(_DWORD *)v27);
@@ -219,7 +219,7 @@ int __thiscall sub_46DE48(_DWORD *this)
         v29 = 0;
         if ( v49 )
         {
-          v30 = (_DWORD *)this[1];
+          v30 = (_DWORD *)self[1];
           if ( v30[1045] )
           {
             do
@@ -234,7 +234,7 @@ int __thiscall sub_46DE48(_DWORD *this)
                 if ( !--v49 )
                   break;
               }
-              v30 = (_DWORD *)this[1];
+              v30 = (_DWORD *)self[1];
               ++v29;
             }
             while ( v29 < v30[1045] );

@@ -1,20 +1,20 @@
 //----- (0043A4A0) --------------------------------------------------------
-int __thiscall sub_43A4A0(_DWORD *this)
+int __thiscall sub_43A4A0(_DWORD *self)
 {
   void *v2; // esi
   _DWORD *v3; // esi
   int v4; // edi
   int result; // eax
 
-  sub_41CF50(this[12]);
-  v2 = (void *)this[12];
+  sub_41CF50(self[12]);
+  v2 = (void *)self[12];
   if ( v2 )
   {
-    sub_41C700((LPVOID *)this[12]);
+    sub_41C700((LPVOID *)self[12]);
     sub_4885A6(v2);
   }
-  this[12] = 0;
-  v3 = this + 6;
+  self[12] = 0;
+  v3 = self + 6;
   v4 = 4;
   do
   {
@@ -24,6 +24,6 @@ int __thiscall sub_43A4A0(_DWORD *this)
   }
   while ( v4 );
   result = sub_436FA0(*(float **)(dword_520970 + 224), 0.25, 1.5);
-  this[11] = 2;
+  self[11] = 2;
   return result;
 }

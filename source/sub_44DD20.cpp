@@ -1,5 +1,5 @@
 //----- (0044DD20) --------------------------------------------------------
-void __thiscall sub_44DD20(char *this, float *a2, _DWORD *a3)
+void __thiscall sub_44DD20(char *self, float *a2, _DWORD *a3)
 {
   int v4; // edi
   _BYTE *i; // eax
@@ -21,12 +21,12 @@ void __thiscall sub_44DD20(char *this, float *a2, _DWORD *a3)
   if ( a2 )
   {
     v4 = 0;
-    for ( i = this + 27416; *i; i += 40 )
+    for ( i = self + 27416; *i; i += 40 )
     {
       if ( ++v4 >= 64 )
         return;
     }
-    v6 = &this[40 * v4];
+    v6 = &self[40 * v4];
     v6[27416] = 1;
     *((_DWORD *)v6 + 6855) = a2;
     *((_DWORD *)v6 + 6856) = *a3;
@@ -45,7 +45,7 @@ void __thiscall sub_44DD20(char *this, float *a2, _DWORD *a3)
       v8 = v14;
     else
       v8 = fabs((double)rand() * 0.000030518509) * (v18 - v14) + v14;
-    *(float *)&this[40 * v4 + 27440] = v8;
+    *(float *)&self[40 * v4 + 27440] = v8;
     v15 = a2[77];
     v19 = a2[78];
     if ( v15 == v19 )
@@ -60,7 +60,7 @@ void __thiscall sub_44DD20(char *this, float *a2, _DWORD *a3)
     else
       v10 = fabs((double)rand() * 0.000030518509) * (v20 - v16) + v16;
     *((float *)v6 + 6862) = v10;
-    v11 = sub_409960((_DWORD *)dword_520970, (int)this);
+    v11 = sub_409960((_DWORD *)dword_520970, (int)self);
     *((_DWORD *)v6 + 6863) = v11;
     v11[10] = v6 + 27416;
     *(_DWORD *)(*((_DWORD *)v6 + 6863) + 28) = 0;

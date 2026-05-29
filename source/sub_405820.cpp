@@ -1,8 +1,8 @@
 //----- (00405820) --------------------------------------------------------
-BOOL __thiscall sub_405820(FILE **this, FILE **a2)
+BOOL __thiscall sub_405820(FILE **self, FILE **a2)
 {
   FILE **Buffer; // [esp+0h] [ebp-4h] BYREF
 
-  Buffer = this;
-  return sub_4057E0(this, &Buffer) && Buffer == a2;
+  Buffer = self;
+  return sub_4057E0(self, &Buffer) && Buffer == a2;
 }

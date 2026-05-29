@@ -1,5 +1,5 @@
 //----- (0043CF70) --------------------------------------------------------
-int __thiscall sub_43CF70(int *this)
+int __thiscall sub_43CF70(int *self)
 {
   int v2; // ecx
   void *v3; // edi
@@ -7,19 +7,19 @@ int __thiscall sub_43CF70(int *this)
   int v6; // esi
   int v7; // eax
 
-  v2 = this[19];
+  v2 = self[19];
   if ( v2 )
   {
     sub_41CF50(v2);
-    v3 = (void *)this[19];
+    v3 = (void *)self[19];
     if ( v3 )
     {
-      sub_41C700((LPVOID *)this[19]);
+      sub_41C700((LPVOID *)self[19]);
       sub_4885A6(v3);
     }
-    this[19] = 0;
+    self[19] = 0;
   }
-  v4 = this[16];
+  v4 = self[16];
   if ( v4 )
     sub_402FC0(v4);
   if ( byte_5216E4 )

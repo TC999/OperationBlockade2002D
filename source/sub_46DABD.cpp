@@ -1,11 +1,11 @@
 //----- (0046DABD) --------------------------------------------------------
-int __thiscall sub_46DABD(int this)
+int __thiscall sub_46DABD(int self)
 {
   int result; // eax
   void *v3; // esi
 
-  result = sub_4885A6(*(LPVOID *)this);
-  v3 = *(void **)(this + 8);
+  result = sub_4885A6(*(LPVOID *)self);
+  v3 = *(void **)(self + 8);
   if ( v3 )
   {
     sub_46DABD(v3);

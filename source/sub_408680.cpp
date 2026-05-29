@@ -1,5 +1,5 @@
 //----- (00408680) --------------------------------------------------------
-char __thiscall sub_408680(int this, int a2, float *a3, float *a4, float *a5, float *a6, float *a7, float *a8)
+char __thiscall sub_408680(int self, int a2, float *a3, float *a4, float *a5, float *a6, float *a7, float *a8)
 {
   int v9; // edi
   int v10; // esi
@@ -28,11 +28,11 @@ char __thiscall sub_408680(int this, int a2, float *a3, float *a4, float *a5, fl
   *a6 = -3.4028235e38;
   *a7 = 3.4028235e38;
   *a8 = -3.4028235e38;
-  v9 = *(_DWORD *)(*(_DWORD *)(this + 28) + 4) + 172 * a2;
-  v10 = *(_DWORD *)(this + 24) + 96 * a2;
+  v9 = *(_DWORD *)(*(_DWORD *)(self + 28) + 4) + 172 * a2;
+  v10 = *(_DWORD *)(self + 24) + 96 * a2;
   if ( *(int *)(v9 + 40) <= 0 )
     return 0;
-  sub_406F00((float *)this, a2);
+  sub_406F00((float *)self, a2);
   v28 = 0;
   v26 = v9 + 84;
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, float **, _DWORD))(**(_DWORD **)(v9 + 36) + 44))(

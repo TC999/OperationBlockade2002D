@@ -1,6 +1,6 @@
 //----- (0043B160) --------------------------------------------------------
-void __thiscall sub_43B160(int this)
+void __thiscall sub_43B160(int self)
 {
-  sub_4885A6(*(LPVOID *)(this + 44));
-  *(_DWORD *)(this + 48) = 0;
+  sub_4885A6(*(LPVOID *)(self + 44));
+  *(_DWORD *)(self + 48) = 0;
 }

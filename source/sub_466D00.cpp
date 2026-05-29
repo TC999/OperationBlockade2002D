@@ -1,5 +1,5 @@
 //----- (00466D00) --------------------------------------------------------
-char __thiscall sub_466D00(int this, int a2)
+char __thiscall sub_466D00(int self, int a2)
 {
   double v4; // st7
   int v5; // ecx
@@ -123,68 +123,68 @@ char __thiscall sub_466D00(int this, int a2)
 
   if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
     goto LABEL_6;
-  if ( *(_BYTE *)(this + 396) )
+  if ( *(_BYTE *)(self + 396) )
   {
-    if ( *(_BYTE *)(this + 436)
+    if ( *(_BYTE *)(self + 436)
       && sqrt(
-           *(float *)(this + 460) * *(float *)(this + 460)
-         + *(float *)(this + 464) * *(float *)(this + 464)
-         + *(float *)(this + 468) * *(float *)(this + 468)) > 7000.0 )
+           *(float *)(self + 460) * *(float *)(self + 460)
+         + *(float *)(self + 464) * *(float *)(self + 464)
+         + *(float *)(self + 468) * *(float *)(self + 468)) > 7000.0 )
     {
       sub_467A50(0);
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)this + 24))(this, 0);
-      return sub_428620((_DWORD *)this, a2);
+      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+      return sub_428620((_DWORD *)self, a2);
     }
 LABEL_6:
-    if ( *(_BYTE *)(this + 396) )
+    if ( *(_BYTE *)(self + 396) )
       goto LABEL_13;
   }
-  v4 = *(float *)(this + 432) - *(float *)&a2;
-  v5 = *(_DWORD *)(this + 412);
-  *(float *)(this + 432) = v4;
+  v4 = *(float *)(self + 432) - *(float *)&a2;
+  v5 = *(_DWORD *)(self + 412);
+  *(float *)(self + 432) = v4;
   v6 = *(float *)(v5 + 1164);
   if ( v6 == 0.0 )
   {
     v64 = 0.0;
-    sub_408960(*(_DWORD **)(this + 416), 0.0);
+    sub_408960(*(_DWORD **)(self + 416), 0.0);
   }
   else
   {
     v64 = v4 / v6;
     if ( v64 < 1.0 )
-      sub_408960(*(_DWORD **)(this + 416), v64);
+      sub_408960(*(_DWORD **)(self + 416), v64);
   }
   if ( v64 <= 0.0 )
   {
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)this + 24))(this, 0);
-    return sub_428620((_DWORD *)this, a2);
+    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+    return sub_428620((_DWORD *)self, a2);
   }
 LABEL_13:
-  if ( *(_BYTE *)(this + 436) )
+  if ( *(_BYTE *)(self + 436) )
   {
     sub_4159B0(
-      *(_DWORD *)(this + 452),
+      *(_DWORD *)(self + 452),
       *(float *)&a2,
-      (_DWORD *)(this + 460),
-      (_DWORD *)(this + 472),
-      (float *)(this + 484),
-      (float *)(this + 488),
-      (float *)(this + 500));
-    v7 = sub_468BE0(*(_DWORD *)(this + 460), *(_DWORD *)(this + 464), 0);
-    if ( *(_BYTE *)(this + 444) )
+      (_DWORD *)(self + 460),
+      (_DWORD *)(self + 472),
+      (float *)(self + 484),
+      (float *)(self + 488),
+      (float *)(self + 500));
+    v7 = sub_468BE0(*(_DWORD *)(self + 460), *(_DWORD *)(self + 464), 0);
+    if ( *(_BYTE *)(self + 444) )
     {
-      if ( v7 <= *(float *)(this + 468) )
-        v7 = *(float *)(this + 468);
+      if ( v7 <= *(float *)(self + 468) )
+        v7 = *(float *)(self + 468);
       else
-        *(_BYTE *)(this + 444) = 0;
+        *(_BYTE *)(self + 444) = 0;
     }
-    *(float *)(this + 468) = v7;
-    *(_DWORD *)(this + 484) = 0;
+    *(float *)(self + 468) = v7;
+    *(_DWORD *)(self + 484) = 0;
     sub_46BEE6((int)v120, 0.0);
-    v8 = *(float *)(this + 472);
-    v74 = *(float *)(this + 476);
+    v8 = *(float *)(self + 472);
+    v74 = *(float *)(self + 476);
     v73 = v8;
-    v9 = *(float *)(this + 480);
+    v9 = *(float *)(self + 480);
     v82 = 0.0;
     v75 = v9;
     v78 = 0.0;
@@ -200,36 +200,36 @@ LABEL_13:
     v107 = v74;
     v108 = v75;
     v81 = v73 * v78 - v75 * *(float *)&v76;
-    v10 = *(_DWORD *)(this + 460);
+    v10 = *(_DWORD *)(self + 460);
     v111 = v81;
-    v11 = *(_DWORD *)(this + 464);
+    v11 = *(_DWORD *)(self + 464);
     v114 = v10;
     v115 = v11;
     v82 = v74 * *(float *)&v76 - v73 * v77;
     v110 = v75 * v77 - v74 * v78;
     v112 = v82;
-    v116 = *(float *)(this + 468);
+    v116 = *(float *)(self + 468);
     v105 = 0;
     v109 = 0;
     v113 = 0;
     v117 = 1065353216;
     sub_46B97C(&v102, v120, &v102);
-    sub_4073F0(*(_DWORD **)(this + 416), 0, &v102);
+    sub_4073F0(*(_DWORD **)(self + 416), 0, &v102);
   }
-  if ( *(float *)(this + 440) > 0.0 )
-    *(float *)(this + 440) = *(float *)(this + 440) - *(float *)&a2;
-  if ( *(_BYTE *)(this + 436) && *(float *)(this + 440) <= 0.0 )
+  if ( *(float *)(self + 440) > 0.0 )
+    *(float *)(self + 440) = *(float *)(self + 440) - *(float *)&a2;
+  if ( *(_BYTE *)(self + 436) && *(float *)(self + 440) <= 0.0 )
   {
-    if ( *(_BYTE *)(this + 420) )
+    if ( *(_BYTE *)(self + 420) )
     {
-      if ( !*(_DWORD *)(this + 448) )
+      if ( !*(_DWORD *)(self + 448) )
       {
-        v12 = *(float *)(this + 456) - *(float *)&a2;
-        *(float *)(this + 456) = v12;
+        v12 = *(float *)(self + 456) - *(float *)&a2;
+        *(float *)(self + 456) = v12;
         if ( v12 <= 0.0 )
         {
-          v13 = *(_DWORD *)(this + 412);
-          *(_DWORD *)(this + 448) = 1;
+          v13 = *(_DWORD *)(self + 412);
+          *(_DWORD *)(self + 448) = 1;
           v65 = *(float *)(v13 + 1200);
           v68 = *(float *)(v13 + 1204);
           if ( v65 == v68 )
@@ -241,40 +241,40 @@ LABEL_13:
             v79 = COERCE_FLOAT(rand());
             v14 = fabs((double)SLODWORD(v79) * 0.000030518509) * (v68 - v65) + v65;
           }
-          *(float *)(this + 456) = v14;
+          *(float *)(self + 456) = v14;
         }
       }
     }
-    if ( *(_BYTE *)(this + 421) )
+    if ( *(_BYTE *)(self + 421) )
     {
-      v15 = *(_BYTE *)(this + 504);
-      v16 = *(float *)(*(_DWORD *)(this + 412) + 1172) * 0.5 > *(float *)(this + 500);
-      *(_BYTE *)(this + 504) = v16;
+      v15 = *(_BYTE *)(self + 504);
+      v16 = *(float *)(*(_DWORD *)(self + 412) + 1172) * 0.5 > *(float *)(self + 500);
+      *(_BYTE *)(self + 504) = v16;
       if ( !v15 && v16 )
       {
-        sub_45F160(*(float **)(dword_520970 + 280), (float *)(this + 400));
-        *(_DWORD *)(this + 512) = 0;
+        sub_45F160(*(float **)(dword_520970 + 280), (float *)(self + 400));
+        *(_DWORD *)(self + 512) = 0;
       }
-      if ( *(_BYTE *)(this + 504) )
+      if ( *(_BYTE *)(self + 504) )
       {
         memset(v119, 0, sizeof(v119));
-        v80 = *(int *)(this + 400);
-        v17 = *(_DWORD *)(this + 416);
-        v81 = *(float *)(this + 404);
-        v18 = *(_DWORD *)(this + 412);
-        v82 = *(float *)(this + 408);
+        v80 = *(int *)(self + 400);
+        v17 = *(_DWORD *)(self + 416);
+        v81 = *(float *)(self + 404);
+        v18 = *(_DWORD *)(self + 412);
+        v82 = *(float *)(self + 408);
         sub_4085B0(v17, *(_DWORD *)(v18 + 1128), &v93);
-        v19 = (float *)(this + 488);
-        v58 = sub_44A3E0(&v93, (float *)&v80, *(float *)(*(_DWORD *)(this + 412) + 1256), 1.0);
+        v19 = (float *)(self + 488);
+        v58 = sub_44A3E0(&v93, (float *)&v80, *(float *)(*(_DWORD *)(self + 412) + 1256), 1.0);
         sub_44A250(
-          *(_DWORD *)(*(_DWORD *)(this + 412) + 1248),
+          *(_DWORD *)(*(_DWORD *)(self + 412) + 1248),
           &v93,
-          (float *)(this + 488),
+          (float *)(self + 488),
           (float *)&v80,
           (float *)v119,
           v58,
           (float *)&v76);
-        sub_407690(*(_DWORD *)(this + 416), 0, v120);
+        sub_407690(*(_DWORD *)(self + 416), 0, v120);
         sub_46B982(v120, v120);
         v73 = *(float *)&v76;
         v74 = v77;
@@ -283,31 +283,31 @@ LABEL_13:
         sub_46B976(&v73, &v73, v120);
         v79 = v75;
         v60 = atan2(-v73, v74);
-        v89 = sub_41C2F0((float *)(*(_DWORD *)(this + 412) + 1260), v60);
+        v89 = sub_41C2F0((float *)(*(_DWORD *)(self + 412) + 1260), v60);
         v61 = asin(v79);
-        v20 = sub_41C2F0((float *)(*(_DWORD *)(this + 412) + 1272), v61);
-        v21 = *(_DWORD *)(this + 512);
+        v20 = sub_41C2F0((float *)(*(_DWORD *)(self + 412) + 1272), v61);
+        v21 = *(_DWORD *)(self + 512);
         v79 = v20;
         v69 = v20;
         v66 = v89;
         if ( v21 <= 1 )
         {
-          sub_407430(*(_DWORD **)(this + 416), *(_DWORD *)(*(_DWORD *)(this + 412) + 1128), (char *)&v102);
+          sub_407430(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1128), (char *)&v102);
           v70 = 1.0;
           if ( v103 <= 0.0 )
             v70 = -1.0;
           v67 = acos(*(float *)&v102) * v70;
-          sub_407430(*(_DWORD **)(this + 416), *(_DWORD *)(*(_DWORD *)(this + 412) + 1140), (char *)&v102);
+          sub_407430(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1140), (char *)&v102);
           v71 = 1.0;
           if ( v108 <= 0.0 )
             v71 = -1.0;
           v118 = v112;
-          v22 = *(_DWORD *)(this + 412);
+          v22 = *(_DWORD *)(self + 412);
           v23 = *(float *)&a2 * *(float *)(v22 + 1284);
           *(float *)&v62 = v23;
           sub_41C3C0(v22 + 1260, v89, v67, v62);
           v66 = v23;
-          v24 = *(_DWORD *)(this + 412);
+          v24 = *(_DWORD *)(self + 412);
           *(float *)&v63 = *(float *)&a2 * *(float *)(v24 + 1284);
           v25 = acos(v118) * v71;
           v59 = v25;
@@ -318,68 +318,68 @@ LABEL_13:
           {
             v27 = v69 - v79;
             if ( v27 < 0.0000099999997 && v27 > -0.0000099999997 )
-              *(_DWORD *)(this + 512) = 2;
+              *(_DWORD *)(self + 512) = 2;
           }
         }
         sub_46BF69((int)v121, v66);
         sub_46BE62((int)v122, v69);
-        sub_4073F0(*(_DWORD **)(this + 416), *(_DWORD *)(*(_DWORD *)(this + 412) + 1128), v121);
-        sub_4073F0(*(_DWORD **)(this + 416), *(_DWORD *)(*(_DWORD *)(this + 412) + 1140), v122);
-        if ( *(_DWORD *)(this + 512) == 2 )
+        sub_4073F0(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1128), v121);
+        sub_4073F0(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1140), v122);
+        if ( *(_DWORD *)(self + 512) == 2 )
         {
-          v28 = *(float *)(this + 508) - *(float *)&a2;
-          *(float *)(this + 508) = v28;
+          v28 = *(float *)(self + 508) - *(float *)&a2;
+          *(float *)(self + 508) = v28;
           if ( v28 <= 0.0 )
           {
-            v29 = *(_DWORD *)(this + 412);
-            *(_DWORD *)(this + 508) = *(_DWORD *)(v29 + 1252);
+            v29 = *(_DWORD *)(self + 412);
+            *(_DWORD *)(self + 508) = *(_DWORD *)(v29 + 1252);
             v30 = *(_DWORD *)(v29 + 1152);
             if ( v30 != -1 )
             {
-              sub_407690(*(_DWORD *)(this + 416), v30, &v102);
+              sub_407690(*(_DWORD *)(self + 416), v30, &v102);
               sub_4010D0(&v86, (int)&v102);
               *(float *)&v83 = *(float *)&v76 + *v19;
-              v31 = *(_DWORD *)(this + 412);
-              v84 = v77 + *(float *)(this + 492);
-              v85 = v78 + *(float *)(this + 496);
+              v31 = *(_DWORD *)(self + 412);
+              v84 = v77 + *(float *)(self + 492);
+              v85 = v78 + *(float *)(self + 496);
               *(float *)&v90 = 0.0;
               v91 = 0.0;
               v92 = 1.0;
               sub_449C40(*(char **)(dword_520970 + 276), *(_DWORD *)(v31 + 1248), &v86, &v83, 0, 0, 0.0, (int)&v90);
-              v32 = *(_DWORD *)(this + 412);
+              v32 = *(_DWORD *)(self + 412);
               *(float *)&v83 = 0.0;
               v84 = 0.0;
               v85 = 0.0;
               sub_44E040(
                 *(char **)(dword_520970 + 240),
                 *(_DWORD *)(v32 + 1288),
-                this + 488,
-                *(_DWORD *)(this + 416),
+                self + 488,
+                *(_DWORD *)(self + 416),
                 *(_DWORD *)(v32 + 1152),
                 &v83);
             }
-            v33 = *(_DWORD *)(*(_DWORD *)(this + 412) + 1156);
+            v33 = *(_DWORD *)(*(_DWORD *)(self + 412) + 1156);
             if ( v33 != -1 )
             {
-              sub_407690(*(_DWORD *)(this + 416), v33, &v102);
+              sub_407690(*(_DWORD *)(self + 416), v33, &v102);
               sub_4010D0(&v86, (int)&v102);
               *(float *)&v90 = *(float *)&v76 + *v19;
-              v34 = *(_DWORD *)(this + 412);
-              v91 = v77 + *(float *)(this + 492);
-              v92 = v78 + *(float *)(this + 496);
+              v34 = *(_DWORD *)(self + 412);
+              v91 = v77 + *(float *)(self + 492);
+              v92 = v78 + *(float *)(self + 496);
               *(float *)&v83 = 0.0;
               v84 = 0.0;
               v85 = 1.0;
               sub_449C40(*(char **)(dword_520970 + 276), *(_DWORD *)(v34 + 1248), &v86, &v90, 0, 0, 0.0, (int)&v83);
-              v35 = *(_DWORD *)(this + 412);
+              v35 = *(_DWORD *)(self + 412);
               *(float *)&v83 = 0.0;
               v84 = 0.0;
               v85 = 0.0;
               sub_44E040(
                 *(char **)(dword_520970 + 240),
                 *(_DWORD *)(v35 + 1288),
-                this + 488,
-                *(_DWORD *)(this + 416),
+                self + 488,
+                *(_DWORD *)(self + 416),
                 *(_DWORD *)(v35 + 1156),
                 &v83);
             }
@@ -388,42 +388,42 @@ LABEL_13:
       }
     }
   }
-  v36 = *(_DWORD **)(this + 1352);
+  v36 = *(_DWORD **)(self + 1352);
   if ( v36 )
   {
-    v37 = *(_DWORD *)(this + 492);
-    v86 = *(_DWORD *)(this + 488);
-    v38 = *(_DWORD *)(this + 496);
+    v37 = *(_DWORD *)(self + 492);
+    v86 = *(_DWORD *)(self + 488);
+    v38 = *(_DWORD *)(self + 496);
     v87 = v37;
-    v39 = *(int *)(this + 460);
+    v39 = *(int *)(self + 460);
     v88 = v38;
-    v40 = *(float *)(this + 464);
+    v40 = *(float *)(self + 464);
     v83 = v39;
-    v41 = *(float *)(this + 468);
+    v41 = *(float *)(self + 468);
     v84 = v40;
     v85 = v41;
     sub_41D960(v36, &v83, &v86);
   }
-  v42 = *(_DWORD **)(this + 1356);
+  v42 = *(_DWORD **)(self + 1356);
   if ( v42 )
   {
-    v43 = *(_DWORD *)(this + 492);
-    v86 = *(_DWORD *)(this + 488);
-    v44 = *(_DWORD *)(this + 496);
+    v43 = *(_DWORD *)(self + 492);
+    v86 = *(_DWORD *)(self + 488);
+    v44 = *(_DWORD *)(self + 496);
     v87 = v43;
-    v45 = *(int *)(this + 460);
+    v45 = *(int *)(self + 460);
     v88 = v44;
-    v46 = *(float *)(this + 464);
+    v46 = *(float *)(self + 464);
     v83 = v45;
-    v47 = *(float *)(this + 468);
+    v47 = *(float *)(self + 468);
     v84 = v46;
     v85 = v47;
     sub_41D960(v42, &v83, &v86);
   }
-  if ( sub_408F30(dword_520970) == this )
+  if ( sub_408F30(dword_520970) == self )
   {
-    sub_407430(*(_DWORD **)(this + 416), 0, (char *)&v102);
-    sub_401450((_DWORD *)this);
+    sub_407430(*(_DWORD **)(self + 416), 0, (char *)&v102);
+    sub_401450((_DWORD *)self);
     v73 = 0.0;
     v74 = -4000.0;
     v75 = 0.0;
@@ -438,30 +438,30 @@ LABEL_13:
     sub_46C5C5(&v76, &v76, &v102);
     v48 = v74;
     v49 = v116 + 1000.0;
-    *(float *)(this + 32) = v73;
+    *(float *)(self + 32) = v73;
     v50 = v75;
-    *(float *)(this + 36) = v48;
+    *(float *)(self + 36) = v48;
     v78 = v49;
-    *(float *)(this + 40) = v50;
+    *(float *)(self + 40) = v50;
     v51 = v77;
-    *(float *)(this + 44) = *(float *)&v76;
+    *(float *)(self + 44) = *(float *)&v76;
     v52 = v78;
-    *(float *)(this + 48) = v51;
-    *(float *)(this + 52) = v52;
+    *(float *)(self + 48) = v51;
+    *(float *)(self + 52) = v52;
     v53 = v81;
-    *(float *)(this + 56) = *(float *)&v80;
+    *(float *)(self + 56) = *(float *)&v80;
     v54 = v82;
-    *(float *)(this + 60) = v53;
-    *(float *)(this + 64) = v54;
+    *(float *)(self + 60) = v53;
+    *(float *)(self + 64) = v54;
   }
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {
-    if ( *(_BYTE *)(this + 436) )
+    if ( *(_BYTE *)(self + 436) )
     {
-      v94 = *(_WORD *)(this + 392);
-      while ( sub_4176E0(*(_DWORD **)(this + 452), &v79, &v80, &v72, 8) )
+      v94 = *(_WORD *)(self + 392);
+      while ( sub_4176E0(*(_DWORD **)(self + 452), &v79, &v80, &v72, 8) )
       {
-        v55 = *(_DWORD *)(this + 452);
+        v55 = *(_DWORD *)(self + 452);
         v56 = *(float *)(v55 + 16);
         v57 = *(_DWORD *)(v55 + 4136);
         v95 = LOWORD(v79);
@@ -475,5 +475,5 @@ LABEL_13:
       }
     }
   }
-  return sub_428620((_DWORD *)this, a2);
+  return sub_428620((_DWORD *)self, a2);
 }

@@ -1,14 +1,14 @@
 //----- (00463020) --------------------------------------------------------
-_DWORD *__thiscall sub_463020(_DWORD *this)
+_DWORD *__thiscall sub_463020(_DWORD *self)
 {
   _DWORD *v2; // ecx
   _DWORD *result; // eax
   int v4; // esi
 
-  memset(this + 220, 0, 0x580u);
-  this[130] = 0;
-  v2 = this + 220;
-  result = this + 585;
+  memset(self + 220, 0, 0x580u);
+  self[130] = 0;
+  v2 = self + 220;
+  result = self + 585;
   v4 = 4;
   do
   {
@@ -19,6 +19,6 @@ _DWORD *__thiscall sub_463020(_DWORD *this)
     --v4;
   }
   while ( v4 );
-  this[129] = -1;
+  self[129] = -1;
   return result;
 }

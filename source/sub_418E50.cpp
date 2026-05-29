@@ -1,5 +1,5 @@
 //----- (00418E50) --------------------------------------------------------
-char __thiscall sub_418E50(int this, char a2, float a3)
+char __thiscall sub_418E50(int self, char a2, float a3)
 {
   int v4; // eax
   float *v5; // edx
@@ -57,11 +57,11 @@ char __thiscall sub_418E50(int this, char a2, float a3)
 
   v24 = 0;
   v26 = 0;
-  v4 = *(_DWORD *)(this + 4132);
-  v5 = (float *)(this + 20 * v4 + 116);
+  v4 = *(_DWORD *)(self + 4132);
+  v5 = (float *)(self + 20 * v4 + 116);
   v39 = *v5;
-  v40 = *(float *)(this + 20 * v4 + 120);
-  v6 = this + 120;
+  v40 = *(float *)(self + 20 * v4 + 120);
+  v6 = self + 120;
   v41 = v5[2];
   v36 = *(int *)v6;
   v37 = *(float *)(v6 + 4);
@@ -74,16 +74,16 @@ char __thiscall sub_418E50(int this, char a2, float a3)
   {
     v7 = 0;
     v25 = 0;
-    if ( sub_417160(this) <= *(_DWORD *)(this + 4280) / 2 )
+    if ( sub_417160(self) <= *(_DWORD *)(self + 4280) / 2 )
       goto LABEL_6;
   }
   v25 = 1;
 LABEL_6:
   if ( !LOBYTE(a3) )
   {
-    v16 = -*(float *)(this + 4292);
+    v16 = -*(float *)(self + 4292);
     v52 = v16;
-    v33 = *(float *)(this + 4292);
+    v33 = *(float *)(self + 4292);
     if ( v16 != v33 )
       v52 = fabs((double)rand() * 0.000030518509) * (v33 - v52) + v52;
     v12 = v52;
@@ -93,9 +93,9 @@ LABEL_6:
   {
     if ( (unsigned __int8)sub_419C40(&v39) )
     {
-      v10 = -*(float *)(this + 4292);
+      v10 = -*(float *)(self + 4292);
       v49 = v10;
-      v29 = *(float *)(this + 4292);
+      v29 = *(float *)(self + 4292);
       if ( v10 != v29 )
         v49 = fabs((double)rand() * 0.000030518509) * (v29 - v49) + v49;
       sub_401000((float *)&v36, v49);
@@ -121,16 +121,16 @@ LABEL_6:
       v42 = 1.0 / v11 * v39;
       v43 = v43 * (1.0 / v11);
     }
-    if ( v11 <= *(float *)(this + 4304) || v43 * v37 + v42 * *(float *)&v36 + v38 * v44 <= 0.0 )
+    if ( v11 <= *(float *)(self + 4304) || v43 * v37 + v42 * *(float *)&v36 + v38 * v44 <= 0.0 )
     {
-      if ( v11 < *(float *)(this + 4300) && v43 * v37 + v42 * *(float *)&v36 + v38 * v44 < 0.0 )
+      if ( v11 < *(float *)(self + 4300) && v43 * v37 + v42 * *(float *)&v36 + v38 * v44 < 0.0 )
       {
         v45 = -v42;
         v46 = -v43;
         v47 = -v44;
         if ( sub_401170(&v45, (float *)&v36) <= 0.0 )
         {
-          v14 = -*(float *)(this + 4292);
+          v14 = -*(float *)(self + 4292);
           v31 = v14;
           v51 = v14;
           if ( v14 != v31 )
@@ -139,20 +139,20 @@ LABEL_6:
         }
         else
         {
-          sub_401000((float *)&v36, *(float *)(this + 4292));
+          sub_401000((float *)&v36, *(float *)(self + 4292));
         }
         goto LABEL_42;
       }
-      v15 = -*(float *)(this + 4292);
+      v15 = -*(float *)(self + 4292);
       v48 = v15;
-      v32 = *(float *)(this + 4292);
+      v32 = *(float *)(self + 4292);
       if ( v15 != v32 )
         v48 = fabs((double)rand() * 0.000030518509) * (v32 - v48) + v48;
       goto LABEL_37;
     }
     if ( sub_401170(&v42, (float *)&v36) <= 0.0 )
     {
-      v13 = -*(float *)(this + 4292);
+      v13 = -*(float *)(self + 4292);
       v30 = v13;
       v50 = v13;
       if ( v13 != v30 )
@@ -161,7 +161,7 @@ LABEL_6:
     }
     else
     {
-      v12 = *(float *)(this + 4292);
+      v12 = *(float *)(self + 4292);
     }
 LABEL_41:
     sub_401000((float *)&v36, v12);
@@ -169,17 +169,17 @@ LABEL_41:
   }
   if ( v7 )
   {
-    v27 = *(float *)(this + 4292) + *(float *)(this + 4292);
-    v8 = *(float *)(this + 4292) * -2.0;
+    v27 = *(float *)(self + 4292) + *(float *)(self + 4292);
+    v8 = *(float *)(self + 4292) * -2.0;
     v48 = v8;
     if ( v8 != v27 )
       v48 = fabs((double)rand() * 0.000030518509) * (v27 - v48) + v48;
   }
   else
   {
-    v9 = -*(float *)(this + 4292);
+    v9 = -*(float *)(self + 4292);
     v48 = v9;
-    v28 = *(float *)(this + 4292);
+    v28 = *(float *)(self + 4292);
     if ( v9 != v28 )
       v48 = fabs((double)rand() * 0.000030518509) * (v28 - v48) + v48;
   }
@@ -187,27 +187,27 @@ LABEL_37:
   sub_401000((float *)&v36, v48);
   v24 = 1;
 LABEL_42:
-  v17 = -*(float *)(this + 4296);
+  v17 = -*(float *)(self + 4296);
   v53 = v17;
-  v34 = *(float *)(this + 4296);
+  v34 = *(float *)(self + 4296);
   if ( v17 == v34 )
     v18 = v53;
   else
     v18 = fabs((double)rand() * 0.000030518509) * (v34 - v53) + v53;
   v38 = tan(v18);
   sub_46B970(&v36, &v36);
-  v19 = *(float *)(this + 4288) * *(float *)(this + 4284);
+  v19 = *(float *)(self + 4288) * *(float *)(self + 4284);
   *(float *)&v36 = v19 * *(float *)&v36;
   v37 = v19 * v37;
   *(float *)&v36 = *(float *)&v36 + v39;
   v37 = v37 + v40;
   v38 = v41 + v19 * v38;
-  if ( *(float *)(this + 4308) <= (double)v41 )
-    v20 = *(float *)(this + 4308);
+  if ( *(float *)(self + 4308) <= (double)v41 )
+    v20 = *(float *)(self + 4308);
   else
     v20 = v41;
-  if ( *(float *)(this + 4312) >= (double)v41 )
-    v54 = *(float *)(this + 4312);
+  if ( *(float *)(self + 4312) >= (double)v41 )
+    v54 = *(float *)(self + 4312);
   else
     v54 = v41;
   if ( v38 < v20 || v38 > (double)v54 )
@@ -215,10 +215,10 @@ LABEL_42:
   if ( !v24 )
     goto LABEL_71;
   v55 = v40 * v40 + v39 * v39;
-  v22 = *(float *)(this + 4300) * *(float *)(this + 4300);
+  v22 = *(float *)(self + 4300) * *(float *)(self + 4300);
   if ( v55 < v22 )
     v22 = v55;
-  v23 = *(float *)(this + 4304) * *(float *)(this + 4304);
+  v23 = *(float *)(self + 4304) * *(float *)(self + 4304);
   if ( v55 <= v23 )
     v35 = v23;
   else
@@ -226,13 +226,13 @@ LABEL_42:
   v56 = v37 * v37 + *(float *)&v36 * *(float *)&v36;
   if ( v56 < v22 )
     return 0;
-  if ( !v25 && *(_BYTE *)(this + 4316) && v56 > (double)v35 )
+  if ( !v25 && *(_BYTE *)(self + 4316) && v56 > (double)v35 )
     return 0;
 LABEL_71:
   if ( !v26 )
-    return sub_416350(this, &v36, a2) != 0;
+    return sub_416350(self, &v36, a2) != 0;
   result = sub_419C40(&v36);
   if ( result )
-    return sub_416350(this, &v36, a2) != 0;
+    return sub_416350(self, &v36, a2) != 0;
   return result;
 }

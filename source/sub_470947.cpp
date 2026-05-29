@@ -1,5 +1,5 @@
 //----- (00470947) --------------------------------------------------------
-int __thiscall sub_470947(_DWORD *this)
+int __thiscall sub_470947(_DWORD *self)
 {
   _DWORD *v1; // esi
   int v2; // ebx
@@ -112,19 +112,19 @@ int __thiscall sub_470947(_DWORD *this)
 
   v94 = 0;
   v95 = 0;
-  v1 = this;
-  v2 = this[1];
+  v1 = self;
+  v2 = self[1];
   v3 = *(_DWORD *)(v2 + 8) == 1;
-  v90 = this;
+  v90 = self;
   if ( !v3 )
     return -2147467259;
-  if ( *(_DWORD *)(*this + 8) != 1 )
+  if ( *(_DWORD *)(*self + 8) != 1 )
     return -2147467259;
-  v4 = this[2];
+  v4 = self[2];
   if ( (_BYTE)v4 != 3 )
     return -2147467259;
   v5 = *(_DWORD *)(v2 + 4176);
-  v6 = *(_DWORD *)(*this + 4176);
+  v6 = *(_DWORD *)(*self + 4176);
   v96 = (v4 & 0x20000) == 0;
   v104 = (v4 & 0x40000) == 0;
   v7 = sub_470516(v5, v6, (v4 & 0x10000) == 0);

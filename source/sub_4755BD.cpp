@@ -1,5 +1,5 @@
 //----- (004755BD) --------------------------------------------------------
-int __thiscall sub_4755BD(_DWORD *this)
+int __thiscall sub_4755BD(_DWORD *self)
 {
   int v2; // eax
   unsigned int v3; // ecx
@@ -18,13 +18,13 @@ int __thiscall sub_4755BD(_DWORD *this)
   float v17; // [esp+24h] [ebp-4h]
   int v18; // [esp+24h] [ebp-4h]
 
-  if ( this[1057] && this[1058] )
+  if ( self[1057] && self[1058] )
   {
-    v2 = this[1043] * this[1054];
-    v3 = this[1050];
-    v15 = (_WORD *)(this[6] + this[1042] * this[1051] + v2 + 2 * v3);
-    v4 = (float *)this[1049];
-    for ( i = v3; i < this[1052]; *(v15 - 1) = ((_WORD)v18 << this[1060]) | ((_WORD)v6 << this[1059]) )
+    v2 = self[1043] * self[1054];
+    v3 = self[1050];
+    v15 = (_WORD *)(self[6] + self[1042] * self[1051] + v2 + 2 * v3);
+    v4 = (float *)self[1049];
+    for ( i = v3; i < self[1052]; *(v15 - 1) = ((_WORD)v18 << self[1060]) | ((_WORD)v6 << self[1059]) )
     {
       v13 = v4[4] * 65.481003 + v4[6] * 24.966 + v4[5] * 128.55299;
       v11 = v4[2] * 112.0 - v4[1] * 74.203003 - *v4 * 37.797001;
@@ -75,10 +75,10 @@ int __thiscall sub_4755BD(_DWORD *this)
       }
       i += 2;
       v4 += 8;
-      *v15 = (v7 << this[1060]) | (v5 << this[1059]);
+      *v15 = (v7 << self[1060]) | (v5 << self[1059]);
       v15 += 2;
     }
-    this[1057] = 0;
+    self[1057] = 0;
   }
   return 0;
 }

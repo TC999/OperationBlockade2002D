@@ -1,5 +1,5 @@
 //----- (0040A1D0) --------------------------------------------------------
-void *__thiscall sub_40A1D0(void *this, char *FileName)
+void *__thiscall sub_40A1D0(void *self, char *FileName)
 {
   FILE *v3; // eax
   FILE *v4; // esi
@@ -70,14 +70,14 @@ void *__thiscall sub_40A1D0(void *this, char *FileName)
   bool FileNameb; // [esp+5Ch] [ebp+4h]
   bool FileNamec; // [esp+5Ch] [ebp+4h]
 
-  *(_BYTE *)this = (_BYTE)FileName;
-  *((_DWORD *)this + 1) = 0;
-  *((_DWORD *)this + 2) = 0;
-  *((_DWORD *)this + 3) = 0;
-  strcpy((char *)this + 16, FileName);
+  *(_BYTE *)self = (_BYTE)FileName;
+  *((_DWORD *)self + 1) = 0;
+  *((_DWORD *)self + 2) = 0;
+  *((_DWORD *)self + 3) = 0;
+  strcpy((char *)self + 16, FileName);
   v70 = 0;
-  *((_DWORD *)this + 69) = 0;
-  *((_DWORD *)this + 70) = 0;
+  *((_DWORD *)self + 69) = 0;
+  *((_DWORD *)self + 70) = 0;
   v3 = fopen(FileName, Mode);
   v4 = v3;
   if ( !v3 )
@@ -87,14 +87,14 @@ void *__thiscall sub_40A1D0(void *this, char *FileName)
   fseek(v4, 0, 0);
   v7 = v6 + 1;
   v8 = operator new(v7);
-  *((_DWORD *)this + 69) = v8;
+  *((_DWORD *)self + 69) = v8;
   sub_4898CA(v8, 1u, v7 - 1, v4);
-  *(_BYTE *)(*((_DWORD *)this + 69) + v7 - 1) = 0;
+  *(_BYTE *)(*((_DWORD *)self + 69) + v7 - 1) = 0;
   fclose(v4);
   v9 = v7 - 1;
   for ( i = 0; i < v9; ++i )
   {
-    v11 = (char *)(*((_DWORD *)this + 69) + i);
+    v11 = (char *)(*((_DWORD *)self + 69) + i);
     v12 = *v11;
     if ( (*v11 < 32 || v12 == 127) && v12 != 13 && v12 != 10 )
       *v11 = 32;
@@ -108,26 +108,26 @@ void *__thiscall sub_40A1D0(void *this, char *FileName)
     {
       if ( v13 < v14 )
       {
-        if ( !strncmp((const char *)(v13 + *((_DWORD *)this + 69)), asc_4A1F3C, 2u) )
+        if ( !strncmp((const char *)(v13 + *((_DWORD *)self + 69)), asc_4A1F3C, 2u) )
           FileNamea = 1;
-        if ( !strncmp((const char *)(v13 + *((_DWORD *)this + 69)), asc_4A1F38, 2u) )
+        if ( !strncmp((const char *)(v13 + *((_DWORD *)self + 69)), asc_4A1F38, 2u) )
           break;
       }
       if ( !FileNamea )
         goto LABEL_18;
-      *(_BYTE *)(*((_DWORD *)this + 69) + v13) = 32;
+      *(_BYTE *)(*((_DWORD *)self + 69) + v13) = 32;
 LABEL_24:
       if ( ++v13 >= v9 )
         goto LABEL_25;
     }
     FileNamea = 0;
-    strncpy((char *)(v13 + *((_DWORD *)this + 69)), asc_4A1DF8, 2u);
+    strncpy((char *)(v13 + *((_DWORD *)self + 69)), asc_4A1DF8, 2u);
 LABEL_18:
-    if ( v13 < v14 && !strncmp((const char *)(v13 + *((_DWORD *)this + 69)), asc_4A1F34, 2u) )
+    if ( v13 < v14 && !strncmp((const char *)(v13 + *((_DWORD *)self + 69)), asc_4A1F34, 2u) )
     {
       for ( j = v13; j < v9; *v16 = 32 )
       {
-        v16 = (_BYTE *)(j + *((_DWORD *)this + 69));
+        v16 = (_BYTE *)(j + *((_DWORD *)self + 69));
         if ( *v16 == 13 )
           break;
         if ( !*v16 )
@@ -141,7 +141,7 @@ LABEL_25:
   v17 = 0;
   v18 = 0;
 LABEL_26:
-  v19 = *((_DWORD *)this + 69);
+  v19 = *((_DWORD *)self + 69);
   v20 = v18;
   v21 = 0;
   while ( 1 )
@@ -150,7 +150,7 @@ LABEL_26:
     switch ( v22 )
     {
       case 0:
-        return this;
+        return self;
       case 91:
         v21 = 1;
         break;
@@ -176,12 +176,12 @@ LABEL_26:
         }
         v24 = *(_BYTE *)(v19 + v18);
         *(_BYTE *)(v19 + v18) = 0;
-        v25 = *((_DWORD *)this + 1);
+        v25 = *((_DWORD *)self + 1);
         FileNameb = v24 == 0;
         ++v18;
         if ( v25 )
         {
-          v26 = (*((_DWORD *)this + 2) - v25) / 24;
+          v26 = (*((_DWORD *)self + 2) - v25) / 24;
           v17 = 0;
           v60 = v26;
         }
@@ -197,46 +197,46 @@ LABEL_26:
         LOBYTE(v70) = 1;
         v27 = v26 + 1;
         if ( v25 )
-          v17 = (*((_DWORD *)this + 2) - v25) / 24;
+          v17 = (*((_DWORD *)self + 2) - v25) / 24;
         if ( v17 >= v27 )
         {
           if ( v25 )
           {
-            if ( v27 < (*((_DWORD *)this + 2) - v25) / 24 )
-              sub_40BB60(v25 + 24 * v27, *((_DWORD *)this + 2));
+            if ( v27 < (*((_DWORD *)self + 2) - v25) / 24 )
+              sub_40BB60(v25 + 24 * v27, *((_DWORD *)self + 2));
             v26 = v60;
           }
         }
         else
         {
           if ( v25 )
-            v28 = (*((_DWORD *)this + 2) - v25) / 24;
+            v28 = (*((_DWORD *)self + 2) - v25) / 24;
           else
             v28 = 0;
-          sub_40B840(*((_DWORD *)this + 2), v27 - v28, v66);
+          sub_40B840(*((_DWORD *)self + 2), v27 - v28, v66);
         }
         LOBYTE(v70) = 0;
         sub_4885A6(v67);
-        v29 = k + *((_DWORD *)this + 69);
-        v30 = *((_DWORD *)this + 1);
+        v29 = k + *((_DWORD *)self + 69);
+        v30 = *((_DWORD *)self + 1);
         v67 = 0;
         v68 = 0;
         v69 = 0;
         v31 = 24 * v26;
         *(_DWORD *)(v31 + v30) = v29;
-        *(_BYTE *)(v31 + *((_DWORD *)this + 1) + 20) = 0;
-        *((_DWORD *)this + 70) = v26;
+        *(_BYTE *)(v31 + *((_DWORD *)self + 1) + 20) = 0;
+        *((_DWORD *)self + 70) = v26;
         if ( FileNameb )
-          return this;
+          return self;
       }
       else if ( v21 == 2 )
       {
-        v32 = *((_DWORD *)this + 1);
-        v33 = v32 ? (*((_DWORD *)this + 2) - v32) / 24 : 0;
-        if ( *((_DWORD *)this + 70) < v33 )
+        v32 = *((_DWORD *)self + 1);
+        v33 = v32 ? (*((_DWORD *)self + 2) - v32) / 24 : 0;
+        if ( *((_DWORD *)self + 70) < v33 )
         {
           *(_BYTE *)(v19 + v18 - 1) = 0;
-          v34 = *((_DWORD *)this + 69);
+          v34 = *((_DWORD *)self + 69);
           v35 = v20;
           v36 = v18;
           v37 = *(_BYTE *)(v34 + v18);
@@ -249,7 +249,7 @@ LABEL_26:
           v38 = *(_BYTE *)(v34 + v18);
           *(_BYTE *)(v34 + v18) = 0;
           v39 = v38 == 0;
-          v40 = *((_DWORD *)this + 69);
+          v40 = *((_DWORD *)self + 69);
           FileNamec = v39;
           ++v18;
           if ( *(_BYTE *)(v40 + v20) == 32 )
@@ -266,12 +266,12 @@ LABEL_26:
               ;
           }
           v44 = v42 - 1;
-          for ( n = (_BYTE *)(v44 + v40); *n == 32; n = (_BYTE *)(v44 + *((_DWORD *)this + 69)) )
+          for ( n = (_BYTE *)(v44 + v40); *n == 32; n = (_BYTE *)(v44 + *((_DWORD *)self + 69)) )
           {
             *n = 0;
             --v44;
           }
-          v46 = *((_DWORD *)this + 69);
+          v46 = *((_DWORD *)self + 69);
           if ( *(_BYTE *)(v46 + v36) == 32 )
           {
             do
@@ -286,35 +286,35 @@ LABEL_26:
               ;
           }
           v50 = v48 - 1;
-          for ( ii = (_BYTE *)(v50 + v46); *ii == 32; ii = (_BYTE *)(*((_DWORD *)this + 69) + v50) )
+          for ( ii = (_BYTE *)(v50 + v46); *ii == 32; ii = (_BYTE *)(*((_DWORD *)self + 69) + v50) )
           {
             *ii = 0;
             --v50;
           }
-          v52 = *(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 8);
-          v53 = v52 ? (*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 12) - v52) / 12 : 0;
-          v54 = *(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 8);
+          v52 = *(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 8);
+          v53 = v52 ? (*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12) - v52) / 12 : 0;
+          v54 = *(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 8);
           v61 = v53 + 1;
-          v55 = v54 ? (*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 12) - v54) / 12 : 0;
+          v55 = v54 ? (*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12) - v54) / 12 : 0;
           if ( v55 >= v61 )
           {
-            if ( v54 && v61 < (*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 12) - v54) / 12 )
-              *(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 12) = v54 + 12 * v61;
+            if ( v54 && v61 < (*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12) - v54) / 12 )
+              *(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12) = v54 + 12 * v61;
           }
           else
           {
-            v56 = v54 ? (*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 12) - v54) / 12 : 0;
-            sub_45C920(*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 12), v61 - v56, v65);
+            v56 = v54 ? (*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12) - v54) / 12 : 0;
+            sub_45C920(*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12), v61 - v56, v65);
           }
           v57 = 12 * v53;
-          *(_DWORD *)(*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 8) + v57) = v62 + *((_DWORD *)this + 69);
-          *(_DWORD *)(*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 8) + v57 + 4) = m + *((_DWORD *)this + 69);
-          *(_BYTE *)(*(_DWORD *)(*((_DWORD *)this + 1) + 24 * *((_DWORD *)this + 70) + 8) + v57 + 8) = 0;
+          *(_DWORD *)(*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 8) + v57) = v62 + *((_DWORD *)self + 69);
+          *(_DWORD *)(*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 8) + v57 + 4) = m + *((_DWORD *)self + 69);
+          *(_BYTE *)(*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 8) + v57 + 8) = 0;
           if ( FileNamec )
-            return this;
+            return self;
         }
       }
-      v58 = *((_DWORD *)this + 69);
+      v58 = *((_DWORD *)self + 69);
       for ( jj = *(_BYTE *)(v58 + v18); jj != 10; jj = *(_BYTE *)(v58 + v18++ + 1) )
       {
         if ( !jj )
@@ -326,7 +326,7 @@ LABEL_26:
         v17 = 0;
         goto LABEL_26;
       }
-      return this;
+      return self;
     }
   }
 }

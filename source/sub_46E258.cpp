@@ -1,5 +1,5 @@
 //----- (0046E258) --------------------------------------------------------
-int __thiscall sub_46E258(_DWORD *this)
+int __thiscall sub_46E258(_DWORD *self)
 {
   int v2; // edx
   int v3; // eax
@@ -64,34 +64,34 @@ int __thiscall sub_46E258(_DWORD *this)
   unsigned int *v63; // [esp+58h] [ebp-10h]
   float *i; // [esp+58h] [ebp-10h]
 
-  v2 = this[1];
+  v2 = self[1];
   v52 = 0;
   v53 = 0;
   v62 = 0;
   v56 = 0;
   v39 = 0;
-  if ( *(_DWORD *)(v2 + 8) != 1 || *(_DWORD *)(*this + 8) != 1 )
+  if ( *(_DWORD *)(v2 + 8) != 1 || *(_DWORD *)(*self + 8) != 1 )
     return -2147467259;
-  v3 = this[2];
+  v3 = self[2];
   v4 = (v3 & 0x20000) == 0;
   v42 = (v3 & 0x40000) == 0;
-  v5 = sub_46DAFE(*(_DWORD *)(*this + 4176), *(_DWORD *)(v2 + 4176), (v3 & 0x10000) == 0);
+  v5 = sub_46DAFE(*(_DWORD *)(*self + 4176), *(_DWORD *)(v2 + 4176), (v3 & 0x10000) == 0);
   v41 = v5;
   if ( v5
-    && (v52 = sub_46DAFE(*(_DWORD *)(*this + 4180), *(_DWORD *)(this[1] + 4180), v4)) != 0
-    && (v53 = sub_46DAFE(*(_DWORD *)(*this + 4184), *(_DWORD *)(this[1] + 4184), v42)) != 0 )
+    && (v52 = sub_46DAFE(*(_DWORD *)(*self + 4180), *(_DWORD *)(self[1] + 4180), v4)) != 0
+    && (v53 = sub_46DAFE(*(_DWORD *)(*self + 4184), *(_DWORD *)(self[1] + 4184), v42)) != 0 )
   {
     v45 = (unsigned int)v5 + *v5;
     v44 = (unsigned int)v52 + *v52;
     v6 = (unsigned int *)((char *)v53 + *v53);
     v38 = v6;
-    v7 = operator new(4 * *(_DWORD *)(this[1] + 4184));
+    v7 = operator new(4 * *(_DWORD *)(self[1] + 4184));
     v62 = v7;
     if ( !v7 )
       goto LABEL_61;
     v61 = 0;
-    memset(v7, 0, 4 * *(_DWORD *)(this[1] + 4184));
-    v8 = *(_DWORD *)(*this + 4176);
+    memset(v7, 0, 4 * *(_DWORD *)(self[1] + 4184));
+    v8 = *(_DWORD *)(*self + 4176);
     v9 = (char *)operator new(16 * v8);
     v40 = v9;
     if ( v9 )
@@ -136,7 +136,7 @@ int __thiscall sub_46E258(_DWORD *this)
                 v6 = (unsigned int *)operator new(0xCu);
                 if ( !v6 )
                   goto LABEL_61;
-                v14 = *(_DWORD *)(this[1] + 4176) * *(_DWORD *)(this[1] + 4180);
+                v14 = *(_DWORD *)(self[1] + 4176) * *(_DWORD *)(self[1] + 4180);
                 v15 = operator new(16 * v14);
                 v46 = (unsigned int)v15;
                 if ( v15 )
@@ -156,7 +156,7 @@ int __thiscall sub_46E258(_DWORD *this)
                 }
               }
               v17 = (char *)*v6;
-              v18 = 16 * *(_DWORD *)(this[1] + 4176) * *(_DWORD *)(this[1] + 4180);
+              v18 = 16 * *(_DWORD *)(self[1] + 4176) * *(_DWORD *)(self[1] + 4180);
               memset((void *)*v6, 0, 4 * (v18 >> 2));
               v19 = &v17[4 * (v18 >> 2)];
               v20 = v18;
@@ -178,7 +178,7 @@ int __thiscall sub_46E258(_DWORD *this)
             {
               v22 = (unsigned int)v21 + *v21;
               v47 = v22;
-              (*(void (__thiscall **)(_DWORD, int, int, char *))(*(_DWORD *)*this + 4))(*this, v50, v48, v55);
+              (*(void (__thiscall **)(_DWORD, int, int, char *))(*(_DWORD *)*self + 4))(*self, v50, v48, v55);
               v23 = (char *)(v41 + 1);
               v54 = (char *)(v41 + 1);
               if ( (unsigned int)(v41 + 1) < v45 )
@@ -195,7 +195,7 @@ int __thiscall sub_46E258(_DWORD *this)
                     {
                       do
                       {
-                        v25 = *(_DWORD *)v62[*(_DWORD *)i] + 16 * *v59 * *(_DWORD *)(this[1] + 4176);
+                        v25 = *(_DWORD *)v62[*(_DWORD *)i] + 16 * *v59 * *(_DWORD *)(self[1] + 4176);
                         for ( j = v54 + 4; j < v51; j += 8 )
                         {
                           v27 = *((float *)j + 1) * i[1] * *((float *)v59 + 1);
@@ -233,7 +233,7 @@ int __thiscall sub_46E258(_DWORD *this)
             *((float *)v6 + 1) = v30;
             if ( v30 + 0.0000099999997 >= 1.0 )
             {
-              v31 = (_DWORD *)this[1];
+              v31 = (_DWORD *)self[1];
               v60 = 0;
               if ( v31[1045] )
               {
@@ -244,7 +244,7 @@ int __thiscall sub_46E258(_DWORD *this)
                     *(_DWORD *)k,
                     *v6 + 16 * v60 * v31[1044]);
                   ++v60;
-                  v31 = (_DWORD *)this[1];
+                  v31 = (_DWORD *)self[1];
                 }
                 while ( v60 < v31[1045] );
                 v12 = v57;
@@ -261,8 +261,8 @@ int __thiscall sub_46E258(_DWORD *this)
         while ( v12 < v38 );
         if ( v61 )
         {
-          v32 = (_DWORD *)this[1];
-          for ( m = 0; m < v32[1046]; v32 = (_DWORD *)this[1] )
+          v32 = (_DWORD *)self[1];
+          for ( m = 0; m < v32[1046]; v32 = (_DWORD *)self[1] )
           {
             v33 = (void **)&v62[m];
             v34 = 0;
@@ -276,7 +276,7 @@ int __thiscall sub_46E258(_DWORD *this)
                     v34,
                     m,
                     *v6 + 16 * v34 * v32[1044]);
-                  v32 = (_DWORD *)this[1];
+                  v32 = (_DWORD *)self[1];
                   ++v34;
                 }
                 while ( v34 < v32[1045] );

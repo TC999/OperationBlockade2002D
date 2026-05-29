@@ -1,5 +1,5 @@
 //----- (0045CD60) --------------------------------------------------------
-int __thiscall sub_45CD60(int this)
+int __thiscall sub_45CD60(int self)
 {
   int i; // edi
   void *v3; // eax
@@ -10,33 +10,33 @@ int __thiscall sub_45CD60(int this)
   void *v8; // eax
   int result; // eax
 
-  if ( *(_BYTE *)(this + 456) )
+  if ( *(_BYTE *)(self + 456) )
   {
-    for ( i = 0; i < *(_DWORD *)(this + 448); ++i )
-      sub_4885A6(*(LPVOID *)(*(_DWORD *)(this + 444) + 4 * i));
+    for ( i = 0; i < *(_DWORD *)(self + 448); ++i )
+      sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 444) + 4 * i));
   }
-  memset(*(void **)(this + 444), 0, 4 * *(_DWORD *)(this + 448));
-  v3 = *(void **)(this + 444);
-  *(_DWORD *)(this + 448) = 0;
+  memset(*(void **)(self + 444), 0, 4 * *(_DWORD *)(self + 448));
+  v3 = *(void **)(self + 444);
+  *(_DWORD *)(self + 448) = 0;
   sub_488CEE(v3);
-  *(_DWORD *)(this + 452) = 0;
-  *(_DWORD *)(this + 444) = 0;
-  if ( *(_BYTE *)(this + 436) )
+  *(_DWORD *)(self + 452) = 0;
+  *(_DWORD *)(self + 444) = 0;
+  if ( *(_BYTE *)(self + 436) )
   {
-    for ( j = 0; j < *(_DWORD *)(this + 428); ++j )
-      sub_4885A6(*(LPVOID *)(*(_DWORD *)(this + 424) + 4 * j));
+    for ( j = 0; j < *(_DWORD *)(self + 428); ++j )
+      sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 424) + 4 * j));
   }
-  memset(*(void **)(this + 424), 0, 4 * *(_DWORD *)(this + 428));
-  v5 = *(void **)(this + 424);
-  *(_DWORD *)(this + 428) = 0;
+  memset(*(void **)(self + 424), 0, 4 * *(_DWORD *)(self + 428));
+  v5 = *(void **)(self + 424);
+  *(_DWORD *)(self + 428) = 0;
   sub_488CEE(v5);
-  *(_DWORD *)(this + 432) = 0;
-  *(_DWORD *)(this + 424) = 0;
-  if ( *(_BYTE *)(this + 420) )
+  *(_DWORD *)(self + 432) = 0;
+  *(_DWORD *)(self + 424) = 0;
+  if ( *(_BYTE *)(self + 420) )
   {
-    for ( k = 0; k < *(_DWORD *)(this + 412); ++k )
+    for ( k = 0; k < *(_DWORD *)(self + 412); ++k )
     {
-      v7 = *(void **)(*(_DWORD *)(this + 408) + 4 * k);
+      v7 = *(void **)(*(_DWORD *)(self + 408) + 4 * k);
       if ( v7 )
       {
         sub_45CF30(1);
@@ -45,15 +45,15 @@ int __thiscall sub_45CD60(int this)
       }
     }
   }
-  memset(*(void **)(this + 408), 0, 4 * *(_DWORD *)(this + 412));
-  v8 = *(void **)(this + 408);
-  *(_DWORD *)(this + 412) = 0;
+  memset(*(void **)(self + 408), 0, 4 * *(_DWORD *)(self + 412));
+  v8 = *(void **)(self + 408);
+  *(_DWORD *)(self + 412) = 0;
   sub_488CEE(v8);
-  *(_DWORD *)(this + 416) = 0;
-  *(_DWORD *)(this + 408) = 0;
-  result = sub_4885A6(*(LPVOID *)(this + 304));
-  *(_DWORD *)(this + 304) = 0;
-  *(_DWORD *)(this + 308) = 0;
-  *(_DWORD *)(this + 312) = 0;
+  *(_DWORD *)(self + 416) = 0;
+  *(_DWORD *)(self + 408) = 0;
+  result = sub_4885A6(*(LPVOID *)(self + 304));
+  *(_DWORD *)(self + 304) = 0;
+  *(_DWORD *)(self + 308) = 0;
+  *(_DWORD *)(self + 312) = 0;
   return result;
 }

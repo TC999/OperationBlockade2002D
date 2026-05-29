@@ -1,12 +1,12 @@
 //----- (0043C470) --------------------------------------------------------
-const char *__thiscall sub_43C470(int this)
+const char *__thiscall sub_43C470(int self)
 {
   const char *result; // eax
   const char *v3; // esi
   CHAR ReturnedString[16]; // [esp+4h] [ebp-10h] BYREF
 
-  sub_424630(*(int **)(this + 40));
-  result = sub_424350((_DWORD *)this, aHostip);
+  sub_424630(*(int **)(self + 40));
+  result = sub_424350((_DWORD *)self, aHostip);
   v3 = result;
   if ( result )
   {

@@ -1,13 +1,13 @@
 //----- (004732F8) --------------------------------------------------------
-unsigned int *__thiscall sub_4732F8(_DWORD *this, int a2, int a3, float *a4)
+unsigned int *__thiscall sub_4732F8(_DWORD *self, int a2, int a3, float *a4)
 {
   unsigned int *result; // eax
   unsigned int *i; // edi
   unsigned int v7; // ecx
   int v8; // [esp+Ch] [ebp+8h]
 
-  result = (unsigned int *)(this[6] + a3 * this[1043] + a2 * this[1042]);
-  for ( i = &result[this[1044]]; result < i; *(a4 - 1) = 1.0 )
+  result = (unsigned int *)(self[6] + a3 * self[1043] + a2 * self[1042]);
+  for ( i = &result[self[1044]]; result < i; *(a4 - 1) = 1.0 )
   {
     v7 = *result;
     v8 = (__int16)(32 * (*result >> 10)) >> 5;

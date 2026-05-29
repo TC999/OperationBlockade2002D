@@ -1,5 +1,5 @@
 //----- (00423600) --------------------------------------------------------
-char __thiscall sub_423600(_DWORD *this)
+char __thiscall sub_423600(_DWORD *self)
 {
   const char *v1; // eax
   char *v2; // ebp
@@ -101,8 +101,8 @@ char __thiscall sub_423600(_DWORD *this)
 
   v69 = (unsigned int)dword_5209F4;
   LODWORD(v69) = dword_5209D8;
-  v1 = (const char *)this[5];
-  v68 = this;
+  v1 = (const char *)self[5];
+  v68 = self;
   v90 = ((double)(unsigned int)dword_5209F4 - 640.0) * 0.5;
   v94 = ((double)v69 - 480.0) * 0.5;
   sprintf(Buffer, "UI_%s.ini", v1);

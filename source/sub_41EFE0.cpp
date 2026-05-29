@@ -1,10 +1,10 @@
 //----- (0041EFE0) --------------------------------------------------------
-int __thiscall sub_41EFE0(float *this, int a2)
+int __thiscall sub_41EFE0(float *self, int a2)
 {
   int v2; // eax
   _DWORD v4[16]; // [esp+0h] [ebp-40h] BYREF
 
-  if ( this[26] == 0.0 )
+  if ( self[26] == 0.0 )
     return 0;
   memset(&v4[11], 0, 16);
   memset(&v4[6], 0, 16);

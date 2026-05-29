@@ -1,5 +1,5 @@
 //----- (004081A0) --------------------------------------------------------
-double __thiscall sub_4081A0(int this, int a2, int a3, int a4)
+double __thiscall sub_4081A0(int self, int a2, int a3, int a4)
 {
   int v4; // esi
   int v5; // ebp
@@ -55,7 +55,7 @@ double __thiscall sub_4081A0(int this, int a2, int a3, int a4)
   v42 = a3;
   v34 = a4;
   v43 = a4;
-  v4 = *(_DWORD *)(this + 28);
+  v4 = *(_DWORD *)(self + 28);
   v31[0] = 0;
   v31[1] = 0;
   v32 = 0.0;
@@ -71,13 +71,13 @@ double __thiscall sub_4081A0(int this, int a2, int a3, int a4)
   v5 = *(_DWORD *)(v4 + 4) + 172 * a2;
   v6 = *(_BYTE *)(v5 + 80);
   v7 = 0;
-  v8 = (float *)(*(_DWORD *)(this + 24) + 96 * a2);
+  v8 = (float *)(*(_DWORD *)(self + 24) + 96 * a2);
   v35 = 0.0;
   v44 = 0.0;
   v48 = v5;
   if ( !v6 )
     return -3.4028235e38;
-  sub_406F00((float *)this, a2);
+  sub_406F00((float *)self, a2);
   v10 = v8[2];
   v11 = *v8 - *(float *)&a3;
   v12 = v8[2];

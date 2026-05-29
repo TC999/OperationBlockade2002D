@@ -1,5 +1,5 @@
 //----- (00417260) --------------------------------------------------------
-void __thiscall sub_417260(float *this)
+void __thiscall sub_417260(float *self)
 {
   int v1; // edi
   int v2; // ebx
@@ -58,18 +58,18 @@ void __thiscall sub_417260(float *this)
   float v55; // [esp+A0h] [ebp-Ch]
   float v56; // [esp+A4h] [ebp-8h]
 
-  v1 = *((_DWORD *)this + 1033);
+  v1 = *((_DWORD *)self + 1033);
   v2 = 0;
   v26 = 0;
   if ( v1 > 0 )
   {
-    for ( i = this + 34; ; i += 5 )
+    for ( i = self + 34; ; i += 5 )
     {
       v4 = i + 4;
       if ( !*((_BYTE *)i - 4) )
         break;
 LABEL_41:
-      v1 = *((_DWORD *)this + 1033);
+      v1 = *((_DWORD *)self + 1033);
       v26 = ++v2;
       if ( v2 >= v1 )
         return;
@@ -114,7 +114,7 @@ LABEL_41:
         v30 = 0.0;
         if ( v5 + 1 < v1 )
         {
-          v16 = &this[5 * v15 + 33];
+          v16 = &self[5 * v15 + 33];
           while ( !*(_BYTE *)v16 )
           {
             ++v15;
@@ -131,11 +131,11 @@ LABEL_41:
           else
           {
             v17 = 1.0 / ((double)v15 - (double)v27);
-            v33 = this[5 * v5 + 34] - this[5 * v15 + 34];
+            v33 = self[5 * v5 + 34] - self[5 * v15 + 34];
             v29 = v17 * v33;
-            v34 = this[5 * v5 + 35] - this[5 * v15 + 35];
+            v34 = self[5 * v5 + 35] - self[5 * v15 + 35];
             v30 = v34 * v17;
-            v35 = this[5 * v5 + 36] - this[5 * v15 + 36];
+            v35 = self[5 * v5 + 36] - self[5 * v15 + 36];
             v14 = v17 * v35;
           }
         }
@@ -143,9 +143,9 @@ LABEL_28:
         v18 = (double)(v5 - v2);
         v53 = v18 * v29;
         v54 = v30 * v18;
-        v48 = v53 + this[5 * v5 + 34];
-        v49 = v54 + this[5 * v5 + 35];
-        v19 = v14 * v18 + this[5 * v5 + 36];
+        v48 = v53 + self[5 * v5 + 34];
+        v49 = v54 + self[5 * v5 + 35];
+        v19 = v14 * v18 + self[5 * v5 + 36];
         *i = v48;
         v50 = v19;
         i[1] = v49;
@@ -160,14 +160,14 @@ LABEL_28:
         v9 = 0.0;
       else
         v9 = (double)(v5 - v2) / v8;
-      v10 = &this[5 * v5 + 34];
+      v10 = &self[5 * v5 + 34];
       v11 = i;
       v45 = (1.0 - v9) * *v10;
       v46 = (1.0 - v9) * v10[1];
       v47 = (1.0 - v9) * v10[2];
-      v51 = v9 * this[5 * v6 + 34];
-      v52 = v9 * this[5 * v6 + 35];
-      v12 = v9 * this[5 * v6 + 36];
+      v51 = v9 * self[5 * v6 + 34];
+      v52 = v9 * self[5 * v6 + 35];
+      v12 = v9 * self[5 * v6 + 36];
       v39 = v51 + v45;
       *i = v39;
       v40 = v52 + v46;
@@ -181,9 +181,9 @@ LABEL_40:
     if ( v6 < 0 )
     {
       v11 = i;
-      *i = this[34];
-      i[1] = this[35];
-      v13 = this[36];
+      *i = self[34];
+      i[1] = self[35];
+      v13 = self[36];
     }
     else
     {
@@ -193,7 +193,7 @@ LABEL_40:
       v32 = 0.0;
       if ( v6 - 1 >= 0 )
       {
-        v22 = &this[5 * v21 + 33];
+        v22 = &self[5 * v21 + 33];
         while ( !*(_BYTE *)v22 )
         {
           --v21;
@@ -210,11 +210,11 @@ LABEL_40:
         else
         {
           v23 = 1.0 / ((double)v28 - (double)v21);
-          v36 = this[5 * v6 + 34] - this[5 * v21 + 34];
+          v36 = self[5 * v6 + 34] - self[5 * v21 + 34];
           v31 = v23 * v36;
-          v37 = this[5 * v6 + 35] - this[5 * v21 + 35];
+          v37 = self[5 * v6 + 35] - self[5 * v21 + 35];
           v32 = v37 * v23;
-          v38 = this[5 * v6 + 36] - this[5 * v21 + 36];
+          v38 = self[5 * v6 + 36] - self[5 * v21 + 36];
           v20 = v23 * v38;
         }
       }
@@ -223,9 +223,9 @@ LABEL_38:
       v11 = i;
       v55 = v24 * v31;
       v56 = v32 * v24;
-      v42 = v55 + this[5 * v6 + 34];
-      v43 = v56 + this[5 * v6 + 35];
-      v25 = v20 * v24 + this[5 * v6 + 36];
+      v42 = v55 + self[5 * v6 + 34];
+      v43 = v56 + self[5 * v6 + 35];
+      v25 = v20 * v24 + self[5 * v6 + 36];
       *i = v42;
       v44 = v25;
       i[1] = v43;

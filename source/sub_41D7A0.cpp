@@ -1,5 +1,5 @@
 //----- (0041D7A0) --------------------------------------------------------
-int __thiscall sub_41D7A0(_DWORD *this)
+int __thiscall sub_41D7A0(_DWORD *self)
 {
   int v2; // edx
   int v3; // ecx
@@ -11,10 +11,10 @@ int __thiscall sub_41D7A0(_DWORD *this)
   _DWORD *v9; // edx
   int v10; // ecx
 
-  v2 = this[69];
-  v3 = this[68];
+  v2 = self[69];
+  v3 = self[68];
   v4 = v2 - 1;
-  this[69] = v4;
+  self[69] = v4;
   result = v4;
   if ( !v3 && !v4 )
   {
@@ -28,7 +28,7 @@ int __thiscall sub_41D7A0(_DWORD *this)
       {
         v8 = (_DWORD *)*v7;
         v9 = (_DWORD *)*v7;
-        while ( (_DWORD *)*v9 != this )
+        while ( (_DWORD *)*v9 != self )
         {
           ++result;
           ++v9;
@@ -46,10 +46,10 @@ int __thiscall sub_41D7A0(_DWORD *this)
       }
     }
 LABEL_11:
-    if ( this )
+    if ( self )
     {
-      sub_403880((int)this);
-      return sub_4885A6(this);
+      sub_403880((int)self);
+      return sub_4885A6(self);
     }
   }
   return result;

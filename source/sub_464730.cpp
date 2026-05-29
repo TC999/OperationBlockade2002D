@@ -1,17 +1,17 @@
 //----- (00464730) --------------------------------------------------------
-_DWORD *__thiscall sub_464730(_DWORD *this)
+_DWORD *__thiscall sub_464730(_DWORD *self)
 {
   _DWORD *result; // eax
 
-  result = this;
-  this[1] = 0;
-  this[2] = 0;
-  this[3] = 0;
-  *((_BYTE *)this + 16) = 1;
-  this[5] = 0;
-  this[6] = 0;
-  this[8] = 0;
-  *this = &off_499C4C;
-  this[7] = 0;
+  result = self;
+  self[1] = 0;
+  self[2] = 0;
+  self[3] = 0;
+  *((_BYTE *)self + 16) = 1;
+  self[5] = 0;
+  self[6] = 0;
+  self[8] = 0;
+  *self = &off_499C4C;
+  self[7] = 0;
   return result;
 }

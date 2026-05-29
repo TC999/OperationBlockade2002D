@@ -1,5 +1,5 @@
 //----- (00443B50) --------------------------------------------------------
-unsigned int __thiscall sub_443B50(int this, int *a2, float a3, float a4, float a5, int a6)
+unsigned int __thiscall sub_443B50(int self, int *a2, float a3, float a4, float a5, int a6)
 {
   float v6; // ebx
   int v8; // ebp
@@ -29,10 +29,10 @@ unsigned int __thiscall sub_443B50(int this, int *a2, float a3, float a4, float 
   v8 = -2;
   while ( 1 )
   {
-    result = *(_DWORD *)(this + 1432);
+    result = *(_DWORD *)(self + 1432);
     if ( result )
     {
-      v11 = *(_DWORD *)(this + 1436) - result;
+      v11 = *(_DWORD *)(self + 1436) - result;
       result = (unsigned int)((unsigned __int64)(1278501893LL * v11) >> 32) >> 31;
       v10 = v11 / 860;
     }
@@ -44,17 +44,17 @@ unsigned int __thiscall sub_443B50(int this, int *a2, float a3, float a4, float 
       return result;
     if ( v8 == -2 )
     {
-      v12 = *(_DWORD *)(*(_DWORD *)(this + 408) + 612);
+      v12 = *(_DWORD *)(*(_DWORD *)(self + 408) + 612);
     }
     else if ( v8 == -1 )
     {
-      v12 = *(_DWORD *)(*(_DWORD *)(this + 408) + 616);
+      v12 = *(_DWORD *)(*(_DWORD *)(self + 408) + 616);
     }
     else
     {
-      v12 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + 4 * v8) + 52);
+      v12 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * v8) + 52);
     }
-    if ( v12 > -1 && sub_407F00(*(_DWORD *)(this + 412), v12, a2, a3, &v16, &a5) )
+    if ( v12 > -1 && sub_407F00(*(_DWORD *)(self + 412), v12, a2, a3, &v16, &a5) )
     {
       if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
       {
@@ -63,7 +63,7 @@ unsigned int __thiscall sub_443B50(int this, int *a2, float a3, float a4, float 
           v15 = 1;
         goto LABEL_19;
       }
-      v19[3] = *(_WORD *)(this + 1456);
+      v19[3] = *(_WORD *)(self + 1456);
       v22 = v17;
       v24 = a5 * a4;
       v21 = v16;

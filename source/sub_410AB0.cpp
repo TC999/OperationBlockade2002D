@@ -1,5 +1,5 @@
 //----- (00410AB0) --------------------------------------------------------
-int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
+int __thiscall sub_410AB0(int self, unsigned int a2, float a3)
 {
   int v4; // eax
   void *v5; // ebx
@@ -64,22 +64,22 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
   char v64[4]; // [esp+94h] [ebp-Ch] BYREF
   _WORD v65[3]; // [esp+98h] [ebp-8h]
 
-  v4 = *(_DWORD *)(this + 24);
+  v4 = *(_DWORD *)(self + 24);
   if ( !v4 )
     return 0;
   switch ( a2 )
   {
     case 0xFFFF0005:
-      if ( !*(_BYTE *)(this + 938) )
+      if ( !*(_BYTE *)(self + 938) )
         return 0;
       v26 = a3;
-      *(_BYTE *)(this + 938) = 0;
+      *(_BYTE *)(self + 938) = 0;
       v27 = *(_DWORD *)(LODWORD(v26) + 12);
       if ( v27 >= 0 )
       {
-        *(_BYTE *)(this + 936) = 0;
-        *(_BYTE *)(this + 937) = 1;
-        *(_DWORD *)(this + 940) = 1;
+        *(_BYTE *)(self + 936) = 0;
+        *(_BYTE *)(self + 937) = 1;
+        *(_DWORD *)(self + 940) = 1;
         sub_488CEE(0);
         return 0;
       }
@@ -89,34 +89,34 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
         {
           case -2146073072:
             v28 = sub_403A30(v60, 2, aSessionIsFull);
-            *(_DWORD *)(this + 940) = *v28;
+            *(_DWORD *)(self + 940) = *v28;
             v29 = (const char *)v28[1];
             if ( v29 )
-              *(_DWORD *)(this + 944) = _strdup(v29);
+              *(_DWORD *)(self + 944) = _strdup(v29);
             sub_488CEE((LPVOID)v60[1]);
             return 0;
           case -2146074016:
             v30 = sub_403A30(v61, 2, aHostRejectedTh);
-            *(_DWORD *)(this + 940) = *v30;
+            *(_DWORD *)(self + 940) = *v30;
             v31 = (const char *)v30[1];
             if ( v31 )
-              *(_DWORD *)(this + 944) = _strdup(v31);
+              *(_DWORD *)(self + 944) = _strdup(v31);
             sub_488CEE((LPVOID)v61[1]);
             return 0;
           case -2146073200:
             v32 = sub_403A30(v62, 2, aPlayerNotReach);
-            *(_DWORD *)(this + 940) = *v32;
+            *(_DWORD *)(self + 940) = *v32;
             v33 = (const char *)v32[1];
             if ( v33 )
-              *(_DWORD *)(this + 944) = _strdup(v33);
+              *(_DWORD *)(self + 944) = _strdup(v33);
             sub_488CEE((LPVOID)v62[1]);
             return 0;
           default:
             v34 = sub_403A30(v63, 2, aConnectionFail);
-            *(_DWORD *)(this + 940) = *v34;
+            *(_DWORD *)(self + 940) = *v34;
             v35 = (const char *)v34[1];
             if ( v35 )
-              *(_DWORD *)(this + 944) = _strdup(v35);
+              *(_DWORD *)(self + 944) = _strdup(v35);
             sub_488CEE((LPVOID)v63[1]);
             return 0;
         }
@@ -132,8 +132,8 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
         memset(v38, 0, a2);
         v38->DebugInfo = (PRTL_CRITICAL_SECTION_DEBUG)24;
         lpCriticalSectiona = v38;
-        result = (*(int (__stdcall **)(_DWORD, _DWORD, struct _RTL_CRITICAL_SECTION *, unsigned int *, _DWORD))(**(_DWORD **)(this + 24) + 84))(
-                   *(_DWORD *)(this + 24),
+        result = (*(int (__stdcall **)(_DWORD, _DWORD, struct _RTL_CRITICAL_SECTION *, unsigned int *, _DWORD))(**(_DWORD **)(self + 24) + 84))(
+                   *(_DWORD *)(self + 24),
                    *(_DWORD *)(LODWORD(v36) + 4),
                    v38,
                    &a2,
@@ -177,27 +177,27 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
           sub_428840(v40 + 12, (wchar_t *)lpCriticalSectiona->RecursionCount, 24);
           if ( (lpCriticalSectiona->SpinCount & 2) != 0 )
           {
-            *(_DWORD *)(this + 84) = *(_DWORD *)(LODWORD(a3) + 4);
+            *(_DWORD *)(self + 84) = *(_DWORD *)(LODWORD(a3) + 4);
             v40[53] = 1;
           }
           if ( (lpCriticalSectiona->SpinCount & 4) != 0 )
           {
-            *(_DWORD *)(this + 88) = *(_DWORD *)(LODWORD(a3) + 4);
+            *(_DWORD *)(self + 88) = *(_DWORD *)(LODWORD(a3) + 4);
             v40[52] = 1;
           }
           if ( lpCriticalSectiona )
             sub_4885A6(lpCriticalSectiona);
-          v43 = (struct _RTL_CRITICAL_SECTION *)(this + 112);
-          LODWORD(a3) = this + 112;
-          EnterCriticalSection((LPCRITICAL_SECTION)(this + 112));
+          v43 = (struct _RTL_CRITICAL_SECTION *)(self + 112);
+          LODWORD(a3) = self + 112;
+          EnterCriticalSection((LPCRITICAL_SECTION)(self + 112));
           if ( v40[52] )
           {
-            strcpy((char *)(this + 920), v40 + 36);
+            strcpy((char *)(self + 920), v40 + 36);
             v43 = (struct _RTL_CRITICAL_SECTION *)LODWORD(a3);
           }
-          InterlockedIncrement((volatile LONG *)(this + 100));
-          *((_DWORD *)v40 + 2077) = *(_DWORD *)(this + 136);
-          *(_DWORD *)(this + 136) = v40;
+          InterlockedIncrement((volatile LONG *)(self + 100));
+          *((_DWORD *)v40 + 2077) = *(_DWORD *)(self + 136);
+          *(_DWORD *)(self + 136) = v40;
           *(_DWORD *)&v65[1] = v40;
           ++*(_DWORD *)v40;
           sub_411820(65281, v64, 10);
@@ -209,16 +209,16 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
     case 0xFFFF0009:
       v44 = a3;
       *(_DWORD *)&v65[1] = sub_411B60(*(_DWORD *)(LODWORD(a3) + 4));
-      EnterCriticalSection((LPCRITICAL_SECTION)(this + 112));
+      EnterCriticalSection((LPCRITICAL_SECTION)(self + 112));
       *(_BYTE *)(*(_DWORD *)&v65[1] + 4) = 1;
-      LeaveCriticalSection((LPCRITICAL_SECTION)(this + 112));
+      LeaveCriticalSection((LPCRITICAL_SECTION)(self + 112));
       sub_411820(65282, v64, 10);
       sub_411BB0(*(_DWORD *)(LODWORD(v44) + 4));
       return 0;
     case 0xFFFF000B:
-      lpCriticalSection = (struct _RTL_CRITICAL_SECTION *)(this + 960);
-      EnterCriticalSection((LPCRITICAL_SECTION)(this + 960));
-      v5 = *(void **)(this + 956);
+      lpCriticalSection = (struct _RTL_CRITICAL_SECTION *)(self + 960);
+      EnterCriticalSection((LPCRITICAL_SECTION)(self + 960));
+      v5 = *(void **)(self + 956);
       v6 = *(_DWORD *)(LODWORD(a3) + 12);
       a2 = v6;
       if ( !v5 )
@@ -226,13 +226,13 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
       v7 = (const void *)(v6 + 8);
       break;
     case 0xFFFF000D:
-      if ( *(_DWORD *)(LODWORD(a3) + 4) != *(_DWORD *)(this + 84) )
+      if ( *(_DWORD *)(LODWORD(a3) + 4) != *(_DWORD *)(self + 84) )
         return 0;
-      *(_BYTE *)(this + 936) = 1;
-      *(_BYTE *)(this + 937) = 0;
+      *(_BYTE *)(self + 936) = 1;
+      *(_BYTE *)(self + 937) = 0;
       return 0;
     case 0xFFFF000E:
-      if ( *(_BYTE *)(this + 108) && *(_DWORD *)(this + 100) < *(_DWORD *)(this + 104) )
+      if ( *(_BYTE *)(self + 108) && *(_DWORD *)(self + 100) < *(_DWORD *)(self + 104) )
         return 0;
       return -2146074016;
     case 0xFFFF0011:
@@ -240,7 +240,7 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
       v48 = a3;
       v49 = v47;
       sub_40F4C0(v47, *(_DWORD *)(LODWORD(a3) + 4), *(_DWORD *)(LODWORD(a3) + 16), *(_WORD **)(LODWORD(a3) + 12));
-      if ( (*(_BYTE *)(*((_DWORD *)v49 + 4) + 2) & 8) == 0 && *((_DWORD *)v49 + 1) != *(_DWORD *)(this + 84) )
+      if ( (*(_BYTE *)(*((_DWORD *)v49 + 4) + 2) & 8) == 0 && *((_DWORD *)v49 + 1) != *(_DWORD *)(self + 84) )
       {
         if ( flt_4F5CBC > 0.0 )
         {
@@ -268,11 +268,11 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
           }
         }
       }
-      EnterCriticalSection((LPCRITICAL_SECTION)(this + 44));
-      v51 = *(float ***)(this + 28);
+      EnterCriticalSection((LPCRITICAL_SECTION)(self + 44));
+      v51 = *(float ***)(self + 28);
       if ( v51 )
       {
-        *(_DWORD *)(this + 28) = v51[1];
+        *(_DWORD *)(self + 28) = v51[1];
       }
       else
       {
@@ -282,26 +282,26 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
       v51[1] = 0;
       *v51 = v49;
       v51[1] = 0;
-      if ( *(_DWORD *)(this + 32) )
-        *(_DWORD *)(*(_DWORD *)(this + 36) + 4) = v51;
+      if ( *(_DWORD *)(self + 32) )
+        *(_DWORD *)(*(_DWORD *)(self + 36) + 4) = v51;
       else
-        *(_DWORD *)(this + 32) = v51;
-      v52 = *(_DWORD *)(this + 40) + 1;
-      *(_DWORD *)(this + 36) = v51;
-      *(_DWORD *)(this + 40) = v52;
-      LeaveCriticalSection((LPCRITICAL_SECTION)(this + 44));
+        *(_DWORD *)(self + 32) = v51;
+      v52 = *(_DWORD *)(self + 40) + 1;
+      *(_DWORD *)(self + 36) = v51;
+      *(_DWORD *)(self + 40) = v52;
+      LeaveCriticalSection((LPCRITICAL_SECTION)(self + 44));
       *(float *)dword_520A28 = *(float *)dword_520A28 + 1.0;
       *(float *)dword_520890 = (double)*(int *)(LODWORD(v48) + 16) + *(float *)dword_520890;
       return 0;
     case 0xFFFF0016:
-      v45 = *(_DWORD *)(this + 100);
-      v46 = (_DWORD *)(this + 100);
-      *(_BYTE *)(this + 937) = 0;
-      *(_BYTE *)(this + 936) = 0;
+      v45 = *(_DWORD *)(self + 100);
+      v46 = (_DWORD *)(self + 100);
+      *(_BYTE *)(self + 937) = 0;
+      *(_BYTE *)(self + 936) = 0;
       if ( v45 )
       {
         do
-          InterlockedDecrement((volatile LONG *)(this + 100));
+          InterlockedDecrement((volatile LONG *)(self + 100));
         while ( *v46 );
       }
       *(_DWORD *)&v65[1] = 0;
@@ -318,8 +318,8 @@ int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
 LABEL_7:
       v5 = operator new(0x118u);
       memset(v5, 0, 0x118u);
-      *((_DWORD *)v5 + 69) = *(_DWORD *)(this + 956);
-      *(_DWORD *)(this + 956) = v5;
+      *((_DWORD *)v5 + 69) = *(_DWORD *)(self + 956);
+      *(_DWORD *)(self + 956) = v5;
       break;
     }
   }
@@ -355,13 +355,13 @@ LABEL_7:
   v16 = *(_DWORD *)(LODWORD(a3) + 8);
   if ( v16 )
     (*(void (__stdcall **)(int, int))(*(_DWORD *)v16 + 20))(v16, (int)v5 + 268);
-  if ( *(_DWORD *)(this + 984) )
-    SetEvent(*(HANDLE *)(this + 984));
-  if ( *(_BYTE *)(this + 938) )
+  if ( *(_DWORD *)(self + 984) )
+    SetEvent(*(HANDLE *)(self + 984));
+  if ( *(_BYTE *)(self + 938) )
   {
-    (*(void (__stdcall **)(_DWORD, _DWORD, int))(**(_DWORD **)(this + 24) + 20))(*(_DWORD *)(this + 24), 0, 2);
-    v17 = (*(int (__stdcall **)(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, float *, _DWORD))(**(_DWORD **)(this + 24) + 24))(
-            *(_DWORD *)(this + 24),
+    (*(void (__stdcall **)(_DWORD, _DWORD, int))(**(_DWORD **)(self + 24) + 20))(*(_DWORD *)(self + 24), 0, 2);
+    v17 = (*(int (__stdcall **)(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, _DWORD, float *, _DWORD))(**(_DWORD **)(self + 24) + 24))(
+            *(_DWORD *)(self + 24),
             *((_DWORD *)v5 + 65),
             *((_DWORD *)v5 + 66),
             *((_DWORD *)v5 + 67),
@@ -378,32 +378,32 @@ LABEL_7:
       if ( v17 == -2146073072 )
       {
         v18 = sub_403A30(v57, 2, aSessionIsFull);
-        *(_DWORD *)(this + 940) = *v18;
+        *(_DWORD *)(self + 940) = *v18;
         v19 = (const char *)v18[1];
         if ( v19 )
-          *(_DWORD *)(this + 944) = _strdup(v19);
+          *(_DWORD *)(self + 944) = _strdup(v19);
         v20 = (void *)v57[1];
       }
       else if ( v17 == -2146074016 )
       {
         v21 = sub_403A30(v58, 2, aHostRejectedTh);
-        *(_DWORD *)(this + 940) = *v21;
+        *(_DWORD *)(self + 940) = *v21;
         v22 = (const char *)v21[1];
         if ( v22 )
-          *(_DWORD *)(this + 944) = _strdup(v22);
+          *(_DWORD *)(self + 944) = _strdup(v22);
         v20 = (void *)v58[1];
       }
       else
       {
         v23 = sub_403A30(v59, 2, aConnectionFail);
-        *(_DWORD *)(this + 940) = *v23;
+        *(_DWORD *)(self + 940) = *v23;
         v24 = (const char *)v23[1];
         if ( v24 )
-          *(_DWORD *)(this + 944) = _strdup(v24);
+          *(_DWORD *)(self + 944) = _strdup(v24);
         v20 = (void *)v59[1];
       }
       sub_488CEE(v20);
-      *(_BYTE *)(this + 938) = 0;
+      *(_BYTE *)(self + 938) = 0;
     }
   }
   LeaveCriticalSection(lpCriticalSection);

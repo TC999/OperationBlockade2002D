@@ -1,5 +1,5 @@
 //----- (0046A3A0) --------------------------------------------------------
-char __thiscall sub_46A3A0(_BYTE *this, LPCSTR lpFileName)
+char __thiscall sub_46A3A0(_BYTE *self, LPCSTR lpFileName)
 {
   int v4; // [esp+Ch] [ebp-118h] BYREF
   _BYTE v5[8]; // [esp+10h] [ebp-114h] BYREF
@@ -11,5 +11,5 @@ char __thiscall sub_46A3A0(_BYTE *this, LPCSTR lpFileName)
   sub_46A410(v5, 4);
   sub_46A410(v6, 4);
   sub_46A410(v7, 4);
-  return this[300];
+  return self[300];
 }

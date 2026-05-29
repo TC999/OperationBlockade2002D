@@ -1,5 +1,5 @@
 //----- (00436E40) --------------------------------------------------------
-int __thiscall sub_436E40(char *this, const char *a2)
+int __thiscall sub_436E40(char *self, const char *a2)
 {
   int v2; // edi
   char *i; // esi
@@ -10,7 +10,7 @@ int __thiscall sub_436E40(char *this, const char *a2)
   double v8; // st6
 
   v2 = 0;
-  for ( i = this + 48; i[8]; i += 52 )
+  for ( i = self + 48; i[8]; i += 52 )
   {
     if ( ++v2 >= 4 )
       return -1;

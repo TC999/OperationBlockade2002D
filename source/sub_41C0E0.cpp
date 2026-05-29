@@ -1,11 +1,11 @@
 //----- (0041C0E0) --------------------------------------------------------
-void __thiscall sub_41C0E0(float *this)
+void __thiscall sub_41C0E0(float *self)
 {
   double v1; // st7
 
-  this[4] = this[10] * 3.0 + this[12] + this[11] * -3.0 - this[9];
-  v1 = this[11] * 3.0;
-  this[5] = this[9] * 3.0 + this[10] * -6.0 + v1;
-  this[6] = this[9] * -3.0 + v1;
-  this[7] = this[10] * 4.0 + this[9] + this[11];
+  self[4] = self[10] * 3.0 + self[12] + self[11] * -3.0 - self[9];
+  v1 = self[11] * 3.0;
+  self[5] = self[9] * 3.0 + self[10] * -6.0 + v1;
+  self[6] = self[9] * -3.0 + v1;
+  self[7] = self[10] * 4.0 + self[9] + self[11];
 }

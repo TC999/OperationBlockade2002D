@@ -1,12 +1,12 @@
 //----- (0041D960) --------------------------------------------------------
-int __thiscall sub_41D960(_DWORD *this, _DWORD *a2, _DWORD *a3)
+int __thiscall sub_41D960(_DWORD *self, _DWORD *a2, _DWORD *a3)
 {
   _DWORD *v3; // eax
   _DWORD *v4; // ecx
   int result; // eax
 
-  v3 = this + 7;
-  v4 = this + 10;
+  v3 = self + 7;
+  v4 = self + 10;
   *v3 = *a2;
   v3[1] = a2[1];
   v3[2] = a2[2];

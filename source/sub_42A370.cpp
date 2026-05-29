@@ -1,11 +1,11 @@
 //----- (0042A370) --------------------------------------------------------
-char __thiscall sub_42A370(_DWORD *this)
+char __thiscall sub_42A370(_DWORD *self)
 {
   int v1; // eax
 
-  if ( *this )
+  if ( *self )
     LOBYTE(v1) = 1;
   else
-    return (*(_DWORD *)(this[3] + 12) >> 4) & 1;
+    return (*(_DWORD *)(self[3] + 12) >> 4) & 1;
   return v1;
 }

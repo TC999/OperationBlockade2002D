@@ -1,5 +1,5 @@
 //----- (0044B390) --------------------------------------------------------
-char __thiscall sub_44B390(char *this, int a2)
+char __thiscall sub_44B390(char *self, int a2)
 {
   char result; // al
   int v3; // eax
@@ -21,7 +21,7 @@ char __thiscall sub_44B390(char *this, int a2)
     v8[1] = 0;
     v8[2] = 1065353216;
     return sub_449C40(
-             this,
+             self,
              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(dword_520970 + 200) + 20) + 4 * v5),
              v4,
              v6,

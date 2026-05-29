@@ -1,5 +1,5 @@
 //----- (00402DA0) --------------------------------------------------------
-void __thiscall sub_402DA0(int this, float a2)
+void __thiscall sub_402DA0(int self, float a2)
 {
   int v3; // ebp
   double v4; // st7
@@ -26,21 +26,21 @@ void __thiscall sub_402DA0(int this, float a2)
   int v25; // [esp+14h] [ebp-10h]
   _DWORD v26[3]; // [esp+18h] [ebp-Ch] BYREF
 
-  if ( *(_DWORD *)(this + 76) )
+  if ( *(_DWORD *)(self + 76) )
   {
-    v3 = **(_DWORD **)(this + 72);
+    v3 = **(_DWORD **)(self + 72);
     if ( *(_BYTE *)v3 )
     {
-      if ( *(float *)(this + 68) <= 0.0 )
+      if ( *(float *)(self + 68) <= 0.0 )
       {
-        v11 = *(_DWORD *)(this + 104);
+        v11 = *(_DWORD *)(self + 104);
         if ( v11 && *(_BYTE *)(v11 + 53) )
         {
-          v12 = *(_DWORD *)(this + 76);
+          v12 = *(_DWORD *)(self + 76);
           v13 = 0;
           if ( v12 > 0 )
           {
-            v14 = *(_DWORD **)(this + 72);
+            v14 = *(_DWORD **)(self + 72);
             v15 = v14;
             while ( *v15 != v3 )
             {
@@ -50,41 +50,41 @@ void __thiscall sub_402DA0(int this, float a2)
                 goto LABEL_23;
             }
             v16 = v12 - 1;
-            *(_DWORD *)(this + 76) = v16;
+            *(_DWORD *)(self + 76) = v16;
             if ( v13 != v16 )
             {
               memcpy(&v14[v13], &v14[v13 + 1], 4 * (v16 + 0x3FFFFFFF * v13));
-              *(_DWORD *)(*(_DWORD *)(this + 72) + 4 * *(_DWORD *)(this + 76)) = 0;
+              *(_DWORD *)(*(_DWORD *)(self + 72) + 4 * *(_DWORD *)(self + 76)) = 0;
             }
           }
 LABEL_23:
-          v17 = *(_DWORD *)(this + 96);
-          v18 = *(_DWORD *)(this + 92) + 1;
-          *(_DWORD *)(this + 92) = v18;
+          v17 = *(_DWORD *)(self + 96);
+          v18 = *(_DWORD *)(self + 92) + 1;
+          *(_DWORD *)(self + 92) = v18;
           if ( v18 > v17 )
           {
             v19 = v17 + 8;
-            *(_DWORD *)(this + 96) = v19;
-            v20 = sub_488DD7(*(LPVOID *)(this + 88), 4 * v19);
+            *(_DWORD *)(self + 96) = v19;
+            v20 = sub_488DD7(*(LPVOID *)(self + 88), 4 * v19);
             if ( v20 )
             {
-              v21 = *(_DWORD *)(this + 92);
-              v22 = *(_DWORD *)(this + 96) - v21;
-              *(_DWORD *)(this + 88) = v20;
+              v21 = *(_DWORD *)(self + 92);
+              v22 = *(_DWORD *)(self + 96) - v21;
+              *(_DWORD *)(self + 88) = v20;
               memset((void *)(v20 + 4 * v21), 0, 4 * v22);
             }
           }
-          *(_DWORD *)(*(_DWORD *)(this + 88) + 4 * *(_DWORD *)(this + 92) - 4) = v3;
-          *(_DWORD *)(this + 104) = 0;
+          *(_DWORD *)(*(_DWORD *)(self + 88) + 4 * *(_DWORD *)(self + 92) - 4) = v3;
+          *(_DWORD *)(self + 104) = 0;
         }
       }
       else
       {
-        v5 = *(float *)(this + 68) - a2;
-        *(float *)(this + 68) = v5;
+        v5 = *(float *)(self + 68) - a2;
+        *(float *)(self + 68) = v5;
         if ( v5 < 0.0 )
         {
-          *(_DWORD *)(this + 68) = 0;
+          *(_DWORD *)(self + 68) = 0;
           v6 = *(_DWORD *)(v3 + 16);
           if ( v6 == -1 )
           {
@@ -92,7 +92,7 @@ LABEL_23:
             v6 = rand() % v7;
           }
           v8 = sub_41E2D0(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v3 + 12) + 64) + 4 * v6), 1, 0);
-          *(_DWORD *)(this + 104) = v8;
+          *(_DWORD *)(self + 104) = v8;
           if ( v8 )
           {
             v23 = 0;
@@ -109,11 +109,11 @@ LABEL_23:
               v25 = v9[2];
             }
             sub_41D960(&v23, v26);
-            sub_41D840(*(_DWORD *)(this + 104));
+            sub_41D840(*(_DWORD *)(self + 104));
           }
           else
           {
-            *(_DWORD *)(this + 68) = 1056964608;
+            *(_DWORD *)(self + 68) = 1056964608;
           }
         }
       }
@@ -122,9 +122,9 @@ LABEL_23:
     {
       v4 = *(float *)(v3 + 4);
       *(_BYTE *)v3 = 1;
-      *(float *)(this + 68) = v4;
+      *(float *)(self + 68) = v4;
       if ( v4 <= 0.0 )
-        *(_DWORD *)(this + 68) = 981668463;
+        *(_DWORD *)(self + 68) = 981668463;
     }
   }
 }

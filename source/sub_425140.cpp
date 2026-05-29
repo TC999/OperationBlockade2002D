@@ -1,5 +1,5 @@
 //----- (00425140) --------------------------------------------------------
-int __thiscall sub_425140(int this)
+int __thiscall sub_425140(int self)
 {
   _DWORD *v2; // ebx
   unsigned int v3; // edi
@@ -159,11 +159,11 @@ int __thiscall sub_425140(int this)
   _DWORD v158[72]; // [esp+24h] [ebp-12Ch] BYREF
   int v159; // [esp+14Ch] [ebp-4h]
 
-  if ( !*(_DWORD *)(this + 24) )
+  if ( !*(_DWORD *)(self + 24) )
   {
     sub_40A1D0(v158, aUiIni);
     v159 = 0;
-    for ( i = 0; sub_40AAF0(v158, aImage, 0); *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * *(_DWORD *)(this + 24) - 4) = v2 )
+    for ( i = 0; sub_40AAF0(v158, aImage, 0); *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = v2 )
     {
       sub_40AA40((int)v158, aImage);
       v2 = operator new(0x13Cu);
@@ -204,20 +204,20 @@ int __thiscall sub_425140(int this)
       {
         sub_4229D0("UI: can't get size for image '%s'", (const char *)v2);
       }
-      v9 = *(_DWORD *)(this + 28);
-      v10 = *(_DWORD *)(this + 24) + 1;
-      *(_DWORD *)(this + 24) = v10;
+      v9 = *(_DWORD *)(self + 28);
+      v10 = *(_DWORD *)(self + 24) + 1;
+      *(_DWORD *)(self + 24) = v10;
       if ( v10 > v9 )
       {
-        v11 = *(void **)(this + 20);
+        v11 = *(void **)(self + 20);
         v12 = v9 + 8;
-        *(_DWORD *)(this + 28) = v12;
+        *(_DWORD *)(self + 28) = v12;
         v13 = sub_488DD7(v11, 4 * v12);
         if ( v13 )
         {
-          v14 = *(_DWORD *)(this + 24);
-          v15 = *(_DWORD *)(this + 28) - v14;
-          *(_DWORD *)(this + 20) = v13;
+          v14 = *(_DWORD *)(self + 24);
+          v15 = *(_DWORD *)(self + 28) - v14;
+          *(_DWORD *)(self + 20) = v13;
           memset((void *)(v13 + 4 * v14), 0, 4 * v15);
         }
       }
@@ -226,489 +226,489 @@ int __thiscall sub_425140(int this)
     sub_40A830((int)v158);
   }
   v16 = 0;
-  for ( j = *(int *)(this + 24); v16 < j; ++v16 )
+  for ( j = *(int *)(self + 24); v16 < j; ++v16 )
   {
-    v17 = *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * v16);
+    v17 = *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * v16);
     if ( *(_DWORD *)(v17 + 296) || !sub_422AE0((LPCSTR)(v17 + 33)) )
       sub_4229D0("Can't find texture '%s'", (const char *)(v17 + 33));
     else
       *(_DWORD *)(v17 + 296) = sub_409AF0((char *)(v17 + 33), 1);
   }
-  *(_DWORD *)(this + 52) = 0;
+  *(_DWORD *)(self + 52) = 0;
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 1;
   if ( *(float *)&j == 0.0 )
     v18 = 0;
   else
-    v18 = sub_43A740(this);
-  v19 = *(_DWORD *)(this + 44);
-  v20 = *(_DWORD *)(this + 40) + 1;
+    v18 = sub_43A740(self);
+  v19 = *(_DWORD *)(self + 44);
+  v20 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v20;
+  *(_DWORD *)(self + 40) = v20;
   if ( v20 > v19 )
   {
-    v21 = *(void **)(this + 36);
+    v21 = *(void **)(self + 36);
     v22 = v19 + 8;
-    *(_DWORD *)(this + 44) = v22;
+    *(_DWORD *)(self + 44) = v22;
     v23 = sub_488DD7(v21, 4 * v22);
     if ( v23 )
     {
-      v24 = *(_DWORD *)(this + 40);
-      v25 = *(_DWORD *)(this + 44) - v24;
-      *(_DWORD *)(this + 36) = v23;
+      v24 = *(_DWORD *)(self + 40);
+      v25 = *(_DWORD *)(self + 44) - v24;
+      *(_DWORD *)(self + 36) = v23;
       memset((void *)(v23 + 4 * v24), 0, 4 * v25);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v18;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v18;
   sub_428680(v18);
   *(float *)&j = COERCE_FLOAT(operator new(0x58u));
   v159 = 2;
   if ( *(float *)&j == 0.0 )
     v26 = 0;
   else
-    v26 = sub_43A850(this);
-  v27 = *(_DWORD *)(this + 44);
-  v28 = *(_DWORD *)(this + 40) + 1;
+    v26 = sub_43A850(self);
+  v27 = *(_DWORD *)(self + 44);
+  v28 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v28;
+  *(_DWORD *)(self + 40) = v28;
   if ( v28 > v27 )
   {
     v29 = v27 + 8;
-    *(_DWORD *)(this + 44) = v29;
-    v30 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v29);
+    *(_DWORD *)(self + 44) = v29;
+    v30 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v29);
     if ( v30 )
     {
-      v31 = *(_DWORD *)(this + 40);
-      v32 = *(_DWORD *)(this + 44) - v31;
-      *(_DWORD *)(this + 36) = v30;
+      v31 = *(_DWORD *)(self + 40);
+      v32 = *(_DWORD *)(self + 44) - v31;
+      *(_DWORD *)(self + 36) = v30;
       memset((void *)(v30 + 4 * v31), 0, 4 * v32);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v26;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v26;
   sub_428680(v26);
   *(float *)&j = COERCE_FLOAT(operator new(0x38u));
   v159 = 3;
   if ( *(float *)&j == 0.0 )
     v33 = 0;
   else
-    v33 = sub_43AE80(this);
-  v34 = *(_DWORD *)(this + 44);
-  v35 = *(_DWORD *)(this + 40) + 1;
+    v33 = sub_43AE80(self);
+  v34 = *(_DWORD *)(self + 44);
+  v35 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v35;
+  *(_DWORD *)(self + 40) = v35;
   if ( v35 > v34 )
   {
     v36 = v34 + 8;
-    *(_DWORD *)(this + 44) = v36;
-    v37 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v36);
+    *(_DWORD *)(self + 44) = v36;
+    v37 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v36);
     if ( v37 )
     {
-      v38 = *(_DWORD *)(this + 40);
-      v39 = *(_DWORD *)(this + 44) - v38;
-      *(_DWORD *)(this + 36) = v37;
+      v38 = *(_DWORD *)(self + 40);
+      v39 = *(_DWORD *)(self + 44) - v38;
+      *(_DWORD *)(self + 36) = v37;
       memset((void *)(v37 + 4 * v38), 0, 4 * v39);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v33;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v33;
   sub_428680(v33);
   *(float *)&j = COERCE_FLOAT(operator new(0x40u));
   v159 = 4;
   if ( *(float *)&j == 0.0 )
     v40 = 0;
   else
-    v40 = sub_43B390(this);
-  v41 = *(_DWORD *)(this + 44);
-  v42 = *(_DWORD *)(this + 40) + 1;
+    v40 = sub_43B390(self);
+  v41 = *(_DWORD *)(self + 44);
+  v42 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v42;
+  *(_DWORD *)(self + 40) = v42;
   if ( v42 > v41 )
   {
     v43 = v41 + 8;
-    *(_DWORD *)(this + 44) = v43;
-    v44 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v43);
+    *(_DWORD *)(self + 44) = v43;
+    v44 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v43);
     if ( v44 )
     {
-      v45 = *(_DWORD *)(this + 40);
-      v46 = *(_DWORD *)(this + 44) - v45;
-      *(_DWORD *)(this + 36) = v44;
+      v45 = *(_DWORD *)(self + 40);
+      v46 = *(_DWORD *)(self + 44) - v45;
+      *(_DWORD *)(self + 36) = v44;
       memset((void *)(v44 + 4 * v45), 0, 4 * v46);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v40;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v40;
   sub_428680(v40);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 5;
   if ( *(float *)&j == 0.0 )
     v47 = 0;
   else
-    v47 = sub_43B6C0(this);
-  v48 = *(_DWORD *)(this + 44);
-  v49 = *(_DWORD *)(this + 40) + 1;
+    v47 = sub_43B6C0(self);
+  v48 = *(_DWORD *)(self + 44);
+  v49 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v49;
+  *(_DWORD *)(self + 40) = v49;
   if ( v49 > v48 )
   {
     v50 = v48 + 8;
-    *(_DWORD *)(this + 44) = v50;
-    v51 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v50);
+    *(_DWORD *)(self + 44) = v50;
+    v51 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v50);
     if ( v51 )
     {
-      v52 = *(_DWORD *)(this + 40);
-      v53 = *(_DWORD *)(this + 44) - v52;
-      *(_DWORD *)(this + 36) = v51;
+      v52 = *(_DWORD *)(self + 40);
+      v53 = *(_DWORD *)(self + 44) - v52;
+      *(_DWORD *)(self + 36) = v51;
       memset((void *)(v51 + 4 * v52), 0, 4 * v53);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v47;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v47;
   sub_428680(v47);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 6;
   if ( *(float *)&j == 0.0 )
     v54 = 0;
   else
-    v54 = sub_43BA40(this);
-  v55 = *(_DWORD *)(this + 44);
-  v56 = *(_DWORD *)(this + 40) + 1;
+    v54 = sub_43BA40(self);
+  v55 = *(_DWORD *)(self + 44);
+  v56 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v56;
+  *(_DWORD *)(self + 40) = v56;
   if ( v56 > v55 )
   {
     v57 = v55 + 8;
-    *(_DWORD *)(this + 44) = v57;
-    v58 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v57);
+    *(_DWORD *)(self + 44) = v57;
+    v58 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v57);
     if ( v58 )
     {
-      v59 = *(_DWORD *)(this + 40);
-      v60 = *(_DWORD *)(this + 44) - v59;
-      *(_DWORD *)(this + 36) = v58;
+      v59 = *(_DWORD *)(self + 40);
+      v60 = *(_DWORD *)(self + 44) - v59;
+      *(_DWORD *)(self + 36) = v58;
       memset((void *)(v58 + 4 * v59), 0, 4 * v60);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v54;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v54;
   sub_428680(v54);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 7;
   if ( *(float *)&j == 0.0 )
     v61 = 0;
   else
-    v61 = sub_43BB70(this);
-  v62 = *(_DWORD *)(this + 44);
-  v63 = *(_DWORD *)(this + 40) + 1;
+    v61 = sub_43BB70(self);
+  v62 = *(_DWORD *)(self + 44);
+  v63 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v63;
+  *(_DWORD *)(self + 40) = v63;
   if ( v63 > v62 )
   {
     v64 = v62 + 8;
-    *(_DWORD *)(this + 44) = v64;
-    v65 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v64);
+    *(_DWORD *)(self + 44) = v64;
+    v65 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v64);
     if ( v65 )
     {
-      v66 = *(_DWORD *)(this + 40);
-      v67 = *(_DWORD *)(this + 44) - v66;
-      *(_DWORD *)(this + 36) = v65;
+      v66 = *(_DWORD *)(self + 40);
+      v67 = *(_DWORD *)(self + 44) - v66;
+      *(_DWORD *)(self + 36) = v65;
       memset((void *)(v65 + 4 * v66), 0, 4 * v67);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v61;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v61;
   sub_428680(v61);
   *(float *)&j = COERCE_FLOAT(operator new(0x34u));
   v159 = 8;
   if ( *(float *)&j == 0.0 )
     v68 = 0;
   else
-    v68 = sub_43C730(this);
-  v69 = *(_DWORD *)(this + 44);
-  v70 = *(_DWORD *)(this + 40) + 1;
+    v68 = sub_43C730(self);
+  v69 = *(_DWORD *)(self + 44);
+  v70 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v70;
+  *(_DWORD *)(self + 40) = v70;
   if ( v70 > v69 )
   {
     v71 = v69 + 8;
-    *(_DWORD *)(this + 44) = v71;
-    v72 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v71);
+    *(_DWORD *)(self + 44) = v71;
+    v72 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v71);
     if ( v72 )
     {
-      v73 = *(_DWORD *)(this + 40);
-      v74 = *(_DWORD *)(this + 44) - v73;
-      *(_DWORD *)(this + 36) = v72;
+      v73 = *(_DWORD *)(self + 40);
+      v74 = *(_DWORD *)(self + 44) - v73;
+      *(_DWORD *)(self + 36) = v72;
       memset((void *)(v72 + 4 * v73), 0, 4 * v74);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v68;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v68;
   sub_428680(v68);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 9;
   if ( *(float *)&j == 0.0 )
     v75 = 0;
   else
-    v75 = sub_43D040(this);
-  v76 = *(_DWORD *)(this + 44);
-  v77 = *(_DWORD *)(this + 40) + 1;
+    v75 = sub_43D040(self);
+  v76 = *(_DWORD *)(self + 44);
+  v77 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v77;
+  *(_DWORD *)(self + 40) = v77;
   if ( v77 > v76 )
   {
     v78 = v76 + 8;
-    *(_DWORD *)(this + 44) = v78;
-    v79 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v78);
+    *(_DWORD *)(self + 44) = v78;
+    v79 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v78);
     if ( v79 )
     {
-      v80 = *(_DWORD *)(this + 40);
-      v81 = *(_DWORD *)(this + 44) - v80;
-      *(_DWORD *)(this + 36) = v79;
+      v80 = *(_DWORD *)(self + 40);
+      v81 = *(_DWORD *)(self + 44) - v80;
+      *(_DWORD *)(self + 36) = v79;
       memset((void *)(v79 + 4 * v80), 0, 4 * v81);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v75;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v75;
   sub_428680(v75);
   *(float *)&j = COERCE_FLOAT(operator new(0x50u));
   v159 = 10;
   if ( *(float *)&j == 0.0 )
     v82 = 0;
   else
-    v82 = sub_43C990(this);
-  v83 = *(_DWORD *)(this + 44);
-  v84 = *(_DWORD *)(this + 40) + 1;
+    v82 = sub_43C990(self);
+  v83 = *(_DWORD *)(self + 44);
+  v84 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v84;
+  *(_DWORD *)(self + 40) = v84;
   if ( v84 > v83 )
   {
     v85 = v83 + 8;
-    *(_DWORD *)(this + 44) = v85;
-    v86 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v85);
+    *(_DWORD *)(self + 44) = v85;
+    v86 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v85);
     if ( v86 )
     {
-      v87 = *(_DWORD *)(this + 40);
-      v88 = *(_DWORD *)(this + 44) - v87;
-      *(_DWORD *)(this + 36) = v86;
+      v87 = *(_DWORD *)(self + 40);
+      v88 = *(_DWORD *)(self + 44) - v87;
+      *(_DWORD *)(self + 36) = v86;
       memset((void *)(v86 + 4 * v87), 0, 4 * v88);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v82;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v82;
   sub_428680(v82);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 11;
   if ( *(float *)&j == 0.0 )
     v89 = 0;
   else
-    v89 = sub_43D0D0(this);
-  v90 = *(_DWORD *)(this + 44);
-  v91 = *(_DWORD *)(this + 40) + 1;
+    v89 = sub_43D0D0(self);
+  v90 = *(_DWORD *)(self + 44);
+  v91 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v91;
+  *(_DWORD *)(self + 40) = v91;
   if ( v91 > v90 )
   {
     v92 = v90 + 8;
-    *(_DWORD *)(this + 44) = v92;
-    v93 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v92);
+    *(_DWORD *)(self + 44) = v92;
+    v93 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v92);
     if ( v93 )
     {
-      v94 = *(_DWORD *)(this + 40);
-      v95 = *(_DWORD *)(this + 44) - v94;
-      *(_DWORD *)(this + 36) = v93;
+      v94 = *(_DWORD *)(self + 40);
+      v95 = *(_DWORD *)(self + 44) - v94;
+      *(_DWORD *)(self + 36) = v93;
       memset((void *)(v93 + 4 * v94), 0, 4 * v95);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v89;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v89;
   sub_428680(v89);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 12;
   if ( *(float *)&j == 0.0 )
     v96 = 0;
   else
-    v96 = sub_43D1D0(this);
-  v97 = *(_DWORD *)(this + 44);
-  v98 = *(_DWORD *)(this + 40) + 1;
+    v96 = sub_43D1D0(self);
+  v97 = *(_DWORD *)(self + 44);
+  v98 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v98;
+  *(_DWORD *)(self + 40) = v98;
   if ( v98 > v97 )
   {
     v99 = v97 + 8;
-    *(_DWORD *)(this + 44) = v99;
-    v100 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v99);
+    *(_DWORD *)(self + 44) = v99;
+    v100 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v99);
     if ( v100 )
     {
-      v101 = *(_DWORD *)(this + 40);
-      v102 = *(_DWORD *)(this + 44) - v101;
-      *(_DWORD *)(this + 36) = v100;
+      v101 = *(_DWORD *)(self + 40);
+      v102 = *(_DWORD *)(self + 44) - v101;
+      *(_DWORD *)(self + 36) = v100;
       memset((void *)(v100 + 4 * v101), 0, 4 * v102);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v96;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v96;
   sub_428680(v96);
   *(float *)&j = COERCE_FLOAT(operator new(0x38u));
   v159 = 13;
   if ( *(float *)&j == 0.0 )
     v103 = 0;
   else
-    v103 = sub_43D280(this);
-  v104 = *(_DWORD *)(this + 44);
-  v105 = *(_DWORD *)(this + 40) + 1;
+    v103 = sub_43D280(self);
+  v104 = *(_DWORD *)(self + 44);
+  v105 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v105;
+  *(_DWORD *)(self + 40) = v105;
   if ( v105 > v104 )
   {
     v106 = v104 + 8;
-    *(_DWORD *)(this + 44) = v106;
-    v107 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v106);
+    *(_DWORD *)(self + 44) = v106;
+    v107 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v106);
     if ( v107 )
     {
-      v108 = *(_DWORD *)(this + 40);
-      v109 = *(_DWORD *)(this + 44) - v108;
-      *(_DWORD *)(this + 36) = v107;
+      v108 = *(_DWORD *)(self + 40);
+      v109 = *(_DWORD *)(self + 44) - v108;
+      *(_DWORD *)(self + 36) = v107;
       memset((void *)(v107 + 4 * v108), 0, 4 * v109);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v103;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v103;
   sub_428680(v103);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 14;
   if ( *(float *)&j == 0.0 )
     v110 = 0;
   else
-    v110 = sub_43D450(this);
-  v111 = *(_DWORD *)(this + 44);
-  v112 = *(_DWORD *)(this + 40) + 1;
+    v110 = sub_43D450(self);
+  v111 = *(_DWORD *)(self + 44);
+  v112 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v112;
+  *(_DWORD *)(self + 40) = v112;
   if ( v112 > v111 )
   {
     v113 = v111 + 8;
-    *(_DWORD *)(this + 44) = v113;
-    v114 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v113);
+    *(_DWORD *)(self + 44) = v113;
+    v114 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v113);
     if ( v114 )
     {
-      v115 = *(_DWORD *)(this + 40);
-      v116 = *(_DWORD *)(this + 44) - v115;
-      *(_DWORD *)(this + 36) = v114;
+      v115 = *(_DWORD *)(self + 40);
+      v116 = *(_DWORD *)(self + 44) - v115;
+      *(_DWORD *)(self + 36) = v114;
       memset((void *)(v114 + 4 * v115), 0, 4 * v116);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v110;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v110;
   sub_428680(v110);
   *(float *)&j = COERCE_FLOAT(operator new(0x78u));
   v159 = 15;
   if ( *(float *)&j == 0.0 )
     v117 = 0;
   else
-    v117 = sub_43BDB0(this);
-  v118 = *(_DWORD *)(this + 44);
-  v119 = *(_DWORD *)(this + 40) + 1;
+    v117 = sub_43BDB0(self);
+  v118 = *(_DWORD *)(self + 44);
+  v119 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v119;
+  *(_DWORD *)(self + 40) = v119;
   if ( v119 > v118 )
   {
     v120 = v118 + 8;
-    *(_DWORD *)(this + 44) = v120;
-    v121 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v120);
+    *(_DWORD *)(self + 44) = v120;
+    v121 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v120);
     if ( v121 )
     {
-      v122 = *(_DWORD *)(this + 40);
-      v123 = *(_DWORD *)(this + 44) - v122;
-      *(_DWORD *)(this + 36) = v121;
+      v122 = *(_DWORD *)(self + 40);
+      v123 = *(_DWORD *)(self + 44) - v122;
+      *(_DWORD *)(self + 36) = v121;
       memset((void *)(v121 + 4 * v122), 0, 4 * v123);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v117;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v117;
   sub_428680(v117);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 16;
   if ( *(float *)&j == 0.0 )
     v124 = 0;
   else
-    v124 = sub_43C3D0(this);
-  v125 = *(_DWORD *)(this + 44);
-  v126 = *(_DWORD *)(this + 40) + 1;
+    v124 = sub_43C3D0(self);
+  v125 = *(_DWORD *)(self + 44);
+  v126 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v126;
+  *(_DWORD *)(self + 40) = v126;
   if ( v126 > v125 )
   {
     v127 = v125 + 8;
-    *(_DWORD *)(this + 44) = v127;
-    v128 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v127);
+    *(_DWORD *)(self + 44) = v127;
+    v128 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v127);
     if ( v128 )
     {
-      v129 = *(_DWORD *)(this + 40);
-      v130 = *(_DWORD *)(this + 44) - v129;
-      *(_DWORD *)(this + 36) = v128;
+      v129 = *(_DWORD *)(self + 40);
+      v130 = *(_DWORD *)(self + 44) - v129;
+      *(_DWORD *)(self + 36) = v128;
       memset((void *)(v128 + 4 * v129), 0, 4 * v130);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v124;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v124;
   sub_428680(v124);
   *(float *)&j = COERCE_FLOAT(operator new(0x80u));
   v159 = 17;
   if ( *(float *)&j == 0.0 )
     v131 = 0;
   else
-    v131 = sub_43DE90(this);
-  v132 = *(_DWORD *)(this + 44);
-  v133 = *(_DWORD *)(this + 40) + 1;
+    v131 = sub_43DE90(self);
+  v132 = *(_DWORD *)(self + 44);
+  v133 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v133;
+  *(_DWORD *)(self + 40) = v133;
   if ( v133 > v132 )
   {
     v134 = v132 + 8;
-    *(_DWORD *)(this + 44) = v134;
-    v135 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v134);
+    *(_DWORD *)(self + 44) = v134;
+    v135 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v134);
     if ( v135 )
     {
-      v136 = *(_DWORD *)(this + 40);
-      v137 = *(_DWORD *)(this + 44) - v136;
-      *(_DWORD *)(this + 36) = v135;
+      v136 = *(_DWORD *)(self + 40);
+      v137 = *(_DWORD *)(self + 44) - v136;
+      *(_DWORD *)(self + 36) = v135;
       memset((void *)(v135 + 4 * v136), 0, 4 * v137);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v131;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v131;
   sub_428680(v131);
   *(float *)&j = COERCE_FLOAT(operator new(0x30u));
   v159 = 18;
   if ( *(float *)&j == 0.0 )
     v138 = 0;
   else
-    v138 = sub_43D580(this);
-  v139 = *(_DWORD *)(this + 44);
-  v140 = *(_DWORD *)(this + 40) + 1;
+    v138 = sub_43D580(self);
+  v139 = *(_DWORD *)(self + 44);
+  v140 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v140;
+  *(_DWORD *)(self + 40) = v140;
   if ( v140 > v139 )
   {
     v141 = v139 + 8;
-    *(_DWORD *)(this + 44) = v141;
-    v142 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v141);
+    *(_DWORD *)(self + 44) = v141;
+    v142 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v141);
     if ( v142 )
     {
-      v143 = *(_DWORD *)(this + 40);
-      v144 = *(_DWORD *)(this + 44) - v143;
-      *(_DWORD *)(this + 36) = v142;
+      v143 = *(_DWORD *)(self + 40);
+      v144 = *(_DWORD *)(self + 44) - v143;
+      *(_DWORD *)(self + 36) = v142;
       memset((void *)(v142 + 4 * v143), 0, 4 * v144);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v138;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v138;
   sub_428680(v138);
   *(float *)&j = COERCE_FLOAT(operator new(0x74u));
   v159 = 19;
   if ( *(float *)&j == 0.0 )
     v145 = 0;
   else
-    v145 = sub_43D7C0(this);
-  v146 = *(_DWORD *)(this + 44);
-  v147 = *(_DWORD *)(this + 40) + 1;
+    v145 = sub_43D7C0(self);
+  v146 = *(_DWORD *)(self + 44);
+  v147 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
-  *(_DWORD *)(this + 40) = v147;
+  *(_DWORD *)(self + 40) = v147;
   if ( v147 > v146 )
   {
     v148 = v146 + 8;
-    *(_DWORD *)(this + 44) = v148;
-    v149 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v148);
+    *(_DWORD *)(self + 44) = v148;
+    v149 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v148);
     if ( v149 )
     {
-      v150 = *(_DWORD *)(this + 40);
-      v151 = *(_DWORD *)(this + 44) - v150;
-      *(_DWORD *)(this + 36) = v149;
+      v150 = *(_DWORD *)(self + 40);
+      v151 = *(_DWORD *)(self + 44) - v150;
+      *(_DWORD *)(self + 36) = v149;
       memset((void *)(v149 + 4 * v150), 0, 4 * v151);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v145;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v145;
   return sub_428680(v145);
 }

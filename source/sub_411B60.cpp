@@ -1,12 +1,12 @@
 //----- (00411B60) --------------------------------------------------------
-_DWORD *__thiscall sub_411B60(int this, int a2)
+_DWORD *__thiscall sub_411B60(int self, int a2)
 {
   struct _RTL_CRITICAL_SECTION *v3; // edi
   _DWORD *v4; // esi
 
-  v3 = (struct _RTL_CRITICAL_SECTION *)(this + 112);
-  EnterCriticalSection((LPCRITICAL_SECTION)(this + 112));
-  v4 = *(_DWORD **)(this + 136);
+  v3 = (struct _RTL_CRITICAL_SECTION *)(self + 112);
+  EnterCriticalSection((LPCRITICAL_SECTION)(self + 112));
+  v4 = *(_DWORD **)(self + 136);
   if ( v4 )
   {
     while ( v4[2] != a2 )

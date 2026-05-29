@@ -1,5 +1,5 @@
 //----- (004629F0) --------------------------------------------------------
-int __thiscall sub_4629F0(int this, int a2)
+int __thiscall sub_4629F0(int self, int a2)
 {
   int v2; // edx
   int result; // eax
@@ -7,16 +7,16 @@ int __thiscall sub_4629F0(int this, int a2)
   int v5; // edi
   int v6; // ecx
 
-  v2 = 352 * *(_DWORD *)(this + 512) + this + 880;
+  v2 = 352 * *(_DWORD *)(self + 512) + self + 880;
   result = a2;
   v4 = *(_DWORD *)(v2 + 4 * a2 + 52) - 1;
   *(_DWORD *)(v2 + 4 * a2 + 52) = v4;
   v5 = v4;
-  if ( *(_DWORD *)(16 * a2 + this + 11624) < v4 )
-    v5 = *(_DWORD *)(16 * a2 + this + 11624);
-  *(_DWORD *)(16 * a2 + this + 11624) = v5;
-  ++*(_DWORD *)(this + 16 * (a2 + 727));
-  if ( *(_BYTE *)(this + 2552) )
+  if ( *(_DWORD *)(16 * a2 + self + 11624) < v4 )
+    v5 = *(_DWORD *)(16 * a2 + self + 11624);
+  *(_DWORD *)(16 * a2 + self + 11624) = v5;
+  ++*(_DWORD *)(self + 16 * (a2 + 727));
+  if ( *(_BYTE *)(self + 2552) )
   {
     v6 = *(_DWORD *)(v2 + 4 * a2 + 52);
     if ( v6 < 1 )

@@ -1,5 +1,5 @@
 //----- (0042A400) --------------------------------------------------------
-bool __thiscall sub_42A400(_DWORD *this)
+bool __thiscall sub_42A400(_DWORD *self)
 {
   _DWORD *v1; // esi
   int v3; // eax
@@ -7,8 +7,8 @@ bool __thiscall sub_42A400(_DWORD *this)
   int v5; // eax
   char v6; // al
 
-  v1 = (_DWORD *)*this;
-  if ( *(_DWORD *)*this )
+  v1 = (_DWORD *)*self;
+  if ( *(_DWORD *)*self )
     return 0;
   while ( !*v1 )
   {

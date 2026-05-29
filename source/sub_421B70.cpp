@@ -1,5 +1,5 @@
 //----- (00421B70) --------------------------------------------------------
-int __thiscall sub_421B70(_DWORD *this, int a2)
+int __thiscall sub_421B70(_DWORD *self, int a2)
 {
   float *v2; // esi
   int v4; // edi
@@ -30,9 +30,9 @@ int __thiscall sub_421B70(_DWORD *this, int a2)
     (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int))(**(_DWORD **)ArgList + 332))(
       *(_DWORD *)ArgList,
       0,
-      this[13],
+      self[13],
       28);
-    (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 340))(*(_DWORD *)ArgList, this[14], 0);
+    (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 340))(*(_DWORD *)ArgList, self[14], 0);
     v5 = *(_DWORD *)(*(_DWORD *)v2 + 260);
     if ( v5 )
     {

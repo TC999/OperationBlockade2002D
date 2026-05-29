@@ -1,5 +1,5 @@
 //----- (004090F0) --------------------------------------------------------
-int __thiscall sub_4090F0(int this)
+int __thiscall sub_4090F0(int self)
 {
   int v2; // edi
   float *v3; // ecx
@@ -34,27 +34,27 @@ int __thiscall sub_4090F0(int this)
   _DWORD v33[16]; // [esp+58h] [ebp-40h] BYREF
 
   v2 = 0;
-  v3 = *(float **)(this + 84);
+  v3 = *(float **)(self + 84);
   if ( v3 )
     sub_401550(v3);
-  v4 = *(float **)(this + 84);
+  v4 = *(float **)(self + 84);
   v30 = 0;
   if ( v4 )
   {
-    if ( *(_BYTE *)(this + 82) )
+    if ( *(_BYTE *)(self + 82) )
       sub_401EC0((int)v4);
     else
       sub_401600(v4);
   }
-  v5 = *(_DWORD *)(this + 32);
+  v5 = *(_DWORD *)(self + 32);
   if ( v5 > 0 )
   {
     do
     {
-      v6 = *(_DWORD *)(*(_DWORD *)(this + 28) + 4 * v2);
+      v6 = *(_DWORD *)(*(_DWORD *)(self + 28) + 4 * v2);
       if ( *(_DWORD *)v6 && (unsigned __int8)sub_428650() )
       {
-        if ( *(_DWORD *)(v6 + 12) != 5 && (v7 = *(float **)(this + 84)) != 0 && *(_DWORD *)(v6 + 28) == 1 )
+        if ( *(_DWORD *)(v6 + 12) != 5 && (v7 = *(float **)(self + 84)) != 0 && *(_DWORD *)(v6 + 28) == 1 )
         {
           v27 = *(float *)(v6 + 32) * *(float *)(v6 + 32);
           *(_BYTE *)(v6 + 8) = sub_402110(v7, (float *)(v6 + 16), v27);
@@ -72,7 +72,7 @@ int __thiscall sub_4090F0(int this)
         goto LABEL_23;
       if ( *(_DWORD *)(v6 + 12) == 1 )
       {
-        v8 = *(float **)(this + 84);
+        v8 = *(float **)(self + 84);
         if ( !v8 )
           goto LABEL_22;
         v9 = *(float *)(v6 + 16) - v8[8];
@@ -82,7 +82,7 @@ int __thiscall sub_4090F0(int this)
       }
       else
       {
-        v10 = *(char **)(this + 84);
+        v10 = *(char **)(self + 84);
         if ( !v10 )
         {
 LABEL_22:
@@ -96,37 +96,37 @@ LABEL_23:
     }
     while ( v2 < v5 );
   }
-  v11 = *(_DWORD *)(this + 32);
+  v11 = *(_DWORD *)(self + 32);
   if ( v11 / 2 > 0 )
   {
     v12 = v11 / 2;
     do
     {
-      v13 = rand() % *(_DWORD *)(this + 32);
-      v14 = rand() % *(_DWORD *)(this + 32);
-      v15 = *(_DWORD *)(this + 28);
+      v13 = rand() % *(_DWORD *)(self + 32);
+      v14 = rand() % *(_DWORD *)(self + 32);
+      v15 = *(_DWORD *)(self + 28);
       --v12;
       v16 = *(_DWORD *)(v15 + 4 * v13);
       *(_DWORD *)(v15 + 4 * v13) = *(_DWORD *)(v15 + 4 * v14);
-      *(_DWORD *)(*(_DWORD *)(this + 28) + 4 * v14) = v16;
+      *(_DWORD *)(*(_DWORD *)(self + 28) + 4 * v14) = v16;
     }
     while ( v12 );
   }
-  qsort(*(void **)(this + 28), *(_DWORD *)(this + 32), 4u, sub_4096B0);
+  qsort(*(void **)(self + 28), *(_DWORD *)(self + 32), 4u, sub_4096B0);
   v17 = 0;
   v18 = 0;
   v19 = 0;
   v29 = 0;
-  v32 = *(_DWORD *)(this + 32);
+  v32 = *(_DWORD *)(self + 32);
   v31 = 0;
   if ( v32 <= 0 )
     return v30;
   do
   {
-    v20 = *(_DWORD *)(*(_DWORD *)(this + 28) + 4 * v19);
+    v20 = *(_DWORD *)(*(_DWORD *)(self + 28) + 4 * v19);
     if ( !*(_BYTE *)(v20 + 8) )
       goto LABEL_63;
-    sub_41BC00(-1, -1, -1, -1, -1, *(_BYTE *)(this + 80) != 0, -1);
+    sub_41BC00(-1, -1, -1, -1, -1, *(_BYTE *)(self + 80) != 0, -1);
     if ( v18 )
     {
       if ( *(_DWORD *)(v20 + 12) == 5 && *(_DWORD *)(v20 + 36) == v18 && *(_BYTE *)(v20 + 44) == v29 )
@@ -244,7 +244,7 @@ LABEL_51:
     }
     else
     {
-      if ( *(_BYTE *)(this + 81) && *(_DWORD *)(v20 + 28) == 1 )
+      if ( *(_BYTE *)(self + 81) && *(_DWORD *)(v20 + 28) == 1 )
       {
         memset(&v33[11], 0, 16);
         memset(&v33[6], 0, 16);

@@ -1,5 +1,5 @@
 //----- (0044E3D0) --------------------------------------------------------
-int __thiscall sub_44E3D0(char *this, int a2, const void *a3)
+int __thiscall sub_44E3D0(char *self, int a2, const void *a3)
 {
   int v4; // eax
   int v5; // esi
@@ -36,12 +36,12 @@ int __thiscall sub_44E3D0(char *this, int a2, const void *a3)
   int v39; // [esp+38h] [ebp-4h]
   float v40; // [esp+40h] [ebp+4h]
 
-  v4 = sub_44D740(this);
+  v4 = sub_44D740(self);
   if ( v4 == -1 )
     return 0;
-  v5 = (int)&this[212 * v4 + 24];
+  v5 = (int)&self[212 * v4 + 24];
   v30 = v5;
-  *(_DWORD *)v5 = sub_44D7B0(this);
+  *(_DWORD *)v5 = sub_44D7B0(self);
   *(_DWORD *)(v5 + 4) = a2;
   *(_BYTE *)(v5 + 200) = 0;
   v7 = *(_DWORD *)(a2 + 292);
@@ -132,7 +132,7 @@ int __thiscall sub_44E3D0(char *this, int a2, const void *a3)
   if ( *(_DWORD *)(a2 + 316) )
   {
     v25 = (_DWORD *)sub_4010C0(a3);
-    sub_44DD20(this, *(float **)(a2 + 316), v25);
+    sub_44DD20(self, *(float **)(a2 + 316), v25);
   }
   return *(_DWORD *)v30;
 }

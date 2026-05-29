@@ -1,5 +1,5 @@
 //----- (00450BB0) --------------------------------------------------------
-char __thiscall sub_450BB0(_DWORD *this)
+char __thiscall sub_450BB0(_DWORD *self)
 {
-  return *(_BYTE *)(this[62] + 16);
+  return *(_BYTE *)(self[62] + 16);
 }

@@ -1,5 +1,5 @@
 //----- (00463180) --------------------------------------------------------
-int __thiscall sub_463180(_BYTE *this)
+int __thiscall sub_463180(_BYTE *self)
 {
   char v2; // al
   char v3; // cl
@@ -20,15 +20,15 @@ int __thiscall sub_463180(_BYTE *this)
   char v18; // [esp+1Fh] [ebp-8Dh]
   char v19; // [esp+3Ch] [ebp-70h] BYREF
 
-  v2 = this[520];
-  v3 = this[524];
-  v15 = this;
+  v2 = self[520];
+  v3 = self[524];
+  v15 = self;
   v17 = v2;
   v18 = v3;
   sub_4229D0(aHostSendingLis);
   *(_DWORD *)ArgList = 0;
   v4 = &v19;
-  v5 = this + 896;
+  v5 = self + 896;
   do
   {
     sub_4229D0("%d: %s", *(_DWORD *)ArgList, v5 + 3);

@@ -1,5 +1,5 @@
 //----- (00434270) --------------------------------------------------------
-int __thiscall sub_434270(int this)
+int __thiscall sub_434270(int self)
 {
   int v2; // ebp
   int v3; // eax
@@ -172,35 +172,35 @@ int __thiscall sub_434270(int this)
   char Buffer[260]; // [esp+70h] [ebp-110h] BYREF
   int v172; // [esp+17Ch] [ebp-4h]
 
-  *(_DWORD *)(this + 4) = 0;
-  *(_DWORD *)(this + 8) = 0;
-  *(_DWORD *)(this + 12) = 0;
-  *(_BYTE *)(this + 16) = 1;
+  *(_DWORD *)(self + 4) = 0;
+  *(_DWORD *)(self + 8) = 0;
+  *(_DWORD *)(self + 12) = 0;
+  *(_BYTE *)(self + 16) = 1;
   v172 = 0;
-  *(_DWORD *)(this + 24) = 0;
-  *(_DWORD *)(this + 28) = 0;
-  *(_DWORD *)(this + 32) = 0;
-  *(_BYTE *)(this + 36) = 0;
-  *(_DWORD *)(this + 700) = 0;
-  *(_DWORD *)(this + 704) = 0;
-  *(_DWORD *)(this + 708) = 0;
-  *(_BYTE *)(this + 712) = 1;
+  *(_DWORD *)(self + 24) = 0;
+  *(_DWORD *)(self + 28) = 0;
+  *(_DWORD *)(self + 32) = 0;
+  *(_BYTE *)(self + 36) = 0;
+  *(_DWORD *)(self + 700) = 0;
+  *(_DWORD *)(self + 704) = 0;
+  *(_DWORD *)(self + 708) = 0;
+  *(_BYTE *)(self + 712) = 1;
   LOBYTE(v172) = 2;
-  *(_DWORD *)this = &off_4994B8;
+  *(_DWORD *)self = &off_4994B8;
   sub_4229D0(aLoadingLoading);
-  *(_BYTE *)(this + 40) = 1;
-  *(_DWORD *)(this + 44) = 0;
+  *(_BYTE *)(self + 40) = 1;
+  *(_DWORD *)(self + 44) = 0;
   v2 = sub_421B20(1);
   byte_4A9F14 = sub_422BA0(AppName, aShowcrosshair, 1) != 0;
   v3 = sub_409AD0(1, 32);
-  *(_DWORD *)(this + 436) = v3;
+  *(_DWORD *)(self + 436) = v3;
   *(_BYTE *)(v3 + 35) = 1;
-  v4 = *(_DWORD *)(this + 436);
+  v4 = *(_DWORD *)(self + 436);
   *(_DWORD *)(v4 + 12) = 1092616192;
   *(_DWORD *)(v4 + 16) = 1092616192;
   *(_BYTE *)(v4 + 32) = 0;
-  *(_DWORD *)(*(_DWORD *)(this + 436) + 20) = 1064514355;
-  v5 = *(_DWORD *)(this + 436);
+  *(_DWORD *)(*(_DWORD *)(self + 436) + 20) = 1064514355;
+  v5 = *(_DWORD *)(self + 436);
   *(_BYTE *)(v5 + 33) = 0;
   sub_421540((void **)v5);
   v6 = operator new(0x80u);
@@ -209,82 +209,82 @@ int __thiscall sub_434270(int this)
     v7 = sub_412AB0(v6);
   else
     v7 = 0;
-  *(_DWORD *)(this + 452) = v7;
+  *(_DWORD *)(self + 452) = v7;
   LOBYTE(v172) = 2;
   v125 = (double)(unsigned int)dword_5209D8 + 5.0;
   v113 = (double)(unsigned int)dword_5209F4 + 5.0;
   sub_413090((int)v7, -5.0, -5.0, v113, v125);
   sub_413160(0, 0, 0);
-  sub_413180(*(_DWORD *)(this + 452), 0, 1);
+  sub_413180(*(_DWORD *)(self + 452), 0, 1);
   sub_413120(1084227584);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 452));
-  *(_BYTE *)(this + 724) = 0;
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 452));
+  *(_BYTE *)(self + 724) = 0;
   v8 = operator new(0x80u);
   LOBYTE(v172) = 4;
   if ( v8 )
     v9 = sub_412AB0(v8);
   else
     v9 = 0;
-  *(_DWORD *)(this + 728) = v9;
+  *(_DWORD *)(self + 728) = v9;
   v126 = (float)(unsigned int)dword_5209D8;
   v114 = (float)(unsigned int)dword_5209F4;
   LOBYTE(v172) = 2;
   v105 = (float)(unsigned int)(dword_5209D8 - v2);
   sub_413090((int)v9, 0.0, v105, v114, v126);
   sub_413160(0, 0, 0);
-  sub_413180(*(_DWORD *)(this + 728), 200, 1);
+  sub_413180(*(_DWORD *)(self + 728), 200, 1);
   sub_413120(0x40000000);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 728));
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 728));
   v10 = sub_409AD0(1, 65);
-  *(_DWORD *)(this + 736) = v10;
+  *(_DWORD *)(self + 736) = v10;
   v147 = (unsigned int)(dword_5209D8 - v2);
   *(_DWORD *)(v10 + 12) = 0;
   *(_BYTE *)(v10 + 32) = 0;
   *(float *)(v10 + 16) = (float)v147;
-  *(_DWORD *)(*(_DWORD *)(this + 736) + 20) = 1074161254;
+  *(_DWORD *)(*(_DWORD *)(self + 736) + 20) = 1074161254;
   v11 = sub_409AD0(1, 65);
-  *(_DWORD *)(this + 732) = v11;
+  *(_DWORD *)(self + 732) = v11;
   sub_421300(v11, 0xFFu, 0xBAu, 0, 255);
-  v12 = *(_DWORD *)(this + 732);
+  v12 = *(_DWORD *)(self + 732);
   v148 = (unsigned int)(dword_5209D8 - v2);
   *(_DWORD *)(v12 + 12) = 0;
   *(_BYTE *)(v12 + 32) = 0;
   *(float *)(v12 + 16) = (float)v148;
-  *(_DWORD *)(*(_DWORD *)(this + 732) + 20) = 1074161254;
-  *(_DWORD *)(this + 560) = sub_409AF0(aIconsHealth1Tg, 1);
-  *(_DWORD *)(this + 564) = sub_409AF0(aIconsHealth2Tg, 1);
-  *(_DWORD *)(this + 568) = sub_409AF0(aIconsHealth3Tg, 1);
-  *(_DWORD *)(this + 572) = sub_409AF0(aIconsHealth4Tg, 1);
-  *(_DWORD *)(this + 576) = sub_409AF0(aIconsHealth5Tg, 1);
-  *(_DWORD *)(this + 628) = sub_409AF0(aIconsHealthsha, 1);
-  *(_DWORD *)(this + 632) = sub_409AF0(aIconsHealthgod, 1);
-  *(_DWORD *)(this + 20) = sub_409AF0(aIconsInsignias, 0);
-  *(_DWORD *)(this + 716) = operator new(0xA0u);
+  *(_DWORD *)(*(_DWORD *)(self + 732) + 20) = 1074161254;
+  *(_DWORD *)(self + 560) = sub_409AF0(aIconsHealth1Tg, 1);
+  *(_DWORD *)(self + 564) = sub_409AF0(aIconsHealth2Tg, 1);
+  *(_DWORD *)(self + 568) = sub_409AF0(aIconsHealth3Tg, 1);
+  *(_DWORD *)(self + 572) = sub_409AF0(aIconsHealth4Tg, 1);
+  *(_DWORD *)(self + 576) = sub_409AF0(aIconsHealth5Tg, 1);
+  *(_DWORD *)(self + 628) = sub_409AF0(aIconsHealthsha, 1);
+  *(_DWORD *)(self + 632) = sub_409AF0(aIconsHealthgod, 1);
+  *(_DWORD *)(self + 20) = sub_409AF0(aIconsInsignias, 0);
+  *(_DWORD *)(self + 716) = operator new(0xA0u);
   v13 = 0;
   v157 = 10;
   do
   {
-    *(_DWORD *)(v13 + *(_DWORD *)(this + 716)) = 10;
-    *(_DWORD *)(v13 + *(_DWORD *)(this + 716) + 4) = v157;
-    *(_DWORD *)(v13 + *(_DWORD *)(this + 716) + 8) = sub_409AD0(1, 256);
-    v14 = *(_DWORD *)(this + 716);
+    *(_DWORD *)(v13 + *(_DWORD *)(self + 716)) = 10;
+    *(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 4) = v157;
+    *(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 8) = sub_409AD0(1, 256);
+    v14 = *(_DWORD *)(self + 716);
     v15 = (double)*(int *)(v13 + v14 + 4);
     v16 = *(_DWORD *)(v13 + v14 + 8);
     v143 = *(_DWORD *)(v13 + v14) + v2;
     *(_BYTE *)(v16 + 32) = 0;
     *(float *)(v16 + 12) = (float)v143;
     *(float *)(v16 + 16) = v15;
-    *(_DWORD *)(*(_DWORD *)(v13 + *(_DWORD *)(this + 716) + 8) + 20) = 1065017672;
-    *(_BYTE *)(*(_DWORD *)(v13 + *(_DWORD *)(this + 716) + 8) + 35) = 1;
-    *(_DWORD *)(v13 + *(_DWORD *)(this + 716) + 12) = sub_437450(0);
-    v17 = (int *)(v13 + *(_DWORD *)(this + 716));
+    *(_DWORD *)(*(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 8) + 20) = 1065017672;
+    *(_BYTE *)(*(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 8) + 35) = 1;
+    *(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 12) = sub_437450(0);
+    v17 = (int *)(v13 + *(_DWORD *)(self + 716));
     v167 = v17[1];
     v127 = (float)(v2 + v167);
     v115 = (float)(v2 + *v17);
     v106 = (float)v167;
     v98 = (float)*v17;
     sub_413090(v17[3], v98, v106, v115, v127);
-    v18 = *(_DWORD *)(v13 + *(_DWORD *)(this + 716) + 12);
+    v18 = *(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 12);
     (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v18 + 24))(v18, 0);
     sub_413120(1065017672);
     v13 += 16;
@@ -293,7 +293,7 @@ int __thiscall sub_434270(int this)
   while ( v13 < 160 );
   v19 = 6;
   v158 = 6;
-  v20 = (int *)(this + 68);
+  v20 = (int *)(self + 68);
   v21 = dword_5209F4 - 78;
   v169 = dword_5209F4 - 78;
   v162 = (float)(dword_5209F4 - 78 + 76);
@@ -312,34 +312,34 @@ int __thiscall sub_434270(int this)
     LOBYTE(v172) = 5;
     v23 = v22 ? sub_412AB0(v22) : 0;
     *v20 = (int)v23;
-    v128 = *(_DWORD **)(this + 628);
+    v128 = *(_DWORD **)(self + 628);
     LOBYTE(v172) = 2;
     sub_4131B0(v23, v128);
     v160 = (float)(v19 + 64);
     v154 = (float)v158;
     sub_413090(*v20, v149, v154, v162, v160);
     sub_413120(1063675494);
-    sub_428680((_DWORD *)this, *v20);
+    sub_428680((_DWORD *)self, *v20);
     v24 = operator new(0x80u);
     LOBYTE(v172) = 6;
     v25 = v24 ? sub_412AB0(v24) : 0;
     v20[1] = (int)v25;
-    v129 = *(_DWORD **)(this + 560);
+    v129 = *(_DWORD **)(self + 560);
     LOBYTE(v172) = 2;
     sub_4131B0(v25, v129);
     sub_413090(v20[1], v168, v154, v166, v160);
     sub_413120(1063843266);
-    sub_428680((_DWORD *)this, v20[1]);
+    sub_428680((_DWORD *)self, v20[1]);
     v26 = operator new(0x80u);
     LOBYTE(v172) = 7;
     v27 = v26 ? sub_412AB0(v26) : 0;
     v20[2] = (int)v27;
-    v130 = *(_DWORD **)(this + 564);
+    v130 = *(_DWORD **)(self + 564);
     LOBYTE(v172) = 2;
     sub_4131B0(v27, v130);
     sub_413090(v20[2], v168, v154, v166, v160);
     sub_413120(1064011038);
-    sub_428680((_DWORD *)this, v20[2]);
+    sub_428680((_DWORD *)self, v20[2]);
     v28 = operator new(0x80u);
     LOBYTE(v172) = 8;
     v29 = v28 ? sub_412AB0(v28) : 0;
@@ -350,7 +350,7 @@ int __thiscall sub_434270(int this)
     sub_413090((int)v29, v99, v154, v116, v160);
     sub_413120(1063675494);
     sub_413160(64, 64, 64);
-    sub_428680((_DWORD *)this, v20[4]);
+    sub_428680((_DWORD *)self, v20[4]);
     v30 = operator new(0x80u);
     LOBYTE(v172) = 9;
     v31 = v30 ? sub_412AB0(v30) : 0;
@@ -361,7 +361,7 @@ int __thiscall sub_434270(int this)
     sub_413090((int)v31, v100, v154, v117, v160);
     sub_413120(1063843266);
     sub_413160(0, 178, 0);
-    sub_428680((_DWORD *)this, v20[5]);
+    sub_428680((_DWORD *)self, v20[5]);
     v32 = sub_409AD0(1, 64);
     v20[3] = v32;
     *(_BYTE *)(v32 + 35) = 1;
@@ -390,7 +390,7 @@ int __thiscall sub_434270(int this)
     v19 = v158;
   }
   v39 = 1;
-  v40 = (_DWORD *)(this + 580);
+  v40 = (_DWORD *)(self + 580);
   do
   {
     sprintf(Buffer, "Crosshair%d.tga", v39);
@@ -408,13 +408,13 @@ int __thiscall sub_434270(int this)
   else
     v43 = 0;
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 472) = v43;
+  *(_DWORD *)(self + 472) = v43;
   sub_413120(1063675494);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 472));
-  v44 = *(_DWORD **)(this + 472);
-  *(_DWORD *)(this + 492) = 0;
-  sub_4131B0(v44, *(_DWORD **)(this + 580));
-  *(_DWORD *)(this + 676) = sub_409AF0(aBinocularsTga, 0);
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 472));
+  v44 = *(_DWORD **)(self + 472);
+  *(_DWORD *)(self + 492) = 0;
+  sub_4131B0(v44, *(_DWORD **)(self + 580));
+  *(_DWORD *)(self + 676) = sub_409AF0(aBinocularsTga, 0);
   v163 = (unsigned int)dword_5209F4 >> 1;
   v150 = (unsigned int)dword_5209D8 >> 1;
   v45 = operator new(0x80u);
@@ -423,143 +423,143 @@ int __thiscall sub_434270(int this)
     v46 = sub_412AB0(v45);
   else
     v46 = 0;
-  v47 = *(_DWORD **)(this + 676);
+  v47 = *(_DWORD **)(self + 676);
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 476) = v46;
+  *(_DWORD *)(self + 476) = v46;
   sub_4131B0(v46, v47);
   v151 = (float)v150;
   v164 = (float)v163;
-  sub_413090(*(_DWORD *)(this + 476), 0.0, 0.0, v164, v151);
+  sub_413090(*(_DWORD *)(self + 476), 0.0, 0.0, v164, v151);
   sub_413120(1061997773);
   sub_413130(0, 0, 1065353216, 1065353216);
-  *(_BYTE *)(*(_DWORD *)(this + 476) + 104) = 1;
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 476));
+  *(_BYTE *)(*(_DWORD *)(self + 476) + 104) = 1;
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 476));
   v48 = operator new(0x80u);
   LOBYTE(v172) = 12;
   if ( v48 )
     v49 = sub_412AB0(v48);
   else
     v49 = 0;
-  v50 = *(_DWORD **)(this + 676);
+  v50 = *(_DWORD **)(self + 676);
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 480) = v49;
+  *(_DWORD *)(self + 480) = v49;
   sub_4131B0(v49, v50);
   v118 = (float)(unsigned int)dword_5209F4;
-  sub_413090(*(_DWORD *)(this + 480), v164, 0.0, v118, v151);
+  sub_413090(*(_DWORD *)(self + 480), v164, 0.0, v118, v151);
   sub_413120(1061997773);
   sub_413130(1065353216, 0, 0, 1065353216);
-  *(_BYTE *)(*(_DWORD *)(this + 480) + 104) = 1;
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 480));
+  *(_BYTE *)(*(_DWORD *)(self + 480) + 104) = 1;
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 480));
   v51 = operator new(0x80u);
   LOBYTE(v172) = 13;
   if ( v51 )
     v52 = sub_412AB0(v51);
   else
     v52 = 0;
-  v53 = *(_DWORD **)(this + 676);
+  v53 = *(_DWORD **)(self + 676);
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 484) = v52;
+  *(_DWORD *)(self + 484) = v52;
   sub_4131B0(v52, v53);
   v131 = (float)(unsigned int)dword_5209D8;
-  sub_413090(*(_DWORD *)(this + 484), 0.0, v151, v164, v131);
+  sub_413090(*(_DWORD *)(self + 484), 0.0, v151, v164, v131);
   sub_413120(1061997773);
   sub_413130(0, 1065353216, 1065353216, 0);
-  *(_BYTE *)(*(_DWORD *)(this + 484) + 104) = 1;
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 484));
+  *(_BYTE *)(*(_DWORD *)(self + 484) + 104) = 1;
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 484));
   v54 = operator new(0x80u);
   LOBYTE(v172) = 14;
   if ( v54 )
     v55 = sub_412AB0(v54);
   else
     v55 = 0;
-  v56 = *(_DWORD **)(this + 676);
+  v56 = *(_DWORD **)(self + 676);
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 488) = v55;
+  *(_DWORD *)(self + 488) = v55;
   sub_4131B0(v55, v56);
   v132 = (float)(unsigned int)dword_5209D8;
   v119 = (float)(unsigned int)dword_5209F4;
-  sub_413090(*(_DWORD *)(this + 488), v164, v151, v119, v132);
+  sub_413090(*(_DWORD *)(self + 488), v164, v151, v119, v132);
   sub_413120(1061997773);
   sub_413130(1065353216, 1065353216, 0, 0);
-  *(_BYTE *)(*(_DWORD *)(this + 488) + 104) = 1;
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 488));
+  *(_BYTE *)(*(_DWORD *)(self + 488) + 104) = 1;
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 488));
   v57 = sub_409AD0(1, 32);
-  *(_DWORD *)(this + 444) = v57;
+  *(_DWORD *)(self + 444) = v57;
   *(_BYTE *)(v57 + 35) = 1;
-  v58 = *(_DWORD *)(this + 444);
+  v58 = *(_DWORD *)(self + 444);
   *(_BYTE *)(v58 + 33) = 1;
   sub_421540((void **)v58);
   v59 = (double)(unsigned int)(dword_5209D8 - 12);
-  v60 = *(_DWORD *)(this + 444);
+  v60 = *(_DWORD *)(self + 444);
   v61 = (double)(unsigned int)(dword_5209F4 - 30);
   *(_BYTE *)(v60 + 32) = 1;
   *(float *)(v60 + 12) = v61;
   *(float *)(v60 + 16) = v59;
-  *(_DWORD *)(*(_DWORD *)(this + 444) + 20) = 1063675494;
+  *(_DWORD *)(*(_DWORD *)(self + 444) + 20) = 1063675494;
   v62 = sub_409AD0(1, 32);
-  *(_DWORD *)(this + 448) = v62;
+  *(_DWORD *)(self + 448) = v62;
   *(_BYTE *)(v62 + 35) = 1;
-  v63 = *(_DWORD *)(this + 448);
+  v63 = *(_DWORD *)(self + 448);
   *(_BYTE *)(v63 + 33) = 1;
   sub_421540((void **)v63);
   v64 = (double)(unsigned int)(dword_5209D8 - 12);
-  v65 = *(_DWORD *)(this + 448);
+  v65 = *(_DWORD *)(self + 448);
   *(float *)(v65 + 12) = (float)(unsigned int)(dword_5209F4 - 95);
   *(_BYTE *)(v65 + 32) = 1;
   *(float *)(v65 + 16) = v64;
-  *(_DWORD *)(*(_DWORD *)(this + 448) + 20) = 1063675494;
-  *(_DWORD *)(this + 636) = sub_409AF0(aIcons30calTga, 1);
-  *(_DWORD *)(this + 640) = sub_409AF0(aIcons45calTga, 1);
-  *(_DWORD *)(this + 644) = sub_409AF0(aIcons50calTga, 1);
-  *(_DWORD *)(this + 648) = sub_409AF0(aIcons40mmTga, 1);
-  *(_DWORD *)(this + 652) = sub_409AF0(aIcons105mmTga, 1);
-  *(_DWORD *)(this + 656) = sub_409AF0(aIcons155mmTga, 1);
-  *(_DWORD *)(this + 660) = sub_409AF0(aIcons203mmTga, 1);
-  *(_DWORD *)(this + 664) = sub_409AF0(aIconsBazookaTg, 1);
-  *(_DWORD *)(this + 668) = sub_409AF0(aIconsSuperbazo, 1);
-  *(_DWORD *)(this + 672) = sub_409AF0(aIconsGrenadesp, 1);
+  *(_DWORD *)(*(_DWORD *)(self + 448) + 20) = 1063675494;
+  *(_DWORD *)(self + 636) = sub_409AF0(aIcons30calTga, 1);
+  *(_DWORD *)(self + 640) = sub_409AF0(aIcons45calTga, 1);
+  *(_DWORD *)(self + 644) = sub_409AF0(aIcons50calTga, 1);
+  *(_DWORD *)(self + 648) = sub_409AF0(aIcons40mmTga, 1);
+  *(_DWORD *)(self + 652) = sub_409AF0(aIcons105mmTga, 1);
+  *(_DWORD *)(self + 656) = sub_409AF0(aIcons155mmTga, 1);
+  *(_DWORD *)(self + 660) = sub_409AF0(aIcons203mmTga, 1);
+  *(_DWORD *)(self + 664) = sub_409AF0(aIconsBazookaTg, 1);
+  *(_DWORD *)(self + 668) = sub_409AF0(aIconsSuperbazo, 1);
+  *(_DWORD *)(self + 672) = sub_409AF0(aIconsGrenadesp, 1);
   v66 = operator new(0x80u);
   LOBYTE(v172) = 15;
   if ( v66 )
     v67 = sub_412AB0(v66);
   else
     v67 = 0;
-  v68 = *(_DWORD **)(this + 636);
+  v68 = *(_DWORD **)(self + 636);
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 464) = v67;
+  *(_DWORD *)(self + 464) = v67;
   sub_4131B0(v67, v68);
   v133 = (float)(unsigned int)(dword_5209D8 - 22);
   v120 = (float)(unsigned int)(dword_5209F4 + 4);
   v107 = (float)(unsigned int)(dword_5209D8 - 86);
   v101 = (float)(unsigned int)(dword_5209F4 - 60);
-  sub_413090(*(_DWORD *)(this + 464), v101, v107, v120, v133);
+  sub_413090(*(_DWORD *)(self + 464), v101, v107, v120, v133);
   sub_413120(1063675494);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 464));
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 464));
   v69 = operator new(0x80u);
   LOBYTE(v172) = 16;
   if ( v69 )
     v70 = sub_412AB0(v69);
   else
     v70 = 0;
-  v71 = *(_DWORD **)(this + 672);
+  v71 = *(_DWORD **)(self + 672);
   LOBYTE(v172) = 2;
-  *(_DWORD *)(this + 468) = v70;
+  *(_DWORD *)(self + 468) = v70;
   sub_4131B0(v70, v71);
   v134 = (float)(unsigned int)(dword_5209D8 - 22);
   v121 = (float)(unsigned int)(dword_5209F4 - 64);
   v108 = (float)(unsigned int)(dword_5209D8 - 86);
   v102 = (float)(unsigned int)(dword_5209F4 - 128);
-  sub_413090(*(_DWORD *)(this + 468), v102, v108, v121, v134);
+  sub_413090(*(_DWORD *)(self + 468), v102, v108, v121, v134);
   sub_413130(0, 0, 1056964608, 1056964608);
   sub_413120(1063675494);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 468));
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 468));
   v72 = operator new(0x80u);
   LOBYTE(v172) = 17;
   if ( v72 )
     v73 = sub_412AB0(v72);
   else
     v73 = 0;
-  *(_DWORD *)(this + 456) = v73;
+  *(_DWORD *)(self + 456) = v73;
   LOBYTE(v172) = 2;
   v135 = (float)(unsigned int)(dword_5209D8 - 10);
   v122 = (float)((unsigned int)(dword_5209F4 + 200) >> 1);
@@ -568,14 +568,14 @@ int __thiscall sub_434270(int this)
   sub_413090((int)v73, v103, v109, v122, v135);
   sub_413120(1063675494);
   sub_413160(64, 64, 64);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 456));
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 456));
   v74 = operator new(0x80u);
   LOBYTE(v172) = 18;
   if ( v74 )
     v75 = sub_412AB0(v74);
   else
     v75 = 0;
-  *(_DWORD *)(this + 460) = v75;
+  *(_DWORD *)(self + 460) = v75;
   LOBYTE(v172) = 2;
   v136 = (float)(unsigned int)(dword_5209D8 - 12);
   v123 = (float)(((unsigned int)(dword_5209F4 + 200) >> 1) - 2);
@@ -584,19 +584,19 @@ int __thiscall sub_434270(int this)
   sub_413090((int)v75, v104, v110, v123, v136);
   sub_413120(1063843266);
   sub_413160(0, 178, 0);
-  sub_428680((_DWORD *)this, *(_DWORD *)(this + 460));
-  *(_DWORD *)(this + 680) = sub_409AF0(aIconsSpecialat, 1);
-  *(_DWORD *)(this + 684) = sub_409AF0(aIconsSpecialat_0, 1);
-  *(_DWORD *)(this + 688) = sub_409AF0(aIconsGrenadesp, 1);
-  *(_DWORD *)(this + 692) = sub_409AF0(aIconsInsignias_0, 1);
+  sub_428680((_DWORD *)self, *(_DWORD *)(self + 460));
+  *(_DWORD *)(self + 680) = sub_409AF0(aIconsSpecialat, 1);
+  *(_DWORD *)(self + 684) = sub_409AF0(aIconsSpecialat_0, 1);
+  *(_DWORD *)(self + 688) = sub_409AF0(aIconsGrenadesp, 1);
+  *(_DWORD *)(self + 692) = sub_409AF0(aIconsInsignias_0, 1);
   v76 = sub_409AF0(aHitarrowsmallT, 0);
-  *(_DWORD *)(this + 696) = v76;
+  *(_DWORD *)(self + 696) = v76;
   v77 = (double)(unsigned int)dword_5209F4;
   v145 = v77 * 0.25;
   v159 = (float)*(int *)(v76 + 28);
   v78 = 0;
   v155 = 0;
-  v79 = (int *)(this + 496);
+  v79 = (int *)(self + 496);
   v170 = (v77 - v159) * 0.5;
   v161 = (v77 + v159) * 0.5;
   v80 = (double)(unsigned int)dword_5209D8;
@@ -622,9 +622,9 @@ int __thiscall sub_434270(int this)
     sub_413120(1063675494);
     sub_413180(*v79, 0, 1);
     sub_413130(0, 0, 1065353216, 1065353216);
-    sub_4131B0((_DWORD *)*v79, *(_DWORD **)(this + 696));
+    sub_4131B0((_DWORD *)*v79, *(_DWORD **)(self + 696));
     *(_BYTE *)(*v79 + 105) = 1;
-    sub_428680((_DWORD *)this, *v79);
+    sub_428680((_DWORD *)self, *v79);
     ++v78;
     ++v79;
     v155 = v78;
@@ -634,7 +634,7 @@ int __thiscall sub_434270(int this)
   v156 = 0;
   while ( 1 )
   {
-    v84 = this + 60 * v83 + 256;
+    v84 = self + 60 * v83 + 256;
     memset((void *)v84, 0, 0x3Cu);
     v85 = operator new(0x80u);
     LOBYTE(v172) = 20;
@@ -643,12 +643,12 @@ int __thiscall sub_434270(int this)
     else
       v86 = 0;
     *(_DWORD *)(v84 + 8) = v86;
-    v138 = *(_DWORD **)(this + 680);
+    v138 = *(_DWORD **)(self + 680);
     LOBYTE(v172) = 2;
     sub_4131B0(v86, v138);
     sub_413120(1063675494);
     (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 8) + 24))(*(_DWORD *)(v84 + 8), 0);
-    sub_428680((_DWORD *)this, *(_DWORD *)(v84 + 8));
+    sub_428680((_DWORD *)self, *(_DWORD *)(v84 + 8));
     v87 = operator new(0x80u);
     LOBYTE(v172) = 21;
     if ( v87 )
@@ -656,7 +656,7 @@ int __thiscall sub_434270(int this)
     else
       v88 = 0;
     *(_DWORD *)(v84 + 16) = v88;
-    v139 = *(_DWORD **)(this + 688);
+    v139 = *(_DWORD **)(self + 688);
     LOBYTE(v172) = 2;
     sub_4131B0(v88, v139);
     switch ( v156 )
@@ -677,17 +677,17 @@ LABEL_75:
     }
     sub_413120(1065353216);
     (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 16) + 24))(*(_DWORD *)(v84 + 16), 0);
-    sub_428680((_DWORD *)this, *(_DWORD *)(v84 + 16));
+    sub_428680((_DWORD *)self, *(_DWORD *)(v84 + 16));
     v89 = operator new(0x80u);
     LOBYTE(v172) = 22;
     v90 = v89 ? sub_412AB0(v89) : 0;
     *(_DWORD *)(v84 + 12) = v90;
-    v141 = *(_DWORD **)(this + 684);
+    v141 = *(_DWORD **)(self + 684);
     LOBYTE(v172) = 2;
     sub_4131B0(v90, v141);
     sub_413120(1066192077);
     (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 12) + 24))(*(_DWORD *)(v84 + 12), 0);
-    sub_428680((_DWORD *)this, *(_DWORD *)(v84 + 12));
+    sub_428680((_DWORD *)self, *(_DWORD *)(v84 + 12));
     v91 = (int *)(v84 + 20);
     v146 = 6;
     do
@@ -699,13 +699,13 @@ LABEL_75:
       else
         v93 = 0;
       *v91 = (int)v93;
-      v142 = *(_DWORD **)(this + 692);
+      v142 = *(_DWORD **)(self + 692);
       LOBYTE(v172) = 2;
       sub_4131B0(v93, v142);
       sub_413130(0, 1056964608, 1056964608, 1065353216);
       sub_413120(1067030938);
       (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)*v91 + 24))(*v91, 0);
-      sub_428680((_DWORD *)this, *v91++);
+      sub_428680((_DWORD *)self, *v91++);
       --v146;
     }
     while ( v146 );
@@ -738,7 +738,7 @@ LABEL_75:
       break;
     v83 = v96 + 1;
   }
-  sub_436D70(this);
+  sub_436D70(self);
   sub_4229D0(aFinishedLoadin_0);
-  return this;
+  return self;
 }

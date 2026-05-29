@@ -1,5 +1,5 @@
 //----- (004046C0) --------------------------------------------------------
-bool __thiscall sub_4046C0(_DWORD *this, int a2, int ArgList)
+bool __thiscall sub_4046C0(_DWORD *self, int a2, int ArgList)
 {
   _DWORD *v3; // ebp
   bool v4; // dl
@@ -22,7 +22,7 @@ bool __thiscall sub_4046C0(_DWORD *this, int a2, int ArgList)
   int v22; // [esp+18h] [ebp-4h] BYREF
   int v23; // [esp+20h] [ebp+4h]
 
-  v3 = this;
+  v3 = self;
   v4 = (unsigned __int8)sub_405820(-15891371) && (unsigned __int8)sub_4057E0(&Buffer);
   v5 = v3[8] + 172 * Buffer;
   *(_DWORD *)(v5 + 28) = a2;
@@ -57,7 +57,7 @@ bool __thiscall sub_4046C0(_DWORD *this, int a2, int ArgList)
       ++v23;
     }
     while ( v23 < *v7 );
-    v3 = this;
+    v3 = self;
     if ( !v8 )
       goto LABEL_22;
   }

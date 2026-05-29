@@ -1,5 +1,5 @@
 //----- (004102F0) --------------------------------------------------------
-_DWORD *__thiscall sub_4102F0(int this, _DWORD *a2, const CHAR *lpMultiByteStr, int a4)
+_DWORD *__thiscall sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int a4)
 {
   _DWORD *v5; // ebx
   _DWORD *result; // eax
@@ -43,15 +43,15 @@ _DWORD *__thiscall sub_4102F0(int this, _DWORD *a2, const CHAR *lpMultiByteStr, 
   WCHAR WideCharStr[260]; // [esp+372h] [ebp-208h] BYREF
 
   v37 = 0;
-  sub_411C50(this);
-  *(_DWORD *)(this + 984) = CreateEventA(0, 0, 0, 0);
+  sub_411C50(self);
+  *(_DWORD *)(self + 984) = CreateEventA(0, 0, 0, 0);
   v38[0] = -335643744;
   v38[1] = 299000461;
   v38[2] = 1610616750;
   v38[3] = 286568599;
   sub_4229D0(aMpCreatingPeer, v17);
-  v5 = (_DWORD *)(this + 24);
-  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(this + 24)) < 0 )
+  v5 = (_DWORD *)(self + 24);
+  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(self + 24)) < 0 )
   {
     sub_4229D0(aCouldnTCreateD, v18);
     sub_403A30(a2, 1, aCouldnTCreateD_0);
@@ -61,7 +61,7 @@ _DWORD *__thiscall sub_4102F0(int this, _DWORD *a2, const CHAR *lpMultiByteStr, 
   sub_4229D0(aMpInitPeer, v19);
   if ( (*(int (__stdcall **)(_DWORD, int, int (__stdcall *)(int, int, int), _DWORD))(*(_DWORD *)*v5 + 12))(
          *v5,
-         this,
+         self,
          sub_410A90,
          0) < 0 )
   {
@@ -73,14 +73,14 @@ _DWORD *__thiscall sub_4102F0(int this, _DWORD *a2, const CHAR *lpMultiByteStr, 
   if ( lpMultiByteStr )
   {
     sub_4229D0(aMpCreatingHost, v21);
-    if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(this + 92)) < 0 )
+    if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 92)) < 0 )
     {
       sub_403A30(a2, 3, aCouldnTCreateH);
       return a2;
     }
     sub_4229D0(aMpDoneCreating, v22);
     sub_4229D0(aMpSetSp, v23);
-    if ( (*(int (__stdcall **)(_DWORD, _DWORD *))(**(_DWORD **)(this + 92) + 52))(*(_DWORD *)(this + 92), v38) < 0 )
+    if ( (*(int (__stdcall **)(_DWORD, _DWORD *))(**(_DWORD **)(self + 92) + 52))(*(_DWORD *)(self + 92), v38) < 0 )
     {
       v16 = aCouldnTSetHost;
 LABEL_54:
@@ -90,8 +90,8 @@ LABEL_54:
     sub_4229D0(aMpDoneSettingS, v24);
   }
   sub_4229D0(aMpCreateDevice, v21);
-  v7 = (_DWORD *)(this + 96);
-  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(this + 96)) < 0 )
+  v7 = (_DWORD *)(self + 96);
+  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 96)) < 0 )
   {
     sub_403A30(a2, 5, aCouldnTCreateD_1);
     return a2;
@@ -109,8 +109,8 @@ LABEL_54:
     sub_4229D0(aMpSettingHosts, v28);
     sub_428820(String, lpMultiByteStr, -1);
     v8 = wcslen(String);
-    if ( (*(int (__stdcall **)(_DWORD, wchar_t *, wchar_t *, size_t, int))(**(_DWORD **)(this + 92) + 72))(
-           *(_DWORD *)(this + 92),
+    if ( (*(int (__stdcall **)(_DWORD, wchar_t *, wchar_t *, size_t, int))(**(_DWORD **)(self + 92) + 72))(
+           *(_DWORD *)(self + 92),
            aHostname,
            String,
            2 * v8 + 2,
@@ -124,7 +124,7 @@ LABEL_54:
   sub_4229D0(aMpSettingPort, v28);
   v37 = a4;
   if ( lpMultiByteStr )
-    v9 = *(_DWORD *)(this + 92);
+    v9 = *(_DWORD *)(self + 92);
   else
     v9 = *v7;
   if ( (*(int (__stdcall **)(int, wchar_t *, int *, int, int))(*(_DWORD *)v9 + 72))(v9, aPort, &v37, 4, 2) < 0 )
@@ -140,7 +140,7 @@ LABEL_54:
   v40[7] = dword_4A4DC4;
   memset(&v40[2], 0, 16);
   v40[0] = 72;
-  sub_428820(WideCharStr, (LPCCH)(this + 140), -1);
+  sub_428820(WideCharStr, (LPCCH)(self + 140), -1);
   memset(v39, 0, sizeof(v39));
   v39[2] = WideCharStr;
   v39[4] = strlen(byte_520A60);
@@ -179,7 +179,7 @@ LABEL_54:
     v14 = (*(int (__stdcall **)(_DWORD, _DWORD *, _DWORD, _DWORD, _DWORD, _DWORD, int, int, int, _DWORD, int *, _DWORD))(*(_DWORD *)*v5 + 100))(
             *v5,
             v41,
-            *(_DWORD *)(this + 92),
+            *(_DWORD *)(self + 92),
             *v7,
             0,
             0,
@@ -190,13 +190,13 @@ LABEL_54:
             &v37,
             0);
     sub_4229D0(aMpDoneEnumhost, v35);
-    v15 = *(_DWORD *)(this + 92);
+    v15 = *(_DWORD *)(self + 92);
     if ( v14 < 0 )
     {
       if ( v15 )
       {
-        (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v15 + 8))(*(_DWORD *)(this + 92));
-        *(_DWORD *)(this + 92) = 0;
+        (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v15 + 8))(*(_DWORD *)(self + 92));
+        *(_DWORD *)(self + 92) = 0;
       }
       if ( *v7 )
       {
@@ -212,18 +212,18 @@ LABEL_54:
     }
     if ( v15 )
     {
-      (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v15 + 8))(*(_DWORD *)(this + 92));
-      *(_DWORD *)(this + 92) = 0;
+      (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v15 + 8))(*(_DWORD *)(self + 92));
+      *(_DWORD *)(self + 92) = 0;
     }
     if ( *v7 )
     {
       (*(void (__stdcall **)(_DWORD))(*(_DWORD *)*v7 + 8))(*v7);
       *v7 = 0;
     }
-    *(_BYTE *)(this + 936) = 0;
-    *(_BYTE *)(this + 937) = 0;
-    *(_BYTE *)(this + 938) = 1;
-    *(_DWORD *)(this + 940) = 0;
+    *(_BYTE *)(self + 936) = 0;
+    *(_BYTE *)(self + 937) = 0;
+    *(_BYTE *)(self + 938) = 1;
+    *(_DWORD *)(self + 940) = 0;
     sub_488CEE(0);
     sub_4229D0(aMpLaunchSucces, v36);
     result = a2;
@@ -232,9 +232,9 @@ LABEL_54:
   }
   else
   {
-    if ( strlen((const char *)(this + 400)) )
+    if ( strlen((const char *)(self + 400)) )
     {
-      sub_428820(String, (LPCCH)(this + 400), -1);
+      sub_428820(String, (LPCCH)(self + 400), -1);
       v10 = wcslen(String);
       v40[12] = operator new(2 * v10 + 2);
       wcscpy((wchar_t *)v40[12], String);
@@ -247,7 +247,7 @@ LABEL_54:
     v11 = (*(int (__stdcall **)(_DWORD, _DWORD *, int, int, _DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)*v5 + 36))(
             *v5,
             v40,
-            this + 96,
+            self + 96,
             1,
             0,
             0,
@@ -274,19 +274,19 @@ LABEL_54:
       goto LABEL_54;
     }
     sub_4229D0(aMpDoneHostIng, v33);
-    v12 = *(_DWORD *)(this + 92);
+    v12 = *(_DWORD *)(self + 92);
     if ( v12 )
     {
-      (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v12 + 8))(*(_DWORD *)(this + 92));
-      *(_DWORD *)(this + 92) = 0;
+      (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v12 + 8))(*(_DWORD *)(self + 92));
+      *(_DWORD *)(self + 92) = 0;
     }
     if ( *v7 )
     {
       (*(void (__stdcall **)(_DWORD))(*(_DWORD *)*v7 + 8))(*v7);
       *v7 = 0;
     }
-    *(_BYTE *)(this + 936) = lpMultiByteStr == 0;
-    *(_BYTE *)(this + 937) = 0;
+    *(_BYTE *)(self + 936) = lpMultiByteStr == 0;
+    *(_BYTE *)(self + 937) = 0;
     sub_4229D0(aMpLaunchSucces, v34);
     result = a2;
     *a2 = 0;

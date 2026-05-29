@@ -1,5 +1,5 @@
 //----- (0046ECF4) --------------------------------------------------------
-int __thiscall sub_46ECF4(_DWORD *this)
+int __thiscall sub_46ECF4(_DWORD *self)
 {
   int v1; // edx
   _WORD *v2; // eax
@@ -20,10 +20,10 @@ int __thiscall sub_46ECF4(_DWORD *this)
   _WORD *v19; // [esp+24h] [ebp-8h]
   _WORD *v20; // [esp+28h] [ebp-4h]
 
-  v1 = *this;
-  v2 = *(_WORD **)(this[1] + 24);
-  v3 = *(_DWORD *)(*this + 4180);
-  v4 = *(_DWORD *)(*this + 4168);
+  v1 = *self;
+  v2 = *(_WORD **)(self[1] + 24);
+  v3 = *(_DWORD *)(*self + 4180);
+  v4 = *(_DWORD *)(*self + 4168);
   v5 = *(char **)(v1 + 24);
   v6 = &v5[v4 * v3];
   v19 = v2;
@@ -55,9 +55,9 @@ int __thiscall sub_46ECF4(_DWORD *this)
       while ( v11 );
       v6 = i;
     }
-    v19 = (_WORD *)((char *)v19 + *(_DWORD *)(this[1] + 4168));
-    v1 = *this;
-    v4 = *(_DWORD *)(*this + 4168);
+    v19 = (_WORD *)((char *)v19 + *(_DWORD *)(self[1] + 4168));
+    v1 = *self;
+    v4 = *(_DWORD *)(*self + 4168);
   }
   return 0;
 }

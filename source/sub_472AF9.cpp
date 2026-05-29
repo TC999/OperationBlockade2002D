@@ -1,12 +1,12 @@
 //----- (00472AF9) --------------------------------------------------------
-_DWORD *__thiscall sub_472AF9(_DWORD *this)
+_DWORD *__thiscall sub_472AF9(_DWORD *self)
 {
   _DWORD *result; // eax
 
-  result = this;
-  *this = -1;
-  this[1] = -1;
-  this[2] = 0;
-  this[3] = 0;
+  result = self;
+  *self = -1;
+  self[1] = -1;
+  self[2] = 0;
+  self[3] = 0;
   return result;
 }

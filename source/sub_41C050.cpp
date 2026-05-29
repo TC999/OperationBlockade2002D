@@ -1,10 +1,10 @@
 //----- (0041C050) --------------------------------------------------------
-int __thiscall sub_41C050(_DWORD *this)
+int __thiscall sub_41C050(_DWORD *self)
 {
   int result; // eax
 
   result = 0;
-  this[3] = 0;
-  this[8] = 0;
+  self[3] = 0;
+  self[8] = 0;
   return result;
 }

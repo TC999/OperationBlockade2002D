@@ -1,7 +1,7 @@
 //----- (0040E620) --------------------------------------------------------
-void __thiscall sub_40E620(LPVOID *this)
+void __thiscall sub_40E620(LPVOID *self)
 {
-  sub_488CEE(this[1]);
-  this[1] = 0;
-  *this = 0;
+  sub_488CEE(self[1]);
+  self[1] = 0;
+  *self = 0;
 }

@@ -1,5 +1,5 @@
 //----- (00433F70) --------------------------------------------------------
-char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void *a4)
+char *__thiscall sub_433F70(_DWORD *self, char *a2, unsigned int a3, const void *a4)
 {
   unsigned int v4; // esi
   _DWORD *v5; // edi
@@ -37,16 +37,16 @@ char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void 
   int v39; // [esp+20h] [ebp+4h]
 
   v4 = a3;
-  v5 = this;
-  result = (char *)this[2];
-  if ( (this[3] - (int)result) >> 5 >= a3 )
+  v5 = self;
+  result = (char *)self[2];
+  if ( (self[3] - (int)result) >> 5 >= a3 )
   {
     if ( (result - a2) >> 5 >= a3 )
     {
       if ( !a3 )
         return result;
       v29 = 32 * a3;
-      v30 = (char *)this[2];
+      v30 = (char *)self[2];
       v31 = &result[-32 * a3];
       v39 = 32 * a3;
       if ( v31 != result )
@@ -56,7 +56,7 @@ char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void 
           if ( v30 )
           {
             qmemcpy(v30, v31, 0x20u);
-            v5 = this;
+            v5 = self;
           }
           v31 += 32;
           v30 += 32;
@@ -75,7 +75,7 @@ char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void 
           qmemcpy(v32, v33, 0x20u);
         }
         while ( v33 != a2 );
-        v5 = this;
+        v5 = self;
       }
       v34 = a2;
       if ( a2 == &a2[v39] )
@@ -100,7 +100,7 @@ char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void 
           if ( v21 )
           {
             qmemcpy(v21, v22, 0x20u);
-            v5 = this;
+            v5 = self;
             v4 = a3;
           }
           v22 += 32;
@@ -118,7 +118,7 @@ char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void 
           if ( v23 )
           {
             qmemcpy(v23, a4, 0x20u);
-            v5 = this;
+            v5 = self;
           }
           v23 += 32;
           --v25;
@@ -137,13 +137,13 @@ char *__thiscall sub_433F70(_DWORD *this, char *a2, unsigned int a3, const void 
       }
       while ( v27 != v26 );
     }
-    v5 = this;
+    v5 = self;
 LABEL_54:
     result = (char *)(v39 + v5[2]);
     v5[2] = result;
     return result;
   }
-  v7 = this[1];
+  v7 = self[1];
   if ( !v7 || (v8 = (int)&result[-v7] >> 5, a3 >= v8) )
     v8 = a3;
   if ( v7 )
@@ -161,7 +161,7 @@ LABEL_54:
     if ( v11 )
     {
       qmemcpy(v11, i, 0x20u);
-      v5 = this;
+      v5 = self;
       v4 = a3;
     }
     i += 32;
@@ -175,7 +175,7 @@ LABEL_54:
       if ( v13 )
       {
         qmemcpy(v13, a4, 0x20u);
-        v5 = this;
+        v5 = self;
         v4 = a3;
       }
       v13 += 32;
@@ -193,7 +193,7 @@ LABEL_54:
       if ( v16 )
       {
         qmemcpy(v16, v17, 0x20u);
-        v5 = this;
+        v5 = self;
         v4 = a3;
       }
       v17 += 32;

@@ -1,6 +1,6 @@
 //----- (00402530) --------------------------------------------------------
-int __thiscall sub_402530(_DWORD *this)
+int __thiscall sub_402530(_DWORD *self)
 {
-  *this = &off_499064;
-  return sub_4013F0(this);
+  *self = &off_499064;
+  return sub_4013F0(self);
 }

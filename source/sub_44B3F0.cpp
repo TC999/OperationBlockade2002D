@@ -1,5 +1,5 @@
 //----- (0044B3F0) --------------------------------------------------------
-int __thiscall sub_44B3F0(_DWORD *this)
+int __thiscall sub_44B3F0(_DWORD *self)
 {
   int v2; // ebp
   _DWORD *v3; // esi
@@ -7,7 +7,7 @@ int __thiscall sub_44B3F0(_DWORD *this)
   int (__thiscall ***v5)(_DWORD, int); // ecx
 
   v2 = 2024;
-  v3 = this + 38;
+  v3 = self + 38;
   do
   {
     if ( *((_BYTE *)v3 - 120) )
@@ -19,7 +19,7 @@ int __thiscall sub_44B3F0(_DWORD *this)
       result = v3[3];
       if ( result )
       {
-        result = sub_4286C0(this, v3[3]);
+        result = sub_4286C0(self, v3[3]);
         v5 = (int (__thiscall ***)(_DWORD, int))v3[3];
         if ( v5 )
           result = (**v5)(v5, 1);

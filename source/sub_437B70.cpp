@@ -1,5 +1,5 @@
 //----- (00437B70) --------------------------------------------------------
-void __thiscall sub_437B70(_DWORD *this, float a2)
+void __thiscall sub_437B70(_DWORD *self, float a2)
 {
   int v3; // ecx
   int v4; // esi
@@ -39,16 +39,16 @@ void __thiscall sub_437B70(_DWORD *this, float a2)
   _DWORD v39[16]; // [esp+30h] [ebp-80h] BYREF
   _DWORD v40[16]; // [esp+70h] [ebp-40h] BYREF
 
-  v3 = this[609];
+  v3 = self[609];
   if ( v3 )
   {
     sub_41D0C0(v3, a2);
     v21 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
-    sub_41CFD0(this[609], v21);
+    sub_41CFD0(self[609], v21);
   }
   v4 = 0;
   v36 = 0;
-  v5 = (float *)(this + 182);
+  v5 = (float *)(self + 182);
   v38 = (sin(*(float *)(dword_520970 + 72)) + 1.0) * 0.5;
   do
   {
@@ -126,7 +126,7 @@ LABEL_23:
           *v5 = 0.0;
           *(v5 - 1) = 0.0;
           v5[1] = 0.60000002;
-          v27 = this + 604;
+          v27 = self + 604;
           v31 = 5;
           do
           {
@@ -151,9 +151,9 @@ LABEL_23:
             --v31;
           }
           while ( !v14 );
-          sub_41CF50(this[609]);
-          sub_41CF00(this[609]);
-          sub_41CD90(this[609]);
+          sub_41CF50(self[609]);
+          sub_41CF00(self[609]);
+          sub_41CD90(self[609]);
         }
         break;
       case 7:
@@ -224,7 +224,7 @@ LABEL_35:
         if ( v37 == 0.0 && *v5 > 0.0 )
         {
           v34 = 5;
-          v29 = this + 604;
+          v29 = self + 604;
           do
           {
             v15 = sub_413870(*(_DWORD **)(dword_520970 + 116), *v29);
@@ -248,23 +248,23 @@ LABEL_35:
             --v34;
           }
           while ( !v14 );
-          sub_41CF50(this[609]);
-          sub_41CF00(this[609]);
-          sub_41CD90(this[609]);
+          sub_41CF50(self[609]);
+          sub_41CF00(self[609]);
+          sub_41CD90(self[609]);
         }
         if ( *(_DWORD *)v5 == 1065353216 && v37 < 1.0 )
         {
-          v17 = *(_DWORD *)(this[148] + 396);
+          v17 = *(_DWORD *)(self[148] + 396);
           if ( v17 + 1 < 12 )
           {
-            v18 = &this[35 * v17 + 184];
+            v18 = &self[35 * v17 + 184];
             v18[31] = 13;
             v18[33] = 0;
             v18[32] = 0x40000000;
             v18[34] = 1065353216;
-            sub_43A120(*(_DWORD *)(this[148] + 396) + 1);
-            sub_4030B0(*(_DWORD **)(this[148] + 468), 0, aCommandertakeb_0, -1);
-            sub_4030B0(*(_DWORD **)(this[148] + 468), 0, aCommanderprovi_0, *(_DWORD *)(this[148] + 396) + 1);
+            sub_43A120(*(_DWORD *)(self[148] + 396) + 1);
+            sub_4030B0(*(_DWORD **)(self[148] + 468), 0, aCommandertakeb_0, -1);
+            sub_4030B0(*(_DWORD **)(self[148] + 468), 0, aCommanderprovi_0, *(_DWORD *)(self[148] + 396) + 1);
           }
           else
           {
@@ -277,7 +277,7 @@ LABEL_35:
         sub_438460(v4, *v5, 0.0, 1.0);
         sub_438430(v4, 1065353216, LODWORD(v35), LODWORD(v35));
         if ( *(_DWORD *)v5 == 1065353216 && v37 < 1.0 )
-          *(_BYTE *)(this[148] + 432) = 1;
+          *(_BYTE *)(self[148] + 432) = 1;
         break;
     }
     ++v4;

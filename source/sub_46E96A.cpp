@@ -1,5 +1,5 @@
 //----- (0046E96A) --------------------------------------------------------
-int __thiscall sub_46E96A(_DWORD *this)
+int __thiscall sub_46E96A(_DWORD *self)
 {
   unsigned int *v1; // ebx
   int v2; // esi
@@ -19,11 +19,11 @@ int __thiscall sub_46E96A(_DWORD *this)
   char *v18; // [esp+20h] [ebp-10h]
   unsigned int *v19; // [esp+28h] [ebp-8h]
 
-  v1 = *(unsigned int **)(this[1] + 24);
-  v2 = *this;
-  v3 = *(_DWORD *)(*this + 4180);
-  v4 = *(char **)(*this + 24);
-  v5 = *(_DWORD *)(*this + 4168);
+  v1 = *(unsigned int **)(self[1] + 24);
+  v2 = *self;
+  v3 = *(_DWORD *)(*self + 4180);
+  v4 = *(char **)(*self + 24);
+  v5 = *(_DWORD *)(*self + 4168);
   v16 = v1;
   v15 = v4;
   for ( i = &v4[v5 * v3]; v4 < i; v15 = v4 )
@@ -61,9 +61,9 @@ int __thiscall sub_46E96A(_DWORD *this)
       while ( v4 < v14 );
       v4 = v15;
     }
-    v1 = (unsigned int *)((char *)v16 + *(_DWORD *)(this[1] + 4168));
-    v2 = *this;
-    v5 = *(_DWORD *)(*this + 4168);
+    v1 = (unsigned int *)((char *)v16 + *(_DWORD *)(self[1] + 4168));
+    v2 = *self;
+    v5 = *(_DWORD *)(*self + 4168);
     v4 += 2 * v5;
     v16 = v1;
   }

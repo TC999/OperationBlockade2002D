@@ -1,5 +1,5 @@
 //----- (0045B150) --------------------------------------------------------
-char __thiscall sub_45B150(_DWORD *this, int ArgList, int a3, int a4)
+char __thiscall sub_45B150(_DWORD *self, int ArgList, int a3, int a4)
 {
   char result; // al
   int v6; // edx
@@ -30,8 +30,8 @@ char __thiscall sub_45B150(_DWORD *this, int ArgList, int a3, int a4)
       }
       while ( v7 < *(_DWORD *)(v6 + 520) );
     }
-    v9 = this[5];
-    this[25] = 10;
+    v9 = self[5];
+    self[25] = 10;
     v14 = v9;
     v11 = ArgList;
     v12 = a3;

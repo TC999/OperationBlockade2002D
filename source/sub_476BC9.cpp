@@ -1,8 +1,8 @@
 //----- (00476BC9) --------------------------------------------------------
-void *__thiscall sub_476BC9(void *this, char a2)
+void *__thiscall sub_476BC9(void *self, char a2)
 {
-  sub_476BE8((int)this);
+  sub_476BE8((int)self);
   if ( (a2 & 1) != 0 )
-    sub_4885A6(this);
-  return this;
+    sub_4885A6(self);
+  return self;
 }

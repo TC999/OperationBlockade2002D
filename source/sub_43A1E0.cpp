@@ -1,20 +1,20 @@
 //----- (0043A1E0) --------------------------------------------------------
-int __thiscall sub_43A1E0(int *this)
+int __thiscall sub_43A1E0(int *self)
 {
   int v2; // ebx
   int *v3; // esi
   int result; // eax
 
   v2 = 4;
-  this[5] = -1;
-  this[10] = 0;
-  v3 = this + 6;
+  self[5] = -1;
+  self[10] = 0;
+  v3 = self + 6;
   do
   {
     result = *v3;
     if ( *v3 )
     {
-      result = sub_4286C0(this, *v3);
+      result = sub_4286C0(self, *v3);
       if ( *v3 )
         result = (**(int (__thiscall ***)(int, int))*v3)(*v3, 1);
       *v3 = 0;

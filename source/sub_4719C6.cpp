@@ -1,5 +1,5 @@
 //----- (004719C6) --------------------------------------------------------
-int __thiscall sub_4719C6(int *this, unsigned __int8 *a2, unsigned int a3)
+int __thiscall sub_4719C6(int *self, unsigned __int8 *a2, unsigned int a3)
 {
   int *v3; // esi
   unsigned __int8 v5; // cl
@@ -51,7 +51,7 @@ int __thiscall sub_4719C6(int *this, unsigned __int8 *a2, unsigned int a3)
   unsigned int v53; // [esp+48h] [ebp+Ch]
   unsigned int v54; // [esp+48h] [ebp+Ch]
 
-  v3 = this;
+  v3 = self;
   if ( a3 < 0x12 )
     return -2147467259;
   v5 = a2[1];
@@ -209,7 +209,7 @@ LABEL_47:
         v25[1] = v21;
         if ( (unsigned int)v46 >= v35 )
         {
-          v3 = this;
+          v3 = self;
           goto LABEL_50;
         }
       }
@@ -307,7 +307,7 @@ LABEL_78:
         --v31;
         if ( !v34 )
         {
-          v3 = this;
+          v3 = self;
           goto LABEL_78;
         }
       }

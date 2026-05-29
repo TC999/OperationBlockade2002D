@@ -1,5 +1,5 @@
 //----- (00429B00) --------------------------------------------------------
-char *__thiscall sub_429B00(char *this)
+char *__thiscall sub_429B00(char *self)
 {
-  return this + 12;
+  return self + 12;
 }

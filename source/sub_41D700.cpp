@@ -1,5 +1,5 @@
 //----- (0041D700) --------------------------------------------------------
-int __thiscall sub_41D700(_DWORD *this)
+int __thiscall sub_41D700(_DWORD *self)
 {
   int result; // eax
   int v3; // ecx
@@ -8,11 +8,11 @@ int __thiscall sub_41D700(_DWORD *this)
   _DWORD *v6; // edx
   int v7; // ecx
 
-  result = this[68] - 1;
-  this[68] = result;
+  result = self[68] - 1;
+  self[68] = result;
   if ( !result )
   {
-    result = this[69];
+    result = self[69];
     if ( !result )
     {
       result = dword_5200E8;
@@ -25,7 +25,7 @@ int __thiscall sub_41D700(_DWORD *this)
         {
           v5 = (_DWORD *)*v4;
           v6 = (_DWORD *)*v4;
-          while ( (_DWORD *)*v6 != this )
+          while ( (_DWORD *)*v6 != self )
           {
             ++result;
             ++v6;
@@ -43,10 +43,10 @@ int __thiscall sub_41D700(_DWORD *this)
         }
       }
 LABEL_11:
-      if ( this )
+      if ( self )
       {
-        sub_403880((int)this);
-        return sub_4885A6(this);
+        sub_403880((int)self);
+        return sub_4885A6(self);
       }
     }
   }

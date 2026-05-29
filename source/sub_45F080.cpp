@@ -1,5 +1,5 @@
 //----- (0045F080) --------------------------------------------------------
-int __thiscall sub_45F080(_DWORD *this)
+int __thiscall sub_45F080(_DWORD *self)
 {
   int v2; // eax
   int v3; // ebp
@@ -10,22 +10,22 @@ int __thiscall sub_45F080(_DWORD *this)
   _DWORD *v8; // edi
   int v9; // ebp
 
-  v2 = this[642];
+  v2 = self[642];
   if ( v2 )
-    v3 = (this[643] - v2) >> 3;
+    v3 = (self[643] - v2) >> 3;
   else
     v3 = 0;
   for ( i = 0; i < v3; ++i )
   {
-    sub_4286C0(this, *(_DWORD *)(*(_DWORD *)(this[642] + 8 * i) + 652));
-    v5 = *(_DWORD *)(*(_DWORD *)(this[642] + 8 * i) + 652);
+    sub_4286C0(self, *(_DWORD *)(*(_DWORD *)(self[642] + 8 * i) + 652));
+    v5 = *(_DWORD *)(*(_DWORD *)(self[642] + 8 * i) + 652);
     (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v5 + 24))(v5, 0);
-    v6 = *(_DWORD *)(this[642] + 8 * i);
+    v6 = *(_DWORD *)(self[642] + 8 * i);
     (*(void (__thiscall **)(int))(*(_DWORD *)v6 + 8))(v6);
   }
-  result = this[643];
-  this[643] = this[642];
-  v8 = this + 680;
+  result = self[643];
+  self[643] = self[642];
+  v8 = self + 680;
   v9 = 100;
   do
   {
@@ -39,6 +39,6 @@ int __thiscall sub_45F080(_DWORD *this)
     --v9;
   }
   while ( v9 );
-  this[645] = 0;
+  self[645] = 0;
   return result;
 }

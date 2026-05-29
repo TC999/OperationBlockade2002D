@@ -1,5 +1,5 @@
 //----- (0040BB60) --------------------------------------------------------
-_DWORD *__thiscall sub_40BB60(_DWORD *this, _DWORD *a2, int a3)
+_DWORD *__thiscall sub_40BB60(_DWORD *self, _DWORD *a2, int a3)
 {
   _DWORD *result; // eax
   int v4; // ebp
@@ -14,9 +14,9 @@ _DWORD *__thiscall sub_40BB60(_DWORD *this, _DWORD *a2, int a3)
   int i; // [esp+1Ch] [ebp+8h]
 
   result = a2;
-  v4 = this[2];
+  v4 = self[2];
   v5 = a3;
-  v12 = this;
+  v12 = self;
   v6 = a2;
   if ( a3 != v4 )
   {
@@ -34,14 +34,14 @@ _DWORD *__thiscall sub_40BB60(_DWORD *this, _DWORD *a2, int a3)
       if ( v5 == v4 )
         break;
     }
-    this = v12;
+    self = v12;
     result = a2;
   }
-  v10 = (_DWORD *)this[2];
+  v10 = (_DWORD *)self[2];
   v11 = (int)v6;
   if ( v6 == v10 )
   {
-    this[2] = v6;
+    self[2] = v6;
   }
   else
   {

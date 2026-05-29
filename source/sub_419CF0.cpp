@@ -1,5 +1,5 @@
 //----- (00419CF0) --------------------------------------------------------
-char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
+char *__thiscall sub_419CF0(char *self, char *a2, unsigned int a3, _DWORD *a4)
 {
   char *v4; // ebx
   char *result; // eax
@@ -36,17 +36,17 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
   unsigned int v38; // [esp+1Ch] [ebp+4h]
   int v39; // [esp+20h] [ebp+8h]
 
-  v4 = this;
-  result = (char *)*((_DWORD *)this + 2);
+  v4 = self;
+  result = (char *)*((_DWORD *)self + 2);
   v6 = a3;
-  if ( (*((_DWORD *)this + 3) - (int)result) >> 4 >= a3 )
+  if ( (*((_DWORD *)self + 3) - (int)result) >> 4 >= a3 )
   {
     if ( (result - a2) >> 4 >= a3 )
     {
       if ( a3 )
       {
         v29 = 16 * a3;
-        v30 = (_DWORD *)*((_DWORD *)this + 2);
+        v30 = (_DWORD *)*((_DWORD *)self + 2);
         v31 = &result[-16 * a3];
         if ( v31 != result )
         {
@@ -64,7 +64,7 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
             v30 += 4;
           }
           while ( v31 != result );
-          v4 = this;
+          v4 = self;
         }
         v32 = (_DWORD *)*((_DWORD *)v4 + 2);
         v33 = (char *)&v32[v29 / 0xFFFFFFFC];
@@ -89,8 +89,8 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
           *((_DWORD *)v35 + 1) = a4[1];
           *((_DWORD *)v35 + 2) = a4[2];
         }
-        result = this;
-        *((_DWORD *)this + 2) += v29;
+        result = self;
+        *((_DWORD *)self + 2) += v29;
       }
     }
     else
@@ -115,7 +115,7 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
           v21 += 16;
         }
         while ( v22 != result );
-        v4 = this;
+        v4 = self;
       }
       v23 = (char *)*((_DWORD *)v4 + 2);
       v24 = a4;
@@ -136,7 +136,7 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
           --v25;
         }
         while ( v25 );
-        v4 = this;
+        v4 = self;
       }
       v26 = (char *)*((_DWORD *)v4 + 2);
       for ( j = a2; j != v26; *((_DWORD *)v28 + 3) = v24[3] )
@@ -147,13 +147,13 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
         *((_DWORD *)v28 + 1) = v24[1];
         *((_DWORD *)v28 + 2) = v24[2];
       }
-      result = this;
-      *((_DWORD *)this + 2) += v20;
+      result = self;
+      *((_DWORD *)self + 2) += v20;
     }
   }
   else
   {
-    v7 = *((_DWORD *)this + 1);
+    v7 = *((_DWORD *)self + 1);
     if ( !v7 || (v8 = (int)&result[-v7] >> 4, a3 >= v8) )
       v8 = a3;
     if ( v7 )
@@ -182,7 +182,7 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
         v12 += 4;
       }
       while ( v13 != a2 );
-      v4 = this;
+      v4 = self;
     }
     v14 = v12;
     if ( v6 )
@@ -201,7 +201,7 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
         --v38;
       }
       while ( v38 );
-      v4 = this;
+      v4 = self;
     }
     v15 = (char *)*((_DWORD *)v4 + 2);
     v16 = &v12[4 * v6];
@@ -222,21 +222,21 @@ char *__thiscall sub_419CF0(char *this, char *a2, unsigned int a3, _DWORD *a4)
       }
       while ( v17 != v15 );
     }
-    sub_4885A6(*((LPVOID *)this + 1));
-    v18 = *((_DWORD *)this + 1);
-    *((_DWORD *)this + 3) = &v37[4 * v39];
+    sub_4885A6(*((LPVOID *)self + 1));
+    v18 = *((_DWORD *)self + 1);
+    *((_DWORD *)self + 3) = &v37[4 * v39];
     if ( v18 )
     {
-      v19 = *((_DWORD *)this + 2);
-      *((_DWORD *)this + 1) = v37;
+      v19 = *((_DWORD *)self + 2);
+      *((_DWORD *)self + 1) = v37;
       result = (char *)&v37[4 * v6 + 4 * ((v19 - v18) >> 4)];
     }
     else
     {
-      *((_DWORD *)this + 1) = v37;
+      *((_DWORD *)self + 1) = v37;
       result = (char *)&v37[4 * v6];
     }
-    *((_DWORD *)this + 2) = result;
+    *((_DWORD *)self + 2) = result;
   }
   return result;
 }

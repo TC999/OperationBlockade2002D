@@ -1,5 +1,5 @@
 //----- (00423520) --------------------------------------------------------
-char __thiscall sub_423520(int this, char a2)
+char __thiscall sub_423520(int self, char a2)
 {
   int v2; // ebp
   int v3; // esi
@@ -16,18 +16,18 @@ char __thiscall sub_423520(int this, char a2)
   int v14; // [esp+8h] [ebp-4h]
 
   v2 = 0;
-  v13 = this;
-  v14 = *(_DWORD *)(this + 28);
+  v13 = self;
+  v14 = *(_DWORD *)(self + 28);
   if ( v14 <= 0 )
   {
     result = a2;
-    *(_BYTE *)(this + 16) = a2;
+    *(_BYTE *)(self + 16) = a2;
   }
   else
   {
     while ( 1 )
     {
-      v3 = *(_DWORD *)(*(_DWORD *)(this + 24) + 4 * v2);
+      v3 = *(_DWORD *)(*(_DWORD *)(self + 24) + 4 * v2);
       v4 = *(_DWORD *)(v3 + 176);
       if ( v4 )
       {
@@ -59,7 +59,7 @@ char __thiscall sub_423520(int this, char a2)
       result = v14;
       if ( ++v2 >= v14 )
         break;
-      this = v13;
+      self = v13;
     }
     *(_BYTE *)(v13 + 16) = a2;
   }

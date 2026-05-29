@@ -1,8 +1,8 @@
 //----- (00476BED) --------------------------------------------------------
-LPVOID *__thiscall sub_476BED(LPVOID *this, char a2)
+LPVOID *__thiscall sub_476BED(LPVOID *self, char a2)
 {
-  sub_476C0C(this);
+  sub_476C0C(self);
   if ( (a2 & 1) != 0 )
-    sub_4885A6(this);
-  return this;
+    sub_4885A6(self);
+  return self;
 }

@@ -1,5 +1,5 @@
 //----- (0044DF20) --------------------------------------------------------
-void __thiscall sub_44DF20(char *this, float a2, float a3, float *a4)
+void __thiscall sub_44DF20(char *self, float a2, float a3, float *a4)
 {
   int v6; // edx
   float v7; // ebx
@@ -38,6 +38,6 @@ void __thiscall sub_44DF20(char *this, float a2, float a3, float *a4)
       sub_44A490(*(char **)(dword_520970 + 276), v11, (_DWORD *)LODWORD(v7), a4, 0, 0);
     v12 = *(float **)(LODWORD(a2) + 316);
     if ( v12 )
-      sub_44DD20(this, v12, (_DWORD *)LODWORD(v7));
+      sub_44DD20(self, v12, (_DWORD *)LODWORD(v7));
   }
 }

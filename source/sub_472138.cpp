@@ -1,5 +1,5 @@
 //----- (00472138) --------------------------------------------------------
-int __thiscall sub_472138(_DWORD *this, int a2, int a3)
+int __thiscall sub_472138(_DWORD *self, int a2, int a3)
 {
   int *v4; // eax
   _DWORD *v5; // esi
@@ -46,7 +46,7 @@ int __thiscall sub_472138(_DWORD *this, int a2, int a3)
   int v46; // [esp+168h] [ebp-8h] BYREF
   int *__attribute__((__org_typedef(jmp_buf))) Buf; // [esp+16Ch] [ebp-4h] BYREF
 
-  v34 = this;
+  v34 = self;
   Buf = 0;
   v46 = 0;
   v41 = 0;

@@ -1,5 +1,5 @@
 //----- (00413780) --------------------------------------------------------
-_DWORD *__thiscall sub_413780(_DWORD *this)
+_DWORD *__thiscall sub_413780(_DWORD *self)
 {
   _DWORD *v2; // esi
   _DWORD *result; // eax
@@ -23,9 +23,9 @@ _DWORD *__thiscall sub_413780(_DWORD *this)
   {
     result = 0;
   }
-  result[173] = this[10];
-  v4 = this[9] + 1;
-  this[10] = result;
-  this[9] = v4;
+  result[173] = self[10];
+  v4 = self[9] + 1;
+  self[10] = result;
+  self[9] = v4;
   return result;
 }

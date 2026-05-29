@@ -1,5 +1,5 @@
 //----- (0045F160) --------------------------------------------------------
-void __thiscall sub_45F160(float *this, float *a2)
+void __thiscall sub_45F160(float *self, float *a2)
 {
   int v3; // eax
   int v4; // ecx
@@ -13,23 +13,23 @@ void __thiscall sub_45F160(float *this, float *a2)
   int v12; // edx
   float *v13; // eax
 
-  v3 = *((_DWORD *)this + 131);
+  v3 = *((_DWORD *)self + 131);
   if ( v3 )
   {
     if ( v3 == 1 )
     {
-      *a2 = this[588];
-      a2[1] = this[589];
-      a2[2] = this[590];
+      *a2 = self[588];
+      a2[1] = self[589];
+      a2[2] = self[590];
     }
     else
     {
-      v4 = *((_DWORD *)this + 130);
+      v4 = *((_DWORD *)self + 130);
       v5 = 0;
       if ( v4 <= 0 )
         goto LABEL_11;
-      v6 = this + 231;
-      v7 = *((_DWORD *)this + 130);
+      v6 = self + 231;
+      v7 = *((_DWORD *)self + 130);
       do
       {
         if ( *v6 > 0.0 )
@@ -44,13 +44,13 @@ void __thiscall sub_45F160(float *this, float *a2)
         {
           v10 = 10 * v4 - 1;
           v11 = rand();
-          v4 = *((_DWORD *)this + 130);
+          v4 = *((_DWORD *)self + 130);
           v12 = v11 % (v10 + 1) / 10;
           if ( v12 >= v4 )
             v12 = 0;
         }
-        while ( this[88 * v12 + 231] <= 0.0 );
-        v13 = &this[13 * LODWORD(this[88 * v12 + 220]) + 588];
+        while ( self[88 * v12 + 231] <= 0.0 );
+        v13 = &self[13 * LODWORD(self[88 * v12 + 220]) + 588];
         *a2 = *v13;
         a2[1] = v13[1];
         a2[2] = v13[2];
@@ -59,12 +59,12 @@ void __thiscall sub_45F160(float *this, float *a2)
       {
 LABEL_11:
         v8 = rand() % (10 * v4) / 10;
-        if ( v8 >= *((_DWORD *)this + 130) )
+        if ( v8 >= *((_DWORD *)self + 130) )
           v8 = 0;
-        v9 = 13 * LODWORD(this[88 * v8 + 220]);
-        *a2 = this[13 * LODWORD(this[88 * v8 + 220]) + 588];
-        a2[1] = this[v9 + 589];
-        a2[2] = this[v9 + 590];
+        v9 = 13 * LODWORD(self[88 * v8 + 220]);
+        *a2 = self[13 * LODWORD(self[88 * v8 + 220]) + 588];
+        a2[1] = self[v9 + 589];
+        a2[2] = self[v9 + 590];
       }
     }
   }

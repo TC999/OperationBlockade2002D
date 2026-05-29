@@ -1,12 +1,12 @@
 //----- (004013F0) --------------------------------------------------------
-int __thiscall sub_4013F0(_DWORD *this)
+int __thiscall sub_4013F0(_DWORD *self)
 {
   int result; // eax
 
-  *this = &off_49901C;
+  *self = &off_49901C;
   result = sub_408F30(dword_520970);
-  if ( (_DWORD *)result == this )
+  if ( (_DWORD *)result == self )
     result = sub_408EF0(0);
-  *this = &off_499040;
+  *self = &off_499040;
   return result;
 }

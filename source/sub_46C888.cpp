@@ -1,5 +1,5 @@
 //----- (0046C888) --------------------------------------------------------
-unsigned int *__thiscall sub_46C888(unsigned int *this, unsigned int a2)
+unsigned int *__thiscall sub_46C888(unsigned int *self, unsigned int a2)
 {
   unsigned int v3; // ecx
   unsigned int v4; // ebx
@@ -11,14 +11,14 @@ unsigned int *__thiscall sub_46C888(unsigned int *this, unsigned int a2)
 
   v3 = a2;
   v4 = a2 & 0xE;
-  *this = a2;
-  this[2] = 0;
-  this[3] = 0;
-  this[4] = 0;
-  this[5] = 0;
-  this[6] = 0;
-  this[7] = 0;
-  this[8] = 0;
+  *self = a2;
+  self[2] = 0;
+  self[3] = 0;
+  self[4] = 0;
+  self[5] = 0;
+  self[6] = 0;
+  self[7] = 0;
+  self[8] = 0;
   v5 = 12;
   if ( v4 == 4 )
   {
@@ -41,39 +41,39 @@ unsigned int *__thiscall sub_46C888(unsigned int *this, unsigned int a2)
       v3 = a2;
     }
     v5 += 4 * v6;
-    this[7] = v6;
+    self[7] = v6;
   }
   if ( (v3 & 0x10) != 0 )
   {
-    this[2] = v5;
+    self[2] = v5;
     v5 += 12;
   }
   if ( (v3 & 0x20) != 0 )
   {
-    this[3] = v5;
+    self[3] = v5;
     v5 += 4;
   }
   if ( (v3 & 0x40) != 0 )
   {
-    this[4] = v5;
+    self[4] = v5;
     v5 += 4;
   }
   if ( (v3 & 0x80u) != 0 )
   {
-    this[5] = v5;
+    self[5] = v5;
     v5 += 4;
   }
   if ( (v3 & 0xF00) != 0 )
   {
     v7 = (v3 >> 8) & 0xF;
     v8 = HIWORD(v3);
-    this[6] = v5;
-    for ( this[8] = v7; v7; --v7 )
+    self[6] = v5;
+    for ( self[8] = v7; v7; --v7 )
     {
       v5 += dword_499ED8[v8 & 3];
       v8 >>= 2;
     }
   }
-  this[1] = v5;
-  return this;
+  self[1] = v5;
+  return self;
 }

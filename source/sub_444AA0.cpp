@@ -1,5 +1,5 @@
 //----- (00444AA0) --------------------------------------------------------
-char __thiscall sub_444AA0(int this, int a2)
+char __thiscall sub_444AA0(int self, int a2)
 {
   double v3; // st7
   double v4; // st6
@@ -306,70 +306,70 @@ char __thiscall sub_444AA0(int this, int a2)
   _BYTE v307[64]; // [esp+348h] [ebp-80h] BYREF
   int v308[16]; // [esp+388h] [ebp-40h] BYREF
 
-  if ( !*(_BYTE *)(this + 392) && *(float *)(this + 432) > 0.0 )
+  if ( !*(_BYTE *)(self + 392) && *(float *)(self + 432) > 0.0 )
   {
-    v3 = *(float *)(this + 432) - *(float *)&a2;
-    *(float *)(this + 432) = v3;
-    v4 = *(float *)(*(_DWORD *)(this + 408) + 684);
+    v3 = *(float *)(self + 432) - *(float *)&a2;
+    *(float *)(self + 432) = v3;
+    v4 = *(float *)(*(_DWORD *)(self + 408) + 684);
     if ( v4 == 0.0 )
     {
       v234 = 0.0;
-      sub_408960(*(_DWORD **)(this + 412), 0.0);
+      sub_408960(*(_DWORD **)(self + 412), 0.0);
     }
     else
     {
       v234 = v3 / v4;
       if ( v234 < 1.0 )
-        sub_408960(*(_DWORD **)(this + 412), v234);
+        sub_408960(*(_DWORD **)(self + 412), v234);
     }
     if ( v234 <= 0.0 )
     {
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)this + 24))(this, 0);
-      return sub_428620((_DWORD *)this, a2);
+      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+      return sub_428620((_DWORD *)self, a2);
     }
   }
-  v6 = (float *)(this + 476);
-  v7 = (float *)(this + 452);
+  v6 = (float *)(self + 476);
+  v7 = (float *)(self + 452);
   sub_4159B0(
-    *(_DWORD *)(this + 444),
+    *(_DWORD *)(self + 444),
     *(float *)&a2,
-    (_DWORD *)(this + 452),
-    (_DWORD *)(this + 464),
-    (float *)(this + 476),
-    (float *)(this + 480),
-    (float *)(this + 492));
-  if ( *(_BYTE *)(this + 448) )
+    (_DWORD *)(self + 452),
+    (_DWORD *)(self + 464),
+    (float *)(self + 476),
+    (float *)(self + 480),
+    (float *)(self + 492));
+  if ( *(_BYTE *)(self + 448) )
   {
     *(float *)&v246 = -*v7;
-    v247 = -*(float *)(this + 456);
-    v248 = -*(float *)(this + 460);
-    sub_46B970(this + 464, &v246);
+    v247 = -*(float *)(self + 456);
+    v248 = -*(float *)(self + 460);
+    sub_46B970(self + 464, &v246);
   }
-  v8 = *(_DWORD *)(this + 408);
+  v8 = *(_DWORD *)(self + 408);
   v9 = *(float *)(v8 + 688);
   if ( v9 == 0.0 )
     v10 = 0.0;
   else
-    v10 = *(float *)(this + 492) / v9;
-  *(float *)(this + 472) = tan(v10 * *(float *)(v8 + 724));
-  sub_46B970(this + 464, this + 464);
-  *v6 = *(float *)(*(_DWORD *)(this + 408) + 720) * *v6;
-  v11 = *(_DWORD *)(this + 408);
+    v10 = *(float *)(self + 492) / v9;
+  *(float *)(self + 472) = tan(v10 * *(float *)(v8 + 724));
+  sub_46B970(self + 464, self + 464);
+  *v6 = *(float *)(*(_DWORD *)(self + 408) + 720) * *v6;
+  v11 = *(_DWORD *)(self + 408);
   if ( *(_DWORD *)(v11 + 292) == 1 )
   {
     v12 = *(float *)(v11 + 688) - *(float *)(v11 + 812);
-    if ( v12 == 0.0 || (v13 = (*(float *)(this + 492) - *(float *)(v11 + 812)) / v12, v13 <= 0.0) )
+    if ( v12 == 0.0 || (v13 = (*(float *)(self + 492) - *(float *)(v11 + 812)) / v12, v13 <= 0.0) )
       v13 = 0.0;
-    *(float *)(this + 460) = -(v13 * *(float *)(v11 + 824));
+    *(float *)(self + 460) = -(v13 * *(float *)(v11 + 824));
   }
   v220 = *v6 * -1.0;
   sub_46BEE6((int)v305, v220);
-  v14 = *(float *)(this + 464) * -1.0;
+  v14 = *(float *)(self + 464) * -1.0;
   v274 = 0.0;
   v277 = 0.0;
   *(float *)&v243 = v14;
-  v244 = *(float *)(this + 468) * -1.0;
-  v245 = *(float *)(this + 472) * -1.0;
+  v244 = *(float *)(self + 468) * -1.0;
+  v245 = *(float *)(self + 472) * -1.0;
   *(float *)&v272 = v244 - 0.0;
   v275 = v272;
   v273 = 0.0 - *(float *)&v243;
@@ -384,7 +384,7 @@ char __thiscall sub_444AA0(int this, int a2)
   v247 = *(float *)&v243 * v277 - v245 * *(float *)&v275;
   v15 = *v7;
   *(float *)&v299[9] = v247;
-  v16 = *(_DWORD *)(this + 456);
+  v16 = *(_DWORD *)(self + 456);
   v299[3] = 0;
   v299[7] = 0;
   v299[11] = 0;
@@ -393,67 +393,67 @@ char __thiscall sub_444AA0(int this, int a2)
   v299[13] = v16;
   *(float *)&v299[8] = v245 * v276 - v244 * v277;
   *(float *)&v299[10] = v248;
-  v299[14] = *(_DWORD *)(this + 460);
+  v299[14] = *(_DWORD *)(self + 460);
   v299[15] = 1065353216;
   sub_46B97C(v299, v305, v299);
-  sub_4073F0(*(_DWORD **)(this + 412), 0, v299);
-  if ( !(unsigned __int8)sub_4438C0(this)
-    && sub_408880(*(_DWORD *)(this + 412)) > 0
-    && sub_4088E0(*(_DWORD *)(this + 412))
-    || ((v17 = *(_DWORD *)(this + 436), v17 == 1) || v17 == 2)
-    && *(float *)(this + 460) * *(float *)(this + 488)
-     + *(float *)(this + 456) * *(float *)(this + 484)
-     + *(float *)(this + 480) * *v7 > 0.0
+  sub_4073F0(*(_DWORD **)(self + 412), 0, v299);
+  if ( !(unsigned __int8)sub_4438C0(self)
+    && sub_408880(*(_DWORD *)(self + 412)) > 0
+    && sub_4088E0(*(_DWORD *)(self + 412))
+    || ((v17 = *(_DWORD *)(self + 436), v17 == 1) || v17 == 2)
+    && *(float *)(self + 460) * *(float *)(self + 488)
+     + *(float *)(self + 456) * *(float *)(self + 484)
+     + *(float *)(self + 480) * *v7 > 0.0
     && !v19 )
   {
-    if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 3 )
+    if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 3 )
     {
       for ( i = 0; ; ++i )
       {
-        v21 = *(_DWORD *)(this + 524);
-        if ( !v21 || i >= (*(_DWORD *)(this + 528) - v21) >> 2 )
+        v21 = *(_DWORD *)(self + 524);
+        if ( !v21 || i >= (*(_DWORD *)(self + 528) - v21) >> 2 )
           break;
         if ( !*(_BYTE *)(*(_DWORD *)(v21 + 4 * i) + 436) )
         {
           sub_467A50(0);
-          v22 = *(_DWORD *)(*(_DWORD *)(this + 524) + 4 * i);
+          v22 = *(_DWORD *)(*(_DWORD *)(self + 524) + 4 * i);
           (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v22 + 24))(v22, 0);
         }
       }
     }
-    if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 6 )
+    if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 6 )
     {
       for ( j = 0; ; ++j )
       {
-        v24 = *(_DWORD *)(this + 1392);
-        if ( !v24 || j >= (*(_DWORD *)(this + 1396) - v24) >> 2 )
+        v24 = *(_DWORD *)(self + 1392);
+        if ( !v24 || j >= (*(_DWORD *)(self + 1396) - v24) >> 2 )
           break;
         v25 = *(_DWORD *)(v24 + 4 * j);
         if ( !*(_BYTE *)(v25 + 460) )
         {
           sub_4333C0(v25, 0);
-          v26 = *(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * j);
+          v26 = *(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * j);
           (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v26 + 24))(v26, 0);
         }
       }
     }
-    *(_DWORD *)(*(_DWORD *)(this + 416) + 76) = 0;
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)this + 24))(this, 0);
+    *(_DWORD *)(*(_DWORD *)(self + 416) + 76) = 0;
+    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
     sub_4477F0(0);
   }
-  if ( !(unsigned __int8)sub_4438C0(this) && !sub_408880(*(_DWORD *)(this + 412)) )
+  if ( !(unsigned __int8)sub_4438C0(self) && !sub_408880(*(_DWORD *)(self + 412)) )
   {
-    v27 = *(float *)(this + 428) - *(float *)&a2;
-    v28 = *(_DWORD *)(this + 408);
-    *(float *)(this + 428) = v27;
-    if ( v27 <= *(float *)(v28 + 664) && (sub_4088A0(*(_DWORD *)(this + 412)) || sub_4088E0(*(_DWORD *)(this + 412))) )
+    v27 = *(float *)(self + 428) - *(float *)&a2;
+    v28 = *(_DWORD *)(self + 408);
+    *(float *)(self + 428) = v27;
+    if ( v27 <= *(float *)(v28 + 664) && (sub_4088A0(*(_DWORD *)(self + 412)) || sub_4088E0(*(_DWORD *)(self + 412))) )
     {
-      if ( sub_4088E0(*(_DWORD *)(this + 412)) )
+      if ( sub_4088E0(*(_DWORD *)(self + 412)) )
       {
-        sub_408860(*(_DWORD *)(*(_DWORD *)(this + 408) + 636));
+        sub_408860(*(_DWORD *)(*(_DWORD *)(self + 408) + 636));
 LABEL_56:
-        *(_BYTE *)(*(_DWORD *)(this + 412) + 48) = 0;
-        v35 = *(_DWORD *)(this + 408);
+        *(_BYTE *)(*(_DWORD *)(self + 412) + 48) = 0;
+        v35 = *(_DWORD *)(self + 408);
         v235 = *(float *)(v35 + 656);
         v249 = *(float *)(v35 + 660);
         if ( v235 == v249 )
@@ -465,12 +465,12 @@ LABEL_56:
           v241 = COERCE_FLOAT(rand());
           v36 = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v235) + v235;
         }
-        *(float *)(*(_DWORD *)(this + 412) + 36) = v36;
-        v221 = sub_408920(*(_DWORD *)(this + 412));
-        sub_44DBF0(*(_DWORD *)(*(_DWORD *)(this + 408) + 748), COERCE_FLOAT(this + 452), v221);
+        *(float *)(*(_DWORD *)(self + 412) + 36) = v36;
+        v221 = sub_408920(*(_DWORD *)(self + 412));
+        sub_44DBF0(*(_DWORD *)(*(_DWORD *)(self + 408) + 748), COERCE_FLOAT(self + 452), v221);
         goto LABEL_60;
       }
-      v30 = *(float *)(this + 420);
+      v30 = *(float *)(self + 420);
       v31 = v29;
       v32 = v30 < 0.0;
       v33 = v30 == 0.0;
@@ -478,78 +478,78 @@ LABEL_56:
       {
         if ( !v32 && !v33 )
         {
-          sub_408860(*(_DWORD *)(*(_DWORD *)(this + 408) + 628));
+          sub_408860(*(_DWORD *)(*(_DWORD *)(self + 408) + 628));
           goto LABEL_56;
         }
-        v34 = *(_DWORD *)(*(_DWORD *)(this + 408) + 620);
+        v34 = *(_DWORD *)(*(_DWORD *)(self + 408) + 620);
       }
       else
       {
         if ( v32 || v33 )
         {
-          sub_408860(*(_DWORD *)(*(_DWORD *)(this + 408) + 624));
+          sub_408860(*(_DWORD *)(*(_DWORD *)(self + 408) + 624));
           goto LABEL_56;
         }
-        v34 = *(_DWORD *)(*(_DWORD *)(this + 408) + 632);
+        v34 = *(_DWORD *)(*(_DWORD *)(self + 408) + 632);
       }
       sub_408860(v34);
       goto LABEL_56;
     }
   }
 LABEL_60:
-  if ( (unsigned __int8)sub_4438C0(this) )
+  if ( (unsigned __int8)sub_4438C0(self) )
   {
-    v37 = *(_DWORD *)(*(_DWORD *)(this + 408) + 292);
+    v37 = *(_DWORD *)(*(_DWORD *)(self + 408) + 292);
     if ( v37 )
     {
       switch ( v37 )
       {
         case 1:
-          if ( !*(_DWORD *)(this + 436) )
+          if ( !*(_DWORD *)(self + 436) )
           {
-            v43 = *(float *)(this + 504) - *(float *)&a2;
-            v44 = *(_BYTE *)(this + 1424);
-            *(float *)(this + 504) = v43;
+            v43 = *(float *)(self + 504) - *(float *)&a2;
+            v44 = *(_BYTE *)(self + 1424);
+            *(float *)(self + 504) = v43;
             if ( !v44 || v43 <= 0.0 )
             {
-              *(_DWORD *)(this + 436) = 2;
-              *(_BYTE *)(*(_DWORD *)(this + 444) + 4316) = 0;
+              *(_DWORD *)(self + 436) = 2;
+              *(_BYTE *)(*(_DWORD *)(self + 444) + 4316) = 0;
             }
-            if ( !*(_DWORD *)(this + 436) )
+            if ( !*(_DWORD *)(self + 436) )
             {
-              v45 = *(float *)(this + 496) - *(float *)&a2;
-              *(float *)(this + 496) = v45;
+              v45 = *(float *)(self + 496) - *(float *)&a2;
+              *(float *)(self + 496) = v45;
               if ( v45 <= 0.0 )
               {
-                *(_DWORD *)(this + 436) = 3;
-                v46 = *(_DWORD *)(this + 408);
+                *(_DWORD *)(self + 436) = 3;
+                v46 = *(_DWORD *)(self + 408);
                 v238 = *(float *)(v46 + 796);
                 v249 = *(float *)(v46 + 800);
                 if ( v238 == v249 )
                 {
-                  *(float *)(this + 496) = v238;
+                  *(float *)(self + 496) = v238;
                 }
                 else
                 {
                   v241 = COERCE_FLOAT(rand());
-                  *(float *)(this + 496) = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v238) + v238;
+                  *(float *)(self + 496) = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v238) + v238;
                 }
               }
             }
           }
           break;
         case 2:
-          if ( *(float *)(this + 508) > 0.0 )
+          if ( *(float *)(self + 508) > 0.0 )
           {
-            v47 = *(float *)(this + 508) - *(float *)&a2;
-            *(float *)(this + 508) = v47;
+            v47 = *(float *)(self + 508) - *(float *)&a2;
+            *(float *)(self + 508) = v47;
             if ( v47 <= 0.0 && !*(_BYTE *)(dword_4F5CC4 + 937) )
             {
-              sub_444030((_DWORD *)this, 1);
+              sub_444030((_DWORD *)self, 1);
               sub_4477F0(0);
-              *(_DWORD *)(*(_DWORD *)(this + 412) + 36) = 1065353216;
-              *(_BYTE *)(*(_DWORD *)(this + 412) + 48) = 0;
-              v48 = *(_DWORD *)(this + 408);
+              *(_DWORD *)(*(_DWORD *)(self + 412) + 36) = 1065353216;
+              *(_BYTE *)(*(_DWORD *)(self + 412) + 48) = 0;
+              v48 = *(_DWORD *)(self + 408);
               v239 = *(float *)(v48 + 840);
               v249 = *(float *)(v48 + 844);
               if ( v239 == v249 )
@@ -561,72 +561,72 @@ LABEL_60:
                 v241 = COERCE_FLOAT(rand());
                 v49 = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v239) + v239;
               }
-              v241 = *(float *)(*(_DWORD *)(this + 408) + 836);
-              *(_DWORD *)(this + 512) = sub_455AC0(
+              v241 = *(float *)(*(_DWORD *)(self + 408) + 836);
+              *(_DWORD *)(self + 512) = sub_455AC0(
                                           (__int64)((double)SLODWORD(v241) * v49),
                                           LODWORD(v241) - (__int64)((double)SLODWORD(v241) * v49),
-                                          this + 452,
-                                          this + 464,
+                                          self + 452,
+                                          self + 464,
                                           300.0,
                                           40.0);
-              *(_BYTE *)(this + 516) = 0;
+              *(_BYTE *)(self + 516) = 0;
               if ( *(_BYTE *)(dword_4F5CC4 + 936) )
               {
-                HIWORD(v253) = *(_WORD *)(this + 1456);
+                HIWORD(v253) = *(_WORD *)(self + 1456);
                 sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x205, &v252, 8, 10, 2000);
               }
             }
           }
           break;
         case 3:
-          if ( *(float *)(this + 508) > 0.0 )
+          if ( *(float *)(self + 508) > 0.0 )
           {
-            v50 = *(float *)(this + 508) - *(float *)&a2;
-            *(float *)(this + 508) = v50;
+            v50 = *(float *)(self + 508) - *(float *)&a2;
+            *(float *)(self + 508) = v50;
             if ( v50 <= 0.0 )
             {
-              sub_444030((_DWORD *)this, 1);
+              sub_444030((_DWORD *)self, 1);
               sub_4477F0(0);
-              *(_DWORD *)(*(_DWORD *)(this + 412) + 36) = 1065353216;
-              *(_BYTE *)(*(_DWORD *)(this + 412) + 48) = 0;
+              *(_DWORD *)(*(_DWORD *)(self + 412) + 36) = 1065353216;
+              *(_BYTE *)(*(_DWORD *)(self + 412) + 48) = 0;
               if ( *(_BYTE *)(dword_4F5CC4 + 936) )
               {
-                HIWORD(v253) = *(_WORD *)(this + 1456);
+                HIWORD(v253) = *(_WORD *)(self + 1456);
                 sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x205, &v252, 8, 10, 2000);
               }
             }
           }
           while ( 1 )
           {
-            v51 = *(_DWORD *)(this + 524);
+            v51 = *(_DWORD *)(self + 524);
             if ( !v51
-              || !((*(_DWORD *)(this + 528) - v51) >> 2)
-              || !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(this + 528) - 4) + 436) )
+              || !((*(_DWORD *)(self + 528) - v51) >> 2)
+              || !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 528) - 4) + 436) )
             {
               break;
             }
-            sub_448350(*(_DWORD *)(this + 528) - 4);
+            sub_448350(*(_DWORD *)(self + 528) - 4);
           }
-          if ( sub_4088E0(*(_DWORD *)(this + 412)) )
+          if ( sub_4088E0(*(_DWORD *)(self + 412)) )
           {
-            v52 = *(_DWORD *)(this + 524);
+            v52 = *(_DWORD *)(self + 524);
             if ( v52 )
             {
-              if ( (*(_DWORD *)(this + 528) - v52) >> 2 )
+              if ( (*(_DWORD *)(self + 528) - v52) >> 2 )
               {
-                v53 = *(float *)(this + 536) - *(float *)&a2;
-                *(float *)(this + 536) = v53;
+                v53 = *(float *)(self + 536) - *(float *)&a2;
+                *(float *)(self + 536) = v53;
                 if ( v53 <= 0.0 )
                 {
                   sub_406BE0(v295);
-                  v54 = *(_DWORD *)(this + 524);
+                  v54 = *(_DWORD *)(self + 524);
                   if ( v54 )
-                    v55 = (*(_DWORD *)(this + 528) - v54) >> 2;
+                    v55 = (*(_DWORD *)(self + 528) - v54) >> 2;
                   else
                     v55 = 0;
                   sub_407690(
-                    *(_DWORD *)(this + 412),
-                    *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 864) + 4 * v55 - 4),
+                    *(_DWORD *)(self + 412),
+                    *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 864) + 4 * v55 - 4),
                     v295);
                   *(float *)&v261 = 0.0;
                   v262 = 0.0;
@@ -636,7 +636,7 @@ LABEL_60:
                   v245 = 0.0;
                   sub_46C5C5(&v261, &v261, v295);
                   sub_46B976(&v243, &v243, v295);
-                  sub_407690(*(_DWORD *)(this + 412), *(_DWORD *)(*(_DWORD *)(this + 408) + 876), v295);
+                  sub_407690(*(_DWORD *)(self + 412), *(_DWORD *)(*(_DWORD *)(self + 408) + 876), v295);
                   v252 = 0.0;
                   v253 = 0.0;
                   v254 = 0.0;
@@ -645,13 +645,13 @@ LABEL_60:
                   v260 = 0.0;
                   sub_46C5C5(&v252, &v252, v295);
                   sub_46B976(&v258, &v258, v295);
-                  v56 = *(_DWORD *)(this + 524);
+                  v56 = *(_DWORD *)(self + 524);
                   v231 = v245 * (v254 - v263) + v244 * (v253 - v262) + (v252 - *(float *)&v261) * *(float *)&v243;
                   if ( v56 )
-                    v57 = (*(_DWORD *)(this + 528) - v56) >> 2;
+                    v57 = (*(_DWORD *)(self + 528) - v56) >> 2;
                   else
                     v57 = 0;
-                  v58 = *(_DWORD *)(*(_DWORD *)(this + 524) + 4 * v57 - 4);
+                  v58 = *(_DWORD *)(*(_DWORD *)(self + 524) + 4 * v57 - 4);
                   sub_4164A0(*(_DWORD **)(v58 + 452), 0);
                   sub_416350(*(_DWORD *)(v58 + 452), &v261, 0);
                   sub_416350(*(_DWORD *)(v58 + 452), &v261, 0);
@@ -725,30 +725,30 @@ LABEL_60:
                   v65[2] = v245;
                   v222 = *(float *)(*(_DWORD *)(v58 + 452) + 4288) * 7.0;
                   sub_467B60(LODWORD(v222));
-                  v66 = *(_DWORD *)(this + 524);
+                  v66 = *(_DWORD *)(self + 524);
                   v241 = 0.0;
                   if ( v66 )
-                    v67 = (*(_DWORD *)(this + 528) - v66) >> 2;
+                    v67 = (*(_DWORD *)(self + 528) - v66) >> 2;
                   else
                     v67 = 0;
-                  v68 = *(_DWORD *)(this + 524);
+                  v68 = *(_DWORD *)(self + 524);
                   v69 = v67 - 1;
                   if ( v68 )
-                    v70 = (*(_DWORD *)(this + 528) - v68) >> 2;
+                    v70 = (*(_DWORD *)(self + 528) - v68) >> 2;
                   else
                     v70 = 0;
                   if ( v70 >= v69 )
                   {
-                    if ( v69 < sub_4481C0(this + 520) )
-                      sub_448300(*(_DWORD *)(this + 524) + 4 * v69, *(_DWORD *)(this + 528));
+                    if ( v69 < sub_4481C0(self + 520) )
+                      sub_448300(*(_DWORD *)(self + 524) + 4 * v69, *(_DWORD *)(self + 528));
                   }
                   else
                   {
-                    v264 = *(float *)(this + 528);
-                    v71 = sub_4481C0(this + 520);
+                    v264 = *(float *)(self + 528);
+                    v71 = sub_4481C0(self + 520);
                     sub_44F190(LODWORD(v264), v69 - v71, &v241);
                   }
-                  *(_DWORD *)(this + 536) = *(_DWORD *)(*(_DWORD *)(v58 + 412) + 1168);
+                  *(_DWORD *)(self + 536) = *(_DWORD *)(*(_DWORD *)(v58 + 412) + 1168);
                 }
               }
             }
@@ -757,50 +757,50 @@ LABEL_60:
         default:
           if ( v37 == 6 && !*(_BYTE *)(dword_4F5CC4 + 937) )
           {
-            v72 = *(_DWORD *)(this + 544);
+            v72 = *(_DWORD *)(self + 544);
             if ( v72
-              || *(float *)(this + 1404) < fabs(*(float *)(this + 456))
-              || *(int *)(this + 1408) <= 0
-              || *(int *)(this + 1420) > 0 )
+              || *(float *)(self + 1404) < fabs(*(float *)(self + 456))
+              || *(int *)(self + 1408) <= 0
+              || *(int *)(self + 1420) > 0 )
             {
               if ( v72 == 1 )
               {
-                v83 = sub_41C200((float *)(this + 552), *(float *)&a2);
+                v83 = sub_41C200((float *)(self + 552), *(float *)&a2);
                 if ( v83 < 0.0000099999997 && v83 > -0.0000099999997 )
-                  *(_DWORD *)(this + 544) = 2;
+                  *(_DWORD *)(self + 544) = 2;
               }
               else if ( v72 == 2 )
               {
                 while ( 1 )
                 {
-                  v84 = *(_DWORD *)(this + 1392);
+                  v84 = *(_DWORD *)(self + 1392);
                   if ( !v84
-                    || !((*(_DWORD *)(this + 1396) - v84) >> 2)
-                    || !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(this + 1396) - 4) + 460) )
+                    || !((*(_DWORD *)(self + 1396) - v84) >> 2)
+                    || !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 1396) - 4) + 460) )
                   {
                     break;
                   }
-                  sub_448350(*(_DWORD *)(this + 1396) - 4);
+                  sub_448350(*(_DWORD *)(self + 1396) - 4);
                 }
-                v85 = *(_DWORD *)(this + 1392);
-                if ( v85 && ((*(_DWORD *)(this + 1396) - v85) & 0xFFFFFFFC) != 0 )
+                v85 = *(_DWORD *)(self + 1392);
+                if ( v85 && ((*(_DWORD *)(self + 1396) - v85) & 0xFFFFFFFC) != 0 )
                 {
-                  v86 = *(float *)(this + 548) - *(float *)&a2;
-                  *(float *)(this + 548) = v86;
+                  v86 = *(float *)(self + 548) - *(float *)&a2;
+                  *(float *)(self + 548) = v86;
                   if ( v86 <= 0.0 )
                   {
-                    *(_DWORD *)(this + 548) = *(_DWORD *)(*(_DWORD *)(this + 408) + 900);
+                    *(_DWORD *)(self + 548) = *(_DWORD *)(*(_DWORD *)(self + 408) + 900);
                     sub_406BE0(v295);
-                    v87 = *(_DWORD *)(this + 1392);
+                    v87 = *(_DWORD *)(self + 1392);
                     if ( v87 )
-                      v88 = (*(_DWORD *)(this + 1396) - v87) >> 2;
+                      v88 = (*(_DWORD *)(self + 1396) - v87) >> 2;
                     else
                       v88 = 0;
                     sub_407690(
-                      *(_DWORD *)(this + 412),
-                      *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 908) + 4 * v88 - 4),
+                      *(_DWORD *)(self + 412),
+                      *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 908) + 4 * v88 - 4),
                       v295);
-                    v254 = sub_41C200((float *)(this + 552), 0.0);
+                    v254 = sub_41C200((float *)(self + 552), 0.0);
                     v252 = 0.0;
                     v253 = 0.0;
                     *(float *)&v243 = 0.0;
@@ -808,12 +808,12 @@ LABEL_60:
                     v245 = 0.0;
                     sub_46C5C5(&v252, &v252, v295);
                     sub_46B976(&v243, &v243, v295);
-                    v89 = *(_DWORD *)(this + 1392);
+                    v89 = *(_DWORD *)(self + 1392);
                     if ( v89 )
-                      v90 = (*(_DWORD *)(this + 1396) - v89) >> 2;
+                      v90 = (*(_DWORD *)(self + 1396) - v89) >> 2;
                     else
                       v90 = 0;
-                    v91 = *(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * v90 - 4);
+                    v91 = *(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * v90 - 4);
                     sub_4164A0(*(_DWORD **)(v91 + 468), 0);
                     sub_416350(*(_DWORD *)(v91 + 468), &v252, 0);
                     sub_416350(*(_DWORD *)(v91 + 468), &v252, 0);
@@ -823,7 +823,7 @@ LABEL_60:
                     v92 = *(_DWORD *)(v91 + 468);
                     v249 = 0.0;
                     v232 = *(float *)(v92 + 4288) * *(float *)(v92 + 4284);
-                    if ( *(float *)(*(_DWORD *)(this + 408) + 888) > 0.0 )
+                    if ( *(float *)(*(_DWORD *)(self + 408) + 888) > 0.0 )
                     {
                       do
                       {
@@ -834,7 +834,7 @@ LABEL_60:
                         v254 = v254 + v248;
                         sub_416350(*(_DWORD *)(v91 + 468), &v252, 0);
                         v93 = v249 + v232;
-                        v94 = *(_DWORD *)(this + 408);
+                        v94 = *(_DWORD *)(self + 408);
                         v249 = v93;
                       }
                       while ( v93 < *(float *)(v94 + 888) );
@@ -854,79 +854,79 @@ LABEL_60:
                 }
                 else
                 {
-                  *(_DWORD *)(this + 544) = 0;
+                  *(_DWORD *)(self + 544) = 0;
                 }
               }
             }
             else
             {
-              v73 = *(_DWORD *)(this + 1392);
-              v74 = *(_DWORD *)(this + 1412);
+              v73 = *(_DWORD *)(self + 1392);
+              v74 = *(_DWORD *)(self + 1412);
               v241 = 0.0;
               if ( v73 )
-                v75 = (*(_DWORD *)(this + 1396) - v73) >> 2;
+                v75 = (*(_DWORD *)(self + 1396) - v73) >> 2;
               else
                 v75 = 0;
               if ( v75 >= v74 )
               {
-                if ( v74 < sub_4481C0(this + 1388) )
-                  sub_448300(*(_DWORD *)(this + 1392) + 4 * v74, *(_DWORD *)(this + 1396));
+                if ( v74 < sub_4481C0(self + 1388) )
+                  sub_448300(*(_DWORD *)(self + 1392) + 4 * v74, *(_DWORD *)(self + 1396));
               }
               else
               {
-                v76 = *(_DWORD *)(this + 1396);
-                v77 = sub_4481C0(this + 1388);
+                v76 = *(_DWORD *)(self + 1396);
+                v77 = sub_4481C0(self + 1388);
                 sub_44F190(v76, v74 - v77, &v241);
               }
               for ( k = 0; ; ++k )
               {
-                v79 = *(_DWORD *)(this + 1392);
-                if ( !v79 || k >= (*(_DWORD *)(this + 1396) - v79) >> 2 )
+                v79 = *(_DWORD *)(self + 1392);
+                if ( !v79 || k >= (*(_DWORD *)(self + 1396) - v79) >> 2 )
                   break;
-                v80 = *(_DWORD *)(this + 1392);
+                v80 = *(_DWORD *)(self + 1392);
                 *(_DWORD *)(v80 + 4 * k) = sub_42FCC0(
                                              *(_DWORD **)(dword_520970 + 208),
-                                             *(_DWORD *)(this + 1416),
+                                             *(_DWORD *)(self + 1416),
                                              0,
-                                             *(_DWORD *)(this + 1456));
+                                             *(_DWORD *)(self + 1456));
               }
-              v81 = *(_DWORD *)(this + 408);
-              v82 = *(_DWORD *)(this + 1408) - 1;
-              *(_DWORD *)(this + 1420) = *(_DWORD *)(this + 1412);
-              *(_DWORD *)(this + 1408) = v82;
-              *(_DWORD *)(this + 544) = 1;
-              *(_DWORD *)(this + 548) = 0;
+              v81 = *(_DWORD *)(self + 408);
+              v82 = *(_DWORD *)(self + 1408) - 1;
+              *(_DWORD *)(self + 1420) = *(_DWORD *)(self + 1412);
+              *(_DWORD *)(self + 1408) = v82;
+              *(_DWORD *)(self + 544) = 1;
+              *(_DWORD *)(self + 548) = 0;
               *(float *)&v216 = *(float *)(v81 + 896) * 0.33333334;
-              sub_41C060((_DWORD *)(this + 552), v216, 0, 0);
-              v223 = -*(float *)(*(_DWORD *)(this + 408) + 892);
-              sub_41C0B0((_DWORD *)(this + 552), v223);
-              v224 = -*(float *)(*(_DWORD *)(this + 408) + 892);
-              sub_41C0B0((_DWORD *)(this + 552), v224);
-              v225 = -*(float *)(*(_DWORD *)(this + 408) + 892);
-              sub_41C0B0((_DWORD *)(this + 552), v225);
-              sub_41C0B0((_DWORD *)(this + 552), 0.0);
-              sub_41C0B0((_DWORD *)(this + 552), 0.0);
-              sub_41C0B0((_DWORD *)(this + 552), 0.0);
+              sub_41C060((_DWORD *)(self + 552), v216, 0, 0);
+              v223 = -*(float *)(*(_DWORD *)(self + 408) + 892);
+              sub_41C0B0((_DWORD *)(self + 552), v223);
+              v224 = -*(float *)(*(_DWORD *)(self + 408) + 892);
+              sub_41C0B0((_DWORD *)(self + 552), v224);
+              v225 = -*(float *)(*(_DWORD *)(self + 408) + 892);
+              sub_41C0B0((_DWORD *)(self + 552), v225);
+              sub_41C0B0((_DWORD *)(self + 552), 0.0);
+              sub_41C0B0((_DWORD *)(self + 552), 0.0);
+              sub_41C0B0((_DWORD *)(self + 552), 0.0);
             }
           }
           break;
       }
     }
-    else if ( !*(_DWORD *)(this + 436) )
+    else if ( !*(_DWORD *)(self + 436) )
     {
-      if ( !*(_BYTE *)(this + 1424) )
+      if ( !*(_BYTE *)(self + 1424) )
       {
-        *(_DWORD *)(this + 436) = 2;
-        *(_BYTE *)(*(_DWORD *)(this + 444) + 4316) = 0;
+        *(_DWORD *)(self + 436) = 2;
+        *(_BYTE *)(*(_DWORD *)(self + 444) + 4316) = 0;
       }
-      if ( !*(_DWORD *)(this + 436) )
+      if ( !*(_DWORD *)(self + 436) )
       {
-        v38 = *(float *)(this + 496) - *(float *)&a2;
-        *(float *)(this + 496) = v38;
+        v38 = *(float *)(self + 496) - *(float *)&a2;
+        *(float *)(self + 496) = v38;
         if ( v38 <= 0.0 )
         {
-          *(_DWORD *)(this + 436) = 3;
-          v39 = *(_DWORD *)(this + 408);
+          *(_DWORD *)(self + 436) = 3;
+          v39 = *(_DWORD *)(self + 408);
           v236 = *(float *)(v39 + 796);
           v249 = *(float *)(v39 + 800);
           if ( v236 == v249 )
@@ -938,117 +938,117 @@ LABEL_60:
             v241 = COERCE_FLOAT(rand());
             v40 = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v236) + v236;
           }
-          *(float *)(this + 496) = v40;
+          *(float *)(self + 496) = v40;
         }
-        if ( !*(_DWORD *)(this + 436) )
+        if ( !*(_DWORD *)(self + 436) )
         {
-          v41 = *(float *)(this + 500) - *(float *)&a2;
-          *(float *)(this + 500) = v41;
+          v41 = *(float *)(self + 500) - *(float *)&a2;
+          *(float *)(self + 500) = v41;
           if ( v41 <= 0.0 )
           {
-            *(_DWORD *)(this + 436) = 4;
-            v42 = *(_DWORD *)(this + 408);
+            *(_DWORD *)(self + 436) = 4;
+            v42 = *(_DWORD *)(self + 408);
             v237 = *(float *)(v42 + 816);
             v249 = *(float *)(v42 + 820);
             if ( v237 == v249 )
             {
-              *(float *)(this + 500) = v237;
+              *(float *)(self + 500) = v237;
             }
             else
             {
               v241 = COERCE_FLOAT(rand());
-              *(float *)(this + 500) = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v237) + v237;
+              *(float *)(self + 500) = fabs((double)SLODWORD(v241) * 0.000030518509) * (v249 - v237) + v237;
             }
           }
         }
       }
     }
   }
-  if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 2 && sub_4088E0(*(_DWORD *)(this + 412)) && !*(_BYTE *)(this + 516) )
+  if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 2 && sub_4088E0(*(_DWORD *)(self + 412)) && !*(_BYTE *)(self + 516) )
   {
-    sub_455DC0(*(_DWORD *)(this + 512));
-    *(_BYTE *)(this + 516) = 1;
+    sub_455DC0(*(_DWORD *)(self + 512));
+    *(_BYTE *)(self + 516) = 1;
   }
-  if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 3 )
+  if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 3 )
   {
-    v96 = *(_DWORD *)(this + 524);
-    v97 = v96 ? (*(_DWORD *)(this + 528) - v96) >> 2 : 0;
+    v96 = *(_DWORD *)(self + 524);
+    v97 = v96 ? (*(_DWORD *)(self + 528) - v96) >> 2 : 0;
     for ( m = 0; m < v97; ++m )
     {
-      if ( !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(this + 524) + 4 * m) + 436) )
+      if ( !*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 524) + 4 * m) + 436) )
       {
-        sub_407690(*(_DWORD *)(this + 412), *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 864) + 4 * m), v300);
-        sub_4073F0(*(_DWORD **)(*(_DWORD *)(*(_DWORD *)(this + 524) + 4 * m) + 416), 0, v300);
-        v99 = *(_DWORD *)(this + 524);
+        sub_407690(*(_DWORD *)(self + 412), *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 864) + 4 * m), v300);
+        sub_4073F0(*(_DWORD **)(*(_DWORD *)(*(_DWORD *)(self + 524) + 4 * m) + 416), 0, v300);
+        v99 = *(_DWORD *)(self + 524);
         v100 = (_DWORD *)sub_4010C0(v300);
         v101 = (_DWORD *)(*(_DWORD *)(v99 + 4 * m) + 460);
         *v101 = *v100;
         v101[1] = v100[1];
         v101[2] = v100[2];
-        v102 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 524) + 4 * m) + 472);
-        *v102 = *(_DWORD *)(this + 464);
-        v102[1] = *(_DWORD *)(this + 468);
-        v102[2] = *(_DWORD *)(this + 472);
-        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 524) + 4 * m) + 484) = *(_DWORD *)(this + 476);
-        v103 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 524) + 4 * m) + 488);
-        *v103 = *(_DWORD *)(this + 480);
-        v103[1] = *(_DWORD *)(this + 484);
-        v103[2] = *(_DWORD *)(this + 488);
-        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 524) + 4 * m) + 500) = *(_DWORD *)(this + 492);
+        v102 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 524) + 4 * m) + 472);
+        *v102 = *(_DWORD *)(self + 464);
+        v102[1] = *(_DWORD *)(self + 468);
+        v102[2] = *(_DWORD *)(self + 472);
+        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 524) + 4 * m) + 484) = *(_DWORD *)(self + 476);
+        v103 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 524) + 4 * m) + 488);
+        *v103 = *(_DWORD *)(self + 480);
+        v103[1] = *(_DWORD *)(self + 484);
+        v103[2] = *(_DWORD *)(self + 488);
+        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 524) + 4 * m) + 500) = *(_DWORD *)(self + 492);
       }
     }
   }
-  if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 6 && !*(_BYTE *)(dword_4F5CC4 + 937) )
+  if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 6 && !*(_BYTE *)(dword_4F5CC4 + 937) )
   {
     for ( n = 0; ; ++n )
     {
-      v105 = *(_DWORD *)(this + 1392);
-      if ( !v105 || n >= (*(_DWORD *)(this + 1396) - v105) >> 2 )
+      v105 = *(_DWORD *)(self + 1392);
+      if ( !v105 || n >= (*(_DWORD *)(self + 1396) - v105) >> 2 )
         break;
       if ( !*(_BYTE *)(*(_DWORD *)(v105 + 4 * n) + 460) )
       {
-        v226 = sub_41C200((float *)(this + 552), 0.0);
+        v226 = sub_41C200((float *)(self + 552), 0.0);
         sub_46BE02(v301, 0, 0, LODWORD(v226));
-        sub_407690(*(_DWORD *)(this + 412), *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 908) + 4 * n), v295);
+        sub_407690(*(_DWORD *)(self + 412), *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 908) + 4 * n), v295);
         sub_46B97C(v295, v301, v295);
-        sub_4073F0(*(_DWORD **)(*(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * n) + 432), 0, v295);
-        v106 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * n) + 1312);
-        *v106 = *(_DWORD *)(this + 452);
-        v106[1] = *(_DWORD *)(this + 456);
-        v106[2] = *(_DWORD *)(this + 460);
-        v107 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * n) + 1324);
-        *v107 = *(_DWORD *)(this + 464);
-        v107[1] = *(_DWORD *)(this + 468);
-        v107[2] = *(_DWORD *)(this + 472);
-        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * n) + 1336) = *(_DWORD *)(this + 476);
-        v108 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * n) + 1340);
-        *v108 = *(_DWORD *)(this + 480);
-        v108[1] = *(_DWORD *)(this + 484);
-        v108[2] = *(_DWORD *)(this + 488);
-        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 1392) + 4 * n) + 1352) = *(_DWORD *)(this + 492);
+        sub_4073F0(*(_DWORD **)(*(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * n) + 432), 0, v295);
+        v106 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * n) + 1312);
+        *v106 = *(_DWORD *)(self + 452);
+        v106[1] = *(_DWORD *)(self + 456);
+        v106[2] = *(_DWORD *)(self + 460);
+        v107 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * n) + 1324);
+        *v107 = *(_DWORD *)(self + 464);
+        v107[1] = *(_DWORD *)(self + 468);
+        v107[2] = *(_DWORD *)(self + 472);
+        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * n) + 1336) = *(_DWORD *)(self + 476);
+        v108 = (_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * n) + 1340);
+        *v108 = *(_DWORD *)(self + 480);
+        v108[1] = *(_DWORD *)(self + 484);
+        v108[2] = *(_DWORD *)(self + 488);
+        *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * n) + 1352) = *(_DWORD *)(self + 492);
       }
     }
   }
-  if ( (unsigned __int8)sub_4438C0(this) )
+  if ( (unsigned __int8)sub_4438C0(self) )
   {
-    v109 = *(_BYTE *)(this + 1425);
-    v110 = *(float *)(this + 492) < (double)*(float *)(*(_DWORD *)(this + 408) + 920);
-    *(_BYTE *)(this + 1425) = v110;
+    v109 = *(_BYTE *)(self + 1425);
+    v110 = *(float *)(self + 492) < (double)*(float *)(*(_DWORD *)(self + 408) + 920);
+    *(_BYTE *)(self + 1425) = v110;
     if ( !v109 && v110 )
-      sub_45F160(this + 396);
+      sub_45F160(self + 396);
     v111 = 0;
-    *(_BYTE *)(this + 1424) = 0;
+    *(_BYTE *)(self + 1424) = 0;
     v249 = 0.0;
     for ( ii = 0; ; ii += 860 )
     {
-      v112 = *(_DWORD *)(this + 1432);
-      if ( !v112 || LODWORD(v249) >= (*(_DWORD *)(this + 1436) - v112) / 860 )
+      v112 = *(_DWORD *)(self + 1432);
+      if ( !v112 || LODWORD(v249) >= (*(_DWORD *)(self + 1436) - v112) / 860 )
         break;
-      v113 = *(float *)(*(_DWORD *)(this + 1432) + ii + 12);
+      v113 = *(float *)(*(_DWORD *)(self + 1432) + ii + 12);
       if ( v113 > 0.0 )
       {
-        v114 = *(_DWORD *)(this + 408);
-        *(_BYTE *)(this + 1424) = 1;
+        v114 = *(_DWORD *)(self + 408);
+        *(_BYTE *)(self + 1424) = 1;
         v115 = **(_DWORD **)(v111 + *(_DWORD *)(v114 + 924));
         v240 = v115;
         if ( *(_BYTE *)(*(_DWORD *)(dword_520970 + 212) + 52) )
@@ -1057,37 +1057,37 @@ LABEL_60:
           v251 = v113;
           sub_46BF69((int)v304, v251);
           sub_46BE62((int)v303, 0.0);
-          v116 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111);
+          v116 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111);
           if ( *(_DWORD *)(v116 + 32) == -1 )
           {
             sub_46B97C(v307, v303, v304);
             sub_4073F0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 28),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 28),
               v307);
             sub_4073C0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 28),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 28),
               1);
           }
           else
           {
-            sub_4073F0(*(_DWORD **)(this + 412), *(_DWORD *)(v116 + 28), v304);
+            sub_4073F0(*(_DWORD **)(self + 412), *(_DWORD *)(v116 + 28), v304);
             sub_4073C0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 28),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 28),
               1);
             sub_4073F0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 32),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 32),
               v303);
             sub_4073C0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 32),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 32),
               1);
           }
         }
-        v117 = *(_DWORD *)(this + 408);
+        v117 = *(_DWORD *)(self + 408);
         *(float *)&v243 = 0.0;
         v244 = 0.0;
         v245 = 0.0;
@@ -1097,14 +1097,14 @@ LABEL_60:
         v118 = *(_DWORD *)(**(_DWORD **)(v111 + *(_DWORD *)(v117 + 924)) + 292);
         if ( v118 == 1 )
         {
-          sub_4085B0(*(_DWORD *)(this + 412), *(_DWORD *)(*(_DWORD *)(v111 + *(_DWORD *)(v117 + 924)) + 28), &v246);
+          sub_4085B0(*(_DWORD *)(self + 412), *(_DWORD *)(*(_DWORD *)(v111 + *(_DWORD *)(v117 + 924)) + 28), &v246);
           v113 = *(float *)(v115 + 340);
-          v119 = (int *)(*(_DWORD *)(this + 1432) + ii + 856);
+          v119 = (int *)(*(_DWORD *)(self + 1432) + ii + 856);
           v120 = *v119;
           v251 = v113 * v113;
           if ( v120 && !*(_BYTE *)(v120 + 396) )
             *v119 = 0;
-          v121 = *(_DWORD *)(this + 1432);
+          v121 = *(_DWORD *)(self + 1432);
           v122 = *(_DWORD *)(v121 + ii + 856);
           v123 = (_DWORD *)(v121 + ii + 856);
           if ( v122 )
@@ -1114,7 +1114,7 @@ LABEL_60:
             if ( v113 * v113 + v124 * v124 > v251 )
               *v123 = 0;
           }
-          v125 = *(_DWORD *)(this + 1432);
+          v125 = *(_DWORD *)(self + 1432);
           HIBYTE(v242) = 0;
           if ( !*(_DWORD *)(v125 + ii + 856) )
           {
@@ -1146,18 +1146,18 @@ LABEL_60:
             if ( v132 != -1 )
             {
               v133 = *(_DWORD *)(v126 + 24);
-              v134 = *(_DWORD *)(this + 1432);
+              v134 = *(_DWORD *)(self + 1432);
               HIBYTE(v242) = 1;
               *(_DWORD *)(v134 + ii + 856) = *(_DWORD *)(v133 + 4 * v132);
             }
           }
-          v135 = *(_DWORD *)(this + 1432) + ii;
+          v135 = *(_DWORD *)(self + 1432) + ii;
           if ( !*(_DWORD *)(v135 + 856) )
             goto LABEL_223;
           if ( HIBYTE(v242) )
             *(_DWORD *)(v135 + 16) = 0;
           v115 = v240;
-          v136 = (_DWORD *)(*(_DWORD *)(this + 1432) + ii + 856);
+          v136 = (_DWORD *)(*(_DWORD *)(self + 1432) + ii + 856);
           v137 = *v136 + 1312;
           v243 = *(int *)v137;
           v244 = *(float *)(v137 + 4);
@@ -1169,62 +1169,62 @@ LABEL_60:
         }
         else if ( !v118 )
         {
-          if ( !*(_BYTE *)(this + 1425) )
+          if ( !*(_BYTE *)(self + 1425) )
           {
-            *(_DWORD *)(*(_DWORD *)(this + 1432) + ii + 16) = 0;
+            *(_DWORD *)(*(_DWORD *)(self + 1432) + ii + 16) = 0;
             goto LABEL_223;
           }
-          v243 = *(int *)(this + 396);
-          v244 = *(float *)(this + 400);
-          v245 = *(float *)(this + 404);
+          v243 = *(int *)(self + 396);
+          v244 = *(float *)(self + 400);
+          v245 = *(float *)(self + 404);
         }
         sub_4085B0(
-          *(_DWORD *)(this + 412),
-          *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 28),
+          *(_DWORD *)(self + 412),
+          *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 28),
           &v285);
         sub_44A3E0((int)&v285, (int)&v243, *(float *)(v115 + 308), 1.0);
         v217 = v113;
-        sub_44A250(*(_DWORD *)(v115 + 296), (int)&v285, this + 480, (int)&v243, (int)&v261, v217, (int)&v272);
-        sub_407690(*(_DWORD *)(this + 412), 0, v300);
+        sub_44A250(*(_DWORD *)(v115 + 296), (int)&v285, self + 480, (int)&v243, (int)&v261, v217, (int)&v272);
+        sub_407690(*(_DWORD *)(self + 412), 0, v300);
         sub_46B982(v300, v300);
         v258 = *(float *)&v272;
         v259 = v273;
         v260 = v274;
         sub_46B970(&v258, &v258);
         sub_46B976(&v258, &v258, v300);
-        v139 = *(_DWORD *)(this + 408);
+        v139 = *(_DWORD *)(self + 408);
         v294 = v260;
         v227 = atan2(-v258, v259);
         v140 = sub_41C2F0((float *)(*(_DWORD *)(*(_DWORD *)(v139 + 924) + v111) + 4), v227);
-        v141 = *(_DWORD *)(this + 408);
+        v141 = *(_DWORD *)(self + 408);
         jj = v140;
         v228 = asin(v294);
         v142 = sub_41C2F0((float *)(*(_DWORD *)(*(_DWORD *)(v141 + 924) + v111) + 16), v228);
-        v143 = *(_DWORD *)(this + 408);
+        v143 = *(_DWORD *)(self + 408);
         v144 = jj;
         v251 = v142;
         if ( sub_41C380((float *)(*(_DWORD *)(*(_DWORD *)(v143 + 924) + v111) + 4), jj) )
         {
-          v145 = *(_DWORD *)(this + 1432);
+          v145 = *(_DWORD *)(self + 1432);
           v269 = jj;
           v278 = v251;
           if ( *(_DWORD *)(v145 + ii + 16) <= 1u )
           {
             sub_407430(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 28),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 28),
               (char *)v295);
             v281 = 1.0;
             if ( *(float *)&v295[1] <= 0.0 )
               v281 = -1.0;
-            v146 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 32);
+            v146 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 32);
             v269 = acos(*(float *)v295) * v281;
             if ( v146 != -1 )
-              sub_407430(*(_DWORD **)(this + 412), v146, (char *)v295);
+              sub_407430(*(_DWORD **)(self + 412), v146, (char *)v295);
             v280 = 1.0;
             if ( *(float *)&v295[6] <= 0.0 )
               v280 = -1.0;
-            v147 = *(_DWORD *)(*(_DWORD *)(this + 408) + 924);
+            v147 = *(_DWORD *)(*(_DWORD *)(self + 408) + 924);
             v252 = *(float *)&v295[10];
             v148 = *(float *)&a2 * *(float *)(v115 + 336);
             *(float *)&v229 = v148;
@@ -1233,36 +1233,36 @@ LABEL_60:
             *(float *)&v230 = *(float *)&a2 * *(float *)(v115 + 336);
             v149 = acos(v252) * v280;
             v218 = v149;
-            sub_41C3C0(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 16, v251, v218, v230);
+            sub_41C3C0(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 16, v251, v218, v230);
             v278 = v149;
             v150 = v269 - jj;
             if ( v150 < 0.0000099999997 && v150 > -0.0000099999997 )
             {
               v151 = v278 - v251;
               if ( v151 < 0.0000099999997 && v151 > -0.0000099999997 )
-                *(_DWORD *)(*(_DWORD *)(this + 1432) + ii + 16) = 2;
+                *(_DWORD *)(*(_DWORD *)(self + 1432) + ii + 16) = 2;
             }
           }
           sub_46BF69((int)v302, v269);
           sub_46BE62((int)v301, v278);
-          v152 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111);
+          v152 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111);
           if ( *(_DWORD *)(v152 + 32) == -1 )
           {
             sub_46B97C(v306, v301, v302);
             sub_4073F0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 28),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 28),
               v306);
           }
           else
           {
-            sub_4073F0(*(_DWORD **)(this + 412), *(_DWORD *)(v152 + 28), v302);
+            sub_4073F0(*(_DWORD **)(self + 412), *(_DWORD *)(v152 + 28), v302);
             sub_4073F0(
-              *(_DWORD **)(this + 412),
-              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 924) + v111) + 32),
+              *(_DWORD **)(self + 412),
+              *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + v111) + 32),
               v301);
           }
-          v153 = *(_DWORD *)(this + 1432) + ii;
+          v153 = *(_DWORD *)(self + 1432) + ii;
           if ( *(_DWORD *)(v153 + 16) == 2 )
           {
             if ( *(_BYTE *)v153 )
@@ -1273,7 +1273,7 @@ LABEL_60:
             {
               v154 = ii;
               *(float *)(v153 + 4) = *(float *)(v153 + 4) - *(float *)&a2;
-              v155 = ii + *(_DWORD *)(this + 1432);
+              v155 = ii + *(_DWORD *)(self + 1432);
               if ( *(float *)(v155 + 4) <= 0.0 )
               {
                 *(_BYTE *)v155 = 1;
@@ -1282,26 +1282,26 @@ LABEL_60:
                 v279 = v156;
                 if ( v270 == v156 )
                 {
-                  *(float *)(*(_DWORD *)(this + 1432) + ii + 4) = v270;
+                  *(float *)(*(_DWORD *)(self + 1432) + ii + 4) = v270;
                 }
                 else
                 {
                   v251 = COERCE_FLOAT(rand());
-                  *(float *)(*(_DWORD *)(this + 1432) + ii + 4) = fabs((double)SLODWORD(v251) * 0.000030518509)
+                  *(float *)(*(_DWORD *)(self + 1432) + ii + 4) = fabs((double)SLODWORD(v251) * 0.000030518509)
                                                                 * (v279 - v270)
                                                                 + v270;
                 }
               }
             }
-            v157 = *(_DWORD *)(this + 1432) + v154;
+            v157 = *(_DWORD *)(self + 1432) + v154;
             if ( *(_BYTE *)v157 )
             {
               *(float *)(v157 + 4) = *(float *)(v157 + 4) - *(float *)&a2;
-              v158 = *(_DWORD *)(this + 1432) + ii;
+              v158 = *(_DWORD *)(self + 1432) + ii;
               if ( *(float *)(v158 + 4) > 0.0 )
               {
                 *(float *)(v158 + 8) = *(float *)(v158 + 8) - *(float *)&a2;
-                if ( *(float *)(*(_DWORD *)(this + 1432) + ii + 8) <= 0.0 )
+                if ( *(float *)(*(_DWORD *)(self + 1432) + ii + 8) <= 0.0 )
                 {
                   v160 = *(float *)(v240 + 304);
                   v250 = *(float *)(v240 + 300);
@@ -1316,10 +1316,10 @@ LABEL_60:
                     v161 = fabs((double)SLODWORD(v251) * 0.000030518509) * (v241 - v250) + v250;
                   }
                   v162 = 0.0;
-                  *(float *)(*(_DWORD *)(this + 1432) + ii + 8) = v161;
+                  *(float *)(*(_DWORD *)(self + 1432) + ii + 8) = v161;
                   while ( 1 )
                   {
-                    v163 = *(_DWORD *)(this + 408);
+                    v163 = *(_DWORD *)(self + 408);
                     v251 = v162;
                     v164 = *(_DWORD *)(*(_DWORD *)(v111 + *(_DWORD *)(v163 + 924)) + 40);
                     if ( !v164
@@ -1328,7 +1328,7 @@ LABEL_60:
                       break;
                     }
                     sub_407690(
-                      *(_DWORD *)(this + 412),
+                      *(_DWORD *)(self + 412),
                       *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v111 + *(_DWORD *)(v163 + 924)) + 40) + 4 * LODWORD(v162)),
                       v308);
                     sub_4010D0(&v255, (int)v308);
@@ -1344,7 +1344,7 @@ LABEL_60:
                         if ( v165 >= v168 )
                           break;
                         v169 = *(float ***)(*(_DWORD *)(v166 + 24) + 4 * v165);
-                        if ( v169 != (float **)this && sub_443910(v169, &v255, &v243) )
+                        if ( v169 != (float **)self && sub_443910(v169, &v255, &v243) )
                           goto LABEL_271;
                         ++v165;
                       }
@@ -1353,28 +1353,28 @@ LABEL_60:
                       sub_44A250(
                         *(_DWORD *)(v240 + 296),
                         (int)&v255,
-                        this + 480,
+                        self + 480,
                         (int)&v243,
                         (int)&v261,
                         v219,
                         (int)&v272);
-                      *(float *)&v282 = *(float *)&v272 + *(float *)(this + 480);
+                      *(float *)&v282 = *(float *)&v272 + *(float *)(self + 480);
                       v170 = *(_DWORD *)(v240 + 296);
-                      v283 = v273 + *(float *)(this + 484);
-                      v161 = v274 + *(float *)(this + 488);
+                      v283 = v273 + *(float *)(self + 484);
+                      v161 = v274 + *(float *)(self + 488);
                       v298[0] = 0;
                       v284 = v161;
                       v298[1] = 0;
                       v298[2] = 1065353216;
                       sub_449C40(v170, (int)&v255, (int)&v282, 0, 0, 0.0, (int)v298);
-                      v171 = *(_DWORD *)(this + 408);
+                      v171 = *(_DWORD *)(self + 408);
                       *(float *)&v266 = 0.0;
                       v267 = 0.0;
                       v268 = 0;
                       sub_44E040(
                         *(_DWORD *)(v240 + 344),
-                        this + 480,
-                        *(_DWORD *)(this + 412),
+                        self + 480,
+                        *(_DWORD *)(self + 412),
                         *(float *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v171 + 924) + v111) + 40) + 4 * LODWORD(v251)),
                         (int)&v266);
                     }
@@ -1391,12 +1391,12 @@ LABEL_271:
                 v264 = v159;
                 if ( v271 == v159 )
                 {
-                  *(float *)(*(_DWORD *)(this + 1432) + ii + 4) = v271;
+                  *(float *)(*(_DWORD *)(self + 1432) + ii + 4) = v271;
                 }
                 else
                 {
                   v251 = COERCE_FLOAT(rand());
-                  *(float *)(*(_DWORD *)(this + 1432) + ii + 4) = fabs((double)SLODWORD(v251) * 0.000030518509)
+                  *(float *)(*(_DWORD *)(self + 1432) + ii + 4) = fabs((double)SLODWORD(v251) * 0.000030518509)
                                                                 * (v264 - v271)
                                                                 + v271;
                 }
@@ -1406,7 +1406,7 @@ LABEL_271:
         }
         else
         {
-          *(_DWORD *)(*(_DWORD *)(this + 1432) + ii + 16) = 0;
+          *(_DWORD *)(*(_DWORD *)(self + 1432) + ii + 16) = 0;
         }
       }
 LABEL_223:
@@ -1414,8 +1414,8 @@ LABEL_223:
       v111 += 4;
     }
   }
-  v172 = sub_4438E0(this);
-  v173 = *(_DWORD *)(this + 408);
+  v172 = sub_4438E0(self);
+  v173 = *(_DWORD *)(self + 408);
   v264 = v172;
   v174 = *(float *)(v173 + 668);
   if ( v174 == 0.0 || (v250 = v264 / v174, v250 <= 0.0) )
@@ -1424,8 +1424,8 @@ LABEL_223:
   {
     if ( v250 <= (double)*(float *)(v173 + 760) )
     {
-      v175 = *(float *)(this + 1444) - *(float *)&a2;
-      *(float *)(this + 1444) = v175;
+      v175 = *(float *)(self + 1444) - *(float *)&a2;
+      *(float *)(self + 1444) = v175;
       if ( v175 <= 0.0 )
       {
         v176 = *(float *)(v173 + 760);
@@ -1444,9 +1444,9 @@ LABEL_223:
           v252 = COERCE_FLOAT(rand());
           v178 = fabs((double)SLODWORD(v252) * 0.000030518509) * (v241 - v250) + v250;
         }
-        v179 = *(_DWORD *)(this + 408);
+        v179 = *(_DWORD *)(self + 408);
         *(float *)&v266 = 0.0;
-        *(float *)(this + 1444) = v178;
+        *(float *)(self + 1444) = v178;
         v180 = v179 + 592;
         v267 = 0.0;
         v268 = 0;
@@ -1457,21 +1457,21 @@ LABEL_223:
           v182 = 0;
         v183 = rand();
         sub_44E040(
-          *(_DWORD *)(*(_DWORD *)(this + 408) + 752),
-          this + 480,
-          *(_DWORD *)(this + 412),
-          *(float *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 596) + 4 * (v183 % v182)),
+          *(_DWORD *)(*(_DWORD *)(self + 408) + 752),
+          self + 480,
+          *(_DWORD *)(self + 412),
+          *(float *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 596) + 4 * (v183 % v182)),
           (int)&v266);
       }
     }
   }
-  v184 = *(_DWORD *)(this + 408);
+  v184 = *(_DWORD *)(self + 408);
   if ( *(_DWORD *)(v184 + 756) )
   {
     if ( v264 <= 0.0 )
     {
-      v185 = *(float *)(this + 1448) - *(float *)&a2;
-      *(float *)(this + 1448) = v185;
+      v185 = *(float *)(self + 1448) - *(float *)&a2;
+      *(float *)(self + 1448) = v185;
       if ( v185 <= 0.0 )
       {
         v186 = *(float *)(v184 + 784);
@@ -1486,9 +1486,9 @@ LABEL_223:
           v252 = COERCE_FLOAT(rand());
           v187 = fabs((double)SLODWORD(v252) * 0.000030518509) * (v241 - v250) + v250;
         }
-        v188 = *(_DWORD *)(this + 408);
+        v188 = *(_DWORD *)(self + 408);
         *(float *)&v266 = 0.0;
-        *(float *)(this + 1448) = v187;
+        *(float *)(self + 1448) = v187;
         v189 = v188 + 592;
         v267 = 0.0;
         v268 = 0;
@@ -1499,34 +1499,34 @@ LABEL_223:
           v191 = 0;
         v192 = rand();
         sub_44E040(
-          *(_DWORD *)(*(_DWORD *)(this + 408) + 756),
-          this + 480,
-          *(_DWORD *)(this + 412),
-          *(float *)(*(_DWORD *)(*(_DWORD *)(this + 408) + 596) + 4 * (v192 % v191)),
+          *(_DWORD *)(*(_DWORD *)(self + 408) + 756),
+          self + 480,
+          *(_DWORD *)(self + 412),
+          *(float *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 596) + 4 * (v192 % v191)),
           (int)&v266);
       }
     }
   }
-  v193 = *(_DWORD **)(this + 1452);
+  v193 = *(_DWORD **)(self + 1452);
   if ( v193 )
   {
-    v194 = *(float *)(this + 484);
-    v266 = *(int *)(this + 480);
-    v195 = *(_DWORD *)(this + 488);
+    v194 = *(float *)(self + 484);
+    v266 = *(int *)(self + 480);
+    v195 = *(_DWORD *)(self + 488);
     v267 = v194;
-    v196 = *(int *)(this + 452);
+    v196 = *(int *)(self + 452);
     v268 = v195;
-    v197 = *(float *)(this + 456);
+    v197 = *(float *)(self + 456);
     v282 = v196;
-    v198 = *(float *)(this + 460);
+    v198 = *(float *)(self + 460);
     v283 = v197;
     v284 = v198;
     sub_41D960(v193, &v282, &v266);
   }
-  if ( sub_408F30(dword_520970) == this )
+  if ( sub_408F30(dword_520970) == self )
   {
-    sub_407430(*(_DWORD **)(this + 412), 0, (char *)v295);
-    sub_401450((_DWORD *)this);
+    sub_407430(*(_DWORD **)(self + 412), 0, (char *)v295);
+    sub_401450((_DWORD *)self);
     *(float *)&v243 = 0.0;
     v244 = 4000.0;
     v245 = 0.0;
@@ -1541,29 +1541,29 @@ LABEL_223:
     sub_46C5C5(&v258, &v258, v295);
     v199 = v244;
     v200 = v296 + 1000.0;
-    *(float *)(this + 32) = *(float *)&v243;
+    *(float *)(self + 32) = *(float *)&v243;
     v201 = v245;
-    *(float *)(this + 36) = v199;
+    *(float *)(self + 36) = v199;
     v260 = v200;
-    *(float *)(this + 40) = v201;
+    *(float *)(self + 40) = v201;
     v202 = v259;
-    *(float *)(this + 44) = v258;
+    *(float *)(self + 44) = v258;
     v203 = v260;
-    *(float *)(this + 48) = v202;
-    *(float *)(this + 52) = v203;
+    *(float *)(self + 48) = v202;
+    *(float *)(self + 52) = v203;
     v204 = v256;
-    *(float *)(this + 56) = *(float *)&v255;
+    *(float *)(self + 56) = *(float *)&v255;
     v205 = v257;
-    *(float *)(this + 60) = v204;
-    *(float *)(this + 64) = v205;
+    *(float *)(self + 60) = v204;
+    *(float *)(self + 64) = v205;
   }
-  if ( *(_DWORD *)(this + 416) )
+  if ( *(_DWORD *)(self + 416) )
   {
     rand();
-    v206 = *(float *)(this + 456);
-    v207 = *(float *)(this + 460);
-    v255 = *(int *)(this + 452);
-    v208 = *(float **)(this + 416);
+    v206 = *(float *)(self + 456);
+    v207 = *(float *)(self + 460);
+    v255 = *(int *)(self + 452);
+    v208 = *(float **)(self + 416);
     v256 = v206;
     v208 += 21;
     v257 = v207;
@@ -1575,16 +1575,16 @@ LABEL_223:
   }
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {
-    v211 = *(_DWORD *)(this + 444);
+    v211 = *(_DWORD *)(self + 444);
     if ( v211 )
     {
       if ( *(_BYTE *)(v211 + 12) )
       {
         *(_BYTE *)(v211 + 12) = 0;
-        v286 = *(_WORD *)(this + 1456);
-        while ( sub_4176E0(*(_DWORD **)(this + 444), &v241, &v266, (_BYTE *)&v242 + 3, 8) )
+        v286 = *(_WORD *)(self + 1456);
+        while ( sub_4176E0(*(_DWORD **)(self + 444), &v241, &v266, (_BYTE *)&v242 + 3, 8) )
         {
-          v212 = *(_DWORD *)(this + 444);
+          v212 = *(_DWORD *)(self + 444);
           v213 = *(float *)(v212 + 16);
           v214 = *(_DWORD *)(v212 + 4136);
           v287 = LOWORD(v241);
@@ -1592,7 +1592,7 @@ LABEL_223:
           v290 = (__int64)(v267 * 0.40000001);
           v288 = HIBYTE(v242);
           v291 = v214;
-          v215 = *(_BYTE *)(this + 440);
+          v215 = *(_BYTE *)(self + 440);
           v292 = (__int64)(v213 * 255.0);
           v293 = v215;
           sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x202, &v285, 19, 8, 5000);
@@ -1600,5 +1600,5 @@ LABEL_223:
       }
     }
   }
-  return sub_428620((_DWORD *)this, a2);
+  return sub_428620((_DWORD *)self, a2);
 }

@@ -1,5 +1,5 @@
 //----- (00404950) --------------------------------------------------------
-bool __thiscall sub_404950(int *this, int a2)
+bool __thiscall sub_404950(int *self, int a2)
 {
   int v2; // edi
   int v3; // ebp
@@ -47,7 +47,7 @@ bool __thiscall sub_404950(int *this, int a2)
   v2 = a2;
   *(_BYTE *)(a2 + 82) = 0;
   *(_BYTE *)(v2 + 83) = 0;
-  if ( this[6] >= 5 && !(unsigned __int8)sub_405820(-1091707157) || !(unsigned __int8)sub_4057E0((void *)(v2 + 40)) )
+  if ( self[6] >= 5 && !(unsigned __int8)sub_405820(-1091707157) || !(unsigned __int8)sub_4057E0((void *)(v2 + 40)) )
     goto LABEL_47;
   if ( *(int *)(v2 + 40) > 0 )
   {
@@ -89,7 +89,7 @@ bool __thiscall sub_404950(int *this, int a2)
           && (unsigned __int8)sub_4057E0(&v43)
           && (unsigned __int8)sub_4057E0(&v44)
           && (unsigned __int8)sub_4057E0(&v45);
-        v7 = this[6];
+        v7 = self[6];
         v8 = -1;
         a2 = -1;
         if ( v7 >= 4 )
@@ -152,7 +152,7 @@ LABEL_39:
   if ( *v12 <= 0 )
   {
 LABEL_48:
-    v16 = this;
+    v16 = self;
     goto LABEL_49;
   }
   v14 = (_DWORD *)(v2 + 44);
@@ -171,7 +171,7 @@ LABEL_47:
   v13 = 1;
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int *, _DWORD))(*(_DWORD *)*v14 + 44))(*v14, 0, 0, &a2, 0);
   v15 = *(_DWORD *)(v2 + 48);
-  v16 = this;
+  v16 = self;
   v34 = 0.0;
   if ( v15 > 0 )
   {

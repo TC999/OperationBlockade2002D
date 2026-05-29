@@ -1,5 +1,5 @@
 //----- (00463EB0) --------------------------------------------------------
-_DWORD *__thiscall sub_463EB0(_DWORD *this, float a2, _DWORD *a3)
+_DWORD *__thiscall sub_463EB0(_DWORD *self, float a2, _DWORD *a3)
 {
   int v3; // edi
   _DWORD *v4; // eax
@@ -12,10 +12,10 @@ _DWORD *__thiscall sub_463EB0(_DWORD *this, float a2, _DWORD *a3)
   double v11; // st7
   double v12; // st7
 
-  v3 = this[16];
+  v3 = self[16];
   if ( v3 == 1 )
   {
-    v4 = (_DWORD *)this[6];
+    v4 = (_DWORD *)self[6];
     *a3 = *v4;
     a3[1] = v4[1];
     result = (_DWORD *)v4[2];
@@ -23,7 +23,7 @@ _DWORD *__thiscall sub_463EB0(_DWORD *this, float a2, _DWORD *a3)
   }
   else
   {
-    v6 = (float *)this[6];
+    v6 = (float *)self[6];
     v7 = 0;
     v8 = v6 + 4;
     if ( v6[7] < (double)a2 )

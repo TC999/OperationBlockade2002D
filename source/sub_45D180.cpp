@@ -1,5 +1,5 @@
 //----- (0045D180) --------------------------------------------------------
-int __thiscall sub_45D180(int this, char *a2)
+int __thiscall sub_45D180(int self, char *a2)
 {
   int v3; // esi
   const char *v4; // eax
@@ -34,10 +34,10 @@ int __thiscall sub_45D180(int this, char *a2)
   char Buffer[256]; // [esp+1Ch] [ebp-10Ch] BYREF
   int v35; // [esp+124h] [ebp-4h]
 
-  v33 = this;
+  v33 = self;
   sub_468FF0(a2);
   v35 = 0;
-  *(_DWORD *)this = &off_499B78;
+  *(_DWORD *)self = &off_499B78;
   sub_4229D0(aStartedLoading_2);
   sub_40AFC0(String2, (int)&String1);
   if ( _strcmpi(String1, aMachineGun) )
@@ -48,21 +48,21 @@ int __thiscall sub_45D180(int this, char *a2)
       {
         if ( _strcmpi(String1, aGrenade_0) )
           sub_4281B0("invalid gun type, see file %s", a2 + 16);
-        *(_DWORD *)(this + 292) = 3;
+        *(_DWORD *)(self + 292) = 3;
       }
       else
       {
-        *(_DWORD *)(this + 292) = 2;
+        *(_DWORD *)(self + 292) = 2;
       }
     }
     else
     {
-      *(_DWORD *)(this + 292) = 1;
+      *(_DWORD *)(self + 292) = 1;
     }
   }
   else
   {
-    *(_DWORD *)(this + 292) = 0;
+    *(_DWORD *)(self + 292) = 0;
   }
   sub_40AFC0(aAmmotype, (int)&String1);
   v3 = 0;
@@ -107,89 +107,89 @@ int __thiscall sub_45D180(int this, char *a2)
     if ( ++v3 >= 10 )
       goto LABEL_34;
   }
-  *(_DWORD *)(this + 296) = v3;
+  *(_DWORD *)(self + 296) = v3;
 LABEL_34:
-  sub_40A120(v3 < 10, "invalid ammo type, see %s : %s", *(const char **)(this + 4), a2 + 16);
-  sub_40AF00(a2, aCrosshair_0, (char **)(this + 300));
+  sub_40A120(v3 < 10, "invalid ammo type, see %s : %s", *(const char **)(self + 4), a2 + 16);
+  sub_40AF00(a2, aCrosshair_0, (char **)(self + 300));
   sub_40AFC0(aBullettype, (int)&String1);
-  sub_469160(this + 304, String1, aBullet);
-  sub_40AF60(a2, aRof, (float *)(this + 308));
-  v5 = *(float *)(this + 308);
+  sub_469160(self + 304, String1, aBullet);
+  sub_40AF60(a2, aRof, (float *)(self + 308));
+  v5 = *(float *)(self + 308);
   if ( v5 == 0.0 )
     v6 = 0.0;
   else
     v6 = 60.0 / v5;
-  *(float *)(this + 308) = v6;
-  sub_40AF60(a2, aMousemovementx, (float *)(this + 312));
-  *(_DWORD *)(this + 316) = *(_DWORD *)(this + 312);
-  *(_DWORD *)(this + 320) = 0;
-  *(_DWORD *)(this + 324) = 1120403456;
-  *(_DWORD *)(this + 328) = 0x40000000;
+  *(float *)(self + 308) = v6;
+  sub_40AF60(a2, aMousemovementx, (float *)(self + 312));
+  *(_DWORD *)(self + 316) = *(_DWORD *)(self + 312);
+  *(_DWORD *)(self + 320) = 0;
+  *(_DWORD *)(self + 324) = 1120403456;
+  *(_DWORD *)(self + 328) = 0x40000000;
   if ( sub_40ABC0(a2, aMousemovementx_0, 0) )
-    sub_40AF60(a2, aMousemovementx_0, (float *)(this + 316));
+    sub_40AF60(a2, aMousemovementx_0, (float *)(self + 316));
   if ( sub_40ABC0(a2, aMousemovementx_1, 0) )
-    sub_40AF60(a2, aMousemovementx_1, (float *)(this + 320));
+    sub_40AF60(a2, aMousemovementx_1, (float *)(self + 320));
   if ( sub_40ABC0(a2, aMousemovementx_2, 0) )
-    sub_40AF60(a2, aMousemovementx_2, (float *)(this + 324));
+    sub_40AF60(a2, aMousemovementx_2, (float *)(self + 324));
   if ( sub_40ABC0(a2, aMousemovementx_3, 0) )
-    sub_40AF60(a2, aMousemovementx_3, (float *)(this + 328));
-  sub_40AF60(a2, aMousemovementy, (float *)(this + 332));
-  *(_DWORD *)(this + 336) = *(_DWORD *)(this + 332);
-  *(_DWORD *)(this + 340) = 0;
-  *(_DWORD *)(this + 344) = 1120403456;
-  *(_DWORD *)(this + 348) = 0x40000000;
+    sub_40AF60(a2, aMousemovementx_3, (float *)(self + 328));
+  sub_40AF60(a2, aMousemovementy, (float *)(self + 332));
+  *(_DWORD *)(self + 336) = *(_DWORD *)(self + 332);
+  *(_DWORD *)(self + 340) = 0;
+  *(_DWORD *)(self + 344) = 1120403456;
+  *(_DWORD *)(self + 348) = 0x40000000;
   if ( sub_40ABC0(a2, aMousemovementy_0, 0) )
-    sub_40AF60(a2, aMousemovementy_0, (float *)(this + 336));
+    sub_40AF60(a2, aMousemovementy_0, (float *)(self + 336));
   if ( sub_40ABC0(a2, aMousemovementy_1, 0) )
-    sub_40AF60(a2, aMousemovementy_1, (float *)(this + 340));
+    sub_40AF60(a2, aMousemovementy_1, (float *)(self + 340));
   if ( sub_40ABC0(a2, aMousemovementy_2, 0) )
-    sub_40AF60(a2, aMousemovementy_2, (float *)(this + 344));
+    sub_40AF60(a2, aMousemovementy_2, (float *)(self + 344));
   if ( sub_40ABC0(a2, aMousemovementy_3, 0) )
-    sub_40AF60(a2, aMousemovementy_3, (float *)(this + 348));
-  if ( *(_DWORD *)(this + 292) != 2 )
-    sub_40B1B0((char)aPitch, this + 352);
-  sub_40B030(a2, aGunoffset, (float *)(this + 360));
-  *(_DWORD *)(this + 372) = 0;
+    sub_40AF60(a2, aMousemovementy_3, (float *)(self + 348));
+  if ( *(_DWORD *)(self + 292) != 2 )
+    sub_40B1B0((char)aPitch, self + 352);
+  sub_40B030(a2, aGunoffset, (float *)(self + 360));
+  *(_DWORD *)(self + 372) = 0;
   if ( sub_40ABC0(a2, aFiresoundeffec, 0) )
   {
     sub_40AFC0(aFiresoundeffec, (int)&String1);
-    sub_469160(this + 372, String1, aSoundEffect);
+    sub_469160(self + 372, String1, aSoundEffect);
   }
-  *(_DWORD *)(this + 376) = 0;
+  *(_DWORD *)(self + 376) = 0;
   if ( sub_40ABC0(a2, aShellsoundeffe, 0) )
   {
     sub_40AFC0(aShellsoundeffe, (int)&String1);
-    sub_469160(this + 376, String1, aSoundEffect);
+    sub_469160(self + 376, String1, aSoundEffect);
   }
-  *(_DWORD *)(this + 380) = 0;
+  *(_DWORD *)(self + 380) = 0;
   if ( sub_40ABC0(a2, aBeltsoundeffec, 0) )
   {
     sub_40AFC0(aBeltsoundeffec, (int)&String1);
-    sub_469160(this + 380, String1, aSoundEffect);
+    sub_469160(self + 380, String1, aSoundEffect);
   }
-  *(_DWORD *)(this + 384) = 0;
+  *(_DWORD *)(self + 384) = 0;
   if ( sub_40ABC0(a2, aOutofammosound, 0) )
   {
     sub_40AFC0(aOutofammosound, (int)&String1);
-    sub_469160(this + 384, String1, aSoundEffect);
+    sub_469160(self + 384, String1, aSoundEffect);
   }
-  v7 = *(_DWORD *)(this + 292);
-  *(_DWORD *)(this + 648) = 0;
-  *(_DWORD *)(this + 652) = 0;
-  *(_DWORD *)(this + 656) = 0;
+  v7 = *(_DWORD *)(self + 292);
+  *(_DWORD *)(self + 648) = 0;
+  *(_DWORD *)(self + 652) = 0;
+  *(_DWORD *)(self + 656) = 0;
   if ( v7 != 3 )
   {
     sub_40AFC0(aModelfile, (int)&String1);
-    strcpy((char *)(this + 388), String1);
-    *(_DWORD *)(this + 648) = 0;
-    *(_DWORD *)(this + 652) = 0;
-    if ( !(unsigned __int8)sub_46A3A0((LPCSTR)(this + 388)) )
-      sub_45D070(this);
-    sub_40AF00(a2, aNumbarrels, (char **)(this + 656));
-    if ( *(int *)(this + 656) > 0 )
+    strcpy((char *)(self + 388), String1);
+    *(_DWORD *)(self + 648) = 0;
+    *(_DWORD *)(self + 652) = 0;
+    if ( !(unsigned __int8)sub_46A3A0((LPCSTR)(self + 388)) )
+      sub_45D070(self);
+    sub_40AF00(a2, aNumbarrels, (char **)(self + 656));
+    if ( *(int *)(self + 656) > 0 )
     {
       v8 = 1;
-      v9 = (_DWORD *)(this + 664);
+      v9 = (_DWORD *)(self + 664);
       do
       {
         sprintf(Buffer, "endOfBarrelNodeName%d", v8);
@@ -200,7 +200,7 @@ LABEL_34:
         }
         else
         {
-          v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), String1, -1, 1));
+          v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), String1, -1, 1));
           v10 = (_DWORD *)sub_46A4C0(&v32, 4);
         }
         *(v9 - 1) = *v10;
@@ -215,7 +215,7 @@ LABEL_34:
           }
           else
           {
-            v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), String1, -1, 1));
+            v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), String1, -1, 1));
             v11 = (int *)sub_46A4C0(&v32, 4);
           }
           v12 = *v11;
@@ -225,7 +225,7 @@ LABEL_34:
             v12 != -1,
             "failed to find muzzle flash node %s, see %s : %s",
             v13,
-            *(const char **)(this + 4),
+            *(const char **)(self + 4),
             a2 + 16);
         }
         v9[1] = -1;
@@ -239,7 +239,7 @@ LABEL_34:
           }
           else
           {
-            v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), String1, -1, 1));
+            v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), String1, -1, 1));
             v14 = (int *)sub_46A4C0(&v32, 4);
           }
           v15 = *v14;
@@ -249,20 +249,20 @@ LABEL_34:
             v15 != -1,
             "failed to find muzzle subFlash node %s, see %s : %s",
             v16,
-            *(const char **)(this + 4),
+            *(const char **)(self + 4),
             a2 + 16);
         }
         ++v8;
         v9 += 3;
       }
-      while ( v8 - 1 < *(_DWORD *)(this + 656) );
+      while ( v8 - 1 < *(_DWORD *)(self + 656) );
     }
-    *(_DWORD *)(this + 792) = 0;
+    *(_DWORD *)(self + 792) = 0;
     if ( sub_40ABC0(a2, aFlashtime, 0) )
-      sub_40AF60(a2, aFlashtime, (float *)(this + 792));
-    sub_40AF60(a2, aVelocity, (float *)(this + 796));
+      sub_40AF60(a2, aFlashtime, (float *)(self + 792));
+    sub_40AF60(a2, aVelocity, (float *)(self + 796));
   }
-  v17 = *(_DWORD *)(this + 292);
+  v17 = *(_DWORD *)(self + 292);
   if ( v17 )
   {
     if ( v17 == 2 )
@@ -273,7 +273,7 @@ LABEL_34:
       }
       else
       {
-        v21 = sub_4059F0(*(_DWORD **)(this + 648), 0, 0);
+        v21 = sub_4059F0(*(_DWORD **)(self + 648), 0, 0);
         if ( !v21 )
           sub_4281B0(aCouldNotFindAN);
       }
@@ -286,10 +286,10 @@ LABEL_34:
         v32 = atof((const char *)*(_DWORD *)v21);
         v22 = (float *)sub_46A4C0(&v32, 4);
       }
-      *(float *)(this + 352) = *v22;
+      *(float *)(self + 352) = *v22;
       if ( !(unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
-        v21 = sub_4059F0(*(_DWORD **)(this + 648), 0, 1);
+        v21 = sub_4059F0(*(_DWORD **)(self + 648), 0, 1);
         if ( !v21 )
           sub_4281B0(aCouldNotFindAN);
       }
@@ -302,7 +302,7 @@ LABEL_34:
         v32 = atof((const char *)*(_DWORD *)v21);
         v23 = (float *)sub_46A4C0(&v32, 4);
       }
-      *(float *)(this + 356) = *v23;
+      *(float *)(self + 356) = *v23;
       sub_40AFC0(aRecoilnodename, (int)&String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
@@ -310,16 +310,16 @@ LABEL_34:
       }
       else
       {
-        v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), String1, -1, 1));
+        v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), String1, -1, 1));
         v24 = (int *)sub_46A4C0(&v32, 4);
       }
       v25 = *v24;
-      *(_DWORD *)(this + 832) = v25;
+      *(_DWORD *)(self + 832) = v25;
       if ( v25 == -1 )
         sub_4281B0(aCouldNotFindTh);
       if ( !(unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
-        v21 = sub_4059F0(*(_DWORD **)(this + 648), *(_DWORD *)(this + 832), 0);
+        v21 = sub_4059F0(*(_DWORD **)(self + 648), *(_DWORD *)(self + 832), 0);
         if ( !v21 )
           sub_4281B0(aCouldNotFindAN);
       }
@@ -332,10 +332,10 @@ LABEL_34:
         v32 = *(float *)(v21 + 4);
         v26 = (float *)sub_46A4C0(&v32, 4);
       }
-      *(float *)(this + 836) = *v26;
+      *(float *)(self + 836) = *v26;
       if ( !(unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
-        v21 = sub_4059F0(*(_DWORD **)(this + 648), *(_DWORD *)(this + 832), 1);
+        v21 = sub_4059F0(*(_DWORD **)(self + 648), *(_DWORD *)(self + 832), 1);
         if ( !v21 )
           sub_4281B0(aCouldNotFindAN);
       }
@@ -348,21 +348,21 @@ LABEL_34:
         v32 = *(float *)(v21 + 4);
         v27 = (float *)sub_46A4C0(&v32, 4);
       }
-      *(float *)(this + 840) = *v27;
+      *(float *)(self + 840) = *v27;
     }
     else if ( v17 == 3 )
     {
       sub_40AFC0(aAiminglightmod, (int)&String1);
       v28 = sub_4069C0(*(_DWORD **)(dword_520970 + 128), String1);
       v29 = sub_406A90((int)v28, 1);
-      *(_DWORD *)(this + 848) = v29;
+      *(_DWORD *)(self + 848) = v29;
       *(_DWORD *)(v29 + 36) = 1065353216;
-      *(_BYTE *)(*(_DWORD *)(this + 848) + 48) = 80;
-      sub_428680(*(_DWORD **)(dword_520970 + 280), *(_DWORD *)(this + 848));
-      *(_DWORD *)(this + 844) = 0;
-      sub_40B1B0((char)aAimingrange, this + 852);
-      sub_40B1B0((char)aAimingpitch, this + 860);
-      sub_40B1B0((char)aTimeinair, this + 868);
+      *(_BYTE *)(*(_DWORD *)(self + 848) + 48) = 80;
+      sub_428680(*(_DWORD **)(dword_520970 + 280), *(_DWORD *)(self + 848));
+      *(_DWORD *)(self + 844) = 0;
+      sub_40B1B0((char)aAimingrange, self + 852);
+      sub_40B1B0((char)aAimingpitch, self + 860);
+      sub_40B1B0((char)aTimeinair, self + 868);
     }
   }
   else
@@ -373,17 +373,17 @@ LABEL_34:
     }
     else
     {
-      v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), aBase, -1, 1));
+      v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), aBase, -1, 1));
       v18 = (_DWORD *)sub_46A4C0(&v32, 4);
     }
-    *(_DWORD *)(this + 800) = *v18;
-    sub_40B130(a2, aAlternatebarre, (_BYTE *)(this + 804));
-    *(_BYTE *)(this + 805) = 0;
-    *(_DWORD *)(this + 808) = -1;
-    *(_DWORD *)(this + 812) = -1;
+    *(_DWORD *)(self + 800) = *v18;
+    sub_40B130(a2, aAlternatebarre, (_BYTE *)(self + 804));
+    *(_BYTE *)(self + 805) = 0;
+    *(_DWORD *)(self + 808) = -1;
+    *(_DWORD *)(self + 812) = -1;
     if ( sub_40ABC0(a2, aShellnodename, 0) )
     {
-      *(_BYTE *)(this + 805) = 1;
+      *(_BYTE *)(self + 805) = 1;
       sub_40AFC0(aShellnodename, (int)&String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
@@ -391,10 +391,10 @@ LABEL_34:
       }
       else
       {
-        v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), String1, -1, 1));
+        v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), String1, -1, 1));
         v19 = (_DWORD *)sub_46A4C0(&v32, 4);
       }
-      *(_DWORD *)(this + 808) = *v19;
+      *(_DWORD *)(self + 808) = *v19;
       sub_40AFC0(aShellexpendern, (int)&String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
@@ -402,15 +402,15 @@ LABEL_34:
       }
       else
       {
-        v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(this + 652) + 28), String1, -1, 1));
+        v32 = COERCE_FLOAT(sub_405A30(*(_DWORD **)(*(_DWORD *)(self + 652) + 28), String1, -1, 1));
         v20 = (_DWORD *)sub_46A4C0(&v32, 4);
       }
-      *(_DWORD *)(this + 812) = *v20;
+      *(_DWORD *)(self + 812) = *v20;
     }
-    sub_40AF60(a2, aMaxpitchshake, (float *)(this + 816));
-    sub_40AF60(a2, aShakevariance, (float *)(this + 820));
+    sub_40AF60(a2, aMaxpitchshake, (float *)(self + 816));
+    sub_40AF60(a2, aShakevariance, (float *)(self + 820));
   }
-  sub_45D130((_DWORD *)this);
+  sub_45D130((_DWORD *)self);
   sub_4229D0(aFinishedLoadin_4);
-  return this;
+  return self;
 }

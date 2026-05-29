@@ -1,11 +1,11 @@
 //----- (00429E40) --------------------------------------------------------
-int __thiscall sub_429E40(FILE ***this)
+int __thiscall sub_429E40(FILE ***self)
 {
   FILE **v1; // esi
   int result; // eax
 
-  v1 = *this;
-  if ( *this )
+  v1 = *self;
+  if ( *self )
   {
     if ( v1[3] )
     {

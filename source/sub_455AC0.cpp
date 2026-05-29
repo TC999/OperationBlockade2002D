@@ -1,5 +1,5 @@
 //----- (00455AC0) --------------------------------------------------------
-int __thiscall sub_455AC0(int *this, int a2, int a3, float *a4, float *a5, float a6, float a7)
+int __thiscall sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6, float a7)
 {
   double v9; // st6
   double v10; // st7
@@ -81,12 +81,12 @@ int __thiscall sub_455AC0(int *this, int a2, int a3, float *a4, float *a5, float
       v15 = v14 + a4[2];
       v43 = v48 + v40;
       v37 = v43;
-      v16 = this[98];
+      v16 = self[98];
       v44 = v49 + v41;
       v38 = v44;
       v45 = v15 + v42;
       v39 = v45;
-      sub_455850(this, v11, (int *)&v37, v16);
+      sub_455850(self, v11, (int *)&v37, v16);
       --a2;
     }
     while ( a2 );
@@ -121,14 +121,14 @@ int __thiscall sub_455AC0(int *this, int a2, int a3, float *a4, float *a5, float
       v37 = *v20;
       v38 = v20[1];
       v21 = v20[2];
-      v22 = this[98];
+      v22 = self[98];
       v39 = v21;
-      sub_455850(this, v33, (int *)&v37, v22);
+      sub_455850(self, v33, (int *)&v37, v22);
       --v17;
     }
     while ( v17 );
   }
-  result = this[98];
-  this[98] = result + 1;
+  result = self[98];
+  self[98] = result + 1;
   return result;
 }

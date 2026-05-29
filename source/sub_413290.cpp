@@ -1,5 +1,5 @@
 //----- (00413290) --------------------------------------------------------
-void __thiscall sub_413290(int this, int a2)
+void __thiscall sub_413290(int self, int a2)
 {
-  sub_40E6D0((int *)(*(_DWORD *)(this + 4) + 12 * a2 + 376), *(float *)(this + 8));
+  sub_40E6D0((int *)(*(_DWORD *)(self + 4) + 12 * a2 + 376), *(float *)(self + 8));
 }

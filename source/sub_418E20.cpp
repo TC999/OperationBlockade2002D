@@ -1,11 +1,11 @@
 //----- (00418E20) --------------------------------------------------------
-float *__thiscall sub_418E20(float *this, float *a2)
+float *__thiscall sub_418E20(float *self, float *a2)
 {
   float *result; // eax
 
-  result = this;
-  *this = *a2 + *this;
-  this[1] = a2[1] + this[1];
-  this[2] = a2[2] + this[2];
+  result = self;
+  *self = *a2 + *self;
+  self[1] = a2[1] + self[1];
+  self[2] = a2[2] + self[2];
   return result;
 }

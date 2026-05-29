@@ -1,5 +1,5 @@
 //----- (0043BFC0) --------------------------------------------------------
-char __thiscall sub_43BFC0(int this, char *String1, int a3)
+char __thiscall sub_43BFC0(int self, char *String1, int a3)
 {
   int v4; // eax
   char *v5; // ecx
@@ -20,7 +20,7 @@ char __thiscall sub_43BFC0(int this, char *String1, int a3)
         if ( _strcmpi(String1, aCreatebutton) )
           return 1;
         sub_4229D0("UI IPX: hosting game %s", String);
-        sub_4246F0(*(LPVOID ***)(this + 40));
+        sub_4246F0(*(LPVOID ***)(self + 40));
         sub_40FEE0(dword_4F5CC4, &v8);
         v13 = 1;
         if ( v8 )
@@ -37,16 +37,16 @@ char __thiscall sub_43BFC0(int this, char *String1, int a3)
           *(_BYTE *)(dword_4F5CC4 + 108) = 1;
           v7 = aStaging;
         }
-        sub_4261C0(*(_DWORD **)(this + 40), v7, 0);
+        sub_4261C0(*(_DWORD **)(self + 40), v7, 0);
         v5 = v9;
       }
       else
       {
-        sub_4246F0(*(LPVOID ***)(this + 40));
-        v4 = *(_DWORD *)(*(_DWORD *)(this + 44) + 124);
-        if ( v4 >= *(_DWORD *)(this + 112) )
+        sub_4246F0(*(LPVOID ***)(self + 40));
+        v4 = *(_DWORD *)(*(_DWORD *)(self + 44) + 124);
+        if ( v4 >= *(_DWORD *)(self + 112) )
           return 1;
-        strcpy(ArgList, *(const char **)(this + 4 * v4 + 48));
+        strcpy(ArgList, *(const char **)(self + 4 * v4 + 48));
         sub_4229D0("UI IPX: attempt to join host %s", ArgList);
         sub_40FDD0(dword_4F5CC4, &v10, ArgList);
         v13 = 0;
@@ -56,18 +56,18 @@ char __thiscall sub_43BFC0(int this, char *String1, int a3)
           strcpy(byte_520D40, aIpx);
           strcpy(byte_520D80, aUnableToConnec);
           strcpy(byte_521180, (const char *)lpMem);
-          sub_4261C0(*(_DWORD **)(this + 40), aErrormsg, 0);
+          sub_4261C0(*(_DWORD **)(self + 40), aErrormsg, 0);
         }
         else
         {
-          sub_4261C0(*(_DWORD **)(this + 40), aConnecting, 0);
+          sub_4261C0(*(_DWORD **)(self + 40), aConnecting, 0);
         }
         v5 = (char *)lpMem;
       }
       sub_488CEE(v5);
       return 1;
     }
-    sub_4261C0(*(_DWORD **)(this + 40), aNetnameentry, 0);
+    sub_4261C0(*(_DWORD **)(self + 40), aNetnameentry, 0);
   }
   return 1;
 }

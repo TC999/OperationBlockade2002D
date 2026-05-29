@@ -1,5 +1,5 @@
 //----- (0046EAAE) --------------------------------------------------------
-int __thiscall sub_46EAAE(_DWORD *this)
+int __thiscall sub_46EAAE(_DWORD *self)
 {
   unsigned int *v1; // ebx
   int v2; // eax
@@ -18,10 +18,10 @@ int __thiscall sub_46EAAE(_DWORD *this)
   char *v17; // [esp+24h] [ebp-Ch]
   unsigned int *v18; // [esp+2Ch] [ebp-4h]
 
-  v1 = *(unsigned int **)(this[1] + 24);
-  v2 = *this;
-  v3 = *(_DWORD *)(*this + 4180);
-  v4 = *(_DWORD *)(*this + 4168);
+  v1 = *(unsigned int **)(self[1] + 24);
+  v2 = *self;
+  v3 = *(_DWORD *)(*self + 4180);
+  v4 = *(_DWORD *)(*self + 4168);
   v5 = *(char **)(v2 + 24);
   v15 = v1;
   v14 = v5;
@@ -59,9 +59,9 @@ int __thiscall sub_46EAAE(_DWORD *this)
       while ( v9 );
       v5 = v14;
     }
-    v1 = (unsigned int *)((char *)v15 + *(_DWORD *)(this[1] + 4168));
-    v2 = *this;
-    v4 = *(_DWORD *)(*this + 4168);
+    v1 = (unsigned int *)((char *)v15 + *(_DWORD *)(self[1] + 4168));
+    v2 = *self;
+    v4 = *(_DWORD *)(*self + 4168);
     v5 += 2 * v4;
     v15 = v1;
   }

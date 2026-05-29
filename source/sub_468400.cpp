@@ -1,5 +1,5 @@
 //----- (00468400) --------------------------------------------------------
-int __thiscall sub_468400(int this, float a2)
+int __thiscall sub_468400(int self, float a2)
 {
   double v3; // st7
   int v4; // edx
@@ -20,30 +20,30 @@ int __thiscall sub_468400(int this, float a2)
   float v19; // [esp+4h] [ebp-18h]
   float v20; // [esp+18h] [ebp-4h]
 
-  *(_BYTE *)(*(_DWORD *)(this + 4) + 172 * sub_405A30((_DWORD *)this, aIsland, -1, 1) + 80) = 0;
+  *(_BYTE *)(*(_DWORD *)(self + 4) + 172 * sub_405A30((_DWORD *)self, aIsland, -1, 1) + 80) = 0;
   if ( byte_520974 )
   {
-    v3 = *(float *)(this + 612) - a2;
-    *(float *)(this + 612) = v3;
+    v3 = *(float *)(self + 612) - a2;
+    *(float *)(self + 612) = v3;
     if ( v3 < 0.0 )
     {
-      v4 = *(_DWORD *)(this + 604);
-      *(_DWORD *)(this + 612) = 0x40000000;
-      *(_DWORD *)(this + 604) = v4 + 1;
+      v4 = *(_DWORD *)(self + 604);
+      *(_DWORD *)(self + 612) = 0x40000000;
+      *(_DWORD *)(self + 604) = v4 + 1;
       if ( v4 == 3 )
-        *(_DWORD *)(this + 604) = 0;
-      v5 = *(_DWORD *)(this + 608) + 1;
-      *(_DWORD *)(this + 608) = v5;
+        *(_DWORD *)(self + 604) = 0;
+      v5 = *(_DWORD *)(self + 608) + 1;
+      *(_DWORD *)(self + 608) = v5;
       if ( v5 == 4 )
-        *(_DWORD *)(this + 608) = 0;
+        *(_DWORD *)(self + 608) = 0;
     }
   }
   *(float *)&v18 = *(float *)(dword_520970 + 72) * 0.0026179941;
   sub_4685D0(aWater, v18, 0.059999999, 0.015);
-  result = *(_DWORD *)(this + 620);
+  result = *(_DWORD *)(self + 620);
   for ( i = 0; i < result; ++i )
   {
-    v8 = *(_DWORD *)(*(_DWORD *)(this + 616) + 4 * i);
+    v8 = *(_DWORD *)(*(_DWORD *)(self + 616) + 4 * i);
     if ( *(_BYTE *)(v8 + 8) )
     {
       v9 = a2 * *(float *)(v8 + 16) + *(float *)(v8 + 12);
@@ -92,7 +92,7 @@ int __thiscall sub_468400(int this, float a2)
     }
     v19 = sin(v10);
     sub_468750(*(_DWORD *)v8, v19);
-    result = *(_DWORD *)(this + 620);
+    result = *(_DWORD *)(self + 620);
   }
   return result;
 }

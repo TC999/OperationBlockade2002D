@@ -1,5 +1,5 @@
 //----- (0043B180) --------------------------------------------------------
-int __thiscall sub_43B180(_DWORD *this)
+int __thiscall sub_43B180(_DWORD *self)
 {
   void *v2; // esi
   int i; // esi
@@ -20,16 +20,16 @@ int __thiscall sub_43B180(_DWORD *this)
     do
     {
       if ( _strcmpi(String1, aSps) )
-        ++this[12];
+        ++self[12];
     }
     while ( !_findnext(v2, (int)v11) );
   }
   _findclose((intptr_t)v2);
-  this[11] = operator new(4 * this[12]);
-  for ( i = 0; i < this[12]; ++i )
+  self[11] = operator new(4 * self[12]);
+  for ( i = 0; i < self[12]; ++i )
   {
-    *(_DWORD *)(this[11] + 4 * i) = operator new(0x18u);
-    v4 = *(void **)(this[11] + 4 * i);
+    *(_DWORD *)(self[11] + 4 * i) = operator new(0x18u);
+    v4 = *(void **)(self[11] + 4 * i);
     memset(v4, 0, 0x18u);
   }
   v5 = (void *)_findfirst(FileName, (int)v11);
@@ -45,7 +45,7 @@ int __thiscall sub_43B180(_DWORD *this)
         v7 = strrchr(Str, 46);
         if ( v7 )
           *v7 = 0;
-        v8 = *(char **)(this[11] + v6);
+        v8 = *(char **)(self[11] + v6);
         v6 += 4;
         strcpy(v8, Str);
         v5 = v10;

@@ -1,5 +1,5 @@
 //----- (00417770) --------------------------------------------------------
-int __thiscall sub_417770(float *this)
+int __thiscall sub_417770(float *self)
 {
   float *v1; // esi
   double v2; // st7
@@ -210,9 +210,9 @@ int __thiscall sub_417770(float *this)
   float v207; // [esp+98h] [ebp-8h]
   float v208; // [esp+9Ch] [ebp-4h]
 
-  v1 = this;
-  v2 = this[5 * *((_DWORD *)this + 1045) + 61];
-  v3 = &this[5 * *((_DWORD *)this + 1045) + 59];
+  v1 = self;
+  v2 = self[5 * *((_DWORD *)self + 1045) + 61];
+  v3 = &self[5 * *((_DWORD *)self + 1045) + 59];
   v135 = v2 + v2;
   v97 = v3[1] + v3[1];
   v57 = *v3 + *v3;

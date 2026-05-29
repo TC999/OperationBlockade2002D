@@ -1,5 +1,5 @@
 //----- (0042A0E0) --------------------------------------------------------
-int __thiscall sub_42A0E0(_DWORD *this)
+int __thiscall sub_42A0E0(_DWORD *self)
 {
   _DWORD *v1; // esi
   int v3; // eax
@@ -10,8 +10,8 @@ int __thiscall sub_42A0E0(_DWORD *this)
   char v8; // [esp+Ah] [ebp-2h] BYREF
   char v9; // [esp+Bh] [ebp-1h] BYREF
 
-  v1 = (_DWORD *)*this;
-  if ( *(_DWORD *)*this )
+  v1 = (_DWORD *)*self;
+  if ( *(_DWORD *)*self )
     return 0;
   do
   {

@@ -1,5 +1,5 @@
 //----- (00447AA0) --------------------------------------------------------
-void __thiscall sub_447AA0(_DWORD *this, float a2)
+void __thiscall sub_447AA0(_DWORD *self, float a2)
 {
   int v3; // esi
   float v4; // eax
@@ -42,7 +42,7 @@ void __thiscall sub_447AA0(_DWORD *this, float a2)
 
   v3 = *(_DWORD *)(LODWORD(a2) + 16);
   LODWORD(v4) = *(unsigned __int16 *)(LODWORD(a2) + 12) - 514;
-  v5 = (int)this;
+  v5 = (int)self;
   switch ( *(_WORD *)(LODWORD(a2) + 12) )
   {
     case 0x202:
@@ -52,7 +52,7 @@ void __thiscall sub_447AA0(_DWORD *this, float a2)
         v38 = *(__int16 *)(v3 + 13);
         v7 = *(unsigned __int8 *)(v3 + 17);
         v28 = *(_BYTE *)(v3 + 10);
-        v8 = this[111];
+        v8 = self[111];
         v29[2] = 0.0;
         v9 = *(__int16 *)(v3 + 8);
         v29[0] = v6 * 2.5;
@@ -77,7 +77,7 @@ void __thiscall sub_447AA0(_DWORD *this, float a2)
       {
         dword_5216E8 = *(_DWORD *)(LODWORD(a2) + 4);
         LOBYTE(v4) = *(_BYTE *)(v3 + 28);
-        v14 = sub_443CD0((int)this, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), v4);
+        v14 = sub_443CD0((int)self, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), v4);
         v40 = v14;
         if ( v14 )
         {
@@ -114,8 +114,8 @@ void __thiscall sub_447AA0(_DWORD *this, float a2)
       }
       break;
     case 0x204:
-      LOBYTE(this) = *(_BYTE *)(v3 + 28);
-      sub_443CD0(v5, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), *(float *)&this);
+      LOBYTE(self) = *(_BYTE *)(v3 + 28);
+      sub_443CD0(v5, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), *(float *)&self);
       if ( *(_DWORD *)(v3 + 29) )
       {
         v22 = sub_411B60(dword_4F5CC4, *(_DWORD *)(v3 + 29));
@@ -130,7 +130,7 @@ void __thiscall sub_447AA0(_DWORD *this, float a2)
       }
       break;
     case 0x205:
-      sub_444030(this, 1);
+      sub_444030(self, 1);
       sub_4477F0(v5, 0);
       *(_DWORD *)(*(_DWORD *)(v5 + 412) + 36) = 1065353216;
       *(_BYTE *)(*(_DWORD *)(v5 + 412) + 48) = 0;

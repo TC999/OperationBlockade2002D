@@ -1,11 +1,11 @@
 //----- (0043BE50) --------------------------------------------------------
-int __thiscall sub_43BE50(LPVOID *this)
+int __thiscall sub_43BE50(LPVOID *self)
 {
   LPVOID *v2; // esi
   int v3; // edi
 
-  *this = &off_499710;
-  v2 = this + 12;
+  *self = &off_499710;
+  v2 = self + 12;
   v3 = 16;
   do
   {
@@ -13,5 +13,5 @@ int __thiscall sub_43BE50(LPVOID *this)
     --v3;
   }
   while ( v3 );
-  return sub_4234A0(this);
+  return sub_4234A0(self);
 }

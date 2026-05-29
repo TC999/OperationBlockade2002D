@@ -1,5 +1,5 @@
 //----- (004139F0) --------------------------------------------------------
-int __thiscall sub_4139F0(_DWORD *this, float a2)
+int __thiscall sub_4139F0(_DWORD *self, float a2)
 {
   _DWORD *v2; // ebx
   int v3; // esi
@@ -160,9 +160,9 @@ int __thiscall sub_4139F0(_DWORD *this, float a2)
   float v159; // [esp+C4h] [ebp-8h]
   float v160; // [esp+C8h] [ebp-4h]
 
-  v2 = this;
+  v2 = self;
   v3 = 0;
-  v148 = this;
+  v148 = self;
   v131 = 0;
   do
   {

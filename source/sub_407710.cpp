@@ -1,5 +1,5 @@
 //----- (00407710) --------------------------------------------------------
-char __thiscall sub_407710(float *this, int a2, int a3, int a4, int a5, int a6, int a7, int *a8, int a9)
+char __thiscall sub_407710(float *self, int a2, int a3, int a4, int a5, int a6, int a7, int *a8, int a9)
 {
   float *v9; // edi
   int v10; // eax
@@ -43,15 +43,15 @@ char __thiscall sub_407710(float *this, int a2, int a3, int a4, int a5, int a6, 
   int v49[3]; // [esp+AEh] [ebp-4Ch] BYREF
   _BYTE v50[64]; // [esp+BAh] [ebp-40h] BYREF
 
-  v9 = this;
+  v9 = self;
   v48[0] = a2;
   v49[0] = a5;
-  v10 = *((_DWORD *)this + 5);
+  v10 = *((_DWORD *)self + 5);
   v48[1] = a3;
   v48[2] = a4;
   v11 = 0;
   v12 = 0;
-  v46 = this;
+  v46 = self;
   v49[1] = a6;
   v49[2] = a7;
   v29 = 0;

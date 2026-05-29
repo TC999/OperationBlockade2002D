@@ -1,5 +1,5 @@
 //----- (00468CA0) --------------------------------------------------------
-char __thiscall sub_468CA0(int *this, float *a2, int *a3, float *a4, int *a5)
+char __thiscall sub_468CA0(int *self, float *a2, int *a3, float *a4, int *a5)
 {
   int v6; // ecx
   int *v10; // eax
@@ -29,8 +29,8 @@ char __thiscall sub_468CA0(int *this, float *a2, int *a3, float *a4, int *a5)
   float v36; // [esp+6Ch] [ebp+8h]
   float v37; // [esp+70h] [ebp+Ch]
 
-  v33 = this;
-  v6 = this[6];
+  v33 = self;
+  v6 = self[6];
   if ( !v6 )
     return 0;
   v26 = a3[2];
@@ -42,7 +42,7 @@ char __thiscall sub_468CA0(int *this, float *a2, int *a3, float *a4, int *a5)
   v32 = 3.4028235e38;
   if ( !sub_407A90(v6, (int)a4, (int)a2, SLODWORD(v21), v22, v23, v24, v25, v26, &v30, a4, v27, v28) )
     goto LABEL_7;
-  sub_407690(this[6], v30, v34);
+  sub_407690(self[6], v30, v34);
   sub_46C5C5(a4, a4, v34);
   v10 = &dword_4AE740;
   if ( dword_4AE740 == -1 )

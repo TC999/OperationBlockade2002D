@@ -1,5 +1,5 @@
 //----- (00466410) --------------------------------------------------------
-int __thiscall sub_466410(int this, int *a2, int *a3, int a4, int a5)
+int __thiscall sub_466410(int self, int *a2, int *a3, int a4, int a5)
 {
   float v6; // edi
   int v7; // eax
@@ -16,13 +16,13 @@ int __thiscall sub_466410(int this, int *a2, int *a3, int a4, int a5)
   char v19; // [esp+24h] [ebp-44h]
   int v20[16]; // [esp+28h] [ebp-40h] BYREF
 
-  if ( !*(_BYTE *)(this + 16) )
+  if ( !*(_BYTE *)(self + 16) )
     return 0;
   v6 = *(float *)&a5;
-  if ( !sub_407710(*(float **)(this + 416), *a2, a2[1], a2[2], *a3, a3[1], a3[2], &a5, a5) )
+  if ( !sub_407710(*(float **)(self + 416), *a2, a2[1], a2[2], *a3, a3[1], a3[2], &a5, a5) )
     return 0;
   v7 = 0;
-  v8 = (_DWORD *)(*(_DWORD *)(this + 412) + 1120);
+  v8 = (_DWORD *)(*(_DWORD *)(self + 412) + 1120);
   do
   {
     if ( a5 == *v8 )
@@ -35,7 +35,7 @@ int __thiscall sub_466410(int this, int *a2, int *a3, int a4, int a5)
   {
     if ( !*(_BYTE *)(a4 + 124) )
     {
-      v9 = *(_WORD *)(this + 392);
+      v9 = *(_WORD *)(self + 392);
       v14 = v7;
       v13[3] = v9;
       v15 = *(_DWORD *)LODWORD(v6);
@@ -51,7 +51,7 @@ int __thiscall sub_466410(int this, int *a2, int *a3, int a4, int a5)
   {
     sub_4666E0(v7, LODWORD(v6), *(_DWORD *)(*(_DWORD *)(a4 + 4) + 300), *(_BYTE *)(*(_DWORD *)(a4 + 4) + 312));
   }
-  v11 = *(_DWORD *)(this + 416);
+  v11 = *(_DWORD *)(self + 416);
   memset(&v20[11], 0, 16);
   memset(&v20[6], 0, 16);
   memset(&v20[1], 0, 16);

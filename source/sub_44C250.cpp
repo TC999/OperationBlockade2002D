@@ -1,5 +1,5 @@
 //----- (0044C250) --------------------------------------------------------
-int __thiscall sub_44C250(_DWORD *this)
+int __thiscall sub_44C250(_DWORD *self)
 {
   _DWORD *v1; // esi
   int v2; // ebp
@@ -10,10 +10,10 @@ int __thiscall sub_44C250(_DWORD *this)
   int v8; // [esp+Ch] [ebp-18h]
   int v9; // [esp+10h] [ebp-14h]
 
-  v1 = this;
-  *this = &off_499A74;
-  v2 = this[84];
-  v9 = this[85];
+  v1 = self;
+  *self = &off_499A74;
+  v2 = self[84];
+  v9 = self[85];
   v8 = v2;
   if ( v2 != v9 )
   {
@@ -40,7 +40,7 @@ int __thiscall sub_44C250(_DWORD *this)
       v8 += 40;
     }
     while ( v8 != v9 );
-    v1 = this;
+    v1 = self;
   }
   sub_4885A6((LPVOID)v1[84]);
   v1[84] = 0;

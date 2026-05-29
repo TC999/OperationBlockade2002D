@@ -1,5 +1,5 @@
 //----- (0043A840) --------------------------------------------------------
-char __thiscall sub_43A840(int **this)
+char __thiscall sub_43A840(int **self)
 {
-  return sub_424630(this[10]);
+  return sub_424630(self[10]);
 }

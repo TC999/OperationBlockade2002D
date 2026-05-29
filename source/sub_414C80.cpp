@@ -1,5 +1,5 @@
 //----- (00414C80) --------------------------------------------------------
-char __thiscall sub_414C80(_DWORD *this, int a2)
+char __thiscall sub_414C80(_DWORD *self, int a2)
 {
   int i; // edi
   int v4; // esi
@@ -8,7 +8,7 @@ char __thiscall sub_414C80(_DWORD *this, int a2)
 
   for ( i = 0; i < 98304; i += 192 )
   {
-    v4 = i + this[6];
+    v4 = i + self[6];
     LOBYTE(v5) = *(_BYTE *)(v4 + 112);
     if ( !(_BYTE)v5 )
     {

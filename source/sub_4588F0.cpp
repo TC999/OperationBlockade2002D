@@ -1,5 +1,5 @@
 //----- (004588F0) --------------------------------------------------------
-char __thiscall sub_4588F0(_DWORD *this, int a2)
+char __thiscall sub_4588F0(_DWORD *self, int a2)
 {
   int v3; // esi
   __int16 v4; // ax
@@ -29,10 +29,10 @@ char __thiscall sub_4588F0(_DWORD *this, int a2)
     if ( *(_BYTE *)(dword_4F5CC4 + 936) )
     {
       dword_5216E8 = *(_DWORD *)(a2 + 4);
-      sub_456C50((int)this, (float *)(v3 + 10), *(float *)(v3 + 22), *(_BYTE *)(v3 + 26), (_DWORD *)(v3 + 27));
+      sub_456C50((int)self, (float *)(v3 + 10), *(float *)(v3 + 22), *(_BYTE *)(v3 + 26), (_DWORD *)(v3 + 27));
       v5 = *(_DWORD *)(v3 + 10);
       v6 = *(_DWORD *)(v3 + 14);
-      v14 = this[99];
+      v14 = self[99];
       v7 = *(_DWORD *)(v3 + 18);
       v15 = v5;
       v8 = *(_DWORD *)(v3 + 22);
@@ -57,7 +57,7 @@ char __thiscall sub_4588F0(_DWORD *this, int a2)
     v4 = *(_WORD *)(a2 + 12) - 2309;
     if ( *(_WORD *)(a2 + 12) == 2309 )
       LOBYTE(v4) = sub_456C50(
-                     (int)this,
+                     (int)self,
                      (float *)(v3 + 10),
                      *(float *)(v3 + 22),
                      *(_BYTE *)(v3 + 26),

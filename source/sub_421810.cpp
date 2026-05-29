@@ -1,5 +1,5 @@
 //----- (00421810) --------------------------------------------------------
-int __thiscall sub_421810(int this, const char *a2, int a3, int a4)
+int __thiscall sub_421810(int self, const char *a2, int a3, int a4)
 {
   char *v5; // ebx
   int v6; // eax
@@ -26,23 +26,23 @@ int __thiscall sub_421810(int this, const char *a2, int a3, int a4)
   if ( !v6 )
     return -1;
   *((_DWORD *)v5 + 67) = a4;
-  v8 = *(_DWORD *)(this + 28);
-  v9 = *(_DWORD *)(this + 24) + 1;
-  *(_DWORD *)(this + 24) = v9;
+  v8 = *(_DWORD *)(self + 28);
+  v9 = *(_DWORD *)(self + 24) + 1;
+  *(_DWORD *)(self + 24) = v9;
   if ( v9 > v8 )
   {
     v10 = v8 + 8;
-    *(_DWORD *)(this + 28) = v10;
-    v11 = sub_488DD7(*(LPVOID *)(this + 20), 4 * v10);
+    *(_DWORD *)(self + 28) = v10;
+    v11 = sub_488DD7(*(LPVOID *)(self + 20), 4 * v10);
     if ( v11 )
     {
-      v12 = *(_DWORD *)(this + 24);
-      v13 = *(_DWORD *)(this + 28) - v12;
-      *(_DWORD *)(this + 20) = v11;
+      v12 = *(_DWORD *)(self + 24);
+      v13 = *(_DWORD *)(self + 28) - v12;
+      *(_DWORD *)(self + 20) = v11;
       memset((void *)(v11 + 4 * v12), 0, 4 * v13);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * *(_DWORD *)(this + 24) - 4) = v5;
+  *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = v5;
   v14 = *((_DWORD *)v5 + 65);
   *((_DWORD *)v5 + 68) = 0;
   v15 = *((_DWORD *)v5 + 66);
@@ -70,5 +70,5 @@ int __thiscall sub_421810(int this, const char *a2, int a3, int a4)
     }
     while ( *(_BYTE *)v15 );
   }
-  return *(_DWORD *)(this + 24) - 1;
+  return *(_DWORD *)(self + 24) - 1;
 }

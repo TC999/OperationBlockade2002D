@@ -1,5 +1,5 @@
 //----- (0044F190) --------------------------------------------------------
-_DWORD *__thiscall sub_44F190(int this, _DWORD *a2, unsigned int a3, _DWORD *a4)
+_DWORD *__thiscall sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
 {
   int v5; // edi
   _DWORD *result; // eax
@@ -32,16 +32,16 @@ _DWORD *__thiscall sub_44F190(int this, _DWORD *a2, unsigned int a3, _DWORD *a4)
   int v34; // [esp+14h] [ebp-4h]
   _DWORD *v35; // [esp+20h] [ebp+8h]
 
-  v5 = this;
-  result = *(_DWORD **)(this + 8);
-  if ( (*(_DWORD *)(this + 12) - (int)result) >> 2 >= a3 )
+  v5 = self;
+  result = *(_DWORD **)(self + 8);
+  if ( (*(_DWORD *)(self + 12) - (int)result) >> 2 >= a3 )
   {
     if ( result - a2 >= a3 )
     {
       if ( a3 )
       {
         v27 = 4 * a3;
-        v28 = *(_DWORD **)(this + 8);
+        v28 = *(_DWORD **)(self + 8);
         for ( i = &result[-a3]; i != result; ++v28 )
         {
           if ( v28 )
@@ -71,7 +71,7 @@ _DWORD *__thiscall sub_44F190(int this, _DWORD *a2, unsigned int a3, _DWORD *a4)
           if ( v21 )
           {
             *v21 = *v22;
-            v5 = this;
+            v5 = self;
           }
           ++v22;
           ++v21;
@@ -94,7 +94,7 @@ _DWORD *__thiscall sub_44F190(int this, _DWORD *a2, unsigned int a3, _DWORD *a4)
   }
   else
   {
-    v7 = *(_DWORD *)(this + 4);
+    v7 = *(_DWORD *)(self + 4);
     if ( !v7 || (v8 = ((int)result - v7) >> 2, a3 >= v8) )
       v8 = a3;
     if ( v7 )
@@ -122,7 +122,7 @@ _DWORD *__thiscall sub_44F190(int this, _DWORD *a2, unsigned int a3, _DWORD *a4)
         if ( v13 )
         {
           *v13 = *a4;
-          v5 = this;
+          v5 = self;
         }
         ++v13;
         --v14;
@@ -143,21 +143,21 @@ _DWORD *__thiscall sub_44F190(int this, _DWORD *a2, unsigned int a3, _DWORD *a4)
       }
       while ( v17 != v15 );
     }
-    sub_4885A6(*(LPVOID *)(this + 4));
-    *(_DWORD *)(this + 12) = &v35[v34];
-    v18 = *(_DWORD *)(this + 4);
+    sub_4885A6(*(LPVOID *)(self + 4));
+    *(_DWORD *)(self + 12) = &v35[v34];
+    v18 = *(_DWORD *)(self + 4);
     if ( v18 )
     {
-      v19 = *(_DWORD *)(this + 8);
-      *(_DWORD *)(this + 4) = v35;
+      v19 = *(_DWORD *)(self + 8);
+      *(_DWORD *)(self + 4) = v35;
       result = &v35[a3 + ((v19 - v18) >> 2)];
     }
     else
     {
-      *(_DWORD *)(this + 4) = v35;
+      *(_DWORD *)(self + 4) = v35;
       result = &v35[a3];
     }
-    *(_DWORD *)(this + 8) = result;
+    *(_DWORD *)(self + 8) = result;
   }
   return result;
 }

@@ -1,5 +1,5 @@
 //----- (00429DE0) --------------------------------------------------------
-_DWORD *__thiscall sub_429DE0(_DWORD *this, char *FileName)
+_DWORD *__thiscall sub_429DE0(_DWORD *self, char *FileName)
 {
   _DWORD *v3; // esi
   FILE *v4; // eax
@@ -15,12 +15,12 @@ _DWORD *__thiscall sub_429DE0(_DWORD *this, char *FileName)
     v3[3] = v4;
     if ( !v4 )
       *v3 = 1;
-    *this = v3;
-    return this;
+    *self = v3;
+    return self;
   }
   else
   {
-    *this = 0;
-    return this;
+    *self = 0;
+    return self;
   }
 }

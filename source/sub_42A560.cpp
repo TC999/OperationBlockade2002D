@@ -1,11 +1,11 @@
 //----- (0042A560) --------------------------------------------------------
-char __thiscall sub_42A560(_DWORD *this, _BYTE *a2)
+char __thiscall sub_42A560(_DWORD *self, _BYTE *a2)
 {
   _DWORD *v2; // esi
   int v4; // eax
 
-  v2 = (_DWORD *)*this;
-  if ( *(_DWORD *)*this )
+  v2 = (_DWORD *)*self;
+  if ( *(_DWORD *)*self )
     return 0;
   if ( *((_BYTE *)v2 + 8) )
     goto LABEL_9;

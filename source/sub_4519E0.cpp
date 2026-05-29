@@ -1,5 +1,5 @@
 //----- (004519E0) --------------------------------------------------------
-char *__thiscall sub_4519E0(char *this, char *String1)
+char *__thiscall sub_4519E0(char *self, char *String1)
 {
   char *v2; // edi
   char v4; // cl
@@ -329,30 +329,30 @@ char *__thiscall sub_4519E0(char *this, char *String1)
   int v329; // [esp+50h] [ebp-4h]
 
   v2 = String1;
-  v324[1] = (int)this;
-  sub_468FF0(this, (int)String1);
+  v324[1] = (int)self;
+  sub_468FF0(self, (int)String1);
   v329 = 0;
-  `eh vector constructor iterator'(this + 372, 0x10u, 20, sub_455730, (void (__thiscall *)(void *))sub_44E9B0);
+  `eh vector constructor iterator'(self + 372, 0x10u, 20, sub_455730, (void (__thiscall *)(void *))sub_44E9B0);
   v4 = (char)String1;
-  *((_DWORD *)this + 175) = 0;
-  this[696] = v4;
-  *((_DWORD *)this + 176) = 0;
-  *((_DWORD *)this + 177) = 0;
+  *((_DWORD *)self + 175) = 0;
+  self[696] = v4;
+  *((_DWORD *)self + 176) = 0;
+  *((_DWORD *)self + 177) = 0;
   v5 = (char)String1;
-  *((_DWORD *)this + 179) = 0;
-  this[712] = v5;
-  *((_DWORD *)this + 180) = 0;
-  *((_DWORD *)this + 181) = 0;
+  *((_DWORD *)self + 179) = 0;
+  self[712] = v5;
+  *((_DWORD *)self + 180) = 0;
+  *((_DWORD *)self + 181) = 0;
   v6 = (char)String1;
-  *((_DWORD *)this + 183) = 0;
-  this[728] = v6;
-  *((_DWORD *)this + 184) = 0;
-  *((_DWORD *)this + 185) = 0;
+  *((_DWORD *)self + 183) = 0;
+  self[728] = v6;
+  *((_DWORD *)self + 184) = 0;
+  *((_DWORD *)self + 185) = 0;
   LOBYTE(v329) = 4;
-  *(_DWORD *)this = &off_499AE0;
+  *(_DWORD *)self = &off_499AE0;
   sub_4229D0(aStartedLoading_1);
-  sub_40AF00(v2, aAniminfo, (char **)this + 73);
-  v7 = *((_DWORD *)this + 73);
+  sub_40AF00(v2, aAniminfo, (char **)self + 73);
+  v7 = *((_DWORD *)self + 73);
   if ( !dword_5216EC[v7] )
   {
     if ( v7 )
@@ -366,7 +366,7 @@ char *__thiscall sub_4519E0(char *this, char *String1)
     {
       v318 = aTroopaIni;
     }
-    sub_40A120(v318 != 0, "animInfo must be 0, 1, or 2, see %s : %s", *((const char **)this + 1), v2 + 16);
+    sub_40A120(v318 != 0, "animInfo must be 0, 1, or 2, see %s : %s", *((const char **)self + 1), v2 + 16);
     v8 = (char **)operator new(0x14u);
     v324[0] = (int)v8;
     LOBYTE(v329) = 5;
@@ -374,7 +374,7 @@ char *__thiscall sub_4519E0(char *this, char *String1)
       v9 = sub_451390(v8, v318);
     else
       v9 = 0;
-    v10 = *((_DWORD *)this + 73);
+    v10 = *((_DWORD *)self + 73);
     LOBYTE(v329) = 4;
     dword_5216EC[v10] = (int)v9;
   }
@@ -382,54 +382,54 @@ char *__thiscall sub_4519E0(char *this, char *String1)
   if ( _strcmpi(String1, aGunGuy) )
   {
     if ( _strcmpi(String1, aMortarGuy) )
-      sub_40A120(0, "%s, see %s : %s", aInvalidSoldier, *((const char **)this + 1), v2 + 16);
+      sub_40A120(0, "%s, see %s : %s", aInvalidSoldier, *((const char **)self + 1), v2 + 16);
     else
-      *((_DWORD *)this + 74) = 1;
+      *((_DWORD *)self + 74) = 1;
   }
   else
   {
-    *((_DWORD *)this + 74) = 0;
+    *((_DWORD *)self + 74) = 0;
   }
-  *((_DWORD *)this + 75) = 1065353216;
+  *((_DWORD *)self + 75) = 1065353216;
   if ( sub_40ABC0(v2, aUnitvalue, 0) )
-    sub_40AF60(v2, aUnitvalue, (float *)this + 75);
+    sub_40AF60(v2, aUnitvalue, (float *)self + 75);
   sub_40AFC0(v2, aScoringgroup, &String1);
   v11 = sub_462480(*(_DWORD **)(dword_520970 + 280), String1);
   v12 = String1;
-  v13 = (const char *)*((_DWORD *)this + 1);
-  *((_DWORD *)this + 76) = v11;
+  v13 = (const char *)*((_DWORD *)self + 1);
+  *((_DWORD *)self + 76) = v11;
   sub_4282E0(v11 != 0, "Infantry type %s: couldn't find scoring groups %s", v13, v12);
-  sub_40AF60(v2, aWalkspeed, (float *)this + 77);
-  sub_40AF60(v2, aHealth, (float *)this + 78);
-  sub_40AF60(v2, aSize_0, (float *)this + 79);
-  sub_40AF60(v2, aOffsetz, (float *)this + 80);
-  sub_40B1B0(v2, aRange, (float *)this + 81);
-  v14 = *((_DWORD *)this + 74);
+  sub_40AF60(v2, aWalkspeed, (float *)self + 77);
+  sub_40AF60(v2, aHealth, (float *)self + 78);
+  sub_40AF60(v2, aSize_0, (float *)self + 79);
+  sub_40AF60(v2, aOffsetz, (float *)self + 80);
+  sub_40B1B0(v2, aRange, (float *)self + 81);
+  v14 = *((_DWORD *)self + 74);
   if ( v14 )
   {
     if ( v14 == 1 )
     {
-      sub_40B1B0(v2, aTimetillsetup, (float *)this + 89);
-      sub_40B1B0(v2, aTimetillfire, (float *)this + 91);
+      sub_40B1B0(v2, aTimetillsetup, (float *)self + 89);
+      sub_40B1B0(v2, aTimetillfire, (float *)self + 91);
     }
     else
     {
-      sub_40A120(0, "%s, see %s : %s", aInvalidSoldier, *((const char **)this + 1), v2 + 16);
+      sub_40A120(0, "%s, see %s : %s", aInvalidSoldier, *((const char **)self + 1), v2 + 16);
     }
   }
   else
   {
-    sub_40B1B0(v2, aActivetime, (float *)this + 83);
-    sub_40B1B0(v2, aInactivetime, (float *)this + 85);
-    sub_40B1B0(v2, aTimetillgrenad, (float *)this + 87);
+    sub_40B1B0(v2, aActivetime, (float *)self + 83);
+    sub_40B1B0(v2, aInactivetime, (float *)self + 85);
+    sub_40B1B0(v2, aTimetillgrenad, (float *)self + 87);
   }
-  v15 = *((_DWORD *)this + 74);
+  v15 = *((_DWORD *)self + 74);
   if ( v15 )
   {
     if ( v15 == 1 )
     {
       v138 = v2 + 16;
-      v305 = (const char *)*((_DWORD *)this + 1);
+      v305 = (const char *)*((_DWORD *)self + 1);
       v139 = sub_40ABC0(v2, aWalkingleft, 0);
       sub_40A120(v139, "no strips found for %s, see %s : %s", aWalkingleft, v305, v2 + 16);
       if ( sub_40AD80(aWalkingleft) )
@@ -437,7 +437,7 @@ char *__thiscall sub_4519E0(char *this, char *String1)
         while ( sub_40ABC0(v2, aWalkingleft, 0) )
         {
           sub_40B310(v2, aWalkingleft, &v316, (const char **)&String1);
-          v140 = *((_DWORD *)this + 73);
+          v140 = *((_DWORD *)self + 73);
           v141 = 0;
           i = String1;
           v142 = dword_5216EC[v140];
@@ -464,11 +464,11 @@ LABEL_244:
             v141 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingleft,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v141;
-          sub_4638A0((int)(this + 388), *((char **)this + 99), 1u, &v325);
+          sub_4638A0((int)(self + 388), *((char **)self + 99), 1u, &v325);
         }
       }
       else
@@ -476,7 +476,7 @@ LABEL_244:
         while ( sub_40ABC0(v2, aWalkingleft, 0) )
         {
           sub_40AFC0(v2, aWalkingleft, &String1);
-          v144 = *((_DWORD *)this + 73);
+          v144 = *((_DWORD *)self + 73);
           v145 = 0;
           i = String1;
           v146 = dword_5216EC[v144];
@@ -503,14 +503,14 @@ LABEL_252:
             v145 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingleft,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v145;
-          sub_4638A0((int)(this + 388), *((char **)this + 99), 1u, &v325);
+          sub_4638A0((int)(self + 388), *((char **)self + 99), 1u, &v325);
         }
       }
-      v306 = (const char *)*((_DWORD *)this + 1);
+      v306 = (const char *)*((_DWORD *)self + 1);
       v148 = sub_40ABC0(v2, aWalkingfastlef, 0);
       sub_40A120(v148, "no strips found for %s, see %s : %s", aWalkingfastlef, v306, v138);
       if ( sub_40AD80(aWalkingfastlef) )
@@ -518,7 +518,7 @@ LABEL_252:
         while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
         {
           sub_40B310(v2, aWalkingfastlef, &v316, (const char **)&String1);
-          v149 = *((_DWORD *)this + 73);
+          v149 = *((_DWORD *)self + 73);
           v150 = 0;
           i = String1;
           v151 = dword_5216EC[v149];
@@ -545,11 +545,11 @@ LABEL_260:
             v150 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingfastlef,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v150;
-          sub_4638A0((int)(this + 404), *((char **)this + 103), 1u, &v325);
+          sub_4638A0((int)(self + 404), *((char **)self + 103), 1u, &v325);
         }
       }
       else
@@ -557,7 +557,7 @@ LABEL_260:
         while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
         {
           sub_40AFC0(v2, aWalkingfastlef, &String1);
-          v153 = *((_DWORD *)this + 73);
+          v153 = *((_DWORD *)self + 73);
           v154 = 0;
           i = String1;
           v155 = dword_5216EC[v153];
@@ -584,14 +584,14 @@ LABEL_268:
             v154 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingfastlef,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v154;
-          sub_4638A0((int)(this + 404), *((char **)this + 103), 1u, &v325);
+          sub_4638A0((int)(self + 404), *((char **)self + 103), 1u, &v325);
         }
       }
-      v307 = (const char *)*((_DWORD *)this + 1);
+      v307 = (const char *)*((_DWORD *)self + 1);
       v157 = sub_40ABC0(v2, aWalkingright, 0);
       sub_40A120(v157, "no strips found for %s, see %s : %s", aWalkingright, v307, v138);
       if ( sub_40AD80(aWalkingright) )
@@ -599,7 +599,7 @@ LABEL_268:
         while ( sub_40ABC0(v2, aWalkingright, 0) )
         {
           sub_40B310(v2, aWalkingright, &v316, (const char **)&String1);
-          v158 = *((_DWORD *)this + 73);
+          v158 = *((_DWORD *)self + 73);
           v159 = 0;
           i = String1;
           v160 = dword_5216EC[v158];
@@ -626,11 +626,11 @@ LABEL_276:
             v159 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingright,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v159;
-          sub_4638A0((int)(this + 420), *((char **)this + 107), 1u, &v325);
+          sub_4638A0((int)(self + 420), *((char **)self + 107), 1u, &v325);
         }
       }
       else
@@ -638,7 +638,7 @@ LABEL_276:
         while ( sub_40ABC0(v2, aWalkingright, 0) )
         {
           sub_40AFC0(v2, aWalkingright, &String1);
-          v162 = *((_DWORD *)this + 73);
+          v162 = *((_DWORD *)self + 73);
           v163 = 0;
           i = String1;
           v164 = dword_5216EC[v162];
@@ -665,14 +665,14 @@ LABEL_284:
             v163 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingright,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v163;
-          sub_4638A0((int)(this + 420), *((char **)this + 107), 1u, &v325);
+          sub_4638A0((int)(self + 420), *((char **)self + 107), 1u, &v325);
         }
       }
-      v308 = (const char *)*((_DWORD *)this + 1);
+      v308 = (const char *)*((_DWORD *)self + 1);
       v166 = sub_40ABC0(v2, aWalkingfastrig, 0);
       sub_40A120(v166, "no strips found for %s, see %s : %s", aWalkingfastrig, v308, v138);
       if ( sub_40AD80(aWalkingfastrig) )
@@ -680,7 +680,7 @@ LABEL_284:
         while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
         {
           sub_40B310(v2, aWalkingfastrig, &v316, (const char **)&String1);
-          v167 = *((_DWORD *)this + 73);
+          v167 = *((_DWORD *)self + 73);
           v168 = 0;
           i = String1;
           v169 = dword_5216EC[v167];
@@ -707,11 +707,11 @@ LABEL_292:
             v168 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingfastrig,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v168;
-          sub_4638A0((int)(this + 436), *((char **)this + 111), 1u, &v325);
+          sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, &v325);
         }
       }
       else
@@ -719,7 +719,7 @@ LABEL_292:
         while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
         {
           sub_40AFC0(v2, aWalkingfastrig, &String1);
-          v171 = *((_DWORD *)this + 73);
+          v171 = *((_DWORD *)self + 73);
           v172 = 0;
           i = String1;
           v173 = dword_5216EC[v171];
@@ -746,14 +746,14 @@ LABEL_300:
             v172 != -1,
             "failed to find strip for %s, see %s : %s",
             aWalkingfastrig,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v172;
-          sub_4638A0((int)(this + 436), *((char **)this + 111), 1u, &v325);
+          sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, &v325);
         }
       }
-      v309 = (const char *)*((_DWORD *)this + 1);
+      v309 = (const char *)*((_DWORD *)self + 1);
       v175 = sub_40ABC0(v2, aSettingupmorta, 0);
       sub_40A120(v175, "no strips found for %s, see %s : %s", aSettingupmorta, v309, v138);
       if ( sub_40AD80(aSettingupmorta) )
@@ -761,7 +761,7 @@ LABEL_300:
         while ( sub_40ABC0(v2, aSettingupmorta, 0) )
         {
           sub_40B310(v2, aSettingupmorta, &v316, (const char **)&String1);
-          v176 = *((_DWORD *)this + 73);
+          v176 = *((_DWORD *)self + 73);
           v177 = 0;
           i = String1;
           v178 = dword_5216EC[v176];
@@ -788,11 +788,11 @@ LABEL_308:
             v177 != -1,
             "failed to find strip for %s, see %s : %s",
             aSettingupmorta,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v177;
-          sub_4638A0((int)(this + 516), *((char **)this + 131), 1u, &v325);
+          sub_4638A0((int)(self + 516), *((char **)self + 131), 1u, &v325);
         }
       }
       else
@@ -800,7 +800,7 @@ LABEL_308:
         while ( sub_40ABC0(v2, aSettingupmorta, 0) )
         {
           sub_40AFC0(v2, aSettingupmorta, &String1);
-          v180 = *((_DWORD *)this + 73);
+          v180 = *((_DWORD *)self + 73);
           v181 = 0;
           i = String1;
           v182 = dword_5216EC[v180];
@@ -827,14 +827,14 @@ LABEL_316:
             v181 != -1,
             "failed to find strip for %s, see %s : %s",
             aSettingupmorta,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v181;
-          sub_4638A0((int)(this + 516), *((char **)this + 131), 1u, &v325);
+          sub_4638A0((int)(self + 516), *((char **)self + 131), 1u, &v325);
         }
       }
-      v310 = (const char *)*((_DWORD *)this + 1);
+      v310 = (const char *)*((_DWORD *)self + 1);
       v184 = sub_40ABC0(v2, aReloadingandfi, 0);
       sub_40A120(v184, "no strips found for %s, see %s : %s", aReloadingandfi, v310, v138);
       if ( sub_40AD80(aReloadingandfi) )
@@ -842,7 +842,7 @@ LABEL_316:
         while ( sub_40ABC0(v2, aReloadingandfi, 0) )
         {
           sub_40B310(v2, aReloadingandfi, &v316, (const char **)&String1);
-          v185 = *((_DWORD *)this + 73);
+          v185 = *((_DWORD *)self + 73);
           v186 = 0;
           i = String1;
           v187 = dword_5216EC[v185];
@@ -869,11 +869,11 @@ LABEL_324:
             v186 != -1,
             "failed to find strip for %s, see %s : %s",
             aReloadingandfi,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v186;
-          sub_4638A0((int)(this + 532), *((char **)this + 135), 1u, &v325);
+          sub_4638A0((int)(self + 532), *((char **)self + 135), 1u, &v325);
         }
       }
       else
@@ -881,7 +881,7 @@ LABEL_324:
         while ( sub_40ABC0(v2, aReloadingandfi, 0) )
         {
           sub_40AFC0(v2, aReloadingandfi, &String1);
-          v189 = *((_DWORD *)this + 73);
+          v189 = *((_DWORD *)self + 73);
           v190 = 0;
           i = String1;
           v191 = dword_5216EC[v189];
@@ -908,14 +908,14 @@ LABEL_332:
             v190 != -1,
             "failed to find strip for %s, see %s : %s",
             aReloadingandfi,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v190;
-          sub_4638A0((int)(this + 532), *((char **)this + 135), 1u, &v325);
+          sub_4638A0((int)(self + 532), *((char **)self + 135), 1u, &v325);
         }
       }
-      v311 = (const char *)*((_DWORD *)this + 1);
+      v311 = (const char *)*((_DWORD *)self + 1);
       v193 = sub_40ABC0(v2, aIdlingwhileset, 0);
       sub_40A120(v193, "no strips found for %s, see %s : %s", aIdlingwhileset, v311, v138);
       if ( sub_40AD80(aIdlingwhileset) )
@@ -923,7 +923,7 @@ LABEL_332:
         while ( sub_40ABC0(v2, aIdlingwhileset, 0) )
         {
           sub_40B310(v2, aIdlingwhileset, &v316, (const char **)&String1);
-          v194 = *((_DWORD *)this + 73);
+          v194 = *((_DWORD *)self + 73);
           v195 = 0;
           i = String1;
           v196 = dword_5216EC[v194];
@@ -950,11 +950,11 @@ LABEL_340:
             v195 != -1,
             "failed to find strip for %s, see %s : %s",
             aIdlingwhileset,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v195;
-          sub_4638A0((int)(this + 548), *((char **)this + 139), 1u, &v325);
+          sub_4638A0((int)(self + 548), *((char **)self + 139), 1u, &v325);
         }
       }
       else
@@ -962,7 +962,7 @@ LABEL_340:
         while ( sub_40ABC0(v2, aIdlingwhileset, 0) )
         {
           sub_40AFC0(v2, aIdlingwhileset, &String1);
-          v198 = *((_DWORD *)this + 73);
+          v198 = *((_DWORD *)self + 73);
           v199 = 0;
           i = String1;
           v200 = dword_5216EC[v198];
@@ -989,14 +989,14 @@ LABEL_348:
             v199 != -1,
             "failed to find strip for %s, see %s : %s",
             aIdlingwhileset,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v199;
-          sub_4638A0((int)(this + 548), *((char **)this + 139), 1u, &v325);
+          sub_4638A0((int)(self + 548), *((char **)self + 139), 1u, &v325);
         }
       }
-      v312 = (const char *)*((_DWORD *)this + 1);
+      v312 = (const char *)*((_DWORD *)self + 1);
       v202 = sub_40ABC0(v2, aDyingwhilesetu, 0);
       sub_40A120(v202, "no strips found for %s, see %s : %s", aDyingwhilesetu, v312, v138);
       if ( sub_40AD80(aDyingwhilesetu) )
@@ -1004,7 +1004,7 @@ LABEL_348:
         while ( sub_40ABC0(v2, aDyingwhilesetu, 0) )
         {
           sub_40B310(v2, aDyingwhilesetu, &v316, (const char **)&String1);
-          v203 = *((_DWORD *)this + 73);
+          v203 = *((_DWORD *)self + 73);
           v204 = 0;
           i = String1;
           v205 = dword_5216EC[v203];
@@ -1031,11 +1031,11 @@ LABEL_356:
             v204 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilesetu,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v204;
-          sub_4638A0((int)(this + 628), *((char **)this + 159), 1u, &v325);
+          sub_4638A0((int)(self + 628), *((char **)self + 159), 1u, &v325);
         }
       }
       else
@@ -1043,7 +1043,7 @@ LABEL_356:
         while ( sub_40ABC0(v2, aDyingwhilesetu, 0) )
         {
           sub_40AFC0(v2, aDyingwhilesetu, &String1);
-          v207 = *((_DWORD *)this + 73);
+          v207 = *((_DWORD *)self + 73);
           v208 = 0;
           i = String1;
           v209 = dword_5216EC[v207];
@@ -1070,14 +1070,14 @@ LABEL_364:
             v208 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilesetu,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v208;
-          sub_4638A0((int)(this + 628), *((char **)this + 159), 1u, &v325);
+          sub_4638A0((int)(self + 628), *((char **)self + 159), 1u, &v325);
         }
       }
-      v313 = (const char *)*((_DWORD *)this + 1);
+      v313 = (const char *)*((_DWORD *)self + 1);
       v211 = sub_40ABC0(v2, aDyingwhilesetu_0, 0);
       sub_40A120(v211, "no strips found for %s, see %s : %s", aDyingwhilesetu_0, v313, v138);
       if ( sub_40AD80(aDyingwhilesetu_0) )
@@ -1085,7 +1085,7 @@ LABEL_364:
         while ( sub_40ABC0(v2, aDyingwhilesetu_0, 0) )
         {
           sub_40B310(v2, aDyingwhilesetu_0, &v316, (const char **)&String1);
-          v212 = *((_DWORD *)this + 73);
+          v212 = *((_DWORD *)self + 73);
           v213 = 0;
           i = String1;
           v214 = dword_5216EC[v212];
@@ -1112,11 +1112,11 @@ LABEL_372:
             v213 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilesetu_0,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v213;
-          sub_4638A0((int)(this + 644), *((char **)this + 163), 1u, &v325);
+          sub_4638A0((int)(self + 644), *((char **)self + 163), 1u, &v325);
         }
       }
       else
@@ -1124,7 +1124,7 @@ LABEL_372:
         while ( sub_40ABC0(v2, aDyingwhilesetu_0, 0) )
         {
           sub_40AFC0(v2, aDyingwhilesetu_0, &String1);
-          v216 = *((_DWORD *)this + 73);
+          v216 = *((_DWORD *)self + 73);
           v217 = 0;
           i = String1;
           v218 = dword_5216EC[v216];
@@ -1151,14 +1151,14 @@ LABEL_380:
             v217 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilesetu_0,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v217;
-          sub_4638A0((int)(this + 644), *((char **)this + 163), 1u, &v325);
+          sub_4638A0((int)(self + 644), *((char **)self + 163), 1u, &v325);
         }
       }
-      v314 = (const char *)*((_DWORD *)this + 1);
+      v314 = (const char *)*((_DWORD *)self + 1);
       v220 = sub_40ABC0(v2, aDyingwhilestan, 0);
       sub_40A120(v220, "no strips found for %s, see %s : %s", aDyingwhilestan, v314, v138);
       if ( sub_40AD80(aDyingwhilestan) )
@@ -1166,7 +1166,7 @@ LABEL_380:
         while ( sub_40ABC0(v2, aDyingwhilestan, 0) )
         {
           sub_40B310(v2, aDyingwhilestan, &v316, (const char **)&String1);
-          v221 = *((_DWORD *)this + 73);
+          v221 = *((_DWORD *)self + 73);
           v222 = 0;
           i = String1;
           v223 = dword_5216EC[v221];
@@ -1192,13 +1192,13 @@ LABEL_388:
             v222 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilestan,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v326 = v222;
           v325 = v316;
-          v225 = (int *)*((_DWORD *)this + 167);
-          v226 = (*((_DWORD *)this + 168) - (int)v225) >> 3;
-          v317 = this + 668;
+          v225 = (int *)*((_DWORD *)self + 167);
+          v226 = (*((_DWORD *)self + 168) - (int)v225) >> 3;
+          v317 = self + 668;
           if ( v226 )
           {
             sub_458C00(v225, v225, v225 + 2);
@@ -1221,29 +1221,29 @@ LABEL_388:
           }
           else
           {
-            if ( (unsigned int)sub_4589E0((_DWORD *)this + 165) <= 1 )
+            if ( (unsigned int)sub_4589E0((_DWORD *)self + 165) <= 1 )
               i = (char *)1;
             else
-              i = (char *)sub_4589E0((_DWORD *)this + 165);
-            v227 = sub_4589E0((_DWORD *)this + 165);
+              i = (char *)sub_4589E0((_DWORD *)self + 165);
+            v227 = sub_4589E0((_DWORD *)self + 165);
             v228 = (int)&i[v227] < 0;
             v229 = &i[v227];
             v318 = v229;
             if ( v228 )
               v229 = 0;
             v230 = (char *)operator new(8 * (_DWORD)v229);
-            v231 = (_DWORD *)*((_DWORD *)this + 166);
+            v231 = (_DWORD *)*((_DWORD *)self + 166);
             i = v230;
             v320 = (char *)sub_458C00(v231, v225, v230);
             sub_458C40(v320, (_DWORD *)1, &v325);
             sub_458C00(v225, *(_DWORD **)v317, (_DWORD *)v320 + 2);
-            nullsub_8(*((_DWORD *)this + 166), *(_DWORD *)v317);
-            sub_4885A6(*((LPVOID *)this + 166));
-            *((_DWORD *)this + 168) = &i[8 * (_DWORD)v318];
-            v232 = sub_4589E0((_DWORD *)this + 165);
+            nullsub_8(*((_DWORD *)self + 166), *(_DWORD *)v317);
+            sub_4885A6(*((LPVOID *)self + 166));
+            *((_DWORD *)self + 168) = &i[8 * (_DWORD)v318];
+            v232 = sub_4589E0((_DWORD *)self + 165);
             v233 = i;
             *(_DWORD *)v317 = &i[8 * v232 + 8];
-            *((_DWORD *)this + 166) = v233;
+            *((_DWORD *)self + 166) = v233;
           }
         }
       }
@@ -1252,7 +1252,7 @@ LABEL_388:
         while ( sub_40ABC0(v2, aDyingwhilestan, 0) )
         {
           sub_40AFC0(v2, aDyingwhilestan, &String1);
-          v238 = *((_DWORD *)this + 73);
+          v238 = *((_DWORD *)self + 73);
           v239 = 0;
           i = String1;
           v240 = dword_5216EC[v238];
@@ -1278,13 +1278,13 @@ LABEL_407:
             v239 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilestan,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v326 = v239;
           v325 = 3;
-          v242 = *((_DWORD *)this + 168);
-          v317 = this + 668;
-          v243 = (int *)*((_DWORD *)this + 167);
+          v242 = *((_DWORD *)self + 168);
+          v317 = self + 668;
+          v243 = (int *)*((_DWORD *)self + 167);
           v244 = v243;
           if ( (v242 - (int)v243) >> 3 )
           {
@@ -1308,32 +1308,32 @@ LABEL_407:
           }
           else
           {
-            v245 = *((_DWORD *)this + 166);
+            v245 = *((_DWORD *)self + 166);
             if ( v245 && (unsigned int)(((int)v243 - v245) >> 3) > 1 )
-              i = (char *)sub_4589E0((_DWORD *)this + 165);
+              i = (char *)sub_4589E0((_DWORD *)self + 165);
             else
               i = (char *)1;
-            v246 = sub_4589E0((_DWORD *)this + 165);
+            v246 = sub_4589E0((_DWORD *)self + 165);
             v228 = (int)&i[v246] < 0;
             v247 = &i[v246];
             v318 = v247;
             if ( v228 )
               v247 = 0;
             i = (char *)operator new(8 * (_DWORD)v247);
-            v320 = (char *)sub_458C00(*((_DWORD **)this + 166), v244, i);
+            v320 = (char *)sub_458C00(*((_DWORD **)self + 166), v244, i);
             sub_458C40(v320, (_DWORD *)1, &v325);
             sub_458C00(v244, *(_DWORD **)v317, (_DWORD *)v320 + 2);
-            nullsub_8(*((_DWORD *)this + 166), *(_DWORD *)v317);
-            sub_4885A6(*((LPVOID *)this + 166));
-            *((_DWORD *)this + 168) = &i[8 * (_DWORD)v318];
-            v248 = sub_4589E0((_DWORD *)this + 165);
+            nullsub_8(*((_DWORD *)self + 166), *(_DWORD *)v317);
+            sub_4885A6(*((LPVOID *)self + 166));
+            *((_DWORD *)self + 168) = &i[8 * (_DWORD)v318];
+            v248 = sub_4589E0((_DWORD *)self + 165);
             v249 = i;
             *(_DWORD *)v317 = &i[8 * v248 + 8];
-            *((_DWORD *)this + 166) = v249;
+            *((_DWORD *)self + 166) = v249;
           }
         }
       }
-      v315 = (const char *)*((_DWORD *)this + 1);
+      v315 = (const char *)*((_DWORD *)self + 1);
       v254 = sub_40ABC0(v2, aDyingwhilestan_0, 0);
       sub_40A120(v254, "no strips found for %s, see %s : %s", aDyingwhilestan_0, v315, v2 + 16);
       if ( sub_40AD80(aDyingwhilestan_0) )
@@ -1341,7 +1341,7 @@ LABEL_407:
         while ( sub_40ABC0(v2, aDyingwhilestan_0, 0) )
         {
           sub_40B310(v2, aDyingwhilestan_0, &v316, (const char **)&String1);
-          v255 = *((_DWORD *)this + 73);
+          v255 = *((_DWORD *)self + 73);
           i = String1;
           v256 = 0;
           v257 = dword_5216EC[v255];
@@ -1367,13 +1367,13 @@ LABEL_427:
             v256 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilestan_0,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v256;
-          v259 = *((_DWORD *)this + 172);
-          v317 = this + 684;
-          v260 = (int *)*((_DWORD *)this + 171);
+          v259 = *((_DWORD *)self + 172);
+          v317 = self + 684;
+          v260 = (int *)*((_DWORD *)self + 171);
           v261 = v260;
           if ( (v259 - (int)v260) >> 3 )
           {
@@ -1396,7 +1396,7 @@ LABEL_427:
           }
           else
           {
-            v262 = *((_DWORD *)this + 170);
+            v262 = *((_DWORD *)self + 170);
             if ( !v262 || (v263 = ((int)v260 - v262) >> 3, v263 <= 1) )
               v263 = 1;
             if ( v262 )
@@ -1409,20 +1409,20 @@ LABEL_427:
               v265 = 0;
             v320 = (char *)operator new(8 * v265);
             v318 = v320;
-            for ( i = (char *)*((_DWORD *)this + 170); i != (char *)v261; i += 8 )
+            for ( i = (char *)*((_DWORD *)self + 170); i != (char *)v261; i += 8 )
             {
               sub_458CD0(v318, i);
               v318 += 8;
             }
             sub_458CD0(v318, &v325);
             sub_458C00(v261, *(_DWORD **)v317, (_DWORD *)v318 + 2);
-            nullsub_8(*((_DWORD *)this + 170), *(_DWORD *)v317);
-            sub_4885A6(*((LPVOID *)this + 170));
-            *((_DWORD *)this + 172) = &v320[8 * v323];
-            v266 = sub_4589E0((_DWORD *)this + 169);
+            nullsub_8(*((_DWORD *)self + 170), *(_DWORD *)v317);
+            sub_4885A6(*((LPVOID *)self + 170));
+            *((_DWORD *)self + 172) = &v320[8 * v323];
+            v266 = sub_4589E0((_DWORD *)self + 169);
             v267 = v320;
             *(_DWORD *)v317 = &v320[8 * v266 + 8];
-            *((_DWORD *)this + 170) = v267;
+            *((_DWORD *)self + 170) = v267;
           }
         }
       }
@@ -1431,7 +1431,7 @@ LABEL_427:
         while ( sub_40ABC0(v2, aDyingwhilestan_0, 0) )
         {
           sub_40AFC0(v2, aDyingwhilestan_0, &String1);
-          v271 = *((_DWORD *)this + 73);
+          v271 = *((_DWORD *)self + 73);
           v272 = 0;
           v320 = String1;
           v273 = dword_5216EC[v271];
@@ -1457,22 +1457,22 @@ LABEL_451:
             v272 != -1,
             "failed to find strip for %s, see %s : %s",
             aDyingwhilestan_0,
-            *((const char **)this + 1),
+            *((const char **)self + 1),
             v2 + 16);
           v326 = v272;
           v325 = 3;
-          v275 = (_DWORD *)*((_DWORD *)this + 171);
+          v275 = (_DWORD *)*((_DWORD *)self + 171);
           v276 = v275;
-          if ( (*((_DWORD *)this + 172) - (int)v275) >> 3 )
+          if ( (*((_DWORD *)self + 172) - (int)v275) >> 3 )
           {
             sub_458C00(v275, v275, v275 + 2);
-            sub_458C40(*((_DWORD **)this + 171), (_DWORD *)(1 - ((*((_DWORD *)this + 171) - (int)v276) >> 3)), &v325);
-            sub_458C70(v276, *((_DWORD **)this + 171), &v325);
-            *((_DWORD *)this + 171) += 8;
+            sub_458C40(*((_DWORD **)self + 171), (_DWORD *)(1 - ((*((_DWORD *)self + 171) - (int)v276) >> 3)), &v325);
+            sub_458C70(v276, *((_DWORD **)self + 171), &v325);
+            *((_DWORD *)self + 171) += 8;
           }
           else
           {
-            v277 = *((_DWORD *)this + 170);
+            v277 = *((_DWORD *)self + 170);
             if ( !v277 || (v278 = ((int)v275 - v277) >> 3, v278 <= 1) )
               v278 = 1;
             if ( v277 )
@@ -1485,7 +1485,7 @@ LABEL_451:
               v280 = 0;
             v323 = (int)operator new(8 * v280);
             v318 = (char *)v323;
-            v281 = (_DWORD *)*((_DWORD *)this + 170);
+            v281 = (_DWORD *)*((_DWORD *)self + 170);
             if ( v281 != v276 )
             {
               v282 = v318;
@@ -1503,33 +1503,33 @@ LABEL_451:
               v318 = v282;
             }
             sub_458C40(v318, (_DWORD *)1, &v325);
-            sub_458C00(v276, *((_DWORD **)this + 171), (_DWORD *)v318 + 2);
-            nullsub_8(*((_DWORD *)this + 170), *((_DWORD *)this + 171));
-            sub_458BF0(*((void **)this + 170), (*((_DWORD *)this + 172) - *((_DWORD *)this + 170)) >> 3);
+            sub_458C00(v276, *((_DWORD **)self + 171), (_DWORD *)v318 + 2);
+            nullsub_8(*((_DWORD *)self + 170), *((_DWORD *)self + 171));
+            sub_458BF0(*((void **)self + 170), (*((_DWORD *)self + 172) - *((_DWORD *)self + 170)) >> 3);
             v283 = v323;
-            *((_DWORD *)this + 172) = v323 + 8 * (_DWORD)v320;
-            *((_DWORD *)this + 171) = v283 + 8 * sub_4589E0((_DWORD *)this + 169) + 8;
-            *((_DWORD *)this + 170) = v283;
+            *((_DWORD *)self + 172) = v323 + 8 * (_DWORD)v320;
+            *((_DWORD *)self + 171) = v283 + 8 * sub_4589E0((_DWORD *)self + 169) + 8;
+            *((_DWORD *)self + 170) = v283;
           }
-          sub_458BE0((_DWORD *)this + 169);
+          sub_458BE0((_DWORD *)self + 169);
         }
       }
-      v284 = (_DWORD *)sub_458A00((_DWORD *)this + 97, 0);
-      sub_458A10((int *)this + 93, v284);
+      v284 = (_DWORD *)sub_458A00((_DWORD *)self + 97, 0);
+      sub_458A10((int *)self + 93, v284);
       sub_40AFC0(v2, aMortarbulletty, v324);
-      sub_469160((int)this, (_DWORD *)this + 194, (const char *)v324[0], aBullet);
-      *((_DWORD *)this + 195) = 1082130432;
-      *((_DWORD *)this + 196) = 1082130432;
+      sub_469160((int)self, (_DWORD *)self + 194, (const char *)v324[0], aBullet);
+      *((_DWORD *)self + 195) = 1082130432;
+      *((_DWORD *)self + 196) = 1082130432;
       if ( sub_40ABC0(v2, aMortarairtime, 0) )
-        sub_40B1B0(v2, aMortarairtime, (float *)this + 195);
-      sub_40AF00(v2, aMortarfirefram, (char **)this + 197);
-      sub_40B1F0(v2, aMortaroffset, (float *)this + 198, (float *)this + 199);
+        sub_40B1B0(v2, aMortarairtime, (float *)self + 195);
+      sub_40AF00(v2, aMortarfirefram, (char **)self + 197);
+      sub_40B1F0(v2, aMortaroffset, (float *)self + 198, (float *)self + 199);
     }
   }
   else
   {
     v16 = v2 + 16;
-    v293 = (const char *)*((_DWORD *)this + 1);
+    v293 = (const char *)*((_DWORD *)self + 1);
     v17 = sub_40ABC0(v2, aWalkingleft, 0);
     sub_40A120(v17, "no strips found for %s, see %s : %s", aWalkingleft, v293, v2 + 16);
     if ( sub_40AD80(aWalkingleft) )
@@ -1537,7 +1537,7 @@ LABEL_451:
       while ( sub_40ABC0(v2, aWalkingleft, 0) )
       {
         sub_40B310(v2, aWalkingleft, &v316, (const char **)&String1);
-        v18 = *((_DWORD *)this + 73);
+        v18 = *((_DWORD *)self + 73);
         i = String1;
         v19 = 0;
         v20 = dword_5216EC[v18];
@@ -1565,12 +1565,12 @@ LABEL_30:
           v19 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingleft,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
-        v286 = (char *)*((_DWORD *)this + 99);
+        v286 = (char *)*((_DWORD *)self + 99);
         v326 = v19;
-        sub_4638A0((int)(this + 388), v286, 1u, &v325);
+        sub_4638A0((int)(self + 388), v286, 1u, &v325);
       }
     }
     else
@@ -1578,7 +1578,7 @@ LABEL_30:
       while ( sub_40ABC0(v2, aWalkingleft, 0) )
       {
         sub_40AFC0(v2, aWalkingleft, &String1);
-        v23 = *((_DWORD *)this + 73);
+        v23 = *((_DWORD *)self + 73);
         i = String1;
         v24 = 0;
         v25 = dword_5216EC[v23];
@@ -1606,15 +1606,15 @@ LABEL_38:
           v24 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingleft,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
-        v287 = (char *)*((_DWORD *)this + 99);
+        v287 = (char *)*((_DWORD *)self + 99);
         v325 = 3;
         v326 = v24;
-        sub_4638A0((int)(this + 388), v287, 1u, &v325);
+        sub_4638A0((int)(self + 388), v287, 1u, &v325);
       }
     }
-    v294 = (const char *)*((_DWORD *)this + 1);
+    v294 = (const char *)*((_DWORD *)self + 1);
     v27 = sub_40ABC0(v2, aWalkingfastlef, 0);
     sub_40A120(v27, "no strips found for %s, see %s : %s", aWalkingfastlef, v294, v16);
     if ( sub_40AD80(aWalkingfastlef) )
@@ -1622,7 +1622,7 @@ LABEL_38:
       while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
       {
         sub_40B310(v2, aWalkingfastlef, &v316, (const char **)&String1);
-        v28 = *((_DWORD *)this + 73);
+        v28 = *((_DWORD *)self + 73);
         i = String1;
         v29 = 0;
         v30 = dword_5216EC[v28];
@@ -1650,12 +1650,12 @@ LABEL_46:
           v29 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingfastlef,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
-        v288 = (char *)*((_DWORD *)this + 103);
+        v288 = (char *)*((_DWORD *)self + 103);
         v326 = v29;
-        sub_4638A0((int)(this + 404), v288, 1u, &v325);
+        sub_4638A0((int)(self + 404), v288, 1u, &v325);
       }
     }
     else
@@ -1663,7 +1663,7 @@ LABEL_46:
       while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
       {
         sub_40AFC0(v2, aWalkingfastlef, &String1);
-        v32 = *((_DWORD *)this + 73);
+        v32 = *((_DWORD *)self + 73);
         i = String1;
         v33 = 0;
         v34 = dword_5216EC[v32];
@@ -1691,15 +1691,15 @@ LABEL_54:
           v33 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingfastlef,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
-        v289 = (char *)*((_DWORD *)this + 103);
+        v289 = (char *)*((_DWORD *)self + 103);
         v325 = 3;
         v326 = v33;
-        sub_4638A0((int)(this + 404), v289, 1u, &v325);
+        sub_4638A0((int)(self + 404), v289, 1u, &v325);
       }
     }
-    v295 = (const char *)*((_DWORD *)this + 1);
+    v295 = (const char *)*((_DWORD *)self + 1);
     v36 = sub_40ABC0(v2, aWalkingright, 0);
     sub_40A120(v36, "no strips found for %s, see %s : %s", aWalkingright, v295, v16);
     if ( sub_40AD80(aWalkingright) )
@@ -1707,7 +1707,7 @@ LABEL_54:
       while ( sub_40ABC0(v2, aWalkingright, 0) )
       {
         sub_40B310(v2, aWalkingright, &v316, (const char **)&String1);
-        v37 = *((_DWORD *)this + 73);
+        v37 = *((_DWORD *)self + 73);
         i = String1;
         v38 = 0;
         v39 = dword_5216EC[v37];
@@ -1735,12 +1735,12 @@ LABEL_62:
           v38 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingright,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
-        v290 = (char *)*((_DWORD *)this + 107);
+        v290 = (char *)*((_DWORD *)self + 107);
         v326 = v38;
-        sub_4638A0((int)(this + 420), v290, 1u, &v325);
+        sub_4638A0((int)(self + 420), v290, 1u, &v325);
       }
     }
     else
@@ -1748,7 +1748,7 @@ LABEL_62:
       while ( sub_40ABC0(v2, aWalkingright, 0) )
       {
         sub_40AFC0(v2, aWalkingright, &String1);
-        v41 = *((_DWORD *)this + 73);
+        v41 = *((_DWORD *)self + 73);
         i = String1;
         v42 = 0;
         v43 = dword_5216EC[v41];
@@ -1776,15 +1776,15 @@ LABEL_70:
           v42 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingright,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
-        v291 = (char *)*((_DWORD *)this + 107);
+        v291 = (char *)*((_DWORD *)self + 107);
         v325 = 3;
         v326 = v42;
-        sub_4638A0((int)(this + 420), v291, 1u, &v325);
+        sub_4638A0((int)(self + 420), v291, 1u, &v325);
       }
     }
-    v296 = (const char *)*((_DWORD *)this + 1);
+    v296 = (const char *)*((_DWORD *)self + 1);
     v45 = sub_40ABC0(v2, aWalkingfastrig, 0);
     sub_40A120(v45, "no strips found for %s, see %s : %s", aWalkingfastrig, v296, v16);
     if ( sub_40AD80(aWalkingfastrig) )
@@ -1792,7 +1792,7 @@ LABEL_70:
       while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
       {
         sub_40B310(v2, aWalkingfastrig, &v316, (const char **)&String1);
-        v46 = *((_DWORD *)this + 73);
+        v46 = *((_DWORD *)self + 73);
         i = String1;
         v47 = 0;
         v48 = dword_5216EC[v46];
@@ -1820,12 +1820,12 @@ LABEL_78:
           v47 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingfastrig,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
-        v292 = (char *)*((_DWORD *)this + 111);
+        v292 = (char *)*((_DWORD *)self + 111);
         v326 = v47;
-        sub_4638A0((int)(this + 436), v292, 1u, &v325);
+        sub_4638A0((int)(self + 436), v292, 1u, &v325);
       }
     }
     else
@@ -1833,7 +1833,7 @@ LABEL_78:
       while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
       {
         sub_40AFC0(v2, aWalkingfastrig, &String1);
-        v50 = *((_DWORD *)this + 73);
+        v50 = *((_DWORD *)self + 73);
         i = String1;
         v51 = 0;
         v52 = dword_5216EC[v50];
@@ -1861,14 +1861,14 @@ LABEL_86:
           v51 != -1,
           "failed to find strip for %s, see %s : %s",
           aWalkingfastrig,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v51;
-        sub_4638A0((int)(this + 436), *((char **)this + 111), 1u, &v325);
+        sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, &v325);
       }
     }
-    v297 = (const char *)*((_DWORD *)this + 1);
+    v297 = (const char *)*((_DWORD *)self + 1);
     v54 = sub_40ABC0(v2, aAiming, 0);
     sub_40A120(v54, "no strips found for %s, see %s : %s", aAiming, v297, v16);
     if ( sub_40AD80(aAiming) )
@@ -1876,7 +1876,7 @@ LABEL_86:
       while ( sub_40ABC0(v2, aAiming, 0) )
       {
         sub_40B310(v2, aAiming, &v316, (const char **)&String1);
-        v55 = *((_DWORD *)this + 73);
+        v55 = *((_DWORD *)self + 73);
         i = String1;
         v56 = 0;
         v57 = dword_5216EC[v55];
@@ -1900,10 +1900,10 @@ LABEL_94:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v56 != -1, "failed to find strip for %s, see %s : %s", aAiming, *((const char **)this + 1), v2 + 16);
+        sub_40A120(v56 != -1, "failed to find strip for %s, see %s : %s", aAiming, *((const char **)self + 1), v2 + 16);
         v325 = v316;
         v326 = v56;
-        sub_4638A0((int)(this + 468), *((char **)this + 119), 1u, &v325);
+        sub_4638A0((int)(self + 468), *((char **)self + 119), 1u, &v325);
       }
     }
     else
@@ -1911,7 +1911,7 @@ LABEL_94:
       while ( sub_40ABC0(v2, aAiming, 0) )
       {
         sub_40AFC0(v2, aAiming, &String1);
-        v59 = *((_DWORD *)this + 73);
+        v59 = *((_DWORD *)self + 73);
         i = String1;
         v60 = 0;
         v61 = dword_5216EC[v59];
@@ -1935,13 +1935,13 @@ LABEL_102:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v60 != -1, "failed to find strip for %s, see %s : %s", aAiming, *((const char **)this + 1), v2 + 16);
+        sub_40A120(v60 != -1, "failed to find strip for %s, see %s : %s", aAiming, *((const char **)self + 1), v2 + 16);
         v325 = 3;
         v326 = v60;
-        sub_4638A0((int)(this + 468), *((char **)this + 119), 1u, &v325);
+        sub_4638A0((int)(self + 468), *((char **)self + 119), 1u, &v325);
       }
     }
-    v298 = (const char *)*((_DWORD *)this + 1);
+    v298 = (const char *)*((_DWORD *)self + 1);
     v63 = sub_40ABC0(v2, aFiring, 0);
     sub_40A120(v63, "no strips found for %s, see %s : %s", aFiring, v298, v16);
     if ( sub_40AD80(aFiring) )
@@ -1949,7 +1949,7 @@ LABEL_102:
       while ( sub_40ABC0(v2, aFiring, 0) )
       {
         sub_40B310(v2, aFiring, &v316, (const char **)&String1);
-        v64 = *((_DWORD *)this + 73);
+        v64 = *((_DWORD *)self + 73);
         i = String1;
         v65 = 0;
         v66 = dword_5216EC[v64];
@@ -1973,10 +1973,10 @@ LABEL_110:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v65 != -1, "failed to find strip for %s, see %s : %s", aFiring, *((const char **)this + 1), v2 + 16);
+        sub_40A120(v65 != -1, "failed to find strip for %s, see %s : %s", aFiring, *((const char **)self + 1), v2 + 16);
         v325 = v316;
         v326 = v65;
-        sub_4638A0((int)(this + 500), *((char **)this + 127), 1u, &v325);
+        sub_4638A0((int)(self + 500), *((char **)self + 127), 1u, &v325);
       }
     }
     else
@@ -1984,7 +1984,7 @@ LABEL_110:
       while ( sub_40ABC0(v2, aFiring, 0) )
       {
         sub_40AFC0(v2, aFiring, &String1);
-        v68 = *((_DWORD *)this + 73);
+        v68 = *((_DWORD *)self + 73);
         i = String1;
         v69 = 0;
         v70 = dword_5216EC[v68];
@@ -2008,13 +2008,13 @@ LABEL_118:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v69 != -1, "failed to find strip for %s, see %s : %s", aFiring, *((const char **)this + 1), v2 + 16);
+        sub_40A120(v69 != -1, "failed to find strip for %s, see %s : %s", aFiring, *((const char **)self + 1), v2 + 16);
         v325 = 3;
         v326 = v69;
-        sub_4638A0((int)(this + 500), *((char **)this + 127), 1u, &v325);
+        sub_4638A0((int)(self + 500), *((char **)self + 127), 1u, &v325);
       }
     }
-    v299 = (const char *)*((_DWORD *)this + 1);
+    v299 = (const char *)*((_DWORD *)self + 1);
     v72 = sub_40ABC0(v2, aUnaiming, 0);
     sub_40A120(v72, "no strips found for %s, see %s : %s", aUnaiming, v299, v16);
     if ( sub_40AD80(aUnaiming) )
@@ -2022,7 +2022,7 @@ LABEL_118:
       while ( sub_40ABC0(v2, aUnaiming, 0) )
       {
         sub_40B310(v2, aUnaiming, &v316, (const char **)&String1);
-        v73 = *((_DWORD *)this + 73);
+        v73 = *((_DWORD *)self + 73);
         i = String1;
         v74 = 0;
         v75 = dword_5216EC[v73];
@@ -2050,11 +2050,11 @@ LABEL_126:
           v74 != -1,
           "failed to find strip for %s, see %s : %s",
           aUnaiming,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v74;
-        sub_4638A0((int)(this + 484), *((char **)this + 123), 1u, &v325);
+        sub_4638A0((int)(self + 484), *((char **)self + 123), 1u, &v325);
       }
     }
     else
@@ -2062,7 +2062,7 @@ LABEL_126:
       while ( sub_40ABC0(v2, aUnaiming, 0) )
       {
         sub_40AFC0(v2, aUnaiming, &String1);
-        v77 = *((_DWORD *)this + 73);
+        v77 = *((_DWORD *)self + 73);
         i = String1;
         v78 = 0;
         v79 = dword_5216EC[v77];
@@ -2090,51 +2090,51 @@ LABEL_134:
           v78 != -1,
           "failed to find strip for %s, see %s : %s",
           aUnaiming,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v78;
-        sub_4638A0((int)(this + 484), *((char **)this + 123), 1u, &v325);
+        sub_4638A0((int)(self + 484), *((char **)self + 123), 1u, &v325);
       }
     }
-    v81 = *((_DWORD *)this + 118);
+    v81 = *((_DWORD *)self + 118);
     if ( v81 )
-      v82 = (*((_DWORD *)this + 119) - v81) >> 3;
+      v82 = (*((_DWORD *)self + 119) - v81) >> 3;
     else
       v82 = 0;
-    v83 = *((_DWORD *)this + 126);
+    v83 = *((_DWORD *)self + 126);
     if ( v83 )
-      v84 = (*((_DWORD *)this + 127) - v83) >> 3;
+      v84 = (*((_DWORD *)self + 127) - v83) >> 3;
     else
       v84 = 0;
     v89 = 0;
     if ( v82 == v84 )
     {
-      v85 = *((_DWORD *)this + 118);
-      v86 = v85 ? (*((_DWORD *)this + 119) - v85) >> 3 : 0;
-      v87 = *((_DWORD *)this + 122);
-      v88 = v87 ? (*((_DWORD *)this + 123) - v87) >> 3 : 0;
+      v85 = *((_DWORD *)self + 118);
+      v86 = v85 ? (*((_DWORD *)self + 119) - v85) >> 3 : 0;
+      v87 = *((_DWORD *)self + 122);
+      v88 = v87 ? (*((_DWORD *)self + 123) - v87) >> 3 : 0;
       if ( v86 == v88 )
         v89 = 1;
     }
     sub_40A120(
       v89,
       "for every aiming, there should be a firing and a unaiming animation, see %s : %s",
-      *((const char **)this + 1),
+      *((const char **)self + 1),
       v16);
     for ( j = 0; ; ++j )
     {
-      v91 = *((_DWORD *)this + 118);
-      if ( !v91 || j >= (*((_DWORD *)this + 119) - v91) >> 3 )
+      v91 = *((_DWORD *)self + 118);
+      if ( !v91 || j >= (*((_DWORD *)self + 119) - v91) >> 3 )
         break;
       sub_40AF00(v2, aShotframe, (char **)&v316);
-      sub_44F190((int)(this + 696), *((_DWORD **)this + 176), 1u, &v316);
+      sub_44F190((int)(self + 696), *((_DWORD **)self + 176), 1u, &v316);
       sub_40B1F0(v2, aShotoffset, (float *)&v327, (float *)&v328);
-      sub_44F190((int)(this + 712), *((_DWORD **)this + 180), 1u, &v327);
-      sub_44F190((int)(this + 728), *((_DWORD **)this + 184), 1u, &v328);
+      sub_44F190((int)(self + 712), *((_DWORD **)self + 180), 1u, &v327);
+      sub_44F190((int)(self + 728), *((_DWORD **)self + 184), 1u, &v328);
     }
     v92 = v2 + 16;
-    v300 = (const char *)*((_DWORD *)this + 1);
+    v300 = (const char *)*((_DWORD *)self + 1);
     v93 = sub_40ABC0(v2, aThrowinggrenad, 0);
     sub_40A120(v93, "no strips found for %s, see %s : %s", aThrowinggrenad, v300, v2 + 16);
     if ( sub_40AD80(aThrowinggrenad) )
@@ -2142,7 +2142,7 @@ LABEL_134:
       while ( sub_40ABC0(v2, aThrowinggrenad, 0) )
       {
         sub_40B310(v2, aThrowinggrenad, &v316, (const char **)&String1);
-        v94 = *((_DWORD *)this + 73);
+        v94 = *((_DWORD *)self + 73);
         i = String1;
         v95 = 0;
         v96 = dword_5216EC[v94];
@@ -2170,11 +2170,11 @@ LABEL_162:
           v95 != -1,
           "failed to find strip for %s, see %s : %s",
           aThrowinggrenad,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v95;
-        sub_4638A0((int)(this + 452), *((char **)this + 115), 1u, &v325);
+        sub_4638A0((int)(self + 452), *((char **)self + 115), 1u, &v325);
       }
     }
     else
@@ -2182,7 +2182,7 @@ LABEL_162:
       while ( sub_40ABC0(v2, aThrowinggrenad, 0) )
       {
         sub_40AFC0(v2, aThrowinggrenad, &String1);
-        v98 = *((_DWORD *)this + 73);
+        v98 = *((_DWORD *)self + 73);
         v99 = 0;
         i = String1;
         v100 = dword_5216EC[v98];
@@ -2210,14 +2210,14 @@ LABEL_170:
           v99 != -1,
           "failed to find strip for %s, see %s : %s",
           aThrowinggrenad,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v99;
-        sub_4638A0((int)(this + 452), *((char **)this + 115), 1u, &v325);
+        sub_4638A0((int)(self + 452), *((char **)self + 115), 1u, &v325);
       }
     }
-    v301 = (const char *)*((_DWORD *)this + 1);
+    v301 = (const char *)*((_DWORD *)self + 1);
     v102 = sub_40ABC0(v2, aDyingfromshot, 0);
     sub_40A120(v102, "no strips found for %s, see %s : %s", aDyingfromshot, v301, v92);
     if ( sub_40AD80(aDyingfromshot) )
@@ -2225,7 +2225,7 @@ LABEL_170:
       while ( sub_40ABC0(v2, aDyingfromshot, 0) )
       {
         sub_40B310(v2, aDyingfromshot, &v316, (const char **)&String1);
-        v103 = *((_DWORD *)this + 73);
+        v103 = *((_DWORD *)self + 73);
         i = String1;
         v104 = 0;
         v105 = dword_5216EC[v103];
@@ -2253,11 +2253,11 @@ LABEL_178:
           v104 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromshot,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v104;
-        sub_4638A0((int)(this + 564), *((char **)this + 143), 1u, &v325);
+        sub_4638A0((int)(self + 564), *((char **)self + 143), 1u, &v325);
       }
     }
     else
@@ -2265,7 +2265,7 @@ LABEL_178:
       while ( sub_40ABC0(v2, aDyingfromshot, 0) )
       {
         sub_40AFC0(v2, aDyingfromshot, &String1);
-        v107 = *((_DWORD *)this + 73);
+        v107 = *((_DWORD *)self + 73);
         v108 = 0;
         i = String1;
         v109 = dword_5216EC[v107];
@@ -2293,14 +2293,14 @@ LABEL_186:
           v108 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromshot,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v108;
-        sub_4638A0((int)(this + 564), *((char **)this + 143), 1u, &v325);
+        sub_4638A0((int)(self + 564), *((char **)self + 143), 1u, &v325);
       }
     }
-    v302 = (const char *)*((_DWORD *)this + 1);
+    v302 = (const char *)*((_DWORD *)self + 1);
     v111 = sub_40ABC0(v2, aDyingfromshotl, 0);
     sub_40A120(v111, "no strips found for %s, see %s : %s", aDyingfromshotl, v302, v92);
     if ( sub_40AD80(aDyingfromshotl) )
@@ -2308,7 +2308,7 @@ LABEL_186:
       while ( sub_40ABC0(v2, aDyingfromshotl, 0) )
       {
         sub_40B310(v2, aDyingfromshotl, &v316, (const char **)&String1);
-        v112 = *((_DWORD *)this + 73);
+        v112 = *((_DWORD *)self + 73);
         i = String1;
         v113 = 0;
         v114 = dword_5216EC[v112];
@@ -2336,11 +2336,11 @@ LABEL_194:
           v113 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromshotl,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v113;
-        sub_4638A0((int)(this + 580), *((char **)this + 147), 1u, &v325);
+        sub_4638A0((int)(self + 580), *((char **)self + 147), 1u, &v325);
       }
     }
     else
@@ -2348,7 +2348,7 @@ LABEL_194:
       while ( sub_40ABC0(v2, aDyingfromshotl, 0) )
       {
         sub_40AFC0(v2, aDyingfromshotl, &String1);
-        v116 = *((_DWORD *)this + 73);
+        v116 = *((_DWORD *)self + 73);
         v117 = 0;
         i = String1;
         v118 = dword_5216EC[v116];
@@ -2376,14 +2376,14 @@ LABEL_202:
           v117 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromshotl,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v117;
-        sub_4638A0((int)(this + 580), *((char **)this + 147), 1u, &v325);
+        sub_4638A0((int)(self + 580), *((char **)self + 147), 1u, &v325);
       }
     }
-    v303 = (const char *)*((_DWORD *)this + 1);
+    v303 = (const char *)*((_DWORD *)self + 1);
     v120 = sub_40ABC0(v2, aDyingfromshotr, 0);
     sub_40A120(v120, "no strips found for %s, see %s : %s", aDyingfromshotr, v303, v92);
     if ( sub_40AD80(aDyingfromshotr) )
@@ -2391,7 +2391,7 @@ LABEL_202:
       while ( sub_40ABC0(v2, aDyingfromshotr, 0) )
       {
         sub_40B310(v2, aDyingfromshotr, &v316, (const char **)&String1);
-        v121 = *((_DWORD *)this + 73);
+        v121 = *((_DWORD *)self + 73);
         i = String1;
         v122 = 0;
         v123 = dword_5216EC[v121];
@@ -2419,11 +2419,11 @@ LABEL_210:
           v122 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromshotr,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v122;
-        sub_4638A0((int)(this + 596), *((char **)this + 151), 1u, &v325);
+        sub_4638A0((int)(self + 596), *((char **)self + 151), 1u, &v325);
       }
     }
     else
@@ -2431,7 +2431,7 @@ LABEL_210:
       while ( sub_40ABC0(v2, aDyingfromshotr, 0) )
       {
         sub_40AFC0(v2, aDyingfromshotr, &String1);
-        v125 = *((_DWORD *)this + 73);
+        v125 = *((_DWORD *)self + 73);
         v126 = 0;
         i = String1;
         v127 = dword_5216EC[v125];
@@ -2459,14 +2459,14 @@ LABEL_218:
           v126 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromshotr,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v126;
-        sub_4638A0((int)(this + 596), *((char **)this + 151), 1u, &v325);
+        sub_4638A0((int)(self + 596), *((char **)self + 151), 1u, &v325);
       }
     }
-    v304 = (const char *)*((_DWORD *)this + 1);
+    v304 = (const char *)*((_DWORD *)self + 1);
     v129 = sub_40ABC0(v2, aDyingfromexplo, 0);
     sub_40A120(v129, "no strips found for %s, see %s : %s", aDyingfromexplo, v304, v92);
     if ( sub_40AD80(aDyingfromexplo) )
@@ -2474,7 +2474,7 @@ LABEL_218:
       while ( sub_40ABC0(v2, aDyingfromexplo, 0) )
       {
         sub_40B310(v2, aDyingfromexplo, &v316, (const char **)&String1);
-        v130 = *((_DWORD *)this + 73);
+        v130 = *((_DWORD *)self + 73);
         i = String1;
         v131 = 0;
         v132 = dword_5216EC[v130];
@@ -2501,11 +2501,11 @@ LABEL_226:
           v131 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromexplo,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v131;
-        sub_4638A0((int)(this + 612), *((char **)this + 155), 1u, &v325);
+        sub_4638A0((int)(self + 612), *((char **)self + 155), 1u, &v325);
       }
     }
     else
@@ -2513,7 +2513,7 @@ LABEL_226:
       while ( sub_40ABC0(v2, aDyingfromexplo, 0) )
       {
         sub_40AFC0(v2, aDyingfromexplo, &String1);
-        v134 = *((_DWORD *)this + 73);
+        v134 = *((_DWORD *)self + 73);
         v135 = 0;
         i = String1;
         v136 = dword_5216EC[v134];
@@ -2540,49 +2540,49 @@ LABEL_234:
           v135 != -1,
           "failed to find strip for %s, see %s : %s",
           aDyingfromexplo,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v135;
-        sub_4638A0((int)(this + 612), *((char **)this + 155), 1u, &v325);
+        sub_4638A0((int)(self + 612), *((char **)self + 155), 1u, &v325);
       }
     }
-    sub_4638A0((int)(this + 372), *((char **)this + 95), 1u, *((_DWORD **)this + 118));
+    sub_4638A0((int)(self + 372), *((char **)self + 95), 1u, *((_DWORD **)self + 118));
     sub_40AFC0(v2, aShotbullettype, &v321);
-    sub_469160((int)this, (_DWORD *)this + 173, (const char *)v321, aBullet);
+    sub_469160((int)self, (_DWORD *)self + 173, (const char *)v321, aBullet);
     sub_40AFC0(v2, aGrenadebullett, &v322);
-    sub_469160((int)this, (_DWORD *)this + 186, (const char *)v322, aBullet);
-    sub_40B1B0(v2, aGrenadespinrat, (float *)this + 187);
-    *((float *)this + 187) = *((float *)this + 187) * 0.017453292;
-    *((float *)this + 188) = *((float *)this + 188) * 0.017453292;
-    sub_40B1B0(v2, aGrenadeairtime, (float *)this + 189);
-    sub_40AF00(v2, aGrenadeframe, (char **)this + 191);
-    sub_40B1F0(v2, aGrenadeoffset, (float *)this + 192, (float *)this + 193);
+    sub_469160((int)self, (_DWORD *)self + 186, (const char *)v322, aBullet);
+    sub_40B1B0(v2, aGrenadespinrat, (float *)self + 187);
+    *((float *)self + 187) = *((float *)self + 187) * 0.017453292;
+    *((float *)self + 188) = *((float *)self + 188) * 0.017453292;
+    sub_40B1B0(v2, aGrenadeairtime, (float *)self + 189);
+    sub_40AF00(v2, aGrenadeframe, (char **)self + 191);
+    sub_40B1F0(v2, aGrenadeoffset, (float *)self + 192, (float *)self + 193);
   }
-  *((_DWORD *)this + 200) = 0;
+  *((_DWORD *)self + 200) = 0;
   if ( sub_40ABC0(v2, aScreamsoundeff, 0) )
   {
     sub_40AFC0(v2, aScreamsoundeff, &String1);
-    sub_469160((int)this, (_DWORD *)this + 200, String1, aSoundEffect);
+    sub_469160((int)self, (_DWORD *)self + 200, String1, aSoundEffect);
   }
-  *((_DWORD *)this + 201) = 0;
+  *((_DWORD *)self + 201) = 0;
   if ( sub_40ABC0(v2, aSoftthudsounde, 0) )
   {
     sub_40AFC0(v2, aSoftthudsounde, &String1);
-    sub_469160((int)this, (_DWORD *)this + 201, String1, aSoundEffect);
+    sub_469160((int)self, (_DWORD *)self + 201, String1, aSoundEffect);
   }
-  *((_DWORD *)this + 202) = 0;
+  *((_DWORD *)self + 202) = 0;
   if ( sub_40ABC0(v2, aHardthudsounde, 0) )
   {
     sub_40AFC0(v2, aHardthudsounde, &String1);
-    sub_469160((int)this, (_DWORD *)this + 202, String1, aSoundEffect);
+    sub_469160((int)self, (_DWORD *)self + 202, String1, aSoundEffect);
   }
-  *((_DWORD *)this + 203) = 0;
+  *((_DWORD *)self + 203) = 0;
   if ( sub_40ABC0(v2, aFireeffect, 0) )
   {
     sub_40AFC0(v2, aFireeffect, &String1);
-    sub_469160((int)this, (_DWORD *)this + 203, String1, aEffect);
+    sub_469160((int)self, (_DWORD *)self + 203, String1, aEffect);
   }
   sub_4229D0(aFinishedLoadin_2);
-  return this;
+  return self;
 }

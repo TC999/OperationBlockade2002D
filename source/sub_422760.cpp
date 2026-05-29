@@ -1,5 +1,5 @@
 //----- (00422760) --------------------------------------------------------
-int __thiscall sub_422760(_DWORD *this, _DWORD *a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
+int __thiscall sub_422760(_DWORD *self, _DWORD *a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
 {
   int result; // eax
 
@@ -7,7 +7,7 @@ int __thiscall sub_422760(_DWORD *this, _DWORD *a2, _DWORD *a3, _DWORD *a4, _DWO
   *a4 = 0;
   *a3 = 0;
   *a2 = 0;
-  for ( result = this[5]; result; result = *(_DWORD *)(result + 16) )
+  for ( result = self[5]; result; result = *(_DWORD *)(result + 16) )
   {
     ++*a2;
     *a3 += *(_DWORD *)(result + 40);

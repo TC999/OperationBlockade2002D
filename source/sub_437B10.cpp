@@ -1,10 +1,10 @@
 //----- (00437B10) --------------------------------------------------------
-_DWORD *__thiscall sub_437B10(_DWORD *this)
+_DWORD *__thiscall sub_437B10(_DWORD *self)
 {
   _DWORD *result; // eax
   int v2; // ecx
 
-  result = this + 182;
+  result = self + 182;
   v2 = 12;
   do
   {

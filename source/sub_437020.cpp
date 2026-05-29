@@ -1,5 +1,5 @@
 //----- (00437020) --------------------------------------------------------
-void __thiscall sub_437020(float *this, float a2, float a3)
+void __thiscall sub_437020(float *self, float a2, float a3)
 {
   int v3; // edx
   int v4; // esi
@@ -61,11 +61,11 @@ LABEL_7:
     v8 = 0.25;
   }
   v13 = v8 * 4.0;
-  if ( this[v3 + 132] <= (double)v13 )
+  if ( self[v3 + 132] <= (double)v13 )
     v9 = v13;
   else
-    v9 = this[v3 + 132];
-  this[v3 + 132] = v9;
+    v9 = self[v3 + 132];
+  self[v3 + 132] = v9;
   v10 = v13 + 0.2;
   sub_413240(LODWORD(v13), LODWORD(v10), 255, 0);
 }

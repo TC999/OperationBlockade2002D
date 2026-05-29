@@ -1,12 +1,12 @@
 //----- (0047328E) --------------------------------------------------------
-__int16 *__thiscall sub_47328E(_DWORD *this, int a2, int a3, float *a4)
+__int16 *__thiscall sub_47328E(_DWORD *self, int a2, int a3, float *a4)
 {
   __int16 *result; // eax
   __int16 *i; // edx
   int v7; // [esp+8h] [ebp+8h]
 
-  result = (__int16 *)(this[6] + a3 * this[1043] + a2 * this[1042]);
-  for ( i = &result[2 * this[1044]]; result < i; *(a4 - 1) = 1.0 )
+  result = (__int16 *)(self[6] + a3 * self[1043] + a2 * self[1042]);
+  for ( i = &result[2 * self[1044]]; result < i; *(a4 - 1) = 1.0 )
   {
     v7 = *result;
     result += 2;

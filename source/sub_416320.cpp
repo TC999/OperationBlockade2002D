@@ -1,5 +1,5 @@
 //----- (00416320) --------------------------------------------------------
-float *__thiscall sub_416320(float *this, float *a2, float a3)
+float *__thiscall sub_416320(float *self, float *a2, float a3)
 {
   double v3; // st7
   float *result; // eax
@@ -10,9 +10,9 @@ float *__thiscall sub_416320(float *this, float *a2, float a3)
   v3 = 1.0 / a3;
   result = a2;
   v7 = v3;
-  v5 = v3 * this[2];
-  v6 = v7 * this[1];
-  *a2 = v7 * *this;
+  v5 = v3 * self[2];
+  v6 = v7 * self[1];
+  *a2 = v7 * *self;
   a2[1] = v6;
   a2[2] = v5;
   return result;

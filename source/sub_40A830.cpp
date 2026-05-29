@@ -1,5 +1,5 @@
 //----- (0040A830) --------------------------------------------------------
-int __thiscall sub_40A830(int this)
+int __thiscall sub_40A830(int self)
 {
   int v1; // ebx
   int v3; // esi
@@ -22,15 +22,15 @@ int __thiscall sub_40A830(int this)
   v1 = 0;
   for ( i = 0; ; ++i )
   {
-    v3 = *(_DWORD *)(this + 4);
-    if ( !v3 || i >= (*(_DWORD *)(this + 8) - v3) / 24 )
+    v3 = *(_DWORD *)(self + 4);
+    if ( !v3 || i >= (*(_DWORD *)(self + 8) - v3) / 24 )
       break;
     if ( *(_BYTE *)(v1 + v3 + 20) )
     {
       v4 = 0;
       for ( j = 0; ; j += 12 )
       {
-        v6 = v1 + *(_DWORD *)(this + 4);
+        v6 = v1 + *(_DWORD *)(self + 4);
         v7 = *(_DWORD *)(v6 + 8);
         if ( !v7 || v4 >= (*(_DWORD *)(v6 + 12) - v7) / 12 )
           break;
@@ -40,15 +40,15 @@ int __thiscall sub_40A830(int this)
           *(const char **)(*(_DWORD *)(v6 + 8) + j),
           *(const char **)(*(_DWORD *)(v6 + 8) + j + 4),
           *(const char **)v6,
-          (const char *)(this + 16));
+          (const char *)(self + 16));
         ++v4;
       }
     }
     v1 += 24;
   }
-  sub_4885A6(*(LPVOID *)(this + 276));
-  v8 = *(_DWORD *)(this + 4);
-  v18 = *(_DWORD *)(this + 8);
+  sub_4885A6(*(LPVOID *)(self + 276));
+  v8 = *(_DWORD *)(self + 4);
+  v18 = *(_DWORD *)(self + 8);
   v17 = v8;
   if ( v8 != v18 )
   {
@@ -70,10 +70,10 @@ int __thiscall sub_40A830(int this)
         break;
     }
   }
-  sub_4885A6(*(LPVOID *)(this + 4));
+  sub_4885A6(*(LPVOID *)(self + 4));
   result = 0;
-  *(_DWORD *)(this + 4) = 0;
-  *(_DWORD *)(this + 8) = 0;
-  *(_DWORD *)(this + 12) = 0;
+  *(_DWORD *)(self + 4) = 0;
+  *(_DWORD *)(self + 8) = 0;
+  *(_DWORD *)(self + 12) = 0;
   return result;
 }

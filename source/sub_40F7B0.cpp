@@ -1,5 +1,5 @@
 //----- (0040F7B0) --------------------------------------------------------
-_DWORD *__thiscall sub_40F7B0(int this, _DWORD *a2)
+_DWORD *__thiscall sub_40F7B0(int self, _DWORD *a2)
 {
   int v3; // esi
   int v4; // edi
@@ -36,9 +36,9 @@ _DWORD *__thiscall sub_40F7B0(int this, _DWORD *a2)
 
   v29 = 0;
   ((void (*)(void))sub_411C50)();
-  EnterCriticalSection((LPCRITICAL_SECTION)(this + 960));
+  EnterCriticalSection((LPCRITICAL_SECTION)(self + 960));
   sub_4229D0(aStartsearchfor, v13);
-  v3 = *(_DWORD *)(this + 956);
+  v3 = *(_DWORD *)(self + 956);
   if ( v3 )
   {
     do
@@ -62,16 +62,16 @@ _DWORD *__thiscall sub_40F7B0(int this, _DWORD *a2)
     }
     while ( v4 );
   }
-  *(_DWORD *)(this + 956) = 0;
-  *(_DWORD *)(this + 984) = CreateEventA(0, 0, 0, 0);
-  LeaveCriticalSection((LPCRITICAL_SECTION)(this + 960));
+  *(_DWORD *)(self + 956) = 0;
+  *(_DWORD *)(self + 984) = CreateEventA(0, 0, 0, 0);
+  LeaveCriticalSection((LPCRITICAL_SECTION)(self + 960));
   v30[0] = 1402159760;
   v30[1] = 299000461;
   v30[2] = 1610616750;
   v30[3] = 286568599;
   sub_4229D0(aMpCreatingPeer, v14);
-  v7 = (_DWORD *)(this + 24);
-  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(this + 24)) < 0 )
+  v7 = (_DWORD *)(self + 24);
+  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(self + 24)) < 0 )
   {
     sub_4229D0(aCouldnTCreateD, v15);
     sub_403A30(a2, 1, aCouldnTCreateD_0);
@@ -81,7 +81,7 @@ _DWORD *__thiscall sub_40F7B0(int this, _DWORD *a2)
   sub_4229D0(aMpInitPeer, v16);
   if ( (*(int (__stdcall **)(_DWORD, int, int (__stdcall *)(int, int, int), _DWORD))(*(_DWORD *)*v7 + 12))(
          *v7,
-         this,
+         self,
          sub_410A90,
          0) < 0 )
   {
@@ -91,14 +91,14 @@ _DWORD *__thiscall sub_40F7B0(int this, _DWORD *a2)
   }
   sub_4229D0(aMpInitPeerDone, v17);
   sub_4229D0(aMpCreatingHost, v18);
-  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(this + 92)) < 0 )
+  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 92)) < 0 )
   {
     sub_403A30(a2, 3, aCouldnTCreateH);
     return a2;
   }
   sub_4229D0(aMpDoneCreating, v19);
   sub_4229D0(aMpSetSp, v20);
-  if ( (*(int (__stdcall **)(_DWORD, _DWORD *))(**(_DWORD **)(this + 92) + 52))(*(_DWORD *)(this + 92), v30) < 0 )
+  if ( (*(int (__stdcall **)(_DWORD, _DWORD *))(**(_DWORD **)(self + 92) + 52))(*(_DWORD *)(self + 92), v30) < 0 )
   {
     v12 = aCouldnTSetHost;
 LABEL_37:
@@ -107,8 +107,8 @@ LABEL_37:
   }
   sub_4229D0(aMpDoneSettingS, v21);
   sub_4229D0(aMpCreateDevice, v22);
-  v9 = (_DWORD *)(this + 96);
-  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(this + 96)) < 0 )
+  v9 = (_DWORD *)(self + 96);
+  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 96)) < 0 )
   {
     sub_403A30(a2, 5, aCouldnTCreateD_1);
     return a2;
@@ -128,7 +128,7 @@ LABEL_37:
   v32[6] = dword_4A4DC0;
   v32[0] = 72;
   v32[9] = dword_4A4DCC;
-  sub_428820(WideCharStr, (LPCCH)(this + 140), -1);
+  sub_428820(WideCharStr, (LPCCH)(self + 140), -1);
   memset(v31, 0, sizeof(v31));
   v31[0] = 24;
   v31[1] = 1;
@@ -155,7 +155,7 @@ LABEL_37:
   v11 = (*(int (__stdcall **)(_DWORD, _DWORD *, _DWORD, _DWORD, _DWORD, _DWORD, int, _DWORD, int, _DWORD, int *, _DWORD))(*(_DWORD *)*v7 + 100))(
           *v7,
           v32,
-          *(_DWORD *)(this + 92),
+          *(_DWORD *)(self + 92),
           *v9,
           0,
           0,
@@ -167,7 +167,7 @@ LABEL_37:
           0);
   if ( v11 < 0 )
   {
-    sub_411C50(this);
+    sub_411C50(self);
     switch ( v11 )
     {
       case -2146073824:

@@ -1,10 +1,10 @@
 //----- (0044E980) --------------------------------------------------------
-int __thiscall sub_44E980(_DWORD *this)
+int __thiscall sub_44E980(_DWORD *self)
 {
   int result; // eax
 
-  result = this[1];
+  result = self[1];
   if ( result )
-    return (this[2] - result) / 40;
+    return (self[2] - result) / 40;
   return result;
 }

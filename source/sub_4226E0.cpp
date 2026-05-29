@@ -1,5 +1,5 @@
 //----- (004226E0) --------------------------------------------------------
-_DWORD *__thiscall sub_4226E0(_DWORD *this, _DWORD *a2)
+_DWORD *__thiscall sub_4226E0(_DWORD *self, _DWORD *a2)
 {
   _DWORD *v3; // ecx
   _DWORD *result; // eax
@@ -7,11 +7,11 @@ _DWORD *__thiscall sub_4226E0(_DWORD *this, _DWORD *a2)
   int v6; // ecx
   int v7; // ecx
 
-  v3 = (_DWORD *)this[7];
-  this[6] = 0;
+  v3 = (_DWORD *)self[7];
+  self[6] = 0;
   sub_4131B0(v3, 0);
-  (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)this[7] + 24))(this[7], 0);
-  result = (_DWORD *)this[5];
+  (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)self[7] + 24))(self[7], 0);
+  result = (_DWORD *)self[5];
   v5 = 0;
   if ( result )
   {
@@ -28,10 +28,10 @@ _DWORD *__thiscall sub_4226E0(_DWORD *this, _DWORD *a2)
     if ( v5 )
       v5[4] = v6;
     else
-      this[5] = v6;
+      self[5] = v6;
   }
 LABEL_8:
-  v7 = this[8];
+  v7 = self[8];
   if ( v7 )
   {
     *(_BYTE *)(v7 + 33) = 0;

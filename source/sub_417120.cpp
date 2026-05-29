@@ -1,5 +1,5 @@
 //----- (00417120) --------------------------------------------------------
-int __thiscall sub_417120(void *this, int a2)
+int __thiscall sub_417120(void *self, int a2)
 {
-  return (int)this + 20 * a2 + 136;
+  return (int)self + 20 * a2 + 136;
 }

@@ -1,5 +1,5 @@
 //----- (00402170) --------------------------------------------------------
-char __thiscall sub_402170(float *this, float a2, float a3, float a4, float a5, float a6, float a7)
+char __thiscall sub_402170(float *self, float a2, float a3, float a4, float a5, float a6, float a7)
 {
   int v7; // edx
   float *v8; // ecx
@@ -19,7 +19,7 @@ char __thiscall sub_402170(float *this, float a2, float a3, float a4, float a5, 
   float v23; // [esp+10h] [ebp-4h]
 
   v7 = 0;
-  v8 = this + 19;
+  v8 = self + 19;
   do
   {
     v18 = a4 * v8[1];

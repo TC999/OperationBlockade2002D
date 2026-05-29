@@ -1,5 +1,5 @@
 //----- (0043CB00) --------------------------------------------------------
-int __thiscall sub_43CB00(_DWORD *this)
+int __thiscall sub_43CB00(_DWORD *self)
 {
   _DWORD *v1; // esi
   int result; // eax
@@ -20,9 +20,9 @@ int __thiscall sub_43CB00(_DWORD *this)
   char Buffer[256]; // [esp+134h] [ebp-10Ch] BYREF
   int v18; // [esp+23Ch] [ebp-4h]
 
-  v1 = this;
-  v15 = this;
-  this[16] = sub_403620((_DWORD *)dword_4B5AB0, aCommander);
+  v1 = self;
+  v15 = self;
+  self[16] = sub_403620((_DWORD *)dword_4B5AB0, aCommander);
   result = v1[12];
   v3 = 0;
   if ( !result )

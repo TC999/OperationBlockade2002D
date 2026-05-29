@@ -1,5 +1,5 @@
 //----- (004133C0) --------------------------------------------------------
-char __thiscall sub_4133C0(_DWORD *this)
+char __thiscall sub_4133C0(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // ecx
@@ -60,14 +60,14 @@ char __thiscall sub_4133C0(_DWORD *this)
   {
     v5 = 0;
   }
-  this[6] = v5;
+  self[6] = v5;
   memset(v5, 0, 0x18000u);
   v6 = operator new(0x7800u);
   result = 1;
-  this[7] = v6;
+  self[7] = v6;
   memset(v6, 0, 0x7800u);
-  this[8] = 0;
-  this[5] = 0;
-  this[10] = 0;
+  self[8] = 0;
+  self[5] = 0;
+  self[10] = 0;
   return result;
 }

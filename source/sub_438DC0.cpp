@@ -1,5 +1,5 @@
 //----- (00438DC0) --------------------------------------------------------
-char __thiscall sub_438DC0(int *this)
+char __thiscall sub_438DC0(int *self)
 {
   char **v2; // ebx
   int *v3; // ebp
@@ -45,25 +45,25 @@ char __thiscall sub_438DC0(int *this)
         *(_BYTE *)(v6 + 32) = 1;
         *(float *)(v6 + 12) = (double)(unsigned int)v7 * 0.5;
         *(float *)(v6 + 16) = v5;
-        v8 = this[123] + 1;
-        this[123] = v8;
+        v8 = self[123] + 1;
+        self[123] = v8;
         v9 = v8;
-        v10 = this[124];
+        v10 = self[124];
         if ( v9 > v10 )
         {
-          v11 = (void *)this[122];
+          v11 = (void *)self[122];
           v12 = v10 + 8;
-          this[124] = v12;
+          self[124] = v12;
           v13 = sub_488DD7(v11, 4 * v12);
           if ( v13 )
           {
-            v14 = this[123];
-            v15 = this[124] - v14;
-            this[122] = v13;
+            v14 = self[123];
+            v15 = self[124] - v14;
+            self[122] = v13;
             memset((void *)(v13 + 4 * v14), 0, 4 * v15);
           }
         }
-        *(_DWORD *)(this[122] + 4 * this[123] - 4) = v3;
+        *(_DWORD *)(self[122] + 4 * self[123] - 4) = v3;
       }
       v16 = v2[1];
       ++v2;
@@ -76,14 +76,14 @@ char __thiscall sub_438DC0(int *this)
     v18 = sub_41C6A0(v17);
   else
     v18 = 0;
-  this[103] = (int)v18;
+  self[103] = (int)v18;
   sub_41C7A0((int)v18, 1);
-  sub_41C760(this[103], aSoundsUiMusicW);
-  *(_BYTE *)this[103] = 0;
-  sub_41CA40(this[103]);
+  sub_41C760(self[103], aSoundsUiMusicW);
+  *(_BYTE *)self[103] = 0;
+  sub_41CA40(self[103]);
   v20 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
-  sub_41CFD0(this[103], v20);
-  result = sub_41CD90(this[103]);
-  this[121] = 8;
+  sub_41CFD0(self[103], v20);
+  result = sub_41CD90(self[103]);
+  self[121] = 8;
   return result;
 }

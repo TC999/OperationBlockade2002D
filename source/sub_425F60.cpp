@@ -1,5 +1,5 @@
 //----- (00425F60) --------------------------------------------------------
-int __thiscall sub_425F60(int this)
+int __thiscall sub_425F60(int self)
 {
   int v2; // ebp
   int v3; // ebx
@@ -10,12 +10,12 @@ int __thiscall sub_425F60(int this)
   int result; // eax
 
   v2 = 0;
-  v3 = *(_DWORD *)(this + 24);
+  v3 = *(_DWORD *)(self + 24);
   if ( v3 > 0 )
   {
     do
     {
-      v4 = *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * v2);
+      v4 = *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * v2);
       v5 = *(int **)(v4 + 296);
       if ( v5 )
       {
@@ -26,17 +26,17 @@ int __thiscall sub_425F60(int this)
     }
     while ( v2 < v3 );
   }
-  if ( *(_BYTE *)(this + 32) )
+  if ( *(_BYTE *)(self + 32) )
   {
-    for ( i = 0; i < *(_DWORD *)(this + 24); ++i )
-      sub_4885A6(*(LPVOID *)(*(_DWORD *)(this + 20) + 4 * i));
+    for ( i = 0; i < *(_DWORD *)(self + 24); ++i )
+      sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 20) + 4 * i));
   }
-  memset(*(void **)(this + 20), 0, 4 * *(_DWORD *)(this + 24));
-  v7 = *(void **)(this + 20);
-  *(_DWORD *)(this + 24) = 0;
+  memset(*(void **)(self + 20), 0, 4 * *(_DWORD *)(self + 24));
+  v7 = *(void **)(self + 20);
+  *(_DWORD *)(self + 24) = 0;
   sub_488CEE(v7);
   result = 0;
-  *(_DWORD *)(this + 28) = 0;
-  *(_DWORD *)(this + 20) = 0;
+  *(_DWORD *)(self + 28) = 0;
+  *(_DWORD *)(self + 20) = 0;
   return result;
 }

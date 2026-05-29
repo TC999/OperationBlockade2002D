@@ -1,5 +1,5 @@
 //----- (0045A9D0) --------------------------------------------------------
-int __thiscall sub_45A9D0(_DWORD *this)
+int __thiscall sub_45A9D0(_DWORD *self)
 {
   int result; // eax
   int v3; // ebx
@@ -11,9 +11,9 @@ int __thiscall sub_45A9D0(_DWORD *this)
   result = dword_4F5CC4;
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {
-    v3 = this[18] + 1;
-    if ( v3 >= this[4 * this[5] + 7] )
-      LOBYTE(v3) = this[4 * this[5] + 7];
+    v3 = self[18] + 1;
+    if ( v3 >= self[4 * self[5] + 7] )
+      LOBYTE(v3) = self[4 * self[5] + 7];
     v4 = rand() % 10;
     v5 = rand();
     return sub_45B150(v3, v5 % 10, v4);
@@ -22,10 +22,10 @@ int __thiscall sub_45A9D0(_DWORD *this)
   {
     if ( dword_4AD1B0 <= -1 )
     {
-      sub_45ABF0(this);
+      sub_45ABF0(self);
       v6 = rand() % 10;
       v7 = rand();
-      return sub_45A920(this, this[18] + 1, v7 % 10, v6);
+      return sub_45A920(self, self[18] + 1, v7 % 10, v6);
     }
     else
     {

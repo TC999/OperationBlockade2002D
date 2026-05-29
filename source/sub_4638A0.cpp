@@ -1,5 +1,5 @@
 //----- (004638A0) --------------------------------------------------------
-char *__thiscall sub_4638A0(int this, char *a2, unsigned int a3, _DWORD *a4)
+char *__thiscall sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
 {
   int v5; // edi
   char *result; // eax
@@ -32,16 +32,16 @@ char *__thiscall sub_4638A0(int this, char *a2, unsigned int a3, _DWORD *a4)
   int v34; // [esp+14h] [ebp-4h]
   _DWORD *v35; // [esp+20h] [ebp+8h]
 
-  v5 = this;
-  result = *(char **)(this + 8);
-  if ( (*(_DWORD *)(this + 12) - (int)result) >> 3 >= a3 )
+  v5 = self;
+  result = *(char **)(self + 8);
+  if ( (*(_DWORD *)(self + 12) - (int)result) >> 3 >= a3 )
   {
     if ( (result - a2) >> 3 >= a3 )
     {
       if ( a3 )
       {
         v27 = 8 * a3;
-        v28 = *(_DWORD **)(this + 8);
+        v28 = *(_DWORD **)(self + 8);
         for ( i = &result[-8 * a3]; i != result; v28 += 2 )
         {
           if ( v28 )
@@ -86,7 +86,7 @@ char *__thiscall sub_4638A0(int this, char *a2, unsigned int a3, _DWORD *a4)
           {
             *(_DWORD *)v21 = *(_DWORD *)v22;
             *((_DWORD *)v21 + 1) = *((_DWORD *)v22 + 1);
-            v5 = this;
+            v5 = self;
           }
           v22 += 8;
           v21 += 8;
@@ -115,7 +115,7 @@ char *__thiscall sub_4638A0(int this, char *a2, unsigned int a3, _DWORD *a4)
   }
   else
   {
-    v7 = *(_DWORD *)(this + 4);
+    v7 = *(_DWORD *)(self + 4);
     if ( !v7 || (v8 = (int)&result[-v7] >> 3, a3 >= v8) )
       v8 = a3;
     if ( v7 )
@@ -147,7 +147,7 @@ char *__thiscall sub_4638A0(int this, char *a2, unsigned int a3, _DWORD *a4)
         {
           *v13 = *a4;
           v13[1] = a4[1];
-          v5 = this;
+          v5 = self;
         }
         v13 += 2;
         --v14;
@@ -171,21 +171,21 @@ char *__thiscall sub_4638A0(int this, char *a2, unsigned int a3, _DWORD *a4)
       }
       while ( v17 != v15 );
     }
-    sub_4885A6(*(LPVOID *)(this + 4));
-    *(_DWORD *)(this + 12) = &v35[2 * v34];
-    v18 = *(_DWORD *)(this + 4);
+    sub_4885A6(*(LPVOID *)(self + 4));
+    *(_DWORD *)(self + 12) = &v35[2 * v34];
+    v18 = *(_DWORD *)(self + 4);
     if ( v18 )
     {
-      v19 = *(_DWORD *)(this + 8);
-      *(_DWORD *)(this + 4) = v35;
+      v19 = *(_DWORD *)(self + 8);
+      *(_DWORD *)(self + 4) = v35;
       result = (char *)&v35[2 * a3 + 2 * ((v19 - v18) >> 3)];
     }
     else
     {
-      *(_DWORD *)(this + 4) = v35;
+      *(_DWORD *)(self + 4) = v35;
       result = (char *)&v35[2 * a3];
     }
-    *(_DWORD *)(this + 8) = result;
+    *(_DWORD *)(self + 8) = result;
   }
   return result;
 }

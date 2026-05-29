@@ -1,5 +1,5 @@
 //----- (00404F60) --------------------------------------------------------
-int __thiscall sub_404F60(_DWORD *this, int a2, void *a3, float *a4)
+int __thiscall sub_404F60(_DWORD *self, int a2, void *a3, float *a4)
 {
   int v4; // esi
   int v5; // eax
@@ -18,7 +18,7 @@ int __thiscall sub_404F60(_DWORD *this, int a2, void *a3, float *a4)
   _BYTE v18[64]; // [esp+1D4h] [ebp-80h] BYREF
   _BYTE v19[64]; // [esp+214h] [ebp-40h] BYREF
 
-  v4 = this[1] + 172 * a2;
+  v4 = self[1] + 172 * a2;
   sub_406BE0(v11);
   v9 = 1.0;
   if ( *(_BYTE *)v4 )

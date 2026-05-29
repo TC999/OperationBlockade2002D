@@ -1,12 +1,12 @@
 //----- (00411430) --------------------------------------------------------
-_DWORD *__thiscall sub_411430(_DWORD *this, int a2)
+_DWORD *__thiscall sub_411430(_DWORD *self, int a2)
 {
   _DWORD *v3; // edi
   _DWORD *result; // eax
   _DWORD *v5; // esi
 
   v3 = 0;
-  result = (_DWORD *)this[5];
+  result = (_DWORD *)self[5];
   while ( result )
   {
     if ( *result == a2 )
@@ -15,7 +15,7 @@ _DWORD *__thiscall sub_411430(_DWORD *this, int a2)
       if ( v3 )
         v3[3] = v5;
       else
-        this[5] = v5;
+        self[5] = v5;
       sub_4885A6(result);
       result = v5;
     }

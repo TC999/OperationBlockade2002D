@@ -1,5 +1,5 @@
 //----- (00475CAA) --------------------------------------------------------
-int __thiscall sub_475CAA(_DWORD *this)
+int __thiscall sub_475CAA(_DWORD *self)
 {
   int v2; // eax
   bool v3; // cf
@@ -31,13 +31,13 @@ int __thiscall sub_475CAA(_DWORD *this)
   float v30; // [esp+80h] [ebp-8h]
   float v31; // [esp+84h] [ebp-4h]
 
-  if ( this[1060] && this[1061] )
+  if ( self[1060] && self[1061] )
   {
-    v2 = this[1];
+    v2 = self[1];
     if ( v2 == 844388420 || (v24 = 0, v2 == 877942852) )
       v24 = 1;
-    v3 = this[1053] < this[1055];
-    v29 = this[1053];
+    v3 = self[1053] < self[1055];
+    v29 = self[1053];
     if ( v3 )
     {
       do
@@ -47,11 +47,11 @@ int __thiscall sub_475CAA(_DWORD *this)
         v4 = v15;
         if ( v24 )
         {
-          v28 = this + 1049;
+          v28 = self + 1049;
           v26 = 4;
           do
           {
-            v5 = (float *)(*v28 + 16 * (v29 - this[1053]));
+            v5 = (float *)(*v28 + 16 * (v29 - self[1053]));
             v27 = 4;
             do
             {
@@ -77,11 +77,11 @@ int __thiscall sub_475CAA(_DWORD *this)
         }
         else
         {
-          v28 = this + 1049;
+          v28 = self + 1049;
           v27 = 4;
           do
           {
-            v7 = (float *)(*v28 + 16 * (v29 - this[1053]));
+            v7 = (float *)(*v28 + 16 * (v29 - self[1053]));
             v26 = 4;
             do
             {
@@ -107,40 +107,40 @@ int __thiscall sub_475CAA(_DWORD *this)
         }
         v31 = *(float *)&v25;
         v9 = 0;
-        if ( this[1062] )
+        if ( self[1062] )
         {
           v10 = v15;
           do
           {
             v11 = 0;
-            v12 = 4 * (v9 & this[1064]);
+            v12 = 4 * (v9 & self[1064]);
             do
-              *v10++ = v15[v12 + (v11++ & this[1063])];
+              *v10++ = v15[v12 + (v11++ & self[1063])];
             while ( v11 < 4 );
             ++v9;
           }
           while ( v9 < 4 );
         }
-        v13 = this[1];
+        v13 = self[1];
         switch ( v13 )
         {
           case 827611204:
-            sub_47AFCE(v15, this[6] + this[1043] * this[1057] + this[1042] * (this[1054] >> 2) + 8 * (v29 >> 2));
+            sub_47AFCE(v15, self[6] + self[1043] * self[1057] + self[1042] * (self[1054] >> 2) + 8 * (v29 >> 2));
             break;
           case 844388420:
           case 861165636:
-            sub_47BB23(v15, this[6] + 16 * (v29 >> 2) + this[1043] * this[1057] + this[1042] * (this[1054] >> 2));
+            sub_47BB23(v15, self[6] + 16 * (v29 >> 2) + self[1043] * self[1057] + self[1042] * (self[1054] >> 2));
             break;
           case 877942852:
           case 894720068:
-            sub_47BB7C(v15, this[6] + 16 * (v29 >> 2) + this[1043] * this[1057] + this[1042] * (this[1054] >> 2));
+            sub_47BB7C(v15, self[6] + 16 * (v29 >> 2) + self[1043] * self[1057] + self[1042] * (self[1054] >> 2));
             break;
         }
         v29 += 4;
       }
-      while ( v29 < this[1055] );
+      while ( v29 < self[1055] );
     }
-    this[1060] = 0;
+    self[1060] = 0;
   }
   return 0;
 }

@@ -1,5 +1,5 @@
 //----- (0045F3A0) --------------------------------------------------------
-int __thiscall sub_45F3A0(char *this, int a2, bool *a3, bool *a4, _DWORD *a5)
+int __thiscall sub_45F3A0(char *self, int a2, bool *a3, bool *a4, _DWORD *a5)
 {
   char *v5; // edx
   int v6; // eax
@@ -8,7 +8,7 @@ int __thiscall sub_45F3A0(char *this, int a2, bool *a3, bool *a4, _DWORD *a5)
   bool v9; // al
   __int64 v10; // rax
 
-  v5 = &this[28 * a2];
+  v5 = &self[28 * a2];
   if ( !*((_DWORD *)v5 + 2880) )
     goto LABEL_19;
   v6 = *((_DWORD *)v5 + 2881);
@@ -34,7 +34,7 @@ LABEL_5:
   *a4 = v9;
   if ( !*a3 && !v9 )
     *a5 = *((_DWORD *)v5 + 2885);
-  v10 = (unsigned int)(this + 11528);
+  v10 = (unsigned int)(self + 11528);
   while ( !*(_DWORD *)(v10 - 8) || *(int *)v10 <= 0 )
   {
     ++HIDWORD(v10);

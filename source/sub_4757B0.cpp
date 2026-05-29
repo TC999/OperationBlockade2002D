@@ -1,5 +1,5 @@
 //----- (004757B0) --------------------------------------------------------
-int __thiscall sub_4757B0(int this, unsigned int a2, unsigned int a3, int a4)
+int __thiscall sub_4757B0(int self, unsigned int a2, unsigned int a3, int a4)
 {
   int result; // eax
   unsigned int v6; // eax
@@ -38,37 +38,37 @@ int __thiscall sub_4757B0(int this, unsigned int a2, unsigned int a3, int a4)
   float v39; // [esp+1Ch] [ebp+Ch]
   unsigned int i; // [esp+20h] [ebp+10h]
 
-  if ( !*(_DWORD *)(this + 4232) )
+  if ( !*(_DWORD *)(self + 4232) )
     return -2147024882;
-  if ( a2 < *(_DWORD *)(this + 4204)
-    || a2 >= *(_DWORD *)(this + 4212)
-    || a3 < *(_DWORD *)(this + 4216)
-    || a3 >= *(_DWORD *)(this + 4220) )
+  if ( a2 < *(_DWORD *)(self + 4204)
+    || a2 >= *(_DWORD *)(self + 4212)
+    || a3 < *(_DWORD *)(self + 4216)
+    || a3 >= *(_DWORD *)(self + 4220) )
   {
-    result = sub_4755BD((_DWORD *)this);
+    result = sub_4755BD((_DWORD *)self);
     if ( result < 0 )
       return result;
-    *(_DWORD *)(this + 4212) = a2 + 1;
-    *(_DWORD *)(this + 4204) = a2;
-    *(_DWORD *)(this + 4216) = a3;
-    *(_DWORD *)(this + 4220) = a3 + 1;
+    *(_DWORD *)(self + 4212) = a2 + 1;
+    *(_DWORD *)(self + 4204) = a2;
+    *(_DWORD *)(self + 4216) = a3;
+    *(_DWORD *)(self + 4220) = a3 + 1;
     if ( a4 )
     {
-      v6 = *(_DWORD *)(this + 4200);
-      v7 = *(float **)(this + 4196);
-      v8 = (_WORD *)(*(_DWORD *)(this + 24) + a3 * *(_DWORD *)(this + 4172) + a2 * *(_DWORD *)(this + 4168) + 2 * v6);
+      v6 = *(_DWORD *)(self + 4200);
+      v7 = *(float **)(self + 4196);
+      v8 = (_WORD *)(*(_DWORD *)(self + 24) + a3 * *(_DWORD *)(self + 4172) + a2 * *(_DWORD *)(self + 4168) + 2 * v6);
       v31 = v8;
-      for ( i = v6; i < *(_DWORD *)(this + 4208); v31 = v8 )
+      for ( i = v6; i < *(_DWORD *)(self + 4208); v31 = v8 )
       {
         v9 = *v8;
-        v10 = (double)(unsigned __int8)(*v8 >> *(_WORD *)(this + 4236));
+        v10 = (double)(unsigned __int8)(*v8 >> *(_WORD *)(self + 4236));
         v11 = v31;
-        v36 = (unsigned __int8)(v9 >> *(_WORD *)(this + 4240));
+        v36 = (unsigned __int8)(v9 >> *(_WORD *)(self + 4240));
         v12 = v31[1];
         v27 = v10 - 16.0;
         v29 = (double)v36 - 128.0;
-        v13 = (double)(unsigned __int8)(v12 >> *(_WORD *)(this + 4236)) - 16.0;
-        v14 = (double)(unsigned __int8)(v12 >> *(_WORD *)(this + 4240)) - 128.0;
+        v13 = (double)(unsigned __int8)(v12 >> *(_WORD *)(self + 4236)) - 16.0;
+        v14 = (double)(unsigned __int8)(v12 >> *(_WORD *)(self + 4240)) - 128.0;
         v37 = v14;
         v15 = v14 * 0.0062589301;
         v16 = v27 * 0.0045662099;

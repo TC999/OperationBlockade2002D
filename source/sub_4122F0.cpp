@@ -1,5 +1,5 @@
 //----- (004122F0) --------------------------------------------------------
-int __thiscall sub_4122F0(int this, int a2)
+int __thiscall sub_4122F0(int self, int a2)
 {
   double v3; // st7
   int v4; // edi
@@ -48,13 +48,13 @@ int __thiscall sub_4122F0(int this, int a2)
   _DWORD v48[2]; // [esp+34h] [ebp-18h] BYREF
   int *v49[4]; // [esp+3Ch] [ebp-10h] BYREF
 
-  v3 = *(float *)(this + 948) - *(float *)(dword_520970 + 68);
-  *(float *)(this + 948) = v3;
+  v3 = *(float *)(self + 948) - *(float *)(dword_520970 + 68);
+  *(float *)(self + 948) = v3;
   if ( v3 < 0.0 )
   {
-    *(_DWORD *)(this + 948) = 1065353216;
-    EnterCriticalSection((LPCRITICAL_SECTION)(this + 960));
-    v4 = *(_DWORD *)(this + 956);
+    *(_DWORD *)(self + 948) = 1065353216;
+    EnterCriticalSection((LPCRITICAL_SECTION)(self + 960));
+    v4 = *(_DWORD *)(self + 956);
     v5 = 0;
     if ( v4 )
     {
@@ -86,55 +86,55 @@ int __thiscall sub_4122F0(int this, int a2)
           sub_4885A6((LPVOID)v4);
           v4 = v6;
           if ( !v5 )
-            *(_DWORD *)(this + 956) = v6;
+            *(_DWORD *)(self + 956) = v6;
         }
       }
       while ( v6 );
     }
-    LeaveCriticalSection((LPCRITICAL_SECTION)(this + 960));
+    LeaveCriticalSection((LPCRITICAL_SECTION)(self + 960));
   }
   while ( 1 )
   {
-    EnterCriticalSection((LPCRITICAL_SECTION)(this + 44));
-    v10 = *(int **)(this + 32);
+    EnterCriticalSection((LPCRITICAL_SECTION)(self + 44));
+    v10 = *(int **)(self + 32);
     if ( !v10 )
       break;
     v11 = *v10;
     v12 = v10[1];
     *v10 = 0;
-    v10[1] = *(_DWORD *)(this + 28);
-    *(_DWORD *)(this + 28) = v10;
-    *(_DWORD *)(this + 32) = v12;
+    v10[1] = *(_DWORD *)(self + 28);
+    *(_DWORD *)(self + 28) = v10;
+    *(_DWORD *)(self + 32) = v12;
     if ( !v12 )
-      *(_DWORD *)(this + 36) = 0;
-    LeaveCriticalSection((LPCRITICAL_SECTION)(this + 44));
+      *(_DWORD *)(self + 36) = 0;
+    LeaveCriticalSection((LPCRITICAL_SECTION)(self + 44));
     if ( !v11 )
       goto LABEL_22;
-    v13 = *(_DWORD *)(this + 76);
-    v14 = *(_DWORD *)(this + 72) + 1;
-    *(_DWORD *)(this + 72) = v14;
+    v13 = *(_DWORD *)(self + 76);
+    v14 = *(_DWORD *)(self + 72) + 1;
+    *(_DWORD *)(self + 72) = v14;
     if ( v14 > v13 )
     {
-      v15 = *(void **)(this + 68);
+      v15 = *(void **)(self + 68);
       v16 = v13 + 8;
-      *(_DWORD *)(this + 76) = v16;
+      *(_DWORD *)(self + 76) = v16;
       v17 = sub_488DD7(v15, 4 * v16);
       if ( v17 )
       {
-        v18 = *(_DWORD *)(this + 72);
-        v19 = *(_DWORD *)(this + 76) - v18;
-        *(_DWORD *)(this + 68) = v17;
+        v18 = *(_DWORD *)(self + 72);
+        v19 = *(_DWORD *)(self + 76) - v18;
+        *(_DWORD *)(self + 68) = v17;
         memset((void *)(v17 + 4 * v18), 0, 4 * v19);
       }
     }
-    *(_DWORD *)(*(_DWORD *)(this + 68) + 4 * *(_DWORD *)(this + 72) - 4) = v11;
+    *(_DWORD *)(*(_DWORD *)(self + 68) + 4 * *(_DWORD *)(self + 72) - 4) = v11;
   }
-  LeaveCriticalSection((LPCRITICAL_SECTION)(this + 44));
+  LeaveCriticalSection((LPCRITICAL_SECTION)(self + 44));
 LABEL_22:
   v20 = 0;
-  while ( v20 < *(_DWORD *)(this + 72) )
+  while ( v20 < *(_DWORD *)(self + 72) )
   {
-    v21 = *(float ***)(this + 68);
+    v21 = *(float ***)(self + 68);
     v22 = v21[v20];
     if ( *(float *)(dword_520970 + 76) < (double)*v22 )
     {
@@ -142,11 +142,11 @@ LABEL_22:
     }
     else
     {
-      v23 = *(_DWORD *)(this + 72);
+      v23 = *(_DWORD *)(self + 72);
       v24 = 0;
       if ( v23 > 0 )
       {
-        v25 = *(_DWORD *)(this + 68);
+        v25 = *(_DWORD *)(self + 68);
         while ( *v21 != v22 )
         {
           ++v24;
@@ -155,23 +155,23 @@ LABEL_22:
             goto LABEL_28;
         }
         v26 = v23 - 1;
-        *(_DWORD *)(this + 72) = v26;
+        *(_DWORD *)(self + 72) = v26;
         if ( v24 != v26 )
         {
           memcpy((void *)(v25 + 4 * v24), (const void *)(v25 + 4 * v24 + 4), 4 * (v26 + 0x3FFFFFFF * v24));
-          *(_DWORD *)(*(_DWORD *)(this + 68) + 4 * *(_DWORD *)(this + 72)) = 0;
+          *(_DWORD *)(*(_DWORD *)(self + 68) + 4 * *(_DWORD *)(self + 72)) = 0;
         }
       }
 LABEL_28:
       sub_412620(v22);
     }
   }
-  v27 = *(float *)(this + 952) - *(float *)(dword_520970 + 68);
-  *(float *)(this + 952) = v27;
+  v27 = *(float *)(self + 952) - *(float *)(dword_520970 + 68);
+  *(float *)(self + 952) = v27;
   if ( v27 < 0.0 )
   {
-    *(_DWORD *)(this + 952) = 1045220557;
-    v28 = sub_4118C0(this, v49, 4);
+    *(_DWORD *)(self + 952) = 1045220557;
+    v28 = sub_4118C0(self, v49, 4);
     v46 = v28;
     if ( v28 > 0 )
     {
@@ -206,7 +206,7 @@ LABEL_28:
                 v41 = *(_DWORD *)(v34 + 20);
                 v38 = *v29;
                 v48[1] = v37;
-                v39 = *(_DWORD *)(this + 24);
+                v39 = *(_DWORD *)(self + 24);
                 v48[0] = v36;
                 (*(void (__stdcall **)(int, int, _DWORD *, int, int, _DWORD, int *, int))(*(_DWORD *)v39 + 28))(
                   v39,
@@ -233,7 +233,7 @@ LABEL_28:
       while ( v45 );
       v28 = v46;
     }
-    sub_411920(this, v49, v28);
+    sub_411920(self, v49, v28);
   }
   return sub_428620(a2);
 }

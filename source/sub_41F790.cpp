@@ -1,5 +1,5 @@
 //----- (0041F790) --------------------------------------------------------
-int __thiscall sub_41F790(int this, int a2)
+int __thiscall sub_41F790(int self, int a2)
 {
   _DWORD v4[16]; // [esp+4h] [ebp-40h] BYREF
 
@@ -12,12 +12,12 @@ int __thiscall sub_41F790(int this, int a2)
   v4[0] = 1065353216;
   (*(void (__stdcall **)(_DWORD, int, _DWORD *))(**(_DWORD **)ArgList + 148))(*(_DWORD *)ArgList, 256, v4);
   return sub_41F3D0(
-           *(float *)(this + 36),
-           *(float *)(this + 40),
-           *(float *)(this + 44),
-           *(float *)(this + 48),
-           *(float *)(this + 20),
-           *(float *)(this + 24),
-           *(float *)(this + 28),
-           *(_DWORD *)(this + 32));
+           *(float *)(self + 36),
+           *(float *)(self + 40),
+           *(float *)(self + 44),
+           *(float *)(self + 48),
+           *(float *)(self + 20),
+           *(float *)(self + 24),
+           *(float *)(self + 28),
+           *(_DWORD *)(self + 32));
 }

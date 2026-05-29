@@ -1,8 +1,8 @@
 //----- (004438E0) --------------------------------------------------------
-double __thiscall sub_4438E0(float *this)
+double __thiscall sub_4438E0(float *self)
 {
-  if ( this[106] <= (double)this[105] )
-    return this[106];
+  if ( self[106] <= (double)self[105] )
+    return self[106];
   else
-    return this[105];
+    return self[105];
 }

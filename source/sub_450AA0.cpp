@@ -1,5 +1,5 @@
 //----- (00450AA0) --------------------------------------------------------
-void __thiscall sub_450AA0(int **this, int a2, int a3)
+void __thiscall sub_450AA0(int **self, int a2, int a3)
 {
-  sub_468BE0(this[65], a2, a3, 0);
+  sub_468BE0(self[65], a2, a3, 0);
 }

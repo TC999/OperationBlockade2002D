@@ -1,5 +1,5 @@
 //----- (0040FEE0) --------------------------------------------------------
-_DWORD *__thiscall sub_40FEE0(int this, _DWORD *a2)
+_DWORD *__thiscall sub_40FEE0(int self, _DWORD *a2)
 {
   _DWORD *v3; // ebx
   _DWORD *result; // eax
@@ -27,14 +27,14 @@ _DWORD *__thiscall sub_40FEE0(int this, _DWORD *a2)
   WCHAR WideCharStr[260]; // [esp+294h] [ebp-208h] BYREF
 
   v22[4] = 0;
-  sub_411C50(this);
+  sub_411C50(self);
   v22[0] = 1402159760;
   v22[1] = 299000461;
   v22[2] = 1610616750;
   v22[3] = 286568599;
   sub_4229D0(aMpCreatingPeer, v10);
-  v3 = (_DWORD *)(this + 24);
-  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(this + 24)) < 0 )
+  v3 = (_DWORD *)(self + 24);
+  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(self + 24)) < 0 )
   {
     sub_4229D0(aCouldnTCreateD, v11);
     v9 = aCouldnTCreateD_0;
@@ -46,7 +46,7 @@ LABEL_27:
   sub_4229D0(aMpInitPeer, v12);
   if ( (*(int (__stdcall **)(_DWORD, int, int (__stdcall *)(int, int, int), _DWORD))(*(_DWORD *)*v3 + 12))(
          *v3,
-         this,
+         self,
          sub_410A90,
          0) < 0 )
   {
@@ -56,8 +56,8 @@ LABEL_27:
   }
   sub_4229D0(aMpInitPeerDone, v13);
   sub_4229D0(aMpCreateDevice, v14);
-  v5 = (_DWORD *)(this + 96);
-  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(this + 96)) < 0 )
+  v5 = (_DWORD *)(self + 96);
+  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 96)) < 0 )
   {
     sub_403A30(a2, 5, aCouldnTCreateD_1);
     return a2;
@@ -76,10 +76,10 @@ LABEL_27:
   v23[9] = dword_4A4DCC;
   memset(&v23[2], 0, 16);
   v23[8] = dword_4A4DC8;
-  v6 = *(_DWORD *)(this + 104);
+  v6 = *(_DWORD *)(self + 104);
   v23[0] = 72;
   v23[10] = v6;
-  sub_428820(WideCharStr, (LPCCH)(this + 140), -1);
+  sub_428820(WideCharStr, (LPCCH)(self + 140), -1);
   memset(v24, 0, sizeof(v24));
   v24[0] = 24;
   v24[1] = 1;
@@ -95,9 +95,9 @@ LABEL_27:
     sub_403A30(a2, 9, aCouldnTSetPeer);
     return a2;
   }
-  if ( strlen((const char *)(this + 400)) )
+  if ( strlen((const char *)(self + 400)) )
   {
-    sub_428820(String, (LPCCH)(this + 400), -1);
+    sub_428820(String, (LPCCH)(self + 400), -1);
     v7 = wcslen(String);
     v23[12] = operator new(2 * v7 + 2);
     wcscpy((wchar_t *)v23[12], String);
@@ -110,7 +110,7 @@ LABEL_27:
   v8 = (*(int (__stdcall **)(_DWORD, _DWORD *, int, int, _DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)*v3 + 36))(
          *v3,
          v23,
-         this + 96,
+         self + 96,
          1,
          0,
          0,
@@ -129,8 +129,8 @@ LABEL_27:
   if ( v8 >= 0 )
   {
     sub_4229D0(aMpDoneHostIng, v20);
-    *(_BYTE *)(this + 936) = 1;
-    *(_BYTE *)(this + 937) = 0;
+    *(_BYTE *)(self + 936) = 1;
+    *(_BYTE *)(self + 937) = 0;
     sub_4229D0(aMpLaunchSucces, v21);
     result = a2;
     *a2 = 0;

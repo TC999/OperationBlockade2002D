@@ -1,5 +1,5 @@
 //----- (004647E0) --------------------------------------------------------
-BOOL __thiscall sub_4647E0(_DWORD *this)
+BOOL __thiscall sub_4647E0(_DWORD *self)
 {
-  return this[5] < 8;
+  return self[5] < 8;
 }

@@ -1,5 +1,5 @@
 //----- (004763AB) --------------------------------------------------------
-void __thiscall sub_4763AB(_DWORD *this)
+void __thiscall sub_4763AB(_DWORD *self)
 {
-  *this = &off_49A774;
+  *self = &off_49A774;
 }

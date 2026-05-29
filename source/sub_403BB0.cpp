@@ -1,11 +1,11 @@
 //----- (00403BB0) --------------------------------------------------------
-bool __thiscall sub_403BB0(_DWORD *this, int a2, const char *a3)
+bool __thiscall sub_403BB0(_DWORD *self, int a2, const char *a3)
 {
   int v3; // ebx
   char *v4; // edx
   int v5; // eax
 
-  v3 = *(_DWORD *)(this[1] + 172 * a2 + 52);
+  v3 = *(_DWORD *)(self[1] + 172 * a2 + 52);
   if ( !v3 || !*(_DWORD *)(v3 + 84) )
     return 0;
   if ( *(_DWORD *)(v3 + 76) )

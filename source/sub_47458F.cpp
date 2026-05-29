@@ -1,5 +1,5 @@
 //----- (0047458F) --------------------------------------------------------
-int __thiscall sub_47458F(_DWORD *this, int a2, int a3, int a4)
+int __thiscall sub_47458F(_DWORD *self, int a2, int a3, int a4)
 {
   _WORD *v5; // edx
   bool v6; // zf
@@ -12,10 +12,10 @@ int __thiscall sub_47458F(_DWORD *this, int a2, int a3, int a4)
   float v14; // [esp+2Ch] [ebp+10h]
   float v15; // [esp+2Ch] [ebp+10h]
 
-  v5 = (_WORD *)(this[6] + a3 * this[1043] + a2 * this[1042]);
-  v12 = this[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
+  v5 = (_WORD *)(self[6] + a3 * self[1043] + a2 * self[1042]);
+  v12 = self[11] + 4 * ((a3 & 3) + 8 * (a2 & 3));
   v13 = 0;
-  v6 = this[1044] == 0;
+  v6 = self[1044] == 0;
   dword_52230C = a3;
   if ( !v6 )
   {
@@ -31,7 +31,7 @@ int __thiscall sub_47458F(_DWORD *this, int a2, int a3, int a4)
       ++v13;
       v7 += 4;
     }
-    while ( v13 < this[1044] );
+    while ( v13 < self[1044] );
   }
   return a3;
 }

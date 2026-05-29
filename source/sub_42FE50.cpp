@@ -1,5 +1,5 @@
 //----- (0042FE50) --------------------------------------------------------
-char __thiscall sub_42FE50(_DWORD *this)
+char __thiscall sub_42FE50(_DWORD *self)
 {
   int v1; // eax
   int v2; // edx
@@ -8,16 +8,16 @@ char __thiscall sub_42FE50(_DWORD *this)
   int i; // edi
   int v6; // ecx
 
-  v1 = this[6];
+  v1 = self[6];
   if ( v1 )
-    v2 = (this[7] - v1) >> 2;
+    v2 = (self[7] - v1) >> 2;
   else
     v2 = 0;
   v3 = 0;
   result = 1;
   if ( v2 > 0 )
   {
-    for ( i = this[6]; ; i += 4 )
+    for ( i = self[6]; ; i += 4 )
     {
       if ( *(_BYTE *)(*(_DWORD *)i + 396) )
       {

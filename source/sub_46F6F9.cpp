@@ -1,5 +1,5 @@
 //----- (0046F6F9) --------------------------------------------------------
-int __thiscall sub_46F6F9(_DWORD *this)
+int __thiscall sub_46F6F9(_DWORD *self)
 {
   _DWORD *v1; // ebx
   _DWORD *v2; // eax
@@ -11,9 +11,9 @@ int __thiscall sub_46F6F9(_DWORD *this)
   _DWORD *v9; // [esp+14h] [ebp-8h]
   unsigned int v10; // [esp+18h] [ebp-4h]
 
-  v1 = this;
-  v2 = (_DWORD *)this[1];
-  v3 = (_DWORD *)*this;
+  v1 = self;
+  v2 = (_DWORD *)self[1];
+  v3 = (_DWORD *)*self;
   v9 = v1;
   if ( v2[1] != v3[1] )
     return -2147467259;

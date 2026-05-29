@@ -1,12 +1,12 @@
 //----- (00428F20) --------------------------------------------------------
-int __thiscall sub_428F20(int *this)
+int __thiscall sub_428F20(int *self)
 {
   int v1; // ecx
   int result; // eax
   int v3; // eax
   int v4; // eax
 
-  v1 = *this;
+  v1 = *self;
   result = *(_DWORD *)(v1 + 288);
   if ( !result )
   {

@@ -1,10 +1,10 @@
 //----- (0046DA95) --------------------------------------------------------
-_DWORD *__thiscall sub_46DA95(_DWORD *this)
+_DWORD *__thiscall sub_46DA95(_DWORD *self)
 {
   _DWORD *result; // eax
 
-  result = this;
-  this[1] = 0;
-  *this = 0;
+  result = self;
+  self[1] = 0;
+  *self = 0;
   return result;
 }

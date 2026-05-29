@@ -1,5 +1,5 @@
 //----- (0045A420) --------------------------------------------------------
-int __thiscall sub_45A420(float *this, int a2, int a3, char a4, int a5)
+int __thiscall sub_45A420(float *self, int a2, int a3, char a4, int a5)
 {
   int v5; // edi
   float *v6; // ebx
@@ -37,9 +37,9 @@ int __thiscall sub_45A420(float *this, int a2, int a3, char a4, int a5)
   float v39; // [esp+2Ch] [ebp+Ch]
 
   v5 = a2;
-  v6 = this;
+  v6 = self;
   v7 = a5;
-  v8 = (_DWORD *)(*((_DWORD *)this + 30) + 4 * *(_DWORD *)(a2 + 8));
+  v8 = (_DWORD *)(*((_DWORD *)self + 30) + 4 * *(_DWORD *)(a2 + 8));
   *v8 += a5;
   if ( a4 )
   {
@@ -92,7 +92,7 @@ int __thiscall sub_45A420(float *this, int a2, int a3, char a4, int a5)
         v19 += 16;
         v24 = *(_DWORD *)(dword_520970 + 280);
         *(_DWORD *)(v19 + v24 + 11612) += (__int64)v23;
-        v6 = this;
+        v6 = self;
         v25 = (_DWORD *)(v24 + 4 * (v18 + 88 * *(_DWORD *)(v24 + 512)) + 932);
         ++v18;
         *v25 += (__int64)v23;

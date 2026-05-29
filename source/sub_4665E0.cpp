@@ -1,5 +1,5 @@
 //----- (004665E0) --------------------------------------------------------
-char __thiscall sub_4665E0(int this, int *a2, float a3, float a4, char a5, int a6)
+char __thiscall sub_4665E0(int self, int *a2, float a3, float a4, char a5, int a6)
 {
   int v7; // edi
   int i; // ebp
@@ -23,12 +23,12 @@ char __thiscall sub_4665E0(int this, int *a2, float a3, float a4, char a5, int a
   v7 = 0;
   for ( i = 1116; i < 1152; i += 12 )
   {
-    result = sub_407F00(*(_DWORD *)(this + 416), *(_DWORD *)(*(_DWORD *)(this + 412) + i), a2, a3, &v12, (float *)&v11);
+    result = sub_407F00(*(_DWORD *)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + i), a2, a3, &v12, (float *)&v11);
     if ( result )
     {
       if ( *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
       {
-        v15[3] = *(_WORD *)(this + 392);
+        v15[3] = *(_WORD *)(self + 392);
         v18 = v13;
         v20 = *(float *)&v11 * a4;
         v17 = v12;

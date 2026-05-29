@@ -1,5 +1,5 @@
 //----- (00471009) --------------------------------------------------------
-int __thiscall sub_471009(int *this, int a2, unsigned int a3)
+int __thiscall sub_471009(int *self, int a2, unsigned int a3)
 {
   int *v3; // esi
   unsigned int v6; // edx
@@ -59,7 +59,7 @@ int __thiscall sub_471009(int *this, int a2, unsigned int a3)
   int v61; // [esp+2Ch] [ebp+Ch]
   char *v62; // [esp+2Ch] [ebp+Ch]
 
-  v3 = this;
+  v3 = self;
   if ( a3 < 0x28 )
     return -2147467259;
   v6 = *(_DWORD *)a2;
@@ -294,7 +294,7 @@ LABEL_82:
                       v29[v35++] = v36;
                     }
                     while ( v35 < *v27 );
-                    v3 = this;
+                    v3 = self;
                     v29 += *v27;
                   }
                   else if ( v27[1] )
@@ -323,7 +323,7 @@ LABEL_82:
                           v29[v32++] = v33;
                         }
                         while ( v32 < v27[1] );
-                        v3 = this;
+                        v3 = self;
                       }
                       v34 = v27[1];
                       v29 += v34;
@@ -432,7 +432,7 @@ LABEL_82:
                   v29 += v38;
                   v27 += (v38 + 1) & 0xFFFFFFFE;
 LABEL_133:
-                  v3 = this;
+                  v3 = self;
                   break;
               }
               v27 += 2;

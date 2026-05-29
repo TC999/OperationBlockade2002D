@@ -1,5 +1,5 @@
 //----- (00417160) --------------------------------------------------------
-int __thiscall sub_417160(_DWORD *this)
+int __thiscall sub_417160(_DWORD *self)
 {
-  return this[5 * this[1033] + 32];
+  return self[5 * self[1033] + 32];
 }

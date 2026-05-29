@@ -1,5 +1,5 @@
 //----- (00437000) --------------------------------------------------------
-BOOL __thiscall sub_437000(float *this)
+BOOL __thiscall sub_437000(float *self)
 {
-  return this[11] <= 0.0;
+  return self[11] <= 0.0;
 }

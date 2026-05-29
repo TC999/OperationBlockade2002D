@@ -1,5 +1,5 @@
 //----- (00405850) --------------------------------------------------------
-char __thiscall sub_405850(int this, int Buffer)
+char __thiscall sub_405850(int self, int Buffer)
 {
   int v2; // edi
   double v4; // st7
@@ -19,15 +19,15 @@ char __thiscall sub_405850(int this, int Buffer)
   float v18; // [esp+30h] [ebp-4h]
 
   v2 = Buffer;
-  if ( !sub_4057E0((FILE **)this, (void *)(Buffer + 4))
-    || !sub_4057E0((FILE **)this, &Buffer)
-    || !sub_4057E0((FILE **)this, &v8)
-    || !sub_4057E0((FILE **)this, &v9)
-    || !sub_4057E0((FILE **)this, &v10)
-    || !sub_4057E0((FILE **)this, &v11)
-    || !sub_4057E0((FILE **)this, &v12)
-    || !sub_4057E0((FILE **)this, &v13)
-    || !sub_4057E0((FILE **)this, &v14) )
+  if ( !sub_4057E0((FILE **)self, (void *)(Buffer + 4))
+    || !sub_4057E0((FILE **)self, &Buffer)
+    || !sub_4057E0((FILE **)self, &v8)
+    || !sub_4057E0((FILE **)self, &v9)
+    || !sub_4057E0((FILE **)self, &v10)
+    || !sub_4057E0((FILE **)self, &v11)
+    || !sub_4057E0((FILE **)self, &v12)
+    || !sub_4057E0((FILE **)self, &v13)
+    || !sub_4057E0((FILE **)self, &v14) )
   {
     return 0;
   }
@@ -49,6 +49,6 @@ char __thiscall sub_405850(int this, int Buffer)
   *(float *)(v2 + 28) = v17;
   *(float *)(v2 + 32) = v18;
   *(_DWORD *)(v2 + 36) = v14;
-  *(_DWORD *)v2 = *(_DWORD *)(this + 52);
+  *(_DWORD *)v2 = *(_DWORD *)(self + 52);
   return result;
 }

@@ -1,14 +1,14 @@
 //----- (0040BF80) --------------------------------------------------------
-_DWORD *__thiscall sub_40BF80(_DWORD *this)
+_DWORD *__thiscall sub_40BF80(_DWORD *self)
 {
-  this[1] = 0;
-  *this = 0;
-  this[2] = 0;
-  this[3] = 0;
-  memset(this + 5, 0, 0x100u);
-  this[69] = 0;
-  this[70] = 0;
-  this[71] = 0;
-  this[72] = 0;
-  return this;
+  self[1] = 0;
+  *self = 0;
+  self[2] = 0;
+  self[3] = 0;
+  memset(self + 5, 0, 0x100u);
+  self[69] = 0;
+  self[70] = 0;
+  self[71] = 0;
+  self[72] = 0;
+  return self;
 }

@@ -1,5 +1,5 @@
 //----- (00462F90) --------------------------------------------------------
-_DWORD *__thiscall sub_462F90(_DWORD *this)
+_DWORD *__thiscall sub_462F90(_DWORD *self)
 {
   _DWORD *v1; // esi
   int v2; // ebp
@@ -9,7 +9,7 @@ _DWORD *__thiscall sub_462F90(_DWORD *this)
   _DWORD *result; // eax
   _DWORD *v7; // ecx
 
-  v1 = this + 586;
+  v1 = self + 586;
   v2 = 4;
   do
   {
@@ -25,9 +25,9 @@ _DWORD *__thiscall sub_462F90(_DWORD *this)
   }
   while ( v2 );
   v5 = 4;
-  this[131] = 0;
-  result = this + 585;
-  v7 = this + 220;
+  self[131] = 0;
+  result = self + 585;
+  v7 = self + 220;
   do
   {
     *v7 = -1;
@@ -37,6 +37,6 @@ _DWORD *__thiscall sub_462F90(_DWORD *this)
     --v5;
   }
   while ( v5 );
-  this[129] = -1;
+  self[129] = -1;
   return result;
 }

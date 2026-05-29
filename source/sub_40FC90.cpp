@@ -1,5 +1,5 @@
 //----- (0040FC90) --------------------------------------------------------
-int __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION *this)
+int __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION *self)
 {
   PRTL_CRITICAL_SECTION_DEBUG DebugInfo; // eax
   struct _RTL_CRITICAL_SECTION *v3; // edi
@@ -10,16 +10,16 @@ int __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION *this)
   char v9; // [esp+4h] [ebp-14h]
   char v10; // [esp+4h] [ebp-14h]
 
-  DebugInfo = this[1].DebugInfo;
+  DebugInfo = self[1].DebugInfo;
   if ( DebugInfo )
     (*(void (__stdcall **)(PRTL_CRITICAL_SECTION_DEBUG, _DWORD, int))(*(_DWORD *)&DebugInfo->Type + 20))(
       DebugInfo,
       0,
       2);
-  v3 = this + 40;
-  EnterCriticalSection(this + 40);
+  v3 = self + 40;
+  EnterCriticalSection(self + 40);
   sub_4229D0(aStopsearchfori, v9);
-  SpinCount = this[39].SpinCount;
+  SpinCount = self[39].SpinCount;
   if ( SpinCount )
   {
     do
@@ -42,9 +42,9 @@ int __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION *this)
       SpinCount = v5;
     }
     while ( v5 );
-    v3 = this + 40;
+    v3 = self + 40;
   }
-  this[39].SpinCount = 0;
+  self[39].SpinCount = 0;
   LeaveCriticalSection(v3);
   return sub_4229D0(aStopsearchfori_0, v10);
 }

@@ -1,5 +1,5 @@
 //----- (00430DC0) --------------------------------------------------------
-char __thiscall sub_430DC0(int this, int *a2, float a3, float a4, int a5, int a6)
+char __thiscall sub_430DC0(int self, int *a2, float a3, float a4, int a5, int a6)
 {
   int v6; // ebx
   int v7; // edi
@@ -24,16 +24,16 @@ char __thiscall sub_430DC0(int this, int *a2, float a3, float a4, int a5, int a6
   v15 = 0;
   for ( i = 0; i < 120; i += 24 )
   {
-    v10 = *(_DWORD *)(this + 428);
+    v10 = *(_DWORD *)(self + 428);
     if ( *(_BYTE *)(v10 + i + 624) )
     {
-      LOBYTE(v10) = sub_407F00(*(_DWORD *)(this + 432), *(_DWORD *)(v10 + i + 628), a2, a3, &v13, (float *)&a5);
+      LOBYTE(v10) = sub_407F00(*(_DWORD *)(self + 432), *(_DWORD *)(v10 + i + 628), a2, a3, &v13, (float *)&a5);
       if ( (_BYTE)v10 )
       {
-        sub_4229D0("%s splashed on section %d", *(const char **)(*(_DWORD *)(this + 428) + 4), v7);
+        sub_4229D0("%s splashed on section %d", *(const char **)(*(_DWORD *)(self + 428) + 4), v7);
         if ( *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
         {
-          v16[3] = *(_WORD *)(this + 392);
+          v16[3] = *(_WORD *)(self + 392);
           v19 = v14;
           v21 = *(float *)&a5 * a4;
           v18 = v13;
@@ -44,7 +44,7 @@ char __thiscall sub_430DC0(int this, int *a2, float a3, float a4, int a5, int a6
         }
         else
         {
-          sub_4229D0("%s hit on section %d", *(const char **)(*(_DWORD *)(this + 428) + 4), v7);
+          sub_4229D0("%s hit on section %d", *(const char **)(*(_DWORD *)(self + 428) + 4), v7);
           v12 = *(float *)&a5 * a4;
           LOBYTE(v10) = sub_430F00(v7, (int)&v13, v12, v6);
         }

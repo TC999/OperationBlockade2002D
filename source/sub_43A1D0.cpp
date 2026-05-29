@@ -1,5 +1,5 @@
 //----- (0043A1D0) --------------------------------------------------------
-void __thiscall sub_43A1D0(_DWORD *this)
+void __thiscall sub_43A1D0(_DWORD *self)
 {
-  *this = &off_499040;
+  *self = &off_499040;
 }

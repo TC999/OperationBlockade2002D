@@ -1,5 +1,5 @@
 //----- (00408FB0) --------------------------------------------------------
-float *__thiscall sub_408FB0(float *this)
+float *__thiscall sub_408FB0(float *self)
 {
   DWORD Time; // eax
   int v3; // ecx
@@ -14,64 +14,64 @@ float *__thiscall sub_408FB0(float *this)
   float v13; // [esp-4h] [ebp-10h]
 
   Time = timeGetTime();
-  v3 = Time - *((_DWORD *)this + 15);
-  *((_DWORD *)this + 15) = Time;
+  v3 = Time - *((_DWORD *)self + 15);
+  *((_DWORD *)self + 15) = Time;
   v4 = (double)v3 * 0.001;
-  this[17] = v4;
+  self[17] = v4;
   if ( !v6 )
     v4 = 0.2;
-  this[17] = v4;
-  v7 = *((_BYTE *)this + 20);
-  this[19] = v4 + this[19];
+  self[17] = v4;
+  v7 = *((_BYTE *)self + 20);
+  self[19] = v4 + self[19];
   if ( v7 )
-    this[16] = 0.0;
+    self[16] = 0.0;
   else
-    this[16] = v4 * this[6];
-  v8 = *this;
-  v13 = this[16];
-  this[18] = v13 + this[18];
-  (*(void (__thiscall **)(float *, float))(LODWORD(v8) + 16))(this, COERCE_FLOAT(LODWORD(v13)));
-  result = (float *)*((_DWORD *)this + 21);
+    self[16] = v4 * self[6];
+  v8 = *self;
+  v13 = self[16];
+  self[18] = v13 + self[18];
+  (*(void (__thiscall **)(float *, float))(LODWORD(v8) + 16))(self, COERCE_FLOAT(LODWORD(v13)));
+  result = (float *)*((_DWORD *)self + 21);
   if ( result )
   {
-    if ( *((_BYTE *)this + 100) )
+    if ( *((_BYTE *)self + 100) )
     {
-      this[26] = result[8];
-      this[27] = result[9];
-      this[28] = result[10];
-      this[26] = this[26] - this[22];
-      this[27] = this[27] - this[23];
-      this[28] = this[28] - this[24];
-      if ( this[16] > 0.0000099999997 )
+      self[26] = result[8];
+      self[27] = result[9];
+      self[28] = result[10];
+      self[26] = self[26] - self[22];
+      self[27] = self[27] - self[23];
+      self[28] = self[28] - self[24];
+      if ( self[16] > 0.0000099999997 )
       {
-        if ( this[16] == 0.0 )
+        if ( self[16] == 0.0 )
         {
-          this[26] = 0.0;
-          this[27] = 0.0;
-          this[28] = 0.0;
+          self[26] = 0.0;
+          self[27] = 0.0;
+          self[28] = 0.0;
         }
         else
         {
-          v10 = this[16];
+          v10 = self[16];
           if ( v10 == 0.0 )
             v11 = 0.0;
           else
             v11 = 1.0 / v10;
-          this[26] = v11 * this[26];
-          this[27] = v11 * this[27];
-          this[28] = v11 * this[28];
+          self[26] = v11 * self[26];
+          self[27] = v11 * self[27];
+          self[28] = v11 * self[28];
         }
       }
     }
     else
     {
-      *((_BYTE *)this + 100) = 1;
+      *((_BYTE *)self + 100) = 1;
     }
-    v12 = (int *)(*((_DWORD *)this + 21) + 32);
-    *((_DWORD *)this + 22) = *v12;
-    *((_DWORD *)this + 23) = v12[1];
+    v12 = (int *)(*((_DWORD *)self + 21) + 32);
+    *((_DWORD *)self + 22) = *v12;
+    *((_DWORD *)self + 23) = v12[1];
     result = (float *)v12[2];
-    *((_DWORD *)this + 24) = result;
+    *((_DWORD *)self + 24) = result;
   }
   return result;
 }

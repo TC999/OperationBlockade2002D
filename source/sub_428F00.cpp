@@ -1,5 +1,5 @@
 //----- (00428F00) --------------------------------------------------------
-int __thiscall sub_428F00(void *this)
+int __thiscall sub_428F00(void *self)
 {
-  return *(_DWORD *)(*(_DWORD *)this + 264);
+  return *(_DWORD *)(*(_DWORD *)self + 264);
 }

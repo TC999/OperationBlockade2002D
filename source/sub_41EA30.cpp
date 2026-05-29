@@ -1,5 +1,5 @@
 //----- (0041EA30) --------------------------------------------------------
-void __thiscall sub_41EA30(float *this, int a2, int a3)
+void __thiscall sub_41EA30(float *self, int a2, int a3)
 {
   _DWORD *v5; // ebx
   double v6; // st7
@@ -151,9 +151,9 @@ LABEL_39:
     sub_41CFD0((int)v5, 0.0);
   if ( v43 > 0.60000002 )
   {
-    v15 = *(float *)(a2 + 28) - this[14];
-    v33 = *(float *)(a2 + 32) - this[15];
-    v16 = *(float *)(a2 + 36) - this[16];
+    v15 = *(float *)(a2 + 28) - self[14];
+    v33 = *(float *)(a2 + 32) - self[15];
+    v16 = *(float *)(a2 + 36) - self[16];
     v17 = sqrt(v16 * v16 + v33 * v33 + v15 * v15);
     if ( v17 >= 0.0000099999997 || v17 <= -0.0000099999997 )
     {
@@ -180,7 +180,7 @@ LABEL_39:
       }
       else
       {
-        v20 = ((v35 * this[19] + v34 * this[18] + v32 * this[17]) * 0.000074074072 + 1.0) / v19;
+        v20 = ((v35 * self[19] + v34 * self[18] + v32 * self[17]) * 0.000074074072 + 1.0) / v19;
         if ( v20 < 1.1 )
         {
           if ( v20 <= 0.89999998 )
@@ -201,9 +201,9 @@ LABEL_39:
     }
     if ( *(_BYTE *)(a2 + 24) )
     {
-      v21 = this[22] * this[24] - this[21] * this[25];
-      v38 = this[20] * this[25] - this[22] * this[23];
-      v22 = this[23] * this[21] - this[20] * this[24];
+      v21 = self[22] * self[24] - self[21] * self[25];
+      v38 = self[20] * self[25] - self[22] * self[23];
+      v22 = self[23] * self[21] - self[20] * self[24];
       v23 = sqrt(v22 * v22 + v38 * v38 + v21 * v21);
       if ( v23 >= 0.0000099999997 || v23 <= -0.0000099999997 )
       {

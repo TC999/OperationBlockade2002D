@@ -1,5 +1,5 @@
 //----- (0046F91C) --------------------------------------------------------
-int __thiscall sub_46F91C(_DWORD *this)
+int __thiscall sub_46F91C(_DWORD *self)
 {
   _DWORD *v3; // eax
   _DWORD *v4; // ecx
@@ -24,10 +24,10 @@ int __thiscall sub_46F91C(_DWORD *this)
   unsigned int v23; // [esp+10h] [ebp-14h]
   void *v24; // [esp+14h] [ebp-10h]
 
-  if ( *((_BYTE *)this + 8) != 1 )
+  if ( *((_BYTE *)self + 8) != 1 )
     return -2147467259;
-  v3 = (_DWORD *)this[1];
-  v4 = (_DWORD *)*this;
+  v3 = (_DWORD *)self[1];
+  v4 = (_DWORD *)*self;
   v18 = v3[1044];
   if ( v18 <= v4[1044] )
     v18 = v4[1044];
@@ -52,7 +52,7 @@ int __thiscall sub_46F91C(_DWORD *this)
   }
   if ( !v24 )
     return -2147467259;
-  v19 = *(_DWORD *)(this[1] + 4176);
+  v19 = *(_DWORD *)(self[1] + 4176);
   v8 = operator new(16 * v19);
   v22 = v8;
   if ( v8 )
@@ -69,36 +69,36 @@ int __thiscall sub_46F91C(_DWORD *this)
     v9 = v17;
     v23 = 0;
     memset(v24, 0, v6);
-    memset(v20, 0, 16 * *(_DWORD *)(this[1] + 4176));
+    memset(v20, 0, 16 * *(_DWORD *)(self[1] + 4176));
     if ( v17 )
     {
       do
       {
         for ( i = 0; i < v16; ++i )
         {
-          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)*this + 4))(
-            *this,
+          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)*self + 4))(
+            *self,
             i,
             v23,
             v24);
-          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)this[1] + 8))(
-            this[1],
+          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)self[1] + 8))(
+            self[1],
             i,
             v23,
             v24);
         }
-        v11 = (_DWORD *)this[1];
+        v11 = (_DWORD *)self[1];
         for ( j = v16; j < v11[1045]; ++j )
         {
           (*(void (__thiscall **)(_DWORD *, unsigned int, unsigned int, void *))(*v11 + 8))(v11, j, v23, v20);
-          v11 = (_DWORD *)this[1];
+          v11 = (_DWORD *)self[1];
         }
         v9 = v17;
         ++v23;
       }
       while ( v23 < v17 );
     }
-    v13 = (_DWORD *)this[1];
+    v13 = (_DWORD *)self[1];
     if ( v9 < v13[1046] )
     {
       v14 = v13[1045];
@@ -107,10 +107,10 @@ int __thiscall sub_46F91C(_DWORD *this)
         for ( k = 0; k < v14; ++k )
         {
           (*(void (__thiscall **)(_DWORD *, unsigned int, unsigned int, void *))(*v13 + 8))(v13, k, v9, v20);
-          v13 = (_DWORD *)this[1];
+          v13 = (_DWORD *)self[1];
           v14 = v13[1045];
         }
-        v13 = (_DWORD *)this[1];
+        v13 = (_DWORD *)self[1];
         ++v9;
       }
       while ( v9 < v13[1046] );

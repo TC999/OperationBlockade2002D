@@ -1,5 +1,5 @@
 //----- (0045F4A0) --------------------------------------------------------
-double __thiscall sub_45F4A0(_DWORD *this)
+double __thiscall sub_45F4A0(_DWORD *self)
 {
   int v1; // eax
   int v2; // edx
@@ -8,7 +8,7 @@ double __thiscall sub_45F4A0(_DWORD *this)
   unsigned int v6; // eax
   unsigned int v7; // edx
 
-  v1 = this[659];
+  v1 = self[659];
   if ( !v1 )
     goto LABEL_8;
   v2 = *(_DWORD *)(v1 + 844);
@@ -21,14 +21,14 @@ double __thiscall sub_45F4A0(_DWORD *this)
       return *(float *)(v1 + 308);
   }
 LABEL_8:
-  v5 = this[642];
+  v5 = self[642];
   if ( v5 )
-    v6 = (this[643] - v5) >> 3;
+    v6 = (self[643] - v5) >> 3;
   else
     v6 = 0;
-  v7 = this[645];
+  v7 = self[645];
   if ( v7 < v6 )
-    return *(float *)(*(_DWORD *)(this[642] + 8 * v7) + 308);
+    return *(float *)(*(_DWORD *)(self[642] + 8 * v7) + 308);
   else
     return 0.0;
 }

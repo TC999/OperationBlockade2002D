@@ -1,5 +1,5 @@
 //----- (004033A0) --------------------------------------------------------
-int __thiscall sub_4033A0(int this)
+int __thiscall sub_4033A0(int self)
 {
   char *v2; // ebp
   _DWORD *v3; // eax
@@ -80,23 +80,23 @@ int __thiscall sub_4033A0(int this)
         *(_DWORD *)(*((_DWORD *)v2 + 16) + 4 * *((_DWORD *)v2 + 17) - 4) = v6;
         ++v21;
       }
-      v13 = *(_DWORD *)(this + 28);
-      v14 = *(_DWORD *)(this + 24) + 1;
-      *(_DWORD *)(this + 24) = v14;
+      v13 = *(_DWORD *)(self + 28);
+      v14 = *(_DWORD *)(self + 24) + 1;
+      *(_DWORD *)(self + 24) = v14;
       if ( v14 > v13 )
       {
         v15 = v13 + 8;
-        *(_DWORD *)(this + 28) = v15;
-        v16 = sub_488DD7(*(LPVOID *)(this + 20), 4 * v15);
+        *(_DWORD *)(self + 28) = v15;
+        v16 = sub_488DD7(*(LPVOID *)(self + 20), 4 * v15);
         if ( v16 )
         {
-          v17 = *(_DWORD *)(this + 24);
-          v18 = *(_DWORD *)(this + 28) - v17;
-          *(_DWORD *)(this + 20) = v16;
+          v17 = *(_DWORD *)(self + 24);
+          v18 = *(_DWORD *)(self + 28) - v17;
+          *(_DWORD *)(self + 20) = v16;
           memset((void *)(v16 + 4 * v17), 0, 4 * v18);
         }
       }
-      *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * *(_DWORD *)(this + 24) - 4) = v2;
+      *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = v2;
       if ( !(unsigned __int8)sub_40AAF0(aDialoguegroup, 0) )
         break;
       v2 = 0;

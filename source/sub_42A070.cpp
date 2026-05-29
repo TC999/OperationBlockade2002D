@@ -1,5 +1,5 @@
 //----- (0042A070) --------------------------------------------------------
-void __thiscall sub_42A070(_DWORD *this)
+void __thiscall sub_42A070(_DWORD *self)
 {
   _DWORD *v1; // esi
   char v2; // bl
@@ -7,8 +7,8 @@ void __thiscall sub_42A070(_DWORD *this)
   char v4; // al
   char v5; // [esp+Bh] [ebp-1h]
 
-  v1 = (_DWORD *)*this;
-  if ( !*(_DWORD *)*this )
+  v1 = (_DWORD *)*self;
+  if ( !*(_DWORD *)*self )
   {
     v2 = v5;
     while ( !*v1 )

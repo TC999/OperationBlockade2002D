@@ -1,5 +1,5 @@
 //----- (00404510) --------------------------------------------------------
-bool __thiscall sub_404510(int this)
+bool __thiscall sub_404510(int self)
 {
   int v2; // edi
   bool v3; // bl
@@ -18,9 +18,9 @@ bool __thiscall sub_404510(int this)
   int v16; // edx
   int v17; // ecx
 
-  if ( !sub_405820((FILE **)this, (FILE **)0xDEFF2843) )
+  if ( !sub_405820((FILE **)self, (FILE **)0xDEFF2843) )
     return 0;
-  v2 = *(_DWORD *)(this + 28);
+  v2 = *(_DWORD *)(self + 28);
   v3 = 1;
   if ( v2 > 0 )
   {
@@ -36,15 +36,15 @@ bool __thiscall sub_404510(int this)
     {
       v6 = 0;
     }
-    v7 = *(_DWORD *)(this + 28);
-    *(_DWORD *)(this + 32) = v6;
+    v7 = *(_DWORD *)(self + 28);
+    *(_DWORD *)(self + 32) = v6;
     memset(v6, 0, 172 * v7);
-    v3 = sub_4046C0((_DWORD *)this, -1, 0);
+    v3 = sub_4046C0((_DWORD *)self, -1, 0);
   }
-  if ( *(_DWORD *)(this + 52) )
+  if ( *(_DWORD *)(self + 52) )
   {
-    sub_4050B0((_DWORD *)this);
-    v8 = *(char **)(this + 32);
+    sub_4050B0((_DWORD *)self);
+    v8 = *(char **)(self + 32);
     if ( v8 )
     {
       v9 = v8 - 4;
@@ -54,22 +54,22 @@ bool __thiscall sub_404510(int this)
   }
   else
   {
-    *(_DWORD *)(this + 4) = *(_DWORD *)(this + 32);
+    *(_DWORD *)(self + 4) = *(_DWORD *)(self + 32);
   }
-  v10 = *(_DWORD *)(this + 52);
-  v11 = *(void **)(this + 44);
-  *(_DWORD *)(this + 32) = 0;
+  v10 = *(_DWORD *)(self + 52);
+  v11 = *(void **)(self + 44);
+  *(_DWORD *)(self + 32) = 0;
   v12 = sub_488DD7(v11, 4 * v10 + 4);
-  v13 = *(_DWORD *)(this + 52);
-  v14 = *(_DWORD *)(this + 36);
-  *(_DWORD *)(this + 44) = v12;
+  v13 = *(_DWORD *)(self + 52);
+  v14 = *(_DWORD *)(self + 36);
+  *(_DWORD *)(self + 44) = v12;
   v12[v13] = v14;
-  v15 = sub_488DD7(*(LPVOID *)(this + 48), 4 * *(_DWORD *)(this + 52) + 4);
-  v16 = *(_DWORD *)(this + 52);
-  v17 = *(_DWORD *)(this + 40);
-  *(_DWORD *)(this + 48) = v15;
+  v15 = sub_488DD7(*(LPVOID *)(self + 48), 4 * *(_DWORD *)(self + 52) + 4);
+  v16 = *(_DWORD *)(self + 52);
+  v17 = *(_DWORD *)(self + 40);
+  *(_DWORD *)(self + 48) = v15;
   v15[v16] = v17;
   if ( !v3 )
     return 0;
-  return sub_405820((FILE **)this, (FILE **)0xDEFF2844);
+  return sub_405820((FILE **)self, (FILE **)0xDEFF2844);
 }

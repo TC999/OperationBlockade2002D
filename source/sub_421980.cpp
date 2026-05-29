@@ -1,5 +1,5 @@
 //----- (00421980) --------------------------------------------------------
-_BYTE *__thiscall sub_421980(int this, int a2, unsigned int a3)
+_BYTE *__thiscall sub_421980(int self, int a2, unsigned int a3)
 {
   int v4; // edi
   _BYTE *v5; // esi
@@ -11,7 +11,7 @@ _BYTE *__thiscall sub_421980(int this, int a2, unsigned int a3)
   int v11; // edi
   int v12; // ecx
 
-  v4 = *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * a2);
+  v4 = *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * a2);
   v5 = operator new(0x50u);
   if ( v5 )
   {
@@ -29,7 +29,7 @@ _BYTE *__thiscall sub_421980(int this, int a2, unsigned int a3)
     v5[34] = 0;
     v5[35] = 0;
     *((_DWORD *)v5 + 11) = 0;
-    *((_DWORD *)v5 + 12) = this;
+    *((_DWORD *)v5 + 12) = self;
     *((_DWORD *)v5 + 15) = 0;
     *((_DWORD *)v5 + 16) = -1082130432;
     *((_DWORD *)v5 + 17) = -1082130432;
@@ -46,22 +46,22 @@ _BYTE *__thiscall sub_421980(int this, int a2, unsigned int a3)
   {
     v5 = 0;
   }
-  v7 = *(_DWORD *)(this + 44);
-  v8 = *(_DWORD *)(this + 40) + 1;
-  *(_DWORD *)(this + 40) = v8;
+  v7 = *(_DWORD *)(self + 44);
+  v8 = *(_DWORD *)(self + 40) + 1;
+  *(_DWORD *)(self + 40) = v8;
   if ( v8 > v7 )
   {
     v9 = v7 + 8;
-    *(_DWORD *)(this + 44) = v9;
-    v10 = sub_488DD7(*(LPVOID *)(this + 36), 4 * v9);
+    *(_DWORD *)(self + 44) = v9;
+    v10 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v9);
     if ( v10 )
     {
-      v11 = *(_DWORD *)(this + 40);
-      v12 = *(_DWORD *)(this + 44) - v11;
-      *(_DWORD *)(this + 36) = v10;
+      v11 = *(_DWORD *)(self + 40);
+      v12 = *(_DWORD *)(self + 44) - v11;
+      *(_DWORD *)(self + 36) = v10;
       memset((void *)(v10 + 4 * v11), 0, 4 * v12);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(this + 36) + 4 * *(_DWORD *)(this + 40) - 4) = v5;
+  *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v5;
   return v5;
 }

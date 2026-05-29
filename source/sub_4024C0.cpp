@@ -1,14 +1,14 @@
 //----- (004024C0) --------------------------------------------------------
-_DWORD *__thiscall sub_4024C0(_DWORD *this)
+_DWORD *__thiscall sub_4024C0(_DWORD *self)
 {
-  sub_401270(this);
-  *this = &off_499064;
-  this[98] = 0;
-  this[99] = 0;
-  this[100] = 0;
-  this[101] = 0;
-  this[104] = 0;
-  this[102] = -1097229926;
-  this[103] = 1120403456;
-  return this;
+  sub_401270(self);
+  *self = &off_499064;
+  self[98] = 0;
+  self[99] = 0;
+  self[100] = 0;
+  self[101] = 0;
+  self[104] = 0;
+  self[102] = -1097229926;
+  self[103] = 1120403456;
+  return self;
 }

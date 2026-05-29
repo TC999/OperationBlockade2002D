@@ -1,5 +1,5 @@
 //----- (0044ED10) --------------------------------------------------------
-char *__thiscall sub_44ED10(_DWORD *this, char *a2, char *a3)
+char *__thiscall sub_44ED10(_DWORD *self, char *a2, char *a3)
 {
   char *v3; // edx
   char *v4; // ebx
@@ -9,7 +9,7 @@ char *__thiscall sub_44ED10(_DWORD *this, char *a2, char *a3)
 
   v3 = a3;
   v4 = a2;
-  v5 = (char *)this[2];
+  v5 = (char *)self[2];
   if ( a3 != v5 )
   {
     do
@@ -22,6 +22,6 @@ char *__thiscall sub_44ED10(_DWORD *this, char *a2, char *a3)
     }
     while ( v3 != v5 );
   }
-  this[2] = v4;
+  self[2] = v4;
   return a2;
 }

@@ -1,14 +1,14 @@
 //----- (0041BEF0) --------------------------------------------------------
-int __thiscall sub_41BEF0(_DWORD *this, int a2, int a3, int a4, int a5)
+int __thiscall sub_41BEF0(_DWORD *self, int a2, int a3, int a4, int a5)
 {
   int v6; // eax
   int v7; // ecx
   int result; // eax
   int v9; // [esp+34h] [ebp-8h]
 
-  if ( a3 != this[a2 + 7] )
+  if ( a3 != self[a2 + 7] )
   {
-    this[a2 + 7] = a3;
+    self[a2 + 7] = a3;
     if ( a3 )
     {
       sub_422270(a2);
@@ -22,9 +22,9 @@ int __thiscall sub_41BEF0(_DWORD *this, int a2, int a3, int a4, int a5)
       (*(void (__stdcall **)(_DWORD, int, int, int))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, a2, 4, 1);
     }
   }
-  if ( a4 != -1 && this[a2 + 15] != a4 )
+  if ( a4 != -1 && self[a2 + 15] != a4 )
   {
-    this[a2 + 15] = a4;
+    self[a2 + 15] = a4;
     if ( !a4 )
     {
       (*(void (__stdcall **)(_DWORD, _DWORD, int, _DWORD, int))(**(_DWORD **)ArgList + 252))(
@@ -54,9 +54,9 @@ LABEL_11:
   }
 LABEL_12:
   result = a5;
-  if ( a5 != -1 && this[a2 + 23] != a5 )
+  if ( a5 != -1 && self[a2 + 23] != a5 )
   {
-    this[a2 + 23] = a5;
+    self[a2 + 23] = a5;
     if ( a5 )
     {
       if ( a5 == 1 )

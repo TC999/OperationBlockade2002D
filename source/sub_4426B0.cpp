@@ -1,5 +1,5 @@
 //----- (004426B0) --------------------------------------------------------
-int __thiscall sub_4426B0(_DWORD *this, int ArgList, int a3)
+int __thiscall sub_4426B0(_DWORD *self, int ArgList, int a3)
 {
   int v3; // esi
   int v5; // eax
@@ -78,10 +78,10 @@ int __thiscall sub_4426B0(_DWORD *this, int ArgList, int a3)
 
   v3 = ArgList;
   sub_4229D0("Adding boats: %d %s", ArgList, *(const char **)(a3 + 4));
-  v5 = this[6];
+  v5 = self[6];
   v6 = 0;
   if ( v5 )
-    v53 = (this[7] - v5) >> 2;
+    v53 = (self[7] - v5) >> 2;
   else
     v53 = 0;
   if ( ArgList <= 0 )

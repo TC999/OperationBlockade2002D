@@ -1,5 +1,5 @@
 //----- (0042FC10) --------------------------------------------------------
-unsigned int __thiscall sub_42FC10(_DWORD *this, int a2)
+unsigned int __thiscall sub_42FC10(_DWORD *self, int a2)
 {
   __int16 v2; // ax
   int v4; // edi
@@ -20,12 +20,12 @@ unsigned int __thiscall sub_42FC10(_DWORD *this, int a2)
     result = v2 & 0xFF00;
     if ( result == 256 )
     {
-      v6 = this[6];
-      for ( result = 0; v6 && result < (this[7] - v6) >> 2; ++result )
+      v6 = self[6];
+      for ( result = 0; v6 && result < (self[7] - v6) >> 2; ++result )
       {
-        if ( *(_DWORD *)(*(_DWORD *)(this[6] + 4 * result) + 392) == *(__int16 *)(*(_DWORD *)(a2 + 16) + 6) )
+        if ( *(_DWORD *)(*(_DWORD *)(self[6] + 4 * result) + 392) == *(__int16 *)(*(_DWORD *)(a2 + 16) + 6) )
         {
-          v7 = *(_DWORD *)(this[6] + 4 * result);
+          v7 = *(_DWORD *)(self[6] + 4 * result);
           return (*(int (__thiscall **)(int, int))(*(_DWORD *)v7 + 28))(v7, a2);
         }
       }

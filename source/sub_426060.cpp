@@ -1,5 +1,5 @@
 //----- (00426060) --------------------------------------------------------
-char __thiscall sub_426060(int this, int a2, int ArgList)
+char __thiscall sub_426060(int self, int a2, int ArgList)
 {
   int v4; // eax
   int v5; // eax
@@ -18,7 +18,7 @@ char __thiscall sub_426060(int this, int a2, int ArgList)
   if ( v4 == 6 )
   {
     v5 = sub_421B20(*(_DWORD *)(a2 + 108));
-    v6 = *(_DWORD *)(this + 64) - *(_DWORD *)(a2 + 88);
+    v6 = *(_DWORD *)(self + 64) - *(_DWORD *)(a2 + 88);
     v7 = v5 - 2;
     if ( v5 == 2 )
       v8 = 1;
@@ -37,8 +37,8 @@ char __thiscall sub_426060(int this, int a2, int ArgList)
     {
       v10 = v9 + 1;
     }
-    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, _DWORD, int))(**(_DWORD **)(this + 52) + 48))(
-                    *(_DWORD *)(this + 52),
+    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, _DWORD, int))(**(_DWORD **)(self + 52) + 48))(
+                    *(_DWORD *)(self + 52),
                     a2,
                     *(_DWORD *)(a2 + 124),
                     v10);
@@ -56,13 +56,13 @@ char __thiscall sub_426060(int this, int a2, int ArgList)
   }
   if ( v4 == 3 )
   {
-    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, int))(**(_DWORD **)(this + 52) + 44))(
-                    *(_DWORD *)(this + 52),
+    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
+                    *(_DWORD *)(self + 52),
                     a2,
                     ArgList);
     if ( (_BYTE)v11 )
     {
-      v11 = *(_DWORD *)(this + 76);
+      v11 = *(_DWORD *)(self + 76);
       if ( v11 != a2 )
       {
         if ( v11 )
@@ -71,21 +71,21 @@ char __thiscall sub_426060(int this, int a2, int ArgList)
           if ( v12 )
             sub_421280(v12);
         }
-        *(_DWORD *)(this + 76) = a2;
+        *(_DWORD *)(self + 76) = a2;
         v13 = *(const char ***)(a2 + 112);
         if ( v13 )
           sub_4211E0(v13, 95);
         LOBYTE(v11) = (unsigned __int8)sub_4229D0("UI: button %d clicked editbox %s", ArgList, (const char *)a2);
       }
-      *(_DWORD *)(this + 76) = a2;
+      *(_DWORD *)(self + 76) = a2;
     }
   }
   else
   {
 LABEL_23:
     sub_4229D0("UI: button %d clicked %s", ArgList, (const char *)a2);
-    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, int))(**(_DWORD **)(this + 52) + 44))(
-                    *(_DWORD *)(this + 52),
+    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
+                    *(_DWORD *)(self + 52),
                     a2,
                     ArgList);
     if ( (_BYTE)v11 )

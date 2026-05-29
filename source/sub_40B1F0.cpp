@@ -1,5 +1,5 @@
 //----- (0040B1F0) --------------------------------------------------------
-void __thiscall sub_40B1F0(const char *this, char *ArgList, float *a3, float *a4)
+void __thiscall sub_40B1F0(const char *self, char *ArgList, float *a3, float *a4)
 {
   const char *v5; // esi
   int i; // edi
@@ -22,8 +22,8 @@ void __thiscall sub_40B1F0(const char *this, char *ArgList, float *a3, float *a4
       if ( v7 == 46 || v7 == 45 || !v7 )
         break;
     }
-    v8 = this + 16;
-    sub_40A120(v5[i] != 0, "%s = %s, expected [integer, integer], see %s", ArgList, v5, this + 16);
+    v8 = self + 16;
+    sub_40A120(v5[i] != 0, "%s = %s, expected [integer, integer], see %s", ArgList, v5, self + 16);
     if ( v5[i] )
     {
       *a3 = atof(&v5[i]);

@@ -1,5 +1,5 @@
 //----- (00403620) --------------------------------------------------------
-char *__thiscall sub_403620(_DWORD *this, char *String2)
+char *__thiscall sub_403620(_DWORD *self, char *String2)
 {
   int v3; // edi
   char *v4; // ebx
@@ -13,7 +13,7 @@ char *__thiscall sub_403620(_DWORD *this, char *String2)
   int v12; // ecx
 
   v3 = 0;
-  if ( (int)this[10] <= 0 )
+  if ( (int)self[10] <= 0 )
   {
 LABEL_4:
     v5 = (char *)operator new(0x6Cu);
@@ -21,33 +21,33 @@ LABEL_4:
       v4 = sub_402C60(v5, String2);
     else
       v4 = 0;
-    v6 = this[11];
-    v7 = this[10] + 1;
-    this[10] = v7;
+    v6 = self[11];
+    v7 = self[10] + 1;
+    self[10] = v7;
     if ( v7 > v6 )
     {
-      v8 = (void *)this[9];
+      v8 = (void *)self[9];
       v9 = v6 + 8;
-      this[11] = v9;
+      self[11] = v9;
       v10 = sub_488DD7(v8, 4 * v9);
       if ( v10 )
       {
-        v11 = this[10];
-        v12 = this[11] - v11;
-        this[9] = v10;
+        v11 = self[10];
+        v12 = self[11] - v11;
+        self[9] = v10;
         memset((void *)(v10 + 4 * v11), 0, 4 * v12);
       }
     }
-    *(_DWORD *)(this[9] + 4 * this[10] - 4) = v4;
+    *(_DWORD *)(self[9] + 4 * self[10] - 4) = v4;
   }
   else
   {
     while ( 1 )
     {
-      v4 = *(char **)(this[9] + 4 * v3);
+      v4 = *(char **)(self[9] + 4 * v3);
       if ( !_strcmpi(v4, String2) )
         break;
-      if ( ++v3 >= this[10] )
+      if ( ++v3 >= self[10] )
         goto LABEL_4;
     }
   }

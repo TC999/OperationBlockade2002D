@@ -1,5 +1,5 @@
 //----- (0044ED60) --------------------------------------------------------
-unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWORD *a4)
+unsigned int __thiscall sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD *a4)
 {
   char *v4; // esi
   unsigned int v5; // edi
@@ -44,10 +44,10 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
   char *v46; // [esp+24h] [ebp+8h]
   _DWORD *v47; // [esp+28h] [ebp+Ch]
 
-  v4 = (char *)this[2];
+  v4 = (char *)self[2];
   v5 = a3;
-  v39 = this;
-  if ( (this[3] - (int)v4) / 40 >= a3 )
+  v39 = self;
+  if ( (self[3] - (int)v4) / 40 >= a3 )
   {
     result = (unsigned int)((unsigned __int64)(1717986919LL * (v4 - a2)) >> 32) >> 31;
     if ( (v4 - a2) / 40 >= a3 )
@@ -56,7 +56,7 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
         return result;
       v30 = 40 * a3;
       v31 = &v4[-40 * a3];
-      v32 = this[2];
+      v32 = self[2];
       v43 = 40 * a3;
       if ( v31 != v4 )
       {
@@ -67,10 +67,10 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
           v32 += 40;
         }
         while ( v31 != v4 );
-        this = v39;
+        self = v39;
         v30 = 40 * a3;
       }
-      v33 = (_DWORD *)this[2];
+      v33 = (_DWORD *)self[2];
       v34 = (char *)v33 - v30;
       if ( a2 != (char *)v33 - v30 )
       {
@@ -94,7 +94,7 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
             break;
           v33 = v45;
         }
-        this = v39;
+        self = v39;
         v30 = v43;
       }
       result = (unsigned int)&a2[v30];
@@ -130,9 +130,9 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
           v44 += 40;
         }
         while ( v22 != v4 );
-        this = v39;
+        self = v39;
       }
-      v23 = this[2];
+      v23 = self[2];
       v25 = v5 - (v23 - (int)a2) / 40;
       v24 = v25 == 0;
       v26 = v25;
@@ -146,9 +146,9 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
           --v28;
         }
         while ( v28 );
-        this = v39;
+        self = v39;
       }
-      result = this[2];
+      result = self[2];
       v47 = (_DWORD *)result;
       if ( a2 == (char *)result )
         goto LABEL_49;
@@ -167,14 +167,14 @@ unsigned int __thiscall sub_44ED60(_DWORD *this, char *a2, unsigned int a3, _DWO
       }
       while ( v29 - 4 != v47 );
     }
-    this = v39;
+    self = v39;
 LABEL_49:
     v30 = v43;
 LABEL_50:
-    this[2] += v30;
+    self[2] += v30;
     return result;
   }
-  v6 = this[1];
+  v6 = self[1];
   if ( !v6 || (v7 = (int)&v4[-v6] / 40, a3 >= v7) )
     v7 = a3;
   if ( v6 )

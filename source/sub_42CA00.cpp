@@ -1,8 +1,8 @@
 //----- (0042CA00) --------------------------------------------------------
-void __thiscall sub_42CA00(_BYTE *this)
+void __thiscall sub_42CA00(_BYTE *self)
 {
-  this[8] = HIBYTE(this);
-  *((_DWORD *)this + 3) = 0;
-  *((_DWORD *)this + 4) = 0;
-  *((_DWORD *)this + 5) = 0;
+  self[8] = HIBYTE(self);
+  *((_DWORD *)self + 3) = 0;
+  *((_DWORD *)self + 4) = 0;
+  *((_DWORD *)self + 5) = 0;
 }

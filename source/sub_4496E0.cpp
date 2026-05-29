@@ -1,5 +1,5 @@
 //----- (004496E0) --------------------------------------------------------
-char *__thiscall sub_4496E0(char *this, char *a2)
+char *__thiscall sub_4496E0(char *self, char *a2)
 {
   char *v2; // ebp
   char *v3; // edi
@@ -35,9 +35,9 @@ char *__thiscall sub_4496E0(char *this, char *a2)
   int v34; // [esp+78h] [ebp-4h]
 
   v2 = a2;
-  v3 = this;
-  v27 = this;
-  sub_468FF0(this, (int)a2);
+  v3 = self;
+  v27 = self;
+  sub_468FF0(self, (int)a2);
   v4 = v3 + 304;
   v34 = 0;
   v3[304] = (char)a2;

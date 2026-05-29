@@ -1,5 +1,5 @@
 //----- (00465D90) --------------------------------------------------------
-int __thiscall sub_465D90(_DWORD *this, int a2)
+int __thiscall sub_465D90(_DWORD *self, int a2)
 {
   int result; // eax
   int v3; // edx
@@ -11,10 +11,10 @@ int __thiscall sub_465D90(_DWORD *this, int a2)
   result = *(__int16 *)(*(_DWORD *)(a2 + 16) + 6);
   if ( result >= 0 )
   {
-    v3 = this[6];
+    v3 = self[6];
     if ( v3 )
     {
-      if ( result < (unsigned int)((this[7] - v3) >> 2) )
+      if ( result < (unsigned int)((self[7] - v3) >> 2) )
         return (*(int (__thiscall **)(_DWORD, int))(**(_DWORD **)(v3 + 4 * result) + 28))(
                  *(_DWORD *)(v3 + 4 * result),
                  a2);

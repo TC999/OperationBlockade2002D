@@ -1,5 +1,5 @@
 //----- (004621B0) --------------------------------------------------------
-void __thiscall sub_4621B0(int *this)
+void __thiscall sub_4621B0(int *self)
 {
   int v1; // ebx
   int *v2; // edi
@@ -12,11 +12,11 @@ void __thiscall sub_4621B0(int *this)
   int v9; // eax
   int v10; // [esp+8h] [ebp-4h]
 
-  v1 = this[130];
+  v1 = self[130];
   v10 = 0;
   if ( v1 > 0 )
   {
-    v2 = this + 223;
+    v2 = self + 223;
     v3 = v1;
     do
     {
@@ -39,7 +39,7 @@ void __thiscall sub_4621B0(int *this)
   v7 = 0;
   if ( v1 > 0 )
   {
-    v8 = this + 223;
+    v8 = self + 223;
     do
     {
       if ( !*v8 )
@@ -57,6 +57,6 @@ LABEL_16:
       ++v7;
       v8 += 88;
     }
-    while ( v7 < this[130] );
+    while ( v7 < self[130] );
   }
 }

@@ -1,5 +1,5 @@
 //----- (0046FD22) --------------------------------------------------------
-int __thiscall sub_46FD22(_DWORD *this)
+int __thiscall sub_46FD22(_DWORD *self)
 {
   _DWORD *v2; // edx
   _DWORD *v3; // ecx
@@ -54,13 +54,13 @@ int __thiscall sub_46FD22(_DWORD *this)
   char *v53; // [esp+70h] [ebp-10h]
   int v54; // [esp+7Ch] [ebp-4h]
 
-  if ( *((_BYTE *)this + 8) != 5 )
+  if ( *((_BYTE *)self + 8) != 5 )
     return -2147467259;
-  v2 = (_DWORD *)this[1];
+  v2 = (_DWORD *)self[1];
   if ( v2[2] != 1 )
     return -2147467259;
-  v3 = (_DWORD *)*this;
-  if ( *(_DWORD *)(*this + 8) != 1 )
+  v3 = (_DWORD *)*self;
+  if ( *(_DWORD *)(*self + 8) != 1 )
     return -2147467259;
   v4 = v3[1044];
   v5 = v2[1044];
@@ -74,16 +74,16 @@ int __thiscall sub_46FD22(_DWORD *this)
   if ( v4 > 1 && (v4 & 1) != 0 )
   {
     v3[1044] = v4 & 0xFFFFFFFE;
-    *(_DWORD *)(*this + 4188) -= *(_DWORD *)(*this + 4192);
+    *(_DWORD *)(*self + 4188) -= *(_DWORD *)(*self + 4192);
   }
-  v7 = (_DWORD *)(*this + 4180);
+  v7 = (_DWORD *)(*self + 4180);
   if ( *v7 > 1u )
     *v7 &= ~1u;
-  if ( (*((_BYTE *)this + 10) & 8) != 0 )
+  if ( (*((_BYTE *)self + 10) & 8) != 0 )
     goto LABEL_45;
-  v8 = *this;
-  v9 = *(_DWORD *)(*this + 4);
-  if ( v9 != *(_DWORD *)(this[1] + 4) || *(_DWORD *)(v8 + 4176) < 2u || *(_DWORD *)(v8 + 4180) < 2u )
+  v8 = *self;
+  v9 = *(_DWORD *)(*self + 4);
+  if ( v9 != *(_DWORD *)(self[1] + 4) || *(_DWORD *)(v8 + 4176) < 2u || *(_DWORD *)(v8 + 4180) < 2u )
     goto LABEL_45;
   if ( v9 <= 28 )
   {
@@ -92,25 +92,25 @@ int __thiscall sub_46FD22(_DWORD *this)
       switch ( v9 )
       {
         case 21:
-          v10 = sub_46E96A(this);
+          v10 = sub_46E96A(self);
           goto LABEL_43;
         case 22:
-          v10 = sub_46EAAE(this);
+          v10 = sub_46EAAE(self);
           goto LABEL_43;
         case 23:
-          v10 = sub_46EBB4(this);
+          v10 = sub_46EBB4(self);
           goto LABEL_43;
         case 24:
-          v10 = sub_46ECF4(this);
+          v10 = sub_46ECF4(self);
           goto LABEL_43;
         case 25:
-          v10 = sub_46EE09(this);
+          v10 = sub_46EE09(self);
           goto LABEL_43;
         case 26:
-          v10 = sub_46EF3E(this);
+          v10 = sub_46EF3E(self);
           goto LABEL_43;
         case 27:
-          v10 = sub_46F081(this);
+          v10 = sub_46F081(self);
           goto LABEL_43;
         default:
           goto LABEL_45;
@@ -121,7 +121,7 @@ int __thiscall sub_46FD22(_DWORD *this)
   v11 = v9 - 29;
   if ( !v11 )
   {
-    v10 = sub_46F246(this);
+    v10 = sub_46F246(self);
 LABEL_43:
     if ( v10 >= 0 )
       return 0;
@@ -130,7 +130,7 @@ LABEL_43:
   v12 = v11 - 1;
   if ( !v12 )
   {
-    v10 = sub_46F37E(this);
+    v10 = sub_46F37E(self);
     goto LABEL_43;
   }
   v13 = v12 - 10;
@@ -143,24 +143,24 @@ LABEL_43:
       if ( !v15 )
       {
 LABEL_40:
-        v10 = sub_46F1AB(this);
+        v10 = sub_46F1AB(self);
         goto LABEL_43;
       }
       v16 = v15 - 1;
       if ( !v16 )
       {
-        v10 = sub_46F497(this);
+        v10 = sub_46F497(self);
         goto LABEL_43;
       }
       if ( v16 == 1 )
       {
-        v10 = sub_46F5CF(this);
+        v10 = sub_46F5CF(self);
         goto LABEL_43;
       }
     }
   }
 LABEL_45:
-  v18 = *(_DWORD *)(this[1] + 4176);
+  v18 = *(_DWORD *)(self[1] + 4176);
   v19 = (char *)operator new(16 * v18);
   v45 = v19;
   v54 = 0;
@@ -176,8 +176,8 @@ LABEL_45:
   v54 = -1;
   if ( !v50 )
     return -2147024882;
-  v20 = *(_DWORD *)(*this + 4176);
-  if ( *(_DWORD *)(*this + 4180) == 1 )
+  v20 = *(_DWORD *)(*self + 4176);
+  if ( *(_DWORD *)(*self + 4180) == 1 )
   {
     v21 = (char *)operator new(16 * v20);
     v45 = v21;
@@ -210,7 +210,7 @@ LABEL_45:
     {
       v25 = 0;
     }
-    v26 = *(_DWORD *)(*this + 4176);
+    v26 = *(_DWORD *)(*self + 4176);
     v54 = -1;
     v47 = v25;
     v52 = v25;
@@ -219,7 +219,7 @@ LABEL_45:
   v53 = v22;
   if ( v47 )
   {
-    if ( *(_DWORD *)(*this + 4176) == 1 )
+    if ( *(_DWORD *)(*self + 4176) == 1 )
     {
       v45 = v52;
       v28 = v53;
@@ -230,7 +230,7 @@ LABEL_45:
       v28 = v53 + 16;
     }
     v46 = v28;
-    v29 = *(_DWORD *)(this[1] + 4180) == 0;
+    v29 = *(_DWORD *)(self[1] + 4180) == 0;
     v51 = 0;
     if ( !v29 )
     {
@@ -238,10 +238,10 @@ LABEL_45:
       {
         v30 = v52;
         v31 = 2 * v51;
-        (*(void (__thiscall **)(_DWORD, unsigned int, _DWORD, char *))(*(_DWORD *)*this + 4))(*this, 2 * v51, 0, v52);
+        (*(void (__thiscall **)(_DWORD, unsigned int, _DWORD, char *))(*(_DWORD *)*self + 4))(*self, 2 * v51, 0, v52);
         if ( v53 != v30 )
-          (*(void (__thiscall **)(_DWORD, int, _DWORD, char *))(*(_DWORD *)*this + 4))(*this, v31 + 1, 0, v53);
-        v32 = this[1];
+          (*(void (__thiscall **)(_DWORD, int, _DWORD, char *))(*(_DWORD *)*self + 4))(*self, v31 + 1, 0, v53);
+        v32 = self[1];
         v49 = 0;
         if ( *(_DWORD *)(v32 + 4176) )
         {
@@ -264,11 +264,11 @@ LABEL_45:
             *(float *)v37 = v36[2];
             *((float *)v37 + 1) = v36[3];
           }
-          while ( v38 < *(_DWORD *)(this[1] + 4176) );
+          while ( v38 < *(_DWORD *)(self[1] + 4176) );
         }
-        (*(void (__thiscall **)(_DWORD, unsigned int, _DWORD, char *))(*(_DWORD *)this[1] + 8))(this[1], v51++, 0, v50);
+        (*(void (__thiscall **)(_DWORD, unsigned int, _DWORD, char *))(*(_DWORD *)self[1] + 8))(self[1], v51++, 0, v50);
       }
-      while ( v51 < *(_DWORD *)(this[1] + 4180) );
+      while ( v51 < *(_DWORD *)(self[1] + 4180) );
     }
     sub_4885A6(v47);
     v27 = 0;

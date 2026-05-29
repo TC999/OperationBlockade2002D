@@ -1,5 +1,5 @@
 //----- (00412620) --------------------------------------------------------
-void __thiscall sub_412620(void *this, int a2)
+void __thiscall sub_412620(void *self, int a2)
 {
   int v2; // ebx
   unsigned int v3; // edi
@@ -46,12 +46,12 @@ void __thiscall sub_412620(void *this, int a2)
 
   v2 = a2;
   v3 = *(_DWORD *)(a2 + 16);
-  v4 = (int)this;
+  v4 = (int)self;
   v43 = v3;
   v5 = *(_DWORD *)(v3 + 2);
   if ( (v5 & 1) != 0 )
   {
-    v6 = sub_411B60((int)this, *(_DWORD *)(a2 + 4));
+    v6 = sub_411B60((int)self, *(_DWORD *)(a2 + 4));
     v42[0] = v6;
     if ( v6 )
     {
@@ -92,7 +92,7 @@ LABEL_16:
         sub_40EB70(*(unsigned int **)(v11 + 8));
         sub_40EB70((unsigned int *)v11);
 LABEL_17:
-        v4 = (int)this;
+        v4 = (int)self;
         v6 = (_DWORD *)v42[0];
         v2 = a2;
       }
@@ -110,7 +110,7 @@ LABEL_50:
     sub_4129B0(v2);
     goto LABEL_51;
   }
-  v15 = sub_411B60((int)this, *(_DWORD *)(a2 + 4));
+  v15 = sub_411B60((int)self, *(_DWORD *)(a2 + 4));
   if ( !v15 )
     sub_4113D0(v2);
   v16 = *(_DWORD *)(v3 + 2);
@@ -198,11 +198,11 @@ LABEL_50:
       v33 += 4;
       if ( v31 >= v30 )
       {
-        v4 = (int)this;
+        v4 = (int)self;
         goto LABEL_46;
       }
     }
-    v4 = (int)this;
+    v4 = (int)self;
     v40 = *(_DWORD *)v33;
     v15[2066] = v32 + 1;
     sub_4129B0(v40);

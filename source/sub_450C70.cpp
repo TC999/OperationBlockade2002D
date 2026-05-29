@@ -1,5 +1,5 @@
 //----- (00450C70) --------------------------------------------------------
-void __thiscall sub_450C70(_DWORD *this, int a2)
+void __thiscall sub_450C70(_DWORD *self, int a2)
 {
   unsigned int v2; // eax
   int v3; // ecx
@@ -16,10 +16,10 @@ void __thiscall sub_450C70(_DWORD *this, int a2)
     if ( *(unsigned __int16 *)(a2 + 12) >= 0xFF01u && *(unsigned __int16 *)(a2 + 12) <= 0xFF03u )
     {
       v6 = *(_DWORD *)(a2 + 16);
-      if ( *(_WORD *)(a2 + 12) == 0xFF02 && !*(_DWORD *)(this[58] + 52) )
+      if ( *(_WORD *)(a2 + 12) == 0xFF02 && !*(_DWORD *)(self[58] + 52) )
       {
         v9 = (const char *)(*(_DWORD *)(v6 + 6) + 12);
-        v7 = sub_436A90(this[56]);
+        v7 = sub_436A90(self[56]);
         sub_421190(v7, "%s left the game", v9);
       }
       v8 = *(_DWORD *)(v6 + 6);
@@ -32,7 +32,7 @@ void __thiscall sub_450C70(_DWORD *this, int a2)
   }
   else if ( v2 == 2 )
   {
-    v3 = this[56];
+    v3 = self[56];
     v4 = *(_DWORD *)(a2 + 16);
     if ( v3 )
     {
@@ -42,6 +42,6 @@ void __thiscall sub_450C70(_DWORD *this, int a2)
   }
   else if ( v2 == 1 )
   {
-    this[6] = *(_DWORD *)(*(_DWORD *)(a2 + 16) + 6);
+    self[6] = *(_DWORD *)(*(_DWORD *)(a2 + 16) + 6);
   }
 }

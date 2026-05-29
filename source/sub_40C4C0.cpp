@@ -1,5 +1,5 @@
 //----- (0040C4C0) --------------------------------------------------------
-_DWORD *__thiscall sub_40C4C0(_DWORD *this, _DWORD *a2)
+_DWORD *__thiscall sub_40C4C0(_DWORD *self, _DWORD *a2)
 {
   int v3; // ebp
   int v4; // eax
@@ -18,20 +18,20 @@ _DWORD *__thiscall sub_40C4C0(_DWORD *this, _DWORD *a2)
   _DWORD v17[4]; // [esp+20h] [ebp-10h] BYREF
 
   v3 = 0;
-  v4 = this[4];
-  v5 = this + 69;
-  this[71] = 0;
-  this[70] = 0;
-  v16 = this + 69;
-  this[69] = 0;
+  v4 = self[4];
+  v5 = self + 69;
+  self[71] = 0;
+  self[70] = 0;
+  v16 = self + 69;
+  self[69] = 0;
   if ( v4 )
   {
     v14 = 0;
-    if ( (*(int (__stdcall **)(_DWORD, int, _DWORD *))(*(_DWORD *)this[4] + 36))(this[4], 16, v17) )
+    if ( (*(int (__stdcall **)(_DWORD, int, _DWORD *))(*(_DWORD *)self[4] + 36))(self[4], 16, v17) )
     {
       v14 = 1;
-      v6 = (*(int (__stdcall **)(_DWORD))(*(_DWORD *)this[4] + 28))(this[4]);
-      this[72] = 0;
+      v6 = (*(int (__stdcall **)(_DWORD))(*(_DWORD *)self[4] + 28))(self[4]);
+      self[72] = 0;
       *v5 = 0;
       v5[1] = 0;
       v5[2] = 0;
@@ -46,12 +46,12 @@ _DWORD *__thiscall sub_40C4C0(_DWORD *this, _DWORD *a2)
     }
     do
     {
-      v8 = *((_BYTE *)this + v3 + 288);
+      v8 = *((_BYTE *)self + v3 + 288);
       LOBYTE(v15[0]) = *((_BYTE *)&v17[3] + v3) >> 7;
       if ( LOBYTE(v15[0]) != v8 )
       {
-        *((_BYTE *)this + v3 + 288) = v15[0];
-        v9 = this[1];
+        *((_BYTE *)self + v3 + 288) = v15[0];
+        v9 = self[1];
         if ( v9 )
         {
           v10 = v15[0];
@@ -73,8 +73,8 @@ _DWORD *__thiscall sub_40C4C0(_DWORD *this, _DWORD *a2)
       v11 = v17[1];
       v12 = v17[2];
       *v5 = v17[0];
-      this[70] = v11;
-      this[71] = v12;
+      self[70] = v11;
+      self[71] = v12;
     }
   }
   result = a2;

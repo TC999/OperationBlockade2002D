@@ -1,5 +1,5 @@
 //----- (004213B0) --------------------------------------------------------
-int __thiscall sub_4213B0(int this)
+int __thiscall sub_4213B0(int self)
 {
   int v2; // eax
   _DWORD *v3; // esi
@@ -11,13 +11,13 @@ int __thiscall sub_4213B0(int this)
   void *v9; // edi
 
   v2 = 0;
-  v3 = (_DWORD *)(*(_DWORD *)(this + 48) + 36);
-  v4 = *(_DWORD *)(*(_DWORD *)(this + 48) + 40);
+  v3 = (_DWORD *)(*(_DWORD *)(self + 48) + 36);
+  v4 = *(_DWORD *)(*(_DWORD *)(self + 48) + 40);
   if ( v4 > 0 )
   {
     v5 = (_DWORD *)*v3;
     v6 = (_DWORD *)*v3;
-    while ( *v6 != this )
+    while ( *v6 != self )
     {
       ++v2;
       ++v6;
@@ -33,8 +33,8 @@ int __thiscall sub_4213B0(int this)
     }
   }
 LABEL_8:
-  result = sub_4885A6(*(LPVOID *)(this + 8));
-  v9 = *(void **)(this + 44);
+  result = sub_4885A6(*(LPVOID *)(self + 8));
+  v9 = *(void **)(self + 44);
   if ( v9 )
     return sub_409A00(dword_520970, v9);
   return result;

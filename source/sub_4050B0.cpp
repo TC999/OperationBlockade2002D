@@ -1,5 +1,5 @@
 //----- (004050B0) --------------------------------------------------------
-int __thiscall sub_4050B0(_DWORD *this)
+int __thiscall sub_4050B0(_DWORD *self)
 {
   _DWORD *v1; // edi
   int result; // eax
@@ -14,12 +14,12 @@ int __thiscall sub_4050B0(_DWORD *this)
   int v11; // [esp+8h] [ebp-Ch]
   int v12; // [esp+Ch] [ebp-8h]
 
-  v1 = this;
+  v1 = self;
   v12 = 0;
-  result = this[7];
+  result = self[7];
   if ( result > 0 )
   {
-    v3 = (int *)(this[8] + 12);
+    v3 = (int *)(self[8] + 12);
     do
     {
       v4 = v1[1];
@@ -59,7 +59,7 @@ LABEL_6:
               ++v11;
             }
             while ( v11 < *v3 );
-            v1 = this;
+            v1 = self;
           }
         }
       }

@@ -1,5 +1,5 @@
 //----- (0043C290) --------------------------------------------------------
-char __thiscall sub_43C290(int this, int a2)
+char __thiscall sub_43C290(int self, int a2)
 {
   double v3; // st7
   int v4; // ecx
@@ -11,24 +11,24 @@ char __thiscall sub_43C290(int this, int a2)
   int v11; // [esp+8h] [ebp-108h]
   char v12[260]; // [esp+Ch] [ebp-104h] BYREF
 
-  v3 = *(float *)(this + 116) - *(float *)(dword_520970 + 68);
-  *(float *)(this + 116) = v3;
+  v3 = *(float *)(self + 116) - *(float *)(dword_520970 + 68);
+  *(float *)(self + 116) = v3;
   if ( v3 < 0.0 )
   {
-    v4 = *(_DWORD *)(this + 44);
-    *(_DWORD *)(this + 116) = 0x40000000;
-    strcpy(v12, *(const char **)(this + 4 * *(_DWORD *)(v4 + 124) + 48));
-    v5 = sub_40FD50((struct _RTL_CRITICAL_SECTION *)dword_4F5CC4, (char **)(this + 48), 16);
-    v6 = *(_DWORD *)(this + 44);
-    *(_DWORD *)(this + 112) = v5;
+    v4 = *(_DWORD *)(self + 44);
+    *(_DWORD *)(self + 116) = 0x40000000;
+    strcpy(v12, *(const char **)(self + 4 * *(_DWORD *)(v4 + 124) + 48));
+    v5 = sub_40FD50((struct _RTL_CRITICAL_SECTION *)dword_4F5CC4, (char **)(self + 48), 16);
+    v6 = *(_DWORD *)(self + 44);
+    *(_DWORD *)(self + 112) = v5;
     v7 = 0;
     *(_DWORD *)(v6 + 132) = v5;
     v11 = 0;
-    *(_BYTE *)(*(_DWORD *)(this + 44) + 136) = 1;
-    v8 = *(_DWORD *)(this + 112);
+    *(_BYTE *)(*(_DWORD *)(self + 44) + 136) = 1;
+    v8 = *(_DWORD *)(self + 112);
     if ( v8 > 0 )
     {
-      v10 = (const char **)(this + 48);
+      v10 = (const char **)(self + 48);
       do
       {
         if ( !strcmp(*v10, v12) )
@@ -38,7 +38,7 @@ char __thiscall sub_43C290(int this, int a2)
       }
       while ( v7 < v8 );
     }
-    *(_DWORD *)(*(_DWORD *)(this + 44) + 124) = v11;
+    *(_DWORD *)(*(_DWORD *)(self + 44) + 124) = v11;
   }
-  return sub_428620((_DWORD *)this, a2);
+  return sub_428620((_DWORD *)self, a2);
 }

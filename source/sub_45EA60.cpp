@@ -1,5 +1,5 @@
 //----- (0045EA60) --------------------------------------------------------
-int __thiscall sub_45EA60(_DWORD *this)
+int __thiscall sub_45EA60(_DWORD *self)
 {
   int v1; // edx
   int result; // eax
@@ -7,11 +7,11 @@ int __thiscall sub_45EA60(_DWORD *this)
   int v4; // edx
   int v5; // esi
 
-  v1 = this[124];
+  v1 = self[124];
   result = 0;
   if ( v1 >= 0 )
   {
-    v3 = (int *)this[127];
+    v3 = (int *)self[127];
     v4 = v1 + 1;
     do
     {

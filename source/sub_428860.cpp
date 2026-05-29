@@ -1,5 +1,5 @@
 //----- (00428860) --------------------------------------------------------
-_DWORD *__thiscall sub_428860(_DWORD *this, char *FileName)
+_DWORD *__thiscall sub_428860(_DWORD *self, char *FileName)
 {
   _DWORD *v2; // ebx
   _DWORD *v3; // eax
@@ -19,7 +19,7 @@ _DWORD *__thiscall sub_428860(_DWORD *this, char *FileName)
   char v20[1024]; // [esp+218h] [ebp-62Ch] BYREF
   int v21; // [esp+840h] [ebp-4h]
 
-  v2 = this;
+  v2 = self;
   v3 = operator new(0x128u);
   v4 = v3;
   v21 = 0;
@@ -113,7 +113,7 @@ _DWORD *__thiscall sub_428860(_DWORD *this, char *FileName)
         }
       }
       while ( (unsigned __int8)sub_429E70(v20, 1024) );
-      v2 = this;
+      v2 = self;
     }
     sub_429310(v4[65], v4[65] + 272 * v4[66]);
     sub_429310(v4[68], v4[68] + 272 * v4[69]);

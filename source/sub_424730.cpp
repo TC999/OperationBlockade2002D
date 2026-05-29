@@ -1,5 +1,5 @@
 //----- (00424730) --------------------------------------------------------
-int __thiscall sub_424730(_DWORD *this, int a2)
+int __thiscall sub_424730(_DWORD *self, int a2)
 {
   int v3; // ecx
   double v5; // st7
@@ -59,14 +59,14 @@ int __thiscall sub_424730(_DWORD *this, int a2)
   int v59; // [esp+2Ch] [ebp-4h]
   int v60; // [esp+2Ch] [ebp-4h]
 
-  v3 = this[20];
+  v3 = self[20];
   if ( v3 )
   {
     sub_41D0C0(v3, *(float *)(dword_520970 + 68));
     v50 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
-    sub_41CFD0(this[20], v50);
+    sub_41CFD0(self[20], v50);
   }
-  if ( !this[13] )
+  if ( !self[13] )
     return sub_428620(a2);
   v51 = *(float *)(dword_520970 + 24);
   v5 = sub_408F80(0);
@@ -80,7 +80,7 @@ int __thiscall sub_424730(_DWORD *this, int a2)
     v7 = 0.0;
   else
     v7 = v6 / v52;
-  v8 = (_DWORD *)this[14];
+  v8 = (_DWORD *)self[14];
   v9 = 0;
   v10 = 0;
   v53 = dword_5209F4;
@@ -90,86 +90,86 @@ int __thiscall sub_424730(_DWORD *this, int a2)
     v9 = -v8[14];
     v10 = -v8[15];
   }
-  v11 = (double)(int)this[16];
-  v57 = (__int64)((double)(int)this[15] + v56);
-  this[15] = v57;
+  v11 = (double)(int)self[16];
+  v57 = (__int64)((double)(int)self[15] + v56);
+  self[15] = v57;
   v12 = (__int64)(v11 + v7);
-  this[16] = v12;
+  self[16] = v12;
   if ( v57 >= v9 )
   {
     if ( v57 > v53 )
-      this[15] = v53;
+      self[15] = v53;
   }
   else
   {
-    this[15] = v9;
+    self[15] = v9;
   }
   if ( (int)v12 >= v10 )
   {
     if ( (int)v12 > v59 )
-      this[16] = v59;
+      self[16] = v59;
   }
   else
   {
-    this[16] = v10;
+    self[16] = v10;
   }
   if ( v8 )
   {
     v13 = v8[44];
     if ( v13 )
     {
-      v14 = this[15];
+      v14 = self[15];
       v56 = *(float *)&v14;
-      v48 = (float)(this[16] + v8[15]);
+      v48 = (float)(self[16] + v8[15]);
       v47 = (float)(v14 + v8[14]);
-      v46 = (float)(int)this[16];
+      v46 = (float)(int)self[16];
       v45 = (float)v14;
       sub_413090(v13, v45, v46, v47, v48);
     }
   }
   v15 = 0;
-  v60 = this[17];
-  v16 = *(_DWORD *)(this[13] + 28);
-  this[17] = 0;
+  v60 = self[17];
+  v16 = *(_DWORD *)(self[13] + 28);
+  self[17] = 0;
   v58 = v16;
   for ( i = 0; i < v58; ++i )
   {
     v17 = sub_424390(v15);
     if ( *(_BYTE *)(v17 + 44) )
     {
-      v18 = this[15];
+      v18 = self[15];
       v19 = *(_DWORD *)(v17 + 68);
       if ( v18 >= v19 )
       {
-        v20 = this[16];
+        v20 = self[16];
         v21 = *(_DWORD *)(v17 + 72);
         if ( v20 >= v21 && v18 < v19 + *(_DWORD *)(v17 + 76) && v20 < v21 + *(_DWORD *)(v17 + 80) )
         {
-          v22 = this[17];
+          v22 = self[17];
           if ( !v22 || *(float *)(v17 + 64) > (double)*(float *)(v22 + 64) )
-            this[17] = v17;
+            self[17] = v17;
         }
       }
     }
     v16 = v58;
     v15 = i + 1;
   }
-  if ( this[17] != v60 )
+  if ( self[17] != v60 )
   {
-    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)this[13] + 52))(this[13], this[17]);
-    if ( !this[18] )
+    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)self[13] + 52))(self[13], self[17]);
+    if ( !self[18] )
     {
-      v23 = this[17];
+      v23 = self[17];
       if ( v23 )
       {
         v24 = *(_DWORD *)(v23 + 148);
         v25 = *(_DWORD *)(v23 + 156);
         if ( v24 != v25 && v24 && v25 && *(_BYTE *)(v23 + 45) && *(_BYTE *)(v23 + 44) )
         {
-          sub_41CF00(this[21]);
+          sub_41CF00(self[21]);
           v49 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
-          sub_41CFD0(this[21], v49);
-          sub_41CD90(this[21]);
+          sub_41CFD0(self[21], v49);
+          sub_41CD90(self[21]);
         }
       }
     }
@@ -200,20 +200,20 @@ int __thiscall sub_424730(_DWORD *this, int a2)
       {
         if ( *(_BYTE *)(v29 + 45) )
         {
-          v34 = this[18];
-          if ( !v34 && this[17] == v29 )
+          v34 = self[18];
+          if ( !v34 && self[17] == v29 )
           {
             v33 = 2;
             goto LABEL_68;
           }
           if ( v34 == v29 )
           {
-            if ( this[17] == v29 )
+            if ( self[17] == v29 )
             {
               v33 = 1;
               goto LABEL_68;
             }
-            if ( v34 == v29 && this[17] != v29 )
+            if ( v34 == v29 && self[17] != v29 )
             {
               v33 = 2;
               goto LABEL_68;
@@ -226,14 +226,14 @@ int __thiscall sub_424730(_DWORD *this, int a2)
       {
         if ( v32 != 4 && v32 != 5 )
           goto LABEL_68;
-        v35 = this[17];
+        v35 = self[17];
         if ( v35 != v29 )
         {
 LABEL_67:
           v33 = *(_BYTE *)(v29 + 172) != 0;
           goto LABEL_68;
         }
-        v36 = this[18];
+        v36 = self[18];
         if ( v36 && v36 != v29 )
         {
           if ( v35 != v29 )
@@ -310,8 +310,8 @@ LABEL_68:
             }
             else
             {
-              (*(void (__thiscall **)(_DWORD, int, int, _DWORD, float))(*(_DWORD *)this[13] + 32))(
-                this[13],
+              (*(void (__thiscall **)(_DWORD, int, int, _DWORD, float))(*(_DWORD *)self[13] + 32))(
+                self[13],
                 v29,
                 v43,
                 *(_DWORD *)(*(_DWORD *)(v29 + 116) + 4 * v42),

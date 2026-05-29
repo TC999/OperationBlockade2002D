@@ -1,5 +1,5 @@
 //----- (00449C40) --------------------------------------------------------
-char __thiscall sub_449C40(char *this, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6, float a7, int a8)
+char __thiscall sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6, float a7, int a8)
 {
   int v9; // eax
   int v11; // esi
@@ -61,10 +61,10 @@ char __thiscall sub_449C40(char *this, int a2, _DWORD *a3, _DWORD *a4, char a5, 
   int v68; // [esp+70h] [ebp-4h]
   void *v69; // [esp+8Ch] [ebp+18h]
 
-  v9 = sub_449C10(this);
+  v9 = sub_449C10(self);
   if ( v9 == -1 )
     return 0;
-  v11 = (int)&this[136 * v9 + 32];
+  v11 = (int)&self[136 * v9 + 32];
   *(_DWORD *)(v11 + 4) = a2;
   *(_BYTE *)v11 = 1;
   *(_BYTE *)(v11 + 1) = 0;
@@ -161,7 +161,7 @@ char __thiscall sub_449C40(char *this, int a2, _DWORD *a3, _DWORD *a4, char a5, 
   *(_DWORD *)(v11 + 116) = *(_DWORD *)(*(_DWORD *)(v11 + 4) + 296);
   *(_BYTE *)(v11 + 124) = a6;
   *(_BYTE *)(v11 + 125) = a6;
-  v31 = sub_409960((_DWORD *)dword_520970, (int)this);
+  v31 = sub_409960((_DWORD *)dword_520970, (int)self);
   *(_DWORD *)(v11 + 120) = v31;
   v31[10] = v11;
   *(_DWORD *)(*(_DWORD *)(v11 + 120) + 28) = 0;
@@ -229,12 +229,12 @@ char __thiscall sub_449C40(char *this, int a2, _DWORD *a3, _DWORD *a4, char a5, 
     v36[1] = v57;
     v36[2] = v58;
     v37 = *(_DWORD *)(v11 + 132);
-    v38 = this;
-    sub_428680(this, v37);
+    v38 = self;
+    sub_428680(self, v37);
   }
   else
   {
-    v38 = this;
+    v38 = self;
   }
   if ( !a6
     && (*(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937))

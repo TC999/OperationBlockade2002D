@@ -1,5 +1,5 @@
 //----- (00411480) --------------------------------------------------------
-bool __thiscall sub_411480(_DWORD *this, _DWORD *a2, int a3, _WORD *a4, int a5, int a6, int a7)
+bool __thiscall sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int a6, int a7)
 {
   _DWORD *v7; // ebx
   _WORD *v9; // eax
@@ -44,8 +44,8 @@ bool __thiscall sub_411480(_DWORD *this, _DWORD *a2, int a3, _WORD *a4, int a5, 
   _WORD *v49; // [esp+34h] [ebp-14h]
   _DWORD v50[4]; // [esp+38h] [ebp-10h] BYREF
 
-  v7 = this;
-  if ( !this[6] )
+  v7 = self;
+  if ( !self[6] )
     return 0;
   v9 = a4;
   v10 = a5;
@@ -132,8 +132,8 @@ LABEL_36:
       v48 = v10;
       v28 = a2;
       v49 = (_WORD *)v22[2];
-      (*(void (__stdcall **)(_DWORD, _DWORD, unsigned int *, int, _DWORD, _DWORD *, int *, int))(*(_DWORD *)this[6] + 28))(
-        this[6],
+      (*(void (__stdcall **)(_DWORD, _DWORD, unsigned int *, int, _DWORD, _DWORD *, int *, int))(*(_DWORD *)self[6] + 28))(
+        self[6],
         *(_DWORD *)(*a2 + 8),
         &v48,
         1,
@@ -178,7 +178,7 @@ LABEL_33:
       v40 = (_DWORD *)*v32;
       v21 = a2;
       v40[v39 - 1] = v22;
-      v7 = this;
+      v7 = self;
 LABEL_34:
       ++v21;
       v41 = v45 == 1;

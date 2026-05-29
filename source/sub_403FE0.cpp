@@ -1,5 +1,5 @@
 //----- (00403FE0) --------------------------------------------------------
-char __thiscall sub_403FE0(void *this)
+char __thiscall sub_403FE0(void *self)
 {
   void *v1; // ebp
   bool v2; // bl
@@ -33,8 +33,8 @@ char __thiscall sub_403FE0(void *this)
   char v31[260]; // [esp+80h] [ebp-110h] BYREF
   int v32; // [esp+18Ch] [ebp-4h]
 
-  v1 = this;
-  v30 = this;
+  v1 = self;
+  v30 = self;
   v2 = (unsigned __int8)sub_405820(-267549883) && (unsigned __int8)sub_4057E0(&Buffer);
   v32 = 0;
   memset(v29, 0, sizeof(v29));

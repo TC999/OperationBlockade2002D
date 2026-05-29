@@ -1,5 +1,5 @@
 //----- (00406DF0) --------------------------------------------------------
-int __thiscall sub_406DF0(_DWORD *this, float a2)
+int __thiscall sub_406DF0(_DWORD *self, float a2)
 {
   int v2; // esi
   int v3; // ebx
@@ -10,8 +10,8 @@ int __thiscall sub_406DF0(_DWORD *this, float a2)
   int result; // eax
   _DWORD *v9; // ecx
 
-  v2 = this[6] + 96 * LODWORD(a2);
-  v3 = *(_DWORD *)(this[7] + 4) + 172 * LODWORD(a2);
+  v2 = self[6] + 96 * LODWORD(a2);
+  v3 = *(_DWORD *)(self[7] + 4) + 172 * LODWORD(a2);
   v4 = *(_BYTE *)(v2 + 84);
   if ( v4 && *(_DWORD *)(v2 + 88) )
   {
@@ -29,7 +29,7 @@ LABEL_11:
   }
   if ( !*(_DWORD *)(v2 + 88) )
   {
-    v5 = sub_409960(this);
+    v5 = sub_409960(self);
     *(_DWORD *)(v2 + 88) = v5;
     v6 = *(_DWORD *)(v3 + 52);
     if ( v6 )

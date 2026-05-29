@@ -1,5 +1,5 @@
 //----- (004697A0) --------------------------------------------------------
-char __thiscall sub_4697A0(int this)
+char __thiscall sub_4697A0(int self)
 {
   void *v2; // ebp
   int i; // edi
@@ -25,17 +25,17 @@ char __thiscall sub_4697A0(int this)
     }
     while ( _findnext(v2, (int)v8) != -1 );
   }
-  for ( i = 0; i < *(_DWORD *)(this + 24); ++i )
-    sub_469370(*(_DWORD *)(*(_DWORD *)(this + 20) + 4 * i), this);
-  qsort(*(void **)(this + 20), *(_DWORD *)(this + 24), 4u, sub_46A230);
-  for ( j = 0; j < *(_DWORD *)(this + 24); ++j )
-    *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(this + 20) + 4 * j) + 8) = j;
-  sub_46A340(this);
+  for ( i = 0; i < *(_DWORD *)(self + 24); ++i )
+    sub_469370(*(_DWORD *)(*(_DWORD *)(self + 20) + 4 * i), self);
+  qsort(*(void **)(self + 20), *(_DWORD *)(self + 24), 4u, sub_46A230);
+  for ( j = 0; j < *(_DWORD *)(self + 24); ++j )
+    *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 20) + 4 * j) + 8) = j;
+  sub_46A340(self);
   if ( byte_520A10 )
   {
-    for ( k = 0; k < *(_DWORD *)(this + 24); ++k )
+    for ( k = 0; k < *(_DWORD *)(self + 24); ++k )
     {
-      v6 = *(_DWORD *)(*(_DWORD *)(this + 20) + 4 * k);
+      v6 = *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * k);
       (*(void (__thiscall **)(int))(*(_DWORD *)v6 + 4))(v6);
     }
   }

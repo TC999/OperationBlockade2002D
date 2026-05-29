@@ -1,5 +1,5 @@
 //----- (0043EA00) --------------------------------------------------------
-int __thiscall sub_43EA00(_DWORD *this, const char *a2, int a3, int a4, char a5)
+int __thiscall sub_43EA00(_DWORD *self, const char *a2, int a3, int a4, char a5)
 {
   int v6; // eax
   int v7; // eax
@@ -12,8 +12,8 @@ int __thiscall sub_43EA00(_DWORD *this, const char *a2, int a3, int a4, char a5)
 
   if ( a5 )
   {
-    v6 = this[30];
-    if ( v6 <= 0 || (v7 = *(_DWORD *)(this[31] + 72 * v6 - 72), v7 != a4) && v7 )
+    v6 = self[30];
+    if ( v6 <= 0 || (v7 = *(_DWORD *)(self[31] + 72 * v6 - 72), v7 != a4) && v7 )
     {
       v8 = sub_45E6F0(a4);
       if ( v8 > -1 )
@@ -23,17 +23,17 @@ int __thiscall sub_43EA00(_DWORD *this, const char *a2, int a3, int a4, char a5)
       }
     }
   }
-  if ( this[30] == this[29] )
-    sub_43E9B0(this);
-  v9 = this[31] + 72 * this[30];
+  if ( self[30] == self[29] )
+    sub_43E9B0(self);
+  v9 = self[31] + 72 * self[30];
   strcpy((char *)(v9 + 8), a2);
   *(_DWORD *)v9 = a4;
   *(_DWORD *)(v9 + 4) = a3;
-  v10 = this[28];
-  v11 = this[30] + 1;
-  this[30] = v11;
+  v10 = self[28];
+  v11 = self[30] + 1;
+  self[30] = v11;
   *(_DWORD *)(v10 + 132) = v11;
-  result = this[28];
+  result = self[28];
   *(_BYTE *)(result + 136) = 1;
   return result;
 }

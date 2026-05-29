@@ -1,5 +1,5 @@
 //----- (0041E410) --------------------------------------------------------
-int __thiscall sub_41E410(float *this, float a2)
+int __thiscall sub_41E410(float *self, float a2)
 {
   float *v2; // ebp
   float *v3; // eax
@@ -53,7 +53,7 @@ int __thiscall sub_41E410(float *this, float a2)
   int v53; // [esp+24h] [ebp-8h] BYREF
   int v54; // [esp+28h] [ebp-4h] BYREF
 
-  v2 = this;
+  v2 = self;
   v3 = (float *)sub_408F30(dword_520970);
   v4 = v3;
   v5 = 0;
@@ -267,7 +267,7 @@ LABEL_35:
       {
         while ( v38 < v5 + v32[67] )
         {
-          v39 = *(_DWORD *)(*((_DWORD *)this + 10) + 4 * v38);
+          v39 = *(_DWORD *)(*((_DWORD *)self + 10) + 4 * v38);
           if ( !*(_DWORD *)(v39 + 12) )
           {
             v40 = v32[70];
@@ -294,7 +294,7 @@ LABEL_35:
             break;
         }
       }
-      v2 = this;
+      v2 = self;
       v5 = *(_DWORD *)ArgList + 1;
       if ( *(_DWORD *)ArgList + 1 >= v53 )
         break;

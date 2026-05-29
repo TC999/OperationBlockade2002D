@@ -1,5 +1,5 @@
 //----- (0040AE00) --------------------------------------------------------
-int __thiscall sub_40AE00(_DWORD *this, char *String2)
+int __thiscall sub_40AE00(_DWORD *self, char *String2)
 {
   int v2; // ebp
   unsigned int i; // edi
@@ -11,7 +11,7 @@ int __thiscall sub_40AE00(_DWORD *this, char *String2)
   v8 = 0;
   for ( i = 0; ; ++i )
   {
-    v5 = this[1] + 24 * this[70];
+    v5 = self[1] + 24 * self[70];
     v6 = *(_DWORD *)(v5 + 8);
     if ( !v6 || i >= (*(_DWORD *)(v5 + 12) - v6) / 12 )
       break;

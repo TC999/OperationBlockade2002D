@@ -1,5 +1,5 @@
 //----- (0043F560) --------------------------------------------------------
-char *__thiscall sub_43F560(char *this, char *a2)
+char *__thiscall sub_43F560(char *self, char *a2)
 {
   char v3; // cl
   char v4; // dl
@@ -246,99 +246,99 @@ char *__thiscall sub_43F560(char *this, char *a2)
   _BYTE v246[260]; // [esp+58h] [ebp-110h] BYREF
   int v247; // [esp+164h] [ebp-4h]
 
-  v245 = this;
+  v245 = self;
   sub_468FF0(a2);
   v247 = 0;
-  this[592] = v231;
-  *((_DWORD *)this + 149) = 0;
-  *((_DWORD *)this + 150) = 0;
-  *((_DWORD *)this + 151) = 0;
-  this[640] = v231;
-  *((_DWORD *)this + 161) = 0;
-  *((_DWORD *)this + 162) = 0;
-  *((_DWORD *)this + 163) = 0;
+  self[592] = v231;
+  *((_DWORD *)self + 149) = 0;
+  *((_DWORD *)self + 150) = 0;
+  *((_DWORD *)self + 151) = 0;
+  self[640] = v231;
+  *((_DWORD *)self + 161) = 0;
+  *((_DWORD *)self + 162) = 0;
+  *((_DWORD *)self + 163) = 0;
   v3 = v231;
-  *((_DWORD *)this + 216) = 0;
-  this[860] = v3;
-  *((_DWORD *)this + 217) = 0;
-  *((_DWORD *)this + 218) = 0;
+  *((_DWORD *)self + 216) = 0;
+  self[860] = v3;
+  *((_DWORD *)self + 217) = 0;
+  *((_DWORD *)self + 218) = 0;
   v4 = v231;
-  *((_DWORD *)this + 227) = 0;
-  this[904] = v4;
-  *((_DWORD *)this + 228) = 0;
-  *((_DWORD *)this + 229) = 0;
-  *((_DWORD *)this + 231) = 0;
-  *((_DWORD *)this + 232) = 0;
-  *((_DWORD *)this + 233) = 0;
-  this[936] = 1;
-  *(_DWORD *)this = &off_4999BC;
+  *((_DWORD *)self + 227) = 0;
+  self[904] = v4;
+  *((_DWORD *)self + 228) = 0;
+  *((_DWORD *)self + 229) = 0;
+  *((_DWORD *)self + 231) = 0;
+  *((_DWORD *)self + 232) = 0;
+  *((_DWORD *)self + 233) = 0;
+  self[936] = 1;
+  *(_DWORD *)self = &off_4999BC;
   *(_DWORD *)ArgList = a2 + 16;
-  v5 = (const char *)*((_DWORD *)this + 1);
+  v5 = (const char *)*((_DWORD *)self + 1);
   LOBYTE(v247) = 5;
   sub_4229D0("Started to load %s in %s", v5, a2 + 16);
   sub_40AFC0(String2, (int)&String1);
   if ( !strcmp(String1, aPatrolBoat) )
   {
-    *((_DWORD *)this + 73) = 0;
+    *((_DWORD *)self + 73) = 0;
   }
   else if ( !strcmp(String1, aUBoat) )
   {
-    *((_DWORD *)this + 73) = 1;
+    *((_DWORD *)self + 73) = 1;
   }
   else if ( !strcmp(String1, aHiggins) )
   {
-    *((_DWORD *)this + 73) = 2;
+    *((_DWORD *)self + 73) = 2;
   }
   else if ( !strcmp(String1, aLct) )
   {
-    *((_DWORD *)this + 73) = 3;
+    *((_DWORD *)self + 73) = 3;
   }
   else if ( !strcmp(String1, aBattleship) )
   {
-    *((_DWORD *)this + 73) = 4;
+    *((_DWORD *)self + 73) = 4;
   }
   else if ( !strcmp(String1, aCargoBoat) )
   {
-    *((_DWORD *)this + 73) = 5;
+    *((_DWORD *)self + 73) = 5;
   }
   else if ( !strcmp(String1, aCarrier) )
   {
-    *((_DWORD *)this + 73) = 6;
+    *((_DWORD *)self + 73) = 6;
   }
   else
   {
-    sub_40A120(0, "%s, see %s : %s", aInvalidBoatTyp, *((const char **)this + 1), *(const char **)ArgList);
+    sub_40A120(0, "%s, see %s : %s", aInvalidBoatTyp, *((const char **)self + 1), *(const char **)ArgList);
   }
-  *((_DWORD *)this + 74) = 1065353216;
+  *((_DWORD *)self + 74) = 1065353216;
   if ( sub_40ABC0(a2, aUnitvalue, 0) )
-    sub_40AF60(a2, aUnitvalue, (float *)this + 74);
+    sub_40AF60(a2, aUnitvalue, (float *)self + 74);
   sub_40AFC0(aScoringgroup, (int)&String1);
   v6 = sub_462480(String1);
   v7 = String1;
-  *((_DWORD *)this + 75) = v6;
-  sub_4282E0(v6 != 0, "Boat type %s: couldn't find scoring groups %s", *((const char **)this + 1), v7);
+  *((_DWORD *)self + 75) = v6;
+  sub_4282E0(v6 != 0, "Boat type %s: couldn't find scoring groups %s", *((const char **)self + 1), v7);
   sub_40AFC0(aModelfile, (int)&String1);
-  strcpy(this + 304, String1);
-  *((_DWORD *)this + 141) = 0;
-  if ( !(unsigned __int8)sub_46A3A0(this + 304) )
-    sub_43F350((int)this);
+  strcpy(self + 304, String1);
+  *((_DWORD *)self + 141) = 0;
+  if ( !(unsigned __int8)sub_46A3A0(self + 304) )
+    sub_43F350((int)self);
   if ( !(unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     sub_4066C0(
-      *((_DWORD **)this + 141),
-      (int)(this + 572),
-      (_DWORD *)this + 145,
-      (float *)this + 142,
-      (float *)this + 146,
-      (float *)this + 143,
-      (float *)this + 147,
-      (float *)this + 144);
-    v8 = *((float *)this + 145);
-    *((float *)this + 145) = -*((float *)this + 142);
-    *((float *)this + 142) = -v8;
-    v9 = *((float *)this + 146);
-    *((float *)this + 146) = -*((float *)this + 143);
-    *((float *)this + 143) = -v9;
+      *((_DWORD **)self + 141),
+      (int)(self + 572),
+      (_DWORD *)self + 145,
+      (float *)self + 142,
+      (float *)self + 146,
+      (float *)self + 143,
+      (float *)self + 147,
+      (float *)self + 144);
+    v8 = *((float *)self + 145);
+    *((float *)self + 145) = -*((float *)self + 142);
+    *((float *)self + 142) = -v8;
+    v9 = *((float *)self + 146);
+    *((float *)self + 146) = -*((float *)self + 143);
+    *((float *)self + 143) = -v9;
   }
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
@@ -346,73 +346,73 @@ char *__thiscall sub_43F560(char *this, char *a2)
   }
   else
   {
-    v230 = (__int64)*((float *)this + 145);
+    v230 = (__int64)*((float *)self + 145);
     v10 = (char **)sub_46A4C0(&v230, 4);
   }
   i2 = *v10;
-  *((float *)this + 145) = (float)(int)i2;
+  *((float *)self + 145) = (float)(int)i2;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v11 = (char **)sub_46A4A0(4);
   }
   else
   {
-    v230 = (__int64)*((float *)this + 146);
+    v230 = (__int64)*((float *)self + 146);
     v11 = (char **)sub_46A4C0(&v230, 4);
   }
   i2 = *v11;
-  *((float *)this + 146) = (float)(int)i2;
+  *((float *)self + 146) = (float)(int)i2;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v12 = (char **)sub_46A4A0(4);
   }
   else
   {
-    v230 = (__int64)*((float *)this + 147);
+    v230 = (__int64)*((float *)self + 147);
     v12 = (char **)sub_46A4C0(&v230, 4);
   }
   i2 = *v12;
-  *((float *)this + 147) = (float)(int)i2;
+  *((float *)self + 147) = (float)(int)i2;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v13 = (char **)sub_46A4A0(4);
   }
   else
   {
-    v230 = (__int64)*((float *)this + 142);
+    v230 = (__int64)*((float *)self + 142);
     v13 = (char **)sub_46A4C0(&v230, 4);
   }
   i2 = *v13;
-  *((float *)this + 142) = (float)(int)i2;
+  *((float *)self + 142) = (float)(int)i2;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v14 = (char **)sub_46A4A0(4);
   }
   else
   {
-    v230 = (__int64)*((float *)this + 143);
+    v230 = (__int64)*((float *)self + 143);
     v14 = (char **)sub_46A4C0(&v230, 4);
   }
   i2 = *v14;
-  *((float *)this + 143) = (float)(int)i2;
+  *((float *)self + 143) = (float)(int)i2;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v15 = (char **)sub_46A4A0(4);
   }
   else
   {
-    v230 = (__int64)*((float *)this + 144);
+    v230 = (__int64)*((float *)self + 144);
     v15 = (char **)sub_46A4C0(&v230, 4);
   }
   i2 = *v15;
-  *((float *)this + 144) = (float)(int)i2;
+  *((float *)self + 144) = (float)(int)i2;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v16 = (int *)sub_46A4A0(4);
   }
   else
   {
-    v230 = *(_DWORD *)(*((_DWORD *)this + 141) + 8);
+    v230 = *(_DWORD *)(*((_DWORD *)self + 141) + 8);
     v16 = (int *)sub_46A4C0(&v230, 4);
   }
   v17 = *v16;
@@ -428,17 +428,17 @@ char *__thiscall sub_43F560(char *this, char *a2)
       v18 = (_BYTE *)sub_46A4C0(&v231, 4);
     }
     if ( *v18 )
-      sub_44F190(*((_DWORD *)this + 150), 1, &i);
+      sub_44F190(*((_DWORD *)self + 150), 1, &i);
   }
-  v19 = *((_DWORD *)this + 149);
+  v19 = *((_DWORD *)self + 149);
   if ( v19 )
-    v20 = (*((_DWORD *)this + 150) - v19) >> 2;
+    v20 = (*((_DWORD *)self + 150) - v19) >> 2;
   else
     v20 = 0;
   sub_40A120(
     v20 != 0,
     "there are not enough nodes where fires can start on a boat, see %s : %s",
-    *((const char **)this + 1),
+    *((const char **)self + 1),
     *(const char **)ArgList);
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
@@ -446,22 +446,22 @@ char *__thiscall sub_43F560(char *this, char *a2)
   }
   else
   {
-    v230 = sub_405A30(*((_DWORD **)this + 141), aHull, -1, 1);
+    v230 = sub_405A30(*((_DWORD **)self + 141), aHull, -1, 1);
     v21 = *(_DWORD *)sub_46A4C0(&v230, 4);
   }
-  *((_DWORD *)this + 152) = v21;
+  *((_DWORD *)self + 152) = v21;
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     v22 = (_DWORD *)sub_46A4A0(4);
   }
   else
   {
-    v230 = sub_405A30(*((_DWORD **)this + 141), aHull_0, -1, 1);
+    v230 = sub_405A30(*((_DWORD **)self + 141), aHull_0, -1, 1);
     v22 = (_DWORD *)sub_46A4C0(&v230, 4);
   }
-  *((_DWORD *)this + 153) = *v22;
-  *((_DWORD *)this + 154) = -1;
-  if ( *((_DWORD *)this + 153) == -1 )
+  *((_DWORD *)self + 153) = *v22;
+  *((_DWORD *)self + 154) = -1;
+  if ( *((_DWORD *)self + 153) == -1 )
   {
     if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
     {
@@ -469,165 +469,165 @@ char *__thiscall sub_43F560(char *this, char *a2)
     }
     else
     {
-      v230 = sub_405A30(*((_DWORD **)this + 141), aBow, -1, 1);
+      v230 = sub_405A30(*((_DWORD **)self + 141), aBow, -1, 1);
       v23 = (_DWORD *)sub_46A4C0(&v230, 4);
     }
-    *((_DWORD *)this + 153) = *v23;
+    *((_DWORD *)self + 153) = *v23;
     if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
     {
       v24 = (int *)sub_46A4A0(4);
     }
     else
     {
-      v230 = sub_405A30(*((_DWORD **)this + 141), aStern, -1, 1);
+      v230 = sub_405A30(*((_DWORD **)self + 141), aStern, -1, 1);
       v24 = (int *)sub_46A4C0(&v230, 4);
     }
     v25 = *v24;
     v26 = *(const char **)ArgList;
-    *((_DWORD *)this + 154) = v25;
-    sub_40A120(v25 != -1, "%s, see %s : %s", aSternCollision, *((const char **)this + 1), v26);
+    *((_DWORD *)self + 154) = v25;
+    sub_40A120(v25 != -1, "%s, see %s : %s", aSternCollision, *((const char **)self + 1), v26);
   }
   sub_40A120(
-    *((_DWORD *)this + 153) != -1,
+    *((_DWORD *)self + 153) != -1,
     "%s, see %s : %s",
     aSternCollision,
-    *((const char **)this + 1),
+    *((const char **)self + 1),
     *(const char **)ArgList);
-  if ( *((_DWORD *)this + 154) == -1 )
+  if ( *((_DWORD *)self + 154) == -1 )
   {
     if ( sub_40ABC0(a2, aAnimsink, 0) )
     {
       sub_40AFC0(aAnimsink, (int)&String1);
-      v27 = *((_DWORD *)this + 161);
+      v27 = *((_DWORD *)self + 161);
       if ( v27 )
-        v28 = (*((_DWORD *)this + 162) - v27) / 260;
+        v28 = (*((_DWORD *)self + 162) - v27) / 260;
       else
         v28 = 0;
-      v29 = *((_DWORD *)this + 161);
+      v29 = *((_DWORD *)self + 161);
       v30 = v28 + 1;
       if ( v29 )
-        v31 = (*((_DWORD *)this + 162) - v29) / 260;
+        v31 = (*((_DWORD *)self + 162) - v29) / 260;
       else
         v31 = 0;
       if ( v31 >= v30 )
       {
-        if ( v30 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v30, *((_DWORD *)this + 162));
+        if ( v30 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v30, *((_DWORD *)self + 162));
       }
       else
       {
-        v32 = *((_DWORD *)this + 162);
-        v33 = sub_4481E0(this + 640);
+        v32 = *((_DWORD *)self + 162);
+        v33 = sub_4481E0(self + 640);
         sub_448390(v32, v30 - v33, v246);
       }
-      v34 = *((_DWORD *)this + 161);
+      v34 = *((_DWORD *)self + 161);
       if ( v34 )
-        v35 = (*((_DWORD *)this + 162) - v34) / 260;
+        v35 = (*((_DWORD *)self + 162) - v34) / 260;
       else
         v35 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v35 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v35 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v36 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v36 = (int *)sub_46A4C0(&v230, 4);
       }
       v37 = *v36;
-      v220 = (const char *)*((_DWORD *)this + 1);
+      v220 = (const char *)*((_DWORD *)self + 1);
       v235[0] = *v36 != -1;
       sub_40A120(v235[0], "%s, see %s : %s", aFailedToLoadAn_0, v220, *(const char **)ArgList);
-      *((_DWORD *)this + 155) = v37;
-      *((_DWORD *)this + 156) = v37;
+      *((_DWORD *)self + 155) = v37;
+      *((_DWORD *)self + 156) = v37;
     }
     else
     {
       sub_40AFC0(aAnimsinkl, (int)&String1);
-      v38 = *((_DWORD *)this + 161);
+      v38 = *((_DWORD *)self + 161);
       if ( v38 )
-        v39 = (*((_DWORD *)this + 162) - v38) / 260;
+        v39 = (*((_DWORD *)self + 162) - v38) / 260;
       else
         v39 = 0;
-      v40 = *((_DWORD *)this + 161);
+      v40 = *((_DWORD *)self + 161);
       v41 = v39 + 1;
       if ( v40 )
-        v42 = (*((_DWORD *)this + 162) - v40) / 260;
+        v42 = (*((_DWORD *)self + 162) - v40) / 260;
       else
         v42 = 0;
       if ( v42 >= v41 )
       {
-        if ( v41 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v41, *((_DWORD *)this + 162));
+        if ( v41 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v41, *((_DWORD *)self + 162));
       }
       else
       {
-        v43 = *((_DWORD *)this + 162);
-        v44 = sub_4481E0(this + 640);
+        v43 = *((_DWORD *)self + 162);
+        v44 = sub_4481E0(self + 640);
         sub_448390(v43, v41 - v44, v246);
       }
-      v45 = *((_DWORD *)this + 161);
+      v45 = *((_DWORD *)self + 161);
       if ( v45 )
-        v46 = (*((_DWORD *)this + 162) - v45) / 260;
+        v46 = (*((_DWORD *)self + 162) - v45) / 260;
       else
         v46 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v46 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v46 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v47 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v47 = (int *)sub_46A4C0(&v230, 4);
       }
       v48 = *v47;
-      sub_40A120(*v47 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)this + 1), *(const char **)ArgList);
-      *((_DWORD *)this + 155) = v48;
+      sub_40A120(*v47 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)self + 1), *(const char **)ArgList);
+      *((_DWORD *)self + 155) = v48;
       sub_40AFC0(aAnimsinkr, (int)&String1);
-      v49 = *((_DWORD *)this + 161);
+      v49 = *((_DWORD *)self + 161);
       if ( v49 )
-        v50 = (*((_DWORD *)this + 162) - v49) / 260;
+        v50 = (*((_DWORD *)self + 162) - v49) / 260;
       else
         v50 = 0;
-      v51 = *((_DWORD *)this + 161);
+      v51 = *((_DWORD *)self + 161);
       v52 = v50 + 1;
       if ( v51 )
-        v53 = (*((_DWORD *)this + 162) - v51) / 260;
+        v53 = (*((_DWORD *)self + 162) - v51) / 260;
       else
         v53 = 0;
       if ( v53 >= v52 )
       {
-        if ( v52 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v52, *((_DWORD *)this + 162));
+        if ( v52 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v52, *((_DWORD *)self + 162));
       }
       else
       {
-        v54 = *((_DWORD *)this + 162);
-        v55 = sub_4481E0(this + 640);
+        v54 = *((_DWORD *)self + 162);
+        v55 = sub_4481E0(self + 640);
         sub_448390(v54, v52 - v55, v246);
       }
-      v56 = *((_DWORD *)this + 161);
+      v56 = *((_DWORD *)self + 161);
       if ( v56 )
-        v57 = (*((_DWORD *)this + 162) - v56) / 260;
+        v57 = (*((_DWORD *)self + 162) - v56) / 260;
       else
         v57 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v57 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v57 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v58 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v58 = (int *)sub_46A4C0(&v230, 4);
       }
       v59 = *v58;
-      v221 = (const char *)*((_DWORD *)this + 1);
+      v221 = (const char *)*((_DWORD *)self + 1);
       v235[0] = *v58 != -1;
       sub_40A120(v235[0], "%s, see %s : %s", aFailedToLoadAn_0, v221, *(const char **)ArgList);
-      *((_DWORD *)this + 156) = v59;
+      *((_DWORD *)self + 156) = v59;
     }
   }
   else
@@ -635,374 +635,374 @@ char *__thiscall sub_43F560(char *this, char *a2)
     if ( sub_40ABC0(a2, aAnimsinkbow, 0) )
     {
       sub_40AFC0(aAnimsinkbow, (int)&String1);
-      v60 = *((_DWORD *)this + 161);
+      v60 = *((_DWORD *)self + 161);
       if ( v60 )
-        v61 = (*((_DWORD *)this + 162) - v60) / 260;
+        v61 = (*((_DWORD *)self + 162) - v60) / 260;
       else
         v61 = 0;
-      v62 = *((_DWORD *)this + 161);
+      v62 = *((_DWORD *)self + 161);
       v63 = v61 + 1;
       if ( v62 )
-        v64 = (*((_DWORD *)this + 162) - v62) / 260;
+        v64 = (*((_DWORD *)self + 162) - v62) / 260;
       else
         v64 = 0;
       if ( v64 >= v63 )
       {
-        if ( v63 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v63, *((_DWORD *)this + 162));
+        if ( v63 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v63, *((_DWORD *)self + 162));
       }
       else
       {
-        v65 = *((_DWORD *)this + 162);
-        v66 = sub_4481E0(this + 640);
+        v65 = *((_DWORD *)self + 162);
+        v66 = sub_4481E0(self + 640);
         sub_448390(v65, v63 - v66, v246);
       }
-      v67 = *((_DWORD *)this + 161);
+      v67 = *((_DWORD *)self + 161);
       if ( v67 )
-        v68 = (*((_DWORD *)this + 162) - v67) / 260;
+        v68 = (*((_DWORD *)self + 162) - v67) / 260;
       else
         v68 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v68 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v68 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v69 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v69 = (int *)sub_46A4C0(&v230, 4);
       }
       v70 = *v69;
-      sub_40A120(*v69 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)this + 1), *(const char **)ArgList);
-      *((_DWORD *)this + 155) = v70;
+      sub_40A120(*v69 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)self + 1), *(const char **)ArgList);
+      *((_DWORD *)self + 155) = v70;
     }
     else
     {
       sub_40AFC0(aAnimsinkbowl, (int)&String1);
-      v71 = *((_DWORD *)this + 161);
+      v71 = *((_DWORD *)self + 161);
       if ( v71 )
-        v72 = (*((_DWORD *)this + 162) - v71) / 260;
+        v72 = (*((_DWORD *)self + 162) - v71) / 260;
       else
         v72 = 0;
-      v73 = *((_DWORD *)this + 161);
+      v73 = *((_DWORD *)self + 161);
       v74 = v72 + 1;
       if ( v73 )
-        v75 = (*((_DWORD *)this + 162) - v73) / 260;
+        v75 = (*((_DWORD *)self + 162) - v73) / 260;
       else
         v75 = 0;
       if ( v75 >= v74 )
       {
-        if ( v74 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v74, *((_DWORD *)this + 162));
+        if ( v74 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v74, *((_DWORD *)self + 162));
       }
       else
       {
         if ( v73 )
-          v76 = (*((_DWORD *)this + 162) - v73) / 260;
+          v76 = (*((_DWORD *)self + 162) - v73) / 260;
         else
           v76 = 0;
-        sub_448390(*((_DWORD *)this + 162), v74 - v76, v246);
+        sub_448390(*((_DWORD *)self + 162), v74 - v76, v246);
       }
-      v77 = *((_DWORD *)this + 161);
+      v77 = *((_DWORD *)self + 161);
       if ( v77 )
-        v78 = (*((_DWORD *)this + 162) - v77) / 260;
+        v78 = (*((_DWORD *)self + 162) - v77) / 260;
       else
         v78 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v78 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v78 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v79 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v79 = (int *)sub_46A4C0(&v230, 4);
       }
       v80 = *v79;
-      sub_40A120(*v79 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)this + 1), *(const char **)ArgList);
-      *((_DWORD *)this + 155) = v80;
+      sub_40A120(*v79 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)self + 1), *(const char **)ArgList);
+      *((_DWORD *)self + 155) = v80;
       sub_40AFC0(aAnimsinkbowr, (int)&String1);
-      v81 = *((_DWORD *)this + 161);
+      v81 = *((_DWORD *)self + 161);
       if ( v81 )
-        v82 = (*((_DWORD *)this + 162) - v81) / 260;
+        v82 = (*((_DWORD *)self + 162) - v81) / 260;
       else
         v82 = 0;
-      v83 = *((_DWORD *)this + 161);
+      v83 = *((_DWORD *)self + 161);
       v84 = v82 + 1;
       if ( v83 )
-        v85 = (*((_DWORD *)this + 162) - v83) / 260;
+        v85 = (*((_DWORD *)self + 162) - v83) / 260;
       else
         v85 = 0;
       if ( v85 >= v84 )
       {
-        if ( v84 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v84, *((_DWORD *)this + 162));
+        if ( v84 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v84, *((_DWORD *)self + 162));
       }
       else
       {
         if ( v83 )
-          v86 = (*((_DWORD *)this + 162) - v83) / 260;
+          v86 = (*((_DWORD *)self + 162) - v83) / 260;
         else
           v86 = 0;
-        sub_448390(*((_DWORD *)this + 162), v84 - v86, v246);
+        sub_448390(*((_DWORD *)self + 162), v84 - v86, v246);
       }
-      v87 = *((_DWORD *)this + 161);
+      v87 = *((_DWORD *)self + 161);
       if ( v87 )
-        v88 = (*((_DWORD *)this + 162) - v87) / 260;
+        v88 = (*((_DWORD *)self + 162) - v87) / 260;
       else
         v88 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v88 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v88 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v89 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v89 = (int *)sub_46A4C0(&v230, 4);
       }
       v70 = *v89;
-      sub_40A120(*v89 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)this + 1), *(const char **)ArgList);
+      sub_40A120(*v89 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)self + 1), *(const char **)ArgList);
     }
-    *((_DWORD *)this + 156) = v70;
+    *((_DWORD *)self + 156) = v70;
     if ( sub_40ABC0(a2, aAnimsinkstern, 0) )
     {
       sub_40AFC0(aAnimsinkstern, (int)&String1);
-      v90 = *((_DWORD *)this + 161);
+      v90 = *((_DWORD *)self + 161);
       if ( v90 )
-        v91 = (*((_DWORD *)this + 162) - v90) / 260;
+        v91 = (*((_DWORD *)self + 162) - v90) / 260;
       else
         v91 = 0;
-      v92 = *((_DWORD *)this + 161);
+      v92 = *((_DWORD *)self + 161);
       v93 = v91 + 1;
       if ( v92 )
-        v94 = (*((_DWORD *)this + 162) - v92) / 260;
+        v94 = (*((_DWORD *)self + 162) - v92) / 260;
       else
         v94 = 0;
       if ( v94 >= v93 )
       {
-        if ( v93 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v93, *((_DWORD *)this + 162));
+        if ( v93 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v93, *((_DWORD *)self + 162));
       }
       else
       {
         if ( v92 )
-          v95 = (*((_DWORD *)this + 162) - v92) / 260;
+          v95 = (*((_DWORD *)self + 162) - v92) / 260;
         else
           v95 = 0;
-        sub_448390(*((_DWORD *)this + 162), v93 - v95, v246);
+        sub_448390(*((_DWORD *)self + 162), v93 - v95, v246);
       }
-      v96 = *((_DWORD *)this + 161);
+      v96 = *((_DWORD *)self + 161);
       if ( v96 )
-        v97 = (*((_DWORD *)this + 162) - v96) / 260;
+        v97 = (*((_DWORD *)self + 162) - v96) / 260;
       else
         v97 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v97 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v97 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v98 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v98 = (int *)sub_46A4C0(&v230, 4);
       }
       v99 = *v98;
-      v222 = (const char *)*((_DWORD *)this + 1);
+      v222 = (const char *)*((_DWORD *)self + 1);
       v235[0] = *v98 != -1;
       sub_40A120(v235[0], "%s, see %s : %s", aFailedToLoadAn_0, v222, *(const char **)ArgList);
-      *((_DWORD *)this + 157) = v99;
+      *((_DWORD *)self + 157) = v99;
     }
     else
     {
       sub_40AFC0(aAnimsinksternl, (int)&String1);
-      v100 = *((_DWORD *)this + 161);
+      v100 = *((_DWORD *)self + 161);
       if ( v100 )
-        v101 = (*((_DWORD *)this + 162) - v100) / 260;
+        v101 = (*((_DWORD *)self + 162) - v100) / 260;
       else
         v101 = 0;
-      v102 = *((_DWORD *)this + 161);
+      v102 = *((_DWORD *)self + 161);
       v103 = v101 + 1;
       if ( v102 )
-        v104 = (*((_DWORD *)this + 162) - v102) / 260;
+        v104 = (*((_DWORD *)self + 162) - v102) / 260;
       else
         v104 = 0;
       if ( v104 >= v103 )
       {
-        if ( v103 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v103, *((_DWORD *)this + 162));
+        if ( v103 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v103, *((_DWORD *)self + 162));
       }
       else
       {
         if ( v102 )
-          v105 = (*((_DWORD *)this + 162) - v102) / 260;
+          v105 = (*((_DWORD *)self + 162) - v102) / 260;
         else
           v105 = 0;
-        sub_448390(*((_DWORD *)this + 162), v103 - v105, v246);
+        sub_448390(*((_DWORD *)self + 162), v103 - v105, v246);
       }
-      v106 = *((_DWORD *)this + 161);
+      v106 = *((_DWORD *)self + 161);
       if ( v106 )
-        v107 = (*((_DWORD *)this + 162) - v106) / 260;
+        v107 = (*((_DWORD *)self + 162) - v106) / 260;
       else
         v107 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v107 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v107 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v108 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v108 = (int *)sub_46A4C0(&v230, 4);
       }
       v109 = *v108;
-      sub_40A120(*v108 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)this + 1), *(const char **)ArgList);
-      *((_DWORD *)this + 157) = v109;
+      sub_40A120(*v108 != -1, "%s, see %s : %s", aFailedToLoadAn_0, *((const char **)self + 1), *(const char **)ArgList);
+      *((_DWORD *)self + 157) = v109;
       sub_40AFC0(aAnimsinksternr, (int)&String1);
-      v110 = *((_DWORD *)this + 161);
+      v110 = *((_DWORD *)self + 161);
       if ( v110 )
-        v111 = (*((_DWORD *)this + 162) - v110) / 260;
+        v111 = (*((_DWORD *)self + 162) - v110) / 260;
       else
         v111 = 0;
-      v112 = *((_DWORD *)this + 161);
+      v112 = *((_DWORD *)self + 161);
       v113 = v111 + 1;
       if ( v112 )
-        v114 = (*((_DWORD *)this + 162) - v112) / 260;
+        v114 = (*((_DWORD *)self + 162) - v112) / 260;
       else
         v114 = 0;
       if ( v114 >= v113 )
       {
-        if ( v113 < sub_4481E0(this + 640) )
-          sub_4486E0(*((_DWORD *)this + 161) + 260 * v113, *((_DWORD *)this + 162));
+        if ( v113 < sub_4481E0(self + 640) )
+          sub_4486E0(*((_DWORD *)self + 161) + 260 * v113, *((_DWORD *)self + 162));
       }
       else
       {
         if ( v112 )
-          v115 = (*((_DWORD *)this + 162) - v112) / 260;
+          v115 = (*((_DWORD *)self + 162) - v112) / 260;
         else
           v115 = 0;
-        sub_448390(*((_DWORD *)this + 162), v113 - v115, v246);
+        sub_448390(*((_DWORD *)self + 162), v113 - v115, v246);
       }
-      v116 = *((_DWORD *)this + 161);
+      v116 = *((_DWORD *)self + 161);
       if ( v116 )
-        v117 = (*((_DWORD *)this + 162) - v116) / 260;
+        v117 = (*((_DWORD *)self + 162) - v116) / 260;
       else
         v117 = 0;
-      strcpy((char *)(*((_DWORD *)this + 161) + 260 * v117 - 260), String1);
+      strcpy((char *)(*((_DWORD *)self + 161) + 260 * v117 - 260), String1);
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v118 = (int *)sub_46A4A0(4);
       }
       else
       {
-        v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+        v230 = sub_403E80(*((_DWORD **)self + 141), String1);
         v118 = (int *)sub_46A4C0(&v230, 4);
       }
       v99 = *v118;
-      v223 = (const char *)*((_DWORD *)this + 1);
+      v223 = (const char *)*((_DWORD *)self + 1);
       v235[0] = *v118 != -1;
       sub_40A120(v235[0], "%s, see %s : %s", aFailedToLoadAn_0, v223, *(const char **)ArgList);
     }
-    *((_DWORD *)this + 158) = v99;
+    *((_DWORD *)self + 158) = v99;
   }
   v119 = a2;
   if ( sub_40ABC0(a2, aAnimsinkshore, 0) )
   {
     sub_40AFC0(aAnimsinkshore, (int)&String1);
-    v120 = *((_DWORD *)this + 161);
+    v120 = *((_DWORD *)self + 161);
     if ( v120 )
-      v121 = (*((_DWORD *)this + 162) - v120) / 260;
+      v121 = (*((_DWORD *)self + 162) - v120) / 260;
     else
       v121 = 0;
-    v122 = *((_DWORD *)this + 161);
+    v122 = *((_DWORD *)self + 161);
     v123 = v121 + 1;
     if ( v122 )
-      v124 = (*((_DWORD *)this + 162) - v122) / 260;
+      v124 = (*((_DWORD *)self + 162) - v122) / 260;
     else
       v124 = 0;
     if ( v124 >= v123 )
     {
-      if ( v123 < sub_4481E0(this + 640) )
-        sub_4486E0(*((_DWORD *)this + 161) + 260 * v123, *((_DWORD *)this + 162));
+      if ( v123 < sub_4481E0(self + 640) )
+        sub_4486E0(*((_DWORD *)self + 161) + 260 * v123, *((_DWORD *)self + 162));
     }
     else
     {
       if ( v122 )
-        v125 = (*((_DWORD *)this + 162) - v122) / 260;
+        v125 = (*((_DWORD *)self + 162) - v122) / 260;
       else
         v125 = 0;
-      sub_448390(*((_DWORD *)this + 162), v123 - v125, v246);
+      sub_448390(*((_DWORD *)self + 162), v123 - v125, v246);
     }
-    v126 = *((_DWORD *)this + 161);
+    v126 = *((_DWORD *)self + 161);
     if ( v126 )
-      v127 = (*((_DWORD *)this + 162) - v126) / 260;
+      v127 = (*((_DWORD *)self + 162) - v126) / 260;
     else
       v127 = 0;
-    strcpy((char *)(*((_DWORD *)this + 161) + 260 * v127 - 260), String1);
+    strcpy((char *)(*((_DWORD *)self + 161) + 260 * v127 - 260), String1);
     if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
     {
       v128 = (int *)sub_46A4A0(4);
     }
     else
     {
-      v230 = sub_403E80(*((_DWORD **)this + 141), String1);
+      v230 = sub_403E80(*((_DWORD **)self + 141), String1);
       v128 = (int *)sub_46A4C0(&v230, 4);
     }
     v129 = *v128;
-    v224 = (const char *)*((_DWORD *)this + 1);
+    v224 = (const char *)*((_DWORD *)self + 1);
     v235[0] = *v128 != -1;
     sub_40A120(v235[0], "%s, see %s : %s", aFailedToLoadAn_0, v224, *(const char **)ArgList);
-    *((_DWORD *)this + 159) = v129;
+    *((_DWORD *)self + 159) = v129;
     v119 = a2;
   }
-  *((_DWORD *)this + 164) = 1065353216;
-  *((_DWORD *)this + 165) = 1065353216;
+  *((_DWORD *)self + 164) = 1065353216;
+  *((_DWORD *)self + 165) = 1065353216;
   if ( sub_40ABC0(v119, aAnimsinkrate, 0) )
-    sub_40B1B0((char)aAnimsinkrate, (int)(this + 656));
-  *((_DWORD *)this + 166) = 0;
+    sub_40B1B0((char)aAnimsinkrate, (int)(self + 656));
+  *((_DWORD *)self + 166) = 0;
   if ( sub_40ABC0(v119, aTimebeforestop, 0) )
-    sub_40AF60(v119, aTimebeforestop, (float *)this + 166);
-  sub_40AF60(v119, aHealth, (float *)this + 167);
-  v130 = (float *)(this + 672);
-  *((_DWORD *)this + 168) = 1065353216;
+    sub_40AF60(v119, aTimebeforestop, (float *)self + 166);
+  sub_40AF60(v119, aHealth, (float *)self + 167);
+  v130 = (float *)(self + 672);
+  *((_DWORD *)self + 168) = 1065353216;
   if ( sub_40ABC0(v119, aStarthealthper, 0) )
-    sub_40AF60(v119, aStarthealthper, (float *)this + 168);
+    sub_40AF60(v119, aStarthealthper, (float *)self + 168);
   if ( *v130 > 1.0 )
     *v130 = *v130 * 0.0099999998;
-  v131 = (float *)(this + 676);
-  *((_DWORD *)this + 169) = 0;
+  v131 = (float *)(self + 676);
+  *((_DWORD *)self + 169) = 0;
   if ( sub_40ABC0(v119, aSpecialdeathhe, 0) )
-    sub_40AF60(v119, aSpecialdeathhe, (float *)this + 169);
+    sub_40AF60(v119, aSpecialdeathhe, (float *)self + 169);
   if ( *v131 > 1.0 )
     *v131 = *v131 * 0.0099999998;
-  *((_DWORD *)this + 170) = 0;
-  *((_DWORD *)this + 171) = 0;
+  *((_DWORD *)self + 170) = 0;
+  *((_DWORD *)self + 171) = 0;
   if ( sub_40ABC0(v119, aLifetime, 0) )
-    sub_40AF60(v119, aLifetime, (float *)this + 170);
+    sub_40AF60(v119, aLifetime, (float *)self + 170);
   if ( sub_40ABC0(v119, aFadetime, 0) )
-    sub_40AF60(v119, aFadetime, (float *)this + 171);
-  sub_40AF60(v119, aSpeed, (float *)this + 172);
-  *((_DWORD *)this + 173) = 0;
+    sub_40AF60(v119, aFadetime, (float *)self + 171);
+  sub_40AF60(v119, aSpeed, (float *)self + 172);
+  *((_DWORD *)self + 173) = 0;
   if ( sub_40ABC0(v119, aStartdist, 0) )
-    sub_40AF60(v119, aStartdist, (float *)this + 173);
-  sub_40B1D0((char)aRange, (int)(this + 696), (int)(this + 700));
-  sub_40AF60(v119, aPathsegmenttim, (float *)this + 178);
-  sub_40AF60(v119, aPathsegmentvar, (float *)this + 179);
-  *((float *)this + 179) = *((float *)this + 179) * 0.017453292;
-  sub_40AF60(v119, aRollfactor, (float *)this + 180);
-  sub_40AF60(v119, aMaxpitch, (float *)this + 181);
-  v132 = *((float *)this + 181) * 0.017453292;
-  this[728] = 0;
-  *((float *)this + 181) = v132;
+    sub_40AF60(v119, aStartdist, (float *)self + 173);
+  sub_40B1D0((char)aRange, (int)(self + 696), (int)(self + 700));
+  sub_40AF60(v119, aPathsegmenttim, (float *)self + 178);
+  sub_40AF60(v119, aPathsegmentvar, (float *)self + 179);
+  *((float *)self + 179) = *((float *)self + 179) * 0.017453292;
+  sub_40AF60(v119, aRollfactor, (float *)self + 180);
+  sub_40AF60(v119, aMaxpitch, (float *)self + 181);
+  v132 = *((float *)self + 181) * 0.017453292;
+  self[728] = 0;
+  *((float *)self + 181) = v132;
   if ( sub_40ABC0(v119, aSlowdownrange, 0) )
   {
-    this[728] = 1;
-    sub_40AF60(v119, aSlowdownrange, (float *)this + 183);
-    sub_40AF60(v119, aSlowdownspeed, (float *)this + 184);
+    self[728] = 1;
+    sub_40AF60(v119, aSlowdownrange, (float *)self + 183);
+    sub_40AF60(v119, aSlowdownspeed, (float *)self + 184);
   }
-  this[740] = 0;
+  self[740] = 0;
   if ( sub_40ABC0(v119, aSailhome, 0) )
-    sub_40B130(v119, aSailhome, this + 740);
+    sub_40B130(v119, aSailhome, self + 740);
   v133 = operator new(0x148u);
   v134 = v133;
   v239 = (int)v133;
@@ -1018,100 +1018,100 @@ char *__thiscall sub_43F560(char *this, char *a2)
     v135 = 0;
   }
   v136 = *(const char **)ArgList;
-  v137 = this + 744;
+  v137 = self + 744;
   LOBYTE(v247) = 5;
-  *((_DWORD *)this + 186) = v135;
+  *((_DWORD *)self + 186) = v135;
   v135[3] = aPath;
-  strcpy((char *)(*((_DWORD *)this + 186) + 16), v136);
-  *(_DWORD *)(*(_DWORD *)v137 + 292) = *((_DWORD *)this + 172);
-  *(_DWORD *)(*(_DWORD *)v137 + 296) = *((_DWORD *)this + 178);
-  *(_DWORD *)(*(_DWORD *)v137 + 300) = *((_DWORD *)this + 179);
+  strcpy((char *)(*((_DWORD *)self + 186) + 16), v136);
+  *(_DWORD *)(*(_DWORD *)v137 + 292) = *((_DWORD *)self + 172);
+  *(_DWORD *)(*(_DWORD *)v137 + 296) = *((_DWORD *)self + 178);
+  *(_DWORD *)(*(_DWORD *)v137 + 300) = *((_DWORD *)self + 179);
   *(_DWORD *)(*(_DWORD *)v137 + 304) = 0;
-  *(_DWORD *)(*(_DWORD *)v137 + 308) = *((_DWORD *)this + 174);
-  *(_DWORD *)(*(_DWORD *)v137 + 312) = *((_DWORD *)this + 175);
+  *(_DWORD *)(*(_DWORD *)v137 + 308) = *((_DWORD *)self + 174);
+  *(_DWORD *)(*(_DWORD *)v137 + 312) = *((_DWORD *)self + 175);
   *(_DWORD *)(*(_DWORD *)v137 + 316) = 0;
   *(_DWORD *)(*(_DWORD *)v137 + 320) = 0;
-  *(_BYTE *)(*(_DWORD *)v137 + 324) = *((_DWORD *)this + 73) < 4u;
-  sub_469700(*((_DWORD *)this + 186), aCustumPath);
-  sub_469160(this + 744, 0, 0);
+  *(_BYTE *)(*(_DWORD *)v137 + 324) = *((_DWORD *)self + 73) < 4u;
+  sub_469700(*((_DWORD *)self + 186), aCustumPath);
+  sub_469160(self + 744, 0, 0);
   v138 = a2;
-  *((_DWORD *)this + 187) = 0;
+  *((_DWORD *)self + 187) = 0;
   if ( sub_40ABC0(a2, aBubblysoundeff, 0) )
   {
     sub_40AFC0(aBubblysoundeff, (int)&String1);
-    sub_469160(this + 748, String1, aBubblySoundEff);
+    sub_469160(self + 748, String1, aBubblySoundEff);
   }
-  *((_DWORD *)this + 188) = 0;
+  *((_DWORD *)self + 188) = 0;
   if ( sub_40ABC0(a2, aSmallburneffec, 0) )
   {
     sub_40AFC0(aSmallburneffec, (int)&String1);
-    sub_469160(this + 752, String1, aEffect);
-    sub_40AF60(a2, aBeginburnhealt, (float *)this + 190);
-    sub_40B1B0((char)aBeginburnfrequ, (int)(this + 764));
-    sub_40B1B0((char)aEndburnfrequen, (int)(this + 772));
+    sub_469160(self + 752, String1, aEffect);
+    sub_40AF60(a2, aBeginburnhealt, (float *)self + 190);
+    sub_40B1B0((char)aBeginburnfrequ, (int)(self + 764));
+    sub_40B1B0((char)aEndburnfrequen, (int)(self + 772));
   }
-  *((_DWORD *)this + 189) = 0;
+  *((_DWORD *)self + 189) = 0;
   if ( sub_40ABC0(a2, aBigburneffect, 0) )
   {
     sub_40AFC0(aBigburneffect, (int)&String1);
-    sub_469160(this + 756, String1, aEffect);
-    sub_40B1B0((char)aBigburnfrequen, (int)(this + 780));
+    sub_469160(self + 756, String1, aEffect);
+    sub_40B1B0((char)aBigburnfrequen, (int)(self + 780));
   }
-  *((_DWORD *)this + 197) = 0;
+  *((_DWORD *)self + 197) = 0;
   if ( sub_40ABC0(a2, aEnginesound, 0) )
   {
     sub_40AFC0(aEnginesound, (int)&String1);
-    sub_469160(this + 788, String1, aSoundEffect);
+    sub_469160(self + 788, String1, aSoundEffect);
   }
-  *((_DWORD *)this + 198) = 0;
+  *((_DWORD *)self + 198) = 0;
   if ( sub_40ABC0(a2, aEnginedying, 0) )
   {
     sub_40AFC0(aEnginedying, (int)&String1);
-    sub_469160(this + 792, String1, aEffect);
+    sub_469160(self + 792, String1, aEffect);
   }
-  v139 = *((_DWORD *)this + 73);
+  v139 = *((_DWORD *)self + 73);
   switch ( v139 )
   {
     case 0:
-      sub_40B1D0((char)aTimetillpause, (int)(this + 796), (int)(this + 800));
-      sub_40B1D0((char)aPausetime, (int)(this + 804), (int)(this + 808));
-      sub_40AF60(a2, aPausespeed, (float *)this + 203);
-      sub_40B1D0((char)aTimetilluturn, (int)(this + 816), (int)(this + 820));
+      sub_40B1D0((char)aTimetillpause, (int)(self + 796), (int)(self + 800));
+      sub_40B1D0((char)aPausetime, (int)(self + 804), (int)(self + 808));
+      sub_40AF60(a2, aPausespeed, (float *)self + 203);
+      sub_40B1D0((char)aTimetilluturn, (int)(self + 816), (int)(self + 820));
       goto LABEL_380;
     case 1:
-      sub_40B1D0((char)aTimetillpause, (int)(this + 796), (int)(this + 800));
-      sub_40B1D0((char)aPausetime, (int)(this + 804), (int)(this + 808));
-      sub_40AF60(a2, aPausespeed, (float *)this + 203);
-      sub_40AF60(a2, aDepth, (float *)this + 206);
-      sub_40B1B0((char)aTimetillsailho, (int)(this + 828));
+      sub_40B1D0((char)aTimetillpause, (int)(self + 796), (int)(self + 800));
+      sub_40B1D0((char)aPausetime, (int)(self + 804), (int)(self + 808));
+      sub_40AF60(a2, aPausespeed, (float *)self + 203);
+      sub_40AF60(a2, aDepth, (float *)self + 206);
+      sub_40B1B0((char)aTimetillsailho, (int)(self + 828));
       goto LABEL_380;
     case 2:
-      *((_DWORD *)this + 209) = 12;
+      *((_DWORD *)self + 209) = 12;
       if ( sub_40ABC0(a2, aNumtroops, 0) )
-        sub_40AF00(a2, aNumtroops, (char **)this + 209);
-      v140 = (float *)(this + 840);
-      *((_DWORD *)this + 210) = 1053609165;
-      *((_DWORD *)this + 211) = 1060320051;
+        sub_40AF00(a2, aNumtroops, (char **)self + 209);
+      v140 = (float *)(self + 840);
+      *((_DWORD *)self + 210) = 1053609165;
+      *((_DWORD *)self + 211) = 1060320051;
       if ( sub_40ABC0(a2, aPercentgunguys, 0) )
-        sub_40B1B0((char)aPercentgunguys, (int)(this + 840));
+        sub_40B1B0((char)aPercentgunguys, (int)(self + 840));
       if ( *v140 > 1.0 )
         *v140 = *v140 * 0.0099999998;
-      if ( *((float *)this + 211) > 1.0 )
-        *((float *)this + 211) = *((float *)this + 211) * 0.0099999998;
-      sub_40AF60(a2, aDriftspeed, (float *)this + 212);
-      sub_40B1D0((char)aLandrange, (int)(this + 852), (int)(this + 856));
+      if ( *((float *)self + 211) > 1.0 )
+        *((float *)self + 211) = *((float *)self + 211) * 0.0099999998;
+      sub_40AF60(a2, aDriftspeed, (float *)self + 212);
+      sub_40B1D0((char)aLandrange, (int)(self + 852), (int)(self + 856));
       goto LABEL_380;
     case 3:
-      sub_40AF60(a2, aDriftspeed, (float *)this + 212);
-      sub_40B1D0((char)aLandrange, (int)(this + 852), (int)(this + 856));
-      *((_DWORD *)this + 219) = -1;
+      sub_40AF60(a2, aDriftspeed, (float *)self + 212);
+      sub_40B1D0((char)aLandrange, (int)(self + 852), (int)(self + 856));
+      *((_DWORD *)self + 219) = -1;
       if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
       {
         v141 = (void **)sub_46A4A0(4);
       }
       else
       {
-        v230 = *(_DWORD *)(*((_DWORD *)this + 141) + 8);
+        v230 = *(_DWORD *)(*((_DWORD *)self + 141) + 8);
         v141 = (void **)sub_46A4C0(&v230, 4);
       }
       v142 = (char *)*v141;
@@ -1121,10 +1121,10 @@ char *__thiscall sub_43F560(char *this, char *a2)
       {
 LABEL_342:
         sub_40A120(
-          *((_DWORD *)this + 219) != -1,
+          *((_DWORD *)self + 219) != -1,
           "%s, see %s : %s",
           aTankExitNodeNo,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           *(const char **)ArgList);
         goto LABEL_380;
       }
@@ -1146,7 +1146,7 @@ LABEL_342:
         v146 = (char *)v144;
         if ( !_strnicmp(v144, aTankExit, 9u) )
         {
-          *((_DWORD *)this + 219) = m;
+          *((_DWORD *)self + 219) = m;
         }
         else if ( !_strnicmp(v146, aTank_0, 4u) )
         {
@@ -1160,41 +1160,41 @@ LABEL_342:
               break;
           }
           v148 = *(const char **)ArgList;
-          sub_40A120(v235[0], "%s, see %s : %s", aTankNodeNotNum, *((const char **)this + 1), *(const char **)ArgList);
+          sub_40A120(v235[0], "%s, see %s : %s", aTankNodeNotNum, *((const char **)self + 1), *(const char **)ArgList);
           v149 = sub_48A1BB(v146) - 1;
-          sub_40A120(v149 >= 0, "%s, see %s : %s", aInvalidTankNum, *((const char **)this + 1), v148);
-          v150 = *((_DWORD *)this + 216);
+          sub_40A120(v149 >= 0, "%s, see %s : %s", aInvalidTankNum, *((const char **)self + 1), v148);
+          v150 = *((_DWORD *)self + 216);
           if ( v150 )
-            v151 = (*((_DWORD *)this + 217) - v150) >> 2;
+            v151 = (*((_DWORD *)self + 217) - v150) >> 2;
           else
             v151 = 0;
           v152 = v149 + 1;
           if ( v151 < v149 + 1 )
           {
-            v153 = *((_DWORD *)this + 216);
+            v153 = *((_DWORD *)self + 216);
             v238 = 0;
             if ( v153 )
-              v154 = (*((_DWORD *)this + 217) - v153) >> 2;
+              v154 = (*((_DWORD *)self + 217) - v153) >> 2;
             else
               v154 = 0;
             if ( v154 < v152 )
             {
               if ( v153 )
-                v155 = (*((_DWORD *)this + 217) - v153) >> 2;
+                v155 = (*((_DWORD *)self + 217) - v153) >> 2;
               else
                 v155 = 0;
-              sub_44F190(*((_DWORD *)this + 217), v152 - v155, &v238);
+              sub_44F190(*((_DWORD *)self + 217), v152 - v155, &v238);
               goto LABEL_339;
             }
             if ( v153 )
             {
-              if ( v152 < (*((_DWORD *)this + 217) - v153) >> 2 )
-                sub_448300(v153 + 4 * v152, *((_DWORD *)this + 217));
+              if ( v152 < (*((_DWORD *)self + 217) - v153) >> 2 )
+                sub_448300(v153 + 4 * v152, *((_DWORD *)self + 217));
 LABEL_339:
               v138 = a2;
             }
           }
-          *(_DWORD *)(*((_DWORD *)this + 216) + 4 * v149) = m;
+          *(_DWORD *)(*((_DWORD *)self + 216) + 4 * v149) = m;
         }
         if ( ++m >= (int)i2 )
           goto LABEL_342;
@@ -1207,18 +1207,18 @@ LABEL_339:
       sub_40A120(0, "invalid boat type, see file %s", *(const char **)ArgList);
       goto LABEL_380;
     }
-    sub_40B1B0((char)aActiverange, (int)(this + 880));
-    sub_40AF60(a2, aDecklength, (float *)this + 222);
-    sub_40AF60(a2, aPlaneelevatord, (float *)this + 223);
-    sub_40AF60(a2, aPlaneelevatort, (float *)this + 224);
-    sub_40AF60(a2, aTimebetweenlau, (float *)this + 225);
+    sub_40B1B0((char)aActiverange, (int)(self + 880));
+    sub_40AF60(a2, aDecklength, (float *)self + 222);
+    sub_40AF60(a2, aPlaneelevatord, (float *)self + 223);
+    sub_40AF60(a2, aPlaneelevatort, (float *)self + 224);
+    sub_40AF60(a2, aTimebetweenlau, (float *)self + 225);
     if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
     {
       v156 = (void **)sub_46A4A0(4);
     }
     else
     {
-      v230 = *(_DWORD *)(*((_DWORD *)this + 141) + 8);
+      v230 = *(_DWORD *)(*((_DWORD *)self + 141) + 8);
       v156 = (void **)sub_46A4C0(&v230, 4);
     }
     v157 = (char *)*v156;
@@ -1253,42 +1253,42 @@ LABEL_339:
           if ( k == 46 )
             break;
         }
-        sub_40A120(*v161 != 0, "%s, see %s : %s", aLaunchNodeNotN, *((const char **)this + 1), *(const char **)ArgList);
+        sub_40A120(*v161 != 0, "%s, see %s : %s", aLaunchNodeNotN, *((const char **)self + 1), *(const char **)ArgList);
         v163 = sub_48A1BB(v161) - 1;
-        v164 = *((_DWORD *)this + 227);
+        v164 = *((_DWORD *)self + 227);
         if ( v164 )
-          v165 = (*((_DWORD *)this + 228) - v164) >> 2;
+          v165 = (*((_DWORD *)self + 228) - v164) >> 2;
         else
           v165 = 0;
         v166 = v163 + 1;
         if ( v165 < v163 + 1 )
         {
-          v167 = *((_DWORD *)this + 227);
+          v167 = *((_DWORD *)self + 227);
           m = 0;
           if ( v167 )
-            v168 = (*((_DWORD *)this + 228) - v167) >> 2;
+            v168 = (*((_DWORD *)self + 228) - v167) >> 2;
           else
             v168 = 0;
           if ( v168 < v166 )
           {
             if ( v167 )
-              v169 = (*((_DWORD *)this + 228) - v167) >> 2;
+              v169 = (*((_DWORD *)self + 228) - v167) >> 2;
             else
               v169 = 0;
-            sub_44F190(*((_DWORD *)this + 228), v166 - v169, &m);
+            sub_44F190(*((_DWORD *)self + 228), v166 - v169, &m);
 LABEL_375:
             v138 = a2;
             goto LABEL_376;
           }
           if ( v167 )
           {
-            if ( v166 < (*((_DWORD *)this + 228) - v167) >> 2 )
-              sub_448300(v167 + 4 * v166, *((_DWORD *)this + 228));
+            if ( v166 < (*((_DWORD *)self + 228) - v167) >> 2 )
+              sub_448300(v167 + 4 * v166, *((_DWORD *)self + 228));
             goto LABEL_375;
           }
         }
 LABEL_376:
-        *(_DWORD *)(*((_DWORD *)this + 227) + 4 * v163) = *(_DWORD *)v235;
+        *(_DWORD *)(*((_DWORD *)self + 227) + 4 * v163) = *(_DWORD *)v235;
 LABEL_377:
         ++*(_DWORD *)v235;
       }
@@ -1296,16 +1296,16 @@ LABEL_377:
     }
   }
 LABEL_380:
-  *((float *)this + 230) = *((float *)this + 172) * 0.5;
+  *((float *)self + 230) = *((float *)self + 172) * 0.5;
   if ( sub_40ABC0(v138, aSpeedthreshold, 0) )
-    sub_40AF60(v138, aSpeedthreshold, (float *)this + 230);
+    sub_40AF60(v138, aSpeedthreshold, (float *)self + 230);
   if ( (unsigned __int8)sub_46A490(*(_DWORD *)(dword_520970 + 200)) )
   {
     *(_DWORD *)v235 = *(_DWORD *)sub_46A4A0(4);
   }
   else
   {
-    v230 = *(_DWORD *)(*((_DWORD *)this + 141) + 8);
+    v230 = *(_DWORD *)(*((_DWORD *)self + 141) + 8);
     *(_DWORD *)v235 = *(_DWORD *)sub_46A4C0(&v230, 4);
   }
   for ( m = 0; m < *(int *)v235; ++m )
@@ -1348,28 +1348,28 @@ LABEL_380:
         v176 = 0;
         v238 = 0;
       }
-      v178 = *((_DWORD *)this + 232);
+      v178 = *((_DWORD *)self + 232);
       LOBYTE(v247) = 5;
-      *((_DWORD *)this + 232) = ++v178;
+      *((_DWORD *)self + 232) = ++v178;
       v179 = v178;
-      v180 = *((_DWORD *)this + 233);
+      v180 = *((_DWORD *)self + 233);
       if ( v179 > v180 )
       {
-        v181 = (void *)*((_DWORD *)this + 231);
+        v181 = (void *)*((_DWORD *)self + 231);
         v182 = v180 + 8;
-        *((_DWORD *)this + 233) = v182;
+        *((_DWORD *)self + 233) = v182;
         v183 = sub_488DD7(v181, 4 * v182);
         if ( v183 )
         {
-          v184 = *((_DWORD *)this + 232);
-          v185 = *((_DWORD *)this + 233) - v184;
-          *((_DWORD *)this + 231) = v183;
+          v184 = *((_DWORD *)self + 232);
+          v185 = *((_DWORD *)self + 233) - v184;
+          *((_DWORD *)self + 231) = v183;
           memset((void *)(v183 + 4 * v184), 0, 4 * v185);
           v176 = v238;
         }
       }
       v186 = m;
-      *(_DWORD *)(*((_DWORD *)this + 231) + 4 * *((_DWORD *)this + 232) - 4) = v176;
+      *(_DWORD *)(*((_DWORD *)self + 231) + 4 * *((_DWORD *)self + 232) - 4) = v176;
       v176[7] = v186;
       for ( n = *v174; n; n = *++v174 )
       {
@@ -1398,7 +1398,7 @@ LABEL_380:
         sub_40A120(
           0,
           "could not find a gun id number for a gun in model file %s",
-          (const char *)(*((_DWORD *)this + 141) + 60));
+          (const char *)(*((_DWORD *)self + 141) + 60));
       }
       for ( ii = *v174; ii; ii = *++v174 )
       {
@@ -1427,7 +1427,7 @@ LABEL_380:
         sub_40A120(
           0,
           "could not find min angle for a gun in model file %s",
-          (const char *)(*((_DWORD *)this + 141) + 60));
+          (const char *)(*((_DWORD *)self + 141) + 60));
       }
       for ( kk = *v174; kk; kk = *++v174 )
       {
@@ -1456,7 +1456,7 @@ LABEL_380:
         sub_40A120(
           0,
           "could not find max angle for a gun in model file %s",
-          (const char *)(*((_DWORD *)this + 141) + 60));
+          (const char *)(*((_DWORD *)self + 141) + 60));
       }
       v229 = v242 * 0.017453292;
       v225 = v243 * 0.017453292;
@@ -1470,7 +1470,7 @@ LABEL_380:
       }
       else
       {
-        v230 = *(_DWORD *)(*((_DWORD *)this + 141) + 8);
+        v230 = *(_DWORD *)(*((_DWORD *)self + 141) + 8);
         *(_DWORD *)v235 = *(_DWORD *)sub_46A4C0(&v230, 4);
         v194 = *(_DWORD *)v235;
       }
@@ -1483,7 +1483,7 @@ LABEL_380:
         }
         else
         {
-          v230 = sub_405BB0(*((_DWORD **)this + 141), nn);
+          v230 = sub_405BB0(*((_DWORD **)self + 141), nn);
           v196 = (int *)sub_46A4C0(&v230, 4);
         }
         if ( *v196 < m )
@@ -1509,7 +1509,7 @@ LABEL_380:
       }
       else
       {
-        v230 = *(_DWORD *)(*((_DWORD *)this + 141) + 8);
+        v230 = *(_DWORD *)(*((_DWORD *)self + 141) + 8);
         v198 = (int *)sub_46A4C0(&v230, 4);
       }
       v199 = *v198;
@@ -1522,7 +1522,7 @@ LABEL_380:
         }
         else
         {
-          i2 = (char *)sub_405BB0(*((_DWORD **)this + 141), nn);
+          i2 = (char *)sub_405BB0(*((_DWORD **)self + 141), nn);
           v200 = (int *)sub_46A4C0(&i2, 4);
         }
         if ( *v200 < m )
@@ -1613,7 +1613,7 @@ LABEL_380:
       }
       else
       {
-        v239 = sub_405A30(*((_DWORD **)this + 141), asc_4A6264, v238[7], 1);
+        v239 = sub_405A30(*((_DWORD **)self + 141), asc_4A6264, v238[7], 1);
         v217 = (int *)sub_46A4C0(&v239, 4);
       }
       v218 = v238;
@@ -1625,11 +1625,11 @@ LABEL_380:
           v218[13] != -1,
           "%s, see %s : %s",
           aCollisionObjec,
-          *((const char **)this + 1),
+          *((const char **)self + 1),
           *(const char **)ArgList);
     }
   }
-  sub_42A840(this);
-  sub_4229D0("Finished loading %s in %s", *((const char **)this + 1), *(const char **)ArgList);
-  return this;
+  sub_42A840(self);
+  sub_4229D0("Finished loading %s in %s", *((const char **)self + 1), *(const char **)ArgList);
+  return self;
 }

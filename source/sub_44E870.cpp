@@ -1,5 +1,5 @@
 //----- (0044E870) --------------------------------------------------------
-char __thiscall sub_44E870(_DWORD *this)
+char __thiscall sub_44E870(_DWORD *self)
 {
   int i; // esi
   char result; // al
@@ -10,8 +10,8 @@ char __thiscall sub_44E870(_DWORD *this)
   int v8; // edi
 
   for ( i = 0; i < 128; ++i )
-    result = sub_44E7D0(this, i);
-  v4 = this + 6790;
+    result = sub_44E7D0(self, i);
+  v4 = self + 6790;
   v5 = 16;
   do
   {
@@ -27,7 +27,7 @@ char __thiscall sub_44E870(_DWORD *this)
     --v5;
   }
   while ( v5 );
-  v7 = this + 6854;
+  v7 = self + 6854;
   v8 = 64;
   do
   {

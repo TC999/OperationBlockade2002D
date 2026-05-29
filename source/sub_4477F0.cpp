@@ -1,5 +1,5 @@
 //----- (004477F0) --------------------------------------------------------
-int __thiscall sub_4477F0(int this, int a2)
+int __thiscall sub_4477F0(int self, int a2)
 {
   int v3; // ebx
   int v4; // eax
@@ -25,17 +25,17 @@ int __thiscall sub_4477F0(int this, int a2)
   float v24; // [esp+Ch] [ebp-Ch]
   float v25; // [esp+10h] [ebp-8h]
 
-  if ( *(_BYTE *)(this + 392) )
+  if ( *(_BYTE *)(self + 392) )
   {
     v3 = a2;
     if ( !*(_BYTE *)(dword_4F5CC4 + 937) && (_BYTE)a2 )
-      sub_462520(*(_DWORD *)(*(_DWORD *)(this + 408) + 300), dword_5216E8);
-    v4 = *(_DWORD *)(this + 408);
-    *(_BYTE *)(this + 392) = 0;
+      sub_462520(*(_DWORD *)(*(_DWORD *)(self + 408) + 300), dword_5216E8);
+    v4 = *(_DWORD *)(self + 408);
+    *(_BYTE *)(self + 392) = 0;
     sub_45A420(*(_DWORD *)(dword_520970 + 236), v4, a2, *(_DWORD *)(v4 + 292) == 5, 1);
     if ( (_BYTE)a2 )
     {
-      v5 = *(_DWORD *)(this + 408);
+      v5 = *(_DWORD *)(self + 408);
       if ( *(_DWORD *)(v5 + 292) == 2 )
       {
         v21 = *(_DWORD *)(v5 + 836);
@@ -44,18 +44,18 @@ int __thiscall sub_4477F0(int this, int a2)
         sub_45A420(v6, v7, a2, 0, v21);
         if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
         {
-          v8 = *(_DWORD *)(this + 408);
+          v8 = *(_DWORD *)(self + 408);
           v24 = *(float *)(v8 + 840);
           v25 = *(float *)(v8 + 844);
           if ( v24 == v25 )
             v9 = v24;
           else
             v9 = fabs((double)rand() * 0.000030518509) * (v25 - v24) + v24;
-          v10 = (__int64)((double)*(int *)(*(_DWORD *)(this + 408) + 836) * v9);
-          v11 = *(_DWORD *)(*(_DWORD *)(this + 408) + 836) - v10;
+          v10 = (__int64)((double)*(int *)(*(_DWORD *)(self + 408) + 836) * v9);
+          v11 = *(_DWORD *)(*(_DWORD *)(self + 408) + 836) - v10;
           if ( (int)v10 > 0 )
           {
-            v12 = (__int64)((double)*(int *)(*(_DWORD *)(this + 408) + 836) * v9);
+            v12 = (__int64)((double)*(int *)(*(_DWORD *)(self + 408) + 836) * v9);
             do
             {
               v22 = dword_5216E8;
@@ -81,24 +81,24 @@ int __thiscall sub_4477F0(int this, int a2)
         }
       }
     }
-    if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 6 )
+    if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 6 )
     {
-      v16 = *(_DWORD *)(this + 1408) * *(_DWORD *)(this + 1412);
+      v16 = *(_DWORD *)(self + 1408) * *(_DWORD *)(self + 1412);
       if ( v16 > 0 )
       {
         sub_45A420(
           *(_DWORD *)(dword_520970 + 236),
-          *(_DWORD *)(this + 1416),
+          *(_DWORD *)(self + 1416),
           v3,
           0,
-          *(_DWORD *)(this + 1408) * *(_DWORD *)(this + 1412));
+          *(_DWORD *)(self + 1408) * *(_DWORD *)(self + 1412));
         if ( (_BYTE)v3 )
         {
           if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
           {
             do
             {
-              sub_462520(*(_DWORD *)(*(_DWORD *)(this + 1416) + 592), dword_5216E8);
+              sub_462520(*(_DWORD *)(*(_DWORD *)(self + 1416) + 592), dword_5216E8);
               --v16;
             }
             while ( v16 );
@@ -111,23 +111,23 @@ int __thiscall sub_4477F0(int this, int a2)
   {
     v3 = a2;
   }
-  if ( *(_DWORD *)(*(_DWORD *)(this + 408) + 292) == 3 && (_BYTE)v3 )
+  if ( *(_DWORD *)(*(_DWORD *)(self + 408) + 292) == 3 && (_BYTE)v3 )
   {
     for ( i = 0; ; ++i )
     {
-      v18 = *(_DWORD *)(this + 524);
-      if ( !v18 || i >= (*(_DWORD *)(this + 528) - v18) >> 2 )
+      v18 = *(_DWORD *)(self + 524);
+      if ( !v18 || i >= (*(_DWORD *)(self + 528) - v18) >> 2 )
         break;
       sub_467A50(v3);
     }
   }
-  result = *(_DWORD *)(this + 408);
+  result = *(_DWORD *)(self + 408);
   if ( *(_DWORD *)(result + 292) == 6 )
   {
     for ( j = 0; ; ++j )
     {
-      result = *(_DWORD *)(this + 1392);
-      if ( !result || j >= (*(_DWORD *)(this + 1396) - result) >> 2 )
+      result = *(_DWORD *)(self + 1392);
+      if ( !result || j >= (*(_DWORD *)(self + 1396) - result) >> 2 )
         break;
       sub_4333C0(*(_DWORD *)(result + 4 * j), v3);
     }

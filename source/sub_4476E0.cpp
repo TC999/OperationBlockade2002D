@@ -1,5 +1,5 @@
 //----- (004476E0) --------------------------------------------------------
-int __thiscall sub_4476E0(_DWORD *this, int a2, int a3)
+int __thiscall sub_4476E0(_DWORD *self, int a2, int a3)
 {
   int v3; // esi
   int result; // eax
@@ -9,7 +9,7 @@ int __thiscall sub_4476E0(_DWORD *this, int a2, int a3)
   {
     do
     {
-      result = sub_465E00(a3, this[364]);
+      result = sub_465E00(a3, self[364]);
       --v3;
     }
     while ( v3 );

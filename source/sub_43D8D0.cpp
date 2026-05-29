@@ -1,5 +1,5 @@
 //----- (0043D8D0) --------------------------------------------------------
-int __thiscall sub_43D8D0(_DWORD *this)
+int __thiscall sub_43D8D0(_DWORD *self)
 {
   int v2; // edi
   int v3; // ebp
@@ -22,8 +22,8 @@ int __thiscall sub_43D8D0(_DWORD *this)
   v18 = v2;
   if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
     sub_45EA00(v2);
-  this[14] = 0;
-  this[13] = 0;
+  self[14] = 0;
+  self[13] = 0;
   v3 = dword_520970;
   v4 = 0;
   v17 = *(_DWORD *)(*(_DWORD *)(dword_520970 + 280) + 11784);
@@ -37,9 +37,9 @@ int __thiscall sub_43D8D0(_DWORD *this)
       if ( v7 > 0 )
       {
         v8 = v7 * *(_DWORD *)(v6 + 296);
-        v9 = this[13] + 1;
-        this[14] += v8;
-        this[13] = v9;
+        v9 = self[13] + 1;
+        self[14] += v8;
+        self[13] = v9;
         v3 = dword_520970;
       }
       ++v4;
@@ -53,17 +53,17 @@ int __thiscall sub_43D8D0(_DWORD *this)
     v12 = *(float *)(352 * v11 + v10 + 924);
   else
     v12 = 0.0;
-  this[14] += (__int64)v12;
+  self[14] += (__int64)v12;
   sub_4624D0((__int64)v12);
-  v13 = this[14];
-  this[16] = v13;
+  v13 = self[14];
+  self[16] = v13;
   if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
   {
-    this[15] = sub_45E9B0(v2, v13);
-    this[16] = sub_45EA60(*(_DWORD *)(dword_520970 + 280));
+    self[15] = sub_45E9B0(v2, v13);
+    self[16] = sub_45EA60(*(_DWORD *)(dword_520970 + 280));
   }
-  v14 = sub_424350(this, aLevelscore);
-  sub_421190(*((_DWORD *)v14 + 28), "%d", this[14]);
-  v15 = sub_424350(this, aGamescore);
-  return sub_421190(*((_DWORD *)v15 + 28), "%d", this[16]);
+  v14 = sub_424350(self, aLevelscore);
+  sub_421190(*((_DWORD *)v14 + 28), "%d", self[14]);
+  v15 = sub_424350(self, aGamescore);
+  return sub_421190(*((_DWORD *)v15 + 28), "%d", self[16]);
 }

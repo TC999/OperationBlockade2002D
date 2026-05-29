@@ -1,11 +1,11 @@
 //----- (00406980) --------------------------------------------------------
-int __thiscall sub_406980(_DWORD *this)
+int __thiscall sub_406980(_DWORD *self)
 {
   int result; // eax
   int v2; // edx
 
-  result = this[5];
-  *this = &off_4990C8;
+  result = self[5];
+  *self = &off_4990C8;
   if ( result )
   {
     do
@@ -17,7 +17,7 @@ int __thiscall sub_406980(_DWORD *this)
     }
     while ( v2 );
   }
-  this[5] = 0;
-  *this = &off_499040;
+  self[5] = 0;
+  *self = &off_499040;
   return result;
 }

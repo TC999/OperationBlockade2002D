@@ -1,5 +1,5 @@
 //----- (0043AC00) --------------------------------------------------------
-char __thiscall sub_43AC00(int this, char *String1, int a3)
+char __thiscall sub_43AC00(int self, char *String1, int a3)
 {
   int v5; // ecx
   _DWORD *v6; // eax
@@ -15,11 +15,11 @@ char __thiscall sub_43AC00(int this, char *String1, int a3)
 
   if ( String1 && !_strcmpi(String1, aOkbutton) )
   {
-    sub_43AB00((_DWORD *)this);
-    sub_4261C0(*(_DWORD **)(this + 40), byte_521688, 0);
+    sub_43AB00((_DWORD *)self);
+    sub_4261C0(*(_DWORD **)(self + 40), byte_521688, 0);
     return 1;
   }
-  if ( String1 == *(char **)(this + 56) )
+  if ( String1 == *(char **)(self + 56) )
   {
     if ( a3 )
     {
@@ -36,9 +36,9 @@ char __thiscall sub_43AC00(int this, char *String1, int a3)
       if ( *(int *)&dword_4A34C0 > 100 )
         *(_DWORD *)&dword_4A34C0 = 0;
     }
-    sub_421190(*(_DWORD *)(*(_DWORD *)(this + 56) + 112), "%d%%", *(_DWORD *)&dword_4A34C0);
+    sub_421190(*(_DWORD *)(*(_DWORD *)(self + 56) + 112), "%d%%", *(_DWORD *)&dword_4A34C0);
     sub_422DC0((HKEY)AppName, aVolume, *(int *)&dword_4A34C0);
-    v5 = *(_DWORD *)(this + 80);
+    v5 = *(_DWORD *)(self + 80);
     if ( v5 )
     {
       sub_41D860(v5);
@@ -55,35 +55,35 @@ char __thiscall sub_43AC00(int this, char *String1, int a3)
         v13 = v6[1];
         v14 = v6[2];
       }
-      sub_41D960(*(_DWORD **)(this + 80), &v12, v15);
-      sub_41D840(*(_DWORD *)(this + 80));
+      sub_41D960(*(_DWORD **)(self + 80), &v12, v15);
+      sub_41D840(*(_DWORD *)(self + 80));
       return 1;
     }
     return 1;
   }
-  if ( String1 != *(char **)(this + 52) )
+  if ( String1 != *(char **)(self + 52) )
   {
-    v8 = *(_DWORD *)(this + 48);
+    v8 = *(_DWORD *)(self + 48);
     if ( String1 == (char *)v8 )
     {
       if ( a3 )
       {
         if ( a3 == 1 )
         {
-          v10 = *(_DWORD *)(this + 44) - 1;
-          *(_DWORD *)(this + 44) = v10;
+          v10 = *(_DWORD *)(self + 44) - 1;
+          *(_DWORD *)(self + 44) = v10;
           if ( v10 < 0 )
-            *(_DWORD *)(this + 44) = 2;
+            *(_DWORD *)(self + 44) = 2;
         }
       }
       else
       {
-        v9 = *(_DWORD *)(this + 44) + 1;
-        *(_DWORD *)(this + 44) = v9;
+        v9 = *(_DWORD *)(self + 44) + 1;
+        *(_DWORD *)(self + 44) = v9;
         if ( v9 >= 3 )
-          *(_DWORD *)(this + 44) = 0;
+          *(_DWORD *)(self + 44) = 0;
       }
-      v11 = *(_DWORD *)(this + 44);
+      v11 = *(_DWORD *)(self + 44);
       switch ( v11 )
       {
         case 0:
@@ -114,7 +114,7 @@ char __thiscall sub_43AC00(int this, char *String1, int a3)
     if ( *(int *)&dword_4A1EC4 > 100 )
       *(_DWORD *)&dword_4A1EC4 = 10;
   }
-  sub_421190(*(_DWORD *)(*(_DWORD *)(this + 52) + 112), "%d%%", *(_DWORD *)&dword_4A1EC4);
+  sub_421190(*(_DWORD *)(*(_DWORD *)(self + 52) + 112), "%d%%", *(_DWORD *)&dword_4A1EC4);
   sub_422DC0((HKEY)AppName, aMousespeed, *(int *)&dword_4A1EC4);
   return 1;
 }

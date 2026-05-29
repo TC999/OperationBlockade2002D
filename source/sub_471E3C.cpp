@@ -1,5 +1,5 @@
 //----- (00471E3C) --------------------------------------------------------
-unsigned int __thiscall sub_471E3C(_DWORD *this, _BYTE *a2, unsigned int a3)
+unsigned int __thiscall sub_471E3C(_DWORD *self, _BYTE *a2, unsigned int a3)
 {
   _BYTE *v4; // edi
   bool v5; // zf
@@ -67,19 +67,19 @@ unsigned int __thiscall sub_471E3C(_DWORD *this, _BYTE *a2, unsigned int a3)
             if ( !v6 )
               return -2147467259;
             v8 = operator new(4 * v13 * v6);
-            this[1] = v8;
+            self[1] = v8;
             if ( !v8 )
               return -2147024882;
-            this[3] = 0;
+            self[3] = 0;
             a2 = v8;
-            this[4] = 0;
+            self[4] = 0;
             v14 = &v8[4 * v13 * v6];
             v4 = v15;
-            this[8] = 1;
-            *this = 22;
-            this[2] = 4 * v13;
-            this[5] = v13;
-            this[6] = v6;
+            self[8] = 1;
+            *self = 22;
+            self[2] = 4 * v13;
+            self[5] = v13;
+            self[6] = v6;
             goto LABEL_38;
           }
           if ( v17 != 2 )

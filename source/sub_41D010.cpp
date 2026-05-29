@@ -1,11 +1,11 @@
 //----- (0041D010) --------------------------------------------------------
-char __thiscall sub_41D010(_DWORD *this, float a2)
+char __thiscall sub_41D010(_DWORD *self, float a2)
 {
   int v2; // esi
   double v4; // st7
   char v5; // [esp+0h] [ebp-4h]
 
-  v2 = this[8];
+  v2 = self[8];
   if ( !v2 )
     return 0;
   v4 = a2;

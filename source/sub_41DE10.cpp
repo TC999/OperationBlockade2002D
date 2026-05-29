@@ -1,5 +1,5 @@
 //----- (0041DE10) --------------------------------------------------------
-char *__thiscall sub_41DE10(_DWORD *this, char *String2, int a3, char a4, char a5, char a6, char a7)
+char *__thiscall sub_41DE10(_DWORD *self, char *String2, int a3, char a4, char a5, char a6, char a7)
 {
   int v8; // esi
   char *v9; // ebp
@@ -42,12 +42,12 @@ char *__thiscall sub_41DE10(_DWORD *this, char *String2, int a3, char a4, char a
 
   v8 = 0;
   v9 = 0;
-  v43 = this[6];
+  v43 = self[6];
   if ( v43 > 0 )
   {
     while ( 1 )
     {
-      v10 = *(_DWORD *)(this[5] + 4 * v8);
+      v10 = *(_DWORD *)(self[5] + 4 * v8);
       if ( !_strcmpi((const char *)(v10 + 4), String2) )
         break;
       if ( ++v8 >= v43 )
@@ -100,25 +100,25 @@ LABEL_6:
 LABEL_26:
     if ( v42 )
     {
-      v24 = this[7];
-      v25 = this[6] + 1;
-      this[6] = v25;
+      v24 = self[7];
+      v25 = self[6] + 1;
+      self[6] = v25;
       if ( v25 > v24 )
       {
-        v26 = (void *)this[5];
+        v26 = (void *)self[5];
         v27 = v24 + 8;
-        this[7] = v27;
+        self[7] = v27;
         v28 = sub_488DD7(v26, 4 * v27);
         if ( v28 )
         {
-          v29 = this[6];
-          v30 = this[7] - v29;
-          this[5] = v28;
+          v29 = self[6];
+          v30 = self[7] - v29;
+          self[5] = v28;
           memset((void *)(v28 + 4 * v29), 0, 4 * v30);
           v12 = a3;
         }
       }
-      *(_DWORD *)(this[5] + 4 * this[6] - 4) = v9;
+      *(_DWORD *)(self[5] + 4 * self[6] - 4) = v9;
     }
     v31 = v12;
     v32 = v12 - 1;

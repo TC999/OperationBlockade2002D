@@ -1,5 +1,5 @@
 //----- (00467BA0) --------------------------------------------------------
-void __thiscall sub_467BA0(int this, float a2)
+void __thiscall sub_467BA0(int self, float a2)
 {
   int v3; // esi
   int v4; // ecx
@@ -52,7 +52,7 @@ void __thiscall sub_467BA0(int this, float a2)
     case 0x802:
       if ( *(_BYTE *)(dword_4F5CC4 + 937) )
       {
-        v22 = *(_DWORD *)(this + 452);
+        v22 = *(_DWORD *)(self + 452);
         if ( v22 )
         {
           v44 = *(__int16 *)(v3 + 13);
@@ -67,9 +67,9 @@ void __thiscall sub_467BA0(int this, float a2)
           v26 = *(__int16 *)(v3 + 17);
           v46 = (double)v25 * 0.0039215689;
           v27 = sub_417190(v22, *(__int16 *)(v3 + 8), v35, v32);
-          sub_415930(*(_DWORD *)(this + 452), v26, v46);
+          sub_415930(*(_DWORD *)(self + 452), v26, v46);
           if ( v27 )
-            *(_BYTE *)(this + 436) = 1;
+            *(_BYTE *)(self + 436) = 1;
         }
       }
       break;
@@ -84,13 +84,13 @@ void __thiscall sub_467BA0(int this, float a2)
         v34[1] = v10;
         v13 = *(float *)(v3 + 24);
         v34[2] = v11;
-        v14 = sub_4666E0((char *)this, *(_DWORD *)(v3 + 8), (int)v34, v13, v12);
+        v14 = sub_4666E0((char *)self, *(_DWORD *)(v3 + 8), (int)v34, v13, v12);
         if ( v14 )
         {
           v15 = sub_411B60(dword_4F5CC4, *(_DWORD *)(LODWORD(a2) + 4));
           if ( v15 )
           {
-            v31 = *(const char **)(*(_DWORD *)(this + 412) + 4);
+            v31 = *(const char **)(*(_DWORD *)(self + 412) + 4);
             v29 = (const char *)(v15 + 3);
             v16 = sub_436A90(*(_DWORD *)(dword_520970 + 224));
             sub_421190(v16, "%s destroyed a %s", v29, v31);
@@ -99,7 +99,7 @@ void __thiscall sub_467BA0(int this, float a2)
         }
         v17 = *(_DWORD *)(v3 + 12);
         v18 = *(_DWORD *)(v3 + 16);
-        v36[3] = *(_WORD *)(this + 392);
+        v36[3] = *(_WORD *)(self + 392);
         v19 = *(_DWORD *)(v3 + 20);
         v38 = v17;
         v20 = *(_DWORD *)(v3 + 24);
@@ -126,13 +126,13 @@ void __thiscall sub_467BA0(int this, float a2)
       v33[1] = v4;
       v7 = *(float *)(v3 + 24);
       v33[2] = v5;
-      sub_4666E0((char *)this, *(_DWORD *)(v3 + 8), (int)v33, v7, v6);
+      sub_4666E0((char *)self, *(_DWORD *)(v3 + 8), (int)v33, v7, v6);
       if ( *(_DWORD *)(v3 + 29) )
       {
         v8 = sub_411B60(dword_4F5CC4, *(_DWORD *)(v3 + 29));
         if ( v8 )
         {
-          v30 = *(const char **)(*(_DWORD *)(this + 412) + 4);
+          v30 = *(const char **)(*(_DWORD *)(self + 412) + 4);
           v28 = (const char *)(v8 + 3);
           v9 = sub_436A90(*(_DWORD *)(dword_520970 + 224));
           sub_421190(v9, "%s destroyed a %s", v28, v30);

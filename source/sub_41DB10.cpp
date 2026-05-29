@@ -1,5 +1,5 @@
 //----- (0041DB10) --------------------------------------------------------
-int __thiscall sub_41DB10(_DWORD *this)
+int __thiscall sub_41DB10(_DWORD *self)
 {
   _DWORD *v1; // ebx
   int i; // esi
@@ -35,8 +35,8 @@ int __thiscall sub_41DB10(_DWORD *this)
   int v33; // [esp+18h] [ebp-14h]
   LPVOID *v34; // [esp+1Ch] [ebp-10h]
 
-  v1 = this;
-  *this = &off_4992B4;
+  v1 = self;
+  *self = &off_4992B4;
   for ( i = 0; i < 17920; i += 140 )
   {
     v3 = v1[9];
@@ -98,7 +98,7 @@ int __thiscall sub_41DB10(_DWORD *this)
               *(_DWORD *)(*(_DWORD *)(v9 + 280) + 4 * *(_DWORD *)(v9 + 284)) = 0;
             }
 LABEL_20:
-            v1 = this;
+            v1 = self;
           }
           if ( v34 )
           {
@@ -122,7 +122,7 @@ LABEL_20:
             sub_4885A6(v18);
           }
         }
-        v1 = this;
+        v1 = self;
       }
       memset(*v16, 0, 4 * *(_DWORD *)(v9 + 284));
       v29 = *v16;

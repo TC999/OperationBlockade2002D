@@ -1,5 +1,5 @@
 //----- (0047406E) --------------------------------------------------------
-int __thiscall sub_47406E(float *this, int a2, int a3, float *a4)
+int __thiscall sub_47406E(float *self, int a2, int a3, float *a4)
 {
   _WORD *v5; // edi
   unsigned int v6; // ebx
@@ -18,10 +18,10 @@ int __thiscall sub_47406E(float *this, int a2, int a3, float *a4)
   float v20; // [esp+3Ch] [ebp+8h]
   float *v21; // [esp+40h] [ebp+Ch]
 
-  v5 = (_WORD *)(*((_DWORD *)this + 6) + a3 * *((_DWORD *)this + 1043) + a2 * *((_DWORD *)this + 1042));
-  v15 = *((_DWORD *)this + 11) + 4 * ((a3 & 3) + 8 * (a2 & 3));
+  v5 = (_WORD *)(*((_DWORD *)self + 6) + a3 * *((_DWORD *)self + 1043) + a2 * *((_DWORD *)self + 1042));
+  v15 = *((_DWORD *)self + 11) + 4 * ((a3 & 3) + 8 * (a2 & 3));
   v6 = 0;
-  v7 = *((_DWORD *)this + 1044) == 0;
+  v7 = *((_DWORD *)self + 1044) == 0;
   dword_52230C = v17;
   if ( !v7 )
   {
@@ -31,7 +31,7 @@ int __thiscall sub_47406E(float *this, int a2, int a3, float *a4)
       v16 = 0;
       v19 = 0;
       v14 = *(float *)(v15 + 4 * (v6 & 3));
-      v21 = this + 12;
+      v21 = self + 12;
       do
       {
         sub_473397(a4, &v10, v21);
@@ -49,7 +49,7 @@ int __thiscall sub_47406E(float *this, int a2, int a3, float *a4)
       *v5++ = v16 | v8;
       ++v6;
     }
-    while ( v6 < *((_DWORD *)this + 1044) );
+    while ( v6 < *((_DWORD *)self + 1044) );
   }
   return v17;
 }

@@ -1,5 +1,5 @@
 //----- (0040EDB0) --------------------------------------------------------
-int __thiscall sub_40EDB0(int this, int a2)
+int __thiscall sub_40EDB0(int self, int a2)
 {
   int v3; // ecx
   double v4; // st7
@@ -93,15 +93,15 @@ int __thiscall sub_40EDB0(int this, int a2)
     if ( sub_408F40(29) || sub_408F40(157) )
       v39 = v39 * 20.0;
   }
-  v6 = (float *)(this + 32);
-  v7 = *(float *)(this + 396);
-  v49 = *(float *)(this + 400);
-  *(float *)(this + 32) = *(float *)(this + 392);
-  *(float *)(this + 36) = v7;
-  *(float *)(this + 40) = v49;
-  *(float *)&v52 = *(float *)(this + 44) - *(float *)(this + 32);
-  v53 = *(float *)(this + 48) - *(float *)(this + 36);
-  v54 = *(float *)(this + 52) - *(float *)(this + 40);
+  v6 = (float *)(self + 32);
+  v7 = *(float *)(self + 396);
+  v49 = *(float *)(self + 400);
+  *(float *)(self + 32) = *(float *)(self + 392);
+  *(float *)(self + 36) = v7;
+  *(float *)(self + 40) = v49;
+  *(float *)&v52 = *(float *)(self + 44) - *(float *)(self + 32);
+  v53 = *(float *)(self + 48) - *(float *)(self + 36);
+  v54 = *(float *)(self + 52) - *(float *)(self + 40);
   sub_46B970(&v52, &v52);
   if ( *(float *)&v52 < 0.0000099999997
     && *(float *)&v52 > -0.0000099999997
@@ -125,7 +125,7 @@ int __thiscall sub_40EDB0(int this, int a2)
   v59 = v46;
   sub_46B970(&v58, &v58);
   v10 = v61;
-  if ( *(_BYTE *)(this + 416) )
+  if ( *(_BYTE *)(self + 416) )
     v11 = v10 * 0.5 * 0.017453292;
   else
     v11 = v10 * -0.5 * 0.017453292;
@@ -135,19 +135,19 @@ int __thiscall sub_40EDB0(int this, int a2)
   v45 = v59 * v54 - v60 * v53;
   v12 = v60 * *(float *)&v52;
   v13 = *(float *)&v58 * v54;
-  *(float *)(this + 56) = v45;
+  *(float *)(self + 56) = v45;
   v47 = v12 - v13;
   v14 = *(float *)&v58 * v53;
   v15 = v59 * *(float *)&v52;
-  *(float *)(this + 60) = v47;
+  *(float *)(self + 60) = v47;
   v50 = v14 - v15;
-  *(float *)(this + 64) = v50;
-  sub_46B970(this + 56, this + 56);
+  *(float *)(self + 64) = v50;
+  sub_46B970(self + 56, self + 56);
   if ( !*(_BYTE *)(dword_520970 + 296) )
   {
     if ( sub_408F40(17) )
     {
-      v41 = *(float *)(this + 412);
+      v41 = *(float *)(self + 412);
       v48 = v53 * v39;
       v51 = v54 * v39;
       v56 = v48 * v41;
@@ -155,12 +155,12 @@ int __thiscall sub_40EDB0(int this, int a2)
       v47 = v56 * v66;
       v50 = v57 * v66;
       *v6 = *(float *)&v52 * v39 * v41 * v66 + *v6;
-      *(float *)(this + 36) = v47 + *(float *)(this + 36);
-      *(float *)(this + 40) = v50 + *(float *)(this + 40);
+      *(float *)(self + 36) = v47 + *(float *)(self + 36);
+      *(float *)(self + 40) = v50 + *(float *)(self + 40);
     }
     if ( sub_408F40(31) )
     {
-      v42 = *(float *)(this + 412);
+      v42 = *(float *)(self + 412);
       v56 = v53 * v39;
       v57 = v54 * v39;
       v47 = v56 * v42;
@@ -168,12 +168,12 @@ int __thiscall sub_40EDB0(int this, int a2)
       v56 = v47 * v66;
       v57 = v50 * v66;
       *v6 = *v6 - *(float *)&v52 * v39 * v42 * v66;
-      *(float *)(this + 36) = *(float *)(this + 36) - v56;
-      *(float *)(this + 40) = *(float *)(this + 40) - v57;
+      *(float *)(self + 36) = *(float *)(self + 36) - v56;
+      *(float *)(self + 40) = *(float *)(self + 40) - v57;
     }
     if ( sub_408F40(30) )
     {
-      v43 = *(float *)(this + 412);
+      v43 = *(float *)(self + 412);
       v56 = v59 * v39;
       v57 = v60 * v39;
       v47 = v56 * v43;
@@ -181,8 +181,8 @@ int __thiscall sub_40EDB0(int this, int a2)
       v56 = v47 * v66;
       v57 = v50 * v66;
       *v6 = *v6 - *(float *)&v58 * v39 * v43 * v66;
-      *(float *)(this + 36) = *(float *)(this + 36) - v56;
-      *(float *)(this + 40) = *(float *)(this + 40) - v57;
+      *(float *)(self + 36) = *(float *)(self + 36) - v56;
+      *(float *)(self + 40) = *(float *)(self + 40) - v57;
     }
     if ( sub_408F40(32) )
     {
@@ -190,7 +190,7 @@ int __thiscall sub_40EDB0(int this, int a2)
       v27 = v59 * v39;
       v23 = *(float *)&v58 * v39;
       sub_40F4A0(LODWORD(v23), LODWORD(v27), LODWORD(v33));
-      v16 = *(float *)(this + 412);
+      v16 = *(float *)(self + 412);
       v34 = v57 * v16;
       v28 = v56 * v16;
       v24 = v55 * v16;
@@ -200,28 +200,28 @@ int __thiscall sub_40EDB0(int this, int a2)
       v25 = v45 * v66;
       sub_40F4A0(LODWORD(v25), LODWORD(v29), LODWORD(v35));
       *v6 = v62 + *v6;
-      *(float *)(this + 36) = v63 + *(float *)(this + 36);
-      *(float *)(this + 40) = v64 + *(float *)(this + 40);
+      *(float *)(self + 36) = v63 + *(float *)(self + 36);
+      *(float *)(self + 40) = v64 + *(float *)(self + 40);
     }
     if ( sub_408F40(16) )
-      *(float *)(this + 40) = v39 * *(float *)(this + 412) * v66 + *(float *)(this + 40);
+      *(float *)(self + 40) = v39 * *(float *)(self + 412) * v66 + *(float *)(self + 40);
     if ( sub_408F40(44) )
-      *(float *)(this + 40) = *(float *)(this + 40) - v39 * *(float *)(this + 412) * v66;
+      *(float *)(self + 40) = *(float *)(self + 40) - v39 * *(float *)(self + 412) * v66;
   }
-  v36 = v54 + *(float *)(this + 40);
-  v30 = v53 + *(float *)(this + 36);
+  v36 = v54 + *(float *)(self + 40);
+  v30 = v53 + *(float *)(self + 36);
   v26 = *(float *)&v52 + *v6;
   sub_40F4A0(LODWORD(v26), LODWORD(v30), LODWORD(v36));
   v17 = v63;
   v18 = v64;
-  *(float *)(this + 44) = v62;
+  *(float *)(self + 44) = v62;
   v19 = *v6;
-  *(float *)(this + 48) = v17;
-  v20 = *(_DWORD *)(this + 36);
-  *(float *)(this + 392) = v19;
-  *(float *)(this + 52) = v18;
-  v21 = *(_DWORD *)(this + 40);
-  *(_DWORD *)(this + 396) = v20;
-  *(_DWORD *)(this + 400) = v21;
+  *(float *)(self + 48) = v17;
+  v20 = *(_DWORD *)(self + 36);
+  *(float *)(self + 392) = v19;
+  *(float *)(self + 52) = v18;
+  v21 = *(_DWORD *)(self + 40);
+  *(_DWORD *)(self + 396) = v20;
+  *(_DWORD *)(self + 400) = v21;
   return sub_428620(LODWORD(v66));
 }

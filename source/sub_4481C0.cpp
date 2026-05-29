@@ -1,11 +1,11 @@
 //----- (004481C0) --------------------------------------------------------
-int __thiscall sub_4481C0(_DWORD *this)
+int __thiscall sub_4481C0(_DWORD *self)
 {
   int v1; // edx
 
-  v1 = this[1];
+  v1 = self[1];
   if ( v1 )
-    return (this[2] - v1) >> 2;
+    return (self[2] - v1) >> 2;
   else
     return 0;
 }

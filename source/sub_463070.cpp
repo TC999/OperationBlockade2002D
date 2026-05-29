@@ -1,12 +1,12 @@
 //----- (00463070) --------------------------------------------------------
-int __thiscall sub_463070(_DWORD *this)
+int __thiscall sub_463070(_DWORD *self)
 {
   _DWORD *v1; // edx
   int v2; // esi
   int result; // eax
   void *v4; // edi
 
-  v1 = this + 231;
+  v1 = self + 231;
   v2 = 4;
   do
   {

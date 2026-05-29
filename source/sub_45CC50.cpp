@@ -1,5 +1,5 @@
 //----- (0045CC50) --------------------------------------------------------
-_DWORD *__thiscall sub_45CC50(_DWORD *this, _DWORD *a2, _DWORD *a3)
+_DWORD *__thiscall sub_45CC50(_DWORD *self, _DWORD *a2, _DWORD *a3)
 {
   _DWORD *v3; // edx
   _DWORD *v4; // esi
@@ -10,7 +10,7 @@ _DWORD *__thiscall sub_45CC50(_DWORD *this, _DWORD *a2, _DWORD *a3)
 
   v3 = a3;
   v4 = a2;
-  v5 = (_DWORD *)this[2];
+  v5 = (_DWORD *)self[2];
   if ( a3 != v5 )
   {
     do
@@ -26,6 +26,6 @@ _DWORD *__thiscall sub_45CC50(_DWORD *this, _DWORD *a2, _DWORD *a3)
     while ( v3 != v5 );
   }
   result = a2;
-  this[2] = v4;
+  self[2] = v4;
   return result;
 }
