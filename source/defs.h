@@ -425,7 +425,7 @@ void __noreturn __break(uint16 code, uint16 subcode);
 
 #ifdef _MSC_VER
 #define snprintf _snprintf
-#define vsnprintf _vsnprintf
+// vsnprintf is defined in standard library, don't redefine
 #endif
 
 // The ADJ() macro is used for shifted pointers.
