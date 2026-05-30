@@ -1,5 +1,5 @@
 //----- (00403FE0) --------------------------------------------------------
-char __thiscall sub_403FE0(void *self)
+char __cdecl sub_403FE0(void *self)
 {
   void *v1; // ebp
   bool v2; // bl

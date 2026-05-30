@@ -1,5 +1,5 @@
 //----- (00423120) --------------------------------------------------------
-double __thiscall sub_423120(int *self)
+double __cdecl sub_423120(int *self)
 {
   int v1; // edx
   double v2; // st7

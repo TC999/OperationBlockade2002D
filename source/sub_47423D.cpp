@@ -1,5 +1,5 @@
 //----- (0047423D) --------------------------------------------------------
-int __thiscall sub_47423D(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_47423D(_DWORD *self, int a2, int a3, int a4)
 {
   _BYTE *v4; // edx
   int v5; // edi

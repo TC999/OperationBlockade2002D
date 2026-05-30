@@ -1,5 +1,5 @@
 //----- (0045B3E0) --------------------------------------------------------
-char __thiscall sub_45B3E0(int self, float *a2)
+char __cdecl sub_45B3E0(int self, float *a2)
 {
   int v2; // ebp
   int v3; // edi

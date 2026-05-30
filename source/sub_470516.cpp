@@ -1,5 +1,5 @@
 //----- (00470516) --------------------------------------------------------
-int *__usercall sub_470516(unsigned int a1, unsigned int a2, int a3)
+int *__cdecl sub_470516(unsigned int a1, unsigned int a2, int a3)
 {
   int *result; // eax
   int *v4; // esi

@@ -1,5 +1,5 @@
 //----- (0041DE10) --------------------------------------------------------
-char *__thiscall sub_41DE10(_DWORD *self, char *String2, int a3, char a4, char a5, char a6, char a7)
+char *__cdecl sub_41DE10(_DWORD *self, char *String2, int a3, char a4, char a5, char a6, char a7)
 {
   int v8; // esi
   char *v9; // ebp

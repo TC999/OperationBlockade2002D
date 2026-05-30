@@ -1,5 +1,5 @@
 //----- (00447AA0) --------------------------------------------------------
-void __thiscall sub_447AA0(_DWORD *self, float a2)
+void __cdecl sub_447AA0(_DWORD *self, float a2)
 {
   int v3; // esi
   float v4; // eax
@@ -64,7 +64,7 @@ void __thiscall sub_447AA0(_DWORD *self, float a2)
           v11 = sub_417190(v8, v9, v29, v28);
           sub_415930(*(_DWORD *)(v5 + 444), v10, v39);
           if ( v11 )
-            (*(void (__thiscall **)(int, int))(*(_DWORD *)v5 + 24))(v5, 1);
+            (*(void (__cdecl **)(int, int))(*(_DWORD *)v5 + 24))(v5, 1);
           v12 = *(_BYTE *)(v5 + 440);
           v13 = *(_BYTE *)(v3 + 18);
           if ( v12 != v13 && !v12 )

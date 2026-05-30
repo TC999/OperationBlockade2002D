@@ -1,5 +1,5 @@
 //----- (00412AB0) --------------------------------------------------------
-_DWORD *__thiscall sub_412AB0(_DWORD *self)
+_DWORD *__cdecl sub_412AB0(_DWORD *self)
 {
   _DWORD *v2; // ebp
   _DWORD *v3; // edi

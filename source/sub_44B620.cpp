@@ -1,5 +1,5 @@
 //----- (0044B620) --------------------------------------------------------
-int __thiscall sub_44B620(int self)
+int __cdecl sub_44B620(int self)
 {
   int v2; // eax
   int j; // edi

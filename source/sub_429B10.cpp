@@ -1,5 +1,5 @@
 //----- (00429B10) --------------------------------------------------------
-bool __thiscall sub_429B10(_DWORD *self, _DWORD *a2)
+bool __cdecl sub_429B10(_DWORD *self, _DWORD *a2)
 {
   if ( *self < *a2 )
     return 1;

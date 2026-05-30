@@ -1,5 +1,5 @@
 //----- (00449AA0) --------------------------------------------------------
-int __thiscall sub_449AA0(LPVOID *self)
+int __cdecl sub_449AA0(LPVOID *self)
 {
   *self = &off_499A30;
   sub_4885A6(self[77]);

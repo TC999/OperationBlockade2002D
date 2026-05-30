@@ -1,5 +1,5 @@
 //----- (0043BB90) --------------------------------------------------------
-const char *__thiscall sub_43BB90(int self)
+const char *__cdecl sub_43BB90(int self)
 {
   const char *result; // eax
   const char *v3; // esi

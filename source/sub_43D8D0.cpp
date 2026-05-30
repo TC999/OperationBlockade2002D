@@ -1,5 +1,5 @@
 //----- (0043D8D0) --------------------------------------------------------
-int __thiscall sub_43D8D0(_DWORD *self)
+int __cdecl sub_43D8D0(_DWORD *self)
 {
   int v2; // edi
   int v3; // ebp

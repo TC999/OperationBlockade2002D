@@ -1,5 +1,5 @@
 //----- (004176E0) --------------------------------------------------------
-char __thiscall sub_4176E0(_DWORD *self, _DWORD *a2, _DWORD *a3, _BYTE *a4, int a5)
+char __cdecl sub_4176E0(_DWORD *self, _DWORD *a2, _DWORD *a3, _BYTE *a4, int a5)
 {
   int v5; // edi
   int v6; // esi

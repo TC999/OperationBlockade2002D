@@ -1,5 +1,5 @@
 //----- (0043CF70) --------------------------------------------------------
-int __thiscall sub_43CF70(int *self)
+int __cdecl sub_43CF70(int *self)
 {
   int v2; // ecx
   void *v3; // edi

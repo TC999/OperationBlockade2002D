@@ -1,5 +1,5 @@
 //----- (00421980) --------------------------------------------------------
-_BYTE *__thiscall sub_421980(int self, int a2, unsigned int a3)
+_BYTE *__cdecl sub_421980(int self, int a2, unsigned int a3)
 {
   int v4; // edi
   _BYTE *v5; // esi

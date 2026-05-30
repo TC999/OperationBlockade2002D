@@ -1,5 +1,5 @@
 //----- (0043BAF0) --------------------------------------------------------
-const char *__thiscall sub_43BAF0(_DWORD *self, char *String1)
+const char *__cdecl sub_43BAF0(_DWORD *self, char *String1)
 {
   const char *result; // eax
   int v3; // esi

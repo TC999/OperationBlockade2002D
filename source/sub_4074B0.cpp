@@ -1,5 +1,5 @@
 //----- (004074B0) --------------------------------------------------------
-int __thiscall sub_4074B0(_DWORD *self, int a2)
+int __cdecl sub_4074B0(_DWORD *self, int a2)
 {
   _BYTE *v3; // eax
 

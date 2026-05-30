@@ -1,5 +1,5 @@
 //----- (0045F2E0) --------------------------------------------------------
-float *__thiscall sub_45F2E0(float *self, int a2, int a3, int a4, int a5, float a6)
+float *__cdecl sub_45F2E0(float *self, int a2, int a3, int a4, int a5, float a6)
 {
   float *result; // eax
 

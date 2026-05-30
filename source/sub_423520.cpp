@@ -1,5 +1,5 @@
 //----- (00423520) --------------------------------------------------------
-char __thiscall sub_423520(int self, char a2)
+char __cdecl sub_423520(int self, char a2)
 {
   int v2; // ebp
   int v3; // esi
@@ -32,7 +32,7 @@ char __thiscall sub_423520(int self, char a2)
       if ( v4 )
       {
         v5 = a2 && *(_BYTE *)(v3 + 44);
-        (*(void (__thiscall **)(int, BOOL))(*(_DWORD *)v4 + 24))(v4, v5);
+        (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)v4 + 24))(v4, v5);
       }
       v6 = *(_DWORD *)(v3 + 112);
       if ( v6 )

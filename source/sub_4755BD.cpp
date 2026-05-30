@@ -1,5 +1,5 @@
 //----- (004755BD) --------------------------------------------------------
-int __thiscall sub_4755BD(_DWORD *self)
+int __cdecl sub_4755BD(_DWORD *self)
 {
   int v2; // eax
   unsigned int v3; // ecx

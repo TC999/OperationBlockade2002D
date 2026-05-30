@@ -1,5 +1,5 @@
 //----- (00482CFF) --------------------------------------------------------
-int __usercall sub_482CFF(int a1, int *a2)
+int __cdecl sub_482CFF(int a1, int *a2)
 {
   int v2; // ecx
   int v3; // edi

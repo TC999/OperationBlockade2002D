@@ -1,5 +1,5 @@
 //----- (00411D20) --------------------------------------------------------
-int __thiscall sub_411D20(_DWORD *self)
+int __cdecl sub_411D20(_DWORD *self)
 {
   struct _RTL_CRITICAL_SECTION *v2; // ebx
   int *v3; // eax

@@ -1,5 +1,5 @@
 //----- (0048CB2B) --------------------------------------------------------
-void __thiscall __noreturn sub_48CB2B(EXCEPTION_POINTERS *self)
+void __cdecl sub_48CB2B(EXCEPTION_POINTERS *self)
 {
   int v1; // [esp-Ch] [ebp-24h] BYREF
   CPPEH_RECORD ms_exc; // [esp+0h] [ebp-18h]

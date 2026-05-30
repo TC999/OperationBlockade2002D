@@ -1,11 +1,11 @@
 //----- (0044A730) --------------------------------------------------------
-char __thiscall sub_44A730(int self, int a2)
+char __cdecl sub_44A730(int self, int a2)
 {
   _DWORD *v2; // edi
   int v3; // esi
   _DWORD *v4; // edx
   double v5; // st7
-  void (__thiscall ***v6)(_DWORD, int); // ecx
+  void (__cdecl ***v6)(_DWORD, int); // ecx
   double v7; // st7
   int *v8; // ebp
   int *v9; // edx
@@ -85,7 +85,7 @@ char __thiscall sub_44A730(int self, int a2)
       if ( v5 <= 0.0 )
       {
         sub_4286C0(v2, *(_DWORD *)(v3 + 36));
-        v6 = *(void (__thiscall ****)(_DWORD, int))(v3 + 36);
+        v6 = *(void (__cdecl ****)(_DWORD, int))(v3 + 36);
         if ( v6 )
           (**v6)(v6, 1);
         *(_BYTE *)(v3 - 96) = 0;

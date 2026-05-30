@@ -1,5 +1,5 @@
 //----- (0044ED60) --------------------------------------------------------
-unsigned int __thiscall sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD *a4)
+unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD *a4)
 {
   char *v4; // esi
   unsigned int v5; // edi

@@ -1,5 +1,5 @@
 //----- (004832C2) --------------------------------------------------------
-int __usercall sub_4832C2(int a1, int a2)
+int __cdecl sub_4832C2(int a1, int a2)
 {
   int *v2; // esi
   int v3; // eax

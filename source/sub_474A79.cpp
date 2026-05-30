@@ -1,5 +1,5 @@
 //----- (00474A79) --------------------------------------------------------
-int __thiscall sub_474A79(_DWORD *self, int a2, int a3, float *a4)
+int __cdecl sub_474A79(_DWORD *self, int a2, int a3, float *a4)
 {
   _WORD *v4; // edx
   int v5; // esi

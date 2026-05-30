@@ -1,5 +1,5 @@
 //----- (0044E870) --------------------------------------------------------
-char __thiscall sub_44E870(_DWORD *self)
+char __cdecl sub_44E870(_DWORD *self)
 {
   int i; // esi
   char result; // al

@@ -1,5 +1,5 @@
 //----- (0041DB10) --------------------------------------------------------
-int __thiscall sub_41DB10(_DWORD *self)
+int __cdecl sub_41DB10(_DWORD *self)
 {
   _DWORD *v1; // ebx
   int i; // esi

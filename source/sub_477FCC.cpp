@@ -1,5 +1,5 @@
 //----- (00477FCC) --------------------------------------------------------
-char __usercall sub_477FCC(_DWORD *a1)
+char __cdecl sub_477FCC(_DWORD *a1)
 {
   unsigned __int8 **v1; // edi
   unsigned __int8 *v2; // esi

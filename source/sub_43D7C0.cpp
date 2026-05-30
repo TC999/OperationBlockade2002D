@@ -1,5 +1,5 @@
 //----- (0043D7C0) --------------------------------------------------------
-const char **__thiscall sub_43D7C0(const char **self, int a2)
+const char **__cdecl sub_43D7C0(const char **self, int a2)
 {
   int v3; // esi
   const char **v4; // ebx

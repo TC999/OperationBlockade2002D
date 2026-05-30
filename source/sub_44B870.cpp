@@ -1,5 +1,5 @@
 //----- (0044B870) --------------------------------------------------------
-char *__thiscall sub_44B870(char *self, char *a2)
+char *__cdecl sub_44B870(char *self, char *a2)
 {
   char *v2; // esi
   double v4; // st7

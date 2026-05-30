@@ -1,5 +1,5 @@
 //----- (0044E940) --------------------------------------------------------
-int __thiscall sub_44E940(int *self)
+int __cdecl sub_44E940(int *self)
 {
   int v2; // ebx
   int i; // esi

@@ -1,5 +1,5 @@
 //----- (00467B60) --------------------------------------------------------
-char __thiscall sub_467B60(int self, int a2)
+char __cdecl sub_467B60(int self, int a2)
 {
   char result; // al
   int v4; // ecx

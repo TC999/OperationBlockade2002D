@@ -1,5 +1,5 @@
 //----- (00467BA0) --------------------------------------------------------
-void __thiscall sub_467BA0(int self, float a2)
+void __cdecl sub_467BA0(int self, float a2)
 {
   int v3; // esi
   int v4; // ecx

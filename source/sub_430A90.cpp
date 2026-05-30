@@ -1,5 +1,5 @@
 //----- (00430A90) --------------------------------------------------------
-int __thiscall sub_430A90(int self)
+int __cdecl sub_430A90(int self)
 {
   *(_DWORD *)self = &off_499458;
   if ( *(_DWORD *)(self + 468) )

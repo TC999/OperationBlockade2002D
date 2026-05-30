@@ -1,5 +1,5 @@
 //----- (0044A440) --------------------------------------------------------
-char __thiscall sub_44A440(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6)
+char __cdecl sub_44A440(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6)
 {
   int v7[3]; // [esp+0h] [ebp-Ch] BYREF
 

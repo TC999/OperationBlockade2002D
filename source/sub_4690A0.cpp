@@ -1,5 +1,5 @@
 //----- (004690A0) --------------------------------------------------------
-int __thiscall sub_4690A0(void *self)
+int __cdecl sub_4690A0(void *self)
 {
   void *v2; // eax
   int result; // eax

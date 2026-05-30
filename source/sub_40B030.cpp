@@ -1,5 +1,5 @@
 //----- (0040B030) --------------------------------------------------------
-char __thiscall sub_40B030(char *self, char *ArgList, float *a3)
+char __cdecl sub_40B030(char *self, char *ArgList, float *a3)
 {
   char *v3; // ebx
   int v4; // ebp

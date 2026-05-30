@@ -1,5 +1,5 @@
 //----- (00407710) --------------------------------------------------------
-char __thiscall sub_407710(float *self, int a2, int a3, int a4, int a5, int a6, int a7, int *a8, int a9)
+char __cdecl sub_407710(float *self, int a2, int a3, int a4, int a5, int a6, int a7, int *a8, int a9)
 {
   float *v9; // edi
   int v10; // eax

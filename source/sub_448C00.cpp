@@ -1,5 +1,5 @@
 //----- (00448C00) --------------------------------------------------------
-void *__thiscall sub_448C00(void *self, char a2)
+void *__cdecl sub_448C00(void *self, char a2)
 {
   sub_448C20(self);
   if ( (a2 & 1) != 0 )

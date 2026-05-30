@@ -1,5 +1,5 @@
 //----- (00456370) --------------------------------------------------------
-void __thiscall sub_456370(int self)
+void __cdecl sub_456370(int self)
 {
   _DWORD *v2; // eax
   int v3; // edx

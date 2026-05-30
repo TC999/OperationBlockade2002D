@@ -1,5 +1,5 @@
 //----- (00408680) --------------------------------------------------------
-char __thiscall sub_408680(int self, int a2, float *a3, float *a4, float *a5, float *a6, float *a7, float *a8)
+char __cdecl sub_408680(int self, int a2, float *a3, float *a4, float *a5, float *a6, float *a7, float *a8)
 {
   int v9; // edi
   int v10; // esi

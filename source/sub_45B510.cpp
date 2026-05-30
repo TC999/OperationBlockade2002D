@@ -1,5 +1,5 @@
 //----- (0045B510) --------------------------------------------------------
-char __thiscall sub_45B510(int self, int a2)
+char __cdecl sub_45B510(int self, int a2)
 {
   int v3; // ecx
   int v4; // ecx

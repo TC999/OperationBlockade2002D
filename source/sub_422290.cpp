@@ -1,5 +1,5 @@
 //----- (00422290) --------------------------------------------------------
-_DWORD *__thiscall sub_422290(_DWORD *self)
+_DWORD *__cdecl sub_422290(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // eax
@@ -31,7 +31,7 @@ _DWORD *__thiscall sub_422290(_DWORD *self)
   v6 = (double)(unsigned int)(dword_5209F4 - v4) * 0.5;
   sub_413090((int)v3, v6, v7, v8, v9);
   sub_428680(self[7]);
-  (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)self[7] + 24))(self[7], 0);
+  (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)self[7] + 24))(self[7], 0);
   self[8] = 0;
   return self;
 }

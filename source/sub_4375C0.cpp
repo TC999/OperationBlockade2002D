@@ -1,5 +1,5 @@
 //----- (004375C0) --------------------------------------------------------
-int __thiscall sub_4375C0(void *self, char *String1)
+int __cdecl sub_4375C0(void *self, char *String1)
 {
   int result; // eax
   LPVOID *v4; // eax

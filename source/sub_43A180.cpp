@@ -1,5 +1,5 @@
 //----- (0043A180) --------------------------------------------------------
-_DWORD *__thiscall sub_43A180(_DWORD *self)
+_DWORD *__cdecl sub_43A180(_DWORD *self)
 {
   _DWORD *result; // eax
 

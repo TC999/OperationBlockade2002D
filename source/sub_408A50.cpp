@@ -1,5 +1,5 @@
 //----- (00408A50) --------------------------------------------------------
-_DWORD *__thiscall sub_408A50(_DWORD *self)
+_DWORD *__cdecl sub_408A50(_DWORD *self)
 {
   int v2; // eax
   _DWORD *result; // eax

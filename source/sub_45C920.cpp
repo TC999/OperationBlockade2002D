@@ -1,5 +1,5 @@
 //----- (0045C920) --------------------------------------------------------
-unsigned int __thiscall sub_45C920(_DWORD *self, char *a2, unsigned int a3, _DWORD *a4)
+unsigned int __cdecl sub_45C920(_DWORD *self, char *a2, unsigned int a3, _DWORD *a4)
 {
   _DWORD *v4; // ebx
   char *v5; // ecx

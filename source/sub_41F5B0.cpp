@@ -1,5 +1,5 @@
 //----- (0041F5B0) --------------------------------------------------------
-int __thiscall sub_41F5B0(int self, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9)
+int __cdecl sub_41F5B0(int self, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9)
 {
   _DWORD *v10; // eax
   int v11; // edx

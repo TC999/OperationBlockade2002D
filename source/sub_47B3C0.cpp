@@ -1,5 +1,5 @@
 //----- (0047B3C0) --------------------------------------------------------
-__int16 __usercall sub_47B3C0(_BYTE *a1, int a2, unsigned __int16 a3)
+__int16 __cdecl sub_47B3C0(_BYTE *a1, int a2, unsigned __int16 a3)
 {
   int v3; // eax
   int v4; // ecx

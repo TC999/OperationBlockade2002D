@@ -1,7 +1,7 @@
 //----- (00464810) --------------------------------------------------------
-char __thiscall sub_464810(_DWORD *self, int a2, int a3)
+char __cdecl sub_464810(_DWORD *self, int a2, int a3)
 {
-  void (__thiscall ***v5)(_DWORD, int); // ecx
+  void (__cdecl ***v5)(_DWORD, int); // ecx
   int v6; // ebp
   _DWORD *v7; // eax
   int v8; // eax
@@ -13,7 +13,7 @@ char __thiscall sub_464810(_DWORD *self, int a2, int a3)
   if ( self[8] )
   {
     sub_4286C0(self, self[8]);
-    v5 = (void (__thiscall ***)(_DWORD, int))self[8];
+    v5 = (void (__cdecl ***)(_DWORD, int))self[8];
     if ( v5 )
       (**v5)(v5, 1);
     self[8] = 0;

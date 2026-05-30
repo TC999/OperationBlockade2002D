@@ -1,5 +1,5 @@
 //----- (0043AEF0) --------------------------------------------------------
-int __thiscall sub_43AEF0(int self)
+int __cdecl sub_43AEF0(int self)
 {
   sub_424630(*(int **)(self + 40));
   sub_43B180(self);

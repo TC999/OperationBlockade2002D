@@ -1,5 +1,5 @@
 //----- (0040B530) --------------------------------------------------------
-char __thiscall sub_40B530(const char *self, char *ArgList, _DWORD *a3, _DWORD *a4, const char **a5)
+char __cdecl sub_40B530(const char *self, char *ArgList, _DWORD *a3, _DWORD *a4, const char **a5)
 {
   const char *v6; // esi
   char result; // al

@@ -1,5 +1,5 @@
 //----- (0044ED10) --------------------------------------------------------
-char *__thiscall sub_44ED10(_DWORD *self, char *a2, char *a3)
+char *__cdecl sub_44ED10(_DWORD *self, char *a2, char *a3)
 {
   char *v3; // edx
   char *v4; // ebx

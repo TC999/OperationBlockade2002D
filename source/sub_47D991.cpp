@@ -1,5 +1,5 @@
 //----- (0047D991) --------------------------------------------------------
-char *__usercall sub_47D991(int a1, int a2, char *a3, char a4, unsigned int a5)
+char *__cdecl sub_47D991(int a1, int a2, char *a3, char a4, unsigned int a5)
 {
   int v5; // eax
 

@@ -1,5 +1,5 @@
 //----- (00402DA0) --------------------------------------------------------
-void __thiscall sub_402DA0(int self, float a2)
+void __cdecl sub_402DA0(int self, float a2)
 {
   int v3; // ebp
   double v4; // st7

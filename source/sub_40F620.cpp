@@ -1,5 +1,5 @@
 //----- (0040F620) --------------------------------------------------------
-void __thiscall sub_40F620(char *self)
+void __cdecl sub_40F620(char *self)
 {
   void (__stdcall *v2)(LPCRITICAL_SECTION); // ebp
   int v3; // eax

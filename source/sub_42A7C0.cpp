@@ -1,5 +1,5 @@
 //----- (0042A7C0) --------------------------------------------------------
-int __thiscall sub_42A7C0(int self)
+int __cdecl sub_42A7C0(int self)
 {
   int result; // eax
   char *v3; // eax

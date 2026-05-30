@@ -1,5 +1,5 @@
 //----- (00419A30) --------------------------------------------------------
-char __thiscall sub_419A30(_DWORD *self, float a2, float a3, float a4)
+char __cdecl sub_419A30(_DWORD *self, float a2, float a3, float a4)
 {
   int v5; // ebx
   int v6; // edi

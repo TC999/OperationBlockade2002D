@@ -1,5 +1,5 @@
 //----- (0043BE80) --------------------------------------------------------
-int __thiscall sub_43BE80(int self)
+int __cdecl sub_43BE80(int self)
 {
   const char *v2; // eax
   int v4; // [esp+4h] [ebp-14h] BYREF

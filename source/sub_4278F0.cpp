@@ -4,7 +4,7 @@ int __cdecl sub_4278F0(int a1, int a2, int a3)
   void **v4; // ecx
 
   if ( dword_520970 )
-    (*(void (__thiscall **)(int, int, int))(*(_DWORD *)dword_520970 + 4))(dword_520970, a2, a3);
+    (*(void (__cdecl **)(int, int, int))(*(_DWORD *)dword_520970 + 4))(dword_520970, a2, a3);
   if ( (_BYTE)a3 && a2 != 68 )
   {
     if ( a2 == 67 )

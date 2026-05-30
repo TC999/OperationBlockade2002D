@@ -1,5 +1,5 @@
 //----- (0045F080) --------------------------------------------------------
-int __thiscall sub_45F080(_DWORD *self)
+int __cdecl sub_45F080(_DWORD *self)
 {
   int v2; // eax
   int v3; // ebp
@@ -19,9 +19,9 @@ int __thiscall sub_45F080(_DWORD *self)
   {
     sub_4286C0(self, *(_DWORD *)(*(_DWORD *)(self[642] + 8 * i) + 652));
     v5 = *(_DWORD *)(*(_DWORD *)(self[642] + 8 * i) + 652);
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v5 + 24))(v5, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v5 + 24))(v5, 0);
     v6 = *(_DWORD *)(self[642] + 8 * i);
-    (*(void (__thiscall **)(int))(*(_DWORD *)v6 + 8))(v6);
+    (*(void (__cdecl **)(int))(*(_DWORD *)v6 + 8))(v6);
   }
   result = self[643];
   self[643] = self[642];

@@ -1,5 +1,5 @@
 //----- (00429B00) --------------------------------------------------------
-char *__thiscall sub_429B00(char *self)
+char *__cdecl sub_429B00(char *self)
 {
   return self + 12;
 }

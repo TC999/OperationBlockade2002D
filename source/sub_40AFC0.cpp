@@ -1,5 +1,5 @@
 //----- (0040AFC0) --------------------------------------------------------
-int __thiscall sub_40AFC0(void *self, char *String2, _DWORD *a3)
+int __cdecl sub_40AFC0(void *self, char *String2, _DWORD *a3)
 {
   int result; // eax
 

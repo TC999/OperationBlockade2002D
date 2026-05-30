@@ -1,5 +1,5 @@
 //----- (0045B4E0) --------------------------------------------------------
-char __thiscall sub_45B4E0(_DWORD *self)
+char __cdecl sub_45B4E0(_DWORD *self)
 {
   if ( self[25] != 6 )
     return 0;

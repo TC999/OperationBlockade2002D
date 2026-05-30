@@ -1,5 +1,5 @@
 //----- (00474B9C) --------------------------------------------------------
-void __thiscall sub_474B9C(int self, int a2, int a3, float *a4)
+void __cdecl sub_474B9C(int self, int a2, int a3, float *a4)
 {
   unsigned int v4; // eax
   unsigned int i; // esi

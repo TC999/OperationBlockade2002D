@@ -1,5 +1,5 @@
 //----- (00419BC0) --------------------------------------------------------
-char __thiscall sub_419BC0(_DWORD *self, int a2)
+char __cdecl sub_419BC0(_DWORD *self, int a2)
 {
   int v3; // ebp
   int v4; // esi

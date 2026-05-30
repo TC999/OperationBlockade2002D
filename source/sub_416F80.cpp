@@ -1,5 +1,5 @@
 //----- (00416F80) --------------------------------------------------------
-char __thiscall sub_416F80(_DWORD *self, char a2)
+char __cdecl sub_416F80(_DWORD *self, char a2)
 {
   int v4; // edi
   bool v5; // zf

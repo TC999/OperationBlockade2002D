@@ -1,5 +1,5 @@
 //----- (00411B60) --------------------------------------------------------
-_DWORD *__thiscall sub_411B60(int self, int a2)
+_DWORD *__cdecl sub_411B60(int self, int a2)
 {
   struct _RTL_CRITICAL_SECTION *v3; // edi
   _DWORD *v4; // esi

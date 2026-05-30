@@ -1,5 +1,5 @@
 //----- (0040E780) --------------------------------------------------------
-char __thiscall sub_40E780(LPVOID *self, FILE *Stream)
+char __cdecl sub_40E780(LPVOID *self, FILE *Stream)
 {
   FILE *v2; // ebp
   int v4; // edi

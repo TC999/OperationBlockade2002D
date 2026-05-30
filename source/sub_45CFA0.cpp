@@ -1,5 +1,5 @@
 //----- (0045CFA0) --------------------------------------------------------
-int __thiscall sub_45CFA0(int self)
+int __cdecl sub_45CFA0(int self)
 {
   int v2; // ebx
   _DWORD *v3; // edi

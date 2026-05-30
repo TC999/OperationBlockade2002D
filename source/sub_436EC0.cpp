@@ -1,5 +1,5 @@
 //----- (00436EC0) --------------------------------------------------------
-unsigned int __thiscall sub_436EC0(_DWORD *self, unsigned int a2, int a3, int ArgList)
+unsigned int __cdecl sub_436EC0(_DWORD *self, unsigned int a2, int a3, int ArgList)
 {
   unsigned int result; // eax
   _DWORD *v5; // esi

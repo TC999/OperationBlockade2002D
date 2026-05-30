@@ -1,5 +1,5 @@
 //----- (004647E0) --------------------------------------------------------
-BOOL __thiscall sub_4647E0(_DWORD *self)
+BOOL __cdecl sub_4647E0(_DWORD *self)
 {
   return self[5] < 8;
 }

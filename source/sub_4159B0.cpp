@@ -1,5 +1,5 @@
 //----- (004159B0) --------------------------------------------------------
-void __thiscall sub_4159B0(int self, float a2, _DWORD *a3, _DWORD *a4, float *a5, float *a6, float *a7)
+void __cdecl sub_4159B0(int self, float a2, _DWORD *a3, _DWORD *a4, float *a5, float *a6, float *a7)
 {
   double v8; // st7
   double v9; // st7

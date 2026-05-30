@@ -1,5 +1,5 @@
 //----- (004263E0) --------------------------------------------------------
-_DWORD *__thiscall sub_4263E0(_DWORD *self, int a2)
+_DWORD *__cdecl sub_4263E0(_DWORD *self, int a2)
 {
   int v4; // ebx
   _DWORD *result; // eax

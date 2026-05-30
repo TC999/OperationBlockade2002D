@@ -1,5 +1,5 @@
 //----- (0040BF80) --------------------------------------------------------
-_DWORD *__thiscall sub_40BF80(_DWORD *self)
+_DWORD *__cdecl sub_40BF80(_DWORD *self)
 {
   self[1] = 0;
   *self = 0;

@@ -1,5 +1,5 @@
 //----- (004729A4) --------------------------------------------------------
-int __thiscall sub_4729A4(int self, unsigned __int8 *a2, unsigned int a3, _DWORD *a4)
+int __cdecl sub_4729A4(int self, unsigned __int8 *a2, unsigned int a3, _DWORD *a4)
 {
   int v4; // edi
   unsigned int v6; // eax

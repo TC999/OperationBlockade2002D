@@ -1,5 +1,5 @@
 //----- (0045DF90) --------------------------------------------------------
-int __thiscall sub_45DF90(int self)
+int __cdecl sub_45DF90(int self)
 {
   char v3; // [esp+Bh] [ebp-11h]
 

@@ -1,5 +1,5 @@
 //----- (0044C9D0) --------------------------------------------------------
-_DWORD *__thiscall sub_44C9D0(_DWORD *self)
+_DWORD *__cdecl sub_44C9D0(_DWORD *self)
 {
   self[1] = 0;
   self[2] = 0;

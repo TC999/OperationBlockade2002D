@@ -1,5 +1,5 @@
 //----- (004122F0) --------------------------------------------------------
-int __thiscall sub_4122F0(int self, int a2)
+int __cdecl sub_4122F0(int self, int a2)
 {
   double v3; // st7
   int v4; // edi

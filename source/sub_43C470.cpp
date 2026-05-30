@@ -1,5 +1,5 @@
 //----- (0043C470) --------------------------------------------------------
-const char *__thiscall sub_43C470(int self)
+const char *__cdecl sub_43C470(int self)
 {
   const char *result; // eax
   const char *v3; // esi

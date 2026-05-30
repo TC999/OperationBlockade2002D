@@ -1,5 +1,5 @@
 //----- (00438460) --------------------------------------------------------
-int __thiscall sub_438460(_DWORD **self, int a2, float a3, float a4, float a5)
+int __cdecl sub_438460(_DWORD **self, int a2, float a3, float a4, float a5)
 {
   int v6; // ebp
   int *v7; // ebx

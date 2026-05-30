@@ -1,5 +1,5 @@
 //----- (0042A860) --------------------------------------------------------
-int __thiscall sub_42A860(LPVOID *self)
+int __cdecl sub_42A860(LPVOID *self)
 {
   int i; // ebp
   int v3; // edi
@@ -32,7 +32,7 @@ int __thiscall sub_42A860(LPVOID *self)
   sub_488CEE(v4);
   self[235] = 0;
   self[233] = 0;
-  `eh vector destructor iterator'(self + 156, 0x18u, 5, (void (__thiscall *)(void *))sub_42A9D0);
+  `eh vector destructor iterator'(self + 156, 0x18u, 5, (void (__cdecl *)(void *))sub_42A9D0);
   sub_4885A6(self[153]);
   self[153] = 0;
   self[154] = 0;

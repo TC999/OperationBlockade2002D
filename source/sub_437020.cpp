@@ -1,5 +1,5 @@
 //----- (00437020) --------------------------------------------------------
-void __thiscall sub_437020(float *self, float a2, float a3)
+void __cdecl sub_437020(float *self, float a2, float a3)
 {
   int v3; // edx
   int v4; // esi

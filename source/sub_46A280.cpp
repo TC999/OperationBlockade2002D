@@ -1,5 +1,5 @@
 //----- (0046A280) --------------------------------------------------------
-int __thiscall sub_46A280(int self, const char *a2)
+int __cdecl sub_46A280(int self, const char *a2)
 {
   FILE *v3; // eax
   FILE *v4; // esi

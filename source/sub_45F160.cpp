@@ -1,5 +1,5 @@
 //----- (0045F160) --------------------------------------------------------
-void __thiscall sub_45F160(float *self, float *a2)
+void __cdecl sub_45F160(float *self, float *a2)
 {
   int v3; // eax
   int v4; // ecx

@@ -1,5 +1,5 @@
 //----- (00470616) --------------------------------------------------------
-int __thiscall sub_470616(int **self)
+int __cdecl sub_470616(int **self)
 {
   int **v1; // esi
   int *v2; // edx
@@ -102,7 +102,7 @@ int __thiscall sub_470616(int **self)
   v72 = 0;
   if ( v11 )
   {
-    sub_46C866((int)v11, 16, v10, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v11, 16, v10, (int (__cdecl *)(int))sub_46C80E);
     v12 = v68;
     v63 = v68;
   }
@@ -121,7 +121,7 @@ int __thiscall sub_470616(int **self)
   v72 = 1;
   if ( v14 )
   {
-    sub_46C866((int)v14, 16, v13, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v14, 16, v13, (int (__cdecl *)(int))sub_46C80E);
     v15 = v67;
   }
   else
@@ -165,7 +165,7 @@ int __thiscall sub_470616(int **self)
             v21 = *v1;
             v22 = **v1;
             v59 = v19;
-            (*(void (__thiscall **)(int *, int, _DWORD, char *))(v22 + 4))(v21, v19, 0, v71);
+            (*(void (__cdecl **)(int *, int, _DWORD, char *))(v22 + 4))(v21, v19, 0, v71);
           }
         }
         v24 = *v18;
@@ -174,7 +174,7 @@ int __thiscall sub_470616(int **self)
           v25 = *v1;
           v26 = **v1;
           v65 = *v18;
-          (*(void (__thiscall **)(int *, int, _DWORD, char *))(v26 + 4))(v25, v24, 0, v17);
+          (*(void (__cdecl **)(int *, int, _DWORD, char *))(v26 + 4))(v25, v24, 0, v17);
         }
         if ( v1[1][1044] )
         {
@@ -211,7 +211,7 @@ int __thiscall sub_470616(int **self)
           v18 = (int *)v66;
           v17 = v70;
         }
-        (*(void (__thiscall **)(int *, int, _DWORD, _DWORD *))(*v1[1] + 8))(v1[1], v64, 0, v63);
+        (*(void (__cdecl **)(int *, int, _DWORD, _DWORD *))(*v1[1] + 8))(v1[1], v64, 0, v63);
         v40 = v1[1];
         v18 += 4;
         v41 = ++v64 < (unsigned int)v40[1045];

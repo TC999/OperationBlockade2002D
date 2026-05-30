@@ -1,5 +1,5 @@
 //----- (00421B70) --------------------------------------------------------
-int __thiscall sub_421B70(_DWORD *self, int a2)
+int __cdecl sub_421B70(_DWORD *self, int a2)
 {
   float *v2; // esi
   int v4; // edi

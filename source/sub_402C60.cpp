@@ -1,5 +1,5 @@
 //----- (00402C60) --------------------------------------------------------
-char *__thiscall sub_402C60(char *Destination, char *Source)
+char *__cdecl sub_402C60(char *Destination, char *Source)
 {
   *((_DWORD *)Destination + 18) = 0;
   *((_DWORD *)Destination + 19) = 0;

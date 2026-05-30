@@ -1,5 +1,5 @@
 //----- (0044F0E0) --------------------------------------------------------
-_DWORD *__thiscall sub_44F0E0(_DWORD *self, _DWORD *a2, _DWORD *a3)
+_DWORD *__cdecl sub_44F0E0(_DWORD *self, _DWORD *a2, _DWORD *a3)
 {
   _DWORD *result; // eax
   _DWORD *v4; // edi

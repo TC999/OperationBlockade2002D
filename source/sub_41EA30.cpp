@@ -1,5 +1,5 @@
 //----- (0041EA30) --------------------------------------------------------
-void __thiscall sub_41EA30(float *self, int a2, int a3)
+void __cdecl sub_41EA30(float *self, int a2, int a3)
 {
   _DWORD *v5; // ebx
   double v6; // st7

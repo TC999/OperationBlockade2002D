@@ -1,5 +1,5 @@
 //----- (00424C80) --------------------------------------------------------
-void __thiscall sub_424C80(_DWORD *self, int a2)
+void __cdecl sub_424C80(_DWORD *self, int a2)
 {
   _DWORD *v4; // ecx
   int v5; // eax
@@ -26,7 +26,7 @@ void __thiscall sub_424C80(_DWORD *self, int a2)
     return;
   if ( !*(_BYTE *)(a2 + 44) )
   {
-    (*(void (__thiscall **)(_DWORD *, _DWORD))(*v4 + 24))(v4, 0);
+    (*(void (__cdecl **)(_DWORD *, _DWORD))(*v4 + 24))(v4, 0);
     return;
   }
   v5 = *(_DWORD *)(a2 + 40);
@@ -35,19 +35,19 @@ void __thiscall sub_424C80(_DWORD *self, int a2)
     if ( *(_BYTE *)(a2 + 46) )
     {
       sub_4131B0(v4, 0);
-      (*(void (__thiscall **)(_DWORD, int))(**(_DWORD **)(a2 + 176) + 24))(*(_DWORD *)(a2 + 176), 1);
+      (*(void (__cdecl **)(_DWORD, int))(**(_DWORD **)(a2 + 176) + 24))(*(_DWORD *)(a2 + 176), 1);
       goto LABEL_14;
     }
     sub_4131B0(v4, 0);
     v4 = *(_DWORD **)(a2 + 176);
 LABEL_13:
-    (*(void (__thiscall **)(_DWORD *, _DWORD))(*v4 + 24))(v4, 0);
+    (*(void (__cdecl **)(_DWORD *, _DWORD))(*v4 + 24))(v4, 0);
     goto LABEL_14;
   }
   v7 = v6[74];
   if ( !v7 || !*(_DWORD *)(v7 + 28) || !*(_DWORD *)(v7 + 32) )
     goto LABEL_13;
-  (*(void (__thiscall **)(_DWORD *, int))(*v4 + 24))(v4, 1);
+  (*(void (__cdecl **)(_DWORD *, int))(*v4 + 24))(v4, 1);
   sub_4131B0(*(_DWORD **)(a2 + 176), (_DWORD *)v6[74]);
   v8 = v6[74];
   v9 = v6[75];

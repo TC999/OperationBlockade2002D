@@ -1,5 +1,5 @@
 //----- (0040FEE0) --------------------------------------------------------
-_DWORD *__thiscall sub_40FEE0(int self, _DWORD *a2)
+_DWORD *__cdecl sub_40FEE0(int self, _DWORD *a2)
 {
   _DWORD *v3; // ebx
   _DWORD *result; // eax

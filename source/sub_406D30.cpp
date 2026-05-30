@@ -1,5 +1,5 @@
 //----- (00406D30) --------------------------------------------------------
-void __thiscall sub_406D30(int self, float a2)
+void __cdecl sub_406D30(int self, float a2)
 {
   double v2; // st7
   double v3; // st6

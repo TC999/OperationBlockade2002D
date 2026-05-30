@@ -1,5 +1,5 @@
 //----- (0041A300) --------------------------------------------------------
-char *__thiscall sub_41A300(_DWORD *self, char *a2, char *a3)
+char *__cdecl sub_41A300(_DWORD *self, char *a2, char *a3)
 {
   char *v3; // edx
   char *v4; // ebx

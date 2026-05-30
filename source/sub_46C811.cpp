@@ -1,5 +1,5 @@
 //----- (0046C811) --------------------------------------------------------
-float *__thiscall sub_46C811(float *self, unsigned int a2)
+float *__cdecl sub_46C811(float *self, unsigned int a2)
 {
   float *result; // eax
 

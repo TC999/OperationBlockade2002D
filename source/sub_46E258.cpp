@@ -1,5 +1,5 @@
 //----- (0046E258) --------------------------------------------------------
-int __thiscall sub_46E258(_DWORD *self)
+int __cdecl sub_46E258(_DWORD *self)
 {
   int v2; // edx
   int v3; // eax
@@ -96,7 +96,7 @@ int __thiscall sub_46E258(_DWORD *self)
     v40 = v9;
     if ( v9 )
     {
-      sub_46C866((int)v9, 16, v8, (int (__thiscall *)(int))sub_46C80E);
+      sub_46C866((int)v9, 16, v8, (int (__cdecl *)(int))sub_46C80E);
       v10 = v40;
       v55 = v40;
     }
@@ -141,7 +141,7 @@ int __thiscall sub_46E258(_DWORD *self)
                 v46 = (unsigned int)v15;
                 if ( v15 )
                 {
-                  sub_46C866((int)v15, 16, v14, (int (__thiscall *)(int))sub_46C80E);
+                  sub_46C866((int)v15, 16, v14, (int (__cdecl *)(int))sub_46C80E);
                   v16 = v46;
                 }
                 else
@@ -178,7 +178,7 @@ int __thiscall sub_46E258(_DWORD *self)
             {
               v22 = (unsigned int)v21 + *v21;
               v47 = v22;
-              (*(void (__thiscall **)(_DWORD, int, int, char *))(*(_DWORD *)*self + 4))(*self, v50, v48, v55);
+              (*(void (__cdecl **)(_DWORD, int, int, char *))(*(_DWORD *)*self + 4))(*self, v50, v48, v55);
               v23 = (char *)(v41 + 1);
               v54 = (char *)(v41 + 1);
               if ( (unsigned int)(v41 + 1) < v45 )

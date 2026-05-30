@@ -1,5 +1,5 @@
 //----- (004716F6) --------------------------------------------------------
-void __cdecl __noreturn sub_4716F6(int a1)
+void __cdecl sub_4716F6(int a1)
 {
   (*(void (__cdecl **)(int))(*(_DWORD *)a1 + 8))(a1);
   longjmp((int *)(*(_DWORD *)a1 + 132), 1);

@@ -1,5 +1,5 @@
 //----- (0043D5D0) --------------------------------------------------------
-char __thiscall sub_43D5D0(int self, char *String1, int a3)
+char __cdecl sub_43D5D0(int self, char *String1, int a3)
 {
   int v5; // esi
   int v6; // edi

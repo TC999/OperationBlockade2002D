@@ -1,5 +1,5 @@
 //----- (004735E3) --------------------------------------------------------
-void __thiscall sub_4735E3(float *self, float *a2)
+void __cdecl sub_4735E3(float *self, float *a2)
 {
   float *v2; // edi
   unsigned int v3; // esi

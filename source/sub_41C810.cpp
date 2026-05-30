@@ -1,5 +1,5 @@
 //----- (0041C810) --------------------------------------------------------
-char __thiscall sub_41C810(int self)
+char __cdecl sub_41C810(int self)
 {
   int v2; // ecx
   _DWORD *v3; // edi

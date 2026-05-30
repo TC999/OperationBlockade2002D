@@ -1,5 +1,5 @@
 //----- (004666E0) --------------------------------------------------------
-bool __thiscall sub_4666E0(char *self, int a2, int a3, float a4, char a5)
+bool __cdecl sub_4666E0(char *self, int a2, int a3, float a4, char a5)
 {
   double v6; // st7
   double v7; // st7
@@ -133,7 +133,7 @@ bool __thiscall sub_4666E0(char *self, int a2, int a3, float a4, char a5)
   self[436] = 1;
 LABEL_22:
   sub_467A50(1);
-  (*(void (__thiscall **)(char *, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+  (*(void (__cdecl **)(char *, _DWORD))(*(_DWORD *)self + 24))(self, 0);
   v15 = *(float *)(*((_DWORD *)self + 103) + 1232);
   if ( v15 != 0.0 )
     sub_44DF20(*(char **)(dword_520970 + 240), v15, COERCE_FLOAT(self + 460), (float *)self + 122);

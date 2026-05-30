@@ -1,5 +1,5 @@
 //----- (004809B7) --------------------------------------------------------
-char __usercall sub_4809B7(_DWORD *a1)
+char __cdecl sub_4809B7(_DWORD *a1)
 {
   int v1; // esi
   char result; // al

@@ -1,5 +1,5 @@
 //----- (0043A1D0) --------------------------------------------------------
-void __thiscall sub_43A1D0(_DWORD *self)
+void __cdecl sub_43A1D0(_DWORD *self)
 {
   *self = &off_499040;
 }

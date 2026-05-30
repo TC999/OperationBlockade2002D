@@ -1,5 +1,5 @@
 //----- (00475AFA) --------------------------------------------------------
-void __thiscall sub_475AFA(int self, int a2, int a3, void *a4)
+void __cdecl sub_475AFA(int self, int a2, int a3, void *a4)
 {
   if ( sub_4757B0(self, *(_DWORD *)(self + 4148) + a2, *(_DWORD *)(self + 4160) + a3, 1) >= 0 )
   {

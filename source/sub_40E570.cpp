@@ -1,5 +1,5 @@
 //----- (0040E570) --------------------------------------------------------
-float *__thiscall sub_40E570(float *self, float *a2, float *a3)
+float *__cdecl sub_40E570(float *self, float *a2, float *a3)
 {
   float *result; // eax
   float v4; // [esp+0h] [ebp-Ch]

@@ -1,5 +1,5 @@
 //----- (00455FB0) --------------------------------------------------------
-char __thiscall sub_455FB0(float *self, int a2)
+char __cdecl sub_455FB0(float *self, int a2)
 {
   if ( (float *)sub_408F30(dword_520970) == self )
   {

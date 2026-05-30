@@ -1,5 +1,5 @@
 //----- (0044CDD0) --------------------------------------------------------
-char __thiscall sub_44CDD0(int self, int a2)
+char __cdecl sub_44CDD0(int self, int a2)
 {
   bool v3; // zf
   char v4; // al

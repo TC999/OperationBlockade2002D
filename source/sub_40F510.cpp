@@ -1,5 +1,5 @@
 //----- (0040F510) --------------------------------------------------------
-char *__thiscall sub_40F510(char *self)
+char *__cdecl sub_40F510(char *self)
 {
   *((_DWORD *)self + 1) = 0;
   *((_DWORD *)self + 2) = 0;

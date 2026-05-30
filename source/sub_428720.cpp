@@ -1,5 +1,5 @@
 //----- (00428720) --------------------------------------------------------
-void __thiscall sub_428720(_DWORD *self)
+void __cdecl sub_428720(_DWORD *self)
 {
   int v2; // esi
   int i; // edi
@@ -18,6 +18,6 @@ void __thiscall sub_428720(_DWORD *self)
     if ( v2 == self[3] )
       self[3] = 0;
     sub_428720(v2);
-    (**(void (__thiscall ***)(int, int))v2)(v2, 1);
+    (**(void (__cdecl ***)(int, int))v2)(v2, 1);
   }
 }

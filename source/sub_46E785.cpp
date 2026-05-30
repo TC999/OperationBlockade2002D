@@ -1,5 +1,5 @@
 //----- (0046E785) --------------------------------------------------------
-float *__thiscall sub_46E785(float *self, float *a2, float *a3)
+float *__cdecl sub_46E785(float *self, float *a2, float *a3)
 {
   double v3; // st7
   double v4; // st6

@@ -1,5 +1,5 @@
 //----- (0045EE50) --------------------------------------------------------
-int __thiscall sub_45EE50(int self, int a2)
+int __cdecl sub_45EE50(int self, int a2)
 {
   int result; // eax
   unsigned int i; // edi
@@ -26,7 +26,7 @@ int __thiscall sub_45EE50(int self, int a2)
       v6 = *(_DWORD *)(*(_DWORD *)(v5 + 8 * i) + 652);
       v7 = *(_DWORD *)(self + 2580);
       LOBYTE(v7) = i == v7;
-      (*(void (__thiscall **)(int, int))(*(_DWORD *)v6 + 24))(v6, v7);
+      (*(void (__cdecl **)(int, int))(*(_DWORD *)v6 + 24))(v6, v7);
       ++i;
       *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 2568) + 8 * i - 8) + 652) + 32) = 0;
     }

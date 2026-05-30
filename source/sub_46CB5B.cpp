@@ -1,5 +1,5 @@
 //----- (0046CB5B) --------------------------------------------------------
-int __usercall sub_46CB5B(
+int __cdecl sub_46CB5B(
         int a1,
         char a2,
         unsigned int *a3,

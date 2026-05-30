@@ -1,5 +1,5 @@
 //----- (00462090) --------------------------------------------------------
-void __thiscall sub_462090(int self, float a2)
+void __cdecl sub_462090(int self, float a2)
 {
   int v3; // edx
   double v4; // st7

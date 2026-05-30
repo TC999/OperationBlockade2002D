@@ -1,5 +1,5 @@
 //----- (0043A1E0) --------------------------------------------------------
-int __thiscall sub_43A1E0(int *self)
+int __cdecl sub_43A1E0(int *self)
 {
   int v2; // ebx
   int *v3; // esi
@@ -16,7 +16,7 @@ int __thiscall sub_43A1E0(int *self)
     {
       result = sub_4286C0(self, *v3);
       if ( *v3 )
-        result = (**(int (__thiscall ***)(int, int))*v3)(*v3, 1);
+        result = (**(int (__cdecl ***)(int, int))*v3)(*v3, 1);
       *v3 = 0;
     }
     ++v3;

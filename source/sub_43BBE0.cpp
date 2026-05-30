@@ -1,5 +1,5 @@
 //----- (0043BBE0) --------------------------------------------------------
-char __thiscall sub_43BBE0(_DWORD *self)
+char __cdecl sub_43BBE0(_DWORD *self)
 {
   char v2[260]; // [esp+Ch] [ebp-104h] BYREF
 

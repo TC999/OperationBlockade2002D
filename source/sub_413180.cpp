@@ -1,5 +1,5 @@
 //----- (00413180) --------------------------------------------------------
-char __thiscall sub_413180(int self, int a2, char a3)
+char __cdecl sub_413180(int self, int a2, char a3)
 {
   char result; // al
 

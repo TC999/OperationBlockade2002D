@@ -1,5 +1,5 @@
 //----- (00406110) --------------------------------------------------------
-int __userpurge sub_406110(_DWORD *a1, int a2, int a3, float *a4, int a5, char a6)
+int __cdecl sub_406110(_DWORD *a1, int a2, int a3, float *a4, int a5, char a6)
 {
   int v7; // edi
   int v8; // ebx
@@ -51,7 +51,7 @@ int __userpurge sub_406110(_DWORD *a1, int a2, int a3, float *a4, int a5, char a
            200,
            200,
            255);
-  v10 = (*(int (__thiscall **)(_DWORD *, int, float *, int))(*a1 + 4))(a1, v8, a4, a2) + v7;
+  v10 = (*(int (__cdecl **)(_DWORD *, int, float *, int))(*a1 + 4))(a1, v8, a4, a2) + v7;
   v41 = v10;
   if ( a6 )
   {

@@ -1,5 +1,5 @@
 //----- (004496E0) --------------------------------------------------------
-char *__thiscall sub_4496E0(char *self, char *a2)
+char *__cdecl sub_4496E0(char *self, char *a2)
 {
   char *v2; // ebp
   char *v3; // edi

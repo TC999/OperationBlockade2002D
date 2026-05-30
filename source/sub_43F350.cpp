@@ -1,5 +1,5 @@
 //----- (0043F350) --------------------------------------------------------
-unsigned int __thiscall sub_43F350(int self)
+unsigned int __cdecl sub_43F350(int self)
 {
   unsigned int result; // eax
   char *v3; // eax

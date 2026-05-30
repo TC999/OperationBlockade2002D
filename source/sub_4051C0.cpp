@@ -1,5 +1,5 @@
 //----- (004051C0) --------------------------------------------------------
-int __usercall sub_4051C0(_DWORD *a1, int a2, int a3)
+int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
 {
   float v3; // esi
   int result; // eax

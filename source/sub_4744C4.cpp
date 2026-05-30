@@ -1,5 +1,5 @@
 //----- (004744C4) --------------------------------------------------------
-int __thiscall sub_4744C4(_DWORD *self, int a2, int a3, float *a4)
+int __cdecl sub_4744C4(_DWORD *self, int a2, int a3, float *a4)
 {
   _WORD *v5; // edx
   int v6; // ecx

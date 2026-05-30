@@ -1,5 +1,5 @@
 //----- (00405C20) --------------------------------------------------------
-int __thiscall sub_405C20(_DWORD *self, int a2)
+int __cdecl sub_405C20(_DWORD *self, int a2)
 {
   return *(_DWORD *)(self[1] + 172 * a2 + 8);
 }

@@ -1,5 +1,5 @@
 //----- (00448750) --------------------------------------------------------
-_DWORD *__thiscall sub_448750(_DWORD *self, _DWORD *a2, _DWORD *a3)
+_DWORD *__cdecl sub_448750(_DWORD *self, _DWORD *a2, _DWORD *a3)
 {
   _DWORD *v3; // edx
   _DWORD *v4; // esi

@@ -1,5 +1,5 @@
 //----- (0040EC60) --------------------------------------------------------
-int __thiscall sub_40EC60(int self)
+int __cdecl sub_40EC60(int self)
 {
   int v2; // eax
   int v3; // ecx
@@ -18,7 +18,7 @@ int __thiscall sub_40EC60(int self)
   else
     v2 = 0;
   *(_DWORD *)(self + 420) = v2;
-  (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v2 + 24))(v2, 0);
+  (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v2 + 24))(v2, 0);
   v3 = *(_DWORD *)(self + 420);
   *(_DWORD *)(self + 20) = 1131413504;
   *(_DWORD *)(self + 24) = dword_4A4DB8;

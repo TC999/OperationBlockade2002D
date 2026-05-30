@@ -1,5 +1,5 @@
 //----- (0042A4F0) --------------------------------------------------------
-char __thiscall sub_42A4F0(_DWORD *self, _BYTE *a2)
+char __cdecl sub_42A4F0(_DWORD *self, _BYTE *a2)
 {
   _DWORD *v2; // esi
   char result; // al

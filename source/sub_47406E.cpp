@@ -1,5 +1,5 @@
 //----- (0047406E) --------------------------------------------------------
-int __thiscall sub_47406E(float *self, int a2, int a3, float *a4)
+int __cdecl sub_47406E(float *self, int a2, int a3, float *a4)
 {
   _WORD *v5; // edi
   unsigned int v6; // ebx

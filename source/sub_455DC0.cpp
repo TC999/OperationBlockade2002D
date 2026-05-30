@@ -1,5 +1,5 @@
 //----- (00455DC0) --------------------------------------------------------
-int __thiscall sub_455DC0(_DWORD *self, int a2)
+int __cdecl sub_455DC0(_DWORD *self, int a2)
 {
   unsigned int i; // edi
   int result; // eax

@@ -1,5 +1,5 @@
 //----- (00461D40) --------------------------------------------------------
-int __thiscall sub_461D40(int self, int *a2, int *a3, int a4, _DWORD *a5)
+int __cdecl sub_461D40(int self, int *a2, int *a3, int a4, _DWORD *a5)
 {
   int v5; // eax
   int v6; // ebp

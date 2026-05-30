@@ -1,5 +1,5 @@
 //----- (0046A570) --------------------------------------------------------
-int __thiscall sub_46A570(_DWORD *self, char *a2, unsigned int a3, const void *a4)
+int __cdecl sub_46A570(_DWORD *self, char *a2, unsigned int a3, const void *a4)
 {
   _DWORD *v4; // esi
   char *v6; // ebx

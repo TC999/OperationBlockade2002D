@@ -1,5 +1,5 @@
 //----- (004560B0) --------------------------------------------------------
-int __thiscall sub_4560B0(int self, int a2, _DWORD *a3, int a4, int a5)
+int __cdecl sub_4560B0(int self, int a2, _DWORD *a3, int a4, int a5)
 {
   int v6; // eax
   int v7; // ecx

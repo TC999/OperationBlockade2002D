@@ -1,5 +1,5 @@
 //----- (004046C0) --------------------------------------------------------
-bool __thiscall sub_4046C0(_DWORD *self, int a2, int ArgList)
+bool __cdecl sub_4046C0(_DWORD *self, int a2, int ArgList)
 {
   _DWORD *v3; // ebp
   bool v4; // dl

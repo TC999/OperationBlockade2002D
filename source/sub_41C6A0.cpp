@@ -1,5 +1,5 @@
 //----- (0041C6A0) --------------------------------------------------------
-_DWORD *__thiscall sub_41C6A0(_DWORD *self)
+_DWORD *__cdecl sub_41C6A0(_DWORD *self)
 {
   memset(self + 76, 0, 0x1Cu);
   self[75] = 0;

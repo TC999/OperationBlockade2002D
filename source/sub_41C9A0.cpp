@@ -1,5 +1,5 @@
 //----- (0041C9A0) --------------------------------------------------------
-char __thiscall sub_41C9A0(char *self, char *a2)
+char __cdecl sub_41C9A0(char *self, char *a2)
 {
   if ( ppDS->lpVtbl->DuplicateSoundBuffer(
          ppDS,

@@ -1,5 +1,5 @@
 //----- (00473102) --------------------------------------------------------
-_BYTE *__thiscall sub_473102(_DWORD *self, int a2, int a3, float *a4)
+_BYTE *__cdecl sub_473102(_DWORD *self, int a2, int a3, float *a4)
 {
   _BYTE *result; // eax
   _BYTE *i; // esi

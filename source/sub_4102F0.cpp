@@ -1,5 +1,5 @@
 //----- (004102F0) --------------------------------------------------------
-_DWORD *__thiscall sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int a4)
+_DWORD *__cdecl sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int a4)
 {
   _DWORD *v5; // ebx
   _DWORD *result; // eax

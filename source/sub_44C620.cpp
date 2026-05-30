@@ -1,5 +1,5 @@
 //----- (0044C620) --------------------------------------------------------
-_DWORD *__thiscall sub_44C620(_DWORD *self, char *String1)
+_DWORD *__cdecl sub_44C620(_DWORD *self, char *String1)
 {
   sub_468FF0(String1);
   *self = &off_499A98;

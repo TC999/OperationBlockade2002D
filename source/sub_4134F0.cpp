@@ -1,5 +1,5 @@
 //----- (004134F0) --------------------------------------------------------
-void __thiscall sub_4134F0(_DWORD *self)
+void __cdecl sub_4134F0(_DWORD *self)
 {
   int v2; // esi
   int v3; // eax

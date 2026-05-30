@@ -1,5 +1,5 @@
 //----- (0041CA40) --------------------------------------------------------
-char __thiscall sub_41CA40(int self)
+char __cdecl sub_41CA40(int self)
 {
   __int64 v2; // rcx
   char v4; // al

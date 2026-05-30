@@ -1,5 +1,5 @@
 //----- (0041F220) --------------------------------------------------------
-char __thiscall sub_41F220(int self, char a2)
+char __cdecl sub_41F220(int self, char a2)
 {
   int i; // ebp
   void *v4; // edi

@@ -1,5 +1,5 @@
 //----- (0042FB40) --------------------------------------------------------
-int __thiscall sub_42FB40(_DWORD *self, int a2, int a3, float a4, int a5)
+int __cdecl sub_42FB40(_DWORD *self, int a2, int a3, float a4, int a5)
 {
   int result; // eax
   unsigned int i; // esi

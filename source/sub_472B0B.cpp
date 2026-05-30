@@ -1,5 +1,5 @@
 //----- (00472B0B) --------------------------------------------------------
-int __thiscall sub_472B0B(int self, const WCHAR *lpWideCharStr, LPSTR lpMultiByteStr)
+int __cdecl sub_472B0B(int self, const WCHAR *lpWideCharStr, LPSTR lpMultiByteStr)
 {
   void *v5; // esp
   HANDLE FileW; // eax

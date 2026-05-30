@@ -1,5 +1,5 @@
 //----- (0040AAF0) --------------------------------------------------------
-bool __thiscall sub_40AAF0(_DWORD *self, char *String2, char a3)
+bool __cdecl sub_40AAF0(_DWORD *self, char *String2, char a3)
 {
   int v4; // esi
   unsigned int v5; // edx

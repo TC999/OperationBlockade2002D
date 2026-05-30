@@ -1,5 +1,5 @@
 //----- (0043DC90) --------------------------------------------------------
-char __thiscall sub_43DC90(_DWORD *self)
+char __cdecl sub_43DC90(_DWORD *self)
 {
   const char *v2; // eax
   _DWORD *v3; // eax

@@ -1,5 +1,5 @@
 //----- (00403AE0) --------------------------------------------------------
-void __thiscall sub_403AE0(void *self)
+void __cdecl sub_403AE0(void *self)
 {
   if ( *((_DWORD *)self + 21) )
   {

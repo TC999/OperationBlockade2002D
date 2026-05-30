@@ -1,5 +1,5 @@
 //----- (00437180) --------------------------------------------------------
-char __thiscall sub_437180(_DWORD *self, int a2, int a3)
+char __cdecl sub_437180(_DWORD *self, int a2, int a3)
 {
   return sub_428590(self, a2, a3);
 }

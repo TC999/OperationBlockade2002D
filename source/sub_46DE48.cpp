@@ -1,5 +1,5 @@
 //----- (0046DE48) --------------------------------------------------------
-int __thiscall sub_46DE48(_DWORD *self)
+int __cdecl sub_46DE48(_DWORD *self)
 {
   _DWORD *v2; // edx
   int v3; // edi
@@ -81,7 +81,7 @@ int __thiscall sub_46DE48(_DWORD *self)
     v40 = v9;
     if ( v9 )
     {
-      sub_46C866((int)v9, 16, v8, (int (__thiscall *)(int))sub_46C80E);
+      sub_46C866((int)v9, 16, v8, (int (__cdecl *)(int))sub_46C80E);
       v47 = v40;
     }
     else
@@ -123,7 +123,7 @@ int __thiscall sub_46DE48(_DWORD *self)
                   v37 = v15;
                   if ( v15 )
                   {
-                    sub_46C866((int)v15, 16, v14, (int (__thiscall *)(int))sub_46C80E);
+                    sub_46C866((int)v15, 16, v14, (int (__cdecl *)(int))sub_46C80E);
                     v16 = v37;
                   }
                   else
@@ -147,7 +147,7 @@ int __thiscall sub_46DE48(_DWORD *self)
               v51 += 2;
             }
             while ( v51 < v11 );
-            (*(void (__thiscall **)(_DWORD, int, _DWORD, float *))(*(_DWORD *)*self + 4))(*self, v44, 0, v47);
+            (*(void (__cdecl **)(_DWORD, int, _DWORD, float *))(*(_DWORD *)*self + 4))(*self, v44, 0, v47);
             v17 = (float *)(v41 + 1);
             if ( (unsigned int)(v41 + 1) < v43 )
             {
@@ -196,7 +196,7 @@ int __thiscall sub_46DE48(_DWORD *self)
               v27[1] = v28;
               if ( v28 + 0.0000099999997 >= 1.0 )
               {
-                (*(void (__thiscall **)(_DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)self[1] + 8))(
+                (*(void (__cdecl **)(_DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)self[1] + 8))(
                   self[1],
                   *(_DWORD *)v26,
                   0,
@@ -227,7 +227,7 @@ int __thiscall sub_46DE48(_DWORD *self)
               v31 = (_DWORD **)&v50[v29];
               if ( *v31 )
               {
-                (*(void (__thiscall **)(_DWORD *, unsigned int, _DWORD, _DWORD))(*v30 + 8))(v30, v29, 0, **v31);
+                (*(void (__cdecl **)(_DWORD *, unsigned int, _DWORD, _DWORD))(*v30 + 8))(v30, v29, 0, **v31);
                 v32 = *v31;
                 if ( v32 )
                   sub_46DADF(v32, 1);

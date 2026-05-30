@@ -1,5 +1,5 @@
 //----- (0040ACC0) --------------------------------------------------------
-char __thiscall sub_40ACC0(_DWORD *self, char *String2, char *a3)
+char __cdecl sub_40ACC0(_DWORD *self, char *String2, char *a3)
 {
   unsigned int v4; // ebp
   int i; // ebx

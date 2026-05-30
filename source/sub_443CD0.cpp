@@ -1,5 +1,5 @@
 //----- (00443CD0) --------------------------------------------------------
-bool __thiscall sub_443CD0(int self, int a2, int a3, float a4, float a5)
+bool __cdecl sub_443CD0(int self, int a2, int a3, float a4, float a5)
 {
   int v6; // ebp
   unsigned int i; // edi

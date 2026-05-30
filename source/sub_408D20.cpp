@@ -1,5 +1,5 @@
 //----- (00408D20) --------------------------------------------------------
-char __thiscall sub_408D20(int self)
+char __cdecl sub_408D20(int self)
 {
   void *v2; // eax
   int v3; // eax

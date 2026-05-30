@@ -1,5 +1,5 @@
 //----- (004261C0) --------------------------------------------------------
-char __thiscall sub_4261C0(_DWORD *self, char *String2, char a3)
+char __cdecl sub_4261C0(_DWORD *self, char *String2, char a3)
 {
   int v4; // ebx
   const char **v5; // edi
@@ -26,13 +26,13 @@ char __thiscall sub_4261C0(_DWORD *self, char *String2, char a3)
   if ( v7 )
   {
     sub_4229D0("UI: Deactivating dialog %s", *(const char **)(v7 + 20));
-    (*(void (__thiscall **)(_DWORD))(*(_DWORD *)self[13] + 40))(self[13]);
-    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)self[13] + 24))(self[13], 0);
+    (*(void (__cdecl **)(_DWORD))(*(_DWORD *)self[13] + 40))(self[13]);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)self[13] + 24))(self[13], 0);
   }
   self[13] = v5;
   sub_4229D0("UI: Activating dialog %s", v5[5]);
-  (*((void (__thiscall **)(const char **, int))*v5 + 6))(v5, 1);
-  (*((void (__thiscall **)(const char **))*v5 + 9))(v5);
+  (*((void (__cdecl **)(const char **, int))*v5 + 6))(v5, 1);
+  (*((void (__cdecl **)(const char **))*v5 + 9))(v5);
   self[14] = sub_426040(aCursor);
   v8 = self[19];
   if ( v8 )

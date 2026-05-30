@@ -1,5 +1,5 @@
 //----- (0040E6D0) --------------------------------------------------------
-long double __thiscall sub_40E6D0(int *self, float a2)
+long double __cdecl sub_40E6D0(int *self, float a2)
 {
   int v2; // esi
   int v4; // edx

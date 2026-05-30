@@ -1,5 +1,5 @@
 //----- (004359A0) --------------------------------------------------------
-char __thiscall sub_4359A0(int self, int a2)
+char __cdecl sub_4359A0(int self, int a2)
 {
   double v3; // st7
   int v4; // esi
@@ -158,7 +158,7 @@ char __thiscall sub_4359A0(int self, int a2)
   }
   v4 = sub_421B20(1) + 2;
   v5 = *(_BYTE *)(self + 40) && *(_BYTE *)(self + 724);
-  (*(void (__thiscall **)(_DWORD, BOOL))(**(_DWORD **)(self + 728) + 24))(*(_DWORD *)(self + 728), v5);
+  (*(void (__cdecl **)(_DWORD, BOOL))(**(_DWORD **)(self + 728) + 24))(*(_DWORD *)(self + 728), v5);
   if ( *(_BYTE *)(self + 40) && *(_BYTE *)(self + 724) )
   {
     v6 = 1;
@@ -199,7 +199,7 @@ char __thiscall sub_4359A0(int self, int a2)
     *(_BYTE *)(v17 + 33) = *(_BYTE *)(self + 40);
     v18 = sub_421540((void **)v17);
     LOBYTE(v18) = *(_BYTE *)(self + 40);
-    (*(void (__thiscall **)(_DWORD, _DWORD *))(**(_DWORD **)(v16 + 16) + 24))(*(_DWORD *)(v16 + 16), v18);
+    (*(void (__cdecl **)(_DWORD, _DWORD *))(**(_DWORD **)(v16 + 16) + 24))(*(_DWORD *)(v16 + 16), v18);
     if ( *(float *)(v16 + 12) >= 0.0 )
     {
       ++v13;
@@ -256,15 +256,15 @@ char __thiscall sub_4359A0(int self, int a2)
     *(_BYTE *)(v27 + 33) = v26;
     sub_421540((void **)v27);
     v28 = *(_BYTE *)(self + 40) && *((_BYTE *)v25 - 20);
-    (*(void (__thiscall **)(int, BOOL))(*(_DWORD *)*v25 + 24))(*v25, v28);
+    (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)*v25 + 24))(*v25, v28);
     v29 = *(_BYTE *)(self + 40) && *((_BYTE *)v25 - 20);
-    (*(void (__thiscall **)(_DWORD, BOOL))(*(_DWORD *)*(v25 - 1) + 24))(*(v25 - 1), v29);
+    (*(void (__cdecl **)(_DWORD, BOOL))(*(_DWORD *)*(v25 - 1) + 24))(*(v25 - 1), v29);
     v30 = *(_BYTE *)(self + 40) && *((_BYTE *)v25 - 20);
-    (*(void (__thiscall **)(_DWORD, BOOL))(*(_DWORD *)*(v25 - 2) + 24))(*(v25 - 2), v30);
+    (*(void (__cdecl **)(_DWORD, BOOL))(*(_DWORD *)*(v25 - 2) + 24))(*(v25 - 2), v30);
     v31 = *(_BYTE *)(self + 40) && *((_BYTE *)v25 - 20);
-    (*(void (__thiscall **)(int, BOOL))(*(_DWORD *)v25[3] + 24))(v25[3], v31);
+    (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)v25[3] + 24))(v25[3], v31);
     v32 = *(_BYTE *)(self + 40) && *((_BYTE *)v25 - 20);
-    (*(void (__thiscall **)(int, BOOL))(*(_DWORD *)v25[2] + 24))(v25[2], v32);
+    (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)v25[2] + 24))(v25[2], v32);
     v33 = *(_BYTE *)(self + 40) && *((_BYTE *)v25 - 20);
     v34 = v25[4];
     *(_BYTE *)(v34 + 33) = v33;
@@ -342,7 +342,7 @@ char __thiscall sub_4359A0(int self, int a2)
       LODWORD(v144[0]) = 6;
       do
       {
-        (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)*v43 + 24))(*v43, 0);
+        (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)*v43 + 24))(*v43, 0);
         ++v43;
         --LODWORD(v144[0]);
       }
@@ -366,7 +366,7 @@ char __thiscall sub_4359A0(int self, int a2)
       LODWORD(v144[0]) = 6;
       do
       {
-        (*(void (__thiscall **)(int, int))(*(_DWORD *)*v46 + 24))(*v46, v133);
+        (*(void (__cdecl **)(int, int))(*(_DWORD *)*v46 + 24))(*v46, v133);
         sub_413180(*v46++, 255, 1);
         --LODWORD(v144[0]);
       }
@@ -380,7 +380,7 @@ char __thiscall sub_4359A0(int self, int a2)
       sub_413120(1063675494);
       sub_413120(1065353216);
 LABEL_87:
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
       goto LABEL_101;
     }
     if ( v132 )
@@ -392,7 +392,7 @@ LABEL_87:
       LODWORD(v144[0]) = 6;
       do
       {
-        (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)*v49 + 24))(*v49, 0);
+        (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)*v49 + 24))(*v49, 0);
         ++v49;
         --LODWORD(v144[0]);
       }
@@ -414,7 +414,7 @@ LABEL_87:
       LODWORD(v144[0]) = 6;
       do
       {
-        (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)*v57 + 24))(*v57, 0);
+        (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)*v57 + 24))(*v57, 0);
         ++v57;
         --LODWORD(v144[0]);
       }
@@ -425,7 +425,7 @@ LABEL_87:
       v59 = v42[13];
       *(_BYTE *)(v59 + 33) = 0;
       sub_421540((void **)v59);
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
     }
     else if ( v42[14] != 4 )
     {
@@ -435,7 +435,7 @@ LABEL_87:
       LODWORD(v144[0]) = 6;
       do
       {
-        (*(void (__thiscall **)(int, int))(*(_DWORD *)*v52 + 24))(*v52, v133);
+        (*(void (__cdecl **)(int, int))(*(_DWORD *)*v52 + 24))(*v52, v133);
         sub_413180(*v52++, 0, 1);
         --LODWORD(v144[0]);
       }
@@ -454,26 +454,26 @@ LABEL_87:
       *(float *)(v55 + 16) = v56;
       sub_413120(1065353216);
       sub_413120(1063675494);
-      (*(void (__thiscall **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
+      (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
     }
 LABEL_101:
     if ( v42[14] == 1 || !(_BYTE)v133 )
     {
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v42[2] + 24))(v42[2], 0);
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v42[4] + 24))(v42[4], 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v42[2] + 24))(v42[2], 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v42[4] + 24))(v42[4], 0);
       v65 = v42[11];
       *(_BYTE *)(v65 + 33) = 0;
       sub_421540((void **)v65);
       v66 = v42[13];
       *(_BYTE *)(v66 + 33) = 0;
       sub_421540((void **)v66);
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
     }
     else
     {
       v60 = v133;
-      (*(void (__thiscall **)(int, int))(*(_DWORD *)v42[2] + 24))(v42[2], v133);
-      (*(void (__thiscall **)(int, int))(*(_DWORD *)v42[4] + 24))(v42[4], v60);
+      (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[2] + 24))(v42[2], v133);
+      (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[4] + 24))(v42[4], v60);
       v147 = (float)(v41 + 64);
       v61 = v147;
       v136[0] = (float)v142;
@@ -518,7 +518,7 @@ LABEL_101:
       {
         sub_421190(v42[13], "%d:%02d", (int)(__int64)v146 / 60, (int)(__int64)v146 % 60);
         sub_413090(v42[3], v144[0], v143, v136[0], v147);
-        (*(void (__thiscall **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
+        (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
         v135 = *((float *)v42 + 12);
         v62 = *(float *)&a2 * 60.0 + v135;
         v136[0] = v62;
@@ -601,7 +601,7 @@ LABEL_101:
   do
   {
     v71 = *(_BYTE *)(self + 40) && v70;
-    (*(void (__thiscall **)(_DWORD, BOOL))(*(_DWORD *)*v68 + 24))(*v68, v71);
+    (*(void (__cdecl **)(_DWORD, BOOL))(*(_DWORD *)*v68 + 24))(*v68, v71);
     ++v68;
     --v69;
   }
@@ -609,7 +609,7 @@ LABEL_101:
   v72 = *(_BYTE *)(self + 40) && byte_4A9F14 && *(int *)(self + 492) > -1 && !v70;
   v73 = *(_DWORD *)(self + 472);
   LOBYTE(v147) = v72;
-  (*(void (__thiscall **)(int, float))(*(_DWORD *)v73 + 24))(v73, COERCE_FLOAT(LODWORD(v147)));
+  (*(void (__cdecl **)(int, float))(*(_DWORD *)v73 + 24))(v73, COERCE_FLOAT(LODWORD(v147)));
   if ( v72 )
   {
     v74 = *(_DWORD *)(self + 4 * *(_DWORD *)(self + 492) + 580);
@@ -635,7 +635,7 @@ LABEL_101:
     sub_421540((void **)v81);
     v82 = v78 < *(_DWORD *)(self + 720) && *(_BYTE *)(self + 40) && !v131;
     v83 = *(_DWORD *)(*(_DWORD *)(self + 716) + i + 12);
-    (*(void (__thiscall **)(int, BOOL))(*(_DWORD *)v83 + 24))(v83, v82);
+    (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)v83 + 24))(v83, v82);
     ++v78;
   }
   if ( *(_BYTE *)(self + 40) && sub_45F4A0(*(_DWORD *)(dword_520970 + 280)) >= 2.0 )
@@ -644,8 +644,8 @@ LABEL_101:
     v85 = *(int **)(self + 460);
     v86 = *v85;
     v147 = 1.0 - v84;
-    (*(void (__thiscall **)(int *, int))(v86 + 24))(v85, 1);
-    (*(void (__thiscall **)(_DWORD, int))(**(_DWORD **)(self + 456) + 24))(*(_DWORD *)(self + 456), 1);
+    (*(void (__cdecl **)(int *, int))(v86 + 24))(v85, 1);
+    (*(void (__cdecl **)(_DWORD, int))(**(_DWORD **)(self + 456) + 24))(*(_DWORD *)(self + 456), 1);
     v150 = (unsigned int)(dword_5209D8 - 12);
     v130 = (float)v150;
     LODWORD(v149) = ((unsigned int)(dword_5209F4 - 200) >> 1) + 2;
@@ -661,8 +661,8 @@ LABEL_101:
   }
   else
   {
-    (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(self + 460) + 24))(*(_DWORD *)(self + 460), 0);
-    (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(self + 456) + 24))(*(_DWORD *)(self + 456), 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(self + 460) + 24))(*(_DWORD *)(self + 460), 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(self + 456) + 24))(*(_DWORD *)(self + 456), 0);
   }
   v87 = *(_DWORD **)(dword_520970 + 280);
   v88 = v87[645];
@@ -670,7 +670,7 @@ LABEL_101:
     || ((v89 = v87[642]) != 0 ? (v90 = (v87[643] - v89) >> 3) : (v90 = 0),
         v88 >= v90 || (v91 = *(_DWORD *)(*(_DWORD *)(v87[642] + 8 * v88) + 296), v91 <= -1)) )
   {
-    (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(self + 464) + 24))(*(_DWORD *)(self + 464), 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(self + 464) + 24))(*(_DWORD *)(self + 464), 0);
     v94 = *(_DWORD *)(self + 444);
     *(_BYTE *)(v94 + 33) = 0;
   }
@@ -678,7 +678,7 @@ LABEL_101:
   {
     v92 = sub_4131B0(*(_DWORD **)(self + 464), *(_DWORD **)(self + 4 * v91 + 636));
     LOBYTE(v92) = *(_BYTE *)(self + 40);
-    (*(void (__thiscall **)(_DWORD, _DWORD *))(**(_DWORD **)(self + 464) + 24))(*(_DWORD *)(self + 464), v92);
+    (*(void (__cdecl **)(_DWORD, _DWORD *))(**(_DWORD **)(self + 464) + 24))(*(_DWORD *)(self + 464), v92);
     v93 = sub_4629B0(v91);
     sub_421190(*(_DWORD *)(self + 444), "%d", v93);
     v94 = *(_DWORD *)(self + 444);
@@ -687,7 +687,7 @@ LABEL_101:
   sub_421540((void **)v94);
   v95 = sub_4629B0(9);
   v96 = *(_BYTE *)(self + 40) && v95 > 0;
-  (*(void (__thiscall **)(_DWORD, BOOL))(**(_DWORD **)(self + 468) + 24))(*(_DWORD *)(self + 468), v96);
+  (*(void (__cdecl **)(_DWORD, BOOL))(**(_DWORD **)(self + 468) + 24))(*(_DWORD *)(self + 468), v96);
   sub_421190(*(_DWORD *)(self + 448), "%d", v95);
   v97 = *(_BYTE *)(self + 40) && v95 > 0;
   v98 = *(_DWORD *)(self + 448);

@@ -1,5 +1,5 @@
 //----- (0047F42A) --------------------------------------------------------
-_DWORD *__thiscall sub_47F42A(_DWORD *self)
+_DWORD *__cdecl sub_47F42A(_DWORD *self)
 {
   _DWORD *result; // eax
   bool v2; // cf

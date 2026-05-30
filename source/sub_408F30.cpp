@@ -1,5 +1,5 @@
 //----- (00408F30) --------------------------------------------------------
-int __thiscall sub_408F30(_DWORD *self)
+int __cdecl sub_408F30(_DWORD *self)
 {
   return self[21];
 }

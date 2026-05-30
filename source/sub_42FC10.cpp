@@ -1,5 +1,5 @@
 //----- (0042FC10) --------------------------------------------------------
-unsigned int __thiscall sub_42FC10(_DWORD *self, int a2)
+unsigned int __cdecl sub_42FC10(_DWORD *self, int a2)
 {
   __int16 v2; // ax
   int v4; // edi
@@ -26,7 +26,7 @@ unsigned int __thiscall sub_42FC10(_DWORD *self, int a2)
         if ( *(_DWORD *)(*(_DWORD *)(self[6] + 4 * result) + 392) == *(__int16 *)(*(_DWORD *)(a2 + 16) + 6) )
         {
           v7 = *(_DWORD *)(self[6] + 4 * result);
-          return (*(int (__thiscall **)(int, int))(*(_DWORD *)v7 + 28))(v7, a2);
+          return (*(int (__cdecl **)(int, int))(*(_DWORD *)v7 + 28))(v7, a2);
         }
       }
     }

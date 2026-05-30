@@ -1,5 +1,5 @@
 //----- (0041F6C0) --------------------------------------------------------
-int __thiscall sub_41F6C0(int self, float a2)
+int __cdecl sub_41F6C0(int self, float a2)
 {
   double v3; // st7
   double v4; // st6

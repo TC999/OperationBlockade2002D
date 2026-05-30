@@ -1,5 +1,5 @@
 //----- (0040AE00) --------------------------------------------------------
-int __thiscall sub_40AE00(_DWORD *self, char *String2)
+int __cdecl sub_40AE00(_DWORD *self, char *String2)
 {
   int v2; // ebp
   unsigned int i; // edi

@@ -1,5 +1,5 @@
 //----- (0045A920) --------------------------------------------------------
-int __thiscall sub_45A920(_DWORD *self, int ArgList, int a3, int a4)
+int __cdecl sub_45A920(_DWORD *self, int ArgList, int a3, int a4)
 {
   int v5; // eax
   _DWORD *v6; // eax

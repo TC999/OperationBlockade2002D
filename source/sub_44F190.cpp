@@ -1,5 +1,5 @@
 //----- (0044F190) --------------------------------------------------------
-_DWORD *__thiscall sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
+_DWORD *__cdecl sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
 {
   int v5; // edi
   _DWORD *result; // eax

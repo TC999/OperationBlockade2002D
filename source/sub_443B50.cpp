@@ -1,5 +1,5 @@
 //----- (00443B50) --------------------------------------------------------
-unsigned int __thiscall sub_443B50(int self, int *a2, float a3, float a4, float a5, int a6)
+unsigned int __cdecl sub_443B50(int self, int *a2, float a3, float a4, float a5, int a6)
 {
   float v6; // ebx
   int v8; // ebp

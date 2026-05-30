@@ -1,5 +1,5 @@
 //----- (00473CF1) --------------------------------------------------------
-int __thiscall sub_473CF1(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_473CF1(_DWORD *self, int a2, int a3, int a4)
 {
   _BYTE *v5; // edx
   unsigned int v6; // ecx

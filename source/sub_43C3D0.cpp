@@ -1,5 +1,5 @@
 //----- (0043C3D0) --------------------------------------------------------
-_DWORD *__thiscall sub_43C3D0(_DWORD *self, int a2)
+_DWORD *__cdecl sub_43C3D0(_DWORD *self, int a2)
 {
   const char *v3; // eax
   LPVOID *v4; // eax

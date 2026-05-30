@@ -1,5 +1,5 @@
 //----- (0040E5F0) --------------------------------------------------------
-void __thiscall sub_40E5F0(_DWORD *self)
+void __cdecl sub_40E5F0(_DWORD *self)
 {
   _DWORD *v2; // eax
 

@@ -1,5 +1,5 @@
 //----- (0043BDB0) --------------------------------------------------------
-_DWORD *__thiscall sub_43BDB0(_DWORD *self, int a2)
+_DWORD *__cdecl sub_43BDB0(_DWORD *self, int a2)
 {
   _DWORD *v3; // esi
   int v4; // edi

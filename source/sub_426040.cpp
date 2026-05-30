@@ -1,5 +1,5 @@
 //----- (00426040) --------------------------------------------------------
-const char *__thiscall sub_426040(_DWORD *self, char *String2)
+const char *__cdecl sub_426040(_DWORD *self, char *String2)
 {
   _DWORD *v2; // ecx
 

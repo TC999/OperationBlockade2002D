@@ -1,5 +1,5 @@
 //----- (0043C990) --------------------------------------------------------
-int __thiscall sub_43C990(int self, int a2)
+int __cdecl sub_43C990(int self, int a2)
 {
   const char *v3; // eax
   const char *v4; // eax

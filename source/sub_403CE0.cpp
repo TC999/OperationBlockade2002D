@@ -1,5 +1,5 @@
 //----- (00403CE0) --------------------------------------------------------
-void __thiscall sub_403CE0(_DWORD *self)
+void __cdecl sub_403CE0(_DWORD *self)
 {
   char *v2; // eax
   char *v3; // edi

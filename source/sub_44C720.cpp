@@ -1,5 +1,5 @@
 //----- (0044C720) --------------------------------------------------------
-char *__thiscall sub_44C720(char *self, int a2)
+char *__cdecl sub_44C720(char *self, int a2)
 {
   _DWORD *v2; // ebp
   unsigned int v4; // ebx

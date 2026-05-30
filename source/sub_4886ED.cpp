@@ -1,5 +1,5 @@
 //----- (004886ED) --------------------------------------------------------
-double __usercall sub_4886ED(
+double __cdecl sub_4886ED(
         char a1,
         unsigned int a2,
         __int16 a3,

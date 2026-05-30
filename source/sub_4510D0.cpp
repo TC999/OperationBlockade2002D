@@ -1,5 +1,5 @@
 //----- (004510D0) --------------------------------------------------------
-double __thiscall sub_4510D0(float *self, float a2, float a3)
+double __cdecl sub_4510D0(float *self, float a2, float a3)
 {
   double v4; // st7
   double v5; // st7

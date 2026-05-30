@@ -1,5 +1,5 @@
 //----- (0046EE09) --------------------------------------------------------
-int __thiscall sub_46EE09(_DWORD *self)
+int __cdecl sub_46EE09(_DWORD *self)
 {
   _WORD *v1; // ebx
   int v2; // esi

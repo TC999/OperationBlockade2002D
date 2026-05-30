@@ -1,5 +1,5 @@
 //----- (0040B6E0) --------------------------------------------------------
-int __thiscall sub_40B6E0(int self, char *String2, char a3)
+int __cdecl sub_40B6E0(int self, char *String2, char a3)
 {
   int v4; // eax
   unsigned int v5; // edx

@@ -1,5 +1,5 @@
 //----- (00433360) --------------------------------------------------------
-int __thiscall sub_433360(int self, int a2)
+int __cdecl sub_433360(int self, int a2)
 {
   int v3; // ecx
   int result; // eax
@@ -22,7 +22,7 @@ int __thiscall sub_433360(int self, int a2)
     *(_BYTE *)(result + 32) = a2;
   v5 = *(_DWORD *)(self + 432);
   if ( v5 )
-    result = (*(int (__thiscall **)(int, int))(*(_DWORD *)v5 + 24))(v5, a2);
+    result = (*(int (__cdecl **)(int, int))(*(_DWORD *)v5 + 24))(v5, a2);
   *(_BYTE *)(self + 16) = a2;
   return result;
 }

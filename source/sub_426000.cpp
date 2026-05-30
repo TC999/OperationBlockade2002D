@@ -1,5 +1,5 @@
 //----- (00426000) --------------------------------------------------------
-const char *__thiscall sub_426000(_DWORD *self, char *String2)
+const char *__cdecl sub_426000(_DWORD *self, char *String2)
 {
   int v3; // ebp
   int v4; // esi

@@ -1,5 +1,5 @@
 //----- (00449B20) --------------------------------------------------------
-_DWORD *__thiscall sub_449B20(_DWORD *self)
+_DWORD *__cdecl sub_449B20(_DWORD *self)
 {
   _DWORD *result; // eax
 

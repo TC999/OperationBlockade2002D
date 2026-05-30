@@ -1,5 +1,5 @@
 //----- (00477BE1) --------------------------------------------------------
-char __usercall sub_477BE1(_DWORD *a1)
+char __cdecl sub_477BE1(_DWORD *a1)
 {
   unsigned __int8 **v1; // ebx
   unsigned __int8 *v2; // edi

@@ -1,5 +1,5 @@
 //----- (0044F9E0) --------------------------------------------------------
-char __thiscall sub_44F9E0(int self)
+char __cdecl sub_44F9E0(int self)
 {
   char *v2; // eax
   char *v3; // esi
@@ -341,7 +341,7 @@ LABEL_139:
           sub_402670(v82, v81);
         }
         sub_450D30(self);
-        (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(self + 260) + 24))(*(_DWORD *)(self + 260), 0);
+        (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(self + 260) + 24))(*(_DWORD *)(self + 260), 0);
       }
     }
     if ( *(_DWORD *)(self + 184) )
@@ -379,15 +379,15 @@ LABEL_139:
       sub_409BE0((int)v55, 0, self, 1065353216, -1, -5000.0, 5000.0, -5000.0, 5000.0, 50.0, -8355712, v76, v77, v78);
       sub_428680((_DWORD *)self, *(_DWORD *)(self + 284));
       LOBYTE(v56) = *(_DWORD *)(self + 172) == 0;
-      v57 = (*(int (__thiscall **)(_DWORD, int))(**(_DWORD **)(self + 284) + 24))(*(_DWORD *)(self + 284), v56);
+      v57 = (*(int (__cdecl **)(_DWORD, int))(**(_DWORD **)(self + 284) + 24))(*(_DWORD *)(self + 284), v56);
       v58 = *(_DWORD *)(self + 260);
       if ( v58 )
-        v57 = (*(int (__thiscall **)(int, _DWORD))(*(_DWORD *)v58 + 24))(v58, 0);
+        v57 = (*(int (__cdecl **)(int, _DWORD))(*(_DWORD *)v58 + 24))(v58, 0);
       v59 = *(_DWORD *)(self + 252);
       if ( v59 )
       {
         LOBYTE(v57) = *(_DWORD *)(self + 172) != 0;
-        (*(void (__thiscall **)(int, int))(*(_DWORD *)v59 + 24))(v59, v57);
+        (*(void (__cdecl **)(int, int))(*(_DWORD *)v59 + 24))(v59, v57);
       }
     }
     else
@@ -412,7 +412,7 @@ LABEL_139:
       *(_DWORD *)(self + 228) = v63;
       v64 = *v63;
       v89 = -1;
-      (*(void (__thiscall **)(int *, _DWORD))(v64 + 24))(v63, 0);
+      (*(void (__cdecl **)(int *, _DWORD))(v64 + 24))(v63, 0);
       v65 = operator new(0x5Cu);
       lpMem[0] = v65;
       v89 = 18;
@@ -452,7 +452,7 @@ LABEL_139:
       *(_DWORD *)(self + 248) = v72;
       v73 = *v72;
       v89 = -1;
-      (*(void (__thiscall **)(int *, _DWORD))(v73 + 24))(v72, 0);
+      (*(void (__cdecl **)(int *, _DWORD))(v73 + 24))(v72, 0);
       if ( *(_DWORD *)(self + 236) )
         sub_428680((_DWORD *)self, *(_DWORD *)(self + 236));
       if ( *(_DWORD *)(self + 224) )

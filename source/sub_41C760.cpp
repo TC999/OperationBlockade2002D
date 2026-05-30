@@ -1,5 +1,5 @@
 //----- (0041C760) --------------------------------------------------------
-unsigned int __thiscall sub_41C760(int self, const char *a2)
+unsigned int __cdecl sub_41C760(int self, const char *a2)
 {
   unsigned int result; // eax
 

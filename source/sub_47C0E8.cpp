@@ -1,5 +1,5 @@
 //----- (0047C0E8) --------------------------------------------------------
-void __usercall sub_47C0E8(int a1)
+void __cdecl sub_47C0E8(int a1)
 {
   unsigned int v1; // esi
   void *v2; // eax

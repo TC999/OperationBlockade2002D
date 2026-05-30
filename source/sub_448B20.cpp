@@ -1,5 +1,5 @@
 //----- (00448B20) --------------------------------------------------------
-char *__thiscall sub_448B20(_DWORD *self, char *a2, char *a3)
+char *__cdecl sub_448B20(_DWORD *self, char *a2, char *a3)
 {
   char *v3; // eax
   char *v4; // ebx

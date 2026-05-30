@@ -1,5 +1,5 @@
 //----- (0044DBF0) --------------------------------------------------------
-void __thiscall sub_44DBF0(char *self, int a2, float *a3, float a4)
+void __cdecl sub_44DBF0(char *self, int a2, float *a3, float a4)
 {
   int v6; // esi
   _BYTE *i; // eax

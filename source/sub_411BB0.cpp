@@ -1,5 +1,5 @@
 //----- (00411BB0) --------------------------------------------------------
-void __thiscall sub_411BB0(int self, int a2)
+void __cdecl sub_411BB0(int self, int a2)
 {
   struct _RTL_CRITICAL_SECTION *v3; // ebx
   int *v4; // esi

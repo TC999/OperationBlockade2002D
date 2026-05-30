@@ -1,5 +1,5 @@
 //----- (0040EDB0) --------------------------------------------------------
-int __thiscall sub_40EDB0(int self, int a2)
+int __cdecl sub_40EDB0(int self, int a2)
 {
   int v3; // ecx
   double v4; // st7

@@ -1,5 +1,5 @@
 //----- (0041BB90) --------------------------------------------------------
-int __thiscall sub_41BB90(_DWORD *self)
+int __cdecl sub_41BB90(_DWORD *self)
 {
   int v1; // esi
   _DWORD *v2; // edi

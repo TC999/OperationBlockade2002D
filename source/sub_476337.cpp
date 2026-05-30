@@ -1,5 +1,5 @@
 //----- (00476337) --------------------------------------------------------
-void __thiscall sub_476337(int self, int a2, int a3, void *a4)
+void __cdecl sub_476337(int self, int a2, int a3, void *a4)
 {
   unsigned int v5; // edi
 

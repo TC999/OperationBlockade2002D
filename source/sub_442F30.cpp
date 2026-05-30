@@ -1,5 +1,5 @@
 //----- (00442F30) --------------------------------------------------------
-int __thiscall sub_442F30(_DWORD *self, int a2, float a3, float a4, int a5, int a6)
+int __cdecl sub_442F30(_DWORD *self, int a2, float a3, float a4, int a5, int a6)
 {
   unsigned int i; // edi
   int result; // eax

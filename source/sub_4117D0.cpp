@@ -1,5 +1,5 @@
 //----- (004117D0) --------------------------------------------------------
-bool __thiscall sub_4117D0(int self, _DWORD *a2, _WORD *a3, int a4, int a5, int a6)
+bool __cdecl sub_4117D0(int self, _DWORD *a2, _WORD *a3, int a4, int a5, int a6)
 {
   struct _RTL_CRITICAL_SECTION *v7; // edi
   bool v8; // bl

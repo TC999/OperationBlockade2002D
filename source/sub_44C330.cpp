@@ -1,5 +1,5 @@
 //----- (0044C330) --------------------------------------------------------
-float *__thiscall sub_44C330(float *self, int a2)
+float *__cdecl sub_44C330(float *self, int a2)
 {
   sub_468FF0(a2);
   *(_DWORD *)self = &off_499A80;

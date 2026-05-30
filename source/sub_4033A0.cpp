@@ -1,5 +1,5 @@
 //----- (004033A0) --------------------------------------------------------
-int __thiscall sub_4033A0(int self)
+int __cdecl sub_4033A0(int self)
 {
   char *v2; // ebp
   _DWORD *v3; // eax

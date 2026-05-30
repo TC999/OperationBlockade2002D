@@ -1,5 +1,5 @@
 //----- (0046F82B) --------------------------------------------------------
-int __thiscall sub_46F82B(_DWORD *self)
+int __cdecl sub_46F82B(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // ecx
@@ -21,7 +21,7 @@ int __thiscall sub_46F82B(_DWORD *self)
   v6 = v5;
   if ( v5 )
   {
-    sub_46C866((int)v5, 16, v4, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v5, 16, v4, (int (__cdecl *)(int))sub_46C80E);
     v12 = v6;
   }
   else
@@ -39,8 +39,8 @@ int __thiscall sub_46F82B(_DWORD *self)
     {
       for ( i = 0; i < v9; ++i )
       {
-        (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)*self + 4))(*self, i, v7, v12);
-        (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)self[1] + 8))(
+        (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)*self + 4))(*self, i, v7, v12);
+        (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)self[1] + 8))(
           self[1],
           i,
           v7,

@@ -1,5 +1,5 @@
 //----- (00449C40) --------------------------------------------------------
-char __thiscall sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6, float a7, int a8)
+char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, char a6, float a7, int a8)
 {
   int v9; // eax
   int v11; // esi

@@ -1,5 +1,5 @@
 //----- (00403620) --------------------------------------------------------
-char *__thiscall sub_403620(_DWORD *self, char *String2)
+char *__cdecl sub_403620(_DWORD *self, char *String2)
 {
   int v3; // edi
   char *v4; // ebx

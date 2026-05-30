@@ -1,5 +1,5 @@
 //----- (00437540) --------------------------------------------------------
-int __thiscall sub_437540(_DWORD *self, int a2)
+int __cdecl sub_437540(_DWORD *self, int a2)
 {
   int v3; // eax
   int v4; // ecx
@@ -10,7 +10,7 @@ int __thiscall sub_437540(_DWORD *self, int a2)
   int v9; // ecx
   int result; // eax
 
-  (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)a2 + 24))(a2, 0);
+  (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)a2 + 24))(a2, 0);
   v3 = self[8];
   v4 = self[7] + 1;
   self[7] = v4;

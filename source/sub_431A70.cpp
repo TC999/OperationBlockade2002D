@@ -1,5 +1,5 @@
 //----- (00431A70) --------------------------------------------------------
-char __thiscall sub_431A70(int self, int a2)
+char __cdecl sub_431A70(int self, int a2)
 {
   double v3; // st7
   float *v4; // edi
@@ -316,7 +316,7 @@ LABEL_38:
     *(_BYTE *)(self + 436) = 0;
     *(_BYTE *)(self + 437) = 0;
     sub_4333C0(0);
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
     goto LABEL_38;
   }
 LABEL_40:
@@ -332,7 +332,7 @@ LABEL_40:
       && !(v30 | v31)
       && !*(_BYTE *)(dword_4F5CC4 + 937) )
     {
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
       sub_4333C0(0);
       if ( *(_BYTE *)(dword_4F5CC4 + 936) )
       {
@@ -343,7 +343,7 @@ LABEL_40:
   }
   else
   {
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
     sub_4333C0(0);
   }
   if ( *(_BYTE *)(self + 436) )

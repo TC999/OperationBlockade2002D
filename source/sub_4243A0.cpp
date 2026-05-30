@@ -1,5 +1,5 @@
 //----- (004243A0) --------------------------------------------------------
-_DWORD *__thiscall sub_4243A0(_DWORD *self)
+_DWORD *__cdecl sub_4243A0(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // eax

@@ -1,5 +1,5 @@
 //----- (00450790) --------------------------------------------------------
-void __thiscall sub_450790(_DWORD *self)
+void __cdecl sub_450790(_DWORD *self)
 {
   _DWORD *v2; // ecx
 

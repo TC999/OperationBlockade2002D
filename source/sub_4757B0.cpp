@@ -1,5 +1,5 @@
 //----- (004757B0) --------------------------------------------------------
-int __thiscall sub_4757B0(int self, unsigned int a2, unsigned int a3, int a4)
+int __cdecl sub_4757B0(int self, unsigned int a2, unsigned int a3, int a4)
 {
   int result; // eax
   unsigned int v6; // eax

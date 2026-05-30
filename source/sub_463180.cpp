@@ -1,5 +1,5 @@
 //----- (00463180) --------------------------------------------------------
-int __thiscall sub_463180(_BYTE *self)
+int __cdecl sub_463180(_BYTE *self)
 {
   char v2; // al
   char v3; // cl

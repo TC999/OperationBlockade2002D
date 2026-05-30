@@ -1,5 +1,5 @@
 //----- (0046FB1E) --------------------------------------------------------
-int __thiscall sub_46FB1E(_DWORD *self)
+int __cdecl sub_46FB1E(_DWORD *self)
 {
   int v3; // edi
   char *v4; // eax
@@ -33,7 +33,7 @@ int __thiscall sub_46FB1E(_DWORD *self)
   v16 = v4;
   if ( v4 )
   {
-    sub_46C866((int)v4, 16, v3, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v4, 16, v3, (int (__cdecl *)(int))sub_46C80E);
     v26 = v16;
   }
   else
@@ -47,7 +47,7 @@ int __thiscall sub_46FB1E(_DWORD *self)
   v17 = v6;
   if ( v6 )
   {
-    sub_46C866((int)v6, 16, v5, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v6, 16, v5, (int (__cdecl *)(int))sub_46C80E);
     v25 = v17;
   }
   else
@@ -74,7 +74,7 @@ int __thiscall sub_46FB1E(_DWORD *self)
         v21 = 0;
         if ( ((v9 ^ v19) & 0xFFFF0000) != 0 )
         {
-          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, char *))(*(_DWORD *)*self + 4))(
+          (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, char *))(*(_DWORD *)*self + 4))(
             *self,
             HIWORD(v9),
             HIWORD(v20),
@@ -100,7 +100,7 @@ int __thiscall sub_46FB1E(_DWORD *self)
           }
           while ( v21 < *(_DWORD *)(self[1] + 4176) );
         }
-        (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, _DWORD *))(*(_DWORD *)self[1] + 8))(
+        (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, _DWORD *))(*(_DWORD *)self[1] + 8))(
           self[1],
           i,
           v23,

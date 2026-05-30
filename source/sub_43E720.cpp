@@ -1,5 +1,5 @@
 //----- (0043E720) --------------------------------------------------------
-bool __thiscall sub_43E720(int self)
+bool __cdecl sub_43E720(int self)
 {
   const char *v2; // edi
   const char *v3; // ebp

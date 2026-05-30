@@ -1,5 +1,5 @@
 //----- (00416350) --------------------------------------------------------
-char __thiscall sub_416350(int self, _DWORD *a2, char a3)
+char __cdecl sub_416350(int self, _DWORD *a2, char a3)
 {
   char result; // al
   _BYTE *v5; // eax

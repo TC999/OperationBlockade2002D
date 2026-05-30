@@ -1,5 +1,5 @@
 //----- (004153B0) --------------------------------------------------------
-char __thiscall sub_4153B0(_DWORD *self, int a2)
+char __cdecl sub_4153B0(_DWORD *self, int a2)
 {
   int v2; // ebx
   unsigned int v3; // edi

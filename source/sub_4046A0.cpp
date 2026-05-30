@@ -1,5 +1,5 @@
 //----- (004046A0) --------------------------------------------------------
-void __thiscall sub_4046A0(char *self)
+void __cdecl sub_4046A0(char *self)
 {
   memset(self + 84, 0, 0x58u);
 }

@@ -1,5 +1,5 @@
 //----- (00429E40) --------------------------------------------------------
-int __thiscall sub_429E40(FILE ***self)
+int __cdecl sub_429E40(FILE ***self)
 {
   FILE **v1; // esi
   int result; // eax

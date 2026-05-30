@@ -1,5 +1,5 @@
 //----- (00407670) --------------------------------------------------------
-_BYTE *__thiscall sub_407670(_DWORD *self, int a2, char a3)
+_BYTE *__cdecl sub_407670(_DWORD *self, int a2, char a3)
 {
   _BYTE *result; // eax
 

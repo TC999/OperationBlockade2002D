@@ -1,5 +1,5 @@
 //----- (00456F30) --------------------------------------------------------
-int __thiscall sub_456F30(int self, float a2)
+int __cdecl sub_456F30(int self, float a2)
 {
   int v3; // eax
   __int64 v4; // rax

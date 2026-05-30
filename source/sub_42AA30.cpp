@@ -169,7 +169,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   *(_DWORD *)(a1 + 616) = 0;
   *(_DWORD *)(a1 + 620) = 0;
   LOBYTE(v162) = 1;
-  `eh vector constructor iterator'((void *)(a1 + 624), 0x18u, 5, sub_42CA00, (void (__thiscall *)(void *))sub_42A9D0);
+  `eh vector constructor iterator'((void *)(a1 + 624), 0x18u, 5, sub_42CA00, (void (__cdecl *)(void *))sub_42A9D0);
   *(_DWORD *)(a1 + 932) = 0;
   *(_DWORD *)(a1 + 936) = 0;
   *(_DWORD *)(a1 + 940) = 0;

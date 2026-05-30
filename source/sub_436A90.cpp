@@ -1,5 +1,5 @@
 //----- (00436A90) --------------------------------------------------------
-int __thiscall sub_436A90(int self)
+int __cdecl sub_436A90(int self)
 {
   int v2; // ebx
   int v3; // edi

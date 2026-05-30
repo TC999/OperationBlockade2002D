@@ -1,5 +1,5 @@
 //----- (0044E980) --------------------------------------------------------
-int __thiscall sub_44E980(_DWORD *self)
+int __cdecl sub_44E980(_DWORD *self)
 {
   int result; // eax
 

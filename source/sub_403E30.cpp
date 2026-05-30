@@ -1,5 +1,5 @@
 //----- (00403E30) --------------------------------------------------------
-char __thiscall sub_403E30(int self)
+char __cdecl sub_403E30(int self)
 {
   sub_403CE0((_DWORD *)self);
   sub_4229D0(aLoadingS, self + 60);

@@ -1,5 +1,5 @@
 //----- (00468FF0) --------------------------------------------------------
-void *__thiscall sub_468FF0(void *self, int a2)
+void *__cdecl sub_468FF0(void *self, int a2)
 {
   *((_BYTE *)self + 276) = a2;
   *((_DWORD *)self + 70) = 0;

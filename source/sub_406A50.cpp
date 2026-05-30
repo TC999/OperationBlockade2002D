@@ -1,5 +1,5 @@
 //----- (00406A50) --------------------------------------------------------
-int __thiscall sub_406A50(_DWORD *self, int a2)
+int __cdecl sub_406A50(_DWORD *self, int a2)
 {
   int result; // eax
   int v3; // esi

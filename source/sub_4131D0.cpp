@@ -1,5 +1,5 @@
 //----- (004131D0) --------------------------------------------------------
-float *__thiscall sub_4131D0(float *self, float *a2, float *a3)
+float *__cdecl sub_4131D0(float *self, float *a2, float *a3)
 {
   float *result; // eax
   long double v4; // st7

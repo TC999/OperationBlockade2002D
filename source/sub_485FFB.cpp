@@ -1,5 +1,5 @@
 //----- (00485FFB) --------------------------------------------------------
-int __usercall sub_485FFB(
+int __cdecl sub_485FFB(
         unsigned int *a1,
         _DWORD *a2,
         unsigned int a3,

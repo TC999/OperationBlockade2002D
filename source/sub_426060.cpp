@@ -1,5 +1,5 @@
 //----- (00426060) --------------------------------------------------------
-char __thiscall sub_426060(int self, int a2, int ArgList)
+char __cdecl sub_426060(int self, int a2, int ArgList)
 {
   int v4; // eax
   int v5; // eax
@@ -37,7 +37,7 @@ char __thiscall sub_426060(int self, int a2, int ArgList)
     {
       v10 = v9 + 1;
     }
-    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, _DWORD, int))(**(_DWORD **)(self + 52) + 48))(
+    LOBYTE(v11) = (*(int (__cdecl **)(_DWORD, int, _DWORD, int))(**(_DWORD **)(self + 52) + 48))(
                     *(_DWORD *)(self + 52),
                     a2,
                     *(_DWORD *)(a2 + 124),
@@ -56,7 +56,7 @@ char __thiscall sub_426060(int self, int a2, int ArgList)
   }
   if ( v4 == 3 )
   {
-    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
+    LOBYTE(v11) = (*(int (__cdecl **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
                     *(_DWORD *)(self + 52),
                     a2,
                     ArgList);
@@ -84,7 +84,7 @@ char __thiscall sub_426060(int self, int a2, int ArgList)
   {
 LABEL_23:
     sub_4229D0("UI: button %d clicked %s", ArgList, (const char *)a2);
-    LOBYTE(v11) = (*(int (__thiscall **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
+    LOBYTE(v11) = (*(int (__cdecl **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
                     *(_DWORD *)(self + 52),
                     a2,
                     ArgList);

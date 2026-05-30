@@ -1,10 +1,10 @@
 //----- (00435880) --------------------------------------------------------
-int __thiscall sub_435880(LPVOID *self)
+int __cdecl sub_435880(LPVOID *self)
 {
   int i; // edi
   void *v3; // eax
   int j; // edi
-  void (__thiscall ***v5)(_DWORD, int); // ecx
+  void (__cdecl ***v5)(_DWORD, int); // ecx
   void *v6; // eax
   int result; // eax
 
@@ -25,7 +25,7 @@ int __thiscall sub_435880(LPVOID *self)
   {
     for ( j = 0; j < (int)self[7]; ++j )
     {
-      v5 = (void (__thiscall ***)(_DWORD, int))*((_DWORD *)self[6] + j);
+      v5 = (void (__cdecl ***)(_DWORD, int))*((_DWORD *)self[6] + j);
       if ( v5 )
         (**v5)(v5, 1);
     }

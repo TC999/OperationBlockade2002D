@@ -1,5 +1,5 @@
 //----- (004835E9) --------------------------------------------------------
-_WORD *__usercall sub_4835E9(int a1, int a2, int a3, int a4)
+_WORD *__cdecl sub_4835E9(int a1, int a2, int a3, int a4)
 {
   int v4; // esi
   int v5; // eax

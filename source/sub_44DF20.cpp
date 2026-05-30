@@ -1,5 +1,5 @@
 //----- (0044DF20) --------------------------------------------------------
-void __thiscall sub_44DF20(char *self, float a2, float a3, float *a4)
+void __cdecl sub_44DF20(char *self, float a2, float a3, float *a4)
 {
   int v6; // edx
   float v7; // ebx

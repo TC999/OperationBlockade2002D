@@ -1,5 +1,5 @@
 //----- (0041C2F0) --------------------------------------------------------
-double __thiscall sub_41C2F0(float *self, float a2)
+double __cdecl sub_41C2F0(float *self, float a2)
 {
   double result; // st7
 

@@ -1,5 +1,5 @@
 //----- (00444AA0) --------------------------------------------------------
-char __thiscall sub_444AA0(int self, int a2)
+char __cdecl sub_444AA0(int self, int a2)
 {
   double v3; // st7
   double v4; // st6
@@ -324,7 +324,7 @@ char __thiscall sub_444AA0(int self, int a2)
     }
     if ( v234 <= 0.0 )
     {
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
       return sub_428620((_DWORD *)self, a2);
     }
   }
@@ -417,7 +417,7 @@ char __thiscall sub_444AA0(int self, int a2)
         {
           sub_467A50(0);
           v22 = *(_DWORD *)(*(_DWORD *)(self + 524) + 4 * i);
-          (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v22 + 24))(v22, 0);
+          (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v22 + 24))(v22, 0);
         }
       }
     }
@@ -433,12 +433,12 @@ char __thiscall sub_444AA0(int self, int a2)
         {
           sub_4333C0(v25, 0);
           v26 = *(_DWORD *)(*(_DWORD *)(self + 1392) + 4 * j);
-          (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v26 + 24))(v26, 0);
+          (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v26 + 24))(v26, 0);
         }
       }
     }
     *(_DWORD *)(*(_DWORD *)(self + 416) + 76) = 0;
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
     sub_4477F0(0);
   }
   if ( !(unsigned __int8)sub_4438C0(self) && !sub_408880(*(_DWORD *)(self + 412)) )

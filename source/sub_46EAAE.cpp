@@ -1,5 +1,5 @@
 //----- (0046EAAE) --------------------------------------------------------
-int __thiscall sub_46EAAE(_DWORD *self)
+int __cdecl sub_46EAAE(_DWORD *self)
 {
   unsigned int *v1; // ebx
   int v2; // eax

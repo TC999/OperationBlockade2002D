@@ -1,5 +1,5 @@
 //----- (0041BC00) --------------------------------------------------------
-int __thiscall sub_41BC00(_DWORD *self, int a2, int a3, int a4, int a5, int a6, int a7, int a8)
+int __cdecl sub_41BC00(_DWORD *self, int a2, int a3, int a4, int a5, int a6, int a7, int a8)
 {
   int result; // eax
   int v10; // [esp+64h] [ebp-4h]

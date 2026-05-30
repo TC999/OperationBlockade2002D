@@ -1,5 +1,5 @@
 //----- (00455F20) --------------------------------------------------------
-int __thiscall sub_455F20(int *self, int a2)
+int __cdecl sub_455F20(int *self, int a2)
 {
   __int16 v2; // ax
   int result; // eax
@@ -21,7 +21,7 @@ int __thiscall sub_455F20(int *self, int a2)
     if ( v4 )
     {
       if ( result < (unsigned int)((self[101] - v4) >> 2) )
-        return (*(int (__thiscall **)(_DWORD, int))(**(_DWORD **)(v4 + 4 * result) + 28))(
+        return (*(int (__cdecl **)(_DWORD, int))(**(_DWORD **)(v4 + 4 * result) + 28))(
                  *(_DWORD *)(v4 + 4 * result),
                  a2);
     }

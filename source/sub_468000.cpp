@@ -1,5 +1,5 @@
 //----- (00468000) --------------------------------------------------------
-int __thiscall sub_468000(int self)
+int __cdecl sub_468000(int self)
 {
   int v2; // edi
   int v3; // eax

@@ -1,5 +1,5 @@
 //----- (00424630) --------------------------------------------------------
-char __thiscall sub_424630(int *self)
+char __cdecl sub_424630(int *self)
 {
   int v2; // eax
   _DWORD *v3; // eax

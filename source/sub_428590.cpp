@@ -1,5 +1,5 @@
 //----- (00428590) --------------------------------------------------------
-char __thiscall sub_428590(_DWORD *self, int a2, int a3)
+char __cdecl sub_428590(_DWORD *self, int a2, int a3)
 {
   int i; // esi
   char result; // al
@@ -8,7 +8,7 @@ char __thiscall sub_428590(_DWORD *self, int a2, int a3)
   {
     result = *(_BYTE *)(i + 16);
     if ( result )
-      result = (*(int (__thiscall **)(int, int, int))(*(_DWORD *)i + 4))(i, a2, a3);
+      result = (*(int (__cdecl **)(int, int, int))(*(_DWORD *)i + 4))(i, a2, a3);
   }
   return result;
 }

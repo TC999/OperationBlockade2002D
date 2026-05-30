@@ -1,5 +1,5 @@
 //----- (00451820) --------------------------------------------------------
-int __thiscall sub_451820(_DWORD *self)
+int __cdecl sub_451820(_DWORD *self)
 {
   int v2; // ebx
   int result; // eax

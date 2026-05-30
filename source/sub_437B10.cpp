@@ -1,5 +1,5 @@
 //----- (00437B10) --------------------------------------------------------
-_DWORD *__thiscall sub_437B10(_DWORD *self)
+_DWORD *__cdecl sub_437B10(_DWORD *self)
 {
   _DWORD *result; // eax
   int v2; // ecx

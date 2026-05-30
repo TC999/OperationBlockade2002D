@@ -1,5 +1,5 @@
 //----- (00437450) --------------------------------------------------------
-_DWORD *__thiscall sub_437450(int self, char a2)
+_DWORD *__cdecl sub_437450(int self, char a2)
 {
   int v3; // eax
   int v4; // eax
@@ -28,7 +28,7 @@ _DWORD *__thiscall sub_437450(int self, char a2)
     v4 = v3 - 1;
     v5 = *(_DWORD **)(*(_DWORD *)(self + 24) + 4 * v4);
     *(_DWORD *)(self + 28) = v4;
-    (*(void (__thiscall **)(_DWORD *, int))(*v5 + 24))(v5, 1);
+    (*(void (__cdecl **)(_DWORD *, int))(*v5 + 24))(v5, 1);
   }
   return v5;
 }

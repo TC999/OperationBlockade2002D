@@ -1,5 +1,5 @@
 //----- (0046E7DF) --------------------------------------------------------
-int __thiscall sub_46E7DF(_DWORD *self)
+int __cdecl sub_46E7DF(_DWORD *self)
 {
   _DWORD *v1; // edi
   unsigned int v2; // esi

@@ -1,5 +1,5 @@
 //----- (0045A7E0) --------------------------------------------------------
-int __thiscall sub_45A7E0(_DWORD *self)
+int __cdecl sub_45A7E0(_DWORD *self)
 {
   sub_4282E0(
     *(_DWORD *)(self[19] + 352) != 0,

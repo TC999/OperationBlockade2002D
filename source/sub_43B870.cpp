@@ -1,5 +1,5 @@
 //----- (0043B870) --------------------------------------------------------
-char __thiscall sub_43B870(int self, char *String1, int a3)
+char __cdecl sub_43B870(int self, char *String1, int a3)
 {
   int v5; // eax
   const char *v6; // eax

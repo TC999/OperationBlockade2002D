@@ -1,5 +1,5 @@
 //----- (00450FB0) --------------------------------------------------------
-void *__thiscall sub_450FB0(void *self, int a2, int a3, int a4)
+void *__cdecl sub_450FB0(void *self, int a2, int a3, int a4)
 {
   double v6; // st7
   double v7; // st6

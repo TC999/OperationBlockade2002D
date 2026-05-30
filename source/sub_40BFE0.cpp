@@ -1,5 +1,5 @@
 //----- (0040BFE0) --------------------------------------------------------
-_DWORD *__thiscall sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
+_DWORD *__cdecl sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
 {
   int v6; // eax
   _DWORD *v7; // esi

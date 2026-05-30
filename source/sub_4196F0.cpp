@@ -1,5 +1,5 @@
 //----- (004196F0) --------------------------------------------------------
-char __thiscall sub_4196F0(int self, float *a2, float a3, float a4, char a5, char a6)
+char __cdecl sub_4196F0(int self, float *a2, float a3, float a4, char a5, char a6)
 {
   double v8; // st7
   long double v9; // st7

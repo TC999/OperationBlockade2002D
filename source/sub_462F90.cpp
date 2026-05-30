@@ -1,5 +1,5 @@
 //----- (00462F90) --------------------------------------------------------
-_DWORD *__thiscall sub_462F90(_DWORD *self)
+_DWORD *__cdecl sub_462F90(_DWORD *self)
 {
   _DWORD *v1; // esi
   int v2; // ebp
@@ -18,8 +18,8 @@ _DWORD *__thiscall sub_462F90(_DWORD *self)
     memset(v1 - 1, 0, 0x34u);
     *v1 = v3;
     v1[1] = v4;
-    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)*v1 + 24))(*v1, 0);
-    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v1[1] + 24))(v1[1], 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)*v1 + 24))(*v1, 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)v1[1] + 24))(v1[1], 0);
     v1 += 13;
     --v2;
   }

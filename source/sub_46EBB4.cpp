@@ -1,5 +1,5 @@
 //----- (0046EBB4) --------------------------------------------------------
-int __thiscall sub_46EBB4(_DWORD *self)
+int __cdecl sub_46EBB4(_DWORD *self)
 {
   _DWORD *v2; // edx
   _WORD *v3; // ecx

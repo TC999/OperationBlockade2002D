@@ -1,5 +1,5 @@
 //----- (0045F620) --------------------------------------------------------
-void __thiscall sub_45F620(int self, int a2, char a3)
+void __cdecl sub_45F620(int self, int a2, char a3)
 {
   char v4; // al
   char v5; // dl

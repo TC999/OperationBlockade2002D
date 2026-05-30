@@ -1,5 +1,5 @@
 //----- (0041CF80) --------------------------------------------------------
-int __thiscall sub_41CF80(int self, float a2)
+int __cdecl sub_41CF80(int self, float a2)
 {
   unsigned int v3; // ecx
   __int64 v4; // rax

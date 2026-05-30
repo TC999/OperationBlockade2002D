@@ -1,5 +1,5 @@
 //----- (00419CF0) --------------------------------------------------------
-char *__thiscall sub_419CF0(char *self, char *a2, unsigned int a3, _DWORD *a4)
+char *__cdecl sub_419CF0(char *self, char *a2, unsigned int a3, _DWORD *a4)
 {
   char *v4; // ebx
   char *result; // eax

@@ -1,5 +1,5 @@
 //----- (00403220) --------------------------------------------------------
-int __thiscall sub_403220(void *self)
+int __cdecl sub_403220(void *self)
 {
   int i; // edi
   int v3; // eax

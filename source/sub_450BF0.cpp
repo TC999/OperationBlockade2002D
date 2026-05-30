@@ -1,5 +1,5 @@
 //----- (00450BF0) --------------------------------------------------------
-int __thiscall sub_450BF0(_DWORD *self, int a2, float a3)
+int __cdecl sub_450BF0(_DWORD *self, int a2, float a3)
 {
   float v5; // [esp+0h] [ebp-14h]
 

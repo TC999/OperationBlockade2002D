@@ -1,5 +1,5 @@
 //----- (004073F0) --------------------------------------------------------
-int __thiscall sub_4073F0(_DWORD *self, int a2, const void *a3)
+int __cdecl sub_4073F0(_DWORD *self, int a2, const void *a3)
 {
   char *v4; // eax
 

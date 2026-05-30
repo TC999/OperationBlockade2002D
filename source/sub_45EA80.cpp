@@ -1,5 +1,5 @@
 //----- (0045EA80) --------------------------------------------------------
-int __thiscall sub_45EA80(int self, int a2)
+int __cdecl sub_45EA80(int self, int a2)
 {
   int result; // eax
   int v4; // ebp

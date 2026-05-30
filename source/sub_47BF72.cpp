@@ -1,5 +1,5 @@
 //----- (0047BF72) --------------------------------------------------------
-int __usercall sub_47BF72(_DWORD *a1)
+int __cdecl sub_47BF72(_DWORD *a1)
 {
   int v1; // eax
   _DWORD *v2; // ecx

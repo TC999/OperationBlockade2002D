@@ -1,5 +1,5 @@
 //----- (00472972) --------------------------------------------------------
-int __thiscall sub_472972(int *self, int a2, unsigned int a3)
+int __cdecl sub_472972(int *self, int a2, unsigned int a3)
 {
   if ( a3 >= 0xE && *(_WORD *)a2 == 19778 && *(_DWORD *)(a2 + 2) <= a3 )
     return sub_471009(self, a2 + 14, a3 - 14);

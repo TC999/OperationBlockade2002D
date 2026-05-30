@@ -1,6 +1,6 @@
 //----- (00409BE0) --------------------------------------------------------
 // positive sp value has been detected, the output may be wrong!
-char __userpurge sub_409BE0(
+char __cdecl sub_409BE0(
         int a1,
         int a2,
         int a3,

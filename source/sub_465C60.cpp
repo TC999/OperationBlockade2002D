@@ -1,5 +1,5 @@
 //----- (00465C60) --------------------------------------------------------
-int __thiscall sub_465C60(LPVOID *self)
+int __cdecl sub_465C60(LPVOID *self)
 {
   int result; // eax
 

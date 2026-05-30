@@ -1,5 +1,5 @@
 //----- (0047B28E) --------------------------------------------------------
-float *__usercall sub_47B28E(float *a1, float *a2)
+float *__cdecl sub_47B28E(float *a1, float *a2)
 {
   int v2; // ebx
   float *v3; // ecx

@@ -1,5 +1,5 @@
 //----- (00433F70) --------------------------------------------------------
-char *__thiscall sub_433F70(_DWORD *self, char *a2, unsigned int a3, const void *a4)
+char *__cdecl sub_433F70(_DWORD *self, char *a2, unsigned int a3, const void *a4)
 {
   unsigned int v4; // esi
   _DWORD *v5; // edi

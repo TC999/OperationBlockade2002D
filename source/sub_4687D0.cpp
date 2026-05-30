@@ -1,5 +1,5 @@
 //----- (004687D0) --------------------------------------------------------
-int __thiscall sub_4687D0(int *self, int a2, int a3)
+int __cdecl sub_4687D0(int *self, int a2, int a3)
 {
   int result; // eax
   double v6; // st7
@@ -12,13 +12,13 @@ int __thiscall sub_4687D0(int *self, int a2, int a3)
 
   if ( !_strnicmp(*(const char **)(a2 + 8), aWater, strlen(aWater)) )
   {
-    (*(void (__thiscall **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
+    (*(void (__cdecl **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
     sub_41BEF0((_DWORD *)dword_520A50, 0, self[self[151] + 147], 1, 0);
     result = sub_406000((_DWORD *)a2, a3);
     v11 = result;
     if ( byte_520974 )
     {
-      (*(void (__thiscall **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
+      (*(void (__cdecl **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
       v6 = (2.0 - *((float *)self + 153)) * 0.5;
       qmemcpy(v10, (const void *)(*(_DWORD *)(a2 + 52) + 4), sizeof(v10));
       v10[3] = v6;
@@ -50,7 +50,7 @@ int __thiscall sub_4687D0(int *self, int a2, int a3)
         v12 = *(_DWORD *)(self[154] + 4 * v8);
       }
 LABEL_13:
-      (*(void (__thiscall **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
+      (*(void (__cdecl **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
       if ( v12 )
       {
         qmemcpy(v10, (const void *)(*(_DWORD *)(a2 + 52) + 4), sizeof(v10));
@@ -64,7 +64,7 @@ LABEL_13:
     }
     else
     {
-      (*(void (__thiscall **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
+      (*(void (__cdecl **)(int *, int, _DWORD, _DWORD))*self)(self, a2, 0, 0);
     }
     return sub_406000((_DWORD *)a2, a3);
   }

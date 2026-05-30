@@ -1,5 +1,5 @@
 //----- (00406DF0) --------------------------------------------------------
-int __thiscall sub_406DF0(_DWORD *self, float a2)
+int __cdecl sub_406DF0(_DWORD *self, float a2)
 {
   int v2; // esi
   int v3; // ebx

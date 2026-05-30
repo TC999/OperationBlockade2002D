@@ -1,5 +1,5 @@
 //----- (004230F0) --------------------------------------------------------
-double __thiscall sub_4230F0(_DWORD *self)
+double __cdecl sub_4230F0(_DWORD *self)
 {
   int v1; // eax
   double result; // st7

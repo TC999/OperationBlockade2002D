@@ -1,5 +1,5 @@
 //----- (0045A420) --------------------------------------------------------
-int __thiscall sub_45A420(float *self, int a2, int a3, char a4, int a5)
+int __cdecl sub_45A420(float *self, int a2, int a3, char a4, int a5)
 {
   int v5; // edi
   float *v6; // ebx

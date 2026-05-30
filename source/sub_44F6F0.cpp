@@ -1,5 +1,5 @@
 //----- (0044F6F0) --------------------------------------------------------
-char __thiscall sub_44F6F0(int self)
+char __cdecl sub_44F6F0(int self)
 {
   char result; // al
   __time32_t v3; // eax

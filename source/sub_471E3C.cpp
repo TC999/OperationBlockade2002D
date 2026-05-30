@@ -1,5 +1,5 @@
 //----- (00471E3C) --------------------------------------------------------
-unsigned int __thiscall sub_471E3C(_DWORD *self, _BYTE *a2, unsigned int a3)
+unsigned int __cdecl sub_471E3C(_DWORD *self, _BYTE *a2, unsigned int a3)
 {
   _BYTE *v4; // edi
   bool v5; // zf

@@ -1,5 +1,5 @@
 //----- (00451770) --------------------------------------------------------
-void __thiscall sub_451770(_DWORD *self)
+void __cdecl sub_451770(_DWORD *self)
 {
   char *v2; // eax
   char *v3; // edi
@@ -9,7 +9,7 @@ void __thiscall sub_451770(_DWORD *self)
   if ( v2 )
   {
     v3 = v2 - 4;
-    `eh vector destructor iterator'(v2, 0xCu, *((_DWORD *)v2 - 1), (void (__thiscall *)(void *))sub_451710);
+    `eh vector destructor iterator'(v2, 0xCu, *((_DWORD *)v2 - 1), (void (__cdecl *)(void *))sub_451710);
     sub_4885A6(v3);
     self[2] = 0;
   }

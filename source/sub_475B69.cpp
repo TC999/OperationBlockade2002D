@@ -1,5 +1,5 @@
 //----- (00475B69) --------------------------------------------------------
-int __thiscall sub_475B69(int self, int a2)
+int __cdecl sub_475B69(int self, int a2)
 {
   unsigned int v3; // eax
   unsigned int v4; // ecx
@@ -63,7 +63,7 @@ LABEL_13:
     v9 = v6;
     if ( v6 )
     {
-      sub_46C866((int)v6, 16, v10, (int (__thiscall *)(int))sub_46C80E);
+      sub_46C866((int)v6, 16, v10, (int (__cdecl *)(int))sub_46C80E);
       v7 = v9;
     }
     else

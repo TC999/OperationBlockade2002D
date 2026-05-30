@@ -1,5 +1,5 @@
 //----- (00419C40) --------------------------------------------------------
-bool __thiscall sub_419C40(int self, float *a2)
+bool __cdecl sub_419C40(int self, float *a2)
 {
   double v2; // st7
 

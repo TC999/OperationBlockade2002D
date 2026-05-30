@@ -1,5 +1,5 @@
 //----- (0047C8A5) --------------------------------------------------------
-int __usercall sub_47C8A5(int a1, int a2, char a3)
+int __cdecl sub_47C8A5(int a1, int a2, char a3)
 {
   int v3; // ebx
   int result; // eax

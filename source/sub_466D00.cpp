@@ -1,5 +1,5 @@
 //----- (00466D00) --------------------------------------------------------
-char __thiscall sub_466D00(int self, int a2)
+char __cdecl sub_466D00(int self, int a2)
 {
   double v4; // st7
   int v5; // ecx
@@ -132,7 +132,7 @@ char __thiscall sub_466D00(int self, int a2)
          + *(float *)(self + 468) * *(float *)(self + 468)) > 7000.0 )
     {
       sub_467A50(0);
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
       return sub_428620((_DWORD *)self, a2);
     }
 LABEL_6:
@@ -156,7 +156,7 @@ LABEL_6:
   }
   if ( v64 <= 0.0 )
   {
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
     return sub_428620((_DWORD *)self, a2);
   }
 LABEL_13:

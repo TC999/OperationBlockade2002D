@@ -1,5 +1,5 @@
 //----- (0045ED50) --------------------------------------------------------
-void __userpurge sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
+void __cdecl sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
 {
   _DWORD *v4; // ebp
   int v6; // eax
@@ -14,7 +14,7 @@ void __userpurge sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
   v4 = a3;
   if ( a3[73] != 3 )
   {
-    (*(void (__thiscall **)(_DWORD *, int))(*a3 + 4))(a3, a2);
+    (*(void (__cdecl **)(_DWORD *, int))(*a3 + 4))(a3, a2);
     v6 = a1[642];
     if ( v6 )
       v7 = (a1[643] - v6) >> 3;
@@ -46,7 +46,7 @@ void __userpurge sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
     *(_DWORD *)(a1[642] + 8 * v7) = v4;
     sub_428680(a1, *(_DWORD *)(*(_DWORD *)(a1[642] + 8 * v7) + 652));
     v12 = *(_DWORD *)(*(_DWORD *)(a1[642] + 8 * v7) + 652);
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v12 + 24))(v12, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v12 + 24))(v12, 0);
     *(_DWORD *)(a1[642] + 8 * v7 + 4) = 0;
     if ( !v7 )
       sub_45EE50(0);

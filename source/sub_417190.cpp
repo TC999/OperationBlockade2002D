@@ -1,5 +1,5 @@
 //----- (00417190) --------------------------------------------------------
-char __thiscall sub_417190(int self, int a2, _DWORD *a3, unsigned __int8 a4)
+char __cdecl sub_417190(int self, int a2, _DWORD *a3, unsigned __int8 a4)
 {
   signed int v5; // ecx
   int v6; // eax

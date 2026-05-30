@@ -1,5 +1,5 @@
 //----- (004233C0) --------------------------------------------------------
-_DWORD *__thiscall sub_4233C0(_DWORD *self, int a2, const char *a3)
+_DWORD *__cdecl sub_4233C0(_DWORD *self, int a2, const char *a3)
 {
   char *v4; // edx
 

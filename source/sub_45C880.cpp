@@ -1,5 +1,5 @@
 //----- (0045C880) --------------------------------------------------------
-void __thiscall sub_45C880(_DWORD *self)
+void __cdecl sub_45C880(_DWORD *self)
 {
   int i; // ebp
   void *v3; // edi

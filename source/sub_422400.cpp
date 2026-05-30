@@ -1,5 +1,5 @@
 //----- (00422400) --------------------------------------------------------
-int __thiscall sub_422400(_DWORD *self, char *String1, char a3)
+int __cdecl sub_422400(_DWORD *self, char *String1, char a3)
 {
   int v4; // esi
   char *v5; // ebx

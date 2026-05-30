@@ -1,5 +1,5 @@
 //----- (00448390) --------------------------------------------------------
-int __thiscall sub_448390(_DWORD *self, char *a2, unsigned int a3, const void *a4)
+int __cdecl sub_448390(_DWORD *self, char *a2, unsigned int a3, const void *a4)
 {
   _DWORD *v4; // esi
   char *v6; // ebx

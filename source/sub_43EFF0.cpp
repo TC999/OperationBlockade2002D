@@ -1,5 +1,5 @@
 //----- (0043EFF0) --------------------------------------------------------
-_DWORD *__thiscall sub_43EFF0(_DWORD *self, _DWORD *a2)
+_DWORD *__cdecl sub_43EFF0(_DWORD *self, _DWORD *a2)
 {
   const char *v2; // ecx
 

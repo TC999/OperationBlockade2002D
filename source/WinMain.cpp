@@ -1,13 +1,7 @@
-#define _CRT_SECURE_NO_WARNINGS
-
-#include <windows.h>
 #include "defs.h"
-#include <stdio.h>
 #include <wchar.h>
 #include <time.h>
 #include <CommCtrl.h>
-#include <float.h>
-#pragma comment(lib, "Comctl32.lib")
 #define snwprintf _snwprintf
 #define wtol _wtol
 #define __usercall

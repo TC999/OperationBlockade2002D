@@ -1,5 +1,5 @@
 //----- (0043D340) --------------------------------------------------------
-char __thiscall sub_43D340(int self, int a2)
+char __cdecl sub_43D340(int self, int a2)
 {
   double v3; // st7
   int v5; // [esp+4h] [ebp-1Ch] BYREF

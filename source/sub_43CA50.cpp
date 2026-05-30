@@ -1,5 +1,5 @@
 //----- (0043CA50) --------------------------------------------------------
-int __thiscall sub_43CA50(int self)
+int __cdecl sub_43CA50(int self)
 {
   int i; // edi
   void *v3; // eax

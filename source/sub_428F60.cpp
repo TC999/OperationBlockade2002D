@@ -1,5 +1,5 @@
 //----- (00428F60) --------------------------------------------------------
-int __thiscall sub_428F60(int *self)
+int __cdecl sub_428F60(int *self)
 {
   int v1; // eax
 

@@ -1,5 +1,5 @@
 //----- (0041C150) --------------------------------------------------------
-void __thiscall sub_41C150(int self)
+void __cdecl sub_41C150(int self)
 {
   int v2; // ecx
   int v3; // eax

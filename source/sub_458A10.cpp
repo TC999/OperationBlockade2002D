@@ -1,5 +1,5 @@
 //----- (00458A10) --------------------------------------------------------
-int __thiscall sub_458A10(int *self, _DWORD *a2)
+int __cdecl sub_458A10(int *self, _DWORD *a2)
 {
   _DWORD *v3; // eax
   _DWORD *v4; // edi

@@ -1,5 +1,5 @@
 //----- (0040C4C0) --------------------------------------------------------
-_DWORD *__thiscall sub_40C4C0(_DWORD *self, _DWORD *a2)
+_DWORD *__cdecl sub_40C4C0(_DWORD *self, _DWORD *a2)
 {
   int v3; // ebp
   int v4; // eax

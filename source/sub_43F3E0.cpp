@@ -1,5 +1,5 @@
 //----- (0043F3E0) --------------------------------------------------------
-int __thiscall sub_43F3E0(LPVOID *self)
+int __cdecl sub_43F3E0(LPVOID *self)
 {
   int i; // edi
   void *v3; // eax

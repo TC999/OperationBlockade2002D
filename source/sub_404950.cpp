@@ -1,5 +1,5 @@
 //----- (00404950) --------------------------------------------------------
-bool __thiscall sub_404950(int *self, int a2)
+bool __cdecl sub_404950(int *self, int a2)
 {
   int v2; // edi
   int v3; // ebp

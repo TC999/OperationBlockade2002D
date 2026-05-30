@@ -1,5 +1,5 @@
 //----- (00406620) --------------------------------------------------------
-int __thiscall sub_406620(_DWORD *self, int a2, void *a3, float *a4, float a5, int a6)
+int __cdecl sub_406620(_DWORD *self, int a2, void *a3, float *a4, float a5, int a6)
 {
   int v6; // ebp
   int result; // eax

@@ -1,5 +1,5 @@
 //----- (004088E0) --------------------------------------------------------
-BOOL __thiscall sub_4088E0(int self)
+BOOL __cdecl sub_4088E0(int self)
 {
   double v1; // st7
 

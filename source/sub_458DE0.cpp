@@ -1,5 +1,5 @@
 //----- (00458DE0) --------------------------------------------------------
-void __thiscall sub_458DE0(char *self)
+void __cdecl sub_458DE0(char *self)
 {
   LPVOID *v2; // edi
   void *v3; // edi
@@ -33,6 +33,6 @@ void __thiscall sub_458DE0(char *self)
   *((_DWORD *)self + 30) = 0;
   *((_DWORD *)self + 31) = 0;
   *((_DWORD *)self + 32) = 0;
-  `eh vector destructor iterator'(self + 24, 0x10u, 3, (void (__thiscall *)(void *))sub_45C880);
+  `eh vector destructor iterator'(self + 24, 0x10u, 3, (void (__cdecl *)(void *))sub_45C880);
   *(_DWORD *)self = &off_499040;
 }

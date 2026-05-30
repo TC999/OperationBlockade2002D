@@ -1,5 +1,5 @@
 //----- (00477D38) --------------------------------------------------------
-char __usercall sub_477D38(_DWORD *a1)
+char __cdecl sub_477D38(_DWORD *a1)
 {
   int v1; // esi
   int v2; // eax

@@ -1,5 +1,5 @@
 //----- (004164A0) --------------------------------------------------------
-int __thiscall sub_4164A0(_DWORD *self, int a2)
+int __cdecl sub_4164A0(_DWORD *self, int a2)
 {
   int v2; // edx
   int v3; // eax

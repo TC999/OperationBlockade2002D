@@ -1,5 +1,5 @@
 //----- (00430BC0) --------------------------------------------------------
-int __thiscall sub_430BC0(int self, int *a2, int *a3, int a4, int *a5)
+int __cdecl sub_430BC0(int self, int *a2, int *a3, int a4, int *a5)
 {
   float v5; // ebp
   int *v7; // ebx

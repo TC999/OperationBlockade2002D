@@ -1,5 +1,5 @@
 //----- (0040B840) --------------------------------------------------------
-unsigned int __thiscall sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
+unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
 {
   int v4; // esi
   unsigned int v5; // edi

@@ -1,5 +1,5 @@
 //----- (0040A1D0) --------------------------------------------------------
-void *__thiscall sub_40A1D0(void *self, char *FileName)
+void *__cdecl sub_40A1D0(void *self, char *FileName)
 {
   FILE *v3; // eax
   FILE *v4; // esi

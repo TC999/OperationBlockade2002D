@@ -1,5 +1,5 @@
 //----- (00404F60) --------------------------------------------------------
-int __thiscall sub_404F60(_DWORD *self, int a2, void *a3, float *a4)
+int __cdecl sub_404F60(_DWORD *self, int a2, void *a3, float *a4)
 {
   int v4; // esi
   int v5; // eax

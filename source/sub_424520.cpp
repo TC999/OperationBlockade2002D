@@ -1,8 +1,8 @@
 //----- (00424520) --------------------------------------------------------
-int __thiscall sub_424520(void **self)
+int __cdecl sub_424520(void **self)
 {
   int i; // edi
-  void (__thiscall ***v3)(_DWORD, int); // ecx
+  void (__cdecl ***v3)(_DWORD, int); // ecx
   void *v4; // eax
   int j; // edi
   void *v6; // eax
@@ -15,7 +15,7 @@ int __thiscall sub_424520(void **self)
   {
     for ( i = 0; i < (int)self[10]; ++i )
     {
-      v3 = (void (__thiscall ***)(_DWORD, int))*((_DWORD *)self[9] + i);
+      v3 = (void (__cdecl ***)(_DWORD, int))*((_DWORD *)self[9] + i);
       if ( v3 )
         (**v3)(v3, 1);
     }

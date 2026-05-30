@@ -1,5 +1,5 @@
 //----- (0045E960) --------------------------------------------------------
-int __thiscall sub_45E960(_DWORD *self, int a2)
+int __cdecl sub_45E960(_DWORD *self, int a2)
 {
   void *v3; // eax
   int result; // eax

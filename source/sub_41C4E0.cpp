@@ -1,5 +1,5 @@
 //----- (0041C4E0) --------------------------------------------------------
-void __thiscall sub_41C4E0(float *self)
+void __cdecl sub_41C4E0(float *self)
 {
   float v2; // ecx
   float v3; // [esp+8h] [ebp-8h]

@@ -1,5 +1,5 @@
 //----- (0043BA60) --------------------------------------------------------
-char __thiscall sub_43BA60(_DWORD **self, char *String1, int a3)
+char __cdecl sub_43BA60(_DWORD **self, char *String1, int a3)
 {
   char result; // al
 

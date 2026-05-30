@@ -1,5 +1,5 @@
 //----- (0043AF30) --------------------------------------------------------
-char __thiscall sub_43AF30(int self, char *String1, int a3)
+char __cdecl sub_43AF30(int self, char *String1, int a3)
 {
   int v5; // eax
   int v6; // eax

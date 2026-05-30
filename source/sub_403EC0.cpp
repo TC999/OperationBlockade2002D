@@ -1,5 +1,5 @@
 //----- (00403EC0) --------------------------------------------------------
-char __thiscall sub_403EC0(int self, char *FileName)
+char __cdecl sub_403EC0(int self, char *FileName)
 {
   FILE *v3; // eax
   char result; // al

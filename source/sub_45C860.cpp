@@ -1,5 +1,5 @@
 //----- (0045C860) --------------------------------------------------------
-_DWORD *__thiscall sub_45C860(_DWORD *self, char a2)
+_DWORD *__cdecl sub_45C860(_DWORD *self, char a2)
 {
   _DWORD *result; // eax
 

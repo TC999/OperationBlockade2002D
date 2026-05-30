@@ -1,5 +1,5 @@
 //----- (00428CD0) --------------------------------------------------------
-bool __thiscall sub_428CD0(char *self)
+bool __cdecl sub_428CD0(char *self)
 {
   char v2; // [esp+7h] [ebp-1h] BYREF
 

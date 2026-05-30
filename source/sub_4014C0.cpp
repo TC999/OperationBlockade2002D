@@ -1,5 +1,5 @@
 //----- (004014C0) --------------------------------------------------------
-void __thiscall sub_4014C0(float *self, float a2, float a3, float a4)
+void __cdecl sub_4014C0(float *self, float a2, float a3, float a4)
 {
   if ( a2 != 0.0 )
   {

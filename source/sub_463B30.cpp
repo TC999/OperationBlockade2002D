@@ -1,5 +1,5 @@
 //----- (00463B30) --------------------------------------------------------
-_DWORD *__thiscall sub_463B30(
+_DWORD *__cdecl sub_463B30(
         _DWORD *self,
         _DWORD *a2,
         int a3,

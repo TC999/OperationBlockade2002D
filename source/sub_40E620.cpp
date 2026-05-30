@@ -1,5 +1,5 @@
 //----- (0040E620) --------------------------------------------------------
-void __thiscall sub_40E620(LPVOID *self)
+void __cdecl sub_40E620(LPVOID *self)
 {
   sub_488CEE(self[1]);
   self[1] = 0;

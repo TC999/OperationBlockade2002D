@@ -1,5 +1,5 @@
 //----- (0045F350) --------------------------------------------------------
-_DWORD *__thiscall sub_45F350(_DWORD *self, int a2, char a3)
+_DWORD *__cdecl sub_45F350(_DWORD *self, int a2, char a3)
 {
   _DWORD *result; // eax
 

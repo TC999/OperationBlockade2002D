@@ -1,5 +1,5 @@
 //----- (0042A070) --------------------------------------------------------
-void __thiscall sub_42A070(_DWORD *self)
+void __cdecl sub_42A070(_DWORD *self)
 {
   _DWORD *v1; // esi
   char v2; // bl

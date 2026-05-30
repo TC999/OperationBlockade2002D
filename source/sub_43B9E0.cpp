@@ -1,5 +1,5 @@
 //----- (0043B9E0) --------------------------------------------------------
-bool __thiscall sub_43B9E0(_DWORD *self)
+bool __cdecl sub_43B9E0(_DWORD *self)
 {
   const char *v2; // edi
   const char *v3; // ebx

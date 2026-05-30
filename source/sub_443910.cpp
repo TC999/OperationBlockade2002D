@@ -1,5 +1,5 @@
 //----- (00443910) --------------------------------------------------------
-char __thiscall sub_443910(float **self, int *a2, int *a3)
+char __cdecl sub_443910(float **self, int *a2, int *a3)
 {
   _BYTE v4[12]; // [esp+0h] [ebp-Ch] BYREF
 

@@ -1,5 +1,5 @@
 //----- (00423600) --------------------------------------------------------
-char __thiscall sub_423600(_DWORD *self)
+char __cdecl sub_423600(_DWORD *self)
 {
   const char *v1; // eax
   char *v2; // ebp

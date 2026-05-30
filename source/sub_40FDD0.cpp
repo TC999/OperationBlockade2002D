@@ -1,5 +1,5 @@
 //----- (0040FDD0) --------------------------------------------------------
-_DWORD *__thiscall sub_40FDD0(int self, _DWORD *a2, char *String2)
+_DWORD *__cdecl sub_40FDD0(int self, _DWORD *a2, char *String2)
 {
   struct _RTL_CRITICAL_SECTION *v4; // ebp
   int v5; // esi

@@ -1,5 +1,5 @@
 //----- (004697A0) --------------------------------------------------------
-char __thiscall sub_4697A0(int self)
+char __cdecl sub_4697A0(int self)
 {
   void *v2; // ebp
   int i; // edi
@@ -36,7 +36,7 @@ char __thiscall sub_4697A0(int self)
     for ( k = 0; k < *(_DWORD *)(self + 24); ++k )
     {
       v6 = *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * k);
-      (*(void (__thiscall **)(int))(*(_DWORD *)v6 + 4))(v6);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v6 + 4))(v6);
     }
   }
   sub_4885A6(0);

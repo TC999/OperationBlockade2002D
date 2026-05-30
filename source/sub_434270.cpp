@@ -1,5 +1,5 @@
 //----- (00434270) --------------------------------------------------------
-int __thiscall sub_434270(int self)
+int __cdecl sub_434270(int self)
 {
   int v2; // ebp
   int v3; // eax
@@ -285,7 +285,7 @@ int __thiscall sub_434270(int self)
     v98 = (float)*v17;
     sub_413090(v17[3], v98, v106, v115, v127);
     v18 = *(_DWORD *)(v13 + *(_DWORD *)(self + 716) + 12);
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v18 + 24))(v18, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v18 + 24))(v18, 0);
     sub_413120(1065017672);
     v13 += 16;
     v157 += v2;
@@ -647,7 +647,7 @@ int __thiscall sub_434270(int self)
     LOBYTE(v172) = 2;
     sub_4131B0(v86, v138);
     sub_413120(1063675494);
-    (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 8) + 24))(*(_DWORD *)(v84 + 8), 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 8) + 24))(*(_DWORD *)(v84 + 8), 0);
     sub_428680((_DWORD *)self, *(_DWORD *)(v84 + 8));
     v87 = operator new(0x80u);
     LOBYTE(v172) = 21;
@@ -676,7 +676,7 @@ LABEL_75:
         goto LABEL_75;
     }
     sub_413120(1065353216);
-    (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 16) + 24))(*(_DWORD *)(v84 + 16), 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 16) + 24))(*(_DWORD *)(v84 + 16), 0);
     sub_428680((_DWORD *)self, *(_DWORD *)(v84 + 16));
     v89 = operator new(0x80u);
     LOBYTE(v172) = 22;
@@ -686,7 +686,7 @@ LABEL_75:
     LOBYTE(v172) = 2;
     sub_4131B0(v90, v141);
     sub_413120(1066192077);
-    (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 12) + 24))(*(_DWORD *)(v84 + 12), 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(v84 + 12) + 24))(*(_DWORD *)(v84 + 12), 0);
     sub_428680((_DWORD *)self, *(_DWORD *)(v84 + 12));
     v91 = (int *)(v84 + 20);
     v146 = 6;
@@ -704,7 +704,7 @@ LABEL_75:
       sub_4131B0(v93, v142);
       sub_413130(0, 1056964608, 1056964608, 1065353216);
       sub_413120(1067030938);
-      (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)*v91 + 24))(*v91, 0);
+      (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)*v91 + 24))(*v91, 0);
       sub_428680((_DWORD *)self, *v91++);
       --v146;
     }

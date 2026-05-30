@@ -1,5 +1,5 @@
 //----- (00430F00) --------------------------------------------------------
-char __thiscall sub_430F00(int self, int a2, int a3, float a4, int a5)
+char __cdecl sub_430F00(int self, int a2, int a3, float a4, int a5)
 {
   char v6; // bl
   double v7; // st7

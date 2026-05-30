@@ -1,5 +1,5 @@
 //----- (004438E0) --------------------------------------------------------
-double __thiscall sub_4438E0(float *self)
+double __cdecl sub_4438E0(float *self)
 {
   if ( self[106] <= (double)self[105] )
     return self[106];

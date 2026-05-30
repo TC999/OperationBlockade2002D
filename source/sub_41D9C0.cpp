@@ -1,5 +1,5 @@
 //----- (0041D9C0) --------------------------------------------------------
-_DWORD *__thiscall sub_41D9C0(_DWORD *self)
+_DWORD *__cdecl sub_41D9C0(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // ecx

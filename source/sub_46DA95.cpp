@@ -1,5 +1,5 @@
 //----- (0046DA95) --------------------------------------------------------
-_DWORD *__thiscall sub_46DA95(_DWORD *self)
+_DWORD *__cdecl sub_46DA95(_DWORD *self)
 {
   _DWORD *result; // eax
 

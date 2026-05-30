@@ -1,5 +1,5 @@
 //----- (00403E80) --------------------------------------------------------
-int __thiscall sub_403E80(_DWORD *self, char *ArgList)
+int __cdecl sub_403E80(_DWORD *self, char *ArgList)
 {
   int result; // eax
 

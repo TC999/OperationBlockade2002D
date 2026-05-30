@@ -1,5 +1,5 @@
 //----- (00449B70) --------------------------------------------------------
-char __thiscall sub_449B70(_DWORD *self)
+char __cdecl sub_449B70(_DWORD *self)
 {
   int v2; // edi
   int v3; // ecx

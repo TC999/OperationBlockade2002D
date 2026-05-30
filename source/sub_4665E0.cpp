@@ -1,5 +1,5 @@
 //----- (004665E0) --------------------------------------------------------
-char __thiscall sub_4665E0(int self, int *a2, float a3, float a4, char a5, int a6)
+char __cdecl sub_4665E0(int self, int *a2, float a3, float a4, char a5, int a6)
 {
   int v7; // edi
   int i; // ebp

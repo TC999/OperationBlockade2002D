@@ -1,5 +1,5 @@
 //----- (00474E25) --------------------------------------------------------
-void __thiscall sub_474E25(int self, int a2, int a3, float *a4)
+void __cdecl sub_474E25(int self, int a2, int a3, float *a4)
 {
   _BYTE *v5; // eax
   _BYTE *i; // edi

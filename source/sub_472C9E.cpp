@@ -1,5 +1,5 @@
 //----- (00472C9E) --------------------------------------------------------
-void __thiscall sub_472C9E(int self)
+void __cdecl sub_472C9E(int self)
 {
   const void *v2; // eax
 

@@ -1,5 +1,5 @@
 //----- (00474183) --------------------------------------------------------
-int __thiscall sub_474183(float *self, int a2, int a3, float *a4)
+int __cdecl sub_474183(float *self, int a2, int a3, float *a4)
 {
   int result; // eax
   _BYTE *i; // esi

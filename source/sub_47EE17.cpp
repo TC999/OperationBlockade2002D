@@ -1,5 +1,5 @@
 //----- (0047EE17) --------------------------------------------------------
-int __usercall sub_47EE17(int a1)
+int __cdecl sub_47EE17(int a1)
 {
   int v1; // ebx
   int v2; // edi

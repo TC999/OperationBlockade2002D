@@ -1,5 +1,5 @@
 //----- (00405820) --------------------------------------------------------
-BOOL __thiscall sub_405820(FILE **self, FILE **a2)
+BOOL __cdecl sub_405820(FILE **self, FILE **a2)
 {
   FILE **Buffer; // [esp+0h] [ebp-4h] BYREF
 

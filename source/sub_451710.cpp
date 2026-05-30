@@ -1,5 +1,5 @@
 //----- (00451710) --------------------------------------------------------
-void __thiscall sub_451710(LPVOID *self)
+void __cdecl sub_451710(LPVOID *self)
 {
   if ( *self )
   {

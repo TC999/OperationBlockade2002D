@@ -1,5 +1,5 @@
 //----- (0043B6E0) --------------------------------------------------------
-char __thiscall sub_43B6E0(_DWORD *self, int a2, int a3, int a4)
+char __cdecl sub_43B6E0(_DWORD *self, int a2, int a3, int a4)
 {
   const char *v4; // eax
   int v5; // ecx

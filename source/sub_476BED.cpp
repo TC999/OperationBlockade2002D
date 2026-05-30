@@ -1,5 +1,5 @@
 //----- (00476BED) --------------------------------------------------------
-LPVOID *__thiscall sub_476BED(LPVOID *self, char a2)
+LPVOID *__cdecl sub_476BED(LPVOID *self, char a2)
 {
   sub_476C0C(self);
   if ( (a2 & 1) != 0 )

@@ -1,5 +1,5 @@
 //----- (0040B130) --------------------------------------------------------
-char __thiscall sub_40B130(const char *self, char *ArgList, _BYTE *a3)
+char __cdecl sub_40B130(const char *self, char *ArgList, _BYTE *a3)
 {
   const char *v4; // eax
   const char *v5; // esi

@@ -1,5 +1,5 @@
 //----- (00411920) --------------------------------------------------------
-void __thiscall sub_411920(int self, int **a2, int a3)
+void __cdecl sub_411920(int self, int **a2, int a3)
 {
   struct _RTL_CRITICAL_SECTION *v4; // ebx
   int *v5; // esi

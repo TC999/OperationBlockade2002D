@@ -1,5 +1,5 @@
 //----- (00405850) --------------------------------------------------------
-char __thiscall sub_405850(int self, int Buffer)
+char __cdecl sub_405850(int self, int Buffer)
 {
   int v2; // edi
   double v4; // st7

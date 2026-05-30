@@ -1,5 +1,5 @@
 //----- (004090F0) --------------------------------------------------------
-int __thiscall sub_4090F0(int self)
+int __cdecl sub_4090F0(int self)
 {
   int v2; // edi
   float *v3; // ecx

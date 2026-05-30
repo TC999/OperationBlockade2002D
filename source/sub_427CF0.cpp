@@ -29,7 +29,7 @@ int sub_427CF0()
   {
     (*(void (__stdcall **)(_DWORD, int, int, int))(**(_DWORD **)ArgList + 200))(*(_DWORD *)ArgList, 8, 3, v3);
     if ( dword_520970 )
-      *(float *)dword_520978 = (double)(*(int (__thiscall **)(int))(*(_DWORD *)dword_520970 + 44))(dword_520970)
+      *(float *)dword_520978 = (double)(*(int (__cdecl **)(int))(*(_DWORD *)dword_520970 + 44))(dword_520970)
                              + *(float *)dword_520978;
     (*(void (__cdecl **)(_DWORD))(**(_DWORD **)ArgList + 140))(*(_DWORD *)ArgList);
     v1 = (*(int (__stdcall **)(_DWORD, _DWORD, _DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 60))(

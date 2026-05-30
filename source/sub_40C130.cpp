@@ -1,5 +1,5 @@
 //----- (0040C130) --------------------------------------------------------
-_DWORD *__thiscall sub_40C130(_DWORD **self, _DWORD *a2, int a3, char a4)
+_DWORD *__cdecl sub_40C130(_DWORD **self, _DWORD *a2, int a3, char a4)
 {
   _DWORD *v4; // esi
   int v5; // eax

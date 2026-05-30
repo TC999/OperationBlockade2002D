@@ -1,5 +1,5 @@
 //----- (004638A0) --------------------------------------------------------
-char *__thiscall sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
+char *__cdecl sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
 {
   int v5; // edi
   char *result; // eax

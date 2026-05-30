@@ -1,5 +1,5 @@
 //----- (00423060) --------------------------------------------------------
-const void *__thiscall sub_423060(_DWORD *self, int a2)
+const void *__cdecl sub_423060(_DWORD *self, int a2)
 {
   int v3; // eax
   int v4; // ecx

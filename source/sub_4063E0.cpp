@@ -1,5 +1,5 @@
 //----- (004063E0) --------------------------------------------------------
-float *__thiscall sub_4063E0(_DWORD *self, int a2, void *a3, float *a4, float a5, int a6)
+float *__cdecl sub_4063E0(_DWORD *self, int a2, void *a3, float *a4, float a5, int a6)
 {
   int v6; // ebp
   int v7; // edx

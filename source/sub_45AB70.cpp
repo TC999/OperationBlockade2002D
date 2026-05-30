@@ -1,5 +1,5 @@
 //----- (0045AB70) --------------------------------------------------------
-int __thiscall sub_45AB70(_DWORD *self)
+int __cdecl sub_45AB70(_DWORD *self)
 {
   int v1; // edi
   int v2; // edx

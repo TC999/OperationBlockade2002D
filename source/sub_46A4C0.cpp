@@ -1,5 +1,5 @@
 //----- (0046A4C0) --------------------------------------------------------
-int __thiscall sub_46A4C0(int self, const void *a2, unsigned int a3)
+int __cdecl sub_46A4C0(int self, const void *a2, unsigned int a3)
 {
   unsigned int v3; // edx
   int v5; // ebp

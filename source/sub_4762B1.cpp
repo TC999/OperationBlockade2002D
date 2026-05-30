@@ -1,5 +1,5 @@
 //----- (004762B1) --------------------------------------------------------
-signed int __thiscall sub_4762B1(_DWORD *self, int a2, int a3, const void *a4)
+signed int __cdecl sub_4762B1(_DWORD *self, int a2, int a3, const void *a4)
 {
   unsigned int v5; // edi
   signed int result; // eax

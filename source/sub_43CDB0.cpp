@@ -1,5 +1,5 @@
 //----- (0043CDB0) --------------------------------------------------------
-char __thiscall sub_43CDB0(_DWORD *self, int a2)
+char __cdecl sub_43CDB0(_DWORD *self, int a2)
 {
   int v3; // ecx
 

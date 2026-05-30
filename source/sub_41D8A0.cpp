@@ -1,5 +1,5 @@
 //----- (0041D8A0) --------------------------------------------------------
-char __thiscall sub_41D8A0(_BYTE *self, char a2)
+char __cdecl sub_41D8A0(_BYTE *self, char a2)
 {
   char result; // al
 

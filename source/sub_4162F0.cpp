@@ -1,5 +1,5 @@
 //----- (004162F0) --------------------------------------------------------
-float *__thiscall sub_4162F0(float *self, float *a2, float a3)
+float *__cdecl sub_4162F0(float *self, float *a2, float a3)
 {
   double v3; // st7
   double v4; // st6

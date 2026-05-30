@@ -1,5 +1,5 @@
 //----- (0044CA40) --------------------------------------------------------
-void *__thiscall sub_44CA40(void *self, char a2)
+void *__cdecl sub_44CA40(void *self, char a2)
 {
   sub_44CA60();
   if ( (a2 & 1) != 0 )

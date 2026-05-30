@@ -1,5 +1,5 @@
 //----- (00428E30) --------------------------------------------------------
-int __thiscall sub_428E30(_DWORD *self)
+int __cdecl sub_428E30(_DWORD *self)
 {
   void *v1; // esi
   int result; // eax

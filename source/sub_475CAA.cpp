@@ -1,5 +1,5 @@
 //----- (00475CAA) --------------------------------------------------------
-int __thiscall sub_475CAA(_DWORD *self)
+int __cdecl sub_475CAA(_DWORD *self)
 {
   int v2; // eax
   bool v3; // cf

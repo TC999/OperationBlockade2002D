@@ -1,5 +1,5 @@
 //----- (00450BB0) --------------------------------------------------------
-char __thiscall sub_450BB0(_DWORD *self)
+char __cdecl sub_450BB0(_DWORD *self)
 {
   return *(_BYTE *)(self[62] + 16);
 }

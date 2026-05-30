@@ -1,5 +1,5 @@
 //----- (00412DB0) --------------------------------------------------------
-int __userpurge sub_412DB0(int a1, int a2, int a3)
+int __cdecl sub_412DB0(int a1, int a2, int a3)
 {
   int result; // eax
   int v5; // edi

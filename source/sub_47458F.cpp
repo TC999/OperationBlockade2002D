@@ -1,5 +1,5 @@
 //----- (0047458F) --------------------------------------------------------
-int __thiscall sub_47458F(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_47458F(_DWORD *self, int a2, int a3, int a4)
 {
   _WORD *v5; // edx
   bool v6; // zf

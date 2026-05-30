@@ -1,5 +1,5 @@
 //----- (00429AE0) --------------------------------------------------------
-int __thiscall sub_429AE0(_DWORD *self)
+int __cdecl sub_429AE0(_DWORD *self)
 {
   return self[1];
 }

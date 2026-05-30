@@ -1,5 +1,5 @@
 //----- (0040C2B0) --------------------------------------------------------
-_DWORD *__thiscall sub_40C2B0(_BYTE *self, _DWORD *a2)
+_DWORD *__cdecl sub_40C2B0(_BYTE *self, _DWORD *a2)
 {
   _DWORD *result; // eax
   int v4; // [esp+4h] [ebp-8h] BYREF

@@ -1,5 +1,5 @@
 //----- (0044B390) --------------------------------------------------------
-char __thiscall sub_44B390(char *self, int a2)
+char __cdecl sub_44B390(char *self, int a2)
 {
   char result; // al
   int v3; // eax

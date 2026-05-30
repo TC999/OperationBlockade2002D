@@ -1,5 +1,5 @@
 //----- (00476415) --------------------------------------------------------
-LPVOID __thiscall sub_476415(LPVOID *self)
+LPVOID __cdecl sub_476415(LPVOID *self)
 {
   LPVOID *v2; // edi
   int v3; // ebx

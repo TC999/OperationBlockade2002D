@@ -1,5 +1,5 @@
 //----- (00469370) --------------------------------------------------------
-unsigned int __thiscall sub_469370(int self, int a2)
+unsigned int __cdecl sub_469370(int self, int a2)
 {
   int v2; // esi
   unsigned int result; // eax

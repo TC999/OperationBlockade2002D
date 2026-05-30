@@ -1,5 +1,5 @@
 //----- (00450C70) --------------------------------------------------------
-void __thiscall sub_450C70(_DWORD *self, int a2)
+void __cdecl sub_450C70(_DWORD *self, int a2)
 {
   unsigned int v2; // eax
   int v3; // ecx

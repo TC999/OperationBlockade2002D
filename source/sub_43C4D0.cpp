@@ -1,5 +1,5 @@
 //----- (0043C4D0) --------------------------------------------------------
-char __thiscall sub_43C4D0(int self, char *String1, int a3)
+char __cdecl sub_43C4D0(int self, char *String1, int a3)
 {
   const char *v4; // esi
   char *v6; // [esp-8h] [ebp-30h]

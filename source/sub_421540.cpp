@@ -1,5 +1,5 @@
 //----- (00421540) --------------------------------------------------------
-_DWORD *__thiscall sub_421540(void **self)
+_DWORD *__cdecl sub_421540(void **self)
 {
   _DWORD *v2; // eax
   _DWORD *result; // eax

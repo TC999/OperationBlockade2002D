@@ -1,5 +1,5 @@
 //----- (00412A30) --------------------------------------------------------
-void __thiscall sub_412A30(char *self)
+void __cdecl sub_412A30(char *self)
 {
   struct _RTL_CRITICAL_SECTION *v2; // ebp
   int v3; // edi

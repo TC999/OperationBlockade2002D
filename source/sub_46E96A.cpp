@@ -1,5 +1,5 @@
 //----- (0046E96A) --------------------------------------------------------
-int __thiscall sub_46E96A(_DWORD *self)
+int __cdecl sub_46E96A(_DWORD *self)
 {
   unsigned int *v1; // ebx
   int v2; // esi

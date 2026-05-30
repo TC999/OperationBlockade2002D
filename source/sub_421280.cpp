@@ -1,5 +1,5 @@
 //----- (00421280) --------------------------------------------------------
-int __thiscall sub_421280(_DWORD *self)
+int __cdecl sub_421280(_DWORD *self)
 {
   const char *v2; // esi
   unsigned int v3; // kr04_4

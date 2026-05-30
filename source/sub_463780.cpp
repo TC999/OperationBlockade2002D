@@ -1,5 +1,5 @@
 //----- (00463780) --------------------------------------------------------
-unsigned int __thiscall sub_463780(_DWORD *self)
+unsigned int __cdecl sub_463780(_DWORD *self)
 {
   int v2; // eax
   double v3; // st7

@@ -1,5 +1,5 @@
 //----- (00402540) --------------------------------------------------------
-int __thiscall sub_402540(int self, int a2)
+int __cdecl sub_402540(int self, int a2)
 {
   double v3; // st7
   double v4; // st7

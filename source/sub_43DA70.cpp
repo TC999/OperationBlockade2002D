@@ -1,5 +1,5 @@
 //----- (0043DA70) --------------------------------------------------------
-int __thiscall sub_43DA70(_DWORD *self)
+int __cdecl sub_43DA70(_DWORD *self)
 {
   _DWORD *v2; // esi
   int v3; // ebp

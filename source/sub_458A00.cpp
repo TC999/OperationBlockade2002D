@@ -1,5 +1,5 @@
 //----- (00458A00) --------------------------------------------------------
-int __thiscall sub_458A00(_DWORD *self, int a2)
+int __cdecl sub_458A00(_DWORD *self, int a2)
 {
   return self[1] + 8 * a2;
 }

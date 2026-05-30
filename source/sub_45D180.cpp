@@ -1,5 +1,5 @@
 //----- (0045D180) --------------------------------------------------------
-int __thiscall sub_45D180(int self, char *a2)
+int __cdecl sub_45D180(int self, char *a2)
 {
   int v3; // esi
   const char *v4; // eax

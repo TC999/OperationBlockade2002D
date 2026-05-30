@@ -1,5 +1,5 @@
 //----- (004645D0) --------------------------------------------------------
-int __thiscall sub_4645D0(int *self, int a2)
+int __cdecl sub_4645D0(int *self, int a2)
 {
   int v2; // edi
   int v4; // ecx

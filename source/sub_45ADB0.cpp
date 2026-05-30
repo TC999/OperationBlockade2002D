@@ -1,5 +1,5 @@
 //----- (0045ADB0) --------------------------------------------------------
-void __thiscall sub_45ADB0(_DWORD *self)
+void __cdecl sub_45ADB0(_DWORD *self)
 {
   int v2; // esi
   int v3; // ecx
@@ -28,28 +28,28 @@ void __thiscall sub_45ADB0(_DWORD *self)
     sub_44B460(*(_DWORD *)(dword_520970 + 276));
     v3 = *(_DWORD *)(self[19] + 364);
     if ( v3 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v3 + 4))(v3);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v3 + 4))(v3);
     v4 = *(_DWORD *)(self[19] + 380);
     if ( v4 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v4 + 4))(v4);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v4 + 4))(v4);
     v5 = *(_DWORD *)(self[19] + 392);
     if ( v5 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v5 + 4))(v5);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v5 + 4))(v5);
     v6 = *(_DWORD *)(self[19] + 316);
     if ( v6 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v6 + 4))(v6);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v6 + 4))(v6);
     v7 = *(_DWORD *)(self[19] + 320);
     if ( v7 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v7 + 4))(v7);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v7 + 4))(v7);
     v8 = *(_DWORD *)(self[19] + 352);
     if ( v8 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v8 + 4))(v8);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v8 + 4))(v8);
     v9 = *(_DWORD *)(self[19] + 356);
     if ( v9 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v9 + 4))(v9);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v9 + 4))(v9);
     v10 = *(_DWORD *)(self[19] + 360);
     if ( v10 )
-      (*(void (__thiscall **)(int))(*(_DWORD *)v10 + 4))(v10);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v10 + 4))(v10);
     v11 = self[19];
     for ( i = 0; i < *(_DWORD *)(v11 + 412); ++i )
     {
@@ -57,12 +57,12 @@ void __thiscall sub_45ADB0(_DWORD *self)
       for ( j = 0; j < *(_DWORD *)(*(_DWORD *)(v2 + v12) + 24); v12 = *(_DWORD *)(self[19] + 408) )
       {
         v14 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v2 + v12) + 20) + 4 * j) + 8);
-        (*(void (__thiscall **)(int))(*(_DWORD *)v14 + 4))(v14);
+        (*(void (__cdecl **)(int))(*(_DWORD *)v14 + 4))(v14);
         v15 = *(_DWORD *)(self[19] + 408) + v2;
         if ( *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)v15 + 20) + 4 * j) + 8) + 292) == 6 )
         {
           v16 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)v15 + 20) + 4 * j) + 20);
-          (*(void (__thiscall **)(int))(*(_DWORD *)v16 + 4))(v16);
+          (*(void (__cdecl **)(int))(*(_DWORD *)v16 + 4))(v16);
         }
         ++j;
       }
@@ -73,7 +73,7 @@ void __thiscall sub_45ADB0(_DWORD *self)
         do
         {
           v19 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v18 + 36) + 4 * v17) + 8);
-          (*(void (__thiscall **)(int))(*(_DWORD *)v19 + 4))(v19);
+          (*(void (__cdecl **)(int))(*(_DWORD *)v19 + 4))(v19);
           ++v17;
           v18 = *(_DWORD *)(*(_DWORD *)(self[19] + 408) + v2);
         }

@@ -1,5 +1,5 @@
 //----- (0045F520) --------------------------------------------------------
-double __thiscall sub_45F520(int self)
+double __cdecl sub_45F520(int self)
 {
   int v1; // eax
   int v2; // esi

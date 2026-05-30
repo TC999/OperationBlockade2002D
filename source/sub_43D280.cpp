@@ -1,5 +1,5 @@
 //----- (0043D280) --------------------------------------------------------
-_DWORD *__thiscall sub_43D280(_DWORD *self, int a2)
+_DWORD *__cdecl sub_43D280(_DWORD *self, int a2)
 {
   sub_4233C0(self, a2, aConnecting);
   *self = &off_499898;

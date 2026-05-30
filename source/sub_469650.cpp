@@ -1,5 +1,5 @@
 //----- (00469650) --------------------------------------------------------
-int __thiscall sub_469650(_DWORD *self, char *String2, char *a3, char a4)
+int __cdecl sub_469650(_DWORD *self, char *String2, char *a3, char a4)
 {
   int v5; // edi
 

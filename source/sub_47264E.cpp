@@ -1,5 +1,5 @@
 //----- (0047264E) --------------------------------------------------------
-int __thiscall sub_47264E(int *self, _DWORD *a2, unsigned int a3)
+int __cdecl sub_47264E(int *self, _DWORD *a2, unsigned int a3)
 {
   int *v3; // edx
   int v5; // ecx

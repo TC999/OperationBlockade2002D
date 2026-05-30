@@ -1,5 +1,5 @@
 //----- (0042A010) --------------------------------------------------------
-char __thiscall sub_42A010(void *self, _BYTE *a2)
+char __cdecl sub_42A010(void *self, _BYTE *a2)
 {
   int v4; // eax
 

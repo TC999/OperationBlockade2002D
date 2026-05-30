@@ -1,5 +1,5 @@
 //----- (00429240) --------------------------------------------------------
-int __thiscall sub_429240(int self, int a2)
+int __cdecl sub_429240(int self, int a2)
 {
   int v2; // esi
   Concurrency::details::TaskStack *v4; // eax

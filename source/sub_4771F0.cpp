@@ -1,5 +1,5 @@
 //----- (004771F0) --------------------------------------------------------
-char __usercall sub_4771F0(int a1)
+char __cdecl sub_4771F0(int a1)
 {
   _BYTE *v1; // eax
   int v2; // ecx

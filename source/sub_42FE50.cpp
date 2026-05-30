@@ -1,5 +1,5 @@
 //----- (0042FE50) --------------------------------------------------------
-char __thiscall sub_42FE50(_DWORD *self)
+char __cdecl sub_42FE50(_DWORD *self)
 {
   int v1; // eax
   int v2; // edx

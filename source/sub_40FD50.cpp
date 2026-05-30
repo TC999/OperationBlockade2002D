@@ -1,5 +1,5 @@
 //----- (0040FD50) --------------------------------------------------------
-int __thiscall sub_40FD50(struct _RTL_CRITICAL_SECTION *self, char **a2, int a3)
+int __cdecl sub_40FD50(struct _RTL_CRITICAL_SECTION *self, char **a2, int a3)
 {
   ULONG_PTR SpinCount; // edx
   int i; // esi

@@ -1,5 +1,5 @@
 //----- (00408FB0) --------------------------------------------------------
-float *__thiscall sub_408FB0(float *self)
+float *__cdecl sub_408FB0(float *self)
 {
   DWORD Time; // eax
   int v3; // ecx
@@ -30,7 +30,7 @@ float *__thiscall sub_408FB0(float *self)
   v8 = *self;
   v13 = self[16];
   self[18] = v13 + self[18];
-  (*(void (__thiscall **)(float *, float))(LODWORD(v8) + 16))(self, COERCE_FLOAT(LODWORD(v13)));
+  (*(void (__cdecl **)(float *, float))(LODWORD(v8) + 16))(self, COERCE_FLOAT(LODWORD(v13)));
   result = (float *)*((_DWORD *)self + 21);
   if ( result )
   {

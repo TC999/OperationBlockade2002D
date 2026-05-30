@@ -1,5 +1,5 @@
 //----- (004334E0) --------------------------------------------------------
-void __thiscall sub_4334E0(int self, float a2)
+void __cdecl sub_4334E0(int self, float a2)
 {
   int v3; // esi
   int v5; // ecx
@@ -62,7 +62,7 @@ void __thiscall sub_4334E0(int self, float a2)
           if ( v11 )
           {
             sub_4317B0((_DWORD *)self, 0);
-            (*(void (__thiscall **)(int, int))(*(_DWORD *)self + 24))(self, 1);
+            (*(void (__cdecl **)(int, int))(*(_DWORD *)self + 24))(self, 1);
           }
         }
       }
@@ -129,7 +129,7 @@ void __thiscall sub_4334E0(int self, float a2)
     case 0x105:
       if ( *(_BYTE *)(dword_4F5CC4 + 937) )
       {
-        (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
+        (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)self + 24))(self, 0);
         sub_4333C0(self, 0);
       }
       break;

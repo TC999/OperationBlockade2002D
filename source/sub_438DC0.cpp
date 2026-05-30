@@ -1,5 +1,5 @@
 //----- (00438DC0) --------------------------------------------------------
-char __thiscall sub_438DC0(int *self)
+char __cdecl sub_438DC0(int *self)
 {
   char **v2; // ebx
   int *v3; // ebp

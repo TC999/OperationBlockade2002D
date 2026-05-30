@@ -1,5 +1,5 @@
 //----- (00455850) --------------------------------------------------------
-int __thiscall sub_455850(int *self, int a2, int *a3, int a4)
+int __cdecl sub_455850(int *self, int a2, int *a3, int a4)
 {
   int *v4; // esi
   int v5; // edi

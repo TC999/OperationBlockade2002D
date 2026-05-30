@@ -1,5 +1,5 @@
 //----- (0044F490) --------------------------------------------------------
-_DWORD *__thiscall sub_44F490(_DWORD *self, _DWORD *a2)
+_DWORD *__cdecl sub_44F490(_DWORD *self, _DWORD *a2)
 {
   _DWORD *v3; // edi
   char *v4; // esi

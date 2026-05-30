@@ -1,5 +1,5 @@
 //----- (0040B800) --------------------------------------------------------
-int __thiscall sub_40B800(int *self)
+int __cdecl sub_40B800(int *self)
 {
   int v2; // ebx
   int i; // esi

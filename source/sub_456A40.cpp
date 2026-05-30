@@ -1,5 +1,5 @@
 //----- (00456A40) --------------------------------------------------------
-char __thiscall sub_456A40(int self, float *a2, int a3, float a4, int a5, int a6)
+char __cdecl sub_456A40(int self, float *a2, int a3, float a4, int a5, int a6)
 {
   int v7; // eax
   float *v8; // ecx

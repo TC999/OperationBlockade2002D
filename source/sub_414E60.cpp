@@ -1,5 +1,5 @@
 //----- (00414E60) --------------------------------------------------------
-char __thiscall sub_414E60(_DWORD *self)
+char __cdecl sub_414E60(_DWORD *self)
 {
   int v2; // ebx
   int v3; // eax
@@ -29,7 +29,7 @@ char __thiscall sub_414E60(_DWORD *self)
   char v28[12]; // [esp+24h] [ebp-3Ch] BYREF
   char v29[48]; // [esp+30h] [ebp-30h] BYREF
 
-  sub_4013C0((int)v29, 12, 3, (int (__thiscall *)(int))Iostream_init::Iostream_init);
+  sub_4013C0((int)v29, 12, 3, (int (__cdecl *)(int))Iostream_init::Iostream_init);
   if ( (unsigned int)sub_419CC0(self + 13) >= 2 )
   {
     if ( (unsigned int)sub_419CC0(self + 13) > 2 )

@@ -1,5 +1,5 @@
 //----- (0042FCC0) --------------------------------------------------------
-int __thiscall sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
 {
   int v5; // eax
   int v7; // [esp-Ch] [ebp-34h]
@@ -32,7 +32,7 @@ int __thiscall sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
   }
   else if ( *(_BYTE *)(dword_4F5CC4 + 937) )
   {
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v9 + 24))(v9, 0);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v9 + 24))(v9, 0);
   }
   return v9;
 }

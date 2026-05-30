@@ -1,5 +1,5 @@
 //----- (0045B2B0) --------------------------------------------------------
-int __thiscall sub_45B2B0(int self, const char *a2)
+int __cdecl sub_45B2B0(int self, const char *a2)
 {
   int v3; // eax
   LPVOID *v4; // eax

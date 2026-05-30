@@ -1,5 +1,5 @@
 //----- (00437AA0) --------------------------------------------------------
-char *__thiscall sub_437AA0(char *self, int a2, int a3)
+char *__cdecl sub_437AA0(char *self, int a2, int a3)
 {
   char *result; // eax
 

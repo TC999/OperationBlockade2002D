@@ -1,5 +1,5 @@
 //----- (00402110) --------------------------------------------------------
-char __thiscall sub_402110(float *self, float *a2, float a3)
+char __cdecl sub_402110(float *self, float *a2, float a3)
 {
   int v3; // edx
   float *i; // ecx

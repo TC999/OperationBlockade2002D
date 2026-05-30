@@ -1,5 +1,5 @@
 //----- (0043D2F0) --------------------------------------------------------
-char __thiscall sub_43D2F0(_DWORD **self, char *String1, int a3)
+char __cdecl sub_43D2F0(_DWORD **self, char *String1, int a3)
 {
   if ( String1 && !_strcmpi(String1, aCancelbutton) )
   {

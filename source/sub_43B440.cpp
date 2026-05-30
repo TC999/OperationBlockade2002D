@@ -1,5 +1,5 @@
 //----- (0043B440) --------------------------------------------------------
-char __thiscall sub_43B440(int self, char *String1, int a3)
+char __cdecl sub_43B440(int self, char *String1, int a3)
 {
   char result; // al
   char v5[260]; // [esp+10h] [ebp-208h] BYREF

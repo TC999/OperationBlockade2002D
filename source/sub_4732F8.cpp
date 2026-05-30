@@ -1,5 +1,5 @@
 //----- (004732F8) --------------------------------------------------------
-unsigned int *__thiscall sub_4732F8(_DWORD *self, int a2, int a3, float *a4)
+unsigned int *__cdecl sub_4732F8(_DWORD *self, int a2, int a3, float *a4)
 {
   unsigned int *result; // eax
   unsigned int *i; // edi

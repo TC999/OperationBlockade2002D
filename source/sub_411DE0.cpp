@@ -1,5 +1,5 @@
 //----- (00411DE0) --------------------------------------------------------
-void __thiscall sub_411DE0(int self, char *a2)
+void __cdecl sub_411DE0(int self, char *a2)
 {
   struct _RTL_CRITICAL_SECTION *v3; // ebx
 

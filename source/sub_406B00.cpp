@@ -1,5 +1,5 @@
 //----- (00406B00) --------------------------------------------------------
-_DWORD *__thiscall sub_406B00(_DWORD *self, int a2, char a3)
+_DWORD *__cdecl sub_406B00(_DWORD *self, int a2, char a3)
 {
   int v4; // ecx
   int v5; // edi

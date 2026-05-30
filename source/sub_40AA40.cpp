@@ -1,5 +1,5 @@
 //----- (0040AA40) --------------------------------------------------------
-int __thiscall sub_40AA40(int self, char *String2)
+int __cdecl sub_40AA40(int self, char *String2)
 {
   unsigned int v2; // ebx
   int i; // ebp

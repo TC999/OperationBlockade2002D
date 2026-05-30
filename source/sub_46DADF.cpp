@@ -1,5 +1,5 @@
 //----- (0046DADF) --------------------------------------------------------
-void *__thiscall sub_46DADF(void *self, char a2)
+void *__cdecl sub_46DADF(void *self, char a2)
 {
   sub_46DABD((int)self);
   if ( (a2 & 1) != 0 )

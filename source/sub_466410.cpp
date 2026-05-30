@@ -1,5 +1,5 @@
 //----- (00466410) --------------------------------------------------------
-int __thiscall sub_466410(int self, int *a2, int *a3, int a4, int a5)
+int __cdecl sub_466410(int self, int *a2, int *a3, int a4, int a5)
 {
   float v6; // edi
   int v7; // eax

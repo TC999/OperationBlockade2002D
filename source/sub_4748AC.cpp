@@ -1,5 +1,5 @@
 //----- (004748AC) --------------------------------------------------------
-int __thiscall sub_4748AC(_DWORD *self, int a2, int a3, float *a4)
+int __cdecl sub_4748AC(_DWORD *self, int a2, int a3, float *a4)
 {
   int *v4; // edx
   int v5; // ebx

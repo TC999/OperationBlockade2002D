@@ -1,9 +1,9 @@
 //----- (0045D130) --------------------------------------------------------
-int __thiscall sub_45D130(_DWORD *self)
+int __cdecl sub_45D130(_DWORD *self)
 {
   _DWORD *v2; // ecx
   int result; // eax
-  int (__thiscall ***v4)(_DWORD, int); // ecx
+  int (__cdecl ***v4)(_DWORD, int); // ecx
 
   if ( self[73] != 3 )
   {
@@ -11,7 +11,7 @@ int __thiscall sub_45D130(_DWORD *self)
     if ( v2 )
     {
       result = sub_403B70(v2);
-      v4 = (int (__thiscall ***)(_DWORD, int))self[163];
+      v4 = (int (__cdecl ***)(_DWORD, int))self[163];
       self[162] = 0;
       if ( v4 )
         result = (**v4)(v4, 1);

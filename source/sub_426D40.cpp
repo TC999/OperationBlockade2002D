@@ -6,9 +6,9 @@ int sub_426D40()
   sub_4229D0(aCleanup);
   if ( dword_520970 )
   {
-    (*(void (__thiscall **)(int))(*(_DWORD *)dword_520970 + 36))(dword_520970);
+    (*(void (__cdecl **)(int))(*(_DWORD *)dword_520970 + 36))(dword_520970);
     if ( dword_520970 )
-      (**(void (__thiscall ***)(int, int))dword_520970)(dword_520970, 1);
+      (**(void (__cdecl ***)(int, int))dword_520970)(dword_520970, 1);
     dword_520970 = 0;
   }
   sub_4229D0(aGGameShutdownO);

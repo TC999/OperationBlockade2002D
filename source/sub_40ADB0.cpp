@@ -1,5 +1,5 @@
 //----- (0040ADB0) --------------------------------------------------------
-unsigned int __thiscall sub_40ADB0(_DWORD *self)
+unsigned int __cdecl sub_40ADB0(_DWORD *self)
 {
   unsigned int v1; // edi
   int i; // ebx

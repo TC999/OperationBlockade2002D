@@ -1,5 +1,5 @@
 //----- (0047D01D) --------------------------------------------------------
-int __usercall sub_47D01D(int a1)
+int __cdecl sub_47D01D(int a1)
 {
   int v1; // edx
   int v2; // eax

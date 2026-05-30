@@ -1,5 +1,5 @@
 //----- (0041C7A0) --------------------------------------------------------
-char __thiscall sub_41C7A0(int self, char a2)
+char __cdecl sub_41C7A0(int self, char a2)
 {
   char result; // al
   bool v4; // bl

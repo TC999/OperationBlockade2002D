@@ -1,5 +1,5 @@
 //----- (0047328E) --------------------------------------------------------
-__int16 *__thiscall sub_47328E(_DWORD *self, int a2, int a3, float *a4)
+__int16 *__cdecl sub_47328E(_DWORD *self, int a2, int a3, float *a4)
 {
   __int16 *result; // eax
   __int16 *i; // edx

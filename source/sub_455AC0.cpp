@@ -1,5 +1,5 @@
 //----- (00455AC0) --------------------------------------------------------
-int __thiscall sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6, float a7)
+int __cdecl sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6, float a7)
 {
   double v9; // st6
   double v10; // st7

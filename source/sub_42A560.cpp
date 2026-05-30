@@ -1,5 +1,5 @@
 //----- (0042A560) --------------------------------------------------------
-char __thiscall sub_42A560(_DWORD *self, _BYTE *a2)
+char __cdecl sub_42A560(_DWORD *self, _BYTE *a2)
 {
   _DWORD *v2; // esi
   int v4; // eax

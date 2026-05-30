@@ -1,5 +1,5 @@
 //----- (00413300) --------------------------------------------------------
-void __thiscall sub_413300(LPVOID *self)
+void __cdecl sub_413300(LPVOID *self)
 {
   void *v2; // ecx
   _DWORD *v3; // esi
@@ -19,7 +19,7 @@ void __thiscall sub_413300(LPVOID *self)
       v4 = (_DWORD *)v3[173];
       if ( v3 )
       {
-        `eh vector destructor iterator'(v3 + 94, 0xCu, 26, (void (__thiscall *)(void *))sub_40E620);
+        `eh vector destructor iterator'(v3 + 94, 0xCu, 26, (void (__cdecl *)(void *))sub_40E620);
         sub_4885A6(v3);
       }
       v3 = v4;

@@ -1,5 +1,5 @@
 //----- (00407320) --------------------------------------------------------
-double __thiscall sub_407320(_DWORD *self, int a2)
+double __cdecl sub_407320(_DWORD *self, int a2)
 {
   float *v2; // eax
 

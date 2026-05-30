@@ -1,5 +1,5 @@
 //----- (00406C20) --------------------------------------------------------
-int __thiscall sub_406C20(void *self)
+int __cdecl sub_406C20(void *self)
 {
   int v2; // ebx
   int v3; // edi

@@ -1,5 +1,5 @@
 //----- (00456C50) --------------------------------------------------------
-char __thiscall sub_456C50(int self, float *a2, float a3, char a4, _DWORD *a5)
+char __cdecl sub_456C50(int self, float *a2, float a3, char a4, _DWORD *a5)
 {
   double v7; // st7
   char v8; // cl

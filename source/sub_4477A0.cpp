@@ -1,5 +1,5 @@
 //----- (004477A0) --------------------------------------------------------
-int __thiscall sub_4477A0(int self, int a2)
+int __cdecl sub_4477A0(int self, int a2)
 {
   int v3; // ecx
   int result; // eax
@@ -17,7 +17,7 @@ int __thiscall sub_4477A0(int self, int a2)
       }
     }
   }
-  result = (*(int (__thiscall **)(_DWORD, int))(**(_DWORD **)(self + 412) + 24))(*(_DWORD *)(self + 412), a2);
+  result = (*(int (__cdecl **)(_DWORD, int))(**(_DWORD **)(self + 412) + 24))(*(_DWORD *)(self + 412), a2);
   *(_BYTE *)(self + 16) = a2;
   return result;
 }

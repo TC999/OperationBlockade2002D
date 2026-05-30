@@ -1,5 +1,5 @@
 //----- (00421E30) --------------------------------------------------------
-int __thiscall sub_421E30(_DWORD **self, float a2, float a3, float a4, int a5, float *a6)
+int __cdecl sub_421E30(_DWORD **self, float a2, float a3, float a4, int a5, float *a6)
 {
   double v7; // st7
   double v8; // st6

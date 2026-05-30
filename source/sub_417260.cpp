@@ -1,5 +1,5 @@
 //----- (00417260) --------------------------------------------------------
-void __thiscall sub_417260(float *self)
+void __cdecl sub_417260(float *self)
 {
   int v1; // edi
   int v2; // ebx

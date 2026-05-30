@@ -1,5 +1,5 @@
 //----- (004210B0) --------------------------------------------------------
-float *__thiscall sub_4210B0(float *self, float *a2)
+float *__cdecl sub_4210B0(float *self, float *a2)
 {
   double v2; // st7
   float *result; // eax

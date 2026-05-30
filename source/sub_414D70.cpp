@@ -1,5 +1,5 @@
 //----- (00414D70) --------------------------------------------------------
-int __thiscall sub_414D70(LPVOID *self)
+int __cdecl sub_414D70(LPVOID *self)
 {
   int i; // ebp
   _DWORD *v3; // eax
@@ -28,7 +28,7 @@ int __thiscall sub_414D70(LPVOID *self)
       v4 = (void *)v3[i];
       if ( v4 )
       {
-        ((void (__thiscall *)(_DWORD))nullsub_1)(v3[i]);
+        ((void (__cdecl *)(_DWORD))nullsub_1)(v3[i]);
         sub_4885A6(v4);
       }
     }

@@ -1,5 +1,5 @@
 //----- (0044A1D0) --------------------------------------------------------
-char __thiscall sub_44A1D0(char *self, int a2, _DWORD *a3, int a4, float a5, char a6, char a7, float a8, int a9)
+char __cdecl sub_44A1D0(char *self, int a2, _DWORD *a3, int a4, float a5, char a6, char a7, float a8, int a9)
 {
   int v11[3]; // [esp+Ch] [ebp-18h] BYREF
   int v12[3]; // [esp+18h] [ebp-Ch] BYREF

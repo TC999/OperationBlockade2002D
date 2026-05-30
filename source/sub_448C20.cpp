@@ -1,5 +1,5 @@
 //----- (00448C20) --------------------------------------------------------
-int __thiscall sub_448C20(int self)
+int __cdecl sub_448C20(int self)
 {
   sub_4885A6(*(LPVOID *)(self + 40));
   *(_DWORD *)(self + 40) = 0;

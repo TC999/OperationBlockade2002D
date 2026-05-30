@@ -1,5 +1,5 @@
 //----- (0040BB60) --------------------------------------------------------
-_DWORD *__thiscall sub_40BB60(_DWORD *self, _DWORD *a2, int a3)
+_DWORD *__cdecl sub_40BB60(_DWORD *self, _DWORD *a2, int a3)
 {
   _DWORD *result; // eax
   int v4; // ebp

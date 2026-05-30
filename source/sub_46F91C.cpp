@@ -1,5 +1,5 @@
 //----- (0046F91C) --------------------------------------------------------
-int __thiscall sub_46F91C(_DWORD *self)
+int __cdecl sub_46F91C(_DWORD *self)
 {
   _DWORD *v3; // eax
   _DWORD *v4; // ecx
@@ -43,7 +43,7 @@ int __thiscall sub_46F91C(_DWORD *self)
   v21 = v7;
   if ( v7 )
   {
-    sub_46C866((int)v7, 16, v18, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v7, 16, v18, (int (__cdecl *)(int))sub_46C80E);
     v24 = v21;
   }
   else
@@ -57,7 +57,7 @@ int __thiscall sub_46F91C(_DWORD *self)
   v22 = v8;
   if ( v8 )
   {
-    sub_46C866((int)v8, 16, v19, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v8, 16, v19, (int (__cdecl *)(int))sub_46C80E);
     v20 = v22;
   }
   else
@@ -76,12 +76,12 @@ int __thiscall sub_46F91C(_DWORD *self)
       {
         for ( i = 0; i < v16; ++i )
         {
-          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)*self + 4))(
+          (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)*self + 4))(
             *self,
             i,
             v23,
             v24);
-          (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)self[1] + 8))(
+          (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, void *))(*(_DWORD *)self[1] + 8))(
             self[1],
             i,
             v23,
@@ -90,7 +90,7 @@ int __thiscall sub_46F91C(_DWORD *self)
         v11 = (_DWORD *)self[1];
         for ( j = v16; j < v11[1045]; ++j )
         {
-          (*(void (__thiscall **)(_DWORD *, unsigned int, unsigned int, void *))(*v11 + 8))(v11, j, v23, v20);
+          (*(void (__cdecl **)(_DWORD *, unsigned int, unsigned int, void *))(*v11 + 8))(v11, j, v23, v20);
           v11 = (_DWORD *)self[1];
         }
         v9 = v17;
@@ -106,7 +106,7 @@ int __thiscall sub_46F91C(_DWORD *self)
       {
         for ( k = 0; k < v14; ++k )
         {
-          (*(void (__thiscall **)(_DWORD *, unsigned int, unsigned int, void *))(*v13 + 8))(v13, k, v9, v20);
+          (*(void (__cdecl **)(_DWORD *, unsigned int, unsigned int, void *))(*v13 + 8))(v13, k, v9, v20);
           v13 = (_DWORD *)self[1];
           v14 = v13[1045];
         }

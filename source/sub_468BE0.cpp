@@ -1,5 +1,5 @@
 //----- (00468BE0) --------------------------------------------------------
-double __thiscall sub_468BE0(int *self, int a2, int a3, int *a4)
+double __cdecl sub_468BE0(int *self, int a2, int a3, int *a4)
 {
   float *v6; // ecx
   int *v7; // esi

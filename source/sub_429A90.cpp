@@ -1,5 +1,5 @@
 //----- (00429A90) --------------------------------------------------------
-void *__thiscall sub_429A90(void *self, int a2, int a3, int a4, char *Source)
+void *__cdecl sub_429A90(void *self, int a2, int a3, int a4, char *Source)
 {
   *(_DWORD *)self = a2;
   *((_DWORD *)self + 1) = a3;

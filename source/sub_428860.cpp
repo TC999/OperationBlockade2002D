@@ -1,5 +1,5 @@
 //----- (00428860) --------------------------------------------------------
-_DWORD *__thiscall sub_428860(_DWORD *self, char *FileName)
+_DWORD *__cdecl sub_428860(_DWORD *self, char *FileName)
 {
   _DWORD *v2; // ebx
   _DWORD *v3; // eax

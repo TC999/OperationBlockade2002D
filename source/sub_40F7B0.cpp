@@ -1,5 +1,5 @@
 //----- (0040F7B0) --------------------------------------------------------
-_DWORD *__thiscall sub_40F7B0(int self, _DWORD *a2)
+_DWORD *__cdecl sub_40F7B0(int self, _DWORD *a2)
 {
   int v3; // esi
   int v4; // edi

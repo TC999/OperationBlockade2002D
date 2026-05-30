@@ -1,5 +1,5 @@
 //----- (0046A490) --------------------------------------------------------
-char __thiscall sub_46A490(_BYTE *self)
+char __cdecl sub_46A490(_BYTE *self)
 {
   return self[300];
 }

@@ -1,5 +1,5 @@
 //----- (00438B40) --------------------------------------------------------
-char *__thiscall sub_438B40(int self)
+char *__cdecl sub_438B40(int self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // eax

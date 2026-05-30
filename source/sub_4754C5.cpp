@@ -1,5 +1,5 @@
 //----- (004754C5) --------------------------------------------------------
-int __thiscall sub_4754C5(int self, int a2)
+int __cdecl sub_4754C5(int self, int a2)
 {
   unsigned int v3; // ecx
   int v4; // ebx
@@ -24,7 +24,7 @@ int __thiscall sub_4754C5(int self, int a2)
   v8 = v5;
   if ( v5 )
   {
-    sub_46C866((int)v5, 16, v4, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v5, 16, v4, (int (__cdecl *)(int))sub_46C80E);
     v6 = v8;
   }
   else

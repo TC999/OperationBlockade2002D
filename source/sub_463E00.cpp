@@ -1,5 +1,5 @@
 //----- (00463E00) --------------------------------------------------------
-int __thiscall sub_463E00(void *self)
+int __cdecl sub_463E00(void *self)
 {
   int i; // edi
   int *v3; // ecx

@@ -1,5 +1,5 @@
 //----- (00421810) --------------------------------------------------------
-int __thiscall sub_421810(int self, const char *a2, int a3, int a4)
+int __cdecl sub_421810(int self, const char *a2, int a3, int a4)
 {
   char *v5; // ebx
   int v6; // eax

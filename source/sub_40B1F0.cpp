@@ -1,5 +1,5 @@
 //----- (0040B1F0) --------------------------------------------------------
-void __thiscall sub_40B1F0(const char *self, char *ArgList, float *a3, float *a4)
+void __cdecl sub_40B1F0(const char *self, char *ArgList, float *a3, float *a4)
 {
   const char *v5; // esi
   int i; // edi

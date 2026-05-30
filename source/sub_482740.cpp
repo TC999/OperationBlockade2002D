@@ -1,5 +1,5 @@
 //----- (00482740) --------------------------------------------------------
-int __usercall sub_482740(int a1)
+int __cdecl sub_482740(int a1)
 {
   _DWORD *v2; // esi
   int result; // eax

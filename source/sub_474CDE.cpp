@@ -1,5 +1,5 @@
 //----- (00474CDE) --------------------------------------------------------
-void __thiscall sub_474CDE(int self, int a2, int a3, float *a4)
+void __cdecl sub_474CDE(int self, int a2, int a3, float *a4)
 {
   _WORD *v5; // eax
   _WORD *i; // edi

@@ -1,5 +1,5 @@
 //----- (00461FD0) --------------------------------------------------------
-void __thiscall sub_461FD0(_DWORD *self, float *a2, float a3, float a4, int a5, int a6)
+void __cdecl sub_461FD0(_DWORD *self, float *a2, float a3, float a4, int a5, int a6)
 {
   int v6; // eax
   float *v7; // edx

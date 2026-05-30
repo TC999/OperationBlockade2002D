@@ -1,5 +1,5 @@
 //----- (0041F120) --------------------------------------------------------
-int __thiscall sub_41F120(int self)
+int __cdecl sub_41F120(int self)
 {
   int i; // ebp
   void *v3; // edi

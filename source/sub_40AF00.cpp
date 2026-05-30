@@ -1,5 +1,5 @@
 //----- (0040AF00) --------------------------------------------------------
-char *__thiscall sub_40AF00(const char *self, char *ArgList, char **a3)
+char *__cdecl sub_40AF00(const char *self, char *ArgList, char **a3)
 {
   char *result; // eax
   char *v5; // esi

@@ -1,5 +1,5 @@
 //----- (00470F91) --------------------------------------------------------
-int __thiscall sub_470F91(int self)
+int __cdecl sub_470F91(int self)
 {
   int result; // eax
   void *v3; // edi

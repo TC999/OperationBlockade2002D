@@ -1,5 +1,5 @@
 //----- (00473F81) --------------------------------------------------------
-int __thiscall sub_473F81(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_473F81(_DWORD *self, int a2, int a3, int a4)
 {
   _WORD *v4; // edx
   unsigned int v5; // edi

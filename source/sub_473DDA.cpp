@@ -1,5 +1,5 @@
 //----- (00473DDA) --------------------------------------------------------
-int __thiscall sub_473DDA(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_473DDA(_DWORD *self, int a2, int a3, int a4)
 {
   _BYTE *v4; // edx
   int v5; // esi

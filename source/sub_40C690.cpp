@@ -1,5 +1,5 @@
 //----- (0040C690) --------------------------------------------------------
-int __thiscall sub_40C690(_DWORD *self)
+int __cdecl sub_40C690(_DWORD *self)
 {
   int v2; // eax
   int v3; // eax

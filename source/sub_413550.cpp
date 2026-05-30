@@ -1,5 +1,5 @@
 //----- (00413550) --------------------------------------------------------
-void __thiscall sub_413550(int self)
+void __cdecl sub_413550(int self)
 {
   FILE *v2; // eax
   bool v3; // zf

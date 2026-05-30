@@ -1,5 +1,5 @@
 //----- (0043D140) --------------------------------------------------------
-char __thiscall sub_43D140(_DWORD **self, char *String1, int a3)
+char __cdecl sub_43D140(_DWORD **self, char *String1, int a3)
 {
   char Buffer[260]; // [esp+8h] [ebp-104h] BYREF
 

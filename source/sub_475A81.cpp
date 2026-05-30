@@ -1,5 +1,5 @@
 //----- (00475A81) --------------------------------------------------------
-signed int __thiscall sub_475A81(_DWORD *self, int a2, int a3, const void *a4)
+signed int __cdecl sub_475A81(_DWORD *self, int a2, int a3, const void *a4)
 {
   signed int result; // eax
 

@@ -1,5 +1,5 @@
 //----- (0047BDB7) --------------------------------------------------------
-int __usercall sub_47BDB7(int a1)
+int __cdecl sub_47BDB7(int a1)
 {
   int v1; // ebx
   bool v2; // cc

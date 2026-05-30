@@ -1,5 +1,5 @@
 //----- (00428F80) --------------------------------------------------------
-int __thiscall sub_428F80(void *self, int a2)
+int __cdecl sub_428F80(void *self, int a2)
 {
   int v2; // ebp
   int v4; // edi

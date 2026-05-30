@@ -1,5 +1,5 @@
 //----- (00475270) --------------------------------------------------------
-void __thiscall sub_475270(int self, int a2, int a3, _DWORD *a4)
+void __cdecl sub_475270(int self, int a2, int a3, _DWORD *a4)
 {
   unsigned __int8 *v4; // eax
   unsigned __int8 *i; // edx

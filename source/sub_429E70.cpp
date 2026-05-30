@@ -1,5 +1,5 @@
 //----- (00429E70) --------------------------------------------------------
-bool __thiscall sub_429E70(_DWORD *self, _BYTE *a2, int a3)
+bool __cdecl sub_429E70(_DWORD *self, _BYTE *a2, int a3)
 {
   _DWORD *v3; // esi
   int v5; // eax

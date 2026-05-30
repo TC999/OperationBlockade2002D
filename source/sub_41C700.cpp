@@ -1,5 +1,5 @@
 //----- (0041C700) --------------------------------------------------------
-int __thiscall sub_41C700(LPVOID *self)
+int __cdecl sub_41C700(LPVOID *self)
 {
   char v2; // di
 

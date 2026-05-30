@@ -1,5 +1,5 @@
 //----- (0043BFC0) --------------------------------------------------------
-char __thiscall sub_43BFC0(int self, char *String1, int a3)
+char __cdecl sub_43BFC0(int self, char *String1, int a3)
 {
   int v4; // eax
   char *v5; // ecx

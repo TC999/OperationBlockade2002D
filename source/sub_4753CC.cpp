@@ -1,5 +1,5 @@
 //----- (004753CC) --------------------------------------------------------
-void __thiscall sub_4753CC(int self, int a2, int a3, float *a4)
+void __cdecl sub_4753CC(int self, int a2, int a3, float *a4)
 {
   _BYTE *v5; // eax
   _BYTE *i; // edi

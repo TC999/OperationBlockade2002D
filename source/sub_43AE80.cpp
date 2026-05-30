@@ -1,5 +1,5 @@
 //----- (0043AE80) --------------------------------------------------------
-_DWORD *__thiscall sub_43AE80(_DWORD *self, int a2)
+_DWORD *__cdecl sub_43AE80(_DWORD *self, int a2)
 {
   sub_4233C0(self, a2, aNameentry);
   *self = &off_4995F8;

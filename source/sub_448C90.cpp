@@ -1,5 +1,5 @@
 //----- (00448C90) --------------------------------------------------------
-_DWORD *__thiscall sub_448C90(_DWORD *self, int a2)
+_DWORD *__cdecl sub_448C90(_DWORD *self, int a2)
 {
   _DWORD *v2; // ebx
 

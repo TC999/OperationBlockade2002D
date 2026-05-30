@@ -1,5 +1,5 @@
 //----- (0040C310) --------------------------------------------------------
-_DWORD *__thiscall sub_40C310(_DWORD *self, _DWORD *a2)
+_DWORD *__cdecl sub_40C310(_DWORD *self, _DWORD *a2)
 {
   int v3; // eax
   void *v4; // edi

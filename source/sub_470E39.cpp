@@ -1,5 +1,5 @@
 //----- (00470E39) --------------------------------------------------------
-int __thiscall sub_470E39(int **self, int a2, int a3, int *a4)
+int __cdecl sub_470E39(int **self, int a2, int a3, int *a4)
 {
   int *v5; // eax
   int *v6; // eax
@@ -48,12 +48,12 @@ LABEL_22:
   v8 = self[1];
   if ( v8 )
   {
-    (*(void (__thiscall **)(int *, int))*v8)(v8, 1);
+    (*(void (__cdecl **)(int *, int))*v8)(v8, 1);
     self[1] = 0;
   }
   if ( *self )
   {
-    (*(void (__thiscall **)(int *, int))**self)(*self, 1);
+    (*(void (__cdecl **)(int *, int))**self)(*self, 1);
     *self = 0;
   }
   return v7;

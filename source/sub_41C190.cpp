@@ -1,5 +1,5 @@
 //----- (0041C190) --------------------------------------------------------
-void __thiscall sub_41C190(int self)
+void __cdecl sub_41C190(int self)
 {
   float v2; // [esp+4h] [ebp-Ch]
   float v3; // [esp+8h] [ebp-8h]

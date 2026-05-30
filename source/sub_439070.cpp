@@ -1,5 +1,5 @@
 //----- (00439070) --------------------------------------------------------
-char __thiscall sub_439070(int self, int a2)
+char __cdecl sub_439070(int self, int a2)
 {
   int v3; // ebx
   float *v4; // edi
@@ -65,7 +65,7 @@ char __thiscall sub_439070(int self, int a2)
   double v67; // st7
   double v68; // st6
   _BYTE *v69; // edi
-  void (__thiscall ***v70)(_DWORD, int); // ecx
+  void (__cdecl ***v70)(_DWORD, int); // ecx
   int v71; // ebx
   int *v72; // edx
   void *v73; // edi
@@ -151,7 +151,7 @@ char __thiscall sub_439070(int self, int a2)
   }
   v13 = *(_DWORD *)(self + 404);
   if ( v13 )
-    (*(void (__thiscall **)(int, int))(*(_DWORD *)v13 + 8))(v13, a2);
+    (*(void (__cdecl **)(int, int))(*(_DWORD *)v13 + 8))(v13, a2);
   v14 = *(_DWORD *)(self + 484);
   if ( !v14 )
   {
@@ -165,7 +165,7 @@ char __thiscall sub_439070(int self, int a2)
     sub_438840((_DWORD *)self);
     v16 = (LPVOID *)sub_450BF0(1, 4.0);
     sub_421110(v16, AppName);
-    (*(void (__thiscall **)(_DWORD, int))(**(_DWORD **)(self + 408) + 24))(*(_DWORD *)(self + 408), 1);
+    (*(void (__cdecl **)(_DWORD, int))(**(_DWORD **)(self + 408) + 24))(*(_DWORD *)(self + 408), 1);
     sub_436FD0(*(float **)(dword_520970 + 224), 0.0, 1.0);
     v17 = *(_DWORD *)(self + 396);
     *(_DWORD *)(self + 484) = 2;
@@ -263,7 +263,7 @@ LABEL_140:
       else if ( v14 == 8 && (i || sub_408F40(57) || sub_408F40(28) || sub_408F40(1)) )
       {
         sub_4286C0((_DWORD *)self, *(_DWORD *)(self + 464));
-        v70 = *(void (__thiscall ****)(_DWORD, int))(self + 464);
+        v70 = *(void (__cdecl ****)(_DWORD, int))(self + 464);
         if ( v70 )
           (**v70)(v70, 1);
         v71 = 0;

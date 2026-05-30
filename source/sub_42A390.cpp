@@ -1,5 +1,5 @@
 //----- (0042A390) --------------------------------------------------------
-char __thiscall sub_42A390(void *self, _BYTE *a2)
+char __cdecl sub_42A390(void *self, _BYTE *a2)
 {
   char result; // al
   char v4; // al

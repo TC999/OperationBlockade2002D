@@ -1,5 +1,5 @@
 //----- (00471009) --------------------------------------------------------
-int __thiscall sub_471009(int *self, int a2, unsigned int a3)
+int __cdecl sub_471009(int *self, int a2, unsigned int a3)
 {
   int *v3; // esi
   unsigned int v6; // edx

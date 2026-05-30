@@ -1,5 +1,5 @@
 //----- (00407600) --------------------------------------------------------
-int __thiscall sub_407600(_DWORD *self, int a2, int a3, int a4, int a5)
+int __cdecl sub_407600(_DWORD *self, int a2, int a3, int a4, int a5)
 {
   _BYTE *v6; // edi
 

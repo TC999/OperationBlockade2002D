@@ -1,5 +1,5 @@
 //----- (0045F3A0) --------------------------------------------------------
-int __thiscall sub_45F3A0(char *self, int a2, bool *a3, bool *a4, _DWORD *a5)
+int __cdecl sub_45F3A0(char *self, int a2, bool *a3, bool *a4, _DWORD *a5)
 {
   char *v5; // edx
   int v6; // eax

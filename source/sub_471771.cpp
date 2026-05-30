@@ -1,5 +1,5 @@
 //----- (00471771) --------------------------------------------------------
-int __thiscall sub_471771(_DWORD *self, int a2, int a3)
+int __cdecl sub_471771(_DWORD *self, int a2, int a3)
 {
   int v3; // esi
   _DWORD *v4; // eax
@@ -17,7 +17,7 @@ int __thiscall sub_471771(_DWORD *self, int a2, int a3)
   int v16; // ebx
   unsigned __int16 v17; // dx
   unsigned int v19; // [esp-4h] [ebp-284h]
-  void (__cdecl __noreturn *v20[2])(int); // [esp+Ch] [ebp-274h] BYREF
+  void (__cdecl *v20[2])(int); // [esp+Ch] [ebp-274h] BYREF
   int (*v21)(); // [esp+14h] [ebp-26Ch]
   char v22[64]; // [esp+90h] [ebp-1F0h] BYREF
   int v23; // [esp+D0h] [ebp-1B0h] BYREF

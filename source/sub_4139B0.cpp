@@ -1,5 +1,5 @@
 //----- (004139B0) --------------------------------------------------------
-char __thiscall sub_4139B0(_DWORD *self)
+char __cdecl sub_4139B0(_DWORD *self)
 {
   int i; // esi
   _BYTE *v2; // edx

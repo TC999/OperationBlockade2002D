@@ -1,5 +1,5 @@
 //----- (00451390) --------------------------------------------------------
-char **__thiscall sub_451390(char **self, char *FileName)
+char **__cdecl sub_451390(char **self, char *FileName)
 {
   char *v3; // edi
   char *v4; // ebx
@@ -41,7 +41,7 @@ char **__thiscall sub_451390(char **self, char *FileName)
   {
     v3 = (char *)(v6 + 1);
     *v6 = v5;
-    `eh vector constructor iterator'(v6 + 1, 0xCu, v5, unknown_libname_27, (void (__thiscall *)(void *))sub_451710);
+    `eh vector constructor iterator'(v6 + 1, 0xCu, v5, unknown_libname_27, (void (__cdecl *)(void *))sub_451710);
   }
   v7 = 0;
   v8 = *(_DWORD *)v4 <= 0;

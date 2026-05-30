@@ -1,5 +1,5 @@
 //----- (00470F78) --------------------------------------------------------
-_DWORD *__thiscall sub_470F78(_DWORD *self)
+_DWORD *__cdecl sub_470F78(_DWORD *self)
 {
   _DWORD *result; // eax
 

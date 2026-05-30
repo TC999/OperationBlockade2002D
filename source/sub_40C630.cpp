@@ -1,5 +1,5 @@
 //----- (0040C630) --------------------------------------------------------
-_DWORD *__thiscall sub_40C630(_DWORD *self, int a2, int a3)
+_DWORD *__cdecl sub_40C630(_DWORD *self, int a2, int a3)
 {
   _DWORD *result; // eax
 

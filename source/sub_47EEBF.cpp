@@ -1,5 +1,5 @@
 //----- (0047EEBF) --------------------------------------------------------
-int __usercall sub_47EEBF(_DWORD *a1)
+int __cdecl sub_47EEBF(_DWORD *a1)
 {
   _DWORD *v1; // ebx
   int result; // eax

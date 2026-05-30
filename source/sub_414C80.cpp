@@ -1,5 +1,5 @@
 //----- (00414C80) --------------------------------------------------------
-char __thiscall sub_414C80(_DWORD *self, int a2)
+char __cdecl sub_414C80(_DWORD *self, int a2)
 {
   int i; // edi
   int v4; // esi

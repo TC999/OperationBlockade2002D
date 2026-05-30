@@ -1,5 +1,5 @@
 //----- (00407250) --------------------------------------------------------
-int __thiscall sub_407250(_DWORD *self)
+int __cdecl sub_407250(_DWORD *self)
 {
   int v2; // ebp
   int v3; // ebx

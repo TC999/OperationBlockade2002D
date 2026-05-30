@@ -1,5 +1,5 @@
 //----- (0044E3D0) --------------------------------------------------------
-int __thiscall sub_44E3D0(char *self, int a2, const void *a3)
+int __cdecl sub_44E3D0(char *self, int a2, const void *a3)
 {
   int v4; // eax
   int v5; // esi

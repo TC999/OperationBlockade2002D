@@ -1,5 +1,5 @@
 //----- (0044A490) --------------------------------------------------------
-int __thiscall sub_44A490(char *self, int a2, _DWORD *a3, float *a4, char a5, char a6)
+int __cdecl sub_44A490(char *self, int a2, _DWORD *a3, float *a4, char a5, char a6)
 {
   unsigned int i; // edi
   int result; // eax

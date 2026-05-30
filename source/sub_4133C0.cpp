@@ -1,5 +1,5 @@
 //----- (004133C0) --------------------------------------------------------
-char __thiscall sub_4133C0(_DWORD *self)
+char __cdecl sub_4133C0(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // ecx

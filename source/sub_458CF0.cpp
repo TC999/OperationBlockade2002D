@@ -1,5 +1,5 @@
 //----- (00458CF0) --------------------------------------------------------
-_DWORD *__thiscall sub_458CF0(_DWORD *self)
+_DWORD *__cdecl sub_458CF0(_DWORD *self)
 {
   char v3; // [esp+Bh] [ebp-11h]
 
@@ -8,7 +8,7 @@ _DWORD *__thiscall sub_458CF0(_DWORD *self)
   self[3] = 0;
   *((_BYTE *)self + 16) = 1;
   *self = &off_499040;
-  `eh vector constructor iterator'(self + 6, 0x10u, 3, sub_458DD0, (void (__thiscall *)(void *))sub_45C880);
+  `eh vector constructor iterator'(self + 6, 0x10u, 3, sub_458DD0, (void (__cdecl *)(void *))sub_45C880);
   *((_BYTE *)self + 116) = v3;
   self[30] = 0;
   self[31] = 0;

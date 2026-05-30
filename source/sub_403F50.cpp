@@ -1,5 +1,5 @@
 //----- (00403F50) --------------------------------------------------------
-bool __thiscall sub_403F50(_DWORD *self)
+bool __cdecl sub_403F50(_DWORD *self)
 {
   char v2; // al
   char v3; // al

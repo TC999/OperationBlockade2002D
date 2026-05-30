@@ -1,5 +1,5 @@
 //----- (00449C10) --------------------------------------------------------
-int __thiscall sub_449C10(char *self)
+int __cdecl sub_449C10(char *self)
 {
   int result; // eax
   _BYTE *i; // ecx

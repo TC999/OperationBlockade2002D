@@ -1,5 +1,5 @@
 //----- (0044B4B0) --------------------------------------------------------
-_BYTE *__thiscall sub_44B4B0(_BYTE *self, char *ArgList)
+_BYTE *__cdecl sub_44B4B0(_BYTE *self, char *ArgList)
 {
   char *v2; // ebx
   int v4; // eax

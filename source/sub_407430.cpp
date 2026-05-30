@@ -1,5 +1,5 @@
 //----- (00407430) --------------------------------------------------------
-char *__thiscall sub_407430(_DWORD *self, int a2, char *a3)
+char *__cdecl sub_407430(_DWORD *self, int a2, char *a3)
 {
   char *result; // eax
 

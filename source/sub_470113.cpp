@@ -1,5 +1,5 @@
 //----- (00470113) --------------------------------------------------------
-int __thiscall sub_470113(_DWORD *self)
+int __cdecl sub_470113(_DWORD *self)
 {
   _DWORD *v2; // edx
   _DWORD *v3; // ecx
@@ -99,7 +99,7 @@ int __thiscall sub_470113(_DWORD *self)
   v65 = 0;
   if ( v10 )
   {
-    sub_46C866((int)v10, 16, v9, (int (__thiscall *)(int))sub_46C80E);
+    sub_46C866((int)v10, 16, v9, (int (__cdecl *)(int))sub_46C80E);
     v60 = v63;
   }
   else
@@ -118,7 +118,7 @@ int __thiscall sub_470113(_DWORD *self)
     v65 = 1;
     if ( v14 )
     {
-      sub_46C866((int)v14, 16, v13, (int (__thiscall *)(int))sub_46C80E);
+      sub_46C866((int)v14, 16, v13, (int (__cdecl *)(int))sub_46C80E);
       v15 = v63;
     }
     else
@@ -143,7 +143,7 @@ int __thiscall sub_470113(_DWORD *self)
     v65 = 2;
     if ( v20 )
     {
-      sub_46C866((int)v20, 16, v19, (int (__thiscall *)(int))sub_46C80E);
+      sub_46C866((int)v20, 16, v19, (int (__cdecl *)(int))sub_46C80E);
       v21 = v63;
     }
     else
@@ -190,25 +190,25 @@ int __thiscall sub_470113(_DWORD *self)
           do
           {
             v25 = 2 * v59;
-            (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, char *))(*(_DWORD *)*self + 4))(
+            (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, char *))(*(_DWORD *)*self + 4))(
               *self,
               2 * v64,
               2 * v59,
               v62);
             if ( v17 != v62 )
-              (*(void (__thiscall **)(_DWORD, unsigned int, int, char *))(*(_DWORD *)*self + 4))(
+              (*(void (__cdecl **)(_DWORD, unsigned int, int, char *))(*(_DWORD *)*self + 4))(
                 *self,
                 2 * v64,
                 v25 + 1,
                 v17);
             if ( v61 != v62 )
-              (*(void (__thiscall **)(_DWORD, unsigned int, int, char *))(*(_DWORD *)*self + 4))(
+              (*(void (__cdecl **)(_DWORD, unsigned int, int, char *))(*(_DWORD *)*self + 4))(
                 *self,
                 2 * v64 + 1,
                 v25,
                 v61);
             if ( v58 != v17 && v58 != v61 )
-              (*(void (__thiscall **)(_DWORD, unsigned int, int, char *))(*(_DWORD *)*self + 4))(
+              (*(void (__cdecl **)(_DWORD, unsigned int, int, char *))(*(_DWORD *)*self + 4))(
                 *self,
                 2 * v64 + 1,
                 v25 + 1,
@@ -247,7 +247,7 @@ int __thiscall sub_470113(_DWORD *self)
               }
               while ( v36 < *(_DWORD *)(self[1] + 4176) );
             }
-            (*(void (__thiscall **)(_DWORD, unsigned int, unsigned int, char *))(*(_DWORD *)self[1] + 8))(
+            (*(void (__cdecl **)(_DWORD, unsigned int, unsigned int, char *))(*(_DWORD *)self[1] + 8))(
               self[1],
               v64++,
               v59,

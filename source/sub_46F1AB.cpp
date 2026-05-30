@@ -1,5 +1,5 @@
 //----- (0046F1AB) --------------------------------------------------------
-int __thiscall sub_46F1AB(_DWORD *self)
+int __cdecl sub_46F1AB(_DWORD *self)
 {
   _BYTE *v1; // ebx
   int v2; // eax

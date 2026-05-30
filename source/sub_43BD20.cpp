@@ -1,5 +1,5 @@
 //----- (0043BD20) --------------------------------------------------------
-char __thiscall sub_43BD20(int self, char *String1, int a3)
+char __cdecl sub_43BD20(int self, char *String1, int a3)
 {
   if ( String1 )
   {

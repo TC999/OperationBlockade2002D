@@ -1,5 +1,5 @@
 //----- (0041CFD0) --------------------------------------------------------
-int __thiscall sub_41CFD0(int self, float a2)
+int __cdecl sub_41CFD0(int self, float a2)
 {
   int result; // eax
   int v3; // esi

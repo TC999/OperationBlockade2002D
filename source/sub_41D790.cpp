@@ -1,5 +1,5 @@
 //----- (0041D790) --------------------------------------------------------
-void __thiscall sub_41D790(_DWORD *self)
+void __cdecl sub_41D790(_DWORD *self)
 {
   ++self[69];
 }

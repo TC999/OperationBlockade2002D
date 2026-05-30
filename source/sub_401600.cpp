@@ -1,5 +1,5 @@
 //----- (00401600) --------------------------------------------------------
-int __thiscall sub_401600(float *self)
+int __cdecl sub_401600(float *self)
 {
   double v2; // st7
   double v3; // st7

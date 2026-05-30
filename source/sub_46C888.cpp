@@ -1,5 +1,5 @@
 //----- (0046C888) --------------------------------------------------------
-unsigned int *__thiscall sub_46C888(unsigned int *self, unsigned int a2)
+unsigned int *__cdecl sub_46C888(unsigned int *self, unsigned int a2)
 {
   unsigned int v3; // ecx
   unsigned int v4; // ebx

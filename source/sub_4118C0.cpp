@@ -1,5 +1,5 @@
 //----- (004118C0) --------------------------------------------------------
-int __thiscall sub_4118C0(int self, _DWORD *a2, int a3)
+int __cdecl sub_4118C0(int self, _DWORD *a2, int a3)
 {
   struct _RTL_CRITICAL_SECTION *v4; // ebx
   int v5; // eax

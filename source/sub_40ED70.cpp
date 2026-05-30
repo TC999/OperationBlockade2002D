@@ -1,5 +1,5 @@
 //----- (0040ED70) --------------------------------------------------------
-int __thiscall sub_40ED70(_DWORD *self, int a2, int a3, int a4, int a5, int a6)
+int __cdecl sub_40ED70(_DWORD *self, int a2, int a3, int a4, int a5, int a6)
 {
   int result; // eax
 

@@ -1,5 +1,5 @@
 //----- (00462B20) --------------------------------------------------------
-_DWORD *__thiscall sub_462B20(_DWORD *self)
+_DWORD *__cdecl sub_462B20(_DWORD *self)
 {
   _DWORD *result; // eax
   int v3; // ebp

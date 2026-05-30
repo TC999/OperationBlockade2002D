@@ -1,5 +1,5 @@
 //----- (0040F4C0) --------------------------------------------------------
-void *__thiscall sub_40F4C0(_DWORD *self, int a2, unsigned int a3, _WORD *a4)
+void *__cdecl sub_40F4C0(_DWORD *self, int a2, unsigned int a3, _WORD *a4)
 {
   void *result; // eax
 

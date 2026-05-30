@@ -1,5 +1,5 @@
 //----- (00436E40) --------------------------------------------------------
-int __thiscall sub_436E40(char *self, const char *a2)
+int __cdecl sub_436E40(char *self, const char *a2)
 {
   int v2; // edi
   char *i; // esi

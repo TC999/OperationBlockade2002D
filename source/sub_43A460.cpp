@@ -1,5 +1,5 @@
 //----- (0043A460) --------------------------------------------------------
-char __thiscall sub_43A460(_DWORD *self, int a2, char a3)
+char __cdecl sub_43A460(_DWORD *self, int a2, char a3)
 {
   char result; // al
 

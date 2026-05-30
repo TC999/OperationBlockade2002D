@@ -1,5 +1,5 @@
 //----- (0043EB00) --------------------------------------------------------
-char __thiscall sub_43EB00(int self, int a2)
+char __cdecl sub_43EB00(int self, int a2)
 {
   int v3; // eax
   int v4; // ebp

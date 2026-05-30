@@ -1,5 +1,5 @@
 //----- (0040FC90) --------------------------------------------------------
-int __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION *self)
+int __cdecl sub_40FC90(struct _RTL_CRITICAL_SECTION *self)
 {
   PRTL_CRITICAL_SECTION_DEBUG DebugInfo; // eax
   struct _RTL_CRITICAL_SECTION *v3; // edi

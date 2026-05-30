@@ -1,5 +1,5 @@
 //----- (0045CF30) --------------------------------------------------------
-char __thiscall sub_45CF30(int self, char a2)
+char __cdecl sub_45CF30(int self, char a2)
 {
   int i; // edi
   char result; // al

@@ -1,5 +1,5 @@
 //----- (004719C6) --------------------------------------------------------
-int __thiscall sub_4719C6(int *self, unsigned __int8 *a2, unsigned int a3)
+int __cdecl sub_4719C6(int *self, unsigned __int8 *a2, unsigned int a3)
 {
   int *v3; // esi
   unsigned __int8 v5; // cl

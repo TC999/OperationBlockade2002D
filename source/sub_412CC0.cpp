@@ -1,5 +1,5 @@
 //----- (00412CC0) --------------------------------------------------------
-int __thiscall sub_412CC0(int self, int a2)
+int __cdecl sub_412CC0(int self, int a2)
 {
   double v3; // st7
   unsigned __int8 v5; // c0

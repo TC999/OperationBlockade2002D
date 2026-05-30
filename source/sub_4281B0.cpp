@@ -1,5 +1,5 @@
 //----- (004281B0) --------------------------------------------------------
-void __noreturn sub_4281B0(char *Format, ...)
+void sub_4281B0(char *Format, ...)
 {
   int v1; // esi
   int v2; // edi

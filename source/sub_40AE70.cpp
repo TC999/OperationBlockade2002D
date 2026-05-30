@@ -1,5 +1,5 @@
 //----- (0040AE70) --------------------------------------------------------
-char __thiscall sub_40AE70(_DWORD *self, char *String2)
+char __cdecl sub_40AE70(_DWORD *self, char *String2)
 {
   unsigned int v2; // ebp
   int i; // ebx

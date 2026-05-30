@@ -1,5 +1,5 @@
 //----- (004318B0) --------------------------------------------------------
-char __thiscall sub_4318B0(_DWORD *self)
+char __cdecl sub_4318B0(_DWORD *self)
 {
   int v2; // ecx
   int v3; // ecx

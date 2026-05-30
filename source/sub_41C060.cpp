@@ -1,5 +1,5 @@
 //----- (0041C060) --------------------------------------------------------
-int __thiscall sub_41C060(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_41C060(_DWORD *self, int a2, int a3, int a4)
 {
   sub_41C050();
   *self = a2;

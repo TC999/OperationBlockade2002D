@@ -1,5 +1,5 @@
 //----- (004262D0) --------------------------------------------------------
-int __thiscall sub_4262D0(int self)
+int __cdecl sub_4262D0(int self)
 {
   int v2; // esi
   int result; // eax
@@ -10,8 +10,8 @@ int __thiscall sub_4262D0(int self)
   if ( v2 )
   {
     *(_DWORD *)(self + 52) = 0;
-    (*(void (__thiscall **)(int))(*(_DWORD *)v2 + 40))(v2);
-    (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v2 + 24))(v2, 0);
+    (*(void (__cdecl **)(int))(*(_DWORD *)v2 + 40))(v2);
+    (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v2 + 24))(v2, 0);
     result = dword_520970;
     *(_BYTE *)(dword_520970 + 20) = 0;
   }

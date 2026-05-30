@@ -1,5 +1,5 @@
 //----- (0041F2F0) --------------------------------------------------------
-char __usercall sub_41F2F0(int a1, void *a2)
+char __cdecl sub_41F2F0(int a1, void *a2)
 {
   _UNKNOWN *retaddr; // [esp+48h] [ebp+0h] BYREF
 

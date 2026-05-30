@@ -1,5 +1,5 @@
 //----- (0043F560) --------------------------------------------------------
-char *__thiscall sub_43F560(char *self, char *a2)
+char *__cdecl sub_43F560(char *self, char *a2)
 {
   char v3; // cl
   char v4; // dl

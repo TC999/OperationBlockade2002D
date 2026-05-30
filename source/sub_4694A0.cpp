@@ -1,8 +1,8 @@
 //----- (004694A0) --------------------------------------------------------
-void *__thiscall sub_4694A0(void *self)
+void *__cdecl sub_4694A0(void *self)
 {
   int i; // edi
-  void (__thiscall ***v3)(_DWORD, int); // ecx
+  void (__cdecl ***v3)(_DWORD, int); // ecx
   void *v4; // eax
 
   *((_DWORD *)self + 1) = 0;
@@ -18,7 +18,7 @@ void *__thiscall sub_4694A0(void *self)
   {
     for ( i = 0; i < *((_DWORD *)self + 6); ++i )
     {
-      v3 = *(void (__thiscall ****)(_DWORD, int))(*((_DWORD *)self + 5) + 4 * i);
+      v3 = *(void (__cdecl ****)(_DWORD, int))(*((_DWORD *)self + 5) + 4 * i);
       if ( v3 )
         (**v3)(v3, 1);
     }

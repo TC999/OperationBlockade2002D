@@ -1,5 +1,5 @@
 //----- (0046DABD) --------------------------------------------------------
-int __thiscall sub_46DABD(int self)
+int __cdecl sub_46DABD(int self)
 {
   int result; // eax
   void *v3; // esi

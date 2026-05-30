@@ -1,5 +1,5 @@
 //----- (004069C0) --------------------------------------------------------
-char *__thiscall sub_4069C0(_DWORD *self, char *String1)
+char *__cdecl sub_4069C0(_DWORD *self, char *String1)
 {
   int v3; // esi
   _DWORD *v4; // eax

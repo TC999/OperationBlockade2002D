@@ -1,5 +1,5 @@
 //----- (0046F246) --------------------------------------------------------
-int __thiscall sub_46F246(_DWORD *self)
+int __cdecl sub_46F246(_DWORD *self)
 {
   int v1; // edx
   int v2; // eax

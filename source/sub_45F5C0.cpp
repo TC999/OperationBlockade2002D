@@ -1,5 +1,5 @@
 //----- (0045F5C0) --------------------------------------------------------
-char __thiscall sub_45F5C0(int self, int a2, int a3)
+char __cdecl sub_45F5C0(int self, int a2, int a3)
 {
   bool v4; // zf
 

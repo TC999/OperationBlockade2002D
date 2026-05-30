@@ -1,5 +1,5 @@
 //----- (0045F9E0) --------------------------------------------------------
-char __userpurge sub_45F9E0(int a1, int a2, int a3)
+char __cdecl sub_45F9E0(int a1, int a2, int a3)
 {
   double v4; // st7
   double v5; // st7
@@ -504,7 +504,7 @@ LABEL_51:
   {
     v40 = sub_408F30(dword_520970) == a1 && !*(_BYTE *)(a1 + 2584);
     v41 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(a1 + 2568) + 8 * *(_DWORD *)(a1 + 2580)) + 652);
-    (*(void (__thiscall **)(int, BOOL))(*(_DWORD *)v41 + 24))(v41, v40);
+    (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)v41 + 24))(v41, v40);
   }
   if ( *(_BYTE *)(a1 + 2584) )
   {
@@ -736,7 +736,7 @@ LABEL_168:
           if ( v76 )
             *(_BYTE *)(v76 + 32) = 0;
           else
-            (*(void (__thiscall **)(_DWORD, _DWORD))(**(_DWORD **)(v75 + 848) + 24))(*(_DWORD *)(v75 + 848), 0);
+            (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(v75 + 848) + 24))(*(_DWORD *)(v75 + 848), 0);
         }
         if ( *(_BYTE *)(a1 + 2645) || *(_BYTE *)(a1 + 2646) )
         {
@@ -753,9 +753,9 @@ LABEL_168:
           if ( v141 )
             *(_BYTE *)(v141 + 32) = 1;
           else
-            (*(void (__thiscall **)(_DWORD, int))(**(_DWORD **)(v140 + 848) + 24))(*(_DWORD *)(v140 + 848), 1);
+            (*(void (__cdecl **)(_DWORD, int))(**(_DWORD **)(v140 + 848) + 24))(*(_DWORD *)(v140 + 848), 1);
           v142 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(a1 + 2568) + 8 * *(_DWORD *)(a1 + 2580)) + 652);
-          (*(void (__thiscall **)(int, _DWORD))(*(_DWORD *)v142 + 24))(v142, 0);
+          (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v142 + 24))(v142, 0);
           v143 = *(float **)(a1 + 2636);
           v144 = v143[216] - v143[215];
           if ( v144 == 0.0 )
@@ -1230,13 +1230,13 @@ LABEL_298:
       if ( v159 == *(_DWORD *)(a1 + 516) && (v163 = sub_408F30(dword_520970), v163 == a1) )
       {
         LOBYTE(v163) = *(_BYTE *)(a1 + 2584) == 0;
-        (*(void (__thiscall **)(_DWORD, int, int))(**(_DWORD **)v160 + 24))(*(_DWORD *)v160, v163, a2);
+        (*(void (__cdecl **)(_DWORD, int, int))(**(_DWORD **)v160 + 24))(*(_DWORD *)v160, v163, a2);
         a2 = 0;
         v164 = **((_DWORD **)v160 + 1);
       }
       else
       {
-        (*(void (__thiscall **)(_DWORD, _DWORD, int))(**(_DWORD **)v160 + 24))(*(_DWORD *)v160, 0, a2);
+        (*(void (__cdecl **)(_DWORD, _DWORD, int))(**(_DWORD **)v160 + 24))(*(_DWORD *)v160, 0, a2);
         a2 = 1;
         v164 = **((_DWORD **)v160 + 1);
       }

@@ -1,5 +1,5 @@
 //----- (0040F460) --------------------------------------------------------
-char __thiscall sub_40F460(_BYTE *self, int a2, char a3)
+char __cdecl sub_40F460(_BYTE *self, int a2, char a3)
 {
   char result; // al
 

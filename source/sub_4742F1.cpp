@@ -1,5 +1,5 @@
 //----- (004742F1) --------------------------------------------------------
-int __thiscall sub_4742F1(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_4742F1(_DWORD *self, int a2, int a3, int a4)
 {
   _WORD *v5; // edx
   int v6; // ecx

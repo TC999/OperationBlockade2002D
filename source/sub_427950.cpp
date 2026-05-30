@@ -1,5 +1,5 @@
 //----- (00427950) --------------------------------------------------------
-int __usercall sub_427950(int a1, void *a2)
+int __cdecl sub_427950(int a1, void *a2)
 {
   _DWORD *v2; // eax
   _BYTE *v3; // eax

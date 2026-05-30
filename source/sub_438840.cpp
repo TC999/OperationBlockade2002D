@@ -1,5 +1,5 @@
 //----- (00438840) --------------------------------------------------------
-BOOL __thiscall sub_438840(_DWORD *self)
+BOOL __cdecl sub_438840(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // eax
@@ -38,7 +38,7 @@ BOOL __thiscall sub_438840(_DWORD *self)
     v11 = self[101];
     self[102] = v10;
     *(_DWORD *)(v11 + 588) = v10;
-    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)self[102] + 24))(self[102], 0);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)self[102] + 24))(self[102], 0);
     sub_428680(self, self[102]);
   }
   return self[101] && self[102];

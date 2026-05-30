@@ -1,5 +1,5 @@
 //----- (0046A340) --------------------------------------------------------
-char __thiscall sub_46A340(int self)
+char __cdecl sub_46A340(int self)
 {
   char result; // al
   FILE *v3; // esi

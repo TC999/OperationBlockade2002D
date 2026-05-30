@@ -1,5 +1,5 @@
 //----- (0040A830) --------------------------------------------------------
-int __thiscall sub_40A830(int self)
+int __cdecl sub_40A830(int self)
 {
   int v1; // ebx
   int v3; // esi
@@ -58,7 +58,7 @@ int __thiscall sub_40A830(int self)
       v10 = v9[1];
       v11 = *v9;
       for ( m = v9 - 1; v11 != v10; v11 += 12 )
-        ((void (__thiscall *)(_DWORD *, int))nullsub_4)(m, v11);
+        ((void (__cdecl *)(_DWORD *, int))nullsub_4)(m, v11);
       sub_4885A6((LPVOID)m[1]);
       m[1] = 0;
       m[2] = 0;

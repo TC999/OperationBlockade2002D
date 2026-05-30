@@ -1,5 +1,5 @@
 //----- (004036D0) --------------------------------------------------------
-int __thiscall sub_4036D0(_DWORD *self, int a2)
+int __cdecl sub_4036D0(_DWORD *self, int a2)
 {
   int i; // esi
 

@@ -1,5 +1,5 @@
 //----- (0045E2A0) --------------------------------------------------------
-char __userpurge sub_45E2A0(int a1, int a2, int a3, int a4, int a5, int a6)
+char __cdecl sub_45E2A0(int a1, int a2, int a3, int a4, int a5, int a6)
 {
   char *v7; // eax
   int v8; // eax
@@ -89,7 +89,7 @@ char __userpurge sub_45E2A0(int a1, int a2, int a3, int a4, int a5, int a6)
     *(v13 - 1) = (int)v16;
     v17 = *v16;
     LOBYTE(v26) = 0;
-    (*(void (__thiscall **)(int *, _DWORD, int))(v17 + 24))(v16, 0, a2);
+    (*(void (__cdecl **)(int *, _DWORD, int))(v17 + 24))(v16, 0, a2);
     sub_428680((_DWORD *)a1, *(v13 - 1));
     v18 = operator new(0x34u);
     LOBYTE(retaddr) = 2;
@@ -100,7 +100,7 @@ char __userpurge sub_45E2A0(int a1, int a2, int a3, int a4, int a5, int a6)
     *v13 = (int)v19;
     a2 = 0;
     LOBYTE(retaddr) = 0;
-    (*(void (__thiscall **)(_DWORD *))(*v19 + 24))(v19);
+    (*(void (__cdecl **)(_DWORD *))(*v19 + 24))(v19);
     sub_428680((_DWORD *)a1, *v13);
     v13 += 13;
     --v14;

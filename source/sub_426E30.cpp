@@ -28,7 +28,7 @@ LRESULT __stdcall sub_426E30(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
     if ( Msg == 258 )
     {
       if ( byte_5209DC && dword_520970 )
-        (*(void (__thiscall **)(int, WPARAM))(*(_DWORD *)dword_520970 + 8))(dword_520970, wParam);
+        (*(void (__cdecl **)(int, WPARAM))(*(_DWORD *)dword_520970 + 8))(dword_520970, wParam);
       return DefWindowProcA(hWnd, Msg, wParam, lParam);
     }
     if ( Msg != 2 )

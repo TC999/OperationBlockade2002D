@@ -1,5 +1,5 @@
 //----- (004632B0) --------------------------------------------------------
-char __thiscall sub_4632B0(int self, int ArgList)
+char __cdecl sub_4632B0(int self, int ArgList)
 {
   int v3; // eax
   int v4; // esi

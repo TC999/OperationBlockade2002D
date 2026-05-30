@@ -1,5 +1,5 @@
 //----- (00409EF0) --------------------------------------------------------
-int __thiscall sub_409EF0(_DWORD *self, int a2)
+int __cdecl sub_409EF0(_DWORD *self, int a2)
 {
   _DWORD v4[16]; // [esp+4h] [ebp-40h] BYREF
 

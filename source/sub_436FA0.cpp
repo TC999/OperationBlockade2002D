@@ -1,5 +1,5 @@
 //----- (00436FA0) --------------------------------------------------------
-int __thiscall sub_436FA0(float *self, float a2, float a3)
+int __cdecl sub_436FA0(float *self, float a2, float a3)
 {
   float v4; // [esp+8h] [ebp+8h]
 

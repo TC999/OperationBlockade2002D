@@ -1,5 +1,5 @@
 //----- (0043BE50) --------------------------------------------------------
-int __thiscall sub_43BE50(LPVOID *self)
+int __cdecl sub_43BE50(LPVOID *self)
 {
   LPVOID *v2; // esi
   int v3; // edi

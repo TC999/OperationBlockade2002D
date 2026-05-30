@@ -1,5 +1,5 @@
 //----- (00428650) --------------------------------------------------------
-char __thiscall sub_428650(int self)
+char __cdecl sub_428650(int self)
 {
   char result; // al
   int i; // ecx

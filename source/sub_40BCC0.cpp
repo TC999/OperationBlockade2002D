@@ -1,5 +1,5 @@
 //----- (0040BCC0) --------------------------------------------------------
-int *__thiscall sub_40BCC0(int *self, int *a2)
+int *__cdecl sub_40BCC0(int *self, int *a2)
 {
   int *v2; // ebp
   _DWORD *v3; // edi

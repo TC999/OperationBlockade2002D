@@ -1,5 +1,5 @@
 //----- (00407F00) --------------------------------------------------------
-bool __thiscall sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
+bool __cdecl sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
 {
   int v7; // ecx
   int v8; // esi

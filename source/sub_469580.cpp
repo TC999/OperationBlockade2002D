@@ -1,10 +1,10 @@
 //----- (00469580) --------------------------------------------------------
-int __thiscall sub_469580(void *self)
+int __cdecl sub_469580(void *self)
 {
   int i; // edi
   int v3; // ecx
   int j; // edi
-  void (__thiscall ***v5)(_DWORD, int); // ecx
+  void (__cdecl ***v5)(_DWORD, int); // ecx
   void *v6; // eax
   int result; // eax
 
@@ -14,14 +14,14 @@ int __thiscall sub_469580(void *self)
     for ( i = 0; i < *((_DWORD *)self + 6); ++i )
     {
       v3 = *(_DWORD *)(*((_DWORD *)self + 5) + 4 * i);
-      (*(void (__thiscall **)(int))(*(_DWORD *)v3 + 8))(v3);
+      (*(void (__cdecl **)(int))(*(_DWORD *)v3 + 8))(v3);
     }
   }
   if ( *((_BYTE *)self + 32) )
   {
     for ( j = 0; j < *((_DWORD *)self + 6); ++j )
     {
-      v5 = *(void (__thiscall ****)(_DWORD, int))(*((_DWORD *)self + 5) + 4 * j);
+      v5 = *(void (__cdecl ****)(_DWORD, int))(*((_DWORD *)self + 5) + 4 * j);
       if ( v5 )
         (**v5)(v5, 1);
     }

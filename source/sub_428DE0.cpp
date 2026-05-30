@@ -1,5 +1,5 @@
 //----- (00428DE0) --------------------------------------------------------
-char __thiscall sub_428DE0(_DWORD *self, char a2)
+char __cdecl sub_428DE0(_DWORD *self, char a2)
 {
   _DWORD *v3; // edi
   int v4; // eax

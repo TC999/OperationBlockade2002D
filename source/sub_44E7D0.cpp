@@ -1,5 +1,5 @@
 //----- (0044E7D0) --------------------------------------------------------
-char __thiscall sub_44E7D0(_DWORD *self, int a2)
+char __cdecl sub_44E7D0(_DWORD *self, int a2)
 {
   int v2; // eax
   _DWORD *v3; // esi

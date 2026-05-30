@@ -1,5 +1,5 @@
 //----- (004081A0) --------------------------------------------------------
-double __thiscall sub_4081A0(int self, int a2, int a3, int a4)
+double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
 {
   int v4; // esi
   int v5; // ebp

@@ -1,5 +1,5 @@
 //----- (00472AF9) --------------------------------------------------------
-_DWORD *__thiscall sub_472AF9(_DWORD *self)
+_DWORD *__cdecl sub_472AF9(_DWORD *self)
 {
   _DWORD *result; // eax
 

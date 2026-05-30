@@ -1,5 +1,5 @@
 //----- (004626F0) --------------------------------------------------------
-INT __usercall sub_4626F0(int a1, int a2)
+INT __cdecl sub_4626F0(int a1, int a2)
 {
   INT result; // eax
   FILE *v4; // esi

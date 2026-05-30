@@ -1,5 +1,5 @@
 //----- (00450D30) --------------------------------------------------------
-int __thiscall sub_450D30(int self)
+int __cdecl sub_450D30(int self)
 {
   int v2; // eax
   _DWORD *v3; // ecx
@@ -7,7 +7,7 @@ int __thiscall sub_450D30(int self)
   const char *v5; // ecx
   int v6; // eax
   int i; // edi
-  void (__thiscall ***v8)(_DWORD, int); // ecx
+  void (__cdecl ***v8)(_DWORD, int); // ecx
   int v9; // eax
   char *v11; // [esp-8h] [ebp-54h]
   const char *v12; // [esp-4h] [ebp-50h]
@@ -63,7 +63,7 @@ int __thiscall sub_450D30(int self)
   if ( *(_DWORD *)(self + 188) )
   {
     sub_4286C0((_DWORD *)self, *(_DWORD *)(self + 188));
-    v8 = *(void (__thiscall ****)(_DWORD, int))(self + 188);
+    v8 = *(void (__cdecl ****)(_DWORD, int))(self + 188);
     if ( v8 )
       (**v8)(v8, 1);
   }

@@ -1,5 +1,5 @@
 //----- (0045D070) --------------------------------------------------------
-void __thiscall sub_45D070(int self)
+void __cdecl sub_45D070(int self)
 {
   char *v2; // eax
   _DWORD *v3; // eax

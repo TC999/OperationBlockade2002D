@@ -1,5 +1,5 @@
 //----- (0042A5F0) --------------------------------------------------------
-char *__thiscall sub_42A5F0(char *self, int a2)
+char *__cdecl sub_42A5F0(char *self, int a2)
 {
   char *v2; // edi
   double v4; // st7

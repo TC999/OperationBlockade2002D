@@ -1,5 +1,5 @@
 //----- (00468E90) --------------------------------------------------------
-int __thiscall sub_468E90(_DWORD **self, int a2)
+int __cdecl sub_468E90(_DWORD **self, int a2)
 {
   int i; // esi
   int v4; // eax

@@ -1,5 +1,5 @@
 //----- (00468400) --------------------------------------------------------
-int __thiscall sub_468400(int self, float a2)
+int __cdecl sub_468400(int self, float a2)
 {
   double v3; // st7
   int v4; // edx

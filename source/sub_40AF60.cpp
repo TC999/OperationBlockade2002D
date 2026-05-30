@@ -1,5 +1,5 @@
 //----- (0040AF60) --------------------------------------------------------
-float *__thiscall sub_40AF60(const char *self, char *ArgList, float *a3)
+float *__cdecl sub_40AF60(const char *self, char *ArgList, float *a3)
 {
   float *result; // eax
   const char *v5; // esi

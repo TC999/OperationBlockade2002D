@@ -1,5 +1,5 @@
 //----- (004211E0) --------------------------------------------------------
-int __thiscall sub_4211E0(const char **self, char a2)
+int __cdecl sub_4211E0(const char **self, char a2)
 {
   unsigned int v3; // kr04_4
   char *v5; // [esp+Ch] [ebp-4h]

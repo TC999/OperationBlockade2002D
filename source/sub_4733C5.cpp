@@ -1,5 +1,5 @@
 //----- (004733C5) --------------------------------------------------------
-float *__thiscall sub_4733C5(float *self, float *a2, unsigned int a3, int a4)
+float *__cdecl sub_4733C5(float *self, float *a2, unsigned int a3, int a4)
 {
   void *v6; // ecx
   unsigned int v7; // edx
@@ -15,7 +15,7 @@ float *__thiscall sub_4733C5(float *self, float *a2, unsigned int a3, int a4)
   float v18[4]; // [esp+Ch] [ebp-10h] BYREF
   int v19; // [esp+24h] [ebp+8h]
 
-  sub_46C866((int)(self + 12), 16, 256, (int (__thiscall *)(int))sub_46C80E);
+  sub_46C866((int)(self + 12), 16, 256, (int (__cdecl *)(int))sub_46C80E);
   *(_DWORD *)self = &off_49A774;
   self[6] = *a2;
   self[1] = a2[1];

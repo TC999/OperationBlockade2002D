@@ -1,5 +1,5 @@
 //----- (00428D50) --------------------------------------------------------
-int __thiscall sub_428D50(_DWORD *self, const char *a2)
+int __cdecl sub_428D50(_DWORD *self, const char *a2)
 {
   _DWORD *v3; // ebp
   int result; // eax

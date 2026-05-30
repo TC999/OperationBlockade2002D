@@ -1,5 +1,5 @@
 //----- (00469160) --------------------------------------------------------
-unsigned int __thiscall sub_469160(int self, _DWORD *a2, const char *a3, const char *a4)
+unsigned int __cdecl sub_469160(int self, _DWORD *a2, const char *a3, const char *a4)
 {
   int v5; // eax
   int v6; // ebx

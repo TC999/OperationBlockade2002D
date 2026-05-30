@@ -1,5 +1,5 @@
 //----- (00403D90) --------------------------------------------------------
-char *__thiscall sub_403D90(char *self, const char *a2)
+char *__cdecl sub_403D90(char *self, const char *a2)
 {
   char *v2; // ebx
   char *result; // eax

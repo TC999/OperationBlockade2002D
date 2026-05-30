@@ -1,5 +1,5 @@
 //----- (0043A230) --------------------------------------------------------
-int __thiscall sub_43A230(int *self, int ArgList)
+int __cdecl sub_43A230(int *self, int ArgList)
 {
   _DWORD *v3; // eax
   _DWORD *v4; // eax
@@ -35,7 +35,7 @@ int __thiscall sub_43A230(int *self, int ArgList)
   if ( !*(_BYTE *)(dword_520970 + 296) )
     *(_BYTE *)(dword_520970 + 296) = 1;
   sub_43A1E0(self);
-  (*(void (__thiscall **)(int *, int))(*self + 24))(self, 1);
+  (*(void (__cdecl **)(int *, int))(*self + 24))(self, 1);
   self[5] = ArgList;
   v5 = 0;
   v6 = v16;
@@ -64,7 +64,7 @@ int __thiscall sub_43A230(int *self, int ArgList)
     sub_4131B0(v10, (_DWORD *)v16[v11]);
     sub_413120(1148862464);
     sub_428680(self, self[i + 6]);
-    (*(void (__thiscall **)(int, int))(*(_DWORD *)self[i + 6] + 24))(self[i + 6], 1);
+    (*(void (__cdecl **)(int, int))(*(_DWORD *)self[i + 6] + 24))(self[i + 6], 1);
     if ( (unsigned int)i < 2 )
     {
       sub_413130(0, 0, 1065353216, 1065353216);

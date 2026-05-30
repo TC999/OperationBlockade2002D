@@ -1,5 +1,5 @@
 //----- (00411480) --------------------------------------------------------
-bool __thiscall sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int a6, int a7)
+bool __cdecl sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int a6, int a7)
 {
   _DWORD *v7; // ebx
   _WORD *v9; // eax

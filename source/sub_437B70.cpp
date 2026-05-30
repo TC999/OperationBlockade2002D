@@ -1,5 +1,5 @@
 //----- (00437B70) --------------------------------------------------------
-void __thiscall sub_437B70(_DWORD *self, float a2)
+void __cdecl sub_437B70(_DWORD *self, float a2)
 {
   int v3; // ecx
   int v4; // esi

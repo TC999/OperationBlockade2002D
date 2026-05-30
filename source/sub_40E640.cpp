@@ -1,5 +1,5 @@
 //----- (0040E640) --------------------------------------------------------
-long double __thiscall sub_40E640(int self, float a2, int a3, int a4)
+long double __cdecl sub_40E640(int self, float a2, int a3, int a4)
 {
   int v4; // edx
   double v5; // st7

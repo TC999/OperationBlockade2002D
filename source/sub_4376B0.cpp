@@ -1,5 +1,5 @@
 //----- (004376B0) --------------------------------------------------------
-_DWORD *__thiscall sub_4376B0(_DWORD *self, int a2)
+_DWORD *__cdecl sub_4376B0(_DWORD *self, int a2)
 {
   int v3; // ebx
   int v4; // ecx

@@ -1,5 +1,5 @@
 //----- (004519E0) --------------------------------------------------------
-char *__thiscall sub_4519E0(char *self, char *String1)
+char *__cdecl sub_4519E0(char *self, char *String1)
 {
   char *v2; // edi
   char v4; // cl
@@ -332,7 +332,7 @@ char *__thiscall sub_4519E0(char *self, char *String1)
   v324[1] = (int)self;
   sub_468FF0(self, (int)String1);
   v329 = 0;
-  `eh vector constructor iterator'(self + 372, 0x10u, 20, sub_455730, (void (__thiscall *)(void *))sub_44E9B0);
+  `eh vector constructor iterator'(self + 372, 0x10u, 20, sub_455730, (void (__cdecl *)(void *))sub_44E9B0);
   v4 = (char)String1;
   *((_DWORD *)self + 175) = 0;
   self[696] = v4;

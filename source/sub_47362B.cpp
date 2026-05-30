@@ -1,5 +1,5 @@
 //----- (0047362B) --------------------------------------------------------
-int __thiscall sub_47362B(_DWORD *self, int a2, int a3, int a4)
+int __cdecl sub_47362B(_DWORD *self, int a2, int a3, int a4)
 {
   _BYTE *v4; // edx
   int v5; // ebx

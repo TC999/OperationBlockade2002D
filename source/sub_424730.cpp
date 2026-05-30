@@ -1,5 +1,5 @@
 //----- (00424730) --------------------------------------------------------
-int __thiscall sub_424730(_DWORD *self, int a2)
+int __cdecl sub_424730(_DWORD *self, int a2)
 {
   int v3; // ecx
   double v5; // st7
@@ -156,7 +156,7 @@ int __thiscall sub_424730(_DWORD *self, int a2)
   }
   if ( self[17] != v60 )
   {
-    (*(void (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)self[13] + 52))(self[13], self[17]);
+    (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)self[13] + 52))(self[13], self[17]);
     if ( !self[18] )
     {
       v23 = self[17];
@@ -186,7 +186,7 @@ int __thiscall sub_424730(_DWORD *self, int a2)
       if ( v30 )
       {
         LOBYTE(v28) = *(_BYTE *)(v27 + 44);
-        (*(void (__thiscall **)(int, int))(*(_DWORD *)v30 + 24))(v30, v28);
+        (*(void (__cdecl **)(int, int))(*(_DWORD *)v30 + 24))(v30, v28);
       }
       v31 = *(_DWORD *)(v29 + 112);
       if ( v31 )
@@ -310,7 +310,7 @@ LABEL_68:
             }
             else
             {
-              (*(void (__thiscall **)(_DWORD, int, int, _DWORD, float))(*(_DWORD *)self[13] + 32))(
+              (*(void (__cdecl **)(_DWORD, int, int, _DWORD, float))(*(_DWORD *)self[13] + 32))(
                 self[13],
                 v29,
                 v43,

@@ -1,5 +1,5 @@
 //----- (00468CA0) --------------------------------------------------------
-char __thiscall sub_468CA0(int *self, float *a2, int *a3, float *a4, int *a5)
+char __cdecl sub_468CA0(int *self, float *a2, int *a3, float *a4, int *a5)
 {
   int v6; // ecx
   int *v10; // eax

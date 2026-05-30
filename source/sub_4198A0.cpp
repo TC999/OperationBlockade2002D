@@ -1,5 +1,5 @@
 //----- (004198A0) --------------------------------------------------------
-char __thiscall sub_4198A0(_DWORD *self, float *a2, float a3, float a4, char a5, char a6)
+char __cdecl sub_4198A0(_DWORD *self, float *a2, float a3, float a4, char a5, char a6)
 {
   double v7; // st7
   double v8; // st6

@@ -1,5 +1,5 @@
 //----- (00405A30) --------------------------------------------------------
-int __thiscall sub_405A30(_DWORD *self, char *String1, int a3, char a4)
+int __cdecl sub_405A30(_DWORD *self, char *String1, int a3, char a4)
 {
   int v5; // ebp
   unsigned int v6; // kr04_4

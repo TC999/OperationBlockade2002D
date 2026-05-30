@@ -1,5 +1,5 @@
 //----- (00436E20) --------------------------------------------------------
-_BYTE *__thiscall sub_436E20(char *self)
+_BYTE *__cdecl sub_436E20(char *self)
 {
   _BYTE *result; // eax
   int v2; // ecx

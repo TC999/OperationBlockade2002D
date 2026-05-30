@@ -1,5 +1,5 @@
 //----- (0045E880) --------------------------------------------------------
-char __thiscall sub_45E880(int self)
+char __cdecl sub_45E880(int self)
 {
   FILE *v2; // eax
   FILE *v3; // esi

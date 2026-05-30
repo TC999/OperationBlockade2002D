@@ -1,5 +1,5 @@
 //----- (0044E040) --------------------------------------------------------
-int __thiscall sub_44E040(char *self, int a2, int a3, int a4, int a5, int *a6)
+int __cdecl sub_44E040(char *self, int a2, int a3, int a4, int a5, int *a6)
 {
   int v8; // eax
   int v9; // esi

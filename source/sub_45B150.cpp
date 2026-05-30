@@ -1,5 +1,5 @@
 //----- (0045B150) --------------------------------------------------------
-char __thiscall sub_45B150(_DWORD *self, int ArgList, int a3, int a4)
+char __cdecl sub_45B150(_DWORD *self, int ArgList, int a3, int a4)
 {
   char result; // al
   int v6; // edx

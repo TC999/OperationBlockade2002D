@@ -1,5 +1,5 @@
 //----- (00405770) --------------------------------------------------------
-bool __thiscall sub_405770(FILE **self, unsigned int Buffer)
+bool __cdecl sub_405770(FILE **self, unsigned int Buffer)
 {
   _DWORD *v2; // edi
   void *v5; // eax

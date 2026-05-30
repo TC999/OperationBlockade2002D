@@ -1,5 +1,5 @@
 //----- (0046C866) --------------------------------------------------------
-int __stdcall sub_46C866(int a1, int a2, int a3, int (__thiscall *a4)(int))
+int __stdcall sub_46C866(int a1, int a2, int a3, int (__cdecl *a4)(int))
 {
   int result; // eax
   int v6; // edi

@@ -1,5 +1,5 @@
 //----- (004085F0) --------------------------------------------------------
-_DWORD *__thiscall sub_4085F0(int self, int a2, _DWORD *a3, _DWORD *a4)
+_DWORD *__cdecl sub_4085F0(int self, int a2, _DWORD *a3, _DWORD *a4)
 {
   _DWORD *result; // eax
   _DWORD *v6; // eax

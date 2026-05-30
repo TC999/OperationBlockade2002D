@@ -1,5 +1,5 @@
 //----- (004557B0) --------------------------------------------------------
-int __thiscall sub_4557B0(int self)
+int __cdecl sub_4557B0(int self)
 {
   *(_DWORD *)self = &off_499AEC;
   sub_411430((_DWORD *)dword_4F5CC4, self);

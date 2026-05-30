@@ -1,5 +1,5 @@
 //----- (0041C380) --------------------------------------------------------
-BOOL __thiscall sub_41C380(float *self, float a2)
+BOOL __cdecl sub_41C380(float *self, float a2)
 {
   double v3; // st7
 

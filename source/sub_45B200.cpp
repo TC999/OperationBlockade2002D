@@ -1,5 +1,5 @@
 //----- (0045B200) --------------------------------------------------------
-char __thiscall sub_45B200(_DWORD *self)
+char __cdecl sub_45B200(_DWORD *self)
 {
   int v2; // ecx
   LPVOID *v3; // eax

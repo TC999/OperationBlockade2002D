@@ -1,5 +1,5 @@
 //----- (0041D010) --------------------------------------------------------
-char __thiscall sub_41D010(_DWORD *self, float a2)
+char __cdecl sub_41D010(_DWORD *self, float a2)
 {
   int v2; // esi
   double v4; // st7

@@ -1,5 +1,5 @@
 //----- (004246F0) --------------------------------------------------------
-int __thiscall sub_4246F0(LPVOID **self)
+int __cdecl sub_4246F0(LPVOID **self)
 {
   int v2; // ecx
   int result; // eax
