@@ -139,6 +139,7 @@
     <ResourceCompile Include="OperationBlockade2002D.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="source\globals.cpp" />
     <ClCompile Include="source\CompareFunction.cpp" />
     <ClCompile Include="source\DialogFunc.cpp" />
     <ClCompile Include="source\sub_401000.cpp" />
