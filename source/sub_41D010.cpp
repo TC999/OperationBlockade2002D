@@ -1,3 +1,5 @@
+extern char aSoundCouldnTPa[];
+
 //----- (0041D010) --------------------------------------------------------
 char __cdecl sub_41D010(_DWORD *self, float a2)
 {
@@ -18,7 +20,7 @@ char __cdecl sub_41D010(_DWORD *self, float a2)
   {
     v4 = -1.0;
   }
-  if ( !(*(int (__stdcall **)(int, _DWORD))(*(_DWORD *)v2 + 64))(v2, (__int64)(v4 * 10000.0)) )
+  if ( !(*(int (__stdcall **)(int, _DWORD))(*(_DWORD *)v2 + 64))(v2, (_DWORD)(__int64)(v4 * 10000.0)) )
     return 1;
   sub_4229D0(aSoundCouldnTPa, v5);
   return 0;

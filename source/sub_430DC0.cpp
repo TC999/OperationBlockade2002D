@@ -27,7 +27,7 @@ char __cdecl sub_430DC0(int self, int *a2, float a3, float a4, int a5, int a6)
     v10 = *(_DWORD *)(self + 428);
     if ( *(_BYTE *)(v10 + i + 624) )
     {
-      LOBYTE(v10) = sub_407F00(*(_DWORD *)(self + 432), *(_DWORD *)(v10 + i + 628), a2, a3, &v13, (float *)&a5);
+      SLOBYTE(v10) = sub_407F00(*(_DWORD *)(self + 432), *(_DWORD *)(v10 + i + 628), a2, a3, &v13, (float *)&a5);
       if ( (_BYTE)v10 )
       {
         sub_4229D0("%s splashed on section %d", *(const char **)(*(_DWORD *)(self + 428) + 4), v7);
@@ -40,13 +40,13 @@ char __cdecl sub_430DC0(int self, int *a2, float a3, float a4, int a5, int a6)
           v17 = v7;
           v20 = v15;
           v22 = v6;
-          LOBYTE(v10) = sub_4117D0(dword_4F5CC4, (_DWORD *)0x103, v16, 29, 2, 10000);
+          SLOBYTE(v10) = sub_4117D0(dword_4F5CC4, (_DWORD *)0x103, v16, 29, 2, 10000);
         }
         else
         {
           sub_4229D0("%s hit on section %d", *(const char **)(*(_DWORD *)(self + 428) + 4), v7);
           v12 = *(float *)&a5 * a4;
-          LOBYTE(v10) = sub_430F00(v7, (int)&v13, v12, v6);
+          SLOBYTE(v10) = sub_430F00(self, v7, (int)&v13, v12, v6);
         }
       }
     }

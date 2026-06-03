@@ -16,7 +16,7 @@ float *__cdecl sub_4733C5(float *self, float *a2, unsigned int a3, int a4)
   int v19; // [esp+24h] [ebp+8h]
 
   sub_46C866((int)(self + 12), 16, 256, (int (__cdecl *)(int))sub_46C80E);
-  *(_DWORD *)self = &off_49A774;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_49A774;
   self[6] = *a2;
   self[1] = a2[1];
   self[1042] = a2[2];
@@ -31,7 +31,7 @@ float *__cdecl sub_4733C5(float *self, float *a2, unsigned int a3, int a4)
   v6 = &unk_4B14E0;
   if ( !*((_DWORD *)a2 + 16) )
     v6 = &unk_4B1460;
-  *((_DWORD *)self + 11) = v6;
+  *((_DWORD *)self + 11) = (uint32)(uintptr_t)v6;
   *((_DWORD *)self + 1048) = a3 >> 3;
   *((_DWORD *)self + 3) = a3 != 0;
   *((_DWORD *)self + 2) = a4;
@@ -77,7 +77,7 @@ float *__cdecl sub_4733C5(float *self, float *a2, unsigned int a3, int a4)
   }
   v11 = *((_DWORD *)self + 1037);
   v12 = *((_DWORD *)self + 1041);
-  v13 = self + 1036;
+  v13 = (_DWORD *)(self + 1036);
   v14 = *((_DWORD *)self + 1038) - *((_DWORD *)self + 1036);
   *((_DWORD *)self + 1045) = *((_DWORD *)self + 1039) - v11;
   v15 = *((_DWORD *)self + 1048);

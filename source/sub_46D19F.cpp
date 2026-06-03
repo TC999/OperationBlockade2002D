@@ -14,12 +14,12 @@ int __cdecl sub_46D19F(char a1, int a2, int a3, int *a4, int a5, int a6, int *a7
 
   if ( !a2 )
   {
-    sub_46D8FD(0, "pDestSurface pointer is invalid", v12);
+    sub_46D8FD(0, (char *)"pDestSurface pointer is invalid", v12);
     return -2005530516;
   }
   if ( !a5 )
   {
-    sub_46D8FD(0, "pSrcSurface pointer is invalid", a1);
+    sub_46D8FD(0, (char *)"pSrcSurface pointer is invalid", a1);
     return -2005530516;
   }
   (*(void (__stdcall **)(int, int *))(*(_DWORD *)a5 + 32))(a5, v13);
@@ -31,7 +31,7 @@ int __cdecl sub_46D19F(char a1, int a2, int a3, int *a4, int a5, int a6, int *a7
     v19 = a7[3];
     if ( v16 < 0 || v18 > v14 || v16 > v18 || v17 < 0 || v19 > v15 || v17 > v19 )
     {
-      sub_46D8FD(0, "Invalid source rect", a1);
+      sub_46D8FD(0, (char *)"Invalid source rect", a1);
       return -2005530516;
     }
   }
@@ -71,6 +71,6 @@ LABEL_24:
       return v10;
     }
   }
-  sub_46D8FD(0, "Could not lock source surface", a1);
+  sub_46D8FD(0, (char *)"Could not lock source surface", a1);
   return v10;
 }

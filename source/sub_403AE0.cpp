@@ -1,9 +1,11 @@
+#include "common.h"
+
 //----- (00403AE0) --------------------------------------------------------
 void __cdecl sub_403AE0(void *self)
 {
   if ( *((_DWORD *)self + 21) )
   {
-    sub_422230();
+    sub_422230((int *)self);
     *((_DWORD *)self + 21) = 0;
   }
   sub_4885A6(*((LPVOID *)self + 19));

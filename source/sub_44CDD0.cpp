@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (0044CDD0) --------------------------------------------------------
 char __cdecl sub_44CDD0(int self, int a2)
 {
@@ -52,7 +54,7 @@ char __cdecl sub_44CDD0(int self, int a2)
   {
     if ( *(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 100) == 6 )
     {
-      v3 = (unsigned __int8)sub_4647E0(*(_DWORD *)(dword_520970 + 252)) == 0;
+      v3 = (unsigned __int8)sub_4647E0((_DWORD *)*(_DWORD *)(dword_520970 + 252)) == 0;
       v4 = *(_BYTE *)(self + 29989);
       if ( v3 )
       {
@@ -91,7 +93,7 @@ char __cdecl sub_44CDD0(int self, int a2)
           v9 = v48 + v8[2];
           v10 = *(_DWORD *)(self + 29984);
           v48 = v9;
-          sub_44DAD0(*(_DWORD *)(v10 + 832), COERCE_FLOAT(&v46), 0.0, 0);
+          sub_44DAD0(*(int **)(v10 + 832), &v46, 0.0, 0);
           v40 = *(int *)(*(_DWORD *)(self + 29984) + 828);
           if ( 0.0 == *(float *)&v40 )
             v11 = 0.0;
@@ -112,7 +114,7 @@ char __cdecl sub_44CDD0(int self, int a2)
         v47 = v13[1];
         v14 = *(_DWORD *)(self + 29984);
         v48 = v13[2];
-        sub_44DAD0(*(_DWORD *)(v14 + 844), COERCE_FLOAT(&v46), 0.0, 0);
+        sub_44DAD0(*(int **)(v14 + 844), &v46, 0.0, 0);
         v41 = *(int *)(*(_DWORD *)(self + 29984) + 840);
         if ( 0.0 == *(float *)&v41 )
           v15 = 0.0;
@@ -138,10 +140,10 @@ char __cdecl sub_44CDD0(int self, int a2)
       goto LABEL_56;
     if ( *((_BYTE *)v16 - 4) )
     {
-      if ( (sub_407690(*v16, v16[1], v49), !sub_407350((_DWORD *)*v16, v16[1])) && !sub_408660((_DWORD *)*v16, v16[1])
+      if ( (sub_407690(*v16, v16[1], (_DWORD *)v49), !sub_407350((_DWORD *)*v16, v16[1])) && !sub_408660((_DWORD *)*v16, v16[1])
         || !*(_BYTE *)(*v16 + 16) )
       {
-        sub_44E7D0(v37);
+        sub_44E7D0((_DWORD *)self, v37);
         goto LABEL_56;
       }
     }
@@ -190,8 +192,8 @@ LABEL_47:
             v46 = 0.0;
             v47 = 0.0;
             v48 = 0.0;
-            v22 = (_DWORD *)sub_4010C0(v49);
-            sub_41D960((_DWORD *)*v20, v22, &v46);
+            v22 = (_DWORD *)sub_4010C0((int)(uintptr_t)v49);
+            sub_41D960((_DWORD *)*v20, v22, (_DWORD *)&v46);
           }
         }
       }
@@ -231,7 +233,7 @@ LABEL_56:
             v44 = 0.0;
           if ( v43 <= 0.0 )
             v43 = 0.0;
-          sub_44DAD0(*(_DWORD *)(*((_DWORD *)v24 - 1) + 304), COERCE_FLOAT(*(_DWORD *)v24 + 28), v44, SLODWORD(v43));
+          sub_44DAD0(*(int **)(*((_DWORD *)v24 - 1) + 304), (float *)(*(_DWORD *)v24 + 28), v44, SLODWORD(v43));
           v28 = *((_DWORD *)v24 - 1);
           v38 = *(float *)(v28 + 308);
           v45 = *(float *)(v28 + 312);

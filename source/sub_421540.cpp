@@ -19,12 +19,12 @@ _DWORD *__cdecl sub_421540(void **self)
     v2[3] = 6;
     *((_DWORD *)self[11] + 9) = *((_DWORD *)*self + 65);
   }
-  result = self[11];
+  result = (_DWORD *)self[11];
   if ( result )
   {
-    result[10] = self;
-    result = self[11];
-    result[6] = self[5];
+    result[10] = (uint32)(uintptr_t)self;
+    result = (_DWORD *)self[11];
+    result[6] = (uint32)(uintptr_t)self[5];
   }
   return result;
 }

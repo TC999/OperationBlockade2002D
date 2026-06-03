@@ -7,10 +7,10 @@ int __cdecl sub_47C29B(int a1)
   *(_DWORD *)(a1 + 396) = result;
   *(_BYTE *)(result + 16) = 0;
   *(_BYTE *)(result + 17) = 0;
-  *(_DWORD *)result = sub_47C1B7;
-  *(_DWORD *)(result + 4) = sub_47C24D;
-  *(_DWORD *)(result + 8) = sub_47C17A;
-  *(_DWORD *)(result + 12) = sub_47C287;
+  *(_DWORD *)result = (uint32)(size_t)sub_47C1B7;
+  *(_DWORD *)(result + 4) = (uint32)(size_t)sub_47C24D;
+  *(_DWORD *)(result + 8) = (uint32)(size_t)sub_47C17A;
+  *(_DWORD *)(result + 12) = (uint32)(size_t)sub_47C287;
   *(_BYTE *)(result + 20) = 1;
   return result;
 }

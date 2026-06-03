@@ -9,18 +9,23 @@ int __cdecl sub_470F91(int self)
     sub_4885A6(*(LPVOID *)(self + 4));
   result = *(_DWORD *)(self + 28);
   if ( result && *(_DWORD *)(self + 36) )
-    result = sub_4885A6(*(LPVOID *)(self + 28));
+  {
+    sub_4885A6(*(LPVOID *)(self + 28));
+    result = 0;
+  }
   v3 = *(void **)(self + 40);
   if ( v3 )
   {
-    sub_470F91(*(_DWORD *)(self + 40));
-    result = sub_4885A6(v3);
+    sub_470F91((int)(intptr_t)v3);
+    sub_4885A6(v3);
+    result = 0;
   }
   v4 = *(void **)(self + 44);
   if ( v4 )
   {
-    sub_470F91(v4);
-    return sub_4885A6(v4);
+    sub_470F91((int)(intptr_t)v4);
+    sub_4885A6(v4);
+    result = 0;
   }
   return result;
 }

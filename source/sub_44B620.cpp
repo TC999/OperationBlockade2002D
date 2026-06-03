@@ -32,7 +32,7 @@ int __cdecl sub_44B620(int self)
       {
         if ( *(_BYTE *)(self + 330) || v6[4] != 1065353216 || (v13 = 0, v6[5] != 1065353216) )
           v13 = 1;
-        *(_DWORD *)(j + v7 + 264) = sub_41DE10(
+        *(_DWORD *)(j + v7 + 264) = (uint32)sub_41DE10(
                                       *(_DWORD **)(dword_520970 + 120),
                                       (char *)(j + v7 + 4),
                                       *(_BYTE *)(self + 301) != 0 ? 3 : 1,
@@ -52,5 +52,5 @@ int __cdecl sub_44B620(int self)
     }
     ++v12;
   }
-  return sub_4690E0(self);
+  return sub_4690E0((_DWORD *)self);
 }

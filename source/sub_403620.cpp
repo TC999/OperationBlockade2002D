@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00403620) --------------------------------------------------------
 char *__cdecl sub_403620(_DWORD *self, char *String2)
 {
@@ -8,7 +10,7 @@ char *__cdecl sub_403620(_DWORD *self, char *String2)
   int v7; // ecx
   void *v8; // edx
   int v9; // eax
-  int v10; // eax
+  void *v10; // eax
   int v11; // edi
   int v12; // ecx
 
@@ -34,11 +36,11 @@ LABEL_4:
       {
         v11 = self[10];
         v12 = self[11] - v11;
-        self[9] = v10;
-        memset((void *)(v10 + 4 * v11), 0, 4 * v12);
+        self[9] = (uint32)(uintptr_t)v10;
+        memset((char *)v10 + 4 * v11, 0, 4 * v12);
       }
     }
-    *(_DWORD *)(self[9] + 4 * self[10] - 4) = v4;
+    *(_DWORD *)(self[9] + 4 * self[10] - 4) = (uint32)(uintptr_t)(v4);
   }
   else
   {

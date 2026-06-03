@@ -43,7 +43,7 @@ int __cdecl sub_46FB1E(_DWORD *self)
   if ( !v26 )
     return -2147024882;
   v5 = *(_DWORD *)(self[1] + 4176);
-  v6 = operator new(16 * v5);
+  v6 = (uint32 *)(void*)operator new(16 * v5);
   v17 = v6;
   if ( v6 )
   {

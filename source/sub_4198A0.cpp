@@ -10,6 +10,6 @@ char __cdecl sub_4198A0(_DWORD *self, float *a2, float a3, float a4, char a5, ch
   v10[0] = *a2 - *(float *)&self[5 * self[1033] + 29];
   v10[1] = v8;
   v10[2] = v7;
-  sub_46B970(v10, v10);
+  sub_46B970((int)(intptr_t)(v10), (int)(intptr_t)v10);
   return sub_4196F0((int)self, v10, a3, a4, a5, a6);
 }

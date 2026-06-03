@@ -1,4 +1,9 @@
 //----- (00429090) --------------------------------------------------------
+extern char aExe[];
+extern char aExe_0[];
+extern char aDll[];
+extern char aDll_0[];
+extern char aMap[];
 int __cdecl sub_429090(LPSTR lpFilename, int a2)
 {
   HMODULE ModuleHandleA; // eax

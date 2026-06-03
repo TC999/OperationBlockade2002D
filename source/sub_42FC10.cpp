@@ -13,7 +13,7 @@ unsigned int __cdecl sub_42FC10(_DWORD *self, int a2)
   {
     v4 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(dword_520970 + 200) + 20) + 4 * *(_DWORD *)(*(_DWORD *)(a2 + 16) + 6));
     v8 = fabs((double)rand() * 0.000030518509);
-    return sub_42FCC0(v4, LODWORD(v8), -1);
+    return sub_42FCC0((_DWORD *)v4, LODWORD(v8), -1, -1);
   }
   else
   {

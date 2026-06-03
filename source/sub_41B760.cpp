@@ -1,4 +1,21 @@
 //----- (0041B760) --------------------------------------------------------
+extern char aGenericApplica[];
+extern char aNotEnoughVideo[];
+extern char aYourDirect3dHa_0[];
+extern char aThisSampleRequ_0[];
+extern char aAD3dObjectHasA[];
+extern char aCouldNotLoadRe[];
+extern char aCouldNotResetT[];
+extern char aYourDirect3dHa[];
+extern char aThisSampleCann[];
+extern char aNotEnoughMemor[];
+extern char aCouldNotInitia[];
+extern char aNoHardwareAcce[];
+extern char aThisSampleRequ[];
+extern char aThisProgramWil[];
+extern char Caption[];
+extern char aSwitchingToThe[];
+extern char aError[];
 int __cdecl sub_41B760(int a1, int a2)
 {
   const char *v2; // edi

@@ -11,16 +11,16 @@ char __cdecl sub_41C940(int self)
     (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(self + 32) + 8))(*(_DWORD *)(self + 32));
     *(_DWORD *)(self + 32) = 0;
   }
-  LOBYTE(v3) = *(_BYTE *)(self + 2);
+  v3 = (unsigned int)*(_BYTE *)(self + 2);
   *(_BYTE *)(self + 1) = 0;
   if ( (_BYTE)v3 )
   {
     v3 = *(_DWORD *)(self + 300);
     if ( v3 )
     {
-      sf_close(*(_DWORD *)(self + 300));
+      sf_close((SNDFILE*)(uintptr_t)(*(_DWORD *)(self + 300)));
       *(_DWORD *)(self + 300) = 0;
-      LOBYTE(v3) = ++dword_5200DC;
+      v3 = (unsigned int)(++dword_5200DC);
     }
   }
   return v3;

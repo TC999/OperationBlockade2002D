@@ -17,7 +17,7 @@ int __cdecl sub_48D618(int a1)
   {
     if ( v1 != 2 )
       return 1;
-    v2 = sub_48E1BC();
+    v2 = (int)sub_48E1BC();
   }
   if ( !v2 )
   {

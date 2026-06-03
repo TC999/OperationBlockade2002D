@@ -30,8 +30,8 @@ char __cdecl sub_4781F5(int a1)
     v3 = v2[1];
     v1 = a1;
   }
-  LOBYTE(v5) = 0;
-  HIBYTE(v5) = *v4;
+  ((_BYTE*)&(v5))[0] = 0;
+  ((_BYTE*)&(v5))[1] = *v4;
   v6 = v3 - 1;
   v7 = v4 + 1;
   v14 = v5;
@@ -64,8 +64,8 @@ char __cdecl sub_4781F5(int a1)
     return 0;
   }
 LABEL_12:
-  LOBYTE(v10) = 0;
-  HIBYTE(v10) = *v9;
+  ((_BYTE*)&(v10))[0] = 0;
+  ((_BYTE*)&(v10))[1] = *v9;
   v11 = v8 - 1;
   v12 = v9 + 1;
   v16 = v10;

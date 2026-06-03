@@ -23,8 +23,8 @@ void __cdecl sub_40BBF0(int a1, int a2)
     v5 = v4;
     if ( v4 < 0 )
       v5 = 0;
-    v6 = operator new(12 * v5);
-    *(_DWORD *)(a1 + 8) = v6;
+    v6 = (_DWORD *)operator new(12 * v5);
+    *(_DWORD *)(a1 + 8) = (uint32)(uintptr_t)v6;
     v7 = *(_DWORD **)(a2 + 12);
     v8 = v6;
     for ( i = *(_DWORD **)(a2 + 8); i != v7; v8 += 3 )
@@ -38,8 +38,8 @@ void __cdecl sub_40BBF0(int a1, int a2)
       }
       i += 3;
     }
-    *(_DWORD *)(v2 + 12) = v8;
-    *(_DWORD *)(v2 + 16) = v8;
+    *(_DWORD *)(v2 + 12) = (uint32)(uintptr_t)v8;
+    *(_DWORD *)(v2 + 16) = (uint32)(uintptr_t)v8;
     *(_BYTE *)(v2 + 20) = *(_BYTE *)(a2 + 20);
   }
 }

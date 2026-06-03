@@ -84,7 +84,7 @@ char __cdecl sub_48047E(_DWORD *a1, int a2)
   v48 = v3[11];
   if ( v8 )
     goto LABEL_66;
-  v52 = v2 + 80;
+  v52 = (int *)(v2 + 80);
   do
   {
     v50 = *(_WORD **)(a2 + 4 * v53);
@@ -137,10 +137,10 @@ LABEL_16:
       v19 = v18;
       v20 = (v10 >> v11) & i;
       v13 = v51;
-      if ( v20 >= dword_49CC20[v19] )
+      if ( v20 >= ((int*)&dword_49CC20)[v19] )
         v18 = (v10 >> v11) & i;
       else
-        v18 = v20 + dword_49CC60[v19];
+        v18 = v20 + ((int*)&dword_49CC60)[v19];
     }
     if ( *(_BYTE *)(v13 + 48) )
     {
@@ -187,11 +187,11 @@ LABEL_35:
             }
             v11 -= v28;
             v29 = (v10 >> v11) & ((1 << v28) - 1);
-            if ( v29 >= dword_49CC20[v49] )
+            if ( v29 >= ((int*)&dword_49CC20)[v49] )
               v30 = (v10 >> v11) & ((1 << v28) - 1);
             else
-              v30 = v29 + dword_49CC60[v49];
-            v50[dword_49C160[i]] = v30;
+              v30 = v29 + ((int*)&dword_49CC60)[v49];
+            v50[((int*)&dword_49C160)[i]] = v30;
           }
           else
           {
@@ -274,7 +274,7 @@ LABEL_65:
   }
   while ( v53 < a1[79] );
 LABEL_66:
-  *(_DWORD *)v2[5] = v38;
+  *(_DWORD *)v2[5] = (uint32)(uintptr_t)v38;
   *(_DWORD *)(v2[5] + 4) = v39;
   v2[94] = v40;
   --v3[12];

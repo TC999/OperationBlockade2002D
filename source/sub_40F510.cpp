@@ -5,7 +5,7 @@ char *__cdecl sub_40F510(char *self)
   *((_DWORD *)self + 2) = 0;
   *((_DWORD *)self + 3) = 0;
   self[16] = 1;
-  *(_DWORD *)self = &off_499040;
+  *(_DWORD *)self = (int)&off_499040;
   *((_DWORD *)self + 7) = 0;
   *((_DWORD *)self + 8) = 0;
   *((_DWORD *)self + 9) = 0;
@@ -17,7 +17,7 @@ char *__cdecl sub_40F510(char *self)
   self[80] = 0;
   *((_DWORD *)self + 235) = 0;
   *((_DWORD *)self + 236) = 0;
-  *(_DWORD *)self = &off_4991B0;
+  *(_DWORD *)self = (int)&off_4991B0;
   dword_4F5CC4 = (int)self;
   *((_DWORD *)self + 6) = 0;
   *((_DWORD *)self + 23) = 0;

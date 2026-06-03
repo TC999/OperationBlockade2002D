@@ -18,7 +18,7 @@ int *sub_48E1BC()
     if ( !v0 )
       return 0;
   }
-  v1 = VirtualAlloc(0, 0x400000u, 0x2000u, 4u);
+  v1 = (_DWORD *)VirtualAlloc(0, 0x400000u, 0x2000u, 4u);
   v2 = v1;
   if ( !v1 )
   {
@@ -37,14 +37,14 @@ LABEL_19:
     if ( !off_4B2968 )
       off_4B2968 = &off_4B2968;
     if ( !off_4B296C )
-      off_4B296C = &off_4B2968;
+      off_4B296C = (_DWORD *)&off_4B2968;
   }
   else
   {
     *v0 = (int)&off_4B2968;
     v0[1] = (int)off_4B296C;
-    off_4B296C = v0;
-    *(_DWORD *)v0[1] = v0;
+    off_4B296C = (_DWORD *)v0;
+    *(_DWORD *)v0[1] = (uint32)v0;
   }
   v0[5] = (int)(v2 + 0x100000);
   v3 = v0 + 6;
@@ -64,7 +64,7 @@ LABEL_19:
   while ( (unsigned int)v2 < v0[4] + 0x10000 )
   {
     *((_BYTE *)v2 + 248) = -1;
-    *v2 = v2 + 2;
+    *v2 = (uint32)(v2 + 2);
     v2[1] = 240;
     v2 += 1024;
   }

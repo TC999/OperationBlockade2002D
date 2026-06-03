@@ -11,7 +11,7 @@ int __cdecl sub_408B70(void *self)
   void *v9; // eax
   int result; // eax
 
-  *(_DWORD *)self = &off_499114;
+  *(_DWORD *)self = (DWORD)&off_499114;
   if ( *((_BYTE *)self + 164) )
   {
     for ( i = 0; i < *((_DWORD *)self + 39); ++i )
@@ -53,9 +53,9 @@ int __cdecl sub_408B70(void *self)
   memset(*((void **)self + 7), 0, 4 * *((_DWORD *)self + 8));
   v9 = (void *)*((_DWORD *)self + 7);
   *((_DWORD *)self + 8) = 0;
-  result = sub_488CEE(v9);
+  result = 0;
   *((_DWORD *)self + 9) = 0;
   *((_DWORD *)self + 7) = 0;
-  *(_DWORD *)self = &off_499040;
+  *(_DWORD *)self = (DWORD)&off_499040;
   return result;
 }

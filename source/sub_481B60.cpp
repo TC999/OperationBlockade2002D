@@ -38,10 +38,10 @@ const void **__cdecl sub_481B60(unsigned int *a1, int a2, char **a3, int *a4)
       v13 = *v10++;
       if ( v21 > 0 )
       {
-        LOBYTE(v4) = v13;
+        BYTEn(v4, 0) = v13;
         BYTE1(v4) = v13;
         v14 = v4 << 16;
-        LOWORD(v14) = v4;
+        WORDn(v14, 0) = (_WORD)v4;
         v4 = v16;
         memset32(v19, v14, (unsigned int)v21 >> 2);
         memset(&v19[4 * ((unsigned int)v21 >> 2)], v14, v21 & 3);

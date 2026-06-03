@@ -59,7 +59,7 @@ unsigned int __cdecl sub_443B50(int self, int *a2, float a3, float a4, float a5,
       if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
       {
         v14 = a5 * a4;
-        if ( (unsigned __int8)sub_443CD0(v12, (int)&v16, v14, v6) || (v13 = v15, v15 = 0, v13) )
+        if ( (unsigned __int8)sub_443CD0(v12, (int)&v16, (int)v14, v6, 0) || (v13 = v15, v15 = 0, v13) )
           v15 = 1;
         goto LABEL_19;
       }
@@ -69,7 +69,7 @@ unsigned int __cdecl sub_443B50(int self, int *a2, float a3, float a4, float a5,
       v21 = v16;
       v20 = v12;
       v23 = v18;
-      v25 = LOBYTE(v6);
+      v25 = (_BYTE)v6;
       sub_4117D0(dword_4F5CC4, (_DWORD *)0x203, v19, 29, 2, 2000);
       ++v8;
     }

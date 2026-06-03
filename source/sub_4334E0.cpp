@@ -1,4 +1,5 @@
 //----- (004334E0) --------------------------------------------------------
+extern char aSShotDownAS[];
 void __cdecl sub_4334E0(int self, float a2)
 {
   int v3; // esi
@@ -57,7 +58,7 @@ void __cdecl sub_4334E0(int self, float a2)
           v10 = *(__int16 *)(v3 + 17);
           v25[2] = (double)v35 + (double)v35;
           v36 = (double)v8 * 0.0039215689;
-          v11 = sub_417190(v5, v9, v25, v24);
+          v11 = sub_417190(v5, v9, (_DWORD *)v25, v24);
           sub_415930(*(_DWORD *)(self + 468), v10, v36);
           if ( v11 )
           {
@@ -79,8 +80,8 @@ void __cdecl sub_4334E0(int self, float a2)
           if ( v13 )
           {
             v14 = sub_436A90(
-                    *(_DWORD *)(dword_520970 + 224),
-                    aSShotDownAS,
+                    *(_DWORD *)(dword_520970 + 224));
+            sub_421190(v14, aSShotDownAS,
                     v13 + 3,
                     *(_DWORD *)(*(_DWORD *)(self + 428) + 4));
             sub_421190(v14, v22);
@@ -98,7 +99,7 @@ void __cdecl sub_4334E0(int self, float a2)
         v29 = v17;
         v19 = *(_DWORD *)(v3 + 24);
         v30 = v18;
-        LOBYTE(v18) = *(_BYTE *)(v3 + 28);
+        SLOBYTE(v18) = *(_BYTE *)(v3 + 28);
         v31 = v19;
         v32 = v18;
         if ( v12 )
@@ -117,8 +118,8 @@ void __cdecl sub_4334E0(int self, float a2)
         if ( v20 )
         {
           v21 = sub_436A90(
-                  *(_DWORD *)(dword_520970 + 224),
-                  aSShotDownAS,
+                  *(_DWORD *)(dword_520970 + 224));
+          sub_421190(v21, aSShotDownAS,
                   v20 + 3,
                   *(_DWORD *)(*(_DWORD *)(self + 428) + 4));
           sub_421190(v21, v23);

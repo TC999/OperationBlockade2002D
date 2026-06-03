@@ -1,3 +1,5 @@
+extern char asc_4AA198[];
+
 //----- (0043E8F0) --------------------------------------------------------
 char __cdecl sub_43E8F0(_DWORD *self, int a2, int a3)
 {

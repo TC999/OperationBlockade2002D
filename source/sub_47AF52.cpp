@@ -13,7 +13,7 @@ int __cdecl sub_47AF52(int a1, int a2, int a3)
   if ( (*(_DWORD *)(a1 + 92) & 0x300) != 0x300 )
   {
 LABEL_5:
-    result = sub_47ECCF(*(_DWORD *)(a1 + 256), a2, a3);
+    result = sub_47ECCF(*(_DWORD *)(a1 + 256), (_BYTE*)a2, a3);
     *(_DWORD *)(a1 + 256) = result;
   }
   return result;

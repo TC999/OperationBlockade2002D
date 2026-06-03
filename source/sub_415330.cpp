@@ -15,7 +15,7 @@ char __cdecl sub_415330(int self, void *a2)
     for ( i = v5; *i != a2; ++i )
     {
       if ( ++v3 >= v4 )
-        return v3;
+        return (char)v3;
     }
     v7 = v4 - 1;
     *(_DWORD *)(self + 24) = v7;
@@ -24,12 +24,12 @@ char __cdecl sub_415330(int self, void *a2)
       memcpy(&v5[v3], &v5[v3 + 1], 4 * (v7 + 0x3FFFFFFF * v3));
       *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24)) = 0;
     }
-    LOBYTE(v3) = *(_BYTE *)(self + 32);
+    v3 = (unsigned __int8)*(_BYTE *)(self + 32);
     if ( (_BYTE)v3 && a2 )
     {
       nullsub_1(a2);
-      LOBYTE(v3) = sub_4885A6(a2);
+      sub_4885A6(a2);
     }
   }
-  return v3;
+  return (char)v3;
 }

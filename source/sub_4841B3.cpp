@@ -43,12 +43,12 @@ int __cdecl sub_4841B3(_DWORD *a1, int a2, void **a3, int a4)
       if ( v22 > 0 )
       {
         v16 = v8 << 6;
-        v17 = (void **)((char *)v6 + v7);
+        v17 = (_DWORD*)((char *)v6 + v7);
         v23 = v4 + 13;
         do
         {
           v25 = 0;
-          v9 = *v6;
+          v9 = (_BYTE*)*v6;
           v10 = (unsigned __int8 *)(v24 + *v17);
           v15 = *(_DWORD *)(v4[6] + 4 * v24);
           v11 = v16 + *v23;
@@ -71,7 +71,7 @@ int __cdecl sub_4841B3(_DWORD *a1, int a2, void **a3, int a4)
         }
         while ( v24 < v22 );
         v7 = a2 - (_DWORD)a3;
-        LOBYTE(v8) = v14;
+        *((_BYTE *)&v8) = v14;
       }
       result = ((_BYTE)v8 + 1) & 0xF;
       ++v6;

@@ -9,7 +9,7 @@ int __cdecl sub_481529(int a1)
   void *v6; // edi
 
   v1 = (int (__cdecl **)(int *))(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 80);
-  *(_DWORD *)(a1 + 404) = v1;
+  *(_DWORD *)(a1 + 404) = (_DWORD)v1;
   *v1 = sub_481286;
   v1[14] = 0;
   v1[15] = 0;

@@ -38,7 +38,7 @@ int __cdecl sub_436A90(int self)
   int v37; // [esp+2Ch] [ebp-4h]
 
   v2 = 0;
-  v3 = sub_421B20(1) + 2;
+  v3 = sub_421B20((_DWORD *)dword_520970, 1) + 2;
   if ( *(int *)(self + 704) > 0 )
   {
     v33 = 0;
@@ -73,7 +73,7 @@ int __cdecl sub_436A90(int self)
           sub_4213B0(v6);
           sub_4885A6(v34);
         }
-        sub_437540(v4[4]);
+        sub_437540((_DWORD *)self, v4[4]);
         if ( v2 >= *(_DWORD *)(self + 704) )
           break;
         if ( *(_BYTE *)(self + 712) )
@@ -98,7 +98,7 @@ int __cdecl sub_436A90(int self)
   v12 = sub_421980(*(_DWORD *)(dword_520970 + 132), 1, 0x100u);
   v11[2] = (int)v12;
   v12[35] = 1;
-  sub_421430(1092616192, 1092930765, 255, 0);
+  sub_421430((uint32*)(uintptr_t)(v11[2]), 1092616192, 1092930765, 255, 0);
   v13 = v11[2];
   v14 = (double)v11[1];
   v15 = v3 + *v11;
@@ -107,7 +107,7 @@ int __cdecl sub_436A90(int self)
   *(float *)(v13 + 16) = v14;
   *(_DWORD *)(v11[2] + 20) = 1065017672;
   v11[3] = 1092930765;
-  v16 = sub_437450(1);
+  v16 = (int)sub_437450(self, 1);
   v36 = v11[1];
   v35 = *v11;
   v37 = v3 + *v11;
@@ -117,7 +117,7 @@ int __cdecl sub_436A90(int self)
   v28 = (float)v36;
   v26 = (float)v35;
   sub_413090(v16, v26, v28, v30, v32);
-  sub_413240(1092616192, 1092930765, 255, 0);
+  sub_413240((_DWORD *)self, 1092616192, 1092930765, 255, 0);
   v17 = *(_DWORD *)(self + 708);
   v18 = *(_DWORD *)(self + 704) + 1;
   *(_DWORD *)(self + 704) = v18;
@@ -126,7 +126,7 @@ int __cdecl sub_436A90(int self)
     v19 = *(void **)(self + 700);
     v20 = v17 + 8;
     *(_DWORD *)(self + 708) = v20;
-    v21 = sub_488DD7(v19, 4 * v20);
+    v21 = (int)sub_488DD7(v19, 4 * v20);
     if ( v21 )
     {
       v22 = *(_DWORD *)(self + 704);
@@ -135,6 +135,6 @@ int __cdecl sub_436A90(int self)
       memset((void *)(v21 + 4 * v22), 0, 4 * v23);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(self + 700) + 4 * *(_DWORD *)(self + 704) - 4) = v11;
+  *(_DWORD *)(*(_DWORD *)(self + 700) + 4 * *(_DWORD *)(self + 704) - 4) = (int)v11;
   return v11[2];
 }

@@ -1,14 +1,14 @@
 //----- (00430A90) --------------------------------------------------------
 int __cdecl sub_430A90(int self)
 {
-  *(_DWORD *)self = &off_499458;
+  *(_DWORD *)self = (uint32)(uintptr_t)(&off_499458);
   if ( *(_DWORD *)(self + 468) )
   {
-    sub_415910();
+    sub_415910(*(void **)(self + 468));
     *(_DWORD *)(self + 468) = 0;
   }
   sub_4229D0("Deleting airplane '%s'", *(const char **)(*(_DWORD *)(self + 428) + 4));
-  sub_4317B0(2);
+  sub_4317B0((_DWORD *)self, 2);
   if ( *(_DWORD *)(self + 2300) )
     sub_409850(dword_520970, *(_DWORD **)(self + 2300));
   sub_4885A6(*(LPVOID *)(self + 2288));

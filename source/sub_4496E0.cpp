@@ -1,4 +1,13 @@
 //----- (004496E0) --------------------------------------------------------
+static char aChunksfile[] = "ChunksFile";
+static char aChunk[] = "Chunk";
+static char aCustumChunk[] = "CustumChunk";
+static char aMagnitude[] = "Magnitude";
+static char aExplodeup[] = "ExplodeUp";
+static char aScale[] = "Scale";
+extern char aName_0[];
+extern void *off_499A30;
+
 char *__cdecl sub_4496E0(char *self, char *a2)
 {
   char *v2; // ebp
@@ -40,13 +49,13 @@ char *__cdecl sub_4496E0(char *self, char *a2)
   sub_468FF0(self, (int)a2);
   v4 = v3 + 304;
   v34 = 0;
-  v3[304] = (char)a2;
+  v3[304] = (char)(int)a2;
   *((_DWORD *)v3 + 77) = 0;
   *((_DWORD *)v3 + 78) = 0;
   *((_DWORD *)v3 + 79) = 0;
-  LOBYTE(v34) = 1;
-  *(_DWORD *)v3 = &off_499A30;
-  sub_40AFC0(a2, aChunksfile, &String1);
+  *(_BYTE *)&v34 = 1;
+  *(_DWORD *)v3 = (DWORD)(uintptr_t)&off_499A30;
+  sub_40AFC0(a2, aChunksfile, (_DWORD*)&String1);
   v5 = sub_4069C0(*(_DWORD **)(dword_520970 + 128), String1);
   v26 = 0;
   v32 = v5;
@@ -54,40 +63,40 @@ char *__cdecl sub_4496E0(char *self, char *a2)
   {
     do
     {
-      if ( sub_405BE0(v5, v26) )
+      if ( sub_405BE0((_DWORD*)v5, v26) )
       {
-        sub_40ADB0(v2);
-        sub_40AFC0(v2, aName_0, &String1);
+        sub_40ADB0((uint32 *)v2);
+        sub_40AFC0(v2, aName_0, (_DWORD*)&String1);
         v6 = operator new(0x1A4u);
         v31 = (int)v6;
-        LOBYTE(v34) = 2;
+        *(_BYTE *)&v34 = 2;
         if ( v6 )
           v8 = sub_448F70((int)v6, v7, v2, 0);
         else
           v8 = 0;
         v25 = v8;
-        *(_DWORD *)(v8 + 12) = aChunk;
-        LOBYTE(v34) = 1;
+        *(_DWORD *)(v8 + 12) = (int)aChunk;
+  *(_BYTE *)&v34 = 1;
         *(_DWORD *)(v25 + 388) = 1;
         v9 = v25;
         ++*((_DWORD *)v5 + 14);
         v10 = v26;
-        *(_DWORD *)(v9 + 400) = v5;
+        *(_DWORD *)(v9 + 400) = (DWORD)(uintptr_t)v5;
         *(_DWORD *)(v25 + 404) = v10;
-        sub_4063E0(v5, *(_DWORD *)(v25 + 404), v33, (float *)(v25 + 408), 0.0, 0);
-        if ( sub_40ABC0(v2, aScale, 0) )
+        sub_4063E0((_DWORD*)v5, *(_DWORD *)(v25 + 404), v33, (float *)(v25 + 408), 0.0, 0);
+        if ( sub_40ABC0((int)v2, aScale, 0) )
         {
           sub_40AF60(v2, aScale, (float *)&v29);
           *(float *)(v25 + 408) = *(float *)&v29 * *(float *)(v25 + 408);
         }
-        sub_469700(*(_DWORD **)(dword_520970 + 200), v25, aCustumChunk);
-        sub_469160((int)v3, &v25, 0, 0);
+        sub_469700(*(_DWORD **)(dword_520970 + 200), (int)(uintptr_t)v25, aCustumChunk);
+        sub_469160((int)v3, (_DWORD*)&v25, 0, 0);
         v11 = (_DWORD *)*((_DWORD *)v4 + 2);
         v12 = v11;
         if ( (*((_DWORD *)v4 + 3) - (int)v11) >> 2 )
         {
           sub_448B80(v11, v11, v11 + 1);
-          sub_44B480(*((_DWORD **)v4 + 2), (_DWORD *)(1 - ((*((_DWORD *)v4 + 2) - (int)v12) >> 2)), &v25);
+          sub_44B480(*((_DWORD **)v4 + 2), (_DWORD *)(1 - ((*((_DWORD *)v4 + 2) - (int)v12) >> 2)), (_DWORD*)&v25);
           for ( i = (_DWORD *)*((_DWORD *)v4 + 2); v12 != i; ++v12 )
             *v12 = v25;
           *((_DWORD *)v4 + 2) += 4;
@@ -105,22 +114,22 @@ char *__cdecl sub_4496E0(char *self, char *a2)
           v31 = v16;
           if ( v16 < 0 )
             v16 = 0;
-          v17 = operator new(4 * v16);
+          v17 = (_DWORD *)malloc(4 * v16);
           v18 = (_DWORD *)*((_DWORD *)v4 + 1);
           v30 = v17;
           for ( j = v17; v18 != v12; ++j )
             sub_448BE0(j, v18++);
-          sub_44B480(j, (_DWORD *)1, &v25);
+          sub_44B480(j, (_DWORD *)1, (_DWORD*)&v25);
           sub_448B80(v12, *((_DWORD **)v4 + 2), j + 1);
           nullsub_8(*((_DWORD *)v4 + 1), *((_DWORD *)v4 + 2));
           sub_4885A6(*((LPVOID *)v4 + 1));
           v20 = v30;
-          *((_DWORD *)v4 + 3) = &v30[v31];
-          v21 = sub_4481C0(v4);
+          *((_DWORD *)v4 + 3) = (DWORD)(uintptr_t)&v30[v31];
+          v21 = sub_4481C0((_DWORD*)v4);
           v5 = v32;
           v2 = a2;
-          *((_DWORD *)v4 + 1) = v20;
-          *((_DWORD *)v4 + 2) = &v20[v21 + 1];
+          *((_DWORD *)v4 + 1) = (DWORD)(uintptr_t)v20;
+          *((_DWORD *)v4 + 2) = (DWORD)(uintptr_t)&v20[v21 + 1];
         }
         v3 = v27;
       }
@@ -129,11 +138,11 @@ char *__cdecl sub_4496E0(char *self, char *a2)
     }
     while ( v26 < v23 );
   }
-  sub_403B70(v5);
-  sub_40AFC0(v2, aChunksfile, &String1);
-  sub_40B1B0(v2, aMagnitude, (float *)v3 + 73);
+  sub_403B70((_DWORD*)v5);
+  sub_40AFC0(v2, aChunksfile, (_DWORD*)&String1);
+  sub_40B1B0(v2, aMagnitude, (float *)(v3 + 292));
   v3[300] = 0;
-  if ( sub_40ABC0(v2, aExplodeup, 0) )
-    sub_40B130(v2, aExplodeup, v3 + 300);
+  if ( sub_40ABC0((int)v2, aExplodeup, 0) )
+    sub_40B130(v2, aExplodeup, (uint8 *)(v3 + 300));
   return v3;
 }

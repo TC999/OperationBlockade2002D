@@ -26,6 +26,6 @@ _DWORD *__cdecl sub_45CC50(_DWORD *self, _DWORD *a2, _DWORD *a3)
     while ( v3 != v5 );
   }
   result = a2;
-  self[2] = v4;
+  self[2] = (DWORD)(uintptr_t)v4;
   return result;
 }

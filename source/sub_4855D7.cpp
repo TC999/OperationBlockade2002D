@@ -8,7 +8,7 @@ int __cdecl sub_4855D7(int a1, int a2, int a3, int a4, int a5)
   v7 = *(_DWORD *)(a1 + 284) + 128;
   v6 = *(_DWORD *)(a2 + 80);
   if ( byte_4B15AC )
-    return sub_486ABB(a3, v6, v8, a4, a5, v7);
+    return sub_486ABB((int*)a3, (int*)v6, (int*)v8, a4, a5, v7);
   else
-    return sub_486659(a3, v6, v8, a4, a5, v7);
+    return sub_486659((__int16*)a3, (__int16*)v6, (int*)v8, a4, a5, v7);
 }

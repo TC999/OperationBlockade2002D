@@ -1,3 +1,8 @@
+extern char aYouSalvagedAmm[];
+extern char aBoat[];
+extern char aInfantry[];
+extern char aTank[];
+
 //----- (0045A420) --------------------------------------------------------
 int __cdecl sub_45A420(float *self, int a2, int a3, char a4, int a5)
 {
@@ -85,7 +90,7 @@ int __cdecl sub_45A420(float *self, int a2, int a3, char a4, int a5)
         else
           v22 = fabs((double)rand() * 0.000030518509) * (v33 - v39) + v39;
         v34 = (double)*(int *)(*((_DWORD *)v6 + 19) + v20) * v22;
-        v23 = (double)(*(_DWORD *)(*((_DWORD *)v6 + 19) + v20) - sub_4629B0(v18));
+        v23 = (double)(*(_DWORD *)(*((_DWORD *)v6 + 19) + v20) - sub_4629B0(v18, 0));
         if ( v34 < v23 )
           v23 = v34;
         v20 += 4;

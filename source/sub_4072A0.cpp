@@ -6,11 +6,11 @@ char __cdecl sub_4072A0(_DWORD *self, int a2, int a3, char a4)
   int v7; // esi
   int v8; // ebx
 
-  v5 = sub_407190(self, a2, 1);
+  v5 = (_BYTE *)sub_407190(self, a2, 1);
   sub_407120(self, a2);
   v5[70] = 1;
   *((_DWORD *)v5 + 18) = a3;
-  LOBYTE(v6) = a4;
+  v6 = a4;
   if ( a4 )
   {
     v6 = self[5];
@@ -23,7 +23,7 @@ char __cdecl sub_4072A0(_DWORD *self, int a2, int a3, char a4)
         v6 = *(_DWORD *)(self[7] + 4);
         if ( *(_DWORD *)(v6 + v8 + 28) < a2 )
           break;
-        sub_4072A0(v7, a3, 0);
+        sub_4072A0(self, v7, a3, 0);
         v6 = self[5];
         ++v7;
         v8 += 172;

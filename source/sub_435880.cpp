@@ -8,7 +8,7 @@ int __cdecl sub_435880(LPVOID *self)
   void *v6; // eax
   int result; // eax
 
-  *self = &off_4994B8;
+  *self = (LPVOID)&off_4994B8;
   sub_4885A6(self[179]);
   if ( *((_BYTE *)self + 712) )
   {
@@ -27,15 +27,16 @@ int __cdecl sub_435880(LPVOID *self)
     {
       v5 = (void (__cdecl ***)(_DWORD, int))*((_DWORD *)self[6] + j);
       if ( v5 )
-        (**v5)(v5, 1);
+        (**v5)((_DWORD)(uintptr_t)v5, 1);
     }
   }
   memset(self[6], 0, 4 * (_DWORD)self[7]);
   v6 = self[6];
   self[7] = 0;
-  result = sub_488CEE(v6);
+  sub_488CEE(v6);
+  result = 0;
   self[8] = 0;
   self[6] = 0;
-  *self = &off_499040;
+  *self = (LPVOID)&off_499040;
   return result;
 }

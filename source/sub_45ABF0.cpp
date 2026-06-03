@@ -1,3 +1,5 @@
+extern char aCancelmission[];
+
 //----- (0045ABF0) --------------------------------------------------------
 int __cdecl sub_45ABF0(int self)
 {
@@ -28,14 +30,14 @@ int __cdecl sub_45ABF0(int self)
   sub_443080(*(_DWORD **)(dword_520970 + 212));
   sub_455E30(*(_DWORD **)(dword_520970 + 216));
   sub_42FDD0(*(_DWORD **)(dword_520970 + 208));
-  sub_465F20(*(_DWORD *)(dword_520970 + 220));
-  sub_45F080(*(_DWORD *)(dword_520970 + 280));
+  sub_465F20(*(_DWORD **)(dword_520970 + 220));
+  sub_45F080(*(_DWORD **)(dword_520970 + 280));
   sub_4134A0(*(_DWORD **)(dword_520970 + 116));
   sub_44E870(*(_DWORD **)(dword_520970 + 240));
   sub_4151F0(*(_DWORD *)(dword_520970 + 244));
   sub_436D70(*(_DWORD **)(dword_520970 + 224));
-  sub_45AF60(self);
-  sub_4630B0(*(_DWORD *)(dword_520970 + 280));
+  sub_45AF60((_DWORD *)self);
+  sub_4630B0(*(_DWORD **)(dword_520970 + 280));
   *(_BYTE *)(*(_DWORD *)(dword_520970 + 280) + 11796) = 0;
   *(_BYTE *)(*(_DWORD *)(dword_520970 + 224) + 40) = 0;
   v5 = (LPVOID *)sub_450BF0((_DWORD *)dword_520970, 1, 4.0);

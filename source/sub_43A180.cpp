@@ -8,7 +8,7 @@ _DWORD *__cdecl sub_43A180(_DWORD *self)
   self[2] = 0;
   self[3] = 0;
   *((_BYTE *)self + 16) = 1;
-  *self = &off_49955C;
+  *self = (int)&off_49955C;
   self[6] = 0;
   self[7] = 0;
   self[8] = 0;

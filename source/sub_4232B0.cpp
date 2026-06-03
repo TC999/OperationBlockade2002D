@@ -10,7 +10,7 @@ int sub_4232B0()
   int result; // eax
 
   v0 = 0;
-  v1 = dword_52012C;
+  v1 = (int *)&dword_52012C;
   do
   {
     v2 = sub_423310(v0, 8);

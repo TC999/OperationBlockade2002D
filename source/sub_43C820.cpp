@@ -13,7 +13,7 @@ int __cdecl sub_43C820(LPVOID **self)
     if ( v4 )
     {
       sub_41C700(self[11]);
-      result = sub_4885A6(v4);
+      result = 0;
     }
     self[11] = 0;
   }

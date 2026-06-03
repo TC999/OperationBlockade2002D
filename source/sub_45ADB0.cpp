@@ -24,8 +24,8 @@ void __cdecl sub_45ADB0(_DWORD *self)
   v2 = 0;
   if ( self[19] && !byte_520A10 )
   {
-    sub_44E8F0(*(_DWORD *)(dword_520970 + 240));
-    sub_44B460(*(_DWORD *)(dword_520970 + 276));
+    sub_44E8F0((_DWORD **)*(int *)(dword_520970 + 240));
+    sub_44B460((_DWORD **)*(int *)(dword_520970 + 276));
     v3 = *(_DWORD *)(self[19] + 364);
     if ( v3 )
       (*(void (__cdecl **)(int))(*(_DWORD *)v3 + 4))(v3);

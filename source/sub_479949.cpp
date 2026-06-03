@@ -21,13 +21,13 @@ char __cdecl sub_479949(int *a1, _BYTE *a2, unsigned __int8 *a3)
   unsigned int k; // [esp+28h] [ebp+8h]
   unsigned int v23; // [esp+28h] [ebp+8h]
 
-  LOBYTE(i) = *((_BYTE *)a1 + 8);
+  *(_BYTE*)&(i) = *((_BYTE *)a1 + 8);
   if ( (_BYTE)i != 3 )
   {
     v21 = 0;
     v5 = *a1;
     v6 = (i & 2) == 0;
-    LOBYTE(i) = (_BYTE)a3;
+    *(_BYTE*)&(i) = (_BYTE)a3;
     if ( v6 )
     {
       v7 = *((unsigned __int8 *)a1 + 9) - a3[3];
@@ -47,7 +47,7 @@ char __cdecl sub_479949(int *a1, _BYTE *a2, unsigned __int8 *a3)
     {
       i = *((unsigned __int8 *)a1 + 9) - a3[4];
       v19[v9] = i;
-      LOBYTE(v7) = v19[0];
+      *(_BYTE*)&(v7) = v19[0];
       ++v9;
     }
     v10 = 0;
@@ -63,7 +63,7 @@ char __cdecl sub_479949(int *a1, _BYTE *a2, unsigned __int8 *a3)
         else
         {
           *(_DWORD *)i = 0;
-          LOBYTE(v7) = v19[0];
+          *(_BYTE*)&(v7) = v19[0];
         }
         ++v10;
       }
@@ -83,7 +83,7 @@ char __cdecl sub_479949(int *a1, _BYTE *a2, unsigned __int8 *a3)
         {
           v15 = a1[1];
           v16 = a2;
-          for ( LOBYTE(i) = (15 >> v7) | (240 >> v7) & 0xF0; v15; --v15 )
+          for ( *(_BYTE*)&(i) = (15 >> v7) | (240 >> v7) & 0xF0; v15; --v15 )
           {
             *v16 = i & (*v16 >> v7);
             ++v16;
@@ -91,7 +91,7 @@ char __cdecl sub_479949(int *a1, _BYTE *a2, unsigned __int8 *a3)
         }
         else
         {
-          LOBYTE(i) = *((_BYTE *)a1 + 9) - 8;
+          *(_BYTE*)&(i) = *((_BYTE *)a1 + 9) - 8;
           if ( *((_BYTE *)a1 + 9) == 8 )
           {
             v13 = a2;
@@ -104,14 +104,14 @@ char __cdecl sub_479949(int *a1, _BYTE *a2, unsigned __int8 *a3)
           }
           else
           {
-            LOBYTE(i) = *((_BYTE *)a1 + 9) - 16;
+            *(_BYTE*)&(i) = *((_BYTE *)a1 + 9) - 16;
             if ( *((_BYTE *)a1 + 9) == 16 )
             {
               v11 = a2;
               v20 = v9 * v5;
-              for ( k = 0; k < v20; LOBYTE(i) = k )
+              for ( k = 0; k < v20; *(_BYTE*)&(i) = k )
               {
-                LOWORD(i) = (unsigned __int16)(v11[1] + (*v11 << 8)) >> LOWORD(v19[k % v9]);
+                *(_WORD*)&(i) = (unsigned __int16)(v11[1] + (*v11 << 8)) >> LOWORD(v19[k % v9]);
                 *v11 = BYTE1(i);
                 v12 = v11 + 1;
                 *v12 = i;

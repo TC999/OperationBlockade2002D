@@ -34,22 +34,22 @@ unsigned int __cdecl sub_469160(int self, _DWORD *a2, const char *a3, const char
       v9 = 0;
     if ( v9 >= v8 )
     {
-      if ( v8 < sub_448730(self + 276) )
+      if ( v8 < sub_448730((_DWORD *)(self + 276)) )
         sub_448750((_DWORD *)(self + 276), (_DWORD *)(*(_DWORD *)(self + 280) + 16 * v8), *(_DWORD **)(self + 284));
     }
     else
     {
       v20 = *(char **)(self + 284);
-      v10 = sub_448730(self + 276);
+      v10 = sub_448730((_DWORD *)(self + 276));
       sub_419CF0((char *)(self + 276), v20, v8 - v10, v21);
     }
     v11 = 16 * v6;
-    *(_DWORD *)(*(_DWORD *)(self + 280) + v11) = a2;
+    *(_DWORD *)(*(_DWORD *)(self + 280) + v11) = (uint32)(uintptr_t)a2;
     **(_DWORD **)(*(_DWORD *)(self + 280) + v11) = 0;
     *(_DWORD *)(*(_DWORD *)(self + 280) + v11 + 4) = 0;
-    *(_DWORD *)(*(_DWORD *)(self + 280) + v11 + 8) = operator new(0x80u);
+    *(_DWORD *)(*(_DWORD *)(self + 280) + v11 + 8) = (uint32)(uintptr_t)operator new(0x80u);
     strcpy(*(char **)(*(_DWORD *)(self + 280) + v11 + 8), a3);
-    *(_DWORD *)(*(_DWORD *)(self + 280) + v11 + 12) = operator new(0x80u);
+    *(_DWORD *)(*(_DWORD *)(self + 280) + v11 + 12) = (uint32)(uintptr_t)operator new(0x80u);
     result = strlen(a4) + 1;
     qmemcpy(*(void **)(*(_DWORD *)(self + 280) + v11 + 12), a4, result);
   }

@@ -4,6 +4,6 @@ _DWORD *__cdecl sub_47C287(int a1)
   _DWORD *result; // eax
 
   result = *(_DWORD **)(a1 + 396);
-  *result = sub_47C1B7;
+  *result = (uint32)(size_t)sub_47C1B7;
   return result;
 }

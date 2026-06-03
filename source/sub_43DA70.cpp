@@ -1,3 +1,6 @@
+extern char aNone[];
+extern char aHealth_0[];
+
 //----- (0043DA70) --------------------------------------------------------
 int __cdecl sub_43DA70(_DWORD *self)
 {

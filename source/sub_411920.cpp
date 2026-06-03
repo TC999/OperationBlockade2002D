@@ -48,7 +48,7 @@ LABEL_8:
           *(_DWORD *)(self + 136) = v5[2077];
         v10 = v5;
         v5 = (int *)v5[2077];
-        sub_4119F0(v10);
+        sub_4119F0(*v10);
         sub_4885A6(v10);
         InterlockedDecrement((volatile LONG *)(self + 100));
       }

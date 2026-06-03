@@ -14,6 +14,6 @@ char *__cdecl sub_4383D0(char *self, int a2)
   *((_DWORD *)result + 32) = 0;
   *((_DWORD *)result + 34) = 1065353216;
   if ( a2 < 12 )
-    return (char *)sub_438460(a2, 0.0, 0.0, 0.0);
+    return (char *)sub_438460((_DWORD **)self, a2, 0.0, 0.0, 0.0);
   return result;
 }

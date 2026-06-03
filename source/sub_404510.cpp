@@ -1,3 +1,8 @@
+#include "common.h"
+
+extern "C" void __cdecl __eh_vector_ctor_iterator(void *, unsigned int, int, void (__cdecl *)(void *), void (__cdecl *)(void *));
+extern "C" void __cdecl __eh_vector_dtor_iterator(void *, unsigned int, int, void (__cdecl *)(void *));
+
 //----- (00404510) --------------------------------------------------------
 bool __cdecl sub_404510(int self)
 {
@@ -27,9 +32,9 @@ bool __cdecl sub_404510(int self)
     v4 = (int *)operator new(172 * v2 + 4);
     if ( v4 )
     {
-      v5 = v4 + 1;
+      v5 = (_DWORD *)(v4 + 1);
       *v4 = v2;
-      `eh vector constructor iterator'(v4 + 1, 0xACu, v2, sub_4046A0, sub_403A90);
+      __eh_vector_ctor_iterator(v4 + 1, 0xACu, v2, (void (__cdecl *)(void *))sub_4046A0, (void (__cdecl *)(void *))sub_403A90);
       v6 = v5;
     }
     else
@@ -37,7 +42,7 @@ bool __cdecl sub_404510(int self)
       v6 = 0;
     }
     v7 = *(_DWORD *)(self + 28);
-    *(_DWORD *)(self + 32) = v6;
+    *(_DWORD *)(self + 32) = (uint32)(uintptr_t)v6;
     memset(v6, 0, 172 * v7);
     v3 = sub_4046C0((_DWORD *)self, -1, 0);
   }
@@ -48,7 +53,7 @@ bool __cdecl sub_404510(int self)
     if ( v8 )
     {
       v9 = v8 - 4;
-      `eh vector destructor iterator'(v8, 0xACu, *((_DWORD *)v8 - 1), sub_403A90);
+      __eh_vector_dtor_iterator(v8, 0xACu, *((_DWORD *)v8 - 1), (void (__cdecl *)(void *))sub_403A90);
       sub_4885A6(v9);
     }
   }
@@ -59,15 +64,15 @@ bool __cdecl sub_404510(int self)
   v10 = *(_DWORD *)(self + 52);
   v11 = *(void **)(self + 44);
   *(_DWORD *)(self + 32) = 0;
-  v12 = sub_488DD7(v11, 4 * v10 + 4);
+  v12 = (_DWORD *)sub_488DD7(v11, 4 * v10 + 4);
   v13 = *(_DWORD *)(self + 52);
   v14 = *(_DWORD *)(self + 36);
-  *(_DWORD *)(self + 44) = v12;
+  *(_DWORD *)(self + 44) = (uint32)(uintptr_t)v12;
   v12[v13] = v14;
-  v15 = sub_488DD7(*(LPVOID *)(self + 48), 4 * *(_DWORD *)(self + 52) + 4);
+  v15 = (_DWORD *)sub_488DD7(*(LPVOID *)(self + 48), 4 * *(_DWORD *)(self + 52) + 4);
   v16 = *(_DWORD *)(self + 52);
   v17 = *(_DWORD *)(self + 40);
-  *(_DWORD *)(self + 48) = v15;
+  *(_DWORD *)(self + 48) = (uint32)(uintptr_t)v15;
   v15[v16] = v17;
   if ( !v3 )
     return 0;

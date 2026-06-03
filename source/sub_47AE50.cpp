@@ -7,7 +7,7 @@ int (__cdecl *__cdecl sub_47AE50(_DWORD *a1, int a2, int (__cdecl *a3)(int, int)
   v3 = a1[19] == 0;
   a1[21] = a2;
   result = a3;
-  a1[20] = a3;
+  a1[20] = (uint32)(size_t)a3;
   if ( !v3 )
   {
     a1[19] = 0;

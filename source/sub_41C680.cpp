@@ -6,7 +6,7 @@ LPDIRECTSOUND sub_41C680()
   result = ppDS;
   if ( ppDS )
   {
-    result = (LPDIRECTSOUND)ppDS->lpVtbl->Release(ppDS);
+    result = (LPDIRECTSOUND)ppDS->Release();
     ppDS = 0;
   }
   return result;

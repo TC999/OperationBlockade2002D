@@ -11,7 +11,7 @@ int __cdecl sub_47D414(_DWORD *a1)
     return -2;
   v2 = *(_DWORD *)(v1 + 20);
   if ( v2 )
-    sub_484F66(v2, a1);
+    sub_484F66((uint32*)v2, (int)a1);
   ((void (__cdecl *)(_DWORD, _DWORD))a1[9])(a1[10], a1[7]);
   a1[7] = 0;
   return 0;

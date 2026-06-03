@@ -1,3 +1,5 @@
+extern char aTelegram[];
+
 //----- (00462090) --------------------------------------------------------
 void __cdecl sub_462090(int self, float a2)
 {
@@ -41,7 +43,7 @@ LABEL_10:
     *(_BYTE *)(self + 11796) = 1;
     sub_4261C0(*(_DWORD **)(dword_520970 + 232), aTelegram, 1);
     if ( *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
-      sub_463110(self);
+      sub_463110((uint32*)(uintptr_t)(self));
     else
       ++*(_DWORD *)(self + 504);
   }

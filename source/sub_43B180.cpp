@@ -1,3 +1,6 @@
+extern char FileName[];
+extern char aSps[];
+
 //----- (0043B180) --------------------------------------------------------
 int __cdecl sub_43B180(_DWORD *self)
 {
@@ -13,8 +16,8 @@ int __cdecl sub_43B180(_DWORD *self)
   char String1[260]; // [esp+24h] [ebp-208h] BYREF
   char Str[260]; // [esp+128h] [ebp-104h] BYREF
 
-  sub_43B160();
-  v2 = (void *)_findfirst(FileName, (int)v11);
+  sub_43B160((int)self);
+  v2 = (void *)_findfirst(FileName, (struct _finddata_t *)v11);
   if ( v2 != (void *)-1 )
   {
     do
@@ -22,17 +25,17 @@ int __cdecl sub_43B180(_DWORD *self)
       if ( _strcmpi(String1, aSps) )
         ++self[12];
     }
-    while ( !_findnext(v2, (int)v11) );
+    while ( !_findnext((intptr_t)v2, (struct _finddata_t *)v11) );
   }
   _findclose((intptr_t)v2);
-  self[11] = operator new(4 * self[12]);
+  self[11] = (int)operator new(4 * self[12]);
   for ( i = 0; i < self[12]; ++i )
   {
-    *(_DWORD *)(self[11] + 4 * i) = operator new(0x18u);
+    *(_DWORD *)(self[11] + 4 * i) = (int)operator new(0x18u);
     v4 = *(void **)(self[11] + 4 * i);
     memset(v4, 0, 0x18u);
   }
-  v5 = (void *)_findfirst(FileName, (int)v11);
+  v5 = (void *)_findfirst(FileName, (struct _finddata_t *)v11);
   v10 = v5;
   if ( v5 != (void *)-1 )
   {
@@ -51,7 +54,7 @@ int __cdecl sub_43B180(_DWORD *self)
         v5 = v10;
       }
     }
-    while ( !_findnext(v5, (int)v11) );
+    while ( !_findnext((intptr_t)v5, (struct _finddata_t *)v11) );
   }
   return _findclose((intptr_t)v5);
 }

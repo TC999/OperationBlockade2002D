@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004081A0) --------------------------------------------------------
 double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
 {
@@ -23,7 +25,7 @@ double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
   float v24; // [esp+30h] [ebp-FCh]
   int v25; // [esp+34h] [ebp-F8h]
   _DWORD *v26; // [esp+38h] [ebp-F4h] BYREF
-  int *v27; // [esp+3Ch] [ebp-F0h]
+  _DWORD *v27; // [esp+3Ch] [ebp-F0h]
   int v28; // [esp+40h] [ebp-ECh] BYREF
   float v29; // [esp+44h] [ebp-E8h]
   float v30; // [esp+48h] [ebp-E4h]
@@ -48,8 +50,8 @@ double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
   int v49; // [esp+98h] [ebp-94h] BYREF
   const void *v50; // [esp+9Ch] [ebp-90h]
   _DWORD v51[3]; // [esp+A0h] [ebp-8Ch] BYREF
-  _BYTE v52[64]; // [esp+ACh] [ebp-80h] BYREF
-  _BYTE v53[64]; // [esp+ECh] [ebp-40h] BYREF
+  float v52[16]; // [esp+ACh] [ebp-80h] BYREF
+  float v53[16]; // [esp+ECh] [ebp-40h] BYREF
 
   v33 = a3;
   v42 = a3;
@@ -94,15 +96,15 @@ double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
   {
     v50 = v8 + 4;
     qmemcpy(v52, v8 + 4, sizeof(v52));
-    sub_46B9FD(v52, 0, v52);
+    sub_46B9FD(v52, (float *)0, v52);
     v28 = v33;
     v29 = *(float *)&v34;
     v30 = v35;
     v51[0] = v42;
     v51[1] = v43;
     *(float *)&v51[2] = v44;
-    sub_46C5C5(&v28, &v28, v52);
-    sub_46C5C5(v51, v51, v52);
+    sub_46C5C5((float *)&v28, (float *)&v28, v52);
+    sub_46C5C5((float *)v51, (float *)v51, v52);
     (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int *, _DWORD))(**(_DWORD **)(v5 + 44) + 44))(
       *(_DWORD *)(v5 + 44),
       0,
@@ -135,10 +137,10 @@ double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
         v45 = *v27;
         v46 = v27[1];
         v47 = v27[2];
-        if ( (unsigned __int8)sub_40C910(&v28, v51, &v39, &v36, &v45, v31) )
+        if ( (unsigned __int8)sub_40C910((float *)&v28, (float *)v51, (int)&v39, (int)&v36, (int)&v45, (float *)v31) )
         {
           qmemcpy(v53, v50, sizeof(v53));
-          sub_46C5C5(v31, v31, v53);
+          sub_46C5C5((float *)v31, (float *)v31, v53);
           if ( v24 <= (double)v32 )
             v24 = v32;
         }
@@ -149,9 +151,9 @@ double __cdecl sub_4081A0(int self, int a2, int a3, int a4)
         v17 = v26;
       }
     }
-    *(float *)dword_520A58 = (double)v22 + *(float *)dword_520A58;
+    *(float *)dword_520A58 = (float)((double)v22 + *(float *)dword_520A58);
     (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(v5 + 44) + 48))(*(_DWORD *)(v5 + 44));
-    (*(void (__stdcall **)(int))(**(_DWORD **)(v5 + 36) + 48))(v20);
+    (*(void (__stdcall **)(int))(**(_DWORD **)(v5 + 36) + 48))(*(_DWORD *)(v5 + 36));
   }
   return v24;
 }

@@ -42,7 +42,7 @@ int __cdecl sub_46F1AB(_DWORD *self)
       v17 += 2;
       v11 = v9 + v10 + 2;
       v12 = v16++;
-      *v12 = v11 >> 2;
+      *v12 = (unsigned __int8)(v11 >> 2);
       v7 = v15 + 2;
     }
     v1 = &v14[*(_DWORD *)(self[1] + 4168)];

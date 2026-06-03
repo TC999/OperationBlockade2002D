@@ -1,4 +1,76 @@
 //----- (004519E0) --------------------------------------------------------
+extern char aStartedLoading_1[];
+extern char aFinishedLoadin_2[];
+extern char aAniminfo[];
+extern char aTroopaIni[];
+extern char aTroopbIni[];
+extern char aTroopcIni[];
+extern char aGunGuy[];
+extern char aMortarGuy[];
+extern char aInvalidSoldier[];
+extern char aScoringgroup[];
+extern char aWalkspeed[];
+extern char aHealth[];
+extern char aSize_0[];
+extern char aOffsetz[];
+extern char aTimetillsetup[];
+extern char aTimetillfire[];
+extern char aActivetime[];
+extern char aInactivetime[];
+extern char aTimetillgrenad[];
+extern char aAiming[];
+extern char aFiring[];
+extern char aUnaiming[];
+extern char aThrowinggrenad[];
+extern char aDyingfromshot[];
+extern char aDyingfromshotl[];
+extern char aDyingfromshotr[];
+extern char aDyingfromexplo[];
+extern char aReloadingandfi[];
+extern char aIdlingwhileset[];
+extern char aDyingwhilesetu[];
+extern char aDyingwhilesetu_0[];
+extern char aDyingwhilestan[];
+extern char aDyingwhilestan_0[];
+extern char aShotframe[];
+extern char aShotoffset[];
+extern char aShotbullettype[];
+extern char aBullet[];
+extern char aGrenadebullett[];
+extern char aGrenadespinrat[];
+extern char aGrenadeairtime[];
+extern char aGrenadeframe[];
+extern char aGrenadeoffset[];
+extern char aMortarbulletty[];
+extern char aMortarairtime[];
+extern char aMortarfirefram[];
+extern char aMortaroffset[];
+extern char aScreamsoundeff[];
+extern char aSoftthudsounde[];
+extern char aHardthudsounde[];
+extern char aFireeffect[];
+extern char aWalkingleft[];
+extern char aWalkingfastlef[];
+extern char aWalkingright[];
+extern char aWalkingfastrig[];
+extern char aSettingupmorta[];
+extern char aUnitvalue[];
+extern char aRange[];
+extern char String2[];
+extern char aSoundEffect[];
+extern char aEffect[];
+extern int dword_520970;
+extern void* off_499AE0;
+void *__cdecl sub_468FF0(void *self, int a2);
+unsigned int __cdecl sub_469160(int self, _DWORD *a2, const char *a3, const char *a4);
+void __cdecl sub_455730(_DWORD *self);
+void __cdecl sub_44E9B0(LPVOID *self);
+static void _eh_vector_constructor_iterator_(void *ptr, unsigned int size, int count, void (__cdecl *ctor)(void *), void (__cdecl *dtor)(void *))
+{
+  for (int i = 0; i < count; i++)
+    ctor((char *)ptr + i * size);
+}
+
 char *__cdecl sub_4519E0(char *self, char *String1)
 {
   char *v2; // edi
@@ -332,28 +404,28 @@ char *__cdecl sub_4519E0(char *self, char *String1)
   v324[1] = (int)self;
   sub_468FF0(self, (int)String1);
   v329 = 0;
-  `eh vector constructor iterator'(self + 372, 0x10u, 20, sub_455730, (void (__cdecl *)(void *))sub_44E9B0);
-  v4 = (char)String1;
+  _eh_vector_constructor_iterator_(self + 372, 0x10u, 20, (void (__cdecl *)(void *))sub_455730, (void (__cdecl *)(void *))sub_44E9B0);
+  v4 = (char)(uintptr_t)String1;
   *((_DWORD *)self + 175) = 0;
   self[696] = v4;
   *((_DWORD *)self + 176) = 0;
   *((_DWORD *)self + 177) = 0;
-  v5 = (char)String1;
+  v5 = (char)(uintptr_t)String1;
   *((_DWORD *)self + 179) = 0;
   self[712] = v5;
   *((_DWORD *)self + 180) = 0;
   *((_DWORD *)self + 181) = 0;
-  v6 = (char)String1;
+  v6 = (char)(uintptr_t)String1;
   *((_DWORD *)self + 183) = 0;
   self[728] = v6;
   *((_DWORD *)self + 184) = 0;
   *((_DWORD *)self + 185) = 0;
-  LOBYTE(v329) = 4;
-  *(_DWORD *)self = &off_499AE0;
+  *(_BYTE *)&v329 = 4;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499AE0;
   sub_4229D0(aStartedLoading_1);
   sub_40AF00(v2, aAniminfo, (char **)self + 73);
   v7 = *((_DWORD *)self + 73);
-  if ( !dword_5216EC[v7] )
+  if ( !((int*)&dword_5216EC)[v7] )
   {
     if ( v7 )
     {
@@ -366,23 +438,23 @@ char *__cdecl sub_4519E0(char *self, char *String1)
     {
       v318 = aTroopaIni;
     }
-    sub_40A120(v318 != 0, "animInfo must be 0, 1, or 2, see %s : %s", *((const char **)self + 1), v2 + 16);
+    sub_40A120(v318 != 0, (char *)"animInfo must be 0, 1, or 2, see %s : %s", *((const char **)self + 1), v2 + 16);
     v8 = (char **)operator new(0x14u);
     v324[0] = (int)v8;
-    LOBYTE(v329) = 5;
+    *(_BYTE *)&v329 = 5;
     if ( v8 )
       v9 = sub_451390(v8, v318);
     else
       v9 = 0;
     v10 = *((_DWORD *)self + 73);
-    LOBYTE(v329) = 4;
-    dword_5216EC[v10] = (int)v9;
+    *(_BYTE *)&v329 = 4;
+    ((int*)&dword_5216EC)[v10] = (int)v9;
   }
-  sub_40AFC0(v2, String2, &String1);
+  sub_40AFC0(v2, String2, (_DWORD*)&String1);
   if ( _strcmpi(String1, aGunGuy) )
   {
     if ( _strcmpi(String1, aMortarGuy) )
-      sub_40A120(0, "%s, see %s : %s", aInvalidSoldier, *((const char **)self + 1), v2 + 16);
+      sub_40A120(0, (char *)"%s, see %s : %s", aInvalidSoldier, *((const char **)self + 1), v2 + 16);
     else
       *((_DWORD *)self + 74) = 1;
   }
@@ -391,14 +463,14 @@ char *__cdecl sub_4519E0(char *self, char *String1)
     *((_DWORD *)self + 74) = 0;
   }
   *((_DWORD *)self + 75) = 1065353216;
-  if ( sub_40ABC0(v2, aUnitvalue, 0) )
+  if ( sub_40ABC0((int)v2, aUnitvalue, 0) )
     sub_40AF60(v2, aUnitvalue, (float *)self + 75);
-  sub_40AFC0(v2, aScoringgroup, &String1);
+  sub_40AFC0(v2, aScoringgroup, (_DWORD*)&String1);
   v11 = sub_462480(*(_DWORD **)(dword_520970 + 280), String1);
   v12 = String1;
   v13 = (const char *)*((_DWORD *)self + 1);
-  *((_DWORD *)self + 76) = v11;
-  sub_4282E0(v11 != 0, "Infantry type %s: couldn't find scoring groups %s", v13, v12);
+  *((_DWORD *)self + 76) = (uint32)(uintptr_t)v11;
+  sub_4282E0(v11 != 0, (char *)"Infantry type %s: couldn't find scoring groups %s", v13, v12);
   sub_40AF60(v2, aWalkspeed, (float *)self + 77);
   sub_40AF60(v2, aHealth, (float *)self + 78);
   sub_40AF60(v2, aSize_0, (float *)self + 79);
@@ -414,7 +486,7 @@ char *__cdecl sub_4519E0(char *self, char *String1)
     }
     else
     {
-      sub_40A120(0, "%s, see %s : %s", aInvalidSoldier, *((const char **)self + 1), v2 + 16);
+      sub_40A120(0, (char *)"%s, see %s : %s", aInvalidSoldier, *((const char **)self + 1), v2 + 16);
     }
   }
   else
@@ -430,21 +502,21 @@ char *__cdecl sub_4519E0(char *self, char *String1)
     {
       v138 = v2 + 16;
       v305 = (const char *)*((_DWORD *)self + 1);
-      v139 = sub_40ABC0(v2, aWalkingleft, 0);
-      sub_40A120(v139, "no strips found for %s, see %s : %s", aWalkingleft, v305, v2 + 16);
+      v139 = sub_40ABC0((int)v2, aWalkingleft, 0);
+      sub_40A120(v139, (char *)"no strips found for %s, see %s : %s", aWalkingleft, v305, v2 + 16);
       if ( sub_40AD80(aWalkingleft) )
       {
-        while ( sub_40ABC0(v2, aWalkingleft, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingleft, 0) )
         {
-          sub_40B310(v2, aWalkingleft, &v316, (const char **)&String1);
+          sub_40B310(v2, aWalkingleft, (_DWORD*)&v316, (const char **)&String1);
           v140 = *((_DWORD *)self + 73);
           v141 = 0;
           i = String1;
-          v142 = dword_5216EC[v140];
+          v142 = ((int*)&dword_5216EC)[v140];
           if ( *(int *)(v142 + 4) <= 0 )
           {
 LABEL_244:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v141 = -1;
           }
           else
@@ -461,29 +533,28 @@ LABEL_244:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v141 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v141 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingleft,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v141;
-          sub_4638A0((int)(self + 388), *((char **)self + 99), 1u, &v325);
+          sub_4638A0((int)(self + 388), *((char **)self + 99), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aWalkingleft, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingleft, 0) )
         {
-          sub_40AFC0(v2, aWalkingleft, &String1);
+sub_40AFC0(v2, aWalkingleft, (_DWORD*)&String1);
           v144 = *((_DWORD *)self + 73);
           v145 = 0;
           i = String1;
-          v146 = dword_5216EC[v144];
+          v146 = ((int*)&dword_5216EC)[v144];
           if ( *(int *)(v146 + 4) <= 0 )
           {
 LABEL_252:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v145 = -1;
           }
           else
@@ -500,32 +571,31 @@ LABEL_252:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v145 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v145 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingleft,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v145;
-          sub_4638A0((int)(self + 388), *((char **)self + 99), 1u, &v325);
+          sub_4638A0((int)(self + 388), *((char **)self + 99), 1u, (_DWORD*)&v325);
         }
       }
       v306 = (const char *)*((_DWORD *)self + 1);
-      v148 = sub_40ABC0(v2, aWalkingfastlef, 0);
-      sub_40A120(v148, "no strips found for %s, see %s : %s", aWalkingfastlef, v306, v138);
+      v148 = sub_40ABC0((int)v2, aWalkingfastlef, 0);
+      sub_40A120(v148, (char *)"no strips found for %s, see %s : %s", aWalkingfastlef, v306, v138);
       if ( sub_40AD80(aWalkingfastlef) )
       {
-        while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingfastlef, 0) )
         {
-          sub_40B310(v2, aWalkingfastlef, &v316, (const char **)&String1);
+          sub_40B310(v2, aWalkingfastlef, (_DWORD*)&v316, (const char **)&String1);
           v149 = *((_DWORD *)self + 73);
           v150 = 0;
           i = String1;
-          v151 = dword_5216EC[v149];
+          v151 = ((int*)&dword_5216EC)[v149];
           if ( *(int *)(v151 + 4) <= 0 )
           {
 LABEL_260:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v150 = -1;
           }
           else
@@ -542,29 +612,28 @@ LABEL_260:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v150 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v150 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingfastlef,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v150;
-          sub_4638A0((int)(self + 404), *((char **)self + 103), 1u, &v325);
+          sub_4638A0((int)(self + 404), *((char **)self + 103), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingfastlef, 0) )
         {
-          sub_40AFC0(v2, aWalkingfastlef, &String1);
+sub_40AFC0(v2, aWalkingfastlef, (_DWORD*)&String1);
           v153 = *((_DWORD *)self + 73);
           v154 = 0;
           i = String1;
-          v155 = dword_5216EC[v153];
+          v155 = ((int*)&dword_5216EC)[v153];
           if ( *(int *)(v155 + 4) <= 0 )
           {
 LABEL_268:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v154 = -1;
           }
           else
@@ -581,32 +650,31 @@ LABEL_268:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v154 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v154 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingfastlef,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v154;
-          sub_4638A0((int)(self + 404), *((char **)self + 103), 1u, &v325);
+          sub_4638A0((int)(self + 404), *((char **)self + 103), 1u, (_DWORD*)&v325);
         }
       }
       v307 = (const char *)*((_DWORD *)self + 1);
-      v157 = sub_40ABC0(v2, aWalkingright, 0);
-      sub_40A120(v157, "no strips found for %s, see %s : %s", aWalkingright, v307, v138);
+      v157 = sub_40ABC0((int)v2, aWalkingright, 0);
+      sub_40A120(v157, (char *)"no strips found for %s, see %s : %s", aWalkingright, v307, v138);
       if ( sub_40AD80(aWalkingright) )
       {
-        while ( sub_40ABC0(v2, aWalkingright, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingright, 0) )
         {
-          sub_40B310(v2, aWalkingright, &v316, (const char **)&String1);
+          sub_40B310(v2, aWalkingright, (_DWORD*)&v316, (const char **)&String1);
           v158 = *((_DWORD *)self + 73);
           v159 = 0;
           i = String1;
-          v160 = dword_5216EC[v158];
+          v160 = ((int*)&dword_5216EC)[v158];
           if ( *(int *)(v160 + 4) <= 0 )
           {
 LABEL_276:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v159 = -1;
           }
           else
@@ -623,29 +691,28 @@ LABEL_276:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v159 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v159 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingright,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v159;
-          sub_4638A0((int)(self + 420), *((char **)self + 107), 1u, &v325);
+          sub_4638A0((int)(self + 420), *((char **)self + 107), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aWalkingright, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingright, 0) )
         {
-          sub_40AFC0(v2, aWalkingright, &String1);
+sub_40AFC0(v2, aWalkingright, (_DWORD*)&String1);
           v162 = *((_DWORD *)self + 73);
           v163 = 0;
           i = String1;
-          v164 = dword_5216EC[v162];
+          v164 = ((int*)&dword_5216EC)[v162];
           if ( *(int *)(v164 + 4) <= 0 )
           {
 LABEL_284:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v163 = -1;
           }
           else
@@ -662,32 +729,31 @@ LABEL_284:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v163 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v163 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingright,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v163;
-          sub_4638A0((int)(self + 420), *((char **)self + 107), 1u, &v325);
+          sub_4638A0((int)(self + 420), *((char **)self + 107), 1u, (_DWORD*)&v325);
         }
       }
       v308 = (const char *)*((_DWORD *)self + 1);
-      v166 = sub_40ABC0(v2, aWalkingfastrig, 0);
-      sub_40A120(v166, "no strips found for %s, see %s : %s", aWalkingfastrig, v308, v138);
+      v166 = sub_40ABC0((int)v2, aWalkingfastrig, 0);
+      sub_40A120(v166, (char *)"no strips found for %s, see %s : %s", aWalkingfastrig, v308, v138);
       if ( sub_40AD80(aWalkingfastrig) )
       {
-        while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingfastrig, 0) )
         {
-          sub_40B310(v2, aWalkingfastrig, &v316, (const char **)&String1);
+          sub_40B310(v2, aWalkingfastrig, (_DWORD*)&v316, (const char **)&String1);
           v167 = *((_DWORD *)self + 73);
           v168 = 0;
           i = String1;
-          v169 = dword_5216EC[v167];
+          v169 = ((int*)&dword_5216EC)[v167];
           if ( *(int *)(v169 + 4) <= 0 )
           {
 LABEL_292:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v168 = -1;
           }
           else
@@ -704,29 +770,28 @@ LABEL_292:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v168 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v168 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingfastrig,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v168;
-          sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, &v325);
+          sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
+        while ( sub_40ABC0((int)v2, aWalkingfastrig, 0) )
         {
-          sub_40AFC0(v2, aWalkingfastrig, &String1);
+          sub_40AFC0(v2, aWalkingfastrig, (_DWORD*)&String1);
           v171 = *((_DWORD *)self + 73);
           v172 = 0;
           i = String1;
-          v173 = dword_5216EC[v171];
+          v173 = ((int*)&dword_5216EC)[v171];
           if ( *(int *)(v173 + 4) <= 0 )
           {
 LABEL_300:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v172 = -1;
           }
           else
@@ -743,32 +808,31 @@ LABEL_300:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v172 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v172 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aWalkingfastrig,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v172;
-          sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, &v325);
+          sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, (_DWORD*)&v325);
         }
       }
       v309 = (const char *)*((_DWORD *)self + 1);
-      v175 = sub_40ABC0(v2, aSettingupmorta, 0);
-      sub_40A120(v175, "no strips found for %s, see %s : %s", aSettingupmorta, v309, v138);
+      v175 = sub_40ABC0((int)v2, aSettingupmorta, 0);
+      sub_40A120(v175, (char *)"no strips found for %s, see %s : %s", aSettingupmorta, v309, v138);
       if ( sub_40AD80(aSettingupmorta) )
       {
-        while ( sub_40ABC0(v2, aSettingupmorta, 0) )
+        while ( sub_40ABC0((int)v2, aSettingupmorta, 0) )
         {
-          sub_40B310(v2, aSettingupmorta, &v316, (const char **)&String1);
+          sub_40B310(v2, aSettingupmorta, (_DWORD*)&v316, (const char **)&String1);
           v176 = *((_DWORD *)self + 73);
           v177 = 0;
           i = String1;
-          v178 = dword_5216EC[v176];
+          v178 = ((int*)&dword_5216EC)[v176];
           if ( *(int *)(v178 + 4) <= 0 )
           {
 LABEL_308:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v177 = -1;
           }
           else
@@ -785,29 +849,28 @@ LABEL_308:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v177 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v177 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aSettingupmorta,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v177;
-          sub_4638A0((int)(self + 516), *((char **)self + 131), 1u, &v325);
+          sub_4638A0((int)(self + 516), *((char **)self + 131), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aSettingupmorta, 0) )
+        while ( sub_40ABC0((int)v2, aSettingupmorta, 0) )
         {
-          sub_40AFC0(v2, aSettingupmorta, &String1);
+          sub_40AFC0(v2, aSettingupmorta, (_DWORD*)&String1);
           v180 = *((_DWORD *)self + 73);
           v181 = 0;
           i = String1;
-          v182 = dword_5216EC[v180];
+          v182 = ((int*)&dword_5216EC)[v180];
           if ( *(int *)(v182 + 4) <= 0 )
           {
 LABEL_316:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v181 = -1;
           }
           else
@@ -824,32 +887,31 @@ LABEL_316:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v181 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v181 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aSettingupmorta,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v181;
-          sub_4638A0((int)(self + 516), *((char **)self + 131), 1u, &v325);
+          sub_4638A0((int)(self + 516), *((char **)self + 131), 1u, (_DWORD*)&v325);
         }
       }
       v310 = (const char *)*((_DWORD *)self + 1);
-      v184 = sub_40ABC0(v2, aReloadingandfi, 0);
-      sub_40A120(v184, "no strips found for %s, see %s : %s", aReloadingandfi, v310, v138);
+      v184 = sub_40ABC0((int)v2, aReloadingandfi, 0);
+      sub_40A120(v184, (char *)"no strips found for %s, see %s : %s", aReloadingandfi, v310, v138);
       if ( sub_40AD80(aReloadingandfi) )
       {
-        while ( sub_40ABC0(v2, aReloadingandfi, 0) )
+        while ( sub_40ABC0((int)v2, aReloadingandfi, 0) )
         {
-          sub_40B310(v2, aReloadingandfi, &v316, (const char **)&String1);
+          sub_40B310(v2, aReloadingandfi, (_DWORD*)&v316, (const char **)&String1);
           v185 = *((_DWORD *)self + 73);
           v186 = 0;
           i = String1;
-          v187 = dword_5216EC[v185];
+          v187 = ((int*)&dword_5216EC)[v185];
           if ( *(int *)(v187 + 4) <= 0 )
           {
 LABEL_324:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v186 = -1;
           }
           else
@@ -866,29 +928,28 @@ LABEL_324:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v186 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v186 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aReloadingandfi,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v186;
-          sub_4638A0((int)(self + 532), *((char **)self + 135), 1u, &v325);
+          sub_4638A0((int)(self + 532), *((char **)self + 135), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aReloadingandfi, 0) )
+        while ( sub_40ABC0((int)v2, aReloadingandfi, 0) )
         {
-          sub_40AFC0(v2, aReloadingandfi, &String1);
+          sub_40AFC0(v2, aReloadingandfi, (_DWORD*)&String1);
           v189 = *((_DWORD *)self + 73);
           v190 = 0;
           i = String1;
-          v191 = dword_5216EC[v189];
+          v191 = ((int*)&dword_5216EC)[v189];
           if ( *(int *)(v191 + 4) <= 0 )
           {
 LABEL_332:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v190 = -1;
           }
           else
@@ -905,32 +966,31 @@ LABEL_332:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v190 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v190 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aReloadingandfi,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v190;
-          sub_4638A0((int)(self + 532), *((char **)self + 135), 1u, &v325);
+          sub_4638A0((int)(self + 532), *((char **)self + 135), 1u, (_DWORD*)&v325);
         }
       }
       v311 = (const char *)*((_DWORD *)self + 1);
-      v193 = sub_40ABC0(v2, aIdlingwhileset, 0);
-      sub_40A120(v193, "no strips found for %s, see %s : %s", aIdlingwhileset, v311, v138);
+      v193 = sub_40ABC0((int)v2, aIdlingwhileset, 0);
+      sub_40A120(v193, (char *)"no strips found for %s, see %s : %s", aIdlingwhileset, v311, v138);
       if ( sub_40AD80(aIdlingwhileset) )
       {
-        while ( sub_40ABC0(v2, aIdlingwhileset, 0) )
+        while ( sub_40ABC0((int)v2, aIdlingwhileset, 0) )
         {
-          sub_40B310(v2, aIdlingwhileset, &v316, (const char **)&String1);
+          sub_40B310(v2, aIdlingwhileset, (_DWORD*)&v316, (const char **)&String1);
           v194 = *((_DWORD *)self + 73);
           v195 = 0;
           i = String1;
-          v196 = dword_5216EC[v194];
+          v196 = ((int*)&dword_5216EC)[v194];
           if ( *(int *)(v196 + 4) <= 0 )
           {
 LABEL_340:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v195 = -1;
           }
           else
@@ -947,29 +1007,28 @@ LABEL_340:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v195 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v195 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aIdlingwhileset,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v195;
-          sub_4638A0((int)(self + 548), *((char **)self + 139), 1u, &v325);
+          sub_4638A0((int)(self + 548), *((char **)self + 139), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aIdlingwhileset, 0) )
+        while ( sub_40ABC0((int)v2, aIdlingwhileset, 0) )
         {
-          sub_40AFC0(v2, aIdlingwhileset, &String1);
+          sub_40AFC0(v2, aIdlingwhileset, (_DWORD*)&String1);
           v198 = *((_DWORD *)self + 73);
           v199 = 0;
           i = String1;
-          v200 = dword_5216EC[v198];
+          v200 = ((int*)&dword_5216EC)[v198];
           if ( *(int *)(v200 + 4) <= 0 )
           {
 LABEL_348:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v199 = -1;
           }
           else
@@ -986,32 +1045,31 @@ LABEL_348:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v199 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v199 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aIdlingwhileset,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v199;
-          sub_4638A0((int)(self + 548), *((char **)self + 139), 1u, &v325);
+          sub_4638A0((int)(self + 548), *((char **)self + 139), 1u, (_DWORD*)&v325);
         }
       }
       v312 = (const char *)*((_DWORD *)self + 1);
-      v202 = sub_40ABC0(v2, aDyingwhilesetu, 0);
-      sub_40A120(v202, "no strips found for %s, see %s : %s", aDyingwhilesetu, v312, v138);
+      v202 = sub_40ABC0((int)v2, aDyingwhilesetu, 0);
+      sub_40A120(v202, (char *)"no strips found for %s, see %s : %s", aDyingwhilesetu, v312, v138);
       if ( sub_40AD80(aDyingwhilesetu) )
       {
-        while ( sub_40ABC0(v2, aDyingwhilesetu, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilesetu, 0) )
         {
-          sub_40B310(v2, aDyingwhilesetu, &v316, (const char **)&String1);
+          sub_40B310(v2, aDyingwhilesetu, (_DWORD*)&v316, (const char **)&String1);
           v203 = *((_DWORD *)self + 73);
           v204 = 0;
           i = String1;
-          v205 = dword_5216EC[v203];
+          v205 = ((int*)&dword_5216EC)[v203];
           if ( *(int *)(v205 + 4) <= 0 )
           {
 LABEL_356:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v204 = -1;
           }
           else
@@ -1028,29 +1086,28 @@ LABEL_356:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v204 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v204 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilesetu,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v204;
-          sub_4638A0((int)(self + 628), *((char **)self + 159), 1u, &v325);
+          sub_4638A0((int)(self + 628), *((char **)self + 159), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aDyingwhilesetu, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilesetu, 0) )
         {
-          sub_40AFC0(v2, aDyingwhilesetu, &String1);
+          sub_40AFC0(v2, aDyingwhilesetu, (_DWORD*)&String1);
           v207 = *((_DWORD *)self + 73);
           v208 = 0;
           i = String1;
-          v209 = dword_5216EC[v207];
+          v209 = ((int*)&dword_5216EC)[v207];
           if ( *(int *)(v209 + 4) <= 0 )
           {
 LABEL_364:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v208 = -1;
           }
           else
@@ -1067,32 +1124,31 @@ LABEL_364:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v208 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v208 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilesetu,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v208;
-          sub_4638A0((int)(self + 628), *((char **)self + 159), 1u, &v325);
+          sub_4638A0((int)(self + 628), *((char **)self + 159), 1u, (_DWORD*)&v325);
         }
       }
       v313 = (const char *)*((_DWORD *)self + 1);
-      v211 = sub_40ABC0(v2, aDyingwhilesetu_0, 0);
-      sub_40A120(v211, "no strips found for %s, see %s : %s", aDyingwhilesetu_0, v313, v138);
+      v211 = sub_40ABC0((int)v2, aDyingwhilesetu_0, 0);
+      sub_40A120(v211, (char *)"no strips found for %s, see %s : %s", aDyingwhilesetu_0, v313, v138);
       if ( sub_40AD80(aDyingwhilesetu_0) )
       {
-        while ( sub_40ABC0(v2, aDyingwhilesetu_0, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilesetu_0, 0) )
         {
-          sub_40B310(v2, aDyingwhilesetu_0, &v316, (const char **)&String1);
+          sub_40B310(v2, aDyingwhilesetu_0, (_DWORD*)&v316, (const char **)&String1);
           v212 = *((_DWORD *)self + 73);
           v213 = 0;
           i = String1;
-          v214 = dword_5216EC[v212];
+          v214 = ((int*)&dword_5216EC)[v212];
           if ( *(int *)(v214 + 4) <= 0 )
           {
 LABEL_372:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v213 = -1;
           }
           else
@@ -1109,29 +1165,28 @@ LABEL_372:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v213 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v213 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilesetu_0,
             *((const char **)self + 1),
             v2 + 16);
           v325 = v316;
           v326 = v213;
-          sub_4638A0((int)(self + 644), *((char **)self + 163), 1u, &v325);
+          sub_4638A0((int)(self + 644), *((char **)self + 163), 1u, (_DWORD*)&v325);
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aDyingwhilesetu_0, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilesetu_0, 0) )
         {
-          sub_40AFC0(v2, aDyingwhilesetu_0, &String1);
+          sub_40AFC0(v2, aDyingwhilesetu_0, (_DWORD*)&String1);
           v216 = *((_DWORD *)self + 73);
           v217 = 0;
           i = String1;
-          v218 = dword_5216EC[v216];
+          v218 = ((int*)&dword_5216EC)[v216];
           if ( *(int *)(v218 + 4) <= 0 )
           {
 LABEL_380:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v217 = -1;
           }
           else
@@ -1148,32 +1203,31 @@ LABEL_380:
           }
           v138 = v2 + 16;
           sub_40A120(
-            v217 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v217 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilesetu_0,
             *((const char **)self + 1),
             v2 + 16);
           v325 = 3;
           v326 = v217;
-          sub_4638A0((int)(self + 644), *((char **)self + 163), 1u, &v325);
+          sub_4638A0((int)(self + 644), *((char **)self + 163), 1u, (_DWORD*)&v325);
         }
       }
       v314 = (const char *)*((_DWORD *)self + 1);
-      v220 = sub_40ABC0(v2, aDyingwhilestan, 0);
-      sub_40A120(v220, "no strips found for %s, see %s : %s", aDyingwhilestan, v314, v138);
+      v220 = sub_40ABC0((int)v2, aDyingwhilestan, 0);
+      sub_40A120(v220, (char *)"no strips found for %s, see %s : %s", aDyingwhilestan, v314, v138);
       if ( sub_40AD80(aDyingwhilestan) )
       {
-        while ( sub_40ABC0(v2, aDyingwhilestan, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilestan, 0) )
         {
-          sub_40B310(v2, aDyingwhilestan, &v316, (const char **)&String1);
+          sub_40B310(v2, aDyingwhilestan, (_DWORD*)&v316, (const char **)&String1);
           v221 = *((_DWORD *)self + 73);
           v222 = 0;
           i = String1;
-          v223 = dword_5216EC[v221];
+          v223 = ((int*)&dword_5216EC)[v221];
           if ( *(int *)(v223 + 4) <= 0 )
           {
 LABEL_388:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v222 = -1;
           }
           else
@@ -1189,8 +1243,7 @@ LABEL_388:
             }
           }
           sub_40A120(
-            v222 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v222 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilestan,
             *((const char **)self + 1),
             v2 + 16);
@@ -1201,8 +1254,8 @@ LABEL_388:
           v317 = self + 668;
           if ( v226 )
           {
-            sub_458C00(v225, v225, v225 + 2);
-            sub_458C40(*(_DWORD **)v317, (_DWORD *)(1 - ((*(_DWORD *)v317 - (int)v225) >> 3)), &v325);
+            sub_458C00((_DWORD*)v225, (_DWORD*)v225, (_DWORD*)v225 + 2);
+            sub_458C40(*(_DWORD **)v317, (_DWORD *)(1 - ((*(_DWORD *)v317 - (int)v225) >> 3)), (_DWORD*)&v325);
             v234 = v225;
             v235 = *(int **)v317;
             if ( v225 != *(int **)v317 )
@@ -1234,32 +1287,32 @@ LABEL_388:
             v230 = (char *)operator new(8 * (_DWORD)v229);
             v231 = (_DWORD *)*((_DWORD *)self + 166);
             i = v230;
-            v320 = (char *)sub_458C00(v231, v225, v230);
-            sub_458C40(v320, (_DWORD *)1, &v325);
-            sub_458C00(v225, *(_DWORD **)v317, (_DWORD *)v320 + 2);
+            v320 = (char *)sub_458C00(v231, (_DWORD*)v225, (_DWORD*)v230);
+            sub_458C40((_DWORD*)v320, (_DWORD *)1, (_DWORD*)&v325);
+            sub_458C00((_DWORD*)v225, *(_DWORD **)v317, (_DWORD *)v320 + 2);
             nullsub_8(*((_DWORD *)self + 166), *(_DWORD *)v317);
             sub_4885A6(*((LPVOID *)self + 166));
-            *((_DWORD *)self + 168) = &i[8 * (_DWORD)v318];
+            *((_DWORD *)self + 168) = (DWORD)(uintptr_t)&i[8 * (_DWORD)v318];
             v232 = sub_4589E0((_DWORD *)self + 165);
             v233 = i;
-            *(_DWORD *)v317 = &i[8 * v232 + 8];
-            *((_DWORD *)self + 166) = v233;
+            *(_DWORD *)v317 = (DWORD)(uintptr_t)&i[8 * v232 + 8];
+            *((_DWORD *)self + 166) = (DWORD)(uintptr_t)v233;
           }
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aDyingwhilestan, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilestan, 0) )
         {
-          sub_40AFC0(v2, aDyingwhilestan, &String1);
+          sub_40AFC0(v2, aDyingwhilestan, (_DWORD*)&String1);
           v238 = *((_DWORD *)self + 73);
           v239 = 0;
           i = String1;
-          v240 = dword_5216EC[v238];
+          v240 = ((int*)&dword_5216EC)[v238];
           if ( *(int *)(v240 + 4) <= 0 )
           {
 LABEL_407:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v239 = -1;
           }
           else
@@ -1275,8 +1328,7 @@ LABEL_407:
             }
           }
           sub_40A120(
-            v239 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v239 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilestan,
             *((const char **)self + 1),
             v2 + 16);
@@ -1288,8 +1340,8 @@ LABEL_407:
           v244 = v243;
           if ( (v242 - (int)v243) >> 3 )
           {
-            sub_458C00(v243, v243, v243 + 2);
-            sub_458C40(*(_DWORD **)v317, (_DWORD *)(1 - ((*(_DWORD *)v317 - (int)v244) >> 3)), &v325);
+            sub_458C00((_DWORD*)v243, (_DWORD*)v243, (_DWORD*)v243 + 2);
+            sub_458C40(*(_DWORD **)v317, (_DWORD *)(1 - ((*(_DWORD *)v317 - (int)v244) >> 3)), (_DWORD*)&v325);
             v250 = v244;
             v251 = *(int **)v317;
             if ( v244 != *(int **)v317 )
@@ -1320,35 +1372,35 @@ LABEL_407:
             if ( v228 )
               v247 = 0;
             i = (char *)operator new(8 * (_DWORD)v247);
-            v320 = (char *)sub_458C00(*((_DWORD **)self + 166), v244, i);
-            sub_458C40(v320, (_DWORD *)1, &v325);
-            sub_458C00(v244, *(_DWORD **)v317, (_DWORD *)v320 + 2);
+            v320 = (char *)sub_458C00(*((_DWORD **)self + 166), (_DWORD*)v244, (_DWORD*)i);
+            sub_458C40((_DWORD*)v320, (_DWORD *)1, (_DWORD*)&v325);
+            sub_458C00((_DWORD*)v244, *(_DWORD **)v317, (_DWORD *)v320 + 2);
             nullsub_8(*((_DWORD *)self + 166), *(_DWORD *)v317);
             sub_4885A6(*((LPVOID *)self + 166));
-            *((_DWORD *)self + 168) = &i[8 * (_DWORD)v318];
+            *((_DWORD *)self + 168) = (DWORD)(uintptr_t)&i[8 * (_DWORD)v318];
             v248 = sub_4589E0((_DWORD *)self + 165);
             v249 = i;
-            *(_DWORD *)v317 = &i[8 * v248 + 8];
-            *((_DWORD *)self + 166) = v249;
+            *(_DWORD *)v317 = (DWORD)(uintptr_t)&i[8 * v248 + 8];
+            *((_DWORD *)self + 166) = (DWORD)(uintptr_t)v249;
           }
         }
       }
       v315 = (const char *)*((_DWORD *)self + 1);
-      v254 = sub_40ABC0(v2, aDyingwhilestan_0, 0);
-      sub_40A120(v254, "no strips found for %s, see %s : %s", aDyingwhilestan_0, v315, v2 + 16);
+      v254 = sub_40ABC0((int)v2, aDyingwhilestan_0, 0);
+      sub_40A120(v254, (char *)"no strips found for %s, see %s : %s", aDyingwhilestan_0, v315, v2 + 16);
       if ( sub_40AD80(aDyingwhilestan_0) )
       {
-        while ( sub_40ABC0(v2, aDyingwhilestan_0, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilestan_0, 0) )
         {
-          sub_40B310(v2, aDyingwhilestan_0, &v316, (const char **)&String1);
+          sub_40B310(v2, aDyingwhilestan_0, (_DWORD*)&v316, (const char **)&String1);
           v255 = *((_DWORD *)self + 73);
           i = String1;
           v256 = 0;
-          v257 = dword_5216EC[v255];
+          v257 = ((int*)&dword_5216EC)[v255];
           if ( *(int *)(v257 + 4) <= 0 )
           {
 LABEL_427:
-            sub_40A120(0, "Infantry animation strip not found: %s", i);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
             v256 = -1;
           }
           else
@@ -1364,8 +1416,7 @@ LABEL_427:
             }
           }
           sub_40A120(
-            v256 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v256 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilestan_0,
             *((const char **)self + 1),
             v2 + 16);
@@ -1377,8 +1428,8 @@ LABEL_427:
           v261 = v260;
           if ( (v259 - (int)v260) >> 3 )
           {
-            sub_458C00(v260, v260, v260 + 2);
-            sub_458C40(*(_DWORD **)v317, (_DWORD *)(1 - ((*(_DWORD *)v317 - (int)v261) >> 3)), &v325);
+            sub_458C00((_DWORD*)v260, (_DWORD*)v260, (_DWORD*)v260 + 2);
+            sub_458C40(*(_DWORD **)v317, (_DWORD *)(1 - ((*(_DWORD *)v317 - (int)v261) >> 3)), (_DWORD*)&v325);
             v268 = *(int **)v317;
             if ( v261 != *(int **)v317 )
             {
@@ -1411,34 +1462,34 @@ LABEL_427:
             v318 = v320;
             for ( i = (char *)*((_DWORD *)self + 170); i != (char *)v261; i += 8 )
             {
-              sub_458CD0(v318, i);
+              sub_458CD0((_DWORD*)v318, (_DWORD*)i);
               v318 += 8;
             }
-            sub_458CD0(v318, &v325);
-            sub_458C00(v261, *(_DWORD **)v317, (_DWORD *)v318 + 2);
+            sub_458CD0((_DWORD*)v318, (_DWORD*)&v325);
+            sub_458C00((_DWORD*)v261, *(_DWORD **)v317, (_DWORD *)v318 + 2);
             nullsub_8(*((_DWORD *)self + 170), *(_DWORD *)v317);
             sub_4885A6(*((LPVOID *)self + 170));
-            *((_DWORD *)self + 172) = &v320[8 * v323];
+            *((_DWORD *)self + 172) = (DWORD)(uintptr_t)&v320[8 * v323];
             v266 = sub_4589E0((_DWORD *)self + 169);
             v267 = v320;
-            *(_DWORD *)v317 = &v320[8 * v266 + 8];
-            *((_DWORD *)self + 170) = v267;
+            *(_DWORD *)v317 = (DWORD)(uintptr_t)&v320[8 * v266 + 8];
+            *((_DWORD *)self + 170) = (DWORD)(uintptr_t)v267;
           }
         }
       }
       else
       {
-        while ( sub_40ABC0(v2, aDyingwhilestan_0, 0) )
+        while ( sub_40ABC0((int)v2, aDyingwhilestan_0, 0) )
         {
-          sub_40AFC0(v2, aDyingwhilestan_0, &String1);
+          sub_40AFC0(v2, aDyingwhilestan_0, (_DWORD*)&String1);
           v271 = *((_DWORD *)self + 73);
           v272 = 0;
           v320 = String1;
-          v273 = dword_5216EC[v271];
+          v273 = ((int*)&dword_5216EC)[v271];
           if ( *(int *)(v273 + 4) <= 0 )
           {
 LABEL_451:
-            sub_40A120(0, "Infantry animation strip not found: %s", v320);
+            sub_40A120(0, (char *)"Infantry animation strip not found: %s", v320);
             v272 = -1;
           }
           else
@@ -1454,8 +1505,7 @@ LABEL_451:
             }
           }
           sub_40A120(
-            v272 != -1,
-            "failed to find strip for %s, see %s : %s",
+            v272 != -1, (char *)"failed to find strip for %s, see %s : %s",
             aDyingwhilestan_0,
             *((const char **)self + 1),
             v2 + 16);
@@ -1466,8 +1516,8 @@ LABEL_451:
           if ( (*((_DWORD *)self + 172) - (int)v275) >> 3 )
           {
             sub_458C00(v275, v275, v275 + 2);
-            sub_458C40(*((_DWORD **)self + 171), (_DWORD *)(1 - ((*((_DWORD *)self + 171) - (int)v276) >> 3)), &v325);
-            sub_458C70(v276, *((_DWORD **)self + 171), &v325);
+            sub_458C40(*((_DWORD **)self + 171), (_DWORD *)(1 - ((*((_DWORD *)self + 171) - (int)v276) >> 3)), (_DWORD*)&v325);
+            sub_458C70(v276, *((_DWORD **)self + 171), (_DWORD*)&v325);
             *((_DWORD *)self + 171) += 8;
           }
           else
@@ -1502,25 +1552,25 @@ LABEL_451:
               while ( v281 != v276 );
               v318 = v282;
             }
-            sub_458C40(v318, (_DWORD *)1, &v325);
+            sub_458C40((_DWORD*)v318, (_DWORD *)1, (_DWORD*)&v325);
             sub_458C00(v276, *((_DWORD **)self + 171), (_DWORD *)v318 + 2);
             nullsub_8(*((_DWORD *)self + 170), *((_DWORD *)self + 171));
             sub_458BF0(*((void **)self + 170), (*((_DWORD *)self + 172) - *((_DWORD *)self + 170)) >> 3);
             v283 = v323;
             *((_DWORD *)self + 172) = v323 + 8 * (_DWORD)v320;
             *((_DWORD *)self + 171) = v283 + 8 * sub_4589E0((_DWORD *)self + 169) + 8;
-            *((_DWORD *)self + 170) = v283;
+            *((_DWORD *)self + 170) = (DWORD)(uintptr_t)v283;
           }
           sub_458BE0((_DWORD *)self + 169);
         }
       }
       v284 = (_DWORD *)sub_458A00((_DWORD *)self + 97, 0);
       sub_458A10((int *)self + 93, v284);
-      sub_40AFC0(v2, aMortarbulletty, v324);
+      sub_40AFC0(v2, aMortarbulletty, (_DWORD*)v324);
       sub_469160((int)self, (_DWORD *)self + 194, (const char *)v324[0], aBullet);
       *((_DWORD *)self + 195) = 1082130432;
       *((_DWORD *)self + 196) = 1082130432;
-      if ( sub_40ABC0(v2, aMortarairtime, 0) )
+      if ( sub_40ABC0((int)v2, aMortarairtime, 0) )
         sub_40B1B0(v2, aMortarairtime, (float *)self + 195);
       sub_40AF00(v2, aMortarfirefram, (char **)self + 197);
       sub_40B1F0(v2, aMortaroffset, (float *)self + 198, (float *)self + 199);
@@ -1530,22 +1580,22 @@ LABEL_451:
   {
     v16 = v2 + 16;
     v293 = (const char *)*((_DWORD *)self + 1);
-    v17 = sub_40ABC0(v2, aWalkingleft, 0);
-    sub_40A120(v17, "no strips found for %s, see %s : %s", aWalkingleft, v293, v2 + 16);
+    v17 = sub_40ABC0((int)v2, aWalkingleft, 0);
+    sub_40A120(v17, (char *)"no strips found for %s, see %s : %s", aWalkingleft, v293, v2 + 16);
     if ( sub_40AD80(aWalkingleft) )
     {
-      while ( sub_40ABC0(v2, aWalkingleft, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingleft, 0) )
       {
-        sub_40B310(v2, aWalkingleft, &v316, (const char **)&String1);
+        sub_40B310(v2, aWalkingleft, (_DWORD*)&v316, (const char **)&String1);
         v18 = *((_DWORD *)self + 73);
         i = String1;
         v19 = 0;
-        v20 = dword_5216EC[v18];
+        v20 = ((int*)&dword_5216EC)[v18];
         v21 = (_DWORD *)(v20 + 4);
         if ( *(int *)(v20 + 4) <= 0 )
         {
 LABEL_30:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v19 = -1;
         }
         else
@@ -1562,31 +1612,30 @@ LABEL_30:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v19 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v19 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingleft,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v286 = (char *)*((_DWORD *)self + 99);
         v326 = v19;
-        sub_4638A0((int)(self + 388), v286, 1u, &v325);
+        sub_4638A0((int)(self + 388), v286, 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aWalkingleft, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingleft, 0) )
       {
-        sub_40AFC0(v2, aWalkingleft, &String1);
+        sub_40AFC0(v2, aWalkingleft, (_DWORD*)&String1);
         v23 = *((_DWORD *)self + 73);
         i = String1;
         v24 = 0;
-        v25 = dword_5216EC[v23];
+        v25 = ((int*)&dword_5216EC)[v23];
         v26 = (_DWORD *)(v25 + 4);
         if ( *(int *)(v25 + 4) <= 0 )
         {
 LABEL_38:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v24 = -1;
         }
         else
@@ -1603,34 +1652,33 @@ LABEL_38:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v24 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v24 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingleft,
           *((const char **)self + 1),
           v2 + 16);
         v287 = (char *)*((_DWORD *)self + 99);
         v325 = 3;
         v326 = v24;
-        sub_4638A0((int)(self + 388), v287, 1u, &v325);
+        sub_4638A0((int)(self + 388), v287, 1u, (_DWORD*)&v325);
       }
     }
     v294 = (const char *)*((_DWORD *)self + 1);
-    v27 = sub_40ABC0(v2, aWalkingfastlef, 0);
-    sub_40A120(v27, "no strips found for %s, see %s : %s", aWalkingfastlef, v294, v16);
+    v27 = sub_40ABC0((int)v2, aWalkingfastlef, 0);
+    sub_40A120(v27, (char *)"no strips found for %s, see %s : %s", aWalkingfastlef, v294, v16);
     if ( sub_40AD80(aWalkingfastlef) )
     {
-      while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingfastlef, 0) )
       {
-        sub_40B310(v2, aWalkingfastlef, &v316, (const char **)&String1);
+        sub_40B310(v2, aWalkingfastlef, (_DWORD*)&v316, (const char **)&String1);
         v28 = *((_DWORD *)self + 73);
         i = String1;
         v29 = 0;
-        v30 = dword_5216EC[v28];
+        v30 = ((int*)&dword_5216EC)[v28];
         v31 = (_DWORD *)(v30 + 4);
         if ( *(int *)(v30 + 4) <= 0 )
         {
 LABEL_46:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v29 = -1;
         }
         else
@@ -1647,31 +1695,30 @@ LABEL_46:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v29 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v29 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingfastlef,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v288 = (char *)*((_DWORD *)self + 103);
         v326 = v29;
-        sub_4638A0((int)(self + 404), v288, 1u, &v325);
+        sub_4638A0((int)(self + 404), v288, 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aWalkingfastlef, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingfastlef, 0) )
       {
-        sub_40AFC0(v2, aWalkingfastlef, &String1);
+        sub_40AFC0(v2, aWalkingfastlef, (_DWORD*)&String1);
         v32 = *((_DWORD *)self + 73);
         i = String1;
         v33 = 0;
-        v34 = dword_5216EC[v32];
+        v34 = ((int*)&dword_5216EC)[v32];
         v35 = (_DWORD *)(v34 + 4);
         if ( *(int *)(v34 + 4) <= 0 )
         {
 LABEL_54:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v33 = -1;
         }
         else
@@ -1688,34 +1735,33 @@ LABEL_54:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v33 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v33 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingfastlef,
           *((const char **)self + 1),
           v2 + 16);
         v289 = (char *)*((_DWORD *)self + 103);
         v325 = 3;
         v326 = v33;
-        sub_4638A0((int)(self + 404), v289, 1u, &v325);
+        sub_4638A0((int)(self + 404), v289, 1u, (_DWORD*)&v325);
       }
     }
     v295 = (const char *)*((_DWORD *)self + 1);
-    v36 = sub_40ABC0(v2, aWalkingright, 0);
-    sub_40A120(v36, "no strips found for %s, see %s : %s", aWalkingright, v295, v16);
+    v36 = sub_40ABC0((int)v2, aWalkingright, 0);
+    sub_40A120(v36, (char *)"no strips found for %s, see %s : %s", aWalkingright, v295, v16);
     if ( sub_40AD80(aWalkingright) )
     {
-      while ( sub_40ABC0(v2, aWalkingright, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingright, 0) )
       {
-        sub_40B310(v2, aWalkingright, &v316, (const char **)&String1);
+        sub_40B310(v2, aWalkingright, (_DWORD*)&v316, (const char **)&String1);
         v37 = *((_DWORD *)self + 73);
         i = String1;
         v38 = 0;
-        v39 = dword_5216EC[v37];
+        v39 = ((int*)&dword_5216EC)[v37];
         v40 = (_DWORD *)(v39 + 4);
         if ( *(int *)(v39 + 4) <= 0 )
         {
 LABEL_62:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v38 = -1;
         }
         else
@@ -1732,31 +1778,30 @@ LABEL_62:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v38 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v38 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingright,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v290 = (char *)*((_DWORD *)self + 107);
         v326 = v38;
-        sub_4638A0((int)(self + 420), v290, 1u, &v325);
+        sub_4638A0((int)(self + 420), v290, 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aWalkingright, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingright, 0) )
       {
-        sub_40AFC0(v2, aWalkingright, &String1);
+        sub_40AFC0(v2, aWalkingright, (_DWORD*)&String1);
         v41 = *((_DWORD *)self + 73);
         i = String1;
         v42 = 0;
-        v43 = dword_5216EC[v41];
+        v43 = ((int*)&dword_5216EC)[v41];
         v44 = (_DWORD *)(v43 + 4);
         if ( *(int *)(v43 + 4) <= 0 )
         {
 LABEL_70:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v42 = -1;
         }
         else
@@ -1773,34 +1818,33 @@ LABEL_70:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v42 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v42 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingright,
           *((const char **)self + 1),
           v2 + 16);
         v291 = (char *)*((_DWORD *)self + 107);
         v325 = 3;
         v326 = v42;
-        sub_4638A0((int)(self + 420), v291, 1u, &v325);
+        sub_4638A0((int)(self + 420), v291, 1u, (_DWORD*)&v325);
       }
     }
     v296 = (const char *)*((_DWORD *)self + 1);
-    v45 = sub_40ABC0(v2, aWalkingfastrig, 0);
-    sub_40A120(v45, "no strips found for %s, see %s : %s", aWalkingfastrig, v296, v16);
+    v45 = sub_40ABC0((int)v2, aWalkingfastrig, 0);
+    sub_40A120(v45, (char *)"no strips found for %s, see %s : %s", aWalkingfastrig, v296, v16);
     if ( sub_40AD80(aWalkingfastrig) )
     {
-      while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingfastrig, 0) )
       {
-        sub_40B310(v2, aWalkingfastrig, &v316, (const char **)&String1);
+        sub_40B310(v2, aWalkingfastrig, (_DWORD*)&v316, (const char **)&String1);
         v46 = *((_DWORD *)self + 73);
         i = String1;
         v47 = 0;
-        v48 = dword_5216EC[v46];
+        v48 = ((int*)&dword_5216EC)[v46];
         v49 = (_DWORD *)(v48 + 4);
         if ( *(int *)(v48 + 4) <= 0 )
         {
 LABEL_78:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v47 = -1;
         }
         else
@@ -1817,31 +1861,30 @@ LABEL_78:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v47 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v47 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingfastrig,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v292 = (char *)*((_DWORD *)self + 111);
         v326 = v47;
-        sub_4638A0((int)(self + 436), v292, 1u, &v325);
+        sub_4638A0((int)(self + 436), v292, 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aWalkingfastrig, 0) )
+      while ( sub_40ABC0((int)v2, aWalkingfastrig, 0) )
       {
-        sub_40AFC0(v2, aWalkingfastrig, &String1);
+        sub_40AFC0(v2, aWalkingfastrig, (_DWORD*)&String1);
         v50 = *((_DWORD *)self + 73);
         i = String1;
         v51 = 0;
-        v52 = dword_5216EC[v50];
+        v52 = ((int*)&dword_5216EC)[v50];
         v53 = (_DWORD *)(v52 + 4);
         if ( *(int *)(v52 + 4) <= 0 )
         {
 LABEL_86:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v51 = -1;
         }
         else
@@ -1858,33 +1901,32 @@ LABEL_86:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v51 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v51 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aWalkingfastrig,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v51;
-        sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, &v325);
+        sub_4638A0((int)(self + 436), *((char **)self + 111), 1u, (_DWORD*)&v325);
       }
     }
     v297 = (const char *)*((_DWORD *)self + 1);
-    v54 = sub_40ABC0(v2, aAiming, 0);
-    sub_40A120(v54, "no strips found for %s, see %s : %s", aAiming, v297, v16);
+    v54 = sub_40ABC0((int)v2, aAiming, 0);
+    sub_40A120(v54, (char *)"no strips found for %s, see %s : %s", aAiming, v297, v16);
     if ( sub_40AD80(aAiming) )
     {
-      while ( sub_40ABC0(v2, aAiming, 0) )
+      while ( sub_40ABC0((int)v2, aAiming, 0) )
       {
-        sub_40B310(v2, aAiming, &v316, (const char **)&String1);
+        sub_40B310(v2, aAiming, (_DWORD*)&v316, (const char **)&String1);
         v55 = *((_DWORD *)self + 73);
         i = String1;
         v56 = 0;
-        v57 = dword_5216EC[v55];
+        v57 = ((int*)&dword_5216EC)[v55];
         v58 = (_DWORD *)(v57 + 4);
         if ( *(int *)(v57 + 4) <= 0 )
         {
 LABEL_94:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v56 = -1;
         }
         else
@@ -1900,26 +1942,26 @@ LABEL_94:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v56 != -1, "failed to find strip for %s, see %s : %s", aAiming, *((const char **)self + 1), v2 + 16);
+        sub_40A120(v56 != -1, (char *)"failed to find strip for %s, see %s : %s", aAiming, *((const char **)self + 1), v2 + 16);
         v325 = v316;
         v326 = v56;
-        sub_4638A0((int)(self + 468), *((char **)self + 119), 1u, &v325);
+        sub_4638A0((int)(self + 468), *((char **)self + 119), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aAiming, 0) )
+      while ( sub_40ABC0((int)v2, aAiming, 0) )
       {
-        sub_40AFC0(v2, aAiming, &String1);
+        sub_40AFC0(v2, aAiming, (_DWORD*)&String1);
         v59 = *((_DWORD *)self + 73);
         i = String1;
         v60 = 0;
-        v61 = dword_5216EC[v59];
+        v61 = ((int*)&dword_5216EC)[v59];
         v62 = (_DWORD *)(v61 + 4);
         if ( *(int *)(v61 + 4) <= 0 )
         {
 LABEL_102:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v60 = -1;
         }
         else
@@ -1935,29 +1977,29 @@ LABEL_102:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v60 != -1, "failed to find strip for %s, see %s : %s", aAiming, *((const char **)self + 1), v2 + 16);
+        sub_40A120(v60 != -1, (char *)"failed to find strip for %s, see %s : %s", aAiming, *((const char **)self + 1), v2 + 16);
         v325 = 3;
         v326 = v60;
-        sub_4638A0((int)(self + 468), *((char **)self + 119), 1u, &v325);
+        sub_4638A0((int)(self + 468), *((char **)self + 119), 1u, (_DWORD*)&v325);
       }
     }
     v298 = (const char *)*((_DWORD *)self + 1);
-    v63 = sub_40ABC0(v2, aFiring, 0);
-    sub_40A120(v63, "no strips found for %s, see %s : %s", aFiring, v298, v16);
+    v63 = sub_40ABC0((int)v2, aFiring, 0);
+    sub_40A120(v63, (char *)"no strips found for %s, see %s : %s", aFiring, v298, v16);
     if ( sub_40AD80(aFiring) )
     {
-      while ( sub_40ABC0(v2, aFiring, 0) )
+      while ( sub_40ABC0((int)v2, aFiring, 0) )
       {
-        sub_40B310(v2, aFiring, &v316, (const char **)&String1);
+        sub_40B310(v2, aFiring, (_DWORD*)&v316, (const char **)&String1);
         v64 = *((_DWORD *)self + 73);
         i = String1;
         v65 = 0;
-        v66 = dword_5216EC[v64];
+        v66 = ((int*)&dword_5216EC)[v64];
         v67 = (_DWORD *)(v66 + 4);
         if ( *(int *)(v66 + 4) <= 0 )
         {
 LABEL_110:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v65 = -1;
         }
         else
@@ -1973,26 +2015,26 @@ LABEL_110:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v65 != -1, "failed to find strip for %s, see %s : %s", aFiring, *((const char **)self + 1), v2 + 16);
+        sub_40A120(v65 != -1, (char *)"failed to find strip for %s, see %s : %s", aFiring, *((const char **)self + 1), v2 + 16);
         v325 = v316;
         v326 = v65;
-        sub_4638A0((int)(self + 500), *((char **)self + 127), 1u, &v325);
+        sub_4638A0((int)(self + 500), *((char **)self + 127), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aFiring, 0) )
+      while ( sub_40ABC0((int)v2, aFiring, 0) )
       {
-        sub_40AFC0(v2, aFiring, &String1);
+        sub_40AFC0(v2, aFiring, (_DWORD*)&String1);
         v68 = *((_DWORD *)self + 73);
         i = String1;
         v69 = 0;
-        v70 = dword_5216EC[v68];
+        v70 = ((int*)&dword_5216EC)[v68];
         v71 = (_DWORD *)(v70 + 4);
         if ( *(int *)(v70 + 4) <= 0 )
         {
 LABEL_118:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v69 = -1;
         }
         else
@@ -2008,29 +2050,29 @@ LABEL_118:
           }
         }
         v16 = v2 + 16;
-        sub_40A120(v69 != -1, "failed to find strip for %s, see %s : %s", aFiring, *((const char **)self + 1), v2 + 16);
+        sub_40A120(v69 != -1, (char *)"failed to find strip for %s, see %s : %s", aFiring, *((const char **)self + 1), v2 + 16);
         v325 = 3;
         v326 = v69;
-        sub_4638A0((int)(self + 500), *((char **)self + 127), 1u, &v325);
+        sub_4638A0((int)(self + 500), *((char **)self + 127), 1u, (_DWORD*)&v325);
       }
     }
     v299 = (const char *)*((_DWORD *)self + 1);
-    v72 = sub_40ABC0(v2, aUnaiming, 0);
-    sub_40A120(v72, "no strips found for %s, see %s : %s", aUnaiming, v299, v16);
+    v72 = sub_40ABC0((int)v2, aUnaiming, 0);
+    sub_40A120(v72, (char *)"no strips found for %s, see %s : %s", aUnaiming, v299, v16);
     if ( sub_40AD80(aUnaiming) )
     {
-      while ( sub_40ABC0(v2, aUnaiming, 0) )
+      while ( sub_40ABC0((int)v2, aUnaiming, 0) )
       {
-        sub_40B310(v2, aUnaiming, &v316, (const char **)&String1);
+        sub_40B310(v2, aUnaiming, (_DWORD*)&v316, (const char **)&String1);
         v73 = *((_DWORD *)self + 73);
         i = String1;
         v74 = 0;
-        v75 = dword_5216EC[v73];
+        v75 = ((int*)&dword_5216EC)[v73];
         v76 = (_DWORD *)(v75 + 4);
         if ( *(int *)(v75 + 4) <= 0 )
         {
 LABEL_126:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v74 = -1;
         }
         else
@@ -2047,30 +2089,29 @@ LABEL_126:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v74 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v74 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aUnaiming,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v74;
-        sub_4638A0((int)(self + 484), *((char **)self + 123), 1u, &v325);
+        sub_4638A0((int)(self + 484), *((char **)self + 123), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aUnaiming, 0) )
+      while ( sub_40ABC0((int)v2, aUnaiming, 0) )
       {
-        sub_40AFC0(v2, aUnaiming, &String1);
+        sub_40AFC0(v2, aUnaiming, (_DWORD*)&String1);
         v77 = *((_DWORD *)self + 73);
         i = String1;
         v78 = 0;
-        v79 = dword_5216EC[v77];
+        v79 = ((int*)&dword_5216EC)[v77];
         v80 = (_DWORD *)(v79 + 4);
         if ( *(int *)(v79 + 4) <= 0 )
         {
 LABEL_134:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v78 = -1;
         }
         else
@@ -2087,14 +2128,13 @@ LABEL_134:
         }
         v16 = v2 + 16;
         sub_40A120(
-          v78 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v78 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aUnaiming,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v78;
-        sub_4638A0((int)(self + 484), *((char **)self + 123), 1u, &v325);
+        sub_4638A0((int)(self + 484), *((char **)self + 123), 1u, (_DWORD*)&v325);
       }
     }
     v81 = *((_DWORD *)self + 118);
@@ -2118,8 +2158,7 @@ LABEL_134:
         v89 = 1;
     }
     sub_40A120(
-      v89,
-      "for every aiming, there should be a firing and a unaiming animation, see %s : %s",
+      v89, (char *)"for every aiming, there should be a firing and a unaiming animation, see %s : %s",
       *((const char **)self + 1),
       v16);
     for ( j = 0; ; ++j )
@@ -2128,29 +2167,29 @@ LABEL_134:
       if ( !v91 || j >= (*((_DWORD *)self + 119) - v91) >> 3 )
         break;
       sub_40AF00(v2, aShotframe, (char **)&v316);
-      sub_44F190((int)(self + 696), *((_DWORD **)self + 176), 1u, &v316);
+      sub_44F190((int)(self + 696), *((_DWORD **)self + 176), 1u, (_DWORD*)&v316);
       sub_40B1F0(v2, aShotoffset, (float *)&v327, (float *)&v328);
-      sub_44F190((int)(self + 712), *((_DWORD **)self + 180), 1u, &v327);
-      sub_44F190((int)(self + 728), *((_DWORD **)self + 184), 1u, &v328);
+      sub_44F190((int)(self + 712), *((_DWORD **)self + 180), 1u, (_DWORD*)&v327);
+      sub_44F190((int)(self + 728), *((_DWORD **)self + 184), 1u, (_DWORD*)&v328);
     }
     v92 = v2 + 16;
     v300 = (const char *)*((_DWORD *)self + 1);
-    v93 = sub_40ABC0(v2, aThrowinggrenad, 0);
-    sub_40A120(v93, "no strips found for %s, see %s : %s", aThrowinggrenad, v300, v2 + 16);
+    v93 = sub_40ABC0((int)v2, aThrowinggrenad, 0);
+    sub_40A120(v93, (char *)"no strips found for %s, see %s : %s", aThrowinggrenad, v300, v2 + 16);
     if ( sub_40AD80(aThrowinggrenad) )
     {
-      while ( sub_40ABC0(v2, aThrowinggrenad, 0) )
+      while ( sub_40ABC0((int)v2, aThrowinggrenad, 0) )
       {
-        sub_40B310(v2, aThrowinggrenad, &v316, (const char **)&String1);
+        sub_40B310(v2, aThrowinggrenad, (_DWORD*)&v316, (const char **)&String1);
         v94 = *((_DWORD *)self + 73);
         i = String1;
         v95 = 0;
-        v96 = dword_5216EC[v94];
+        v96 = ((int*)&dword_5216EC)[v94];
         v97 = (_DWORD *)(v96 + 4);
         if ( *(int *)(v96 + 4) <= 0 )
         {
 LABEL_162:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v95 = -1;
         }
         else
@@ -2167,30 +2206,29 @@ LABEL_162:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v95 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v95 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aThrowinggrenad,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v95;
-        sub_4638A0((int)(self + 452), *((char **)self + 115), 1u, &v325);
+        sub_4638A0((int)(self + 452), *((char **)self + 115), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aThrowinggrenad, 0) )
+      while ( sub_40ABC0((int)v2, aThrowinggrenad, 0) )
       {
-        sub_40AFC0(v2, aThrowinggrenad, &String1);
+        sub_40AFC0(v2, aThrowinggrenad, (_DWORD*)&String1);
         v98 = *((_DWORD *)self + 73);
         v99 = 0;
         i = String1;
-        v100 = dword_5216EC[v98];
+        v100 = ((int*)&dword_5216EC)[v98];
         v101 = (_DWORD *)(v100 + 4);
         if ( *(int *)(v100 + 4) <= 0 )
         {
 LABEL_170:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v99 = -1;
         }
         else
@@ -2207,33 +2245,32 @@ LABEL_170:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v99 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v99 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aThrowinggrenad,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v99;
-        sub_4638A0((int)(self + 452), *((char **)self + 115), 1u, &v325);
+        sub_4638A0((int)(self + 452), *((char **)self + 115), 1u, (_DWORD*)&v325);
       }
     }
     v301 = (const char *)*((_DWORD *)self + 1);
-    v102 = sub_40ABC0(v2, aDyingfromshot, 0);
-    sub_40A120(v102, "no strips found for %s, see %s : %s", aDyingfromshot, v301, v92);
+    v102 = sub_40ABC0((int)v2, aDyingfromshot, 0);
+    sub_40A120(v102, (char *)"no strips found for %s, see %s : %s", aDyingfromshot, v301, v92);
     if ( sub_40AD80(aDyingfromshot) )
     {
-      while ( sub_40ABC0(v2, aDyingfromshot, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromshot, 0) )
       {
-        sub_40B310(v2, aDyingfromshot, &v316, (const char **)&String1);
+        sub_40B310(v2, aDyingfromshot, (_DWORD*)&v316, (const char **)&String1);
         v103 = *((_DWORD *)self + 73);
         i = String1;
         v104 = 0;
-        v105 = dword_5216EC[v103];
+        v105 = ((int*)&dword_5216EC)[v103];
         v106 = (_DWORD *)(v105 + 4);
         if ( *(int *)(v105 + 4) <= 0 )
         {
 LABEL_178:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v104 = -1;
         }
         else
@@ -2250,30 +2287,29 @@ LABEL_178:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v104 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v104 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromshot,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v104;
-        sub_4638A0((int)(self + 564), *((char **)self + 143), 1u, &v325);
+        sub_4638A0((int)(self + 564), *((char **)self + 143), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aDyingfromshot, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromshot, 0) )
       {
-        sub_40AFC0(v2, aDyingfromshot, &String1);
+        sub_40AFC0(v2, aDyingfromshot, (_DWORD*)&String1);
         v107 = *((_DWORD *)self + 73);
         v108 = 0;
         i = String1;
-        v109 = dword_5216EC[v107];
+        v109 = ((int*)&dword_5216EC)[v107];
         v110 = (_DWORD *)(v109 + 4);
         if ( *(int *)(v109 + 4) <= 0 )
         {
 LABEL_186:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v108 = -1;
         }
         else
@@ -2290,33 +2326,32 @@ LABEL_186:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v108 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v108 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromshot,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v108;
-        sub_4638A0((int)(self + 564), *((char **)self + 143), 1u, &v325);
+        sub_4638A0((int)(self + 564), *((char **)self + 143), 1u, (_DWORD*)&v325);
       }
     }
     v302 = (const char *)*((_DWORD *)self + 1);
-    v111 = sub_40ABC0(v2, aDyingfromshotl, 0);
-    sub_40A120(v111, "no strips found for %s, see %s : %s", aDyingfromshotl, v302, v92);
+    v111 = sub_40ABC0((int)v2, aDyingfromshotl, 0);
+    sub_40A120(v111, (char *)"no strips found for %s, see %s : %s", aDyingfromshotl, v302, v92);
     if ( sub_40AD80(aDyingfromshotl) )
     {
-      while ( sub_40ABC0(v2, aDyingfromshotl, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromshotl, 0) )
       {
-        sub_40B310(v2, aDyingfromshotl, &v316, (const char **)&String1);
+        sub_40B310(v2, aDyingfromshotl, (_DWORD*)&v316, (const char **)&String1);
         v112 = *((_DWORD *)self + 73);
         i = String1;
         v113 = 0;
-        v114 = dword_5216EC[v112];
+        v114 = ((int*)&dword_5216EC)[v112];
         v115 = (_DWORD *)(v114 + 4);
         if ( *(int *)(v114 + 4) <= 0 )
         {
 LABEL_194:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v113 = -1;
         }
         else
@@ -2333,30 +2368,29 @@ LABEL_194:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v113 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v113 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromshotl,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v113;
-        sub_4638A0((int)(self + 580), *((char **)self + 147), 1u, &v325);
+        sub_4638A0((int)(self + 580), *((char **)self + 147), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aDyingfromshotl, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromshotl, 0) )
       {
-        sub_40AFC0(v2, aDyingfromshotl, &String1);
+        sub_40AFC0(v2, aDyingfromshotl, (_DWORD*)&String1);
         v116 = *((_DWORD *)self + 73);
         v117 = 0;
         i = String1;
-        v118 = dword_5216EC[v116];
+        v118 = ((int*)&dword_5216EC)[v116];
         v119 = (_DWORD *)(v118 + 4);
         if ( *(int *)(v118 + 4) <= 0 )
         {
 LABEL_202:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v117 = -1;
         }
         else
@@ -2373,33 +2407,32 @@ LABEL_202:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v117 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v117 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromshotl,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v117;
-        sub_4638A0((int)(self + 580), *((char **)self + 147), 1u, &v325);
+        sub_4638A0((int)(self + 580), *((char **)self + 147), 1u, (_DWORD*)&v325);
       }
     }
     v303 = (const char *)*((_DWORD *)self + 1);
-    v120 = sub_40ABC0(v2, aDyingfromshotr, 0);
-    sub_40A120(v120, "no strips found for %s, see %s : %s", aDyingfromshotr, v303, v92);
+    v120 = sub_40ABC0((int)v2, aDyingfromshotr, 0);
+    sub_40A120(v120, (char *)"no strips found for %s, see %s : %s", aDyingfromshotr, v303, v92);
     if ( sub_40AD80(aDyingfromshotr) )
     {
-      while ( sub_40ABC0(v2, aDyingfromshotr, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromshotr, 0) )
       {
-        sub_40B310(v2, aDyingfromshotr, &v316, (const char **)&String1);
+        sub_40B310(v2, aDyingfromshotr, (_DWORD*)&v316, (const char **)&String1);
         v121 = *((_DWORD *)self + 73);
         i = String1;
         v122 = 0;
-        v123 = dword_5216EC[v121];
+        v123 = ((int*)&dword_5216EC)[v121];
         v124 = (_DWORD *)(v123 + 4);
         if ( *(int *)(v123 + 4) <= 0 )
         {
 LABEL_210:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v122 = -1;
         }
         else
@@ -2416,30 +2449,29 @@ LABEL_210:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v122 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v122 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromshotr,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v122;
-        sub_4638A0((int)(self + 596), *((char **)self + 151), 1u, &v325);
+        sub_4638A0((int)(self + 596), *((char **)self + 151), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aDyingfromshotr, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromshotr, 0) )
       {
-        sub_40AFC0(v2, aDyingfromshotr, &String1);
+        sub_40AFC0(v2, aDyingfromshotr, (_DWORD*)&String1);
         v125 = *((_DWORD *)self + 73);
         v126 = 0;
         i = String1;
-        v127 = dword_5216EC[v125];
+        v127 = ((int*)&dword_5216EC)[v125];
         v128 = (_DWORD *)(v127 + 4);
         if ( *(int *)(v127 + 4) <= 0 )
         {
 LABEL_218:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v126 = -1;
         }
         else
@@ -2456,33 +2488,32 @@ LABEL_218:
         }
         v92 = v2 + 16;
         sub_40A120(
-          v126 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v126 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromshotr,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v126;
-        sub_4638A0((int)(self + 596), *((char **)self + 151), 1u, &v325);
+        sub_4638A0((int)(self + 596), *((char **)self + 151), 1u, (_DWORD*)&v325);
       }
     }
     v304 = (const char *)*((_DWORD *)self + 1);
-    v129 = sub_40ABC0(v2, aDyingfromexplo, 0);
-    sub_40A120(v129, "no strips found for %s, see %s : %s", aDyingfromexplo, v304, v92);
+    v129 = sub_40ABC0((int)v2, aDyingfromexplo, 0);
+    sub_40A120(v129, (char *)"no strips found for %s, see %s : %s", aDyingfromexplo, v304, v92);
     if ( sub_40AD80(aDyingfromexplo) )
     {
-      while ( sub_40ABC0(v2, aDyingfromexplo, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromexplo, 0) )
       {
-        sub_40B310(v2, aDyingfromexplo, &v316, (const char **)&String1);
+        sub_40B310(v2, aDyingfromexplo, (_DWORD*)&v316, (const char **)&String1);
         v130 = *((_DWORD *)self + 73);
         i = String1;
         v131 = 0;
-        v132 = dword_5216EC[v130];
+        v132 = ((int*)&dword_5216EC)[v130];
         v133 = (_DWORD *)(v132 + 4);
         if ( *(int *)(v132 + 4) <= 0 )
         {
 LABEL_226:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v131 = -1;
         }
         else
@@ -2498,30 +2529,29 @@ LABEL_226:
           }
         }
         sub_40A120(
-          v131 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v131 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromexplo,
           *((const char **)self + 1),
           v2 + 16);
         v325 = v316;
         v326 = v131;
-        sub_4638A0((int)(self + 612), *((char **)self + 155), 1u, &v325);
+        sub_4638A0((int)(self + 612), *((char **)self + 155), 1u, (_DWORD*)&v325);
       }
     }
     else
     {
-      while ( sub_40ABC0(v2, aDyingfromexplo, 0) )
+      while ( sub_40ABC0((int)v2, aDyingfromexplo, 0) )
       {
-        sub_40AFC0(v2, aDyingfromexplo, &String1);
+        sub_40AFC0(v2, aDyingfromexplo, (_DWORD*)&String1);
         v134 = *((_DWORD *)self + 73);
         v135 = 0;
         i = String1;
-        v136 = dword_5216EC[v134];
+        v136 = ((int*)&dword_5216EC)[v134];
         v137 = (_DWORD *)(v136 + 4);
         if ( *(int *)(v136 + 4) <= 0 )
         {
 LABEL_234:
-          sub_40A120(0, "Infantry animation strip not found: %s", i);
+          sub_40A120(0, (char *)"Infantry animation strip not found: %s", i);
           v135 = -1;
         }
         else
@@ -2537,20 +2567,19 @@ LABEL_234:
           }
         }
         sub_40A120(
-          v135 != -1,
-          "failed to find strip for %s, see %s : %s",
+          v135 != -1, (char *)"failed to find strip for %s, see %s : %s",
           aDyingfromexplo,
           *((const char **)self + 1),
           v2 + 16);
         v325 = 3;
         v326 = v135;
-        sub_4638A0((int)(self + 612), *((char **)self + 155), 1u, &v325);
+        sub_4638A0((int)(self + 612), *((char **)self + 155), 1u, (_DWORD*)&v325);
       }
     }
     sub_4638A0((int)(self + 372), *((char **)self + 95), 1u, *((_DWORD **)self + 118));
-    sub_40AFC0(v2, aShotbullettype, &v321);
+    sub_40AFC0(v2, aShotbullettype, (_DWORD*)&v321);
     sub_469160((int)self, (_DWORD *)self + 173, (const char *)v321, aBullet);
-    sub_40AFC0(v2, aGrenadebullett, &v322);
+    sub_40AFC0(v2, aGrenadebullett, (_DWORD*)&v322);
     sub_469160((int)self, (_DWORD *)self + 186, (const char *)v322, aBullet);
     sub_40B1B0(v2, aGrenadespinrat, (float *)self + 187);
     *((float *)self + 187) = *((float *)self + 187) * 0.017453292;
@@ -2560,27 +2589,27 @@ LABEL_234:
     sub_40B1F0(v2, aGrenadeoffset, (float *)self + 192, (float *)self + 193);
   }
   *((_DWORD *)self + 200) = 0;
-  if ( sub_40ABC0(v2, aScreamsoundeff, 0) )
+  if ( sub_40ABC0((int)v2, aScreamsoundeff, 0) )
   {
-    sub_40AFC0(v2, aScreamsoundeff, &String1);
+    sub_40AFC0(v2, aScreamsoundeff, (_DWORD*)&String1);
     sub_469160((int)self, (_DWORD *)self + 200, String1, aSoundEffect);
   }
   *((_DWORD *)self + 201) = 0;
-  if ( sub_40ABC0(v2, aSoftthudsounde, 0) )
+  if ( sub_40ABC0((int)v2, aSoftthudsounde, 0) )
   {
-    sub_40AFC0(v2, aSoftthudsounde, &String1);
+    sub_40AFC0(v2, aSoftthudsounde, (_DWORD*)&String1);
     sub_469160((int)self, (_DWORD *)self + 201, String1, aSoundEffect);
   }
   *((_DWORD *)self + 202) = 0;
-  if ( sub_40ABC0(v2, aHardthudsounde, 0) )
+  if ( sub_40ABC0((int)v2, aHardthudsounde, 0) )
   {
-    sub_40AFC0(v2, aHardthudsounde, &String1);
+    sub_40AFC0(v2, aHardthudsounde, (_DWORD*)&String1);
     sub_469160((int)self, (_DWORD *)self + 202, String1, aSoundEffect);
   }
   *((_DWORD *)self + 203) = 0;
-  if ( sub_40ABC0(v2, aFireeffect, 0) )
+  if ( sub_40ABC0((int)v2, aFireeffect, 0) )
   {
-    sub_40AFC0(v2, aFireeffect, &String1);
+    sub_40AFC0(v2, aFireeffect, (_DWORD*)&String1);
     sub_469160((int)self, (_DWORD *)self + 203, String1, aEffect);
   }
   sub_4229D0(aFinishedLoadin_2);

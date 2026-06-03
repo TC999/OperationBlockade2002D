@@ -12,7 +12,7 @@ int __cdecl sub_46A410(int self, const void *a2, unsigned int a3)
                           && memcmp((const void *)(v4 + *(_DWORD *)(self + 308)), a2, a3) == 0;
   }
   if ( !*(_BYTE *)(result + 300) )
-    return sub_46A4C0(a2, a3);
+    return sub_46A4C0(result, a2, a3);
   *(_DWORD *)(result + 312) += a3;
   return result;
 }

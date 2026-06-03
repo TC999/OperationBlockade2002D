@@ -30,7 +30,7 @@ _DWORD *__cdecl sub_408A50(_DWORD *self)
   self[39] = 0;
   self[40] = 0;
   *((_BYTE *)self + 164) = 1;
-  *self = &off_499114;
+  *self = (DWORD)&off_499114;
   v2 = sub_422BA0(AppName, aMousespeed, 100);
   *(_DWORD *)&dword_4A1EC4 = v2;
   if ( v2 < 100 )

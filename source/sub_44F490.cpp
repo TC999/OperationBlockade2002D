@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (0044F490) --------------------------------------------------------
 _DWORD *__cdecl sub_44F490(_DWORD *self, _DWORD *a2)
 {
@@ -42,7 +44,7 @@ _DWORD *__cdecl sub_44F490(_DWORD *self, _DWORD *a2)
     return v3;
   v4 = (char *)a2[1];
   if ( v4 )
-    v5 = (a2[2] - (int)v4) / 268;
+    v5 = (a2[2] - (intptr_t)v4) / 268;
   else
     v5 = 0;
   v6 = self[1];
@@ -77,7 +79,7 @@ _DWORD *__cdecl sub_44F490(_DWORD *self, _DWORD *a2)
     return v3;
   }
   if ( v4 )
-    v16 = (a2[2] - (int)v4) / 268;
+    v16 = (a2[2] - (intptr_t)v4) / 268;
   else
     v16 = 0;
   if ( v6 )
@@ -96,7 +98,7 @@ _DWORD *__cdecl sub_44F490(_DWORD *self, _DWORD *a2)
     if ( v31 < 0 )
       v32 = 0;
     v33 = (char *)operator new(268 * v32);
-    v3[1] = v33;
+    v3[1] = (uint32)(uintptr_t)v33;
     v34 = (char *)a2[2];
     v35 = v33;
     for ( i = (char *)a2[1]; i != v34; v35 += 268 )
@@ -108,8 +110,8 @@ _DWORD *__cdecl sub_44F490(_DWORD *self, _DWORD *a2)
       }
       i += 268;
     }
-    v3[2] = v35;
-    v3[3] = v35;
+    v3[2] = (uint32)(uintptr_t)v35;
+    v3[3] = (uint32)(uintptr_t)v35;
     return v3;
   }
   if ( v6 )

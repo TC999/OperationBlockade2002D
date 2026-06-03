@@ -74,12 +74,12 @@ char __cdecl sub_418E50(int self, char a2, float a3)
   {
     v7 = 0;
     v25 = 0;
-    if ( sub_417160(self) <= *(_DWORD *)(self + 4280) / 2 )
+    if ( sub_417160((_DWORD*)self) <= *(_DWORD *)(self + 4280) / 2 )
       goto LABEL_6;
   }
   v25 = 1;
 LABEL_6:
-  if ( !LOBYTE(a3) )
+  if ( !BYTEn(a3, 0) )
   {
     v16 = -*(float *)(self + 4292);
     v52 = v16;
@@ -91,7 +91,7 @@ LABEL_6:
   }
   if ( !v25 )
   {
-    if ( (unsigned __int8)sub_419C40(&v39) )
+    if ( (unsigned __int8)sub_419C40(self, &v39) )
     {
       v10 = -*(float *)(self + 4292);
       v49 = v10;
@@ -195,7 +195,7 @@ LABEL_42:
   else
     v18 = fabs((double)rand() * 0.000030518509) * (v34 - v53) + v53;
   v38 = tan(v18);
-  sub_46B970(&v36, &v36);
+  sub_46B970((int)(uintptr_t)&v36, (int)(uintptr_t)&v36);
   v19 = *(float *)(self + 4288) * *(float *)(self + 4284);
   *(float *)&v36 = v19 * *(float *)&v36;
   v37 = v19 * v37;
@@ -230,9 +230,9 @@ LABEL_42:
     return 0;
 LABEL_71:
   if ( !v26 )
-    return sub_416350(self, &v36, a2) != 0;
-  result = sub_419C40(&v36);
+    return sub_416350(self, (uint32*)(uintptr_t)&v36, a2) != 0;
+  result = sub_419C40(self, (float*)(uintptr_t)&v36);
   if ( result )
-    return sub_416350(self, &v36, a2) != 0;
+    return sub_416350(self, (uint32*)(uintptr_t)&v36, a2) != 0;
   return result;
 }

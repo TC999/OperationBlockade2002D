@@ -20,11 +20,11 @@ int __cdecl sub_41F5B0(int self, int a2, int a3, int a4, int a5, int a6, int a7,
   *(_DWORD *)(self + 40) = a3;
   *(_DWORD *)(self + 44) = a4;
   *(_DWORD *)(self + 48) = a5;
-  *(_DWORD *)self = &off_4992F4;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_4992F4;
   *(_DWORD *)(self + 56) = 0;
   v10 = sub_409960((_DWORD *)dword_520970, self);
   v11 = *(_DWORD *)(self + 32);
-  *(_DWORD *)(self + 52) = v10;
+  *(_DWORD *)(self + 52) = (uint32)(uintptr_t)v10;
   v10[3] = v11 != 255 ? 4 : 2;
   v12 = (float *)(*(_DWORD *)(self + 52) + 16);
   v13 = *(float *)(self + 44);

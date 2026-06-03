@@ -14,7 +14,7 @@ float *__stdcall sub_46C4AC(float *a1, float *a2, float *a3, float *a4)
   v6[1] = a2[1] - a4[1];
   v6[2] = a2[2] - a4[2];
   sub_419690(a1, v5, v6);
-  sub_46B970(a1, a1);
+  sub_46B970((int)(void*)a1, (int)(void*)a1);
   result = a1;
   a1[3] = -(a1[2] * a2[2] + a1[1] * a2[1] + *a1 * *a2);
   return result;

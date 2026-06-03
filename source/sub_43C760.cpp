@@ -1,3 +1,5 @@
+extern char aSoundsMissionf[];
+
 //----- (0043C760) --------------------------------------------------------
 char __cdecl sub_43C760(int *self)
 {
@@ -6,7 +8,7 @@ char __cdecl sub_43C760(int *self)
   char result; // al
   float v5; // [esp+0h] [ebp-18h]
 
-  v2 = operator new(0x15Cu);
+  v2 = (_DWORD *)operator new(0x15Cu);
   if ( v2 )
     v3 = sub_41C6A0(v2);
   else

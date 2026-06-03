@@ -26,14 +26,14 @@ char __cdecl sub_415430(_DWORD *self, int a2)
   v15 = 0.0;
   if ( v3 > 6 )
     v15 = (1.0 - *(float *)(a2 + 16)) * *(float *)(a2 + 4288) + (double)(v3 - 7) * *(float *)(a2 + 4288);
-  sub_4183A0(a2, v15);
+  sub_4183A0(a2, 0, v15);
   for ( i = 0; i < self[6]; ++i )
   {
     v5 = *(_DWORD *)(self[5] + 4 * i);
     if ( v5 != a2 && *(_BYTE *)(v5 + 4148) && *(_DWORD *)(v5 + 4144) == *(_DWORD *)(a2 + 4144) )
-      sub_4183A0(a2, v15);
+      sub_4183A0(a2, 0, v15);
   }
-  if ( !(unsigned __int8)sub_418420(a2, 0.1, (int)v17, (int)v20, (int)v16) )
+  if ( !(unsigned __int8)sub_418420(a2, 0, 0.1f, (_DWORD*)v17, (int)v20, (_DWORD*)v16) )
     return 1;
   while ( 1 )
   {
@@ -70,7 +70,7 @@ LABEL_18:
         return 0;
       ++v11;
     }
-    if ( !(unsigned __int8)sub_418420(a2, 0.1, (int)v17, (int)v20, (int)v16) )
+    if ( !(unsigned __int8)sub_418420(a2, 0, 0.1f, (_DWORD*)v17, (int)v20, (_DWORD*)v16) )
       return 1;
   }
   while ( 1 )
@@ -79,7 +79,7 @@ LABEL_18:
     if ( v7 != a2
       && *(_BYTE *)(v7 + 4148)
       && *(_DWORD *)(v7 + 4144) == *(_DWORD *)(a2 + 4144)
-      && (unsigned __int8)sub_418420(a2, 0.1, (int)v19, (int)v21, (int)v18)
+      && (unsigned __int8)sub_418420(a2, 0, 0.1f, (_DWORD*)v19, (int)v21, (_DWORD*)v18)
       && sub_40D330((float *)v17, (float *)v20, (float *)v16, (float *)v19, (float *)v21, (float *)v18) )
     {
       return 0;

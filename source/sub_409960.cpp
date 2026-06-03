@@ -15,7 +15,7 @@ _DWORD *__cdecl sub_409960(_DWORD *self, int a2)
   v3 = self[12];
   if ( v3 <= 0 )
   {
-    v5 = operator new(0x94u);
+    v5 = (_DWORD *)operator new(0x94u);
     memset(v5, 0, 0x94u);
   }
   else
@@ -33,7 +33,7 @@ _DWORD *__cdecl sub_409960(_DWORD *self, int a2)
     v8 = (void *)self[7];
     v9 = v6 + 8;
     self[9] = v9;
-    v10 = sub_488DD7(v8, 4 * v9);
+    v10 = (int)sub_488DD7(v8, 4 * v9);
     if ( v10 )
     {
       v11 = self[8];
@@ -42,6 +42,6 @@ _DWORD *__cdecl sub_409960(_DWORD *self, int a2)
       memset((void *)(v10 + 4 * v11), 0, 4 * v12);
     }
   }
-  *(_DWORD *)(self[7] + 4 * self[8] - 4) = v5;
+  *(_DWORD *)(self[7] + 4 * self[8] - 4) = (uint32)(uintptr_t)v5;
   return v5;
 }

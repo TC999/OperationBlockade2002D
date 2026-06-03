@@ -47,21 +47,21 @@ char __cdecl sub_409BE0(
     v15 = 0.0;
   else
     v15 = (a8 - a7) / a9;
-  v16 = (__int64)(v15 + 1.0);
+  v16 = (int)(__int64)(v15 + 1.0);
   *(_DWORD *)(a1 + 40) = v16;
   if ( a9 == 0.0 )
     v17 = 0.0;
   else
     v17 = (a6 - retaddr) / a9;
   v18 = (__int64)(v17 + 1.0);
-  *(_DWORD *)(a1 + 44) = v18;
-  LODWORD(v18) = 2 * (v16 + v18);
+  *(_DWORD *)(a1 + 44) = (_DWORD)v18;
+  LODWORD(v18) = (_DWORD)(2 * (v16 + v18));
   v19 = (_DWORD *)(a1 + 48);
-  *(_DWORD *)(a1 + 56) = v18;
-  *(_DWORD *)(a1 + 60) = v18;
+  *(_DWORD *)(a1 + 56) = (_DWORD)v18;
+  *(_DWORD *)(a1 + 60) = (_DWORD)v18;
   if ( (*(int (__stdcall **)(_DWORD, _DWORD, int, int, int, int))(**(_DWORD **)ArgList + 92))(
          *(_DWORD *)ArgList,
-         16 * v18,
+         16 * (_DWORD)v18,
          8,
          66,
          1,
@@ -86,21 +86,21 @@ char __cdecl sub_409BE0(
     a5,
     a3,
     a2);
-  for ( i = 0; i < *(_DWORD *)(a1 + 40); LODWORD(a9) = v37 + 1 )
+  for ( i = 0; i < *(_DWORD *)(a1 + 40); LODWORD(a9) = (_DWORD)(v37 + 1) )
   {
-    *(_WORD *)LODWORD(a9) = i;
+    *(_WORD *)LODWORD(a9) = (_WORD)i;
     v37 = (_WORD *)(LODWORD(a9) + 2);
-    *v37 = *(_WORD *)(a1 + 40) + i++;
+    *v37 = (_WORD)(*(_WORD *)(a1 + 40) + i++);
   }
   v23 = 2 * *(_DWORD *)(a1 + 40);
   if ( v23 < v23 + *(_DWORD *)(a1 + 44) )
   {
     do
     {
-      *(_WORD *)LODWORD(a9) = v23;
+      *(_WORD *)LODWORD(a9) = (_WORD)v23;
       v38 = (_WORD *)(LODWORD(a9) + 2);
-      *v38 = *(_WORD *)(a1 + 44) + v23;
-      LODWORD(a9) = v38 + 1;
+      *v38 = (_WORD)(*(_WORD *)(a1 + 44) + v23);
+      LODWORD(a9) = (_DWORD)(v38 + 1);
       ++v23;
     }
     while ( v23 < *(_DWORD *)(a1 + 44) + 2 * *(_DWORD *)(a1 + 40) );
@@ -111,7 +111,7 @@ char __cdecl sub_409BE0(
   v24 = 0;
   for ( j = 0; v24 < *(_DWORD *)(a1 + 40); j = v24 )
   {
-    *(float *)LODWORD(a9) = (double)j * *(float *)(a1 + 36) + *(float *)(a1 + 20);
+    *(float *)LODWORD(a9) = (float)((double)j * *(float *)(a1 + 36) + *(float *)(a1 + 20));
     *(_DWORD *)(LODWORD(a9) + 4) = *(_DWORD *)(a1 + 32);
     *(_DWORD *)(LODWORD(a9) + 8) = 0;
     *(_DWORD *)(LODWORD(a9) + 12) = *(_DWORD *)(a1 + 64);
@@ -121,7 +121,7 @@ char __cdecl sub_409BE0(
   v25 = 0;
   for ( k = 0; v25 < *(_DWORD *)(a1 + 40); k = v25 )
   {
-    *(float *)LODWORD(a9) = (double)k * *(float *)(a1 + 36) + *(float *)(a1 + 20);
+    *(float *)LODWORD(a9) = (float)((double)k * *(float *)(a1 + 36) + *(float *)(a1 + 20));
     *(_DWORD *)(LODWORD(a9) + 4) = *(_DWORD *)(a1 + 28);
     *(_DWORD *)(LODWORD(a9) + 8) = 0;
     *(_DWORD *)(LODWORD(a9) + 12) = *(_DWORD *)(a1 + 64);
@@ -132,7 +132,7 @@ char __cdecl sub_409BE0(
   for ( m = 0; v26 < *(_DWORD *)(a1 + 44); m = v26 )
   {
     *(_DWORD *)LODWORD(a9) = *(_DWORD *)(a1 + 24);
-    *(float *)(LODWORD(a9) + 4) = (double)m * *(float *)(a1 + 36) + *(float *)(a1 + 28);
+    *(float *)(LODWORD(a9) + 4) = (float)((double)m * *(float *)(a1 + 36) + *(float *)(a1 + 28));
     *(_DWORD *)(LODWORD(a9) + 8) = 0;
     *(_DWORD *)(LODWORD(a9) + 12) = *(_DWORD *)(a1 + 64);
     ++v26;
@@ -142,7 +142,7 @@ char __cdecl sub_409BE0(
   for ( n = 0; v27 < *(_DWORD *)(a1 + 44); n = v27 )
   {
     *(_DWORD *)LODWORD(a9) = *(_DWORD *)(a1 + 20);
-    *(float *)(LODWORD(a9) + 4) = (double)n * *(float *)(a1 + 36) + *(float *)(a1 + 28);
+    *(float *)(LODWORD(a9) + 4) = (float)((double)n * *(float *)(a1 + 36) + *(float *)(a1 + 28));
     *(_DWORD *)(LODWORD(a9) + 8) = 0;
     *(_DWORD *)(LODWORD(a9) + 12) = *(_DWORD *)(a1 + 64);
     ++v27;

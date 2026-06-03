@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004426B0) --------------------------------------------------------
 int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
 {
@@ -77,7 +79,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
   int v79; // [esp+88h] [ebp-4h]
 
   v3 = ArgList;
-  sub_4229D0("Adding boats: %d %s", ArgList, *(const char **)(a3 + 4));
+  sub_4229D0((char*)"Adding boats: %d %s", ArgList, *(const char **)(a3 + 4));
   v5 = self[6];
   v6 = 0;
   if ( v5 )
@@ -90,13 +92,13 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
   {
     do
     {
-      sub_4426B0(1, a3);
+      sub_4426B0(self, 1, a3);
       --v3;
     }
     while ( v3 > 0 );
     return v53;
   }
-  v8 = sub_442F80(a3);
+  v8 = (int)(intptr_t)sub_442F80(self, (_WORD *)a3);
   if ( *(float *)(a3 + 692) == 0.0 )
     v9 = 40000.0;
   else
@@ -120,7 +122,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
       v79 = 0;
       v72 = fabs((double)v59 * 0.000030518509) * 10000.0 - 5000.0;
       v77 = v72;
-      if ( sub_416350(*(_DWORD *)(v8 + 444), &v77, 1) )
+      if ( sub_416350(*(_DWORD *)(v8 + 444), (uint32*)&v77, 1) )
       {
         v43 = *(_DWORD **)(v8 + 444);
         v69 = 0.0;
@@ -175,7 +177,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
       v78 = LODWORD(v32);
       v72 = v58 * v35;
       v77 = v72;
-      if ( sub_416350(v36, &v77, 1) )
+        if ( sub_416350(v36, (uint32*)&v77, 1) )
       {
         v37 = *(float **)(v8 + 444);
         v69 = 0.0;
@@ -190,10 +192,10 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
         v37[2] = v40;
         while ( (unsigned __int8)sub_447D80(v8) )
         {
-          if ( -v56 > v52 * *(float *)(sub_417140(0) + 4) )
+          if ( -v56 > v52 * *(float *)(sub_417140(*(_DWORD **)(v8 + 444), 0) + 4) )
             return v53;
-          v55 = *(float *)(sub_417140(1) + 4);
-          v41 = *(float *)(sub_417140(0) + 4) - v55;
+          v55 = *(float *)(sub_417140(*(_DWORD **)(v8 + 444), 1) + 4);
+          v41 = *(float *)(sub_417140(*(_DWORD **)(v8 + 444), 0) + 4) - v55;
           if ( v41 < 0.0000099999997 && v41 > -0.0000099999997 )
             return v53;
           if ( ++v38 >= 1000 )
@@ -221,7 +223,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
     v65 = 0.0;
     v44 = fabs((double)rand() * 0.000030518509) * 6.2831855;
     sub_401000((float *)&v63, v44);
-    sub_46B970(&v69, &v63);
+    sub_46B970((int)&v69, (int)&v63);
     v45 = *(float *)(a3 + 696);
     v54 = *(float *)(a3 + 700);
     if ( v45 == v54 )
@@ -241,7 +243,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
     v16 = 30;
     do
     {
-      sub_416350(*(_DWORD *)(v8 + 444), &v63, 0);
+      sub_416350(*(_DWORD *)(v8 + 444), (uint32*)&v63, 0);
       --v16;
     }
     while ( v16 );
@@ -255,7 +257,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
       sub_4196F0(*(_DWORD *)(v8 + 444), &v69, 0.0, 0.0, 0, 0);
       if ( v18 > 0 )
       {
-        sub_417140(0);
+        sub_417140(*(_DWORD **)(v8 + 444), 0);
         if ( v20 )
           break;
       }
@@ -266,12 +268,12 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
     while ( 1 )
     {
       sub_4196F0(*(_DWORD *)(v8 + 444), &v77, 0.0, 0.0, 0, 0);
-      sub_417140(0);
-      sub_417140(1);
+      sub_417140(*(_DWORD **)(v8 + 444), 0);
+      sub_417140(*(_DWORD **)(v8 + 444), 1);
       if ( !(v23 | v24) )
       {
         sub_4164A0(*(_DWORD **)(v8 + 444), *(_DWORD *)(*(_DWORD *)(v8 + 444) + 4132) - 1);
-        v25 = (float *)sub_417140(0);
+        v25 = (float *)sub_417140(*(_DWORD **)(v8 + 444), 0);
         v26 = v25[1] * -1.0;
         v74 = 0;
         v72 = v26 - 0.0;
@@ -280,9 +282,9 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
         v60 = v72;
         v73 = 0.0 - v27;
         v61 = v73;
-        sub_46B970(&v60, &v60);
-        v28 = (float *)sub_417140(0);
-        v29 = (float *)sub_417140(1);
+        sub_46B970((int)&v60, (int)&v60);
+        v28 = (float *)sub_417140(*(_DWORD **)(v8 + 444), 0);
+        v29 = (float *)sub_417140(*(_DWORD **)(v8 + 444), 1);
         if ( v28[1] * *v29 - v29[1] * *v28 <= 0.0 )
           v30 = -1.0;
         else
@@ -293,7 +295,7 @@ int __cdecl sub_4426B0(_DWORD *self, int ArgList, int a3)
         v62 = v62 * v30;
         sub_4196F0(v31, &v60, 0.0, 0.0, 0, 0);
       }
-      if ( *(float *)(sub_417140(0) + 4) > (double)v50 )
+      if ( *(float *)(sub_417140(*(_DWORD **)(v8 + 444), 0) + 4) > (double)v50 )
         break;
       if ( ++v21 >= 1000 )
         goto LABEL_42;

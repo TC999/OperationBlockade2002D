@@ -5,11 +5,11 @@ void __cdecl sub_451770(_DWORD *self)
   char *v3; // edi
 
   v2 = (char *)self[2];
-  *self = &off_499ADC;
+  *self = (uint32)(uintptr_t)&off_499ADC;
   if ( v2 )
   {
     v3 = v2 - 4;
-    `eh vector destructor iterator'(v2, 0xCu, *((_DWORD *)v2 - 1), (void (__cdecl *)(void *))sub_451710);
+    sub_451820(self);
     sub_4885A6(v3);
     self[2] = 0;
   }

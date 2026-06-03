@@ -104,7 +104,7 @@ int __cdecl sub_470616(int **self)
   {
     sub_46C866((int)v11, 16, v10, (int (__cdecl *)(int))sub_46C80E);
     v12 = v68;
-    v63 = v68;
+    v63 = (_DWORD *)(void*)v68;
   }
   else
   {
@@ -206,7 +206,7 @@ int __cdecl sub_470616(int **self)
             v39 = ++v60;
             v36[1] = *((_DWORD *)v37 + 1);
           }
-          while ( v39 < v38[1][1044] );
+          while ( v39 < (unsigned int)v38[1][1044] );
           v1 = v58;
           v18 = (int *)v66;
           v17 = v70;
@@ -214,7 +214,7 @@ int __cdecl sub_470616(int **self)
         (*(void (__cdecl **)(int *, int, _DWORD, _DWORD *))(*v1[1] + 8))(v1[1], v64, 0, v63);
         v40 = v1[1];
         v18 += 4;
-        v41 = ++v64 < (unsigned int)v40[1045];
+        v41 = (unsigned int)++v64 < (unsigned int)v40[1045];
         v66 = (float *)v18;
       }
       while ( v41 );

@@ -18,7 +18,7 @@ int __cdecl sub_465F20(_DWORD *self)
     sub_4286C0(self, *(_DWORD *)(self[6] + 4 * i));
     v5 = *(void (__cdecl ****)(_DWORD, int))(self[6] + 4 * i);
     if ( v5 )
-      (**v5)(v5, 1);
+      (**v5)((uint32)(uintptr_t)v5, 1);
   }
   result = self[7];
   self[7] = self[6];

@@ -212,7 +212,7 @@ int __cdecl sub_47FA41(_DWORD *a1, int a2)
                 v22 = (v21 + v20) / v19;
                 v23 = v93[1];
                 if ( v23 > 0 && v22 >= 1 << v23 )
-                  LOWORD(v22) = (1 << v23) - 1;
+                  v22 = (unsigned short)((1 << v23) - 1);
               }
               v55 = v22;
             }
@@ -233,7 +233,7 @@ int __cdecl sub_47FA41(_DWORD *a1, int a2)
               {
                 v30 = (v29 + v28) / v27;
                 if ( v26 > 0 && v30 >= 1 << v26 )
-                  LOWORD(v30) = (1 << v26) - 1;
+                  v30 = (unsigned short)((1 << v26) - 1);
               }
               v57 = v30;
             }
@@ -255,7 +255,7 @@ int __cdecl sub_47FA41(_DWORD *a1, int a2)
                 v35 = (v32 + v34) / v33;
                 v36 = v93[3];
                 if ( v36 > 0 && v35 >= 1 << v36 )
-                  LOWORD(v35) = (1 << v36) - 1;
+                  v35 = (unsigned short)((1 << v36) - 1);
               }
               v59 = v35;
             }
@@ -277,7 +277,7 @@ int __cdecl sub_47FA41(_DWORD *a1, int a2)
                 v42 = (v39 + v41) / v40;
                 v43 = v93[4];
                 if ( v43 > 0 && v42 >= 1 << v43 )
-                  LOWORD(v42) = (1 << v43) - 1;
+                  v42 = (unsigned short)((1 << v43) - 1);
               }
               v58 = v42;
             }
@@ -299,7 +299,7 @@ int __cdecl sub_47FA41(_DWORD *a1, int a2)
                 v49 = (v46 + v48) / v47;
                 v50 = v93[5];
                 if ( v50 > 0 && v49 >= 1 << v50 )
-                  LOWORD(v49) = (1 << v50) - 1;
+                  v49 = (unsigned short)((1 << v50) - 1);
               }
               v56 = v49;
             }

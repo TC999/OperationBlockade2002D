@@ -27,10 +27,10 @@ char __cdecl sub_41CE60(int a1, unsigned int a2)
   }
   v3 = a2;
   v4 = v8;
-  LOBYTE(a1) = v11 != 8 ? 0 : 0x80;
-  BYTE1(a1) = a1;
+  a1 = v11 != 8 ? 0 : 0x80;
+  BYTE1(a1) = (_BYTE)a1;
   v5 = a1 << 16;
-  LOWORD(v5) = a1;
+  WORDn(v5, 0) = (_WORD)a1;
   v6 = a2 >> 2;
   memset32(v8, v5, a2 >> 2);
   memset(&v4[4 * v6], a1, v3 & 3);

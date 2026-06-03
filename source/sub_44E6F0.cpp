@@ -38,7 +38,7 @@ int __cdecl sub_44E6F0(_DWORD *self, int a2, const void *a3, _DWORD *a4)
       result = *v12;
       if ( *v12 && !*(_BYTE *)(result + 53) )
       {
-        v14 = (_DWORD *)sub_4010C0(a3);
+        v14 = (_DWORD *)sub_4010C0((int)(intptr_t)(a3));
         result = sub_41D960((_DWORD *)*v12, v14, a4);
       }
       ++v12;

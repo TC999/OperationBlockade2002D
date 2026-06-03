@@ -1,3 +1,6 @@
+extern char aDoppler[];
+extern char aVolume[];
+
 //----- (0041D9C0) --------------------------------------------------------
 _DWORD *__cdecl sub_41D9C0(_DWORD *self)
 {
@@ -31,11 +34,11 @@ _DWORD *__cdecl sub_41D9C0(_DWORD *self)
   self[23] = 0;
   self[24] = 0;
   self[25] = 0;
-  *self = &off_4992B4;
+  *self = (uint32)(uintptr_t)&off_4992B4;
   dword_5200E8 = (int)self;
   byte_4A34BC = sub_422BA0(AppName, aDoppler, 1) != 0;
   *(_DWORD *)&dword_4A34C0 = sub_422BA0(AppName, aVolume, 100);
-  v2 = operator new(0x4600u);
+  v2 = (_DWORD *)operator new(0x4600u);
   if ( v2 )
   {
     v3 = v2 + 9;
@@ -59,7 +62,7 @@ _DWORD *__cdecl sub_41D9C0(_DWORD *self)
     v5 = 0;
   }
   v6 = 0;
-  self[9] = v5;
+  self[9] = (uint32)(uintptr_t)v5;
   memset(v5, 0, 0x4600u);
   do
   {

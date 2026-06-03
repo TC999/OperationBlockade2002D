@@ -21,7 +21,7 @@ int __cdecl sub_45F3A0(char *self, int a2, bool *a3, bool *a4, _DWORD *a5)
       goto LABEL_5;
     }
 LABEL_19:
-    LODWORD(v10) = a4;
+    v10 = (uintptr_t)a4;
     *a4 = 0;
     *a3 = 0;
     *a5 = 0;

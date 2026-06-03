@@ -30,11 +30,11 @@ LABEL_5:
     sub_47E2BE(v3, a3);
     return;
   }
-  sub_47D9E9(v3, (int)&Buf + 3, 1);
+  sub_47D9E9((int)v3, (int)&Buf + 3, 1);
   if ( !sub_47E2BE(v3, 0) )
   {
-    v5 = HIBYTE(Buf);
-    if ( HIBYTE(Buf) < 4u )
+    v5 = BYTE3(Buf);
+    if ( BYTE3(Buf) < 4u )
     {
       if ( (*(_BYTE *)(a2 + 8) & 1) != 0 && fabs(*((float *)v3 + 76) * 100000.0 + 0.5 - 45455.0) > 500.0 )
         sub_478B0A((int)v3, (int)"Ignoring incorrect gAMA value when sRGB is also present");

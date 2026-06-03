@@ -16,7 +16,7 @@ int __cdecl sub_469650(_DWORD *self, char *String2, char *a3, char a4)
     if ( a4 )
       sub_40A120(
         0,
-        "%s was linked as type %s, but is type %s",
+        (char *)"%s was linked as type %s, but is type %s",
         String2,
         a3,
         *(const char **)(*(_DWORD *)(self[5] + 4 * v5) + 12));

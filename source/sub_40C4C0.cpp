@@ -1,4 +1,7 @@
 //----- (0040C4C0) --------------------------------------------------------
+static char aCanTAcquireMou[] = "Can't Acquire Mouse";
+static char aReacquiredMous[] = "Reacquired Mouse";
+
 _DWORD *__cdecl sub_40C4C0(_DWORD *self, _DWORD *a2)
 {
   int v3; // ebp
@@ -41,16 +44,16 @@ _DWORD *__cdecl sub_40C4C0(_DWORD *self, _DWORD *a2)
         return a2;
       }
       sub_4229D0(aReacquiredMous, v13);
-      sub_40C4C0(v15);
+      sub_40C4C0(v15, a2);
       sub_488CEE((LPVOID)v15[1]);
     }
     do
     {
       v8 = *((_BYTE *)self + v3 + 288);
-      LOBYTE(v15[0]) = *((_BYTE *)&v17[3] + v3) >> 7;
-      if ( LOBYTE(v15[0]) != v8 )
+      *(_BYTE*)&(v15[0]) = *((_BYTE *)&v17[3] + v3) >> 7;
+      if ( *(_BYTE*)&(v15[0]) != v8 )
       {
-        *((_BYTE *)self + v3 + 288) = v15[0];
+        *((_BYTE *)self + v3 + 288) = (_BYTE)v15[0];
         v9 = self[1];
         if ( v9 )
         {

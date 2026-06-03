@@ -39,7 +39,8 @@ int __cdecl sub_4119F0(int self)
   memset(*(void **)(self + 8248), 0, 4 * *(_DWORD *)(self + 8252));
   v7 = *(void **)(self + 8248);
   *(_DWORD *)(self + 8252) = 0;
-  result = sub_488CEE(v7);
+  sub_488CEE(v7);
+  result = 0;
   *(_DWORD *)(self + 8256) = 0;
   *(_DWORD *)(self + 8248) = 0;
   return result;

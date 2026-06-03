@@ -1,4 +1,8 @@
+#include "common.h"
+
 //----- (00403CE0) --------------------------------------------------------
+extern "C" void __cdecl __ehvec_dtor(void *ptr, unsigned int size, int count, void (__cdecl *pDtor)(void *));
+
 void __cdecl sub_403CE0(_DWORD *self)
 {
   char *v2; // eax
@@ -15,7 +19,7 @@ void __cdecl sub_403CE0(_DWORD *self)
   if ( v2 )
   {
     v3 = v2 - 4;
-    `eh vector destructor iterator'(v2, 0xACu, *((_DWORD *)v2 - 1), sub_403A90);
+    __ehvec_dtor(v2, 0xACu, *((_DWORD *)v2 - 1), sub_403A90);
     sub_4885A6(v3);
   }
   v4 = (char *)self[8];
@@ -24,7 +28,7 @@ void __cdecl sub_403CE0(_DWORD *self)
   if ( v4 )
   {
     v5 = v4 - 4;
-    `eh vector destructor iterator'(v4, 0xACu, *((_DWORD *)v4 - 1), sub_403A90);
+    __ehvec_dtor(v4, 0xACu, *((_DWORD *)v4 - 1), sub_403A90);
     sub_4885A6(v5);
   }
   v6 = (void *)self[11];
@@ -38,7 +42,7 @@ void __cdecl sub_403CE0(_DWORD *self)
   if ( v8 )
   {
     v9 = v8 - 4;
-    `eh vector destructor iterator'(v8, 0x58u, *((_DWORD *)v8 - 1), sub_403AE0);
+    __ehvec_dtor(v8, 0x58u, *((_DWORD *)v8 - 1), sub_403AE0);
     sub_4885A6(v9);
   }
   self[3] = 0;

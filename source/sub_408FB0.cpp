@@ -4,7 +4,6 @@ float *__cdecl sub_408FB0(float *self)
   DWORD Time; // eax
   int v3; // ecx
   double v4; // st7
-  char v6; // c0
   char v7; // al
   float v8; // eax
   float *result; // eax
@@ -18,7 +17,7 @@ float *__cdecl sub_408FB0(float *self)
   *((_DWORD *)self + 15) = Time;
   v4 = (double)v3 * 0.001;
   self[17] = v4;
-  if ( !v6 )
+  if ( v4 >= 0.2 )
     v4 = 0.2;
   self[17] = v4;
   v7 = *((_BYTE *)self + 20);
@@ -71,7 +70,7 @@ float *__cdecl sub_408FB0(float *self)
     *((_DWORD *)self + 22) = *v12;
     *((_DWORD *)self + 23) = v12[1];
     result = (float *)v12[2];
-    *((_DWORD *)self + 24) = result;
+    *((_DWORD *)self + 24) = (uint32)(uintptr_t)(result);
   }
   return result;
 }

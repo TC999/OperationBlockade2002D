@@ -5,12 +5,12 @@ int __cdecl sub_484647(_DWORD *a1)
   int result; // eax
 
   v1 = (_DWORD *)(*(int (__cdecl **)(_DWORD *, int, int))a1[1])(a1, 1, 88);
-  a1[105] = v1;
+  a1[105] = (uint32)(size_t)v1;
   v1[17] = 0;
   v1[13] = 0;
-  *v1 = sub_48455F;
-  v1[2] = nullsub_2;
-  v1[3] = sub_484630;
+  *v1 = (uint32)(size_t)sub_48455F;
+  v1[2] = 0;
+  v1[3] = (uint32)(size_t)sub_484630;
   if ( (int)a1[25] > 4 )
   {
     *(_DWORD *)(*a1 + 20) = 54;

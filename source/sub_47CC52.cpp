@@ -1,4 +1,5 @@
 //----- (0047CC52) --------------------------------------------------------
+static int nullsub_3(int a1) { return 0; }
 int __cdecl sub_47CC52(int a1)
 {
   signed int i; // edi

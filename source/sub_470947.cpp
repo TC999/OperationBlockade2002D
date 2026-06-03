@@ -145,7 +145,7 @@ int __cdecl sub_470947(_DWORD *self)
   {
     sub_46C866((int)v13, 16, v12, (int (__cdecl *)(int))sub_46C80E);
     v14 = v94;
-    v98 = v94;
+    v98 = (_DWORD *)(void*)v94;
   }
   else
   {
@@ -229,7 +229,7 @@ int __cdecl sub_470947(_DWORD *self)
               }
             }
             v29 = *(_DWORD *)v108;
-            if ( *(_DWORD *)v108 != v107 )
+            if ( (int)*(_DWORD *)v108 != v107 )
             {
               v30 = *v1;
               v66 = *((_DWORD *)v23 - 2);

@@ -45,11 +45,11 @@ int __cdecl sub_46EBB4(_DWORD *self)
         v9 = v5[1];
         v23 = *v7;
         v10 = *v5;
-        v11 = (((v23 & 0xFFFF07E0) + (v10 & 0xFFFF07E0) + (v8 & 0xFFFF07E0) + (v9 & 0xFFFF07E0) + 64) >> 2)
-            ^ (((v23 & 0xFFFFF81F) + (v10 & 0xFFFFF81F) + (v8 & 0xFFFFF81F) + (v9 & 0xFFFFF81F) + 4098) >> 2);
+        v11 = (__int16)((((v23 & 0xFFFF07E0) + (v10 & 0xFFFF07E0) + (v8 & 0xFFFF07E0) + (v9 & 0xFFFF07E0) + 64) >> 2)
+            ^ (((v23 & 0xFFFFF81F) + (v10 & 0xFFFFF81F) + (v8 & 0xFFFFF81F) + (v9 & 0xFFFFF81F) + 4098) >> 2));
         v12 = (v23 & 0xF81F) + (v10 & 0xF81F) + (v8 & 0xF81F);
         v13 = v22++;
-        *v13 = ((v12 + (v9 & 0xF81Fu) + 4098) >> 2) ^ v11 & 0x7E0;
+        *v13 = (unsigned __int16)(((v12 + (v9 & 0xF81Fu) + 4098) >> 2) ^ v11 & 0x7E0);
         v5 = v21 + 2;
         v7 = v20 + 2;
         v14 = (unsigned int)(v21 + 2) < v17;

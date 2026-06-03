@@ -19,7 +19,7 @@ int __cdecl sub_4089D0(_DWORD *self, int a2, int a3)
       {
         if ( *(_DWORD *)(v7 + 84) == a2 )
         {
-          v8 = sub_407190(self, v4, 1);
+          v8 = (_BYTE *)sub_407190(self, v4, 1);
           v8[84] = 1;
           *((_DWORD *)v8 + 22) = a3;
         }

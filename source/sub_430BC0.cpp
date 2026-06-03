@@ -56,8 +56,8 @@ int __cdecl sub_430BC0(int self, int *a2, int *a3, int a4, int *a5)
   {
     sub_4229D0("%s hit on section %d", *(const char **)(v8 + 4), v9);
     v12 = *(_DWORD *)(LODWORD(v5) + 4);
-    LOBYTE(v13) = *(_BYTE *)(v12 + 312);
-    sub_430F00(v9, (int)v7, *(float *)(v12 + 300), v13);
+        SLOBYTE(v13) = *(_BYTE *)(v12 + 312);
+      sub_430F00(self, v9, (int)v7, *(float *)(v12 + 300), v13);
   }
 LABEL_13:
   v14 = *(_DWORD *)(self + 432);
@@ -68,7 +68,7 @@ LABEL_13:
   v24[10] = 1065353216;
   v24[5] = 1065353216;
   v24[0] = 1065353216;
-  sub_407690(v14, a4, v24);
-  sub_46C5C5(v7, v7, v24);
+  sub_407690(v14, a4, (uint32*)(v24));
+  sub_46C5C5((float *)v7, (float *)v7, (float *)v24);
   return 5;
 }

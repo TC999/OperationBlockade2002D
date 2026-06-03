@@ -1,4 +1,5 @@
 //----- (00476BED) --------------------------------------------------------
+void __cdecl sub_476C0C(LPVOID *);
 LPVOID *__cdecl sub_476BED(LPVOID *self, char a2)
 {
   sub_476C0C(self);

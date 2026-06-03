@@ -34,8 +34,8 @@ int (__cdecl *__cdecl sub_478E09(jmp_buf Buf, int a2, int a3))(jmp_buf, int, _DW
       if ( (v3[53] & 7) != 0 || (unsigned int)v3[46] < 5 )
       {
         if ( a3 )
-          sub_47DAC5(v3, a3, 15);
-        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+          sub_47DAC5((int)v3, (char*)a3, 15);
+        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
       }
       break;
     case 2:
@@ -43,18 +43,18 @@ int (__cdecl *__cdecl sub_478E09(jmp_buf Buf, int a2, int a3))(jmp_buf, int, _DW
       if ( (v7 & 7) == 4 )
         break;
       if ( !a3 )
-        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
       v6 = (v7 & 4) == 0;
 LABEL_34:
       if ( !v6 )
-        sub_47DAC5(v3, a3, 255);
-      return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+        sub_47DAC5((int)v3, (char*)a3, 255);
+      return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
     case 3:
       if ( (v3[53] & 3) != 0 || (unsigned int)v3[46] < 3 )
       {
         if ( a3 )
-          sub_47DAC5(v3, a3, 51);
-        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+          sub_47DAC5((int)v3, (char*)a3, 51);
+        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
       }
       break;
     case 4:
@@ -66,18 +66,18 @@ LABEL_34:
         v6 = (v5 & 2) == 0;
         goto LABEL_34;
       }
-      return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+      return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
     case 5:
       if ( (v3[53] & 1) != 0 || (unsigned int)v3[46] < 2 )
       {
         if ( a3 )
-          sub_47DAC5(v3, a3, 85);
-        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+          sub_47DAC5((int)v3, (char*)a3, 85);
+        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
       }
       break;
     default:
       if ( *((_BYTE *)v3 + 276) == 6 && (v3[53] & 1) == 0 )
-        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3(v3);
+        return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_47EAA3((int)v3, (void*)v3);
       break;
   }
 LABEL_36:
@@ -93,9 +93,9 @@ LABEL_36:
       {
         sub_47E2BE(v3, 0);
         sub_47AE26(v3, (int)&Buf, 4);
-        v3[63] = sub_47D9C3(&Buf);
-        sub_47AF37(v3);
-        sub_47D9E9(v3, (int)(v3 + 67), 4);
+        v3[63] = sub_47D9C3((unsigned char *)&Buf);
+        sub_47AF37((int)v3);
+        sub_47D9E9((int)v3, (int)(v3 + 67), 4);
         if ( v3[67] != *(_DWORD *)"IDAT" )
           sub_478AEB(v3, (int)"Not enough image data");
       }
@@ -106,10 +106,10 @@ LABEL_36:
       v3[25] = v10;
       if ( v8 > v9 )
         v3[26] = v9;
-      sub_47D9E9(v3, v10, v3[26]);
+      sub_47D9E9((int)v3, v10, v3[26]);
       v3[63] -= v3[26];
     }
-    v11 = sub_47D552(v3 + 25, 1);
+    v11 = sub_47D552((unsigned __int8 **)(v3 + 25), 1);
     if ( v11 == 1 )
       break;
     if ( v11 )
@@ -138,8 +138,8 @@ LABEL_59:
   v3[60] = v15;
   v17 = (unsigned __int8 *)v3[55];
   v3[61] = v16 >> 3;
-  sub_47DFA4(v3, v3 + 60, v17 + 1, v3[54] + 1, *v17);
-  sub_47D96D(v3, v3[54], v3[55], v3[50] + 1);
+  sub_47DFA4((int)v3, (int)(v3 + 60), v17 + 1, (unsigned __int8 *)(v3[54] + 1), *v17);
+  sub_47D96D((int)v3, (void *)v3[54], (const void *)v3[55], v3[50] + 1);
   if ( v3[24] )
     sub_47AB10(v3);
   if ( *((_BYTE *)v3 + 275) && (v3[24] & 2) != 0 )
@@ -148,18 +148,18 @@ LABEL_59:
     if ( v18 < 6u )
       sub_47DCDB(v3 + 60, v3[55] + 1, v18);
     if ( a3 )
-      sub_47DAC5(v3, a3, dword_49BD40[*((unsigned __int8 *)v3 + 276)]);
+      sub_47DAC5((int)v3, (char *)a3, ((int*)&dword_49BD40)[*((unsigned __int8 *)v3 + 276)]);
     if ( a2 )
-      sub_47DAC5(v3, a2, dword_49BD24[*((unsigned __int8 *)v3 + 276)]);
+      sub_47DAC5((int)v3, (char *)a2, ((int*)&dword_49BD24)[*((unsigned __int8 *)v3 + 276)]);
   }
   else
   {
     if ( a2 )
-      sub_47DAC5(v3, a2, 255);
+      sub_47DAC5((int)v3, (char *)a2, 255);
     if ( a3 )
-      sub_47DAC5(v3, a3, 255);
+      sub_47DAC5((int)v3, (char *)a3, 255);
   }
-  sub_47EAA3(v3);
+  sub_47EAA3((int)v3, (void*)v3);
   result = (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))v3[91];
   if ( result )
     return (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))result(

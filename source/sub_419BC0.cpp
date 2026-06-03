@@ -12,7 +12,7 @@ char __cdecl sub_419BC0(_DWORD *self, int a2)
   v4 = v3 - 1;
   if ( v3 - 1 < 0 )
     return 1;
-  for ( i = &v7[20 * v4 + 4]; sub_416350((int)self, i, 1); i -= 5 )
+  for ( i = (_DWORD*)(&v7[20 * v4 + 4]); sub_416350((int)self, i, 1); i -= 5 )
   {
     if ( --v4 < 0 )
       return 1;

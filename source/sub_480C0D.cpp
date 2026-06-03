@@ -136,16 +136,16 @@ LABEL_16:
       }
       v9 -= v33;
       v15 = (v8 >> v9) & ((1 << v33) - 1);
-      if ( v15 >= dword_49CD08[v33] )
+      if ( v15 >= ((int*)&dword_49CD08)[v33] )
         v16 = (v8 >> v9) & ((1 << v33) - 1);
       else
-        v16 = v15 + dword_49CD48[v33];
-      *(_WORD *)(v24 + 2 * dword_49C160[v31]) = v16 << v25;
+        v16 = v15 + ((int*)&dword_49CD48)[v33];
+      *(_WORD *)(v24 + 2 * ((int*)&dword_49C160)[v31]) = (_WORD)(v16 << v25);
       v8 = v29;
     }
     v10 = ++v31;
   }
-  *(_DWORD *)a1[5] = v17;
+  *(_DWORD *)a1[5] = (uint32)(size_t)v17;
   *(_DWORD *)(a1[5] + 4) = v18;
   a1[94] = v19;
   v4[5] = v9;

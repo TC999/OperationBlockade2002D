@@ -1,3 +1,8 @@
+extern char aHelptext1[];
+extern char aAirStrikeTorpe[];
+extern char aHelptext2[];
+extern char aQAWTEBSpaceMou[];
+
 //----- (0043D060) --------------------------------------------------------
 int __cdecl sub_43D060(_DWORD *self)
 {
@@ -7,5 +12,5 @@ int __cdecl sub_43D060(_DWORD *self)
   v2 = sub_424350(self, aHelptext1);
   sub_421110(*((LPVOID **)v2 + 28), aAirStrikeTorpe);
   v3 = sub_424350(self, aHelptext2);
-  return sub_421110(*((LPVOID **)v3 + 28), aQAWTEBSpaceMou);
+  return 0;
 }

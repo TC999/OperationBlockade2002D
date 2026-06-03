@@ -4,7 +4,7 @@ int __cdecl sub_409B70(_DWORD *self)
   int v2; // eax
   int result; // eax
 
-  *self = &off_49914C;
+  *self = (uint32)&off_49914C;
   v2 = self[12];
   if ( v2 )
   {
@@ -17,6 +17,6 @@ int __cdecl sub_409B70(_DWORD *self)
     result = (*(int (__stdcall **)(_DWORD))(*(_DWORD *)result + 8))(self[13]);
     self[13] = 0;
   }
-  *self = &off_499040;
+  *self = (uint32)&off_499040;
   return result;
 }

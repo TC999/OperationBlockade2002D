@@ -23,7 +23,7 @@ unsigned int *__cdecl sub_46C888(unsigned int *self, unsigned int a2)
   if ( v4 == 4 )
   {
     v5 = 16;
-    sub_46D8FD(0, "D3DX: Detected a mesh that is using XYZRHW which is not supported.", v10);
+      sub_46D8FD(0, (char *)"D3DX: Detected a mesh that is using XYZRHW which is not supported.", v10);
     v3 = a2;
   }
   if ( v4 >= 6 )
@@ -32,9 +32,9 @@ unsigned int *__cdecl sub_46C888(unsigned int *self, unsigned int a2)
     if ( !v6 || v6 > 5 )
     {
       if ( sub_46D957(
-             (char)"d:\\builds\\nt32_chk\\multimedia\\directx\\dxg\\d3dx8\\mesh\\gxcrackfvf.h",
+             "d:\\builds\\nt32_chk\\multimedia\\directx\\dxg\\d3dx8\\mesh\\gxcrackfvf.h",
              126,
-             (int)"(dwPosition >= 1) && (dwPosition <= 5)") )
+             "(dwPosition >= 1) && (dwPosition <= 5)") )
       {
         DebugBreak();
       }
@@ -70,7 +70,7 @@ unsigned int *__cdecl sub_46C888(unsigned int *self, unsigned int a2)
     self[6] = v5;
     for ( self[8] = v7; v7; --v7 )
     {
-      v5 += dword_499ED8[v8 & 3];
+      v5 += *(&dword_499ED8 + (v8 & 3));
       v8 >>= 2;
     }
   }

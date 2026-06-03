@@ -5,9 +5,9 @@ int __cdecl sub_43DD80(LPVOID **self)
   int v3; // ecx
   LPVOID *v4; // edi
 
-  sub_463070(*(_DWORD *)(dword_520970 + 280));
-  sub_4630D0(*(_DWORD *)(dword_520970 + 280));
-  result = sub_463150(*(_DWORD *)(dword_520970 + 280));
+  sub_463070((_DWORD *)*(_DWORD *)(dword_520970 + 280));
+  sub_4630D0((char *)*(_DWORD *)(dword_520970 + 280));
+  result = sub_463150((_DWORD *)*(_DWORD *)(dword_520970 + 280));
   v3 = (int)self[11];
   if ( v3 )
   {
@@ -16,7 +16,7 @@ int __cdecl sub_43DD80(LPVOID **self)
     if ( v4 )
     {
       sub_41C700(self[11]);
-      result = sub_4885A6(v4);
+      result = 0;
     }
     self[11] = 0;
   }

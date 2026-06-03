@@ -165,20 +165,20 @@ int __cdecl sub_4719C6(int *self, unsigned __int8 *a2, unsigned int a3)
     v35 = v19 + 4 * *(unsigned __int16 *)(a2 + 5);
     if ( v19 < v35 )
     {
-      LOBYTE(v20) = v53;
-      LOBYTE(v21) = v53;
+      *(_BYTE *)&v20 = (_BYTE)v53;
+      *(_BYTE *)&v21 = (_BYTE)v53;
       while ( 1 )
       {
-        LOBYTE(v22) = v42;
+        *(_BYTE *)&v22 = (_BYTE)v42;
         if ( v44 == 20 )
           break;
         switch ( v44 )
         {
           case 21:
-            LOBYTE(v21) = BYTE1(*(_DWORD *)v18);
+            *(_BYTE *)&v21 = BYTE1(*(_DWORD *)v18);
             v40 = HIBYTE(*(_DWORD *)v18);
-            LOBYTE(v20) = BYTE2(*(_DWORD *)v18);
-            LOBYTE(v22) = *(_DWORD *)v18;
+            *(_BYTE *)&v20 = BYTE2(*(_DWORD *)v18);
+            *(_BYTE *)&v22 = *(_DWORD *)v18;
             v18 += 2;
             goto LABEL_47;
           case 24:
@@ -188,7 +188,7 @@ int __cdecl sub_4719C6(int *self, unsigned __int8 *a2, unsigned int a3)
             v22 = (8 * (v24 & 0x1F)) | ((unsigned __int8)(v24 & 0x1F) >> 2);
             ++v18;
 LABEL_46:
-            LOBYTE(v40) = -1;
+            *(_BYTE *)&v40 = -1;
             goto LABEL_47;
           case 25:
             v40 = 255 * (*v18 >> 15);
@@ -213,9 +213,9 @@ LABEL_47:
           goto LABEL_50;
         }
       }
-      LOBYTE(v20) = *((_BYTE *)v18 + 2);
-      LOBYTE(v21) = *((_BYTE *)v18 + 1);
-      LOBYTE(v22) = *(_BYTE *)v18;
+      *(_BYTE *)&v20 = *((_BYTE *)v18 + 2);
+      *(_BYTE *)&v21 = *((_BYTE *)v18 + 1);
+      *(_BYTE *)&v22 = *(_BYTE *)v18;
       v18 = (unsigned __int16 *)((char *)v18 + 3);
       goto LABEL_46;
     }

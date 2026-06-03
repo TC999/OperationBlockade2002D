@@ -13,15 +13,15 @@ _DWORD *__cdecl sub_422290(_DWORD *self)
   self[2] = 0;
   self[3] = 0;
   *((_BYTE *)self + 16) = 1;
-  *self = &off_499334;
+  *self = (uint32)&off_499334;
   self[5] = 0;
   self[6] = 0;
-  v2 = operator new(0x80u);
+  v2 = (_DWORD *)operator new(0x80u);
   if ( v2 )
     v3 = sub_412AB0(v2);
   else
     v3 = 0;
-  self[7] = v3;
+  self[7] = (uint32)v3;
   v4 = 512;
   if ( (unsigned int)dword_5209D8 <= 0x200 )
     v4 = dword_5209D8;
@@ -30,7 +30,7 @@ _DWORD *__cdecl sub_422290(_DWORD *self)
   v7 = (double)(unsigned int)(dword_5209D8 - v4) * 0.5;
   v6 = (double)(unsigned int)(dword_5209F4 - v4) * 0.5;
   sub_413090((int)v3, v6, v7, v8, v9);
-  sub_428680(self[7]);
+  sub_428680((_DWORD *)self[7], 0);
   (*(void (__cdecl **)(_DWORD, _DWORD))(*(_DWORD *)self[7] + 24))(self[7], 0);
   self[8] = 0;
   return self;

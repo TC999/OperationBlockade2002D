@@ -163,7 +163,7 @@ unsigned int __cdecl sub_45C920(_DWORD *self, char *a2, unsigned int a3, _DWORD 
     v40 = v9 + v8;
     if ( (int)(v9 + v8) < 0 )
       v10 = 0;
-    v37 = operator new(12 * v10);
+    v37 = (_DWORD *)operator new(12 * v10);
     v12 = v37;
     for ( k = (char *)v4[1]; k != a2; v12 += 3 )
     {
@@ -212,20 +212,20 @@ unsigned int __cdecl sub_45C920(_DWORD *self, char *a2, unsigned int a3, _DWORD 
     }
     sub_4885A6((LPVOID)v36[1]);
     result = v36[1];
-    v36[3] = &v37[3 * v40];
+    v36[3] = (DWORD)&v37[3 * v40];
     if ( result )
     {
       v19 = v36[2];
-      v36[1] = v37;
+      v36[1] =(DWORD)(uintptr_t)v37;
       v20 = v19 - result;
       result = (unsigned int)((unsigned __int64)(715827883LL * (int)(v19 - result)) >> 32) >> 31;
       v6 += v20 / 12;
     }
     else
     {
-      v36[1] = v37;
+      v36[1] =(DWORD)(uintptr_t)v37;
     }
-    v36[2] = &v37[3 * v6];
+    v36[2] = (DWORD)&v37[3 * v6];
   }
   return result;
 }

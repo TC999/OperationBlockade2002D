@@ -22,6 +22,6 @@ char *__cdecl sub_41A300(_DWORD *self, char *a2, char *a3)
     }
     while ( v3 != v5 );
   }
-  self[2] = v4;
+  self[2] = (_DWORD)(unsigned int)v4;
   return a2;
 }

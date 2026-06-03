@@ -85,7 +85,7 @@ int __cdecl sub_46E258(_DWORD *self)
     v44 = (unsigned int)v52 + *v52;
     v6 = (unsigned int *)((char *)v53 + *v53);
     v38 = v6;
-    v7 = operator new(4 * *(_DWORD *)(self[1] + 4184));
+    v7 = (_DWORD *)(void*)operator new(4 * *(_DWORD *)(self[1] + 4184));
     v62 = v7;
     if ( !v7 )
       goto LABEL_61;
@@ -159,13 +159,13 @@ int __cdecl sub_46E258(_DWORD *self)
               v18 = 16 * *(_DWORD *)(self[1] + 4176) * *(_DWORD *)(self[1] + 4180);
               memset((void *)*v6, 0, 4 * (v18 >> 2));
               v19 = &v17[4 * (v18 >> 2)];
-              v20 = v18;
+              v20 = (char)v18;
               v12 = v57;
               memset(v19, 0, v20 & 3);
               *((float *)v6 + 1) = 0.0;
               v6[2] = 0;
               ++v61;
-              v62[*v63] = v6;
+              v62[*v63] = (uint32)(void*)v6;
             }
             v13 = v63 + 2;
           }
@@ -198,13 +198,13 @@ int __cdecl sub_46E258(_DWORD *self)
                         v25 = *(_DWORD *)v62[*(_DWORD *)i] + 16 * *v59 * *(_DWORD *)(self[1] + 4176);
                         for ( j = v54 + 4; j < v51; j += 8 )
                         {
-                          v27 = *((float *)j + 1) * i[1] * *((float *)v59 + 1);
-                          *(float *)(v25 + 16 * *(_DWORD *)j) = v27 * *(v24 - 2) + *(float *)(v25 + 16 * *(_DWORD *)j);
-                          *(float *)(16 * *(_DWORD *)j + v25 + 4) = v27 * *(v24 - 1)
-                                                                  + *(float *)(16 * *(_DWORD *)j + v25 + 4);
-                          *(float *)(16 * *(_DWORD *)j + v25 + 8) = v27 * *v24 + *(float *)(16 * *(_DWORD *)j + v25 + 8);
+                        v27 = (float)(*((float *)j + 1) * i[1] * *((float *)v59 + 1));
+                        *(float *)(v25 + 16 * *(_DWORD *)j) = (float)(v27 * *(v24 - 2) + *(float *)(v25 + 16 * *(_DWORD *)j));
+                        *(float *)(16 * *(_DWORD *)j + v25 + 4) = (float)(v27 * *(v24 - 1)
+                                                                   + *(float *)(16 * *(_DWORD *)j + v25 + 4));
+                        *(float *)(16 * *(_DWORD *)j + v25 + 8) = (float)(v27 * *v24 + *(float *)(16 * *(_DWORD *)j + v25 + 8));
                           v28 = (float *)(16 * *(_DWORD *)j + v25 + 12);
-                          *v28 = v27 * v24[1] + *v28;
+                          *v28 = (float)(v27 * v24[1] + *v28);
                         }
                         v59 += 2;
                       }
@@ -229,8 +229,8 @@ int __cdecl sub_46E258(_DWORD *self)
           for ( k = v43; k < (float *)v12; k += 2 )
           {
             v6 = (unsigned int *)v62[*(_DWORD *)k];
-            v30 = k[1] + *((float *)v6 + 1);
-            *((float *)v6 + 1) = v30;
+            v30 = (float)(k[1] + *((float *)v6 + 1));
+            *((float *)v6 + 1) = (float)v30;
             if ( v30 + 0.0000099999997 >= 1.0 )
             {
               v31 = (_DWORD *)self[1];

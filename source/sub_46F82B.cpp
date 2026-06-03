@@ -3,7 +3,7 @@ int __cdecl sub_46F82B(_DWORD *self)
 {
   _DWORD *v2; // eax
   _DWORD *v3; // ecx
-  int v4; // edi
+  unsigned int v4; // edi
   void *v5; // eax
   void *v6; // ebx
   unsigned int v7; // ebx

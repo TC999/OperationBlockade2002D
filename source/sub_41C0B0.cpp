@@ -7,6 +7,9 @@ int __cdecl sub_41C0B0(_DWORD *self, float a2)
   result = self[8] + 1;
   self[8] = result;
   if ( result == 4 )
-    return sub_41C0E0();
+  {
+    sub_41C0E0((float *)self);
+    return result;
+  }
   return result;
 }

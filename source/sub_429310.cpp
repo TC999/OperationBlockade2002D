@@ -49,7 +49,7 @@ unsigned int __cdecl sub_429310(char *a1, char *a2)
         do
         {
           qmemcpy(v31, v3, sizeof(v31));
-          if ( (unsigned __int8)sub_429B10(a1) )
+          if ( (unsigned __int8)sub_429B10((uint32*)a1, NULL) )
           {
             for ( i = v3; i != a1; qmemcpy(i + 272, i, 0x110u) )
               i -= 272;
@@ -59,7 +59,7 @@ unsigned int __cdecl sub_429310(char *a1, char *a2)
           {
             qmemcpy(v30, v31, sizeof(v30));
             v4 = v3;
-            for ( j = v27; (unsigned __int8)sub_429B10(j); j -= 272 )
+            for ( j = v27; (unsigned __int8)sub_429B10((uint32*)j, NULL); j -= 272 )
             {
               qmemcpy(v4, j, 0x110u);
               v4 = j;
@@ -87,22 +87,22 @@ unsigned int __cdecl sub_429310(char *a1, char *a2)
     v9 = (int)((unsigned __int64)(2021161081LL * (v7 - v8)) >> 32) >> 7;
     qmemcpy(v31, &v8[272 * ((int)((v9 >> 31) + v9) / 2)], sizeof(v31));
     qmemcpy(v33, v8, sizeof(v33));
-    if ( (unsigned __int8)sub_429B10(v31) )
+    if ( (unsigned __int8)sub_429B10((uint32*)v31, NULL) )
     {
-      if ( (unsigned __int8)sub_429B10(v32) )
+      if ( (unsigned __int8)sub_429B10((uint32*)v32, NULL) )
         goto LABEL_23;
       v10 = v32;
-      if ( !(unsigned __int8)sub_429B10(v32) )
+      if ( !(unsigned __int8)sub_429B10((uint32*)v32, NULL) )
         v10 = v33;
     }
-    else if ( (unsigned __int8)sub_429B10(v32) )
+    else if ( (unsigned __int8)sub_429B10((uint32*)v32, NULL) )
     {
       v10 = v33;
     }
     else
     {
       v10 = v32;
-      if ( !(unsigned __int8)sub_429B10(v32) )
+      if ( !(unsigned __int8)sub_429B10((uint32*)v32, NULL) )
 LABEL_23:
         v10 = v31;
     }
@@ -111,9 +111,9 @@ LABEL_23:
     qmemcpy(v30, v34, sizeof(v30));
     while ( 1 )
     {
-      for ( ; (unsigned __int8)sub_429B10(v30); v8 += 272 )
+      for ( ; (unsigned __int8)sub_429B10((uint32*)v30, NULL); v8 += 272 )
         ;
-      for ( v11 -= 272; (unsigned __int8)sub_429B10(v11); v11 -= 272 )
+      for ( v11 -= 272; (unsigned __int8)sub_429B10((uint32*)v11, NULL); v11 -= 272 )
         ;
       if ( v11 <= v8 )
         break;
@@ -152,7 +152,7 @@ LABEL_23:
     do
     {
       qmemcpy(v31, v16, sizeof(v31));
-      if ( (unsigned __int8)sub_429B10(a1) )
+      if ( (unsigned __int8)sub_429B10((uint32*)a1, NULL) )
       {
         for ( k = v16; k != a1; qmemcpy(k + 272, k, 0x110u) )
           k -= 272;
@@ -162,7 +162,7 @@ LABEL_23:
       {
         qmemcpy(v30, v31, sizeof(v30));
         v17 = v16;
-        for ( m = v25; (unsigned __int8)sub_429B10(m); m -= 272 )
+        for ( m = v25; (unsigned __int8)sub_429B10((uint32*)m, NULL); m -= 272 )
         {
           qmemcpy(v17, m, 0x110u);
           v17 = m;
@@ -185,7 +185,7 @@ LABEL_23:
     for ( n = (char *)(result - 272); ; v21 = n )
     {
       qmemcpy(v30, v20, sizeof(v30));
-      for ( ii = v20; (unsigned __int8)sub_429B10(v21); v21 -= 272 )
+      for ( ii = v20; (unsigned __int8)sub_429B10((uint32*)v21, NULL); v21 -= 272 )
       {
         qmemcpy(ii, v21, 0x110u);
         ii = v21;

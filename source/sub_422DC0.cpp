@@ -22,6 +22,6 @@ int __cdecl sub_422DC0(HKEY hKey, LPCSTR lpValueName, int Data)
   else
   {
     sprintf(Buffer, "%d", Data);
-    return sub_422E60((LPCSTR)hKey, lpValueName, Buffer);
+    return sub_422E60((CHAR *)hKey, lpValueName, Buffer);
   }
 }

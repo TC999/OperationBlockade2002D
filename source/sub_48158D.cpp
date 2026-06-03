@@ -1,3 +1,5 @@
+extern double dbl_49CE48[];
+
 //----- (0048158D) --------------------------------------------------------
 int __cdecl sub_48158D(_DWORD *a1)
 {
@@ -40,12 +42,12 @@ int __cdecl sub_48158D(_DWORD *a1)
     {
       if ( *(_DWORD *)v6 == 1 )
       {
-        v25 = sub_48559A;
+        v25 = (int (__cdecl *)(int, int, int, int, int))sub_48559A;
         goto LABEL_19;
       }
       if ( *(_DWORD *)v6 == 2 )
       {
-        v25 = sub_4853DC;
+        v25 = (int (__cdecl *)(int, int, int, int, int))sub_4853DC;
         goto LABEL_19;
       }
       if ( *(_DWORD *)v6 == 4 )
@@ -74,7 +76,7 @@ LABEL_19:
           *(_DWORD *)(*a1 + 20) = 47;
           goto LABEL_12;
         }
-        v25 = sub_48566F;
+        v25 = (int (__cdecl *)(int, int, int, int, int))sub_48566F;
         v24 = 2;
       }
       else
@@ -105,25 +107,25 @@ LABEL_20:
                   *(__int16 *)((char *)v14 + v23) = (*v14 * *(__int16 *)((char *)v14 + v15) + 2048) >> 12;
                   ++v14;
                 }
-                while ( (int)v14 < (int)word_49CE08 );
+                while ( (int)v14 < (int)&word_49CE08 );
               }
               else
               {
                 v10 = *(_DWORD *)(v6 + 44);
                 v11 = 0;
-                v22 = (double *)word_49CE08;
+                v22 = (double *)&word_49CE08;
                 do
                 {
-                  v12 = (double *)word_49CE08;
+                  v12 = (double *)&word_49CE08;
                   do
                   {
                     v13 = (double)*(unsigned __int16 *)(v19 + 2 * v11) * *v12++;
                     *(float *)(v10 + 4 * v11++) = v13 * *v22;
                   }
-                  while ( (int)v12 < (int)dbl_49CE48 );
+                  while ( (int)v12 < (int)&dbl_49CE48 );
                   ++v22;
                 }
-                while ( (int)v22 < (int)dbl_49CE48 );
+                while ( (int)v22 < (int)&dbl_49CE48 );
               }
             }
             else
@@ -148,7 +150,7 @@ LABEL_20:
       if ( v21 >= a1[8] )
         return result;
     }
-    v25 = sub_4850C7;
+    v25 = (int (__cdecl *)(int, int, int, int, int))sub_4850C7;
     goto LABEL_19;
   }
   return result;

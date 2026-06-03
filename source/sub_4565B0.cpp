@@ -29,7 +29,7 @@ int __cdecl sub_4565B0(int self)
     *(_DWORD *)(self + 464) = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 392) + 16 * v5 + 376) + 8 * v6 + 4);
   }
   v7 = *(_DWORD *)(self + 392);
-  v8 = dword_5216EC[*(_DWORD *)(v7 + 292)];
+  v8 = ((int *)dword_5216EC)[*(_DWORD *)(v7 + 292)];
   if ( *(_DWORD *)(self + 468) >= *(_DWORD *)(*(_DWORD *)(v8 + 8) + 12 * *(_DWORD *)(self + 464) + 4) )
     *(_DWORD *)(self + 468) = 0;
   v13 = *(float *)(self + 432);

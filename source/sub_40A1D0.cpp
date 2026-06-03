@@ -1,3 +1,10 @@
+extern int Mode;
+extern char aCanTOpenIniFil[];
+extern char asc_4A1F3C[];
+extern char asc_4A1F38[];
+extern char asc_4A1DF8[];
+extern char asc_4A1F34[];
+
 //----- (0040A1D0) --------------------------------------------------------
 void *__cdecl sub_40A1D0(void *self, char *FileName)
 {
@@ -70,7 +77,7 @@ void *__cdecl sub_40A1D0(void *self, char *FileName)
   bool FileNameb; // [esp+5Ch] [ebp+4h]
   bool FileNamec; // [esp+5Ch] [ebp+4h]
 
-  *(_BYTE *)self = (_BYTE)FileName;
+  *(_BYTE *)self = *FileName;
   *((_DWORD *)self + 1) = 0;
   *((_DWORD *)self + 2) = 0;
   *((_DWORD *)self + 3) = 0;
@@ -78,16 +85,16 @@ void *__cdecl sub_40A1D0(void *self, char *FileName)
   v70 = 0;
   *((_DWORD *)self + 69) = 0;
   *((_DWORD *)self + 70) = 0;
-  v3 = fopen(FileName, Mode);
+  v3 = fopen(FileName, (const char *)(uintptr_t)Mode);
   v4 = v3;
   if ( !v3 )
-    sub_4281B0(aCanTOpenIniFil, (char)FileName);
+    sub_4281B0(aCanTOpenIniFil, FileName);
   fseek(v3, 0, 2);
   v6 = ftell(v4);
   fseek(v4, 0, 0);
   v7 = v6 + 1;
   v8 = operator new(v7);
-  *((_DWORD *)self + 69) = v8;
+  *((_DWORD *)self + 69) = (DWORD)(uintptr_t)v8;
   sub_4898CA(v8, 1u, v7 - 1, v4);
   *(_BYTE *)(*((_DWORD *)self + 69) + v7 - 1) = 0;
   fclose(v4);
@@ -194,7 +201,7 @@ LABEL_26:
         v66[4] = v24 == 0;
         v68 = 0;
         v69 = 0;
-        LOBYTE(v70) = 1;
+        v70 = (v70 & 0xFFFFFF00) | 1;
         v27 = v26 + 1;
         if ( v25 )
           v17 = (*((_DWORD *)self + 2) - v25) / 24;
@@ -203,7 +210,7 @@ LABEL_26:
           if ( v25 )
           {
             if ( v27 < (*((_DWORD *)self + 2) - v25) / 24 )
-              sub_40BB60(v25 + 24 * v27, *((_DWORD *)self + 2));
+              sub_40BB60((_DWORD *)self, (_DWORD *)(v25 + 24 * v27), *((int *)self + 2));
             v26 = v60;
           }
         }
@@ -213,9 +220,9 @@ LABEL_26:
             v28 = (*((_DWORD *)self + 2) - v25) / 24;
           else
             v28 = 0;
-          sub_40B840(*((_DWORD *)self + 2), v27 - v28, v66);
+          sub_40B840((_DWORD *)self, *((int *)self + 2), v27 - v28, (int)v66);
         }
-        LOBYTE(v70) = 0;
+        v70 = (v70 & 0xFFFFFF00);
         sub_4885A6(v67);
         v29 = k + *((_DWORD *)self + 69);
         v30 = *((_DWORD *)self + 1);
@@ -304,7 +311,7 @@ LABEL_26:
           else
           {
             v56 = v54 ? (*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12) - v54) / 12 : 0;
-            sub_45C920(*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12), v61 - v56, v65);
+            sub_45C920((_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 4), (char *)*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 12), v61 - v56, (_DWORD *)v65);
           }
           v57 = 12 * v53;
           *(_DWORD *)(*(_DWORD *)(*((_DWORD *)self + 1) + 24 * *((_DWORD *)self + 70) + 8) + v57) = v62 + *((_DWORD *)self + 69);

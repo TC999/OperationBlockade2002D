@@ -21,7 +21,8 @@ int __cdecl sub_448210(int self)
   memset(*(void **)self, 0, 4 * *(_DWORD *)(self + 4));
   v4 = *(void **)self;
   *(_DWORD *)(self + 4) = 0;
-  result = sub_488CEE(v4);
+  sub_488CEE(v4);
+  result = 0;
   *(_DWORD *)(self + 8) = 0;
   *(_DWORD *)self = 0;
   return result;

@@ -1,4 +1,9 @@
 //----- (00422400) --------------------------------------------------------
+extern char aAttemptingToLo[];
+extern char aCanTReadHeader[];
+extern char aCanTReadTextur[];
+extern char aCanTCreatetext[];
+extern char aSuccessfullyLo[];
 int __cdecl sub_422400(_DWORD *self, char *String1, char a3)
 {
   int v4; // esi
@@ -38,12 +43,12 @@ int __cdecl sub_422400(_DWORD *self, char *String1, char a3)
   {
     v5 = String1;
 LABEL_7:
-    sub_4229D0(aAttemptingToLo, (char)v5);
+    sub_4229D0(aAttemptingToLo, v5);
     v7 = 23;
-    if ( sub_422080(v5, Buffer) < 0 )
+    if ( sub_422080(v5, (_DWORD *)Buffer) < 0 )
     {
-      sub_4229D0(aCanTReadHeader, (char)v5);
-      sub_4281B0(aCanTReadTextur, (char)v5);
+      sub_4229D0(aCanTReadHeader, v5);
+      sub_4281B0(aCanTReadTextur, v5);
     }
     switch ( v20 )
     {
@@ -99,25 +104,25 @@ LABEL_7:
         while ( v10-- );
       }
     }
-    if ( sub_46D89A(*(_DWORD *)ArgList, String1, v9, v8, -1, 0, v7, 1, 458757, 458757, 0, v21, 0, &v15) )
+    if ( sub_46D89A(*(_DWORD *)ArgList, (int)(intptr_t)(String1), v9, v8, -1, 0, v7, 1, 458757, 458757, 0, (int)(intptr_t)v21, 0, &v15, 0) )
     {
-      sub_4229D0(aCanTCreatetext, (char)String1);
+      sub_4229D0(aCanTCreatetext, String1);
       return 0;
     }
     else
     {
       v12 = operator new(0x2Cu);
       if ( v12 )
-        v13 = sub_4221E0(v12);
+        v13 = (int)sub_4221E0((_DWORD *)v12);
       else
         v13 = 0;
-      *(_DWORD *)(v13 + 20) = self;
+      *(_DWORD *)(v13 + 20) = (uint32)self;
       *(_DWORD *)(v13 + 16) = self[5];
       v14 = v15;
       self[5] = v13;
       *(_DWORD *)(v13 + 8) = v14;
       v16 = (char *)operator new(strlen(String1) + 1);
-      *(_DWORD *)(v13 + 12) = v16;
+      *(_DWORD *)(v13 + 12) = (uint32)v16;
       *(_DWORD *)(v13 + 28) = v9;
       *(_DWORD *)(v13 + 32) = v8;
       *(_DWORD *)(v13 + 36) = 2;
@@ -144,7 +149,7 @@ LABEL_7:
       *(_BYTE *)(v13 + 24) = v22 == 21 || v22 == 25 || v22 == 26;
       *(_DWORD *)(v13 + 40) = *(_DWORD *)(v13 + 36) * (__int64)((double)(v8 * v9) * 1.33333);
       strcpy(v16, String1);
-      sub_4229D0(aSuccessfullyLo, (char)String1);
+      sub_4229D0(aSuccessfullyLo, String1);
       return v13;
     }
   }

@@ -1,3 +1,5 @@
+extern char aScoring[];
+
 //----- (0045B200) --------------------------------------------------------
 char __cdecl sub_45B200(_DWORD *self)
 {
@@ -11,8 +13,8 @@ char __cdecl sub_45B200(_DWORD *self)
   sub_421110(v3, AppName);
   sub_402FC0(self[23]);
   if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
-    sub_45EA00(self[18]);
-  sub_4626F0(*(_DWORD *)(dword_520970 + 280));
+    sub_45EA00((_DWORD *)self, self[18]);
+  sub_4626F0(*(_DWORD *)(dword_520970 + 280), 0);
   self[25] = 7;
   *(_BYTE *)(*(_DWORD *)(dword_520970 + 280) + 11796) = 1;
   return sub_4261C0(*(_DWORD **)(dword_520970 + 232), aScoring, 1);

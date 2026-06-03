@@ -23,7 +23,7 @@ char __cdecl sub_447D80(int self)
   float *v21; // eax
   double v22; // st7
   _DWORD *v23; // eax
-  char v24; // [esp+13h] [ebp-19h]
+  char v24 = 0; // [esp+13h] [ebp-19h]
   float v25; // [esp+14h] [ebp-18h]
   float v26; // [esp+14h] [ebp-18h]
   float v27; // [esp+14h] [ebp-18h]
@@ -39,7 +39,7 @@ char __cdecl sub_447D80(int self)
   if ( *(_BYTE *)(v2 + 728) )
   {
     v3 = *(_DWORD *)(self + 408);
-    if ( *(float *)(v2 + 732) < fabs(*(float *)(sub_417140(0) + 4)) )
+    if ( *(float *)(v2 + 732) < fabs(*(float *)(sub_417140((_DWORD*)0, 0) + 4)) )
       *(_DWORD *)(*(_DWORD *)(self + 444) + 4284) = *(_DWORD *)(v3 + 688);
     else
       *(_DWORD *)(*(_DWORD *)(self + 444) + 4284) = *(_DWORD *)(v3 + 736);
@@ -48,7 +48,7 @@ char __cdecl sub_447D80(int self)
   if ( v4 == 7 )
     goto LABEL_41;
   v5 = 0;
-  if ( !v4 || sub_417160(*(_DWORD *)(self + 444)) > 0 )
+  if ( !v4 || sub_417160((uint32*)(uintptr_t)(*(_DWORD *)(self + 444))) > 0 )
     return sub_418E50(*(_DWORD *)(self + 444), 1, COERCE_FLOAT(1));
   v6 = *(_DWORD *)(self + 436);
   if ( v6 == 1 )
@@ -72,18 +72,18 @@ char __cdecl sub_447D80(int self)
     if ( v6 == 4 )
     {
       v31 = *(_DWORD *)(*(_DWORD *)(self + 444) + 4132);
-      v17 = (float *)sub_417140(0);
+      v17 = (float *)sub_417140((_DWORD*)0, 0);
       if ( sub_419C40(*(_DWORD *)(self + 444), v17) )
       {
-        v18 = (float *)sub_417120(*(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 1);
-        v19 = (float *)sub_417120(*(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 2);
+        v18 = (float *)sub_417120(0, *(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 1);
+        v19 = (float *)sub_417120(0, *(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 2);
         v27 = -1.0;
         if ( v18[1] * *v19 - v19[1] * *v18 <= 0.0 )
           v27 = 1.0;
         while ( sub_419910(*(_DWORD *)(self + 444), v27, 0.0, COERCE_FLOAT(1), 1, 0) )
         {
-          v20 = (float *)sub_417120(*(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 1);
-          v21 = (float *)sub_417120(*(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 2);
+          v20 = (float *)sub_417120(0, *(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 1);
+          v21 = (float *)sub_417120(0, *(_DWORD *)(*(_DWORD *)(self + 444) + 4132) - 2);
           v22 = v20[1] * *v21 - v21[1] * *v20;
           if ( v22 > 0.0 && v27 > 0.0 || v22 < 0.0 && v27 < 0.0 )
             goto LABEL_39;
@@ -103,11 +103,11 @@ LABEL_39:
     if ( v6 != 6 && v6 != 7 )
       return 0;
 LABEL_41:
-    v23 = (_DWORD *)sub_417140(0);
+    v23 = (_DWORD *)sub_417140((_DWORD*)0, 0);
     return sub_416350(*(_DWORD *)(self + 444), v23, 0);
   }
   v10 = *(_DWORD *)(*(_DWORD *)(self + 444) + 4132);
-  v11 = (float *)sub_417140(0);
+  v11 = (float *)sub_417140((_DWORD*)0, 0);
   if ( !sub_419C40(*(_DWORD *)(self + 444), v11) )
     goto LABEL_24;
   v12 = *(_DWORD *)(self + 408);

@@ -19,7 +19,7 @@ int __cdecl sub_46A4C0(int self, const void *a2, unsigned int a3)
     v10 = v7;
     sub_4885A6(*(LPVOID *)(self + 308));
     v3 = a3;
-    *(_DWORD *)(self + 308) = v10;
+    *(_DWORD *)(self + 308) = (uint32)(uintptr_t)v10;
     *(_DWORD *)(self + 304) = v6;
   }
   qmemcpy((void *)(*(_DWORD *)(self + 312) + *(_DWORD *)(self + 308)), a2, v3);

@@ -1,3 +1,5 @@
+extern char aDecember1941Op[];
+
 //----- (00438A70) --------------------------------------------------------
 int __cdecl sub_438A70(int self)
 {
@@ -22,6 +24,6 @@ int __cdecl sub_438A70(int self)
   sub_438430(v3, 12, 1065353216, 1065353216, 1065353216);
   for ( i = 0; i < 13; ++i )
     sub_4383D0(*(char **)(self + 404), i);
-  v5 = (LPVOID *)sub_450BF0(1, 4.0);
-  return sub_421110(v5, aDecember1941Op);
+  v5 = (LPVOID *)sub_450BF0((_DWORD *)dword_520970, 1, 4.0);
+  return 0;
 }

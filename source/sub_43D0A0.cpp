@@ -1,3 +1,5 @@
+extern char aOkbutton_0[];
+
 //----- (0043D0A0) --------------------------------------------------------
 char __cdecl sub_43D0A0(int *self, char *String1, int a3)
 {

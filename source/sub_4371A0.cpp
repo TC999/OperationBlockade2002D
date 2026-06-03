@@ -1,4 +1,6 @@
 //----- (004371A0) --------------------------------------------------------
+extern char asc_4AA198[];
+
 char __cdecl sub_4371A0(int self, char a2)
 {
   char v2; // bl
@@ -17,11 +19,11 @@ char __cdecl sub_4371A0(int self, char a2)
   char Buffer[256]; // [esp+10h] [ebp-100h] BYREF
 
   v2 = a2;
-  LOBYTE(v16) = a2;
+  *(_BYTE *)&v16 = a2;
   if ( isupper(a2) )
   {
     v2 = tolower(a2);
-    LOBYTE(v16) = v2;
+    *(_BYTE *)&v16 = v2;
   }
   v4 = *(_BYTE *)(self + 724);
   if ( v4 )
@@ -35,7 +37,7 @@ char __cdecl sub_4371A0(int self, char a2)
       v10 = *(char **)(*(_DWORD *)(self + 736) + 8);
       if ( *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
       {
-        sub_463710(*(_DWORD *)(*(_DWORD *)(self + 736) + 8));
+        sub_463710((const char *)*(_DWORD *)(*(_DWORD *)(self + 736) + 8));
       }
       else
       {
@@ -53,14 +55,14 @@ char __cdecl sub_4371A0(int self, char a2)
         v14 = (LPVOID *)sub_436A90(self);
         sub_421110(v14, Buffer);
         if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
-          sub_4375C0(v10);
+          sub_4375C0((void *)self, v10);
       }
       return sub_4285C0((_DWORD *)self, v16);
     }
   }
   else if ( v2 == 13 )
   {
-    if ( !*(_BYTE *)(dword_520970 + 296) && !(unsigned __int8)sub_450BB0() )
+    if ( !*(_BYTE *)(dword_520970 + 296) && !(unsigned __int8)sub_450BB0((_DWORD *)dword_520970) )
     {
       *(_BYTE *)(self + 724) = 1;
       v5 = dword_520970;

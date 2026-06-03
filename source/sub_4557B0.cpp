@@ -1,7 +1,7 @@
 //----- (004557B0) --------------------------------------------------------
 int __cdecl sub_4557B0(int self)
 {
-  *(_DWORD *)self = &off_499AEC;
+  *(_DWORD *)self = (DWORD)&off_499AEC;
   sub_411430((_DWORD *)dword_4F5CC4, self);
   sub_4885A6(*(LPVOID *)(self + 400));
   *(_DWORD *)(self + 400) = 0;

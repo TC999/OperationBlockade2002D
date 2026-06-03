@@ -6,7 +6,7 @@ _DWORD *__cdecl sub_4044D0(_DWORD *self, int a2)
   _DWORD *v4; // esi
   _DWORD *i; // ecx
 
-  v2 = self[4];
+  v2 = (int)self[4];
   v3 = 0;
   if ( v2 <= 0 )
     return 0;

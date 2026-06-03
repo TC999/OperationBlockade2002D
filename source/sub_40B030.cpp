@@ -13,7 +13,7 @@ char __cdecl sub_40B030(char *self, char *ArgList, float *a3)
   int v12; // [esp+10h] [ebp-8h]
 
   v3 = self;
-  v4 = sub_40B6E0(ArgList, 1);
+  v4 = sub_40B6E0((int)self, ArgList, 1);
   result = (char)a3;
   v6 = 0;
   *a3 = 0.0;

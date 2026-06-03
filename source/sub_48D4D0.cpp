@@ -55,7 +55,7 @@ int sub_48D4D0()
   while ( *v8 )
   {
     if ( *v8 == 59 )
-      *v8 = 0;
+      *(char *)v8 = 0;
     else
       ++v8;
   }

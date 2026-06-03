@@ -1,4 +1,16 @@
+#include "common.h"
+
 //----- (00451390) --------------------------------------------------------
+extern "C" void __cdecl __ehvec_ctor(void *, unsigned int, int, void (__cdecl *)(void *), void (__cdecl *)(void *));
+extern "C" void __cdecl unknown_libname_27(void *);
+extern char aStartedToLoadI[];
+extern char aStrips[];
+extern char aNumstrips[];
+extern char aStrip_0[];
+extern char aNumtextures[];
+extern char aNumframes[];
+extern char aFinishedLoadin_3[];
+
 char **__cdecl sub_451390(char **self, char *FileName)
 {
   char *v3; // edi
@@ -31,21 +43,21 @@ char **__cdecl sub_451390(char **self, char *FileName)
   sub_40A1D0(v25, FileName);
   v3 = 0;
   v27 = 0;
-  sub_40AA40((int)v25, aStrips);
+  sub_40AA40((intptr_t)v25, aStrips);
   v4 = (char *)(self + 1);
   sub_40AF00(v25, aNumstrips, self + 1);
-  v5 = (int)self[1];
+  v5 = (intptr_t)self[1];
   v6 = (int *)operator new(12 * v5 + 4);
-  LOBYTE(v27) = 1;
+  *((_BYTE *)&v27) = 1;
   if ( v6 )
   {
     v3 = (char *)(v6 + 1);
     *v6 = v5;
-    `eh vector constructor iterator'(v6 + 1, 0xCu, v5, unknown_libname_27, (void (__cdecl *)(void *))sub_451710);
+    __ehvec_ctor(v6 + 1, 0xCu, v5, unknown_libname_27, (void (__cdecl *)(void *))sub_451710);
   }
   v7 = 0;
   v8 = *(_DWORD *)v4 <= 0;
-  LOBYTE(v27) = 0;
+  *((_BYTE *)&v27) = 0;
   self[2] = v3;
   if ( !v8 )
   {
@@ -56,18 +68,18 @@ char **__cdecl sub_451390(char **self, char *FileName)
       ++v7;
       v9 += 12;
     }
-    while ( v7 < *(_DWORD *)v4 );
+    while ( v7 < (int)*(_DWORD *)v4 );
   }
   sub_40AF00(v25, aNumtextures, self + 3);
-  self[4] = (char *)operator new(264 * (_DWORD)self[3]);
+  self[4] = (char *)operator new(264 * (uintptr_t)self[3]);
   v10 = 0;
-  if ( (int)self[3] > 0 )
+  if ( (intptr_t)self[3] > 0 )
   {
     v22 = 0;
     do
     {
       sprintf(Buffer, "texture%d", v10);
-      sub_40AFC0(v25, Buffer, &v24);
+      sub_40AFC0(v25, Buffer, (_DWORD*)&v24);
       v11 = &self[4][v22];
       v13 = strlen((const char *)v24) + 1;
       v12 = v24 + v13;
@@ -77,15 +89,15 @@ char **__cdecl sub_451390(char **self, char *FileName)
       ++v10;
       *(_DWORD *)&self[4][v22 - 4] = 0;
     }
-    while ( v10 < (int)self[3] );
+    while ( v10 < (intptr_t)self[3] );
   }
   v14 = 0;
-  for ( i = 0; i < (int)self[1]; ++i )
+  for ( i = 0; i < (intptr_t)self[1]; ++i )
   {
-    sub_40AA40((int)v25, *(char **)&self[2][v14]);
+    sub_40AA40((intptr_t)v25, *(char **)&self[2][v14]);
     sub_40AF00(v25, aNumframes, (char **)&self[2][v14 + 4]);
     v15 = 0;
-    *(_DWORD *)&self[2][v14 + 8] = operator new(36 * *(_DWORD *)&self[2][v14 + 4]);
+    *(_DWORD *)&self[2][v14 + 8] = (intptr_t)operator new(36 * *(_DWORD *)&self[2][v14 + 4]);
     if ( *(int *)&self[2][v14 + 4] > 0 )
     {
       v16 = 0;
@@ -108,12 +120,12 @@ char **__cdecl sub_451390(char **self, char *FileName)
         ++v15;
         v16 += 36;
       }
-      while ( v15 < *(_DWORD *)&self[2][v14 + 4] );
+      while ( v15 < (int)*(_DWORD *)&self[2][v14 + 4] );
     }
     v14 += 12;
   }
   sub_4229D0(aFinishedLoadin_3);
   v27 = -1;
-  sub_40A830((int)v25);
+  sub_40A830((intptr_t)v25);
   return self;
 }

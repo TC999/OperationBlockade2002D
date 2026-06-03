@@ -1,4 +1,6 @@
 //----- (0041E410) --------------------------------------------------------
+extern char aDSD[];
+
 int __cdecl sub_41E410(float *self, float a2)
 {
   float *v2; // ebp
@@ -54,7 +56,7 @@ int __cdecl sub_41E410(float *self, float a2)
   int v54; // [esp+28h] [ebp-4h] BYREF
 
   v2 = self;
-  v3 = (float *)sub_408F30(dword_520970);
+  v3 = (float *)sub_408F30((_DWORD *)dword_520970);
   v4 = v3;
   v5 = 0;
   if ( v3 )
@@ -73,18 +75,18 @@ int __cdecl sub_41E410(float *self, float a2)
     {
       if ( v6 == 0.0 )
       {
-        sub_40E550(0.0);
+        sub_40E550(v2 + 20, 0.0);
       }
       else
       {
         ArgListb = 1.0 / v6;
-        sub_40E550(ArgListb);
+        sub_40E550(v2 + 20, ArgListb);
       }
     }
     else
     {
       ArgLista = 1.0 / 1.0;
-      sub_40E550(ArgLista);
+      sub_40E550(v2 + 20, ArgLista);
     }
     v2[23] = v4[14];
     v2[24] = v4[15];
@@ -157,7 +159,7 @@ int __cdecl sub_41E410(float *self, float a2)
       v18 = *((_DWORD *)v2 + 11) + 1;
       *((_DWORD *)v2 + 11) = v18;
       if ( v18 > v17 )
-        sub_41F2A0(v2 + 10);
+        sub_41F2A0((int *)(v2 + 10));
       v9 = v47;
       *(_DWORD *)(*((_DWORD *)v2 + 10) + 4 * *((_DWORD *)v2 + 11) - 4) = v10;
     }
@@ -168,18 +170,18 @@ int __cdecl sub_41E410(float *self, float a2)
       {
 LABEL_31:
         *(_BYTE *)(v21 + 33) = 0;
-        sub_421540();
+        sub_421540((void **)v21);
       }
     }
     else
     {
-      v19 = (char *)sub_408F30(dword_520970);
+      v19 = (char *)sub_408F30((_DWORD *)dword_520970);
       v20 = sub_402300(v19, v10 + 28, &v54, &v53);
       v21 = *(_DWORD *)v10;
       if ( !v20 )
         goto LABEL_31;
       *(_BYTE *)(v21 + 33) = 1;
-      sub_421540();
+      sub_421540((void **)v21);
       sub_421190(*(_DWORD *)v10, aDSD, ArgList[0]);
       v22 = (double)v53;
       v23 = *(_DWORD *)v10;
@@ -205,7 +207,7 @@ LABEL_35:
     v47 = v9;
   }
   while ( v9 < 17920 );
-  qsort(*((void **)v2 + 10), *((_DWORD *)v2 + 11), 4u, sub_41E920);
+  qsort(*((void **)v2 + 10), *((_DWORD *)v2 + 11), 4u, (int (__cdecl *)(const void *, const void *))sub_41E920);
   v27 = 0;
   v53 = *((_DWORD *)v2 + 11);
   v26 = v53;
@@ -307,8 +309,8 @@ LABEL_35:
     if ( *(_DWORD *)(v45 + 8) )
     {
       *(float *)(v45 + 20) = a2 + *(float *)(v45 + 20);
-      sub_41EA30(v45, LODWORD(a2));
+      sub_41EA30((float *)v45, LODWORD(a2), 0);
     }
   }
-  return sub_428620(LODWORD(a2));
+  return sub_428620((_DWORD *)v2, LODWORD(a2));
 }

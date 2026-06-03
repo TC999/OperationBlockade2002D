@@ -70,7 +70,7 @@ int __cdecl sub_46DE48(_DWORD *self)
     v43 = (unsigned int)v5 + *v5;
     v6 = (unsigned int)v45 + *v45;
     v35 = v6;
-    v7 = operator new(4 * *(_DWORD *)(self[1] + 4180));
+    v7 = (_DWORD *)operator new(4 * *(_DWORD *)(self[1] + 4180));
     v50 = v7;
     if ( !v7 )
       goto LABEL_48;
@@ -142,7 +142,7 @@ int __cdecl sub_46DE48(_DWORD *self)
                 v13[2] = 0;
                 ++v49;
                 v11 = v46;
-                v50[*(_DWORD *)v51] = v13;
+                v50[*(_DWORD *)v51] = (uint32)(void*)v13;
               }
               v51 += 2;
             }
@@ -166,16 +166,16 @@ int __cdecl sub_46DE48(_DWORD *self)
                   {
                     do
                     {
-                      v22 = v21[1] * *(float *)(v52 + 4);
-                      *(float *)(*v20 + 16 * *(_DWORD *)v21) = v22 * *(v18 - 2) + *(float *)(*v20 + 16 * *(_DWORD *)v21);
+                      v22 = (float)(v21[1] * *(float *)(v52 + 4));
+                      *(float *)(*v20 + 16 * *(_DWORD *)v21) = (float)(v22 * *(v18 - 2) + *(float *)(*v20 + 16 * *(_DWORD *)v21));
                       v23 = (float *)(16 * *(_DWORD *)v21 + *v20 + 4);
-                      *v23 = v22 * *(v18 - 1) + *v23;
+                      *v23 = (float)(v22 * *(v18 - 1) + *v23);
                       v24 = (float *)(16 * *(_DWORD *)v21 + *v20 + 8);
-                      *v24 = v22 * *v18 + *v24;
+                      *v24 = (float)(v22 * *v18 + *v24);
                       v25 = (float *)(16 * *(_DWORD *)v21 + *v20 + 12);
                       v19 = v36;
                       v21 += 2;
-                      *v25 = v22 * v18[1] + *v25;
+                      *v25 = (float)(v22 * v18[1] + *v25);
                     }
                     while ( v21 < v36 );
                     v11 = v46;
@@ -192,8 +192,8 @@ int __cdecl sub_46DE48(_DWORD *self)
             do
             {
               v27 = (float *)v50[*(_DWORD *)v26];
-              v28 = v26[1] + v27[1];
-              v27[1] = v28;
+              v28 = (float)(v26[1] + v27[1]);
+              v27[1] = (float)v28;
               if ( v28 + 0.0000099999997 >= 1.0 )
               {
                 (*(void (__cdecl **)(_DWORD, _DWORD, _DWORD, _DWORD))(*(_DWORD *)self[1] + 8))(
@@ -203,7 +203,7 @@ int __cdecl sub_46DE48(_DWORD *self)
                   *(_DWORD *)v27);
                 v50[*(_DWORD *)v26] = 0;
                 --v49;
-                *((_DWORD *)v27 + 2) = v48;
+                *((_DWORD *)v27 + 2) = (uint32)(void*)v48;
                 v48 = (void **)v27;
               }
               v26 += 2;

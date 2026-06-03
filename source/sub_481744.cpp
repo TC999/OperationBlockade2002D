@@ -10,8 +10,8 @@ _DWORD *__cdecl sub_481744(int a1)
 
   result = (_DWORD *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 84);
   v6 = 0;
-  *(_DWORD *)(a1 + 408) = result;
-  *result = sub_48158D;
+  *(_DWORD *)(a1 + 408) = (uint32)(size_t)result;
+  *result = (uint32)(size_t)sub_48158D;
   if ( *(int *)(a1 + 32) > 0 )
   {
     v7 = *(_DWORD *)(a1 + 196) + 80;
@@ -21,7 +21,7 @@ _DWORD *__cdecl sub_481744(int a1)
       v4 = (void *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 256);
       v5 = (_DWORD *)v7;
       v7 += 84;
-      *v5 = v4;
+      *v5 = (uint32)(size_t)v4;
       memset(v4, 0, 0x100u);
       *v3 = -1;
       result = (_DWORD *)++v6;

@@ -24,11 +24,11 @@ int __cdecl sub_414D70(LPVOID *self)
   {
     for ( i = 0; i < (int)self[6]; ++i )
     {
-      v3 = self[5];
+      v3 = (_DWORD *)self[5];
       v4 = (void *)v3[i];
       if ( v4 )
       {
-        ((void (__cdecl *)(_DWORD))nullsub_1)(v3[i]);
+        nullsub_1(v3[i]);
         sub_4885A6(v4);
       }
     }
@@ -36,9 +36,9 @@ int __cdecl sub_414D70(LPVOID *self)
   memset(self[5], 0, 4 * (_DWORD)self[6]);
   v5 = self[5];
   self[6] = 0;
-  result = sub_488CEE(v5);
+  sub_488CEE(v5);
   self[7] = 0;
   self[5] = 0;
   *self = &off_499040;
-  return result;
+  return 0;
 }

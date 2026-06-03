@@ -23,7 +23,7 @@ int __cdecl sub_412DB0(int a1, int a2, int a3)
       *retaddr = *(_DWORD *)(a1 + 20);
       retaddr[1] = *(_DWORD *)(a1 + 24);
       if ( *(float *)(a1 + 64) != 0.0 )
-        sub_4131D0(retaddr, retaddr + 1);
+        sub_4131D0((float *)a1, (float *)retaddr, (float *)(retaddr + 1));
       retaddr[2] = *(_DWORD *)(a1 + 36);
       retaddr[3] = 1065353216;
       retaddr[4] = v5;
@@ -32,7 +32,7 @@ int __cdecl sub_412DB0(int a1, int a2, int a3)
       retaddr[7] = *(_DWORD *)(a1 + 28);
       retaddr[8] = *(_DWORD *)(a1 + 24);
       if ( *(float *)(a1 + 64) != 0.0 )
-        sub_4131D0(retaddr + 7, retaddr + 8);
+        sub_4131D0((float *)a1, (float *)(retaddr + 7), (float *)(retaddr + 8));
       retaddr[9] = *(_DWORD *)(a1 + 36);
       retaddr[10] = 1065353216;
       retaddr[11] = v5;
@@ -41,7 +41,7 @@ int __cdecl sub_412DB0(int a1, int a2, int a3)
       retaddr[14] = *(_DWORD *)(a1 + 20);
       retaddr[15] = *(_DWORD *)(a1 + 32);
       if ( *(float *)(a1 + 64) != 0.0 )
-        sub_4131D0(retaddr + 14, retaddr + 15);
+        sub_4131D0((float *)a1, (float *)(retaddr + 14), (float *)(retaddr + 15));
       retaddr[16] = *(_DWORD *)(a1 + 36);
       retaddr[17] = 1065353216;
       retaddr[18] = v5;
@@ -50,7 +50,7 @@ int __cdecl sub_412DB0(int a1, int a2, int a3)
       retaddr[21] = *(_DWORD *)(a1 + 28);
       retaddr[22] = *(_DWORD *)(a1 + 32);
       if ( *(float *)(a1 + 64) != 0.0 )
-        sub_4131D0(retaddr + 21, retaddr + 22);
+        sub_4131D0((float *)a1, (float *)(retaddr + 21), (float *)(retaddr + 22));
       retaddr[23] = *(_DWORD *)(a1 + 36);
       retaddr[24] = 1065353216;
       retaddr[25] = v5;
@@ -59,11 +59,11 @@ int __cdecl sub_412DB0(int a1, int a2, int a3)
       (*(void (__cdecl **)(_DWORD))(**(_DWORD **)(a1 + 116) + 48))(*(_DWORD *)(a1 + 116));
       *(_BYTE *)(a1 + 112) = 0;
     }
-    sub_41BC00(1, (*(_BYTE *)(a1 + 105) != 0) + 1, 1, 0, 1, -1, 0);
+    sub_41BC00((_DWORD *)a1, 1, (*(_BYTE *)(a1 + 105) != 0) + 1, 1, 0, 1, -1, 0);
     (*(void (__stdcall **)(_DWORD, _DWORD, int, _DWORD))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, 0, 11, 0);
     (*(void (__stdcall **)(_DWORD, _DWORD, int, _DWORD))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, 0, 24, 0);
-    sub_41BEF0(0, *(_DWORD *)(a1 + 108), *(_BYTE *)(a1 + 104) != 0, 1);
-    sub_41BEF0(1, 0, -1, -1);
+    sub_41BEF0((_DWORD *)a1, 0, *(_DWORD *)(a1 + 108), *(_BYTE *)(a1 + 104) != 0, 1);
+    sub_41BEF0((_DWORD *)a1, 1, 0, -1, -1);
     (*(void (__stdcall **)(_DWORD, int))(**(_DWORD **)ArgList + 304))(*(_DWORD *)ArgList, 324);
     (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int))(**(_DWORD **)ArgList + 332))(
       *(_DWORD *)ArgList,

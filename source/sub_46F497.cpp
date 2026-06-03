@@ -50,15 +50,15 @@ int __cdecl sub_46F497(_DWORD *self)
         v10 = v3[1];
         v26 = *v8;
         v24 = v9;
-        LOWORD(v9) = (unsigned __int8)*v3;
+        *(_WORD *)&v9 = (unsigned __int8)*v3;
         v11 = v8[1] & 0xFF00;
         v12 = (unsigned __int8)*v8 + v9 + (unsigned __int8)v8[1] + (v10 & 0xFFFF00FF) + 2;
-        HIWORD(v13) = 0;
+        ((_WORD *)&v13)[1] = 0;
         v14 = v10 & 0xFF00;
-        LOWORD(v13) = v14;
+        *(_WORD *)&v13 = (unsigned __int16)v14;
         v15 = v25++;
-        *v15 = (((v26 & 0xFF00) + (v24 & 0xFF00u) + v11 + v14 + 512) >> 2)
-             ^ (unsigned __int8)((((v26 & 0xFFFFFF00) + (v24 & 0xFFFFFF00) + v11 + v13 + 512) >> 2) ^ (v12 >> 2));
+        *v15 = (unsigned __int16)((((v26 & 0xFF00) + (v24 & 0xFF00u) + v11 + v14 + 512) >> 2)
+             ^ (unsigned __int8)((((v26 & 0xFFFFFF00) + (v24 & 0xFFFFFF00) + v11 + v13 + 512) >> 2) ^ (v12 >> 2)));
         v3 = v23 + 2;
         v8 = v22 + 2;
         v23 = v3;

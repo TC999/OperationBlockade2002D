@@ -4,7 +4,6 @@ int __cdecl sub_45C7E0(int self)
   int i; // ebp
   void *v3; // edi
   void *v4; // eax
-  int result; // eax
 
   if ( *(_BYTE *)(self + 12) )
   {
@@ -21,8 +20,8 @@ int __cdecl sub_45C7E0(int self)
   memset(*(void **)self, 0, 4 * *(_DWORD *)(self + 4));
   v4 = *(void **)self;
   *(_DWORD *)(self + 4) = 0;
-  result = sub_488CEE(v4);
+  (void)sub_488CEE(v4);
   *(_DWORD *)(self + 8) = 0;
   *(_DWORD *)self = 0;
-  return result;
+  return 0;
 }

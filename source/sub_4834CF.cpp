@@ -39,7 +39,7 @@ int __cdecl sub_4834CF(int a1, int a2, int a3, int a4, int a5, int a6, _BYTE *a7
       v13 = v10 * v10 + v11 * v11 + v12 * v12;
       v14 = 8 * (3 * v11 + 18);
       v15 = 16 * (v12 + 4);
-      v24 = v17;
+      v24 = (int*)v17;
       v21 = a7;
       v27 = 32 * (v10 + 8);
       v19 = 4;

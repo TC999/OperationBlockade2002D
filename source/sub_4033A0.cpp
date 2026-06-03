@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004033A0) --------------------------------------------------------
 int __cdecl sub_4033A0(int self)
 {
@@ -18,20 +20,20 @@ int __cdecl sub_4033A0(int self)
   int v16; // eax
   int v17; // esi
   int v18; // ecx
-  char ArgList[4]; // [esp+8h] [ebp-174h] BYREF
+  int ArgList; // [esp+8h] [ebp-174h] BYREF
   int v21; // [esp+Ch] [ebp-170h]
   char Buffer[64]; // [esp+10h] [ebp-16Ch] BYREF
   char v23[288]; // [esp+50h] [ebp-12Ch] BYREF
   int v24; // [esp+178h] [ebp-4h]
 
-  sub_40A1D0(aDialogueIni);
+  sub_40A1D0(v23, aDialogueIni);
   v2 = 0;
   v24 = 0;
-  if ( (unsigned __int8)sub_40AAF0(aDialoguegroup, 0) )
+  if ( (unsigned __int8)sub_40AAF0((int)(uintptr_t)v23, aDialoguegroup, 0) )
   {
     while ( 1 )
     {
-      v3 = operator new(0x50u);
+      v3 = (_DWORD*)operator new(0x50u);
       if ( v3 )
       {
         v3[16] = 0;
@@ -40,26 +42,26 @@ int __cdecl sub_4033A0(int self)
         *((_BYTE *)v3 + 76) = 0;
         v2 = (char *)v3;
       }
-      sub_40AA40(aDialoguegroup);
-      sub_40AFC0(aName, (int)ArgList);
-      sub_4229D0(aLoadingDialogu, ArgList[0]);
-      v4 = strlen(*(const char **)ArgList) + 1;
-      v5 = *(_DWORD *)ArgList + v4;
+      sub_40AA40((intptr_t)v23, aDialoguegroup);
+      sub_40AFC0(v23, aName, (_DWORD*)&ArgList);
+      sub_4229D0(aLoadingDialogu, ArgList);
+      v4 = strlen(*(const char **)&ArgList) + 1;
+      v5 = *(_DWORD *)&ArgList + v4;
       v21 = 1;
-      qmemcpy(v2, *(const void **)ArgList, 4 * (v4 >> 2));
-      qmemcpy(&v2[4 * (v4 >> 2)], (const void *)(v5 - v4 + 4 * (v4 >> 2)), v4 & 3);
+      memcpy(v2, *(const void **)&ArgList, 4 * (v4 >> 2));
+      memcpy(&v2[4 * (v4 >> 2)], (const void *)(v5 - v4 + 4 * (v4 >> 2)), v4 & 3);
       while ( 1 )
       {
         sprintf(Buffer, "Sound%d", v21);
-        if ( !(unsigned __int8)sub_40ABC0(Buffer, 0) )
+        if ( !(unsigned __int8)sub_40ABC0((int)(uintptr_t)v23, Buffer, 0) )
           break;
-        sub_40AFC0(Buffer, (int)ArgList);
-        sub_4229D0(aLoadingDialogu_0, ArgList[0]);
-        v6 = sub_41E250(*(char **)ArgList);
+        sub_40AFC0(v23, Buffer, (_DWORD*)&ArgList);
+        sub_4229D0(aLoadingDialogu_0, ArgList);
+        v6 = sub_41E250((_DWORD*)v23, *(char **)&ArgList);
         if ( !v6 )
         {
-          v6 = sub_41DE10(*(char **)ArgList, 1, 0, 0, 1, 0);
-          sub_4282E0(v6 != 0, aCouldnTLoadDia, ArgList[0]);
+          v6 = (intptr_t)sub_41DE10((_DWORD*)v23, *(char **)&ArgList, 1, 0, 0, 1, 0);
+          sub_4282E0(v6 != 0, aCouldnTLoadDia, ArgList);
         }
         v7 = *((_DWORD *)v2 + 18);
         v8 = *((_DWORD *)v2 + 17) + 1;
@@ -68,7 +70,7 @@ int __cdecl sub_4033A0(int self)
         {
           v9 = v7 + 8;
           *((_DWORD *)v2 + 18) = v9;
-          v10 = sub_488DD7(*((LPVOID *)v2 + 16), 4 * v9);
+          v10 = (intptr_t)sub_488DD7(*((void **)v2 + 16), 4 * v9);
           if ( v10 )
           {
             v11 = *((_DWORD *)v2 + 17);
@@ -87,7 +89,7 @@ int __cdecl sub_4033A0(int self)
       {
         v15 = v13 + 8;
         *(_DWORD *)(self + 28) = v15;
-        v16 = sub_488DD7(*(LPVOID *)(self + 20), 4 * v15);
+        v16 = (intptr_t)sub_488DD7(*(void **)(self + 20), 4 * v15);
         if ( v16 )
         {
           v17 = *(_DWORD *)(self + 24);
@@ -96,12 +98,12 @@ int __cdecl sub_4033A0(int self)
           memset((void *)(v16 + 4 * v17), 0, 4 * v18);
         }
       }
-      *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = v2;
-      if ( !(unsigned __int8)sub_40AAF0(aDialoguegroup, 0) )
+      *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = (intptr_t)v2;
+      if ( !(unsigned __int8)sub_40AAF0((int)(uintptr_t)v23, aDialoguegroup, 0) )
         break;
       v2 = 0;
     }
   }
   v24 = -1;
-  return sub_40A830(v23);
+  return sub_40A830((intptr_t)v23);
 }

@@ -17,17 +17,17 @@ int __cdecl sub_483A85(_DWORD *a1, char a2)
     a1[19] = 2;
   if ( a2 )
   {
-    *(_DWORD *)(v4 + 4) = sub_482C93;
-    *(_DWORD *)(v4 + 8) = sub_483A60;
+    *(_DWORD *)(v4 + 4) = (int)sub_482C93;
+    *(_DWORD *)(v4 + 8) = (int)sub_483A60;
     *(_BYTE *)(v4 + 28) = 1;
   }
   else
   {
     if ( a1[19] == 2 )
-      *(_DWORD *)(v4 + 4) = sub_483762;
+      *(_DWORD *)(v4 + 4) = (int)sub_483762;
     else
-      *(_DWORD *)(v4 + 4) = sub_4836B9;
-    *(_DWORD *)(v4 + 8) = nullsub_2;
+      *(_DWORD *)(v4 + 4) = (int)sub_4836B9;
+    *(_DWORD *)(v4 + 8) = (int)0;
     v6 = a1[28];
     if ( v6 < 1 )
     {

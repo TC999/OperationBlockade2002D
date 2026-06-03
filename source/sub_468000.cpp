@@ -1,4 +1,12 @@
 //----- (00468000) --------------------------------------------------------
+extern char aIslandPf3[];
+extern char aWater1Tga[];
+extern char aWater2Tga[];
+extern char aWater3Tga[];
+extern char aWater4Tga[];
+extern char aWave[];
+extern char aFoam[];
+
 int __cdecl sub_468000(int self)
 {
   int v2; // edi
@@ -25,7 +33,7 @@ int __cdecl sub_468000(int self)
   *(_DWORD *)(self + 616) = 0;
   *(_DWORD *)(self + 620) = 0;
   *(_DWORD *)(self + 624) = 0;
-  *(_DWORD *)self = &off_499CD4;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499CD4;
   sub_403D90((char *)self, aIslandPf3);
   sub_403E30(self);
   *(_DWORD *)(self + 588) = sub_422400(*(_DWORD **)(dword_520970 + 124), aWater1Tga, 0);
@@ -51,7 +59,7 @@ LABEL_15:
     }
     if ( !_strnicmp(*(const char **)(v4 + 8), aWave, strlen(aWave)) )
     {
-      v5 = operator new(0x1Cu);
+      v5 = (_BYTE *)operator new(0x1Cu);
       v5[8] = 0;
       *((_DWORD *)v5 + 6) = 1065353216;
       *(_DWORD *)v5 = v4;
@@ -68,7 +76,7 @@ LABEL_15:
       v8 = *(void **)(self + 616);
       v9 = v6 + 8;
       *(_DWORD *)(self + 624) = v9;
-      v10 = sub_488DD7(v8, 4 * v9);
+      v10 = (int)(intptr_t)sub_488DD7(v8, 4 * v9);
       if ( !v10 )
         goto LABEL_13;
     }
@@ -76,7 +84,7 @@ LABEL_15:
     {
       if ( !*(_BYTE *)(v4 + 81) || _strnicmp(*(const char **)(v4 + 8), aFoam, strlen(aFoam)) )
         goto LABEL_15;
-      v5 = operator new(0x1Cu);
+      v5 = (_BYTE *)operator new(0x1Cu);
       v5[8] = 1;
       *((_DWORD *)v5 + 6) = 1065353216;
       *(_DWORD *)v5 = v4;
@@ -93,18 +101,18 @@ LABEL_15:
       v13 = *(void **)(self + 616);
       v14 = v11 + 8;
       *(_DWORD *)(self + 624) = v14;
-      v10 = sub_488DD7(v13, 4 * v14);
+      v10 = (int)(intptr_t)sub_488DD7(v13, 4 * v14);
       if ( !v10 )
         goto LABEL_13;
     }
     *(_DWORD *)(self + 616) = v10;
     memset((void *)(v10 + 4 * *(_DWORD *)(self + 620)), 0, 4 * (*(_DWORD *)(self + 624) - *(_DWORD *)(self + 620)));
 LABEL_13:
-    *(_DWORD *)(*(_DWORD *)(self + 616) + 4 * *(_DWORD *)(self + 620) - 4) = v5;
+    *(_DWORD *)(*(_DWORD *)(self + 616) + 4 * *(_DWORD *)(self + 620) - 4) = (uint32)(uintptr_t)v5;
     if ( v5 )
     {
       *(_BYTE *)(*(_DWORD *)v5 + 57) = 1;
-      sub_4229D0("%s using %s", *(const char **)(v4 + 8), *(const char **)(*(_DWORD *)(v4 + 52) + 76));
+      sub_4229D0((char *)"%s using %s", *(const char **)(v4 + 8), *(const char **)(*(_DWORD *)(v4 + 52) + 76));
     }
     goto LABEL_15;
   }

@@ -1,3 +1,6 @@
+extern char aUsername[];
+extern char Default[];
+
 //----- (0043B440) --------------------------------------------------------
 char __cdecl sub_43B440(int self, char *String1, int a3)
 {
@@ -51,15 +54,15 @@ LABEL_10:
   strcpy(String, v5);
   sub_422E60(AppName, aUsername, String);
   sub_4229D0("UI NameEntry: current name=%s", String);
-  sub_45E720(String, *(_DWORD *)(self + 60));
+  sub_45E720((char *)*(_DWORD *)(dword_520970 + 280), String, *(_DWORD *)(self + 60));
   if ( !(unsigned __int8)sub_45E760(*(_DWORD *)(dword_520970 + 280)) )
   {
-    sub_45E720(String, *(_DWORD *)(self + 60));
+    sub_45E720((char *)*(_DWORD *)(dword_520970 + 280), String, *(_DWORD *)(self + 60));
     sub_45E880(*(_DWORD *)(dword_520970 + 280));
   }
   sub_422D00(AppName, aUsername, (CHAR *)0x18, String, Default);
   sub_421110(*(LPVOID **)(*(_DWORD *)(self + 44) + 112), String);
   sub_4262D0(*(_DWORD *)(dword_520970 + 232));
-  sub_450AC0(1, -1);
+  sub_450AC0(dword_520970, 1, -1);
   return 1;
 }

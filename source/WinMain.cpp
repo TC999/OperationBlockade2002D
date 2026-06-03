@@ -1,10 +1,11 @@
-#include "defs.h"
 #include <wchar.h>
 #include <time.h>
 #include <CommCtrl.h>
 #define snwprintf _snwprintf
 #define wtol _wtol
 #define __usercall
+
+LONG __stdcall TopLevelExceptionFilter(struct _EXCEPTION_POINTERS *ExceptionInfo);
 
 //----- (004271D0) --------------------------------------------------------
 int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
@@ -96,7 +97,7 @@ int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
   sub_4229D0(aCoinitializeex_0);
   v40.cbSize = 48;
   v40.style = 64;
-  v40.lpfnWndProc = sub_426E30;
+  v40.lpfnWndProc = (WNDPROC)sub_426E30;
   v40.cbClsExtra = 0;
   v40.cbWndExtra = 0;
   v40.hInstance = GetModuleHandleA(0);
@@ -114,6 +115,7 @@ int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
   sub_4229D0(aCreatewindowWo);
   GetClientRect(dword_5209E4, &Rect);
   GetWindowRect(dword_5209E4, &stru_5209C8);
+  v4 = (int)dword_5209E4;
   if ( !sub_4268C0() || (v27 = 1, sub_427950(v4, hInstance) < 0) )
     v27 = 0;
   sub_4229D0(aInitd3dAndInit);
@@ -159,7 +161,7 @@ int __stdcall WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
         }
         if ( dword_520A00 )
         {
-          sub_40C2B0((_BYTE *)dword_520A00, v41);
+          sub_40C2B0((int)(intptr_t)dword_520A00, v41);
           sub_488CEE(v41[1]);
         }
         if ( v10 > 1 && dword_520970 )

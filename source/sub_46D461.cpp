@@ -43,35 +43,35 @@ int __cdecl sub_46D461(
   int v41; // [esp+450h] [ebp+Ch]
   unsigned int v42; // [esp+454h] [ebp+10h]
 
-  sub_470F78(v35);
+  sub_470F78((uint32 *)(void*)v35);
   v40 = 0;
   v39 = 0;
   v38 = 0;
   if ( !a2 )
   {
-    sub_46D8FD(0, "pDevice pointer is invalid", v33);
+    sub_46D8FD(0, (char *)"pDevice pointer is invalid", v33);
 LABEL_3:
     v16 = -2005530516;
 LABEL_12:
-    sub_470F91(v35);
+    sub_470F91((int)(void*)v35);
     return v16;
   }
   if ( !a3 )
   {
-    sub_46D8FD(0, "pvSrcData pointer is invalid", v33);
+    sub_46D8FD(0, (char *)"pvSrcData pointer is invalid", v33);
     goto LABEL_3;
   }
   if ( !a4 )
   {
-    sub_46D8FD(0, "cbSrcData value is invalid", v33);
+    sub_46D8FD(0, (char *)"cbSrcData value is invalid", v33);
     goto LABEL_3;
   }
   if ( !a16 )
   {
-    sub_46D8FD(0, "ppTexture pointer is invalid", v33);
+    sub_46D8FD(0, (char *)"ppTexture pointer is invalid", v33);
     goto LABEL_3;
   }
-  v17 = sub_4729A4(v35, a3, a4, a14);
+  v17 = sub_4729A4((int)(void*)v35, (unsigned char *)a3, a4, (uint32 *)a14);
   if ( v17 < 0 )
   {
     v16 = v17;
@@ -259,7 +259,7 @@ LABEL_58:
       goto LABEL_78;
     }
 LABEL_62:
-    sub_46D8FD(0, "CreateTexture failed", a1);
+    sub_46D8FD(0, (char *)"CreateTexture failed", a1);
   }
 LABEL_78:
   if ( v40 )
@@ -277,6 +277,6 @@ LABEL_78:
     (*(void (__stdcall **)(int))(*(_DWORD *)v38 + 8))(v38);
     v38 = 0;
   }
-  sub_470F91(v35);
+  sub_470F91((int)(void*)v35);
   return v27;
 }

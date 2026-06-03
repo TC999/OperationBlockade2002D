@@ -10,6 +10,6 @@ int __cdecl sub_41CFD0(int self, float a2)
   *(float *)(self + 16) = a2;
   *(_DWORD *)(self + 20) = 0;
   if ( v3 )
-    return (*(int (__stdcall **)(int, _DWORD))(*(_DWORD *)v3 + 60))(v3, (__int64)(a2 * 10000.0 - 10000.0));
+    return (*(int (__stdcall **)(int, _DWORD))(*(_DWORD *)v3 + 60))(v3, (_DWORD)(__int64)(a2 * 10000.0 - 10000.0));
   return result;
 }

@@ -9,8 +9,9 @@ int __cdecl sub_415270(int self, int a2)
   int v8; // edi
   int v9; // ecx
 
-  if ( operator new(0x10E0u) )
-    v3 = sub_415660(a2);
+  _DWORD *newObj = (_DWORD *)operator new(0x10E0u);
+  if ( newObj )
+    v3 = (int)sub_415660(newObj, a2);
   else
     v3 = 0;
   v4 = *(_DWORD *)(self + 28);
@@ -20,7 +21,7 @@ int __cdecl sub_415270(int self, int a2)
   {
     v6 = v4 + 8;
     *(_DWORD *)(self + 28) = v6;
-    v7 = sub_488DD7(*(LPVOID *)(self + 20), 4 * v6);
+    v7 = (int)(intptr_t)sub_488DD7(*(LPVOID *)(self + 20), 4 * v6);
     if ( v7 )
     {
       v8 = *(_DWORD *)(self + 24);

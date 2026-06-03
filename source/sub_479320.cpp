@@ -26,17 +26,19 @@ int __cdecl sub_479320(int *a1, int *a2, int *a3)
     result = sub_4791FD(v6, v4, v5);
   if ( v4 )
   {
-    result = sub_47D90B(v4);
+    sub_47D90B((LPVOID)v4);
+    result = 0;
     *a2 = 0;
   }
   if ( v5 )
   {
-    result = sub_47D90B(v5);
+    sub_47D90B((LPVOID)v5);
+    result = 0;
     *a3 = 0;
   }
   if ( v6 )
   {
-    sub_47D90B(v6);
+    sub_47D90B((LPVOID)v6);
     result = (int)a1;
     *a1 = 0;
   }

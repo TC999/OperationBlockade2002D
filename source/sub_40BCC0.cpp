@@ -92,7 +92,7 @@ int *__cdecl sub_40BCC0(int *self, int *a2)
     v27 = v26;
     if ( v26 < 0 )
       v27 = 0;
-    v28 = operator new(12 * v27);
+    v28 = (_DWORD*)operator new(12 * v27);
     v2[1] = (int)v28;
     v29 = (_DWORD *)a2[2];
     v30 = v28;

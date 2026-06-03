@@ -11,8 +11,8 @@ int __cdecl sub_483B99(int a1)
   *(_DWORD *)(a1 + 420) = v2;
   *(_DWORD *)(v2 + 32) = 0;
   *(_DWORD *)(v2 + 40) = 0;
-  *(_DWORD *)v2 = sub_483A85;
-  *(_DWORD *)(v2 + 12) = sub_483B87;
+  *(_DWORD *)v2 = (int)sub_483A85;
+  *(_DWORD *)(v2 + 12) = (int)sub_483B87;
   if ( *(_DWORD *)(a1 + 100) != 3 )
   {
     *(_DWORD *)(*(_DWORD *)a1 + 20) = 46;

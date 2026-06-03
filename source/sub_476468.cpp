@@ -49,7 +49,7 @@ float *__cdecl sub_476468(int a1)
         if ( v36 )
         {
           sub_475B69((int)v36, a1);
-          *(_DWORD *)v3 = &off_49A950;
+          *(_DWORD *)v3 = (int)&off_49A950;
           return v3;
         }
         break;
@@ -59,7 +59,7 @@ float *__cdecl sub_476468(int a1)
         if ( v35 )
         {
           sub_475B69((int)v35, a1);
-          *(_DWORD *)v3 = &off_49A95C;
+          *(_DWORD *)v3 = (int)&off_49A95C;
           return v3;
         }
         break;
@@ -69,7 +69,7 @@ float *__cdecl sub_476468(int a1)
         if ( v34 )
         {
           sub_4754C5((int)v34, a1);
-          *(_DWORD *)v3 = &off_49A944;
+          *(_DWORD *)v3 = (int)&off_49A944;
           return v3;
         }
         break;
@@ -79,7 +79,7 @@ float *__cdecl sub_476468(int a1)
         if ( v33 )
         {
           sub_475B69((int)v33, a1);
-          *(_DWORD *)v3 = &off_49A968;
+          *(_DWORD *)v3 = (int)&off_49A968;
           return v3;
         }
         break;
@@ -89,7 +89,7 @@ float *__cdecl sub_476468(int a1)
         if ( v32 )
         {
           sub_475B69((int)v32, a1);
-          *(_DWORD *)v3 = &off_49A974;
+          *(_DWORD *)v3 = (int)&off_49A974;
           return v3;
         }
         break;
@@ -99,7 +99,7 @@ float *__cdecl sub_476468(int a1)
         if ( v31 )
         {
           sub_475B69((int)v31, a1);
-          *(_DWORD *)v3 = &off_49A980;
+          *(_DWORD *)v3 = (int)&off_49A980;
           return v3;
         }
         break;
@@ -109,7 +109,7 @@ float *__cdecl sub_476468(int a1)
         if ( v30 )
         {
           sub_4754C5((int)v30, a1);
-          *(_DWORD *)v3 = &off_49A938;
+          *(_DWORD *)v3 = (int)&off_49A938;
           return v3;
         }
         break;
@@ -122,7 +122,7 @@ float *__cdecl sub_476468(int a1)
     if ( v29 )
     {
       sub_4733C5(v29, (float *)a1, 0x10u, 4);
-      *(_DWORD *)v3 = &off_49A92C;
+      *(_DWORD *)v3 = (int)&off_49A92C;
       return v3;
     }
   }
@@ -146,7 +146,7 @@ float *__cdecl sub_476468(int a1)
               if ( v25 )
               {
                 sub_4733C5(v25, (float *)a1, 0x20u, 3);
-                *(_DWORD *)v3 = &off_49A920;
+                *(_DWORD *)v3 = (int)&off_49A920;
                 return v3;
               }
             }
@@ -158,7 +158,7 @@ float *__cdecl sub_476468(int a1)
             if ( v26 )
             {
               sub_4733C5(v26, (float *)a1, 0x20u, 3);
-              *(_DWORD *)v3 = &off_49A914;
+              *(_DWORD *)v3 = (int)&off_49A914;
               return v3;
             }
           }
@@ -170,7 +170,7 @@ float *__cdecl sub_476468(int a1)
           if ( v27 )
           {
             sub_4733C5(v27, (float *)a1, 0x20u, 3);
-            *(_DWORD *)v3 = &off_49A908;
+            *(_DWORD *)v3 = (int)&off_49A908;
             return v3;
           }
         }
@@ -182,7 +182,7 @@ float *__cdecl sub_476468(int a1)
         if ( v28 )
         {
           sub_4733C5(v28, (float *)a1, 0x20u, 3);
-          *(_DWORD *)v3 = &off_49A8FC;
+          *(_DWORD *)v3 = (int)&off_49A8FC;
           return v3;
         }
       }
@@ -194,7 +194,7 @@ float *__cdecl sub_476468(int a1)
       if ( v21 )
       {
         sub_4733C5(v21, (float *)a1, 0x10u, 3);
-        *(_DWORD *)v3 = &off_49A8F0;
+        *(_DWORD *)v3 = (int)&off_49A8F0;
         return v3;
       }
     }
@@ -218,7 +218,7 @@ float *__cdecl sub_476468(int a1)
                 if ( v3 )
                 {
                   sub_4733C5(v3, (float *)a1, 0x10u, 3);
-                  *(_DWORD *)v3 = &off_49A8E4;
+                  *(_DWORD *)v3 = (int)&off_49A8E4;
                   return v3;
                 }
               }
@@ -230,7 +230,7 @@ float *__cdecl sub_476468(int a1)
               if ( v17 )
               {
                 sub_4733C5(v17, (float *)a1, 8u, 1);
-                *(_DWORD *)v3 = &off_49A8D8;
+                *(_DWORD *)v3 = (int)&off_49A8D8;
                 return v3;
               }
             }
@@ -242,7 +242,7 @@ float *__cdecl sub_476468(int a1)
             if ( v18 )
             {
               sub_4733C5(v18, (float *)a1, 0x10u, 1);
-              *(_DWORD *)v3 = &off_49A8CC;
+              *(_DWORD *)v3 = (int)&off_49A8CC;
               return v3;
             }
           }
@@ -254,7 +254,7 @@ float *__cdecl sub_476468(int a1)
           if ( v19 )
           {
             sub_4733C5(v19, (float *)a1, 8u, 1);
-            *(_DWORD *)v3 = &off_49A8C0;
+            *(_DWORD *)v3 = (int)&off_49A8C0;
             return v3;
           }
         }
@@ -266,7 +266,7 @@ float *__cdecl sub_476468(int a1)
         if ( v20 )
         {
           sub_4733C5(v20, (float *)a1, 8u, 2);
-          *(_DWORD *)v3 = &off_49A8B4;
+          *(_DWORD *)v3 = (int)&off_49A8B4;
           return v3;
         }
       }
@@ -284,14 +284,14 @@ float *__cdecl sub_476468(int a1)
           if ( !v2 )
             return 0;
           sub_4733C5(v2, (float *)a1, 0x18u, 1);
-          *(_DWORD *)v3 = &off_49A824;
+          *(_DWORD *)v3 = (int)&off_49A824;
           break;
         case 21:
           v3 = (float *)operator new(0x1064u);
           if ( !v3 )
             return 0;
           sub_4733C5(v3, (float *)a1, 0x20u, 1);
-          *(_DWORD *)v3 = &off_49A830;
+          *(_DWORD *)v3 = (int)&off_49A830;
           break;
         case 22:
           v4 = (float *)operator new(0x1064u);
@@ -299,7 +299,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v4 )
             return 0;
           sub_4733C5(v4, (float *)a1, 0x20u, 1);
-          *(_DWORD *)v3 = &off_49A83C;
+          *(_DWORD *)v3 = (int)&off_49A83C;
           break;
         case 23:
           v5 = (float *)operator new(0x1064u);
@@ -307,7 +307,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v5 )
             return 0;
           sub_4733C5(v5, (float *)a1, 0x10u, 1);
-          *(_DWORD *)v3 = &off_49A848;
+          *(_DWORD *)v3 = (int)&off_49A848;
           break;
         case 24:
           v6 = (float *)operator new(0x1064u);
@@ -315,7 +315,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v6 )
             return 0;
           sub_4733C5(v6, (float *)a1, 0x10u, 1);
-          *(_DWORD *)v3 = &off_49A854;
+          *(_DWORD *)v3 = (int)&off_49A854;
           break;
         case 25:
           v7 = (float *)operator new(0x1064u);
@@ -323,7 +323,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v7 )
             return 0;
           sub_4733C5(v7, (float *)a1, 0x10u, 1);
-          *(_DWORD *)v3 = &off_49A860;
+          *(_DWORD *)v3 = (int)&off_49A860;
           break;
         case 26:
           v8 = (float *)operator new(0x1064u);
@@ -331,7 +331,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v8 )
             return 0;
           sub_4733C5(v8, (float *)a1, 0x10u, 1);
-          *(_DWORD *)v3 = &off_49A86C;
+          *(_DWORD *)v3 = (int)&off_49A86C;
           break;
         case 27:
           v9 = (float *)operator new(0x1064u);
@@ -339,14 +339,14 @@ float *__cdecl sub_476468(int a1)
           if ( !v9 )
             return 0;
           sub_4733C5(v9, (float *)a1, 8u, 1);
-          *(_DWORD *)v3 = &off_49A878;
+          *(_DWORD *)v3 = (int)&off_49A878;
           break;
         case 28:
           v3 = (float *)operator new(0x1064u);
           if ( !v3 )
             return 0;
           sub_4733C5(v3, (float *)a1, 8u, 1);
-          *(_DWORD *)v3 = &off_49A884;
+          *(_DWORD *)v3 = (int)&off_49A884;
           break;
         case 29:
           v10 = (float *)operator new(0x1064u);
@@ -354,7 +354,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v10 )
             return 0;
           sub_4733C5(v10, (float *)a1, 0x10u, 1);
-          *(_DWORD *)v3 = &off_49A890;
+          *(_DWORD *)v3 = (int)&off_49A890;
           break;
         case 30:
           v11 = (float *)operator new(0x1064u);
@@ -362,7 +362,7 @@ float *__cdecl sub_476468(int a1)
           if ( !v11 )
             return 0;
           sub_4733C5(v11, (float *)a1, 0x10u, 1);
-          *(_DWORD *)v3 = &off_49A89C;
+          *(_DWORD *)v3 = (int)&off_49A89C;
           break;
         default:
           return 0;
@@ -374,7 +374,7 @@ float *__cdecl sub_476468(int a1)
     if ( v12 )
     {
       sub_4733C5(v12, (float *)a1, 0x10u, 2);
-      *(_DWORD *)v3 = &off_49A8A8;
+          *(_DWORD *)v3 = (int)&off_49A8A8;
       return v3;
     }
   }

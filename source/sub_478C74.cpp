@@ -29,7 +29,7 @@ int __cdecl sub_478C74(jmp_buf Buf, int a2)
       sub_478AEB(v2, (int)"PNG file corrupted by ASCII conversion");
     }
   }
-  v6 = v2 + 67;
+  v6 = (_DWORD *)(v2 + 67);
   while ( 1 )
   {
     while ( 1 )
@@ -39,9 +39,9 @@ int __cdecl sub_478C74(jmp_buf Buf, int a2)
         while ( 1 )
         {
           sub_47AE26(v2, (int)&Buf, 4);
-          v7 = sub_47D9C3(&Buf);
-          sub_47AF37(v2);
-          sub_47D9E9(v2, (int)(v2 + 67), 4);
+          v7 = sub_47D9C3((unsigned char *)&Buf);
+          sub_47AF37((int)v2);
+          sub_47D9E9((int)v2, (int)(v2 + 67), 4);
           if ( *v6 != *(_DWORD *)"IHDR" )
             break;
           sub_47E34C(v2, a2, v7);

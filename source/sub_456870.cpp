@@ -23,7 +23,7 @@ int __cdecl sub_456870(int self, int a2, int *a3, int a4, int a5)
   char v26; // [esp+5Ah] [ebp-Eh]
 
   v6 = *(_DWORD *)(self + 392);
-  v7 = dword_5216EC[*(_DWORD *)(v6 + 292)];
+  v7 = ((int *)dword_5216EC)[*(_DWORD *)(v6 + 292)];
   v16[0] = *a3;
   v16[1] = a3[1];
   v8 = *(_DWORD *)(v7 + 8);
@@ -65,7 +65,7 @@ int __cdecl sub_456870(int self, int a2, int *a3, int a4, int a5)
     *(float *)&v17 = 0.0;
     v18 = 0.0;
     v19 = 0.0;
-    sub_456C50(self, a5, *(_DWORD *)(v12 + 300), 0, &v17);
+    sub_456C50(self, (float *)a5, *(float *)(v12 + 300), 0, (_DWORD *)&v17);
     return 9;
   }
   else
@@ -74,7 +74,7 @@ int __cdecl sub_456870(int self, int a2, int *a3, int a4, int a5)
     v18 = 0.0;
     v14 = *(_DWORD *)(a4 + 4);
     v19 = 0.0;
-    sub_456C50(self, a5, *(_DWORD *)(v14 + 300), 0, &v17);
+    sub_456C50(self, (float *)a5, *(float *)(v14 + 300), 0, (_DWORD *)&v17);
     return 9;
   }
 }

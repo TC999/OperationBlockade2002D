@@ -57,7 +57,7 @@ char __cdecl sub_431040(int self, int a2)
   int v57; // [esp+44h] [ebp-24h]
   char v58[32]; // [esp+48h] [ebp-20h] BYREF
 
-  v42 = sub_4333C0(1);
+  v42 = sub_4333C0(self, 1);
   if ( *(_BYTE *)(self + 460) )
   {
     v3 = a2;
@@ -70,14 +70,14 @@ char __cdecl sub_431040(int self, int a2)
   }
   if ( *(_BYTE *)(self + 436) )
   {
-    sub_4229D0("%s destroyed (because section %d destroyed)", *(const char **)(*(_DWORD *)(self + 428) + 4), v3);
+    sub_4229D0((char *)"%s destroyed (because section %d destroyed)", *(const char **)(*(_DWORD *)(self + 428) + 4), v3);
     for ( i = 0; ; ++i )
     {
       v5 = *(_DWORD *)(self + 428);
       v6 = *(_DWORD *)(v5 + 612);
       if ( !v6 || i >= (*(_DWORD *)(v5 + 616) - v6) >> 2 )
         break;
-      sub_408640(*(_DWORD *)(v6 + 4 * i), 0);
+      sub_408640((_DWORD *)*(_DWORD *)(v6 + 4 * i), 0, 0);
     }
     for ( j = 0; j < 120; j += 24 )
     {
@@ -89,7 +89,7 @@ char __cdecl sub_431040(int self, int a2)
           v10 = *(_DWORD *)(v9 + j + 636);
           if ( !v10 || k >= (*(_DWORD *)(v9 + j + 640) - v10) >> 2 )
             break;
-          sub_407650(*(_DWORD *)(v10 + 4 * k), 1);
+          sub_407650((_DWORD *)*(_DWORD *)(v10 + 4 * k), 1, 0);
         }
         v3 = a2;
       }
@@ -154,18 +154,18 @@ char __cdecl sub_431040(int self, int a2)
             default:
               break;
           }
-          if ( *(float *)(sub_417140(0) + 8) < -2000.0 )
+          if ( *(float *)(sub_417140(*(_DWORD **)(self + 468), 0) + 8) < -2000.0 )
             break;
           if ( ++v12 >= 500 )
           {
-            v14 = (float *)sub_417140(0);
+            v14 = (float *)sub_417140(*(_DWORD **)(self + 468), 0);
             v15 = 10;
             v52 = *v14;
             v53 = v14[1];
             v54 = -3000.0;
             do
             {
-              sub_416350(*(_DWORD *)(self + 468), &v52, 0);
+              sub_416350(*(_DWORD *)(self + 468), (_DWORD *)(uintptr_t)&v52, 0);
               --v15;
             }
             while ( v15 );
@@ -207,7 +207,7 @@ char __cdecl sub_431040(int self, int a2)
         if ( v23 )
         {
           if ( v24 < (*(_DWORD *)(self + 2292) - v23) >> 5 )
-            sub_434200(v23 + 32 * v24, *(_DWORD *)(self + 2292));
+            sub_434200((_DWORD *)(self + 2288), (char *)(v23 + 32 * v24), (char *)*(_DWORD *)(self + 2292));
           v17 = v43;
         }
       }
@@ -217,7 +217,7 @@ char __cdecl sub_431040(int self, int a2)
           v26 = (*(_DWORD *)(self + 2292) - v23) >> 5;
         else
           v26 = 0;
-        sub_433F70(*(_DWORD *)(self + 2292), v24 - v26, v58);
+        sub_433F70((_DWORD *)(self + 2288), *(char **)(self + 2292), v24 - v26, v58);
       }
       v27 = 32 * v22;
       *(_DWORD *)(v27 + *(_DWORD *)(self + 2288)) = *(_DWORD *)(*(_DWORD *)(v46 + *(_DWORD *)(self + 428) + 636)
@@ -253,11 +253,12 @@ char __cdecl sub_431040(int self, int a2)
         v56 = 0;
         v57 = 0;
         sub_44E040(
+          *(char **)(dword_520970 + 240),
           *(_DWORD *)(v33 + 888),
           self + 1340,
           *(_DWORD *)(self + 432),
           *(float *)(*(_DWORD *)(v46 + v33 + 636) + 4 * v17),
-          (int)&v55);
+          (int *)&v55);
       }
       v18 = v46;
       v3 = a2;
@@ -273,7 +274,7 @@ char __cdecl sub_431040(int self, int a2)
       v55 = 0;
       v56 = 0;
       v57 = 0;
-      sub_44E040(*(_DWORD *)(v34 + 892), self + 1340, v41, 0.0, (int)&v55);
+      sub_44E040(*(char **)(dword_520970 + 240), *(_DWORD *)(v34 + 892), self + 1340, v41, 0.0, (int *)&v55);
     }
   }
   if ( v3 )
@@ -287,11 +288,12 @@ char __cdecl sub_431040(int self, int a2)
         v56 = 0;
         v57 = 0;
         sub_44E040(
+          *(char **)(dword_520970 + 240),
           *(_DWORD *)(v35 + 888),
           self + 1340,
           *(_DWORD *)(self + 432),
           *(float *)(v35 + 4 * v3 + 744),
-          (int)&v55);
+          (int *)&v55);
       }
     }
   }
@@ -314,7 +316,7 @@ char __cdecl sub_431040(int self, int a2)
       if ( *(_BYTE *)(v38 + *(_DWORD *)(self + 428)) && *v39 > 0.0 )
       {
         *v39 = 0.0;
-        sub_431040(v37);
+        sub_431040(self, v37);
       }
       v38 += 24;
       ++v37;
@@ -325,10 +327,10 @@ char __cdecl sub_431040(int self, int a2)
   }
   if ( v3 != 3 )
   {
-    sub_4317B0(1);
+    sub_4317B0((_DWORD *)self, 1);
     return v42;
   }
 LABEL_80:
-  sub_4317B0(2);
+  sub_4317B0((_DWORD *)self, 2);
   return v42;
 }

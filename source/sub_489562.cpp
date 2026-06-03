@@ -13,7 +13,7 @@ LPVOID __cdecl sub_489562(unsigned int a1)
     if ( a1 <= dword_523A7C )
     {
       _lock(9);
-      v5 = __sbh_alloc_block(a1);
+      v5 = __sbh_alloc_block((void*)a1, 0, 0);
       _unlock(9);
       result = (LPVOID)v5;
       if ( v5 )
@@ -28,7 +28,7 @@ LABEL_12:
     if ( !a1 )
       v3 = 1;
     v4 = v3 + 15;
-    LOBYTE(v4) = v4 & 0xF0;
+    *(_BYTE*)&(v4) = v4 & 0xF0;
     return HeapAlloc(hHeap, 0, v4);
   }
   if ( a1 )

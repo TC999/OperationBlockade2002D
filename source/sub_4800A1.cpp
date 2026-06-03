@@ -50,12 +50,12 @@ int __cdecl sub_4800A1(int a1, int a2, int a3)
     if ( v6 >= 1 )
     {
       v7 = &v29[v5];
-      LOBYTE(v4) = i;
+      BYTEn(v4, 0) = i;
       BYTE1(v4) = i;
       v8 = v6;
       v9 = (unsigned int)v6 >> 2;
       v10 = v4 << 16;
-      LOWORD(v10) = v4;
+      WORDn(v10, 0) = v4;
       v4 = a2;
       memset32(v7, v10, v9);
       memset(&v7[4 * v9], v10, v8 & 3);
@@ -69,7 +69,7 @@ int __cdecl sub_4800A1(int a1, int a2, int a3)
   v13 = 0;
   if ( v29[0] )
   {
-    v14 = v29;
+    v14 = (char *)v29;
     do
     {
       v15 = *v14;
@@ -79,7 +79,7 @@ int __cdecl sub_4800A1(int a1, int a2, int a3)
         v28[++v12] = v13++;
       }
       v13 *= 2;
-      v14 = &v29[v12];
+      v14 = (char *)&v29[v12];
       ++v11;
     }
     while ( v29[v12] );
@@ -125,8 +125,8 @@ int __cdecl sub_4800A1(int a1, int a2, int a3)
         v25 = v28[v34 + 1] << j;
         if ( v23 > 0 )
         {
-          v26 = (char *)v3 + v25 + 1236;
-          v27 = &v3[v25 + 53];
+          v26 = (_BYTE *)v3 + v25 + 1236;
+          v27 = (int *)&v3[v25 + 53];
           v33 = v23;
           do
           {

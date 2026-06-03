@@ -5,7 +5,7 @@ int __cdecl sub_44CA60(void *self)
   int v3; // eax
   int result; // eax
 
-  *(_DWORD *)self = &off_499AB0;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499AB0;
   v2 = *((_DWORD *)self + 7494);
   if ( v2 )
   {
@@ -25,6 +25,6 @@ int __cdecl sub_44CA60(void *self)
   }
   sub_41C700((LPVOID *)self + 7584);
   result = sub_41C700((LPVOID *)self + 7497);
-  *(_DWORD *)self = &off_499040;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499040;
   return result;
 }

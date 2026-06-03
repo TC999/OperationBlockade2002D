@@ -1,3 +1,5 @@
+extern char aChatterenemyki[];
+
 //----- (00462520) --------------------------------------------------------
 char __cdecl sub_462520(_DWORD *self, int a2, int a3)
 {
@@ -10,6 +12,7 @@ char __cdecl sub_462520(_DWORD *self, int a2, int a3)
   int v10; // eax
   _DWORD *v11; // edx
   int v12; // eax
+  _BYTE v12b;
   _WORD v14[3]; // [esp+10h] [ebp-8h] BYREF
   char v15; // [esp+16h] [ebp-2h]
 
@@ -49,11 +52,11 @@ LABEL_7:
     }
   }
 LABEL_14:
-  LOBYTE(v12) = *(_BYTE *)(dword_4F5CC4 + 936);
-  if ( (_BYTE)v12 && a3 )
+  v12b = *(_BYTE *)(dword_4F5CC4 + 936);
+  if ( v12b && a3 )
   {
     v15 = v5;
-    LOBYTE(v12) = sub_411480((_DWORD *)dword_4F5CC4, (_DWORD *)0x605, a3, v14, 7, 11, 5000);
+    v12b = sub_411480((_DWORD *)dword_4F5CC4, (_DWORD *)0x605, a3, v14, 7, 11, 5000);
   }
   if ( v8 )
   {
@@ -66,7 +69,8 @@ LABEL_14:
       if ( (_DWORD *)v8 == (_DWORD *)((char *)self + v12 + 880) && *(int *)(a2 + 296) > 200 )
       {
         sub_402FC0(self[649]);
-        LOBYTE(v12) = sub_4030B0((_DWORD *)self[649], 0, aChatterenemyki, -1);
+        v12b = sub_4030B0((_DWORD *)self[649], 0, aChatterenemyki, -1);
+        v12 = (int)v12b;
       }
     }
   }

@@ -10,9 +10,9 @@ float *__cdecl sub_46E785(float *self, float *a2, float *a3)
   v4 = a3[2] + self[2];
   v5 = a3[1] + self[1];
   result = a2;
-  *a2 = *a3 + *self;
-  a2[1] = v5;
-  a2[2] = v4;
-  a2[3] = v3;
+  *a2 = (float)(*a3 + *self);
+  a2[1] = (float)v5;
+  a2[2] = (float)v4;
+  a2[3] = (float)v3;
   return result;
 }

@@ -12,8 +12,8 @@ void __cdecl sub_40F620(char *self)
   _DWORD *v10; // eax
   _DWORD *v11; // edi
 
-  *(_DWORD *)self = &off_4991B0;
-  sub_411C50();
+  *(_DWORD *)self = (int)&off_4991B0;
+  sub_411C50((int)self);
   if ( *((_DWORD *)self + 246) )
     CloseHandle(*((HANDLE *)self + 246));
   v2 = DeleteCriticalSection;
@@ -83,5 +83,5 @@ void __cdecl sub_40F620(char *self)
     while ( v11 );
   }
   v2((LPCRITICAL_SECTION)(self + 44));
-  *(_DWORD *)self = &off_499040;
+  *(_DWORD *)self = (int)&off_499040;
 }

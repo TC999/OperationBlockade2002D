@@ -1,5 +1,5 @@
 //----- (0041D090) --------------------------------------------------------
-char __fastcall sub_41D090(int a1)
+char __cdecl sub_41D090(int a1)
 {
   int v1; // eax
   int v3; // [esp+8h] [ebp-4h] BYREF

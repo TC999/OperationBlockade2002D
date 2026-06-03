@@ -8,7 +8,7 @@ int __cdecl sub_469580(void *self)
   void *v6; // eax
   int result; // eax
 
-  *(_DWORD *)self = &off_499D24;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499D24;
   if ( byte_520A10 )
   {
     for ( i = 0; i < *((_DWORD *)self + 6); ++i )
@@ -23,15 +23,16 @@ int __cdecl sub_469580(void *self)
     {
       v5 = *(void (__cdecl ****)(_DWORD, int))(*((_DWORD *)self + 5) + 4 * j);
       if ( v5 )
-        (**v5)(v5, 1);
+        (**v5)((_DWORD)(uintptr_t)v5, 1);
     }
   }
   memset(*((void **)self + 5), 0, 4 * *((_DWORD *)self + 6));
   v6 = (void *)*((_DWORD *)self + 5);
   *((_DWORD *)self + 6) = 0;
-  result = sub_488CEE(v6);
+  sub_488CEE(v6);
+  result = 0;
   *((_DWORD *)self + 7) = 0;
   *((_DWORD *)self + 5) = 0;
-  *(_DWORD *)self = &off_499040;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499040;
   return result;
 }

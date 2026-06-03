@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00407A90) --------------------------------------------------------
 BOOL __cdecl sub_407A90(
         int a1,
@@ -35,7 +37,7 @@ BOOL __cdecl sub_407A90(
   int v34; // [esp+3Ah] [ebp-E0h]
   int v35; // [esp+3Eh] [ebp-DCh] BYREF
   int v36; // [esp+42h] [ebp-D8h]
-  int v37; // [esp+46h] [ebp-D4h]
+  int v37 = 0; // [esp+46h] [ebp-D4h]
   int v38; // [esp+4Eh] [ebp-CCh]
   int v39; // [esp+52h] [ebp-C8h] BYREF
   int *v40; // [esp+56h] [ebp-C4h]
@@ -60,7 +62,7 @@ BOOL __cdecl sub_407A90(
   int v59[3]; // [esp+B6h] [ebp-64h] BYREF
   int v60[3]; // [esp+C2h] [ebp-58h] BYREF
   int v61[3]; // [esp+CEh] [ebp-4Ch] BYREF
-  _BYTE v62[64]; // [esp+DAh] [ebp-40h] BYREF
+  float v62[16]; // [esp+DAh] [ebp-40h] BYREF
 
   v13 = a1;
   v60[2] = a6;
@@ -98,18 +100,18 @@ BOOL __cdecl sub_407A90(
       v61[0] = *v18;
       v61[1] = v18[1];
       v61[2] = v18[2];
-      if ( (unsigned __int8)sub_40C6F0((int)v60, (int)v59, (int)v61, v22) )
+      if ( (unsigned __int8)sub_40C6F0((float *)v60, (float *)v59, (float *)v61) )
       {
         qmemcpy(v62, v18 + 4, sizeof(v62));
-        sub_46B9FD(v62, 0, v62);
+        sub_46B9FD(v62, (float *)0, v62);
         v39 = a4;
         v40 = (int *)a5;
         v41 = a6;
         v56 = a7;
         v57 = a8;
         v58 = a9;
-        sub_46C5C5(&v39, &v39, v62);
-        sub_46C5C5(&v56, &v56, v62);
+        sub_46C5C5((float *)&v39, (float *)&v39, v62);
+        sub_46C5C5((float *)&v56, (float *)&v56, v62);
         (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int *, _DWORD, int, int))(**(_DWORD **)(v21 + 44) + 44))(
           *(_DWORD *)(v21 + 44),
           0,
@@ -137,10 +139,10 @@ BOOL __cdecl sub_407A90(
         v26 = 0;
         while ( 1 )
         {
-          if ( v34 >= *(_DWORD *)(v21 + 48) )
+          if ( v34 >= (int)*(_DWORD *)(v21 + 48) )
           {
 LABEL_13:
-            *(float *)dword_520A58 = (double)*(int *)(v21 + 48) + *(float *)dword_520A58;
+            *(float *)dword_520A58 = (float)((double)*(int *)(v21 + 48) + *(float *)dword_520A58);
             a2 = *(_DWORD *)(v21 + 44);
             (*(void (**)(void))(*(_DWORD *)a2 + 48))();
             a3 = *(_DWORD *)(v21 + 36);
@@ -162,31 +164,31 @@ LABEL_13:
           v55 = *v40;
           v56 = v40[1];
           v57 = v40[2];
-          if ( HIBYTE(v33) )
+          if ( BYTEn(v33, 1) )
             goto LABEL_11;
-          if ( (unsigned __int8)sub_40C910(&v41, &v58, &v52, &v49, &v55, a13) )
+          if ( (unsigned __int8)sub_40C910((float *)&v41, (float *)&v58, (intptr_t)&v52, (intptr_t)&v49, (intptr_t)&v55, (float *)a13) )
             break;
           v24 = v37;
           v25 = v39;
-          HIBYTE(v33) = 0;
+          BYTEn(v33, 1) = 0;
 LABEL_12:
           v21 = v45;
           v26 += 6;
           ++v34;
-          if ( HIBYTE(v33) )
+          if ( BYTEn(v33, 1) )
             goto LABEL_13;
         }
         v24 = v37;
         v25 = v39;
 LABEL_11:
-        HIBYTE(v33) = 1;
+        BYTEn(v33, 1) = 1;
         goto LABEL_12;
       }
     }
 LABEL_14:
     v16 = v34 + 1;
     v17 = v44 + 96;
-    v29 = ++v34 < *(_DWORD *)(v13 + 20);
+    v29 = ++v34 < (int)*(_DWORD *)(v13 + 20);
     v44 += 96;
     v36 += 172;
   }

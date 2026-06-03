@@ -67,5 +67,5 @@ LABEL_7:
     v9 = self[v3 + 132];
   self[v3 + 132] = v9;
   v10 = v13 + 0.2;
-  sub_413240(LODWORD(v13), LODWORD(v10), 255, 0);
+  sub_413240((_DWORD *)self, LODWORD(v13), LODWORD(v10), 255, 0);
 }

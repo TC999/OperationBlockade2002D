@@ -1,4 +1,6 @@
 //----- (004266C0) --------------------------------------------------------
+static void unknown_libname_11() {}
+static void unknown_libname_12() {}
 int sub_4266C0()
 {
   unknown_libname_11();

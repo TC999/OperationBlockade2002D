@@ -129,7 +129,7 @@ LABEL_27:
   else
     v15 = *(_DWORD *)(a1 + 100);
   *(_DWORD *)(a1 + 104) = v15;
-  LOBYTE(v16) = sub_47CDBD(v14, a1);
+  BYTEn(v16, 0) = sub_47CDBD(v14, a1);
   if ( (_BYTE)v16 )
   {
     v16 = *(_DWORD *)(a1 + 272);

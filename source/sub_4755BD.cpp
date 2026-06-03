@@ -49,11 +49,11 @@ int __cdecl sub_4755BD(_DWORD *self)
       if ( v6 >= 0 )
       {
         if ( v6 > 255 )
-          LOWORD(v6) = 255;
+          *((_WORD*)&(v6)) = 255;
       }
       else
       {
-        LOWORD(v6) = 0;
+        *((_WORD*)&(v6)) = 0;
       }
       if ( v7 >= 0 )
       {
@@ -67,11 +67,11 @@ int __cdecl sub_4755BD(_DWORD *self)
       if ( v18 >= 0 )
       {
         if ( v18 > 255 )
-          LOWORD(v18) = 255;
+          *((_WORD*)&(v18)) = 255;
       }
       else
       {
-        LOWORD(v18) = 0;
+        *((_WORD*)&(v18)) = 0;
       }
       i += 2;
       v4 += 8;

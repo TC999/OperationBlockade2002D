@@ -51,7 +51,7 @@ int __cdecl sub_47264E(int *self, _DWORD *a2, unsigned int a3)
   {
     if ( v5 )
     {
-      sub_46D8FD(0, "LoadDDS: Partial cubemaps not supported.");
+      sub_46D8FD(0, (char *)"LoadDDS: Partial cubemaps not supported.");
       return -2147467259;
     }
     v21 = 1;
@@ -80,7 +80,7 @@ LABEL_38:
       {
         v9 = operator new(0x30u);
         if ( v9 )
-          v10 = sub_470F78(v9);
+          v10 = (int)(intptr_t)sub_470F78((uint32 *)v9);
         else
           v10 = 0;
         if ( !v10 )
@@ -102,7 +102,7 @@ LABEL_38:
           {
             v12 = operator new(0x30u);
             if ( v12 )
-              v11 = (int *)sub_470F78(v12);
+              v11 = (int *)sub_470F78((uint32 *)v12);
             else
               v11 = 0;
             if ( !v11 )
@@ -206,6 +206,6 @@ LABEL_71:
       goto LABEL_38;
     }
   }
-  sub_46D8FD(0, "LoadDDS: Unsupported pixel format");
+  sub_46D8FD(0, (char *)"LoadDDS: Unsupported pixel format");
   return -2147467259;
 }

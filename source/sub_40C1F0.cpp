@@ -1,3 +1,7 @@
+extern char aCouldnTObtainM[];
+extern char aCouldnTSetMous[];
+extern char aCouldnTSetCoop[];
+
 //----- (0040C1F0) --------------------------------------------------------
 _DWORD *__cdecl sub_40C1F0(_DWORD **self, _DWORD *a2, int a3, char a4)
 {
@@ -8,7 +12,7 @@ _DWORD *__cdecl sub_40C1F0(_DWORD **self, _DWORD *a2, int a3, char a4)
   _DWORD v8[2]; // [esp+24h] [ebp-8h] BYREF
 
   v8[0] = 0;
-  v4 = self + 4;
+  v4 = (_DWORD *)(self + 4);
   v5 = (*(int (__stdcall **)(_DWORD *, void *, _DWORD **, _DWORD))(*self[2] + 12))(self[2], &unk_499E34, self + 4, 0);
   if ( v5 < 0 )
   {
@@ -29,7 +33,7 @@ LABEL_7:
     v7 = aCouldnTSetCoop;
     goto LABEL_7;
   }
-  sub_40C4C0(v8);
+  sub_40C4C0(v8, a2);
   sub_488CEE((LPVOID)v8[1]);
   result = a2;
   *a2 = 0;

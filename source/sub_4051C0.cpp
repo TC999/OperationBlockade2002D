@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004051C0) --------------------------------------------------------
 int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
 {
@@ -32,6 +34,7 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
   float v33; // [esp+3Ch] [ebp-184h] BYREF
   float v34; // [esp+40h] [ebp-180h]
   float v35; // [esp+44h] [ebp-17Ch]
+  int v35_int; // 临时变量，用于替代LODWORD(v35)的自增操作
   int v36; // [esp+48h] [ebp-178h] BYREF
   int v37; // [esp+4Ch] [ebp-174h]
   int v38; // [esp+50h] [ebp-170h]
@@ -60,12 +63,12 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
   _BYTE v61[64]; // [esp+140h] [ebp-80h] BYREF
   _BYTE v62[64]; // [esp+180h] [ebp-40h] BYREF
 
-  v3 = *(float *)&a1;
-  v48 = *(float *)&a1;
-  sub_406BE0(v59);
-  sub_406BE0(v60);
-  sub_406BE0(v61);
-  sub_406BE0(v62);
+  v3 = (float)(uintptr_t)a1;
+  v48 = v3;
+  sub_406BE0((uint32 *)v59);
+  sub_406BE0((uint32 *)v60);
+  sub_406BE0((uint32 *)v61);
+  sub_406BE0((uint32 *)v62);
   result = *(_DWORD *)(LODWORD(v3) + 8);
   v5 = 0;
   v38 = 0;
@@ -92,14 +95,14 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
               sub_404F60((_DWORD *)LODWORD(v3), v5, v59, &v57);
               sub_404F60((_DWORD *)LODWORD(v3), v8, v60, &v54);
               qmemcpy(v61, v59, sizeof(v61));
-              sub_46B9FD(v61, 0, v61);
+              sub_46B9FD((float *)v61, (float *)0, (float *)v61);
               qmemcpy(v62, v60, sizeof(v62));
-              sub_46B9FD(v62, 0, v62);
-              sub_408A30(v7 + 60);
-              sub_46C5C5(v55, v55, v59);
+              sub_46B9FD((float *)v62, (float *)0, (float *)v62);
+              sub_408A30((_DWORD *)(uintptr_t)(v7 + 60), 0);
+              sub_46C5C5(v55, v55, (float *)v59);
               v58 = v57 * *(float *)(v7 + 72);
-              sub_408A30(v10 + 60);
-              sub_46C5C5(v56, v56, v60);
+              sub_408A30((_DWORD *)(uintptr_t)(v10 + 60), 0);
+              sub_46C5C5(v56, v56, (float *)v60);
               v11 = v54 * *(float *)(v10 + 72);
               v34 = v56[0] - v55[0];
               v52 = v56[1] - v55[1];
@@ -118,6 +121,7 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                   0,
                   a3);
                 v35 = 0.0;
+                v35_int = 0;
                 v38 = v37;
                 if ( *(int *)(v7 + 40) > 0 )
                 {
@@ -152,8 +156,8 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                         v44 = *v16;
                         v45 = v16[1];
                         v46 = v16[2];
-                        sub_46C5C5(&v47, &v47, &v59[8]);
-                        sub_46C5C5(&v44, &v44, &v60[8]);
+                        sub_46C5C5(&v47, &v47, (float *)&v59[8]);
+                        sub_46C5C5(&v44, &v44, (float *)&v60[8]);
                         v17 = v47 - v44;
                         if ( v17 < 0.0000099999997 && v17 > -0.0000099999997 )
                         {
@@ -170,7 +174,7 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                               v30 = *v20;
                               v31 = v20[1];
                               v32 = v20[2];
-                              sub_46B976(&v30, &v30, &v59[8]);
+                              sub_46B976((int)(uintptr_t)&v30, (int)&v30, (int)&v59[8]);
                               v33 = 0.0;
                               v34 = 0.0;
                               v35 = 0.0;
@@ -178,7 +182,7 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                               v33 = *v21;
                               v34 = v21[1];
                               v35 = v21[2];
-                              sub_46B976(&v33, &v33, &v60[8]);
+                              sub_46B976((int)(uintptr_t)&v33, (int)&v33, (int)&v60[8]);
                               v53 = (v33 + v30) * 0.5;
                               v22 = v53;
                               v30 = v53;
@@ -186,7 +190,7 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                               v31 = v54;
                               v55[0] = (v35 + v32) * 0.5;
                               v32 = v55[0];
-                              sub_46B976(&v30, &v30, &v61[8]);
+                              sub_46B976((int)(uintptr_t)&v30, (int)&v30, (int)&v61[8]);
                               v23 = (float *)((char *)v39 + *(_DWORD *)(v37 + 4));
                               *v23 = v30;
                               v23[1] = v31;
@@ -194,7 +198,7 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                               v34 = v54;
                               v35 = v55[0];
                               v33 = v22;
-                              sub_46B976(&v33, &v33, &v62[8]);
+                              sub_46B976((int)(uintptr_t)&v33, (int)&v33, (int)&v62[8]);
                               v24 = (float *)((char *)v43 + *(_DWORD *)(v41 + 4));
                               *v24 = v33;
                               v24[1] = v34;
@@ -214,9 +218,9 @@ int __cdecl sub_4051C0(_DWORD *a1, int a2, int a3)
                     (*(void (**)(void))(*(_DWORD *)a2 + 48))();
                     v26 = *(_DWORD *)(v7 + 40);
                     v38 += *(_DWORD *)(v36 + 84);
-                    ++LODWORD(v35);
+                    ++v35_int;
                   }
-                  while ( SLODWORD(v35) < v26 );
+                  while ( v35_int < v26 );
                 }
                 a3 = *(_DWORD *)(v7 + 36);
                 (*(void (**)(void))(*(_DWORD *)a3 + 48))();

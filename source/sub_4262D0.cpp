@@ -1,10 +1,12 @@
 //----- (004262D0) --------------------------------------------------------
+extern const char aUiHiding[];
+
 int __cdecl sub_4262D0(int self)
 {
   int v2; // esi
   int result; // eax
 
-  sub_4229D0(aUiHiding);
+  sub_4229D0((char*)aUiHiding);
   sub_4246F0((LPVOID **)self);
   v2 = *(_DWORD *)(self + 52);
   if ( v2 )

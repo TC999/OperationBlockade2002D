@@ -1,3 +1,11 @@
+extern char aMapMapworksPf3[];
+extern char aSoundsWarmapEx[];
+extern char aMapblasthalo[];
+extern char aMapexplode[];
+extern char aMapexplodespar[];
+extern char aMapshellexplod[];
+extern char aMapshellexplod_0[];
+
 //----- (004376B0) --------------------------------------------------------
 _DWORD *__cdecl sub_4376B0(_DWORD *self, int a2)
 {
@@ -18,7 +26,7 @@ _DWORD *__cdecl sub_4376B0(_DWORD *self, int a2)
   char Buffer[64]; // [esp+64h] [ebp-4Ch] BYREF
   int v19; // [esp+ACh] [ebp-4h]
 
-  v16[16] = self;
+  v16[16] = (int)self;
   sub_403B10(self);
   v3 = 0;
   v19 = 0;
@@ -33,18 +41,18 @@ _DWORD *__cdecl sub_4376B0(_DWORD *self, int a2)
     --v4;
   }
   while ( v4 );
-  *self = &off_499508;
+  *self = (int)&off_499508;
   self[148] = a2;
   sub_403D90((char *)self, aMapMapworksPf3);
   sub_403E30((int)self);
-  v6 = operator new(0x15Cu);
-  LOBYTE(v19) = 1;
+  v6 = (_DWORD *)operator new(0x15Cu);
+  *(_BYTE *)&v19 = 1;
   if ( v6 )
     v7 = sub_41C6A0(v6);
   else
     v7 = 0;
-  LOBYTE(v19) = 0;
-  self[609] = v7;
+  *(_BYTE *)&v19 = 0;
+  self[609] = (int)v7;
   sub_41C760((int)v7, aSoundsWarmapEx);
   sub_41CA40(self[609]);
   v13 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
@@ -79,7 +87,7 @@ _DWORD *__cdecl sub_4376B0(_DWORD *self, int a2)
       v16[5] = 1065353216;
       v16[0] = 1065353216;
       sub_404F60(self, v12, v16, &v17);
-      sub_46C5C5(v9 + 5, v9 + 5, v16);
+      sub_46C5C5((float *)(v9 + 5), (float *)(v9 + 5), (float *)v16);
       v3 = v14;
     }
     v9[10] = 1065353216;

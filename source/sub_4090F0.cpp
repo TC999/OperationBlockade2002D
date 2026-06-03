@@ -52,7 +52,7 @@ int __cdecl sub_4090F0(int self)
     do
     {
       v6 = *(_DWORD *)(*(_DWORD *)(self + 28) + 4 * v2);
-      if ( *(_DWORD *)v6 && (unsigned __int8)sub_428650() )
+      if ( *(_DWORD *)v6 && (unsigned __int8)sub_428650(self) )
       {
         if ( *(_DWORD *)(v6 + 12) != 5 && (v7 = *(float **)(self + 84)) != 0 && *(_DWORD *)(v6 + 28) == 1 )
         {
@@ -112,7 +112,7 @@ LABEL_23:
     }
     while ( v12 );
   }
-  qsort(*(void **)(self + 28), *(_DWORD *)(self + 32), 4u, sub_4096B0);
+  qsort(*(void **)(self + 28), *(_DWORD *)(self + 32), 4u, (int(__cdecl*)(const void*,const void*))sub_4096B0);
   v17 = 0;
   v18 = 0;
   v19 = 0;
@@ -126,7 +126,7 @@ LABEL_23:
     v20 = *(_DWORD *)(*(_DWORD *)(self + 28) + 4 * v19);
     if ( !*(_BYTE *)(v20 + 8) )
       goto LABEL_63;
-    sub_41BC00(-1, -1, -1, -1, -1, *(_BYTE *)(self + 80) != 0, -1);
+    sub_41BC00((_DWORD *)dword_520A50, -1, -1, -1, -1, -1, *(_BYTE *)(self + 80) != 0, -1);
     if ( v18 )
     {
       if ( *(_DWORD *)(v20 + 12) == 5 && *(_DWORD *)(v20 + 36) == v18 && *(_BYTE *)(v20 + 44) == v29 )
@@ -221,7 +221,7 @@ LABEL_51:
       }
       else if ( *(_BYTE *)(v20 + 96) )
       {
-        v25 = sub_420350(v20 + 100, v20 + 124, v20 + 136, v20 + 112, *(_DWORD *)(v20 + 56));
+        v25 = sub_420350((_DWORD *)(v20 + 100), (_DWORD *)(v20 + 124), (_DWORD *)(v20 + 136), (_DWORD *)(v20 + 112), *(_DWORD *)(v20 + 56));
       }
       else
       {

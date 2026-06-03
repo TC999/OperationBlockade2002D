@@ -6,10 +6,10 @@ _DWORD *__cdecl sub_48097A(int a1)
   _DWORD *result; // eax
 
   v1 = (_DWORD *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 88);
-  *(_DWORD *)(a1 + 404) = v1;
+  *(_DWORD *)(a1 + 404) = (uint32)(size_t)v1;
   v2 = 4;
-  *v1 = sub_48084B;
-  v1[1] = sub_48047E;
+  *v1 = (uint32)(size_t)sub_48084B;
+  v1[1] = (uint32)(size_t)sub_48047E;
   result = v1 + 13;
   do
   {

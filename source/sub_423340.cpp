@@ -6,11 +6,11 @@ FILE *__cdecl sub_423340(char *FileName, unsigned int a2)
   int v5; // eax
   unsigned __int8 Buffer[1024]; // [esp+4h] [ebp-400h] BYREF
 
-  result = fopen(FileName, Mode);
+  result = fopen(FileName, (const char *)Mode);
   v3 = (int)result;
   if ( result )
   {
-    if ( (result->_flag & 0x10) == 0 )
+    if ( (*(_DWORD *)(v3 + 12) & 0x10) == 0 )
     {
       do
       {

@@ -1,3 +1,5 @@
+extern char aSoundCanTReset[];
+
 //----- (0041D4F0) --------------------------------------------------------
 char __cdecl sub_41D4F0(int a1, int a2)
 {
@@ -67,21 +69,21 @@ LABEL_19:
         0,
         0,
         a2);
-      v11 = 2 * sf_read_short(*(_DWORD *)(a1 + 300), v23, v22 >> 1);
+      v11 = 2 * ((int (__cdecl *)(_DWORD, int, unsigned int))sf_read_short)(*(_DWORD *)(a1 + 300), v23, v22 >> 1);
       if ( v11 < v22 )
       {
-        sf_close(*(_DWORD *)(a1 + 300));
+        ((void (__cdecl *)(int))sf_close)(*(_DWORD *)(a1 + 300));
         *(_DWORD *)(a1 + 300) = 0;
         ++dword_5200DC;
         if ( *(_BYTE *)a1 )
         {
-          v12 = sf_open_read(a1 + 40, a1 + 304);
+          v12 = ((int (__cdecl *)(int, int))sf_open_read)(a1 + 40, a1 + 304);
           *(_DWORD *)(a1 + 300) = v12;
           *(_DWORD *)(a1 + 28) = 0;
           if ( v12 )
           {
             ++dword_5200D8;
-            sf_read_short(*(_DWORD *)(a1 + 300), v23 + v11, (v22 - v11) >> 1);
+            ((int (__cdecl *)(_DWORD, int, unsigned int))sf_read_short)(*(_DWORD *)(a1 + 300), v23 + v11, (v22 - v11) >> 1);
           }
           else
           {
@@ -94,13 +96,13 @@ LABEL_19:
           v14 = v22 - v11;
           *(_DWORD *)(a1 + 336) = v11 + v10;
           v15 = *(_WORD *)(v13 + 14) == 8;
-          HIWORD(v13) = HIWORD(v23);
+          WORDn(v13, 1) = WORDn(v23, 1);
           v16 = v14;
           v17 = (char *)(v23 + v11);
-          LOBYTE(v13) = !v15 ? 0 : 0x80;
+          BYTEn(v13, 0) = !v15 ? 0 : 0x80;
           BYTE1(v13) = v13;
           v18 = v13 << 16;
-          LOWORD(v18) = v13;
+          WORDn(v18, 0) = v13;
           v14 >>= 2;
           memset32(v17, v18, v14);
           memset(&v17[4 * v14], v13, v16 & 3);

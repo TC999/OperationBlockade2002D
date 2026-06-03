@@ -18,7 +18,7 @@ char __cdecl sub_444030(_DWORD *self, char a2)
       v5 = self[102];
       v6 = self[103];
       memset(v7, 0, sizeof(v7));
-      return sub_44E040(*(_DWORD *)(v5 + 792), (int)(self + 120), v6, 0.0, (int)v7);
+      return sub_44E040((char *)(*(_DWORD *)(v5 + 792)), (int)(self + 120), v6, 0, (int)v7, (int *)0);
     }
   }
   return result;

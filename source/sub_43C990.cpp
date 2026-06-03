@@ -1,3 +1,7 @@
+extern char aObjectives[];
+extern char aTitle[];
+extern char aObjectivetext[];
+
 //----- (0043C990) --------------------------------------------------------
 int __cdecl sub_43C990(int self, int a2)
 {
@@ -9,12 +13,12 @@ int __cdecl sub_43C990(int self, int a2)
   *(_DWORD *)(self + 48) = 0;
   *(_DWORD *)(self + 52) = 0;
   *(_BYTE *)(self + 56) = 1;
-  *(_DWORD *)self = &off_4997B8;
+  *(_DWORD *)self = (int)&off_4997B8;
   v3 = sub_424350((_DWORD *)self, aTitle);
-  *(_DWORD *)(self + 68) = v3;
+  *(_DWORD *)(self + 68) = (_DWORD)v3;
   sub_421110(*((LPVOID **)v3 + 28), AppName);
   v4 = sub_424350((_DWORD *)self, aObjectivetext);
-  *(_DWORD *)(self + 72) = v4;
+  *(_DWORD *)(self + 72) = (_DWORD)v4;
   *((_BYTE *)v4 + 45) = 0;
   *(_DWORD *)(self + 60) = 0;
   *(_DWORD *)(self + 64) = 0;

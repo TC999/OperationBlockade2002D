@@ -10,7 +10,7 @@ char __cdecl sub_45EA00(_DWORD *self, int a2)
   {
     v6 = (void *)self[127];
     self[124] = a2;
-    self[127] = sub_488DD7(v6, 4 * a2 + 4);
+    self[127] = (DWORD)(uintptr_t)sub_488DD7(v6, 4 * a2 + 4);
     for ( i = v3 + 1; i <= a2; *(_DWORD *)(self[127] + 4 * i - 4) = 0 )
       ++i;
   }

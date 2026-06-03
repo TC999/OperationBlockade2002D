@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00403880) --------------------------------------------------------
 int __cdecl sub_403880(int self)
 {
@@ -15,7 +17,7 @@ int __cdecl sub_403880(int self)
       v4 = *(void **)(v3 + 4 * i);
       if ( v4 )
       {
-        sub_41C700(*(_DWORD *)(v3 + 4 * i));
+        sub_41C700((LPVOID *)v4);
         sub_4885A6(v4);
       }
     }
@@ -23,7 +25,8 @@ int __cdecl sub_403880(int self)
   memset(*(void **)(self + 280), 0, 4 * *(_DWORD *)(self + 284));
   v5 = *(void **)(self + 280);
   *(_DWORD *)(self + 284) = 0;
-  result = sub_488CEE(v5);
+  result = 0;
+  sub_488CEE(v5);
   *(_DWORD *)(self + 288) = 0;
   *(_DWORD *)(self + 280) = 0;
   return result;

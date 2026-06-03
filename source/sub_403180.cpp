@@ -13,8 +13,8 @@ _DWORD *__cdecl sub_403180(_DWORD *self)
   self[10] = 0;
   self[11] = 0;
   *((_BYTE *)self + 48) = 1;
-  *self = &off_499098;
-  dword_4B5AB0 = (int)self;
-  sub_4033A0(self);
+  *self = (_DWORD)(INT_PTR)&off_499098;
+  dword_4B5AB0 = (int)(INT_PTR)self;
+  sub_4033A0((int)(INT_PTR)self);
   return self;
 }

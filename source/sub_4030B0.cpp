@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004030B0) --------------------------------------------------------
 int __cdecl sub_4030B0(_DWORD *self, int a2, char *String2, int a4)
 {
@@ -17,7 +19,7 @@ int __cdecl sub_4030B0(_DWORD *self, int a2, char *String2, int a4)
   v5 = self[23];
   if ( v5 <= 0 )
   {
-    v7 = operator new(0x14u);
+    v7 = (_DWORD *)operator new(0x14u);
   }
   else
   {
@@ -26,7 +28,7 @@ int __cdecl sub_4030B0(_DWORD *self, int a2, char *String2, int a4)
     self[23] = v6;
   }
   v7[1] = a2;
-  v8 = sub_403710(String2);
+  v8 = sub_403710(self, String2);
   v7[3] = v8;
   sub_4282E0(v8 != 0, aDialogueGroupS, (char)String2);
   v7[4] = a4;
@@ -40,7 +42,7 @@ int __cdecl sub_4030B0(_DWORD *self, int a2, char *String2, int a4)
     v11 = (void *)self[18];
     v12 = v9 + 8;
     self[20] = v12;
-    v13 = sub_488DD7(v11, 4 * v12);
+    v13 = (int)(INT_PTR)sub_488DD7(v11, 4 * v12);
     if ( v13 )
     {
       v14 = self[19];
@@ -49,7 +51,7 @@ int __cdecl sub_4030B0(_DWORD *self, int a2, char *String2, int a4)
       memset((void *)(v13 + 4 * v14), 0, 4 * v15);
     }
   }
-  *(_DWORD *)(self[18] + 4 * self[19] - 4) = v7;
+  *(_DWORD *)(self[18] + 4 * self[19] - 4) = (uint32)(uintptr_t)v7;
   result = self[16];
   self[16] = result + 1;
   return result;

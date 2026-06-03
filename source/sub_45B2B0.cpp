@@ -1,3 +1,5 @@
+extern char aHostIsAborting[];
+
 //----- (0045B2B0) --------------------------------------------------------
 int __cdecl sub_45B2B0(int self, const char *a2)
 {
@@ -24,7 +26,8 @@ int __cdecl sub_45B2B0(int self, const char *a2)
   *(_DWORD *)(self + 100) = 11;
   strcpy((char *)(self + 140), a2);
   sub_4262D0(*(_DWORD *)(dword_520970 + 232));
-  sub_436FA0(*(float **)(dword_520970 + 224), 0.0, 1.0);
-  v4 = (LPVOID *)sub_450BF0((_DWORD *)dword_520970, 1, 0.0);
-  return sub_421110(v4, AppName);
+  sub_436FA0(*(float **)(dword_520970 + 224), 0.0f, 1.0f);
+  v4 = (LPVOID *)sub_450BF0((_DWORD *)dword_520970, 1, 0.0f);
+  sub_421110(v4, AppName);
+  return 0;
 }

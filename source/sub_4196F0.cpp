@@ -16,7 +16,7 @@ char __cdecl sub_4196F0(int self, float *a2, float a3, float a4, char a5, char a
   v16[0] = *a2;
   v16[1] = a2[1];
   v16[2] = 0.0;
-  sub_46B970(v16, v16);
+  sub_46B970((int)(uintptr_t)v16, (int)(uintptr_t)v16);
   v13 = *(int *)(self + 120);
   v14 = *(float *)(self + 124);
   v15 = *(float *)(self + 128);
@@ -29,8 +29,8 @@ char __cdecl sub_4196F0(int self, float *a2, float a3, float a4, char a5, char a
   sub_401000((float *)&v13, v17);
   if ( a3 >= fabs(v17) )
   {
-    v9 = sub_4011F0(a2);
-    if ( LOBYTE(a4) )
+    v9 = sub_4011F0((int)(uintptr_t)a2);
+    if ( BYTEn(a4, 0) )
     {
       if ( v9 >= *(float *)(self + 4296) )
         v9 = *(float *)(self + 4296);
@@ -39,7 +39,7 @@ char __cdecl sub_4196F0(int self, float *a2, float a3, float a4, char a5, char a
         v9 = v18;
     }
     v15 = tan(v9);
-    sub_46B970(&v13, &v13);
+    sub_46B970((int)(uintptr_t)&v13, (int)(uintptr_t)&v13);
   }
   v10 = *(float *)(self + 4288) * *(float *)(self + 4284);
   v11 = (float *)(self + 20 * *(_DWORD *)(self + 4132) + 116);
@@ -50,9 +50,9 @@ char __cdecl sub_4196F0(int self, float *a2, float a3, float a4, char a5, char a
   v14 = v14 + v11[1];
   v15 = v15 + v11[2];
   if ( !a6 )
-    return sub_416350(self, &v13, a5) != 0;
-  result = sub_419C40(&v13);
+    return sub_416350(self, (uint32*)&v13, a5) != 0;
+  result = sub_419C40(self, (float*)&v13);
   if ( result )
-    return sub_416350(self, &v13, a5) != 0;
+    return sub_416350(self, (uint32*)&v13, a5) != 0;
   return result;
 }

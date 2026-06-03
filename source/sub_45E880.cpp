@@ -1,3 +1,6 @@
+extern char aSaved[];
+extern char aWb[];
+
 //----- (0045E880) --------------------------------------------------------
 char __cdecl sub_45E880(int self)
 {
@@ -23,7 +26,7 @@ char __cdecl sub_45E880(int self)
   }
   else
   {
-    sub_4229D0("Unable to create saved game file %s", Buffer);
+    sub_4229D0((char *)"Unable to create saved game file %s", Buffer);
     return 0;
   }
 }

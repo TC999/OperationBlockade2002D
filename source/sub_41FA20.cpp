@@ -12,7 +12,7 @@ int __cdecl sub_41FA20(int a1, char a2)
   int v10; // [esp+18h] [ebp-8h]
   int v11; // [esp+1Ch] [ebp-4h]
 
-  v2 = sub_408F30(dword_520970);
+  v2 = sub_408F30((_DWORD *)(uintptr_t)dword_520970);
   dword_520108 = *(_DWORD *)(v2 + 56);
   dword_52010C = *(_DWORD *)(v2 + 60);
   v3 = (float *)(v2 + 44);
@@ -28,7 +28,7 @@ int __cdecl sub_41FA20(int a1, char a2)
   dword_52011C = v10;
   *(float *)&v11 = *(float *)&dword_520108 * v6 - *(float *)&dword_52010C * v5;
   dword_520120 = v11;
-  sub_46B970(&dword_520118, &dword_520118);
+  sub_46B970((int)&dword_520118, (int)&dword_520118);
   (*(void (__stdcall **)(_DWORD, int))(**(_DWORD **)ArgList + 304))(*(_DWORD *)ArgList, 322);
   (*(void (__stdcall **)(_DWORD, _DWORD, int, int))(**(_DWORD **)ArgList + 332))(
     *(_DWORD *)ArgList,

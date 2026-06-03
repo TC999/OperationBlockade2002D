@@ -34,8 +34,8 @@ char __cdecl sub_477A67(_DWORD *a1)
     v21 = v2[1];
   }
   v22 = v21 - 1;
-  LOBYTE(v4) = 0;
-  HIBYTE(v4) = *v3;
+  *(_BYTE *)&v4 = 0;
+  *((_BYTE *)&v4 + 1) = *v3;
   v5 = v3 + 1;
   v20 = v4;
   if ( v22 )

@@ -88,35 +88,35 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
         switch ( v27 )
         {
           case -2146073072:
-            v28 = sub_403A30(v60, 2, aSessionIsFull);
+            v28 = sub_403A30((_DWORD *)v60, 2, aSessionIsFull);
             *(_DWORD *)(self + 940) = *v28;
             v29 = (const char *)v28[1];
             if ( v29 )
-              *(_DWORD *)(self + 944) = _strdup(v29);
+              *(_DWORD *)(self + 944) = (_DWORD)_strdup(v29);
             sub_488CEE((LPVOID)v60[1]);
             return 0;
           case -2146074016:
-            v30 = sub_403A30(v61, 2, aHostRejectedTh);
+            v30 = sub_403A30((_DWORD *)v61, 2, aHostRejectedTh);
             *(_DWORD *)(self + 940) = *v30;
             v31 = (const char *)v30[1];
             if ( v31 )
-              *(_DWORD *)(self + 944) = _strdup(v31);
+              *(_DWORD *)(self + 944) = (_DWORD)_strdup(v31);
             sub_488CEE((LPVOID)v61[1]);
             return 0;
           case -2146073200:
-            v32 = sub_403A30(v62, 2, aPlayerNotReach);
+            v32 = sub_403A30((_DWORD *)v62, 2, aPlayerNotReach);
             *(_DWORD *)(self + 940) = *v32;
             v33 = (const char *)v32[1];
             if ( v33 )
-              *(_DWORD *)(self + 944) = _strdup(v33);
+              *(_DWORD *)(self + 944) = (_DWORD)_strdup(v33);
             sub_488CEE((LPVOID)v62[1]);
             return 0;
           default:
-            v34 = sub_403A30(v63, 2, aConnectionFail);
+            v34 = sub_403A30((_DWORD *)v63, 2, aConnectionFail);
             *(_DWORD *)(self + 940) = *v34;
             v35 = (const char *)v34[1];
             if ( v35 )
-              *(_DWORD *)(self + 944) = _strdup(v35);
+              *(_DWORD *)(self + 944) = (_DWORD)_strdup(v35);
             sub_488CEE((LPVOID)v63[1]);
             return 0;
         }
@@ -197,10 +197,10 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
           }
           InterlockedIncrement((volatile LONG *)(self + 100));
           *((_DWORD *)v40 + 2077) = *(_DWORD *)(self + 136);
-          *(_DWORD *)(self + 136) = v40;
-          *(_DWORD *)&v65[1] = v40;
+          *(_DWORD *)(self + 136) = (_DWORD)v40;
+          *(_DWORD *)&v65[1] = (_DWORD)v40;
           ++*(_DWORD *)v40;
-          sub_411820(65281, v64, 10);
+          sub_411820(self, (__int16)65281, (int)v64, 10);
           LeaveCriticalSection(v43);
           return 0;
         }
@@ -208,12 +208,12 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
       return result;
     case 0xFFFF0009:
       v44 = a3;
-      *(_DWORD *)&v65[1] = sub_411B60(*(_DWORD *)(LODWORD(a3) + 4));
+      *(_DWORD *)&v65[1] = (int)sub_411B60(self, *(_DWORD *)(LODWORD(a3) + 4));
       EnterCriticalSection((LPCRITICAL_SECTION)(self + 112));
       *(_BYTE *)(*(_DWORD *)&v65[1] + 4) = 1;
       LeaveCriticalSection((LPCRITICAL_SECTION)(self + 112));
-      sub_411820(65282, v64, 10);
-      sub_411BB0(*(_DWORD *)(LODWORD(v44) + 4));
+      sub_411820(self, (__int16)65282, (int)v64, 10);
+      sub_411BB0(self, *(_DWORD *)(LODWORD(v44) + 4));
       return 0;
     case 0xFFFF000B:
       lpCriticalSection = (struct _RTL_CRITICAL_SECTION *)(self + 960);
@@ -239,7 +239,7 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
       v47 = (float *)sub_40E8E0(20);
       v48 = a3;
       v49 = v47;
-      sub_40F4C0(v47, *(_DWORD *)(LODWORD(a3) + 4), *(_DWORD *)(LODWORD(a3) + 16), *(_WORD **)(LODWORD(a3) + 12));
+      sub_40F4C0((_DWORD *)v47, *(_DWORD *)(LODWORD(a3) + 4), *(_DWORD *)(LODWORD(a3) + 16), *(_WORD **)(LODWORD(a3) + 12));
       if ( (*(_BYTE *)(*((_DWORD *)v49 + 4) + 2) & 8) == 0 && *((_DWORD *)v49 + 1) != *(_DWORD *)(self + 84) )
       {
         if ( flt_4F5CBC > 0.0 )
@@ -256,14 +256,14 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
             a2 = rand();
             v50 = fabs((double)(int)a2 * 0.000030518509) * (lpCriticalSectionb - a3) + a3;
           }
-          *v49 = v50 + v56;
+          *v49 = (float)(v50 + v56);
         }
         if ( flt_4F5CC0 > 0.0 )
         {
           a3 = COERCE_FLOAT(rand());
           if ( fabs((double)SLODWORD(a3) * 0.000030518509) < flt_4F5CC0 )
           {
-            sub_4113D0(v49);
+            sub_4113D0((int)v49);
             return 0;
           }
         }
@@ -272,7 +272,7 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
       v51 = *(float ***)(self + 28);
       if ( v51 )
       {
-        *(_DWORD *)(self + 28) = v51[1];
+        *(_DWORD *)(self + 28) = (_DWORD)v51[1];
       }
       else
       {
@@ -283,15 +283,15 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
       *v51 = v49;
       v51[1] = 0;
       if ( *(_DWORD *)(self + 32) )
-        *(_DWORD *)(*(_DWORD *)(self + 36) + 4) = v51;
+        *(_DWORD *)(*(_DWORD *)(self + 36) + 4) = (_DWORD)v51;
       else
-        *(_DWORD *)(self + 32) = v51;
+        *(_DWORD *)(self + 32) = (_DWORD)v51;
       v52 = *(_DWORD *)(self + 40) + 1;
-      *(_DWORD *)(self + 36) = v51;
+      *(_DWORD *)(self + 36) = (_DWORD)v51;
       *(_DWORD *)(self + 40) = v52;
       LeaveCriticalSection((LPCRITICAL_SECTION)(self + 44));
-      *(float *)dword_520A28 = *(float *)dword_520A28 + 1.0;
-      *(float *)dword_520890 = (double)*(int *)(LODWORD(v48) + 16) + *(float *)dword_520890;
+      *(float *)dword_520A28 = *(float *)dword_520A28 + 1.0f;
+      *(float *)dword_520890 = (float)*(int *)(LODWORD(v48) + 16) + *(float *)dword_520890;
       return 0;
     case 0xFFFF0016:
       v45 = *(_DWORD *)(self + 100);
@@ -305,7 +305,7 @@ int __cdecl sub_410AB0(int self, unsigned int a2, float a3)
         while ( *v46 );
       }
       *(_DWORD *)&v65[1] = 0;
-      sub_411820(65283, v64, 10);
+      sub_411820(self, (__int16)65283, (int)v64, 10);
       return 0;
     default:
       return 0;
@@ -319,7 +319,7 @@ LABEL_7:
       v5 = operator new(0x118u);
       memset(v5, 0, 0x118u);
       *((_DWORD *)v5 + 69) = *(_DWORD *)(self + 956);
-      *(_DWORD *)(self + 956) = v5;
+      *(_DWORD *)(self + 956) = (_DWORD)v5;
       break;
     }
   }
@@ -344,7 +344,7 @@ LABEL_7:
   }
   v12 = operator new(0x48u);
   v13 = (const void *)a2;
-  *((_DWORD *)v5 + 65) = v12;
+  *((_DWORD *)v5 + 65) = (_DWORD)v12;
   memset(v12, 0, 0x48u);
   qmemcpy(*((void **)v5 + 65), v13, 0x48u);
   v14 = a3;
@@ -377,29 +377,29 @@ LABEL_7:
     {
       if ( v17 == -2146073072 )
       {
-        v18 = sub_403A30(v57, 2, aSessionIsFull);
+        v18 = sub_403A30((_DWORD *)v57, 2, aSessionIsFull);
         *(_DWORD *)(self + 940) = *v18;
         v19 = (const char *)v18[1];
         if ( v19 )
-          *(_DWORD *)(self + 944) = _strdup(v19);
+          *(_DWORD *)(self + 944) = (_DWORD)_strdup(v19);
         v20 = (void *)v57[1];
       }
       else if ( v17 == -2146074016 )
       {
-        v21 = sub_403A30(v58, 2, aHostRejectedTh);
+        v21 = sub_403A30((_DWORD *)v58, 2, aHostRejectedTh);
         *(_DWORD *)(self + 940) = *v21;
         v22 = (const char *)v21[1];
         if ( v22 )
-          *(_DWORD *)(self + 944) = _strdup(v22);
+          *(_DWORD *)(self + 944) = (_DWORD)_strdup(v22);
         v20 = (void *)v58[1];
       }
       else
       {
-        v23 = sub_403A30(v59, 2, aConnectionFail);
+        v23 = sub_403A30((_DWORD *)v59, 2, aConnectionFail);
         *(_DWORD *)(self + 940) = *v23;
         v24 = (const char *)v23[1];
         if ( v24 )
-          *(_DWORD *)(self + 944) = _strdup(v24);
+          *(_DWORD *)(self + 944) = (_DWORD)_strdup(v24);
         v20 = (void *)v59[1];
       }
       sub_488CEE(v20);

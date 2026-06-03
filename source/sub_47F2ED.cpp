@@ -10,7 +10,7 @@ int __cdecl sub_47F2ED(_DWORD *a1, int a2)
     result = a2 - 2;
     if ( a2 == 2 )
     {
-      *(_DWORD *)(v2 + 4) = sub_47F2CA;
+      *(_DWORD *)(v2 + 4) = (int)sub_47F2CA;
     }
     else
     {
@@ -23,7 +23,7 @@ int __cdecl sub_47F2ED(_DWORD *a1, int a2)
     result = a1[103];
     if ( *(_BYTE *)(result + 8) )
     {
-      *(_DWORD *)(v2 + 4) = sub_47F1C2;
+      *(_DWORD *)(v2 + 4) = (int)sub_47F1C2;
       result = sub_47EEBF(a1);
       *(_DWORD *)(v2 + 64) = 0;
       *(_DWORD *)(v2 + 68) = 0;
@@ -31,7 +31,7 @@ int __cdecl sub_47F2ED(_DWORD *a1, int a2)
     }
     else
     {
-      *(_DWORD *)(v2 + 4) = sub_47F15A;
+      *(_DWORD *)(v2 + 4) = (int)sub_47F15A;
     }
     *(_BYTE *)(v2 + 48) = 0;
     *(_DWORD *)(v2 + 52) = 0;

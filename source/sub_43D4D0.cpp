@@ -1,3 +1,8 @@
+extern char aRetrybutton_0[];
+extern char aAbortbutton_0[];
+extern char aStaging[];
+extern char aLevelselect[];
+
 //----- (0043D4D0) --------------------------------------------------------
 char __cdecl sub_43D4D0(int *self, char *String1, int a3)
 {
@@ -6,7 +11,7 @@ char __cdecl sub_43D4D0(int *self, char *String1, int a3)
     if ( !_strcmpi(String1, aRetrybutton_0) )
     {
       sub_4262D0(self[10]);
-      sub_45AA80(*(_DWORD *)(dword_520970 + 236));
+      sub_45AA80((uint32*)(uintptr_t)(*(_DWORD *)(dword_520970 + 236)));
       return 1;
     }
     if ( !_strcmpi(String1, aAbortbutton_0) )

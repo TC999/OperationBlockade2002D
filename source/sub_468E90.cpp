@@ -27,7 +27,7 @@ int __cdecl sub_468E90(_DWORD **self, int a2)
       sub_422230(v7);
       self[5][j] = 0;
     }
-    result = sub_409AF0(v10, 0);
+    result = sub_409AF0((_DWORD **)self[5], v10, 0);
     ++j;
   }
   return result;

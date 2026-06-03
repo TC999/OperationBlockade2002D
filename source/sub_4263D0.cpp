@@ -1,5 +1,5 @@
 //----- (004263D0) --------------------------------------------------------
-char __stdcall sub_4263D0(int a1, int a2, int a3)
+char sub_4263D0(int a1, int a2, int a3)
 {
   return 1;
 }

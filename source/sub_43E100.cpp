@@ -1,3 +1,17 @@
+#include "common.h"
+
+extern char aYear[];
+extern char aTimeOfDay[];
+extern char aMonth[];
+extern char aDifficulty_0[];
+extern char aSoldier[];
+extern char aVeteran[];
+extern char aRecruit[];
+
+extern char aTheHostKickedY[];
+extern char aMultiplayersky[];
+extern char aMultiplayermis[];
+
 //----- (0043E100) --------------------------------------------------------
 char __cdecl sub_43E100(int self, char *String1, int a3)
 {
@@ -40,8 +54,8 @@ char __cdecl sub_43E100(int self, char *String1, int a3)
       {
         v4 = *(_DWORD *)(self + 104) + 1;
         *(_DWORD *)(self + 104) = v4;
-        if ( v4 >= sub_4647F0(*(_DWORD *)(dword_520970 + 252)) - 1 )
-          v5 = sub_4647F0(*(_DWORD *)(dword_520970 + 252)) - 1;
+        if ( v4 >= sub_4647F0() - 1 )
+          v5 = sub_4647F0() - 1;
         else
           v5 = v4;
       }
@@ -130,13 +144,13 @@ LABEL_38:
       {
         sub_4262D0(*(_DWORD *)(self + 40));
         v20 = rand();
-        sub_45B150(*(_DWORD *)(self + 100), *(_DWORD *)(self + 104), v20 % 10);
+        sub_45B150((_DWORD *)*(_DWORD *)(self + 100), *(_DWORD *)(self + 104), v20 % 10, 0);
       }
       return 1;
     }
     sub_411C50(dword_4F5CC4);
     sub_45ABF0(*(_DWORD *)(dword_520970 + 236));
-    sub_45ECB0(*(_DWORD *)(dword_520970 + 280));
+    sub_45ECB0((_DWORD *)*(_DWORD *)(dword_520970 + 280));
     if ( byte_521684 )
       sub_4261C0(*(_DWORD **)(self + 40), aIpx, 0);
     else
@@ -157,7 +171,7 @@ LABEL_38:
     v11 = v10 + 1;
     *(_DWORD *)(self + 100) = v11;
     v12 = *(_DWORD *)(dword_520970 + 236);
-    if ( v11 >= *(_DWORD *)(16 * *(_DWORD *)(v12 + 20) + v12 + 28) - 1 )
+    if ( v11 >= (int)(*(_DWORD *)(16 * *(_DWORD *)(v12 + 20) + v12 + 28) - 1) )
       v13 = *(_DWORD *)(16 * *(_DWORD *)(v12 + 20) + v12 + 28) - 1;
     else
       v13 = v11;
@@ -166,7 +180,7 @@ LABEL_38:
   v15 = sub_424350((_DWORD *)self, aMonth);
   if ( v15 )
   {
-    v16 = (const char *)sub_45A870(*(_DWORD *)(self + 100));
+    v16 = (const char *)sub_45A870((_DWORD *)self, *(_DWORD *)(self + 100));
     sub_421110(*((LPVOID **)v15 + 28), v16);
   }
   sub_422DC0((HKEY)AppName, aMultiplayermis, *(_DWORD *)(self + 100));

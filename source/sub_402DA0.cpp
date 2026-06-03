@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00402DA0) --------------------------------------------------------
 void __cdecl sub_402DA0(int self, float a2)
 {
@@ -53,7 +55,7 @@ void __cdecl sub_402DA0(int self, float a2)
             *(_DWORD *)(self + 76) = v16;
             if ( v13 != v16 )
             {
-              memcpy(&v14[v13], &v14[v13 + 1], 4 * (v16 + 0x3FFFFFFF * v13));
+              memcpy(&v14[v13], &v14[v13 + 1], 4 * (v16 - v13));
               *(_DWORD *)(*(_DWORD *)(self + 72) + 4 * *(_DWORD *)(self + 76)) = 0;
             }
           }
@@ -65,7 +67,7 @@ LABEL_23:
           {
             v19 = v17 + 8;
             *(_DWORD *)(self + 96) = v19;
-            v20 = sub_488DD7(*(LPVOID *)(self + 88), 4 * v19);
+            v20 = (int)sub_488DD7(*(LPVOID *)(self + 88), 4 * v19);
             if ( v20 )
             {
               v21 = *(_DWORD *)(self + 92);
@@ -91,7 +93,7 @@ LABEL_23:
             v7 = *(_DWORD *)(*(_DWORD *)(v3 + 12) + 68);
             v6 = rand() % v7;
           }
-          v8 = sub_41E2D0(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v3 + 12) + 64) + 4 * v6), 1, 0);
+          v8 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(v3 + 12) + 64) + 4 * v6), 1, 0);
           *(_DWORD *)(self + 104) = v8;
           if ( v8 )
           {
@@ -99,16 +101,16 @@ LABEL_23:
             v24 = 0;
             v25 = 0;
             memset(v26, 0, sizeof(v26));
-            if ( sub_408F30(dword_520970) )
+            if ( sub_408F30((_DWORD *)dword_520970) )
             {
-              v9 = (_DWORD *)sub_408F30(dword_520970);
+              v9 = (_DWORD *)sub_408F30((_DWORD *)dword_520970);
               v10 = v9[8];
               v9 += 8;
               v23 = v10;
               v24 = v9[1];
               v25 = v9[2];
             }
-            sub_41D960(&v23, v26);
+            sub_41D960((_DWORD *)*(_DWORD *)(self + 104), (_DWORD*)(&v23), v26);
             sub_41D840(*(_DWORD *)(self + 104));
           }
           else

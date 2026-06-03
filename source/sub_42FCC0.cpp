@@ -1,4 +1,7 @@
+#include "common.h"
+
 //----- (0042FCC0) --------------------------------------------------------
+
 int __cdecl sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
 {
   int v5; // eax
@@ -13,13 +16,13 @@ int __cdecl sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
   v10 = operator new(0x900u);
   v13 = 0;
   if ( v10 )
-    v5 = sub_42FEB0(a2, a3);
+    v5 = sub_42FEB0((int)self, a2, a3);
   else
     v5 = 0;
   v9 = v5;
   v7 = self[7];
   v13 = -1;
-  sub_44F190(v7, 1, &v9);
+  sub_44F190(v7, (_DWORD *)1, 0, (uint32*)&v9);
   *(_DWORD *)(v9 + 392) = self[13];
   v8 = v9;
   ++self[13];
@@ -28,7 +31,7 @@ int __cdecl sub_42FCC0(_DWORD *self, int a2, int a3, int a4)
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {
     v12 = *(_DWORD *)(a2 + 8);
-    sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x101, v11, 10, 15, 0);
+    sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x101, (_WORD *)v11, 10, 15, 0);
   }
   else if ( *(_BYTE *)(dword_4F5CC4 + 937) )
   {

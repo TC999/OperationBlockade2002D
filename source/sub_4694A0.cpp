@@ -13,14 +13,14 @@ void *__cdecl sub_4694A0(void *self)
   *((_DWORD *)self + 6) = 0;
   *((_DWORD *)self + 7) = 0;
   *((_BYTE *)self + 32) = 1;
-  *(_DWORD *)self = &off_499D24;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499D24;
   if ( *((_BYTE *)self + 32) )
   {
     for ( i = 0; i < *((_DWORD *)self + 6); ++i )
     {
       v3 = *(void (__cdecl ****)(_DWORD, int))(*((_DWORD *)self + 5) + 4 * i);
       if ( v3 )
-        (**v3)(v3, 1);
+        (**v3)((_DWORD)(uintptr_t)v3, 1);
     }
   }
   memset(*((void **)self + 5), 0, 4 * *((_DWORD *)self + 6));

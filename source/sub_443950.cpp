@@ -46,8 +46,10 @@ int __cdecl sub_443950(_DWORD *a1, int a2, int *a3, int *a4, int a5, _DWORD *a6)
     else
     {
       v12 = *(_DWORD *)(a5 + 4);
-      LOBYTE(v10) = *(_BYTE *)(v12 + 312);
-      sub_443CD0((int)a6, v6, *(float *)(v12 + 300), *(float *)&v10);
+      {
+        int v10tmp = *(unsigned __int8 *)(v12 + 312);
+        sub_443CD0((int)a6, v6, *(float *)(v12 + 300), *(float *)&v10tmp, 0);
+      }
     }
   }
   v13 = a1[103];
@@ -58,8 +60,8 @@ int __cdecl sub_443950(_DWORD *a1, int a2, int *a3, int *a4, int a5, _DWORD *a6)
   v25[10] = 1065353216;
   v25[5] = 1065353216;
   v25[0] = 1065353216;
-  sub_407690(v13, (int)a6, v25);
-  sub_46C5C5(v6, v6, v25);
+  sub_407690(v13, (int)a6, (_DWORD *)v25);
+  sub_46C5C5((float *)v6, (float *)v6, (float *)v25);
   v14 = *(_DWORD *)(a1[102] + 292);
   if ( !v14 )
     return 6;

@@ -11,7 +11,7 @@ int __cdecl sub_44C250(_DWORD *self)
   int v9; // [esp+10h] [ebp-14h]
 
   v1 = self;
-  *self = &off_499A74;
+  *self = (uint32)(uintptr_t)(&off_499A74);
   v2 = self[84];
   v9 = self[85];
   v8 = v2;

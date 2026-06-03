@@ -1,5 +1,7 @@
 //----- (00426E30) --------------------------------------------------------
-LRESULT __stdcall sub_426E30(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
+extern char aGettingRestore[];
+extern char aGettingMinimiz[];
+LRESULT __cdecl sub_426E30(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 {
   int v5; // eax
 

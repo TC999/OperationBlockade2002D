@@ -1,4 +1,10 @@
 //----- (00425140) --------------------------------------------------------
+static char aUiIni[] = "Ui.ini";
+static char aImage[] = "Image";
+static char aFile[] = "File";
+static char aPos[] = "Pos";
+static char aSize[] = "Size";
+
 int __cdecl sub_425140(int self)
 {
   _DWORD *v2; // ebx
@@ -163,20 +169,20 @@ int __cdecl sub_425140(int self)
   {
     sub_40A1D0(v158, aUiIni);
     v159 = 0;
-    for ( i = 0; sub_40AAF0(v158, aImage, 0); *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = v2 )
+      for ( i = 0; sub_40AAF0((int)v158, aImage, 0); *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = (uint32)v2 )
     {
       sub_40AA40((int)v158, aImage);
-      v2 = operator new(0x13Cu);
+      v2 = (_DWORD*)operator new(0x13Cu);
       v2[74] = 0;
-      sub_40AFC0(aName, (int)&i);
+      sub_40AFC0(v158, aName, (_DWORD *)&i);
       v4 = strlen((const char *)i) + 1;
       v3 = i + v4;
       qmemcpy(v2, (const void *)i, 4 * (v4 >> 2));
       qmemcpy(&v2[v4 >> 2], (const void *)(v3 - v4 + 4 * (v4 >> 2)), v4 & 3);
       *((_BYTE *)v2 + 33) = 0;
-      if ( sub_40ABC0(v158, aFile, 0) )
+      if ( sub_40ABC0((int)v158, aFile, 0) )
       {
-        sub_40AFC0(aFile, (int)&i);
+        sub_40AFC0(v158, aFile, (_DWORD *)&i);
         v6 = strlen((const char *)i) + 1;
         v5 = i + v6;
         qmemcpy((char *)v2 + 33, (const void *)i, 4 * (v6 >> 2));
@@ -184,7 +190,7 @@ int __cdecl sub_425140(int self)
       }
       v2[76] = 0;
       v2[75] = 0;
-      if ( sub_40ABC0(v158, aPos, 0) )
+      if ( sub_40ABC0((int)v158, aPos, 0) )
       {
         sub_40B1F0((const char *)v158, aPos, (float *)&v157, (float *)&j);
         v7 = *(float *)&j;
@@ -193,7 +199,7 @@ int __cdecl sub_425140(int self)
       }
       v2[78] = 0;
       v2[77] = 0;
-      if ( sub_40ABC0(v158, aSize, 0) )
+      if ( sub_40ABC0((int)v158, aSize, 0) )
       {
         sub_40B1F0((const char *)v158, aSize, (float *)&v155, (float *)&v156);
         v8 = *(float *)&v156;
@@ -212,7 +218,7 @@ int __cdecl sub_425140(int self)
         v11 = *(void **)(self + 20);
         v12 = v9 + 8;
         *(_DWORD *)(self + 28) = v12;
-        v13 = sub_488DD7(v11, 4 * v12);
+        v13 = (int)sub_488DD7(v11, 4 * v12);
         if ( v13 )
         {
           v14 = *(_DWORD *)(self + 24);
@@ -232,7 +238,7 @@ int __cdecl sub_425140(int self)
     if ( *(_DWORD *)(v17 + 296) || !sub_422AE0((LPCSTR)(v17 + 33)) )
       sub_4229D0("Can't find texture '%s'", (const char *)(v17 + 33));
     else
-      *(_DWORD *)(v17 + 296) = sub_409AF0((char *)(v17 + 33), 1);
+      *(_DWORD *)(v17 + 296) = sub_409AF0((_DWORD **)dword_520970, (char *)(v17 + 33), 1);
   }
   *(_DWORD *)(self + 52) = 0;
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
@@ -240,7 +246,7 @@ int __cdecl sub_425140(int self)
   if ( *(float *)&j == 0.0 )
     v18 = 0;
   else
-    v18 = sub_43A740(self);
+    v18 = (int)sub_43A740((_DWORD *)self, 0);
   v19 = *(_DWORD *)(self + 44);
   v20 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -250,7 +256,7 @@ int __cdecl sub_425140(int self)
     v21 = *(void **)(self + 36);
     v22 = v19 + 8;
     *(_DWORD *)(self + 44) = v22;
-    v23 = sub_488DD7(v21, 4 * v22);
+    v23 = (int)sub_488DD7(v21, 4 * v22);
     if ( v23 )
     {
       v24 = *(_DWORD *)(self + 40);
@@ -260,13 +266,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v18;
-  sub_428680(v18);
+  sub_428680((_DWORD *)self, v18);
   *(float *)&j = COERCE_FLOAT(operator new(0x58u));
   v159 = 2;
   if ( *(float *)&j == 0.0 )
     v26 = 0;
   else
-    v26 = sub_43A850(self);
+    v26 = (int)sub_43A850((_DWORD *)self, 0);
   v27 = *(_DWORD *)(self + 44);
   v28 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -275,7 +281,7 @@ int __cdecl sub_425140(int self)
   {
     v29 = v27 + 8;
     *(_DWORD *)(self + 44) = v29;
-    v30 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v29);
+    v30 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v29);
     if ( v30 )
     {
       v31 = *(_DWORD *)(self + 40);
@@ -285,13 +291,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v26;
-  sub_428680(v26);
+  sub_428680((_DWORD *)self, v26);
   *(float *)&j = COERCE_FLOAT(operator new(0x38u));
   v159 = 3;
   if ( *(float *)&j == 0.0 )
     v33 = 0;
   else
-    v33 = sub_43AE80(self);
+    v33 = (int)sub_43AE80((_DWORD *)self, 0);
   v34 = *(_DWORD *)(self + 44);
   v35 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -300,7 +306,7 @@ int __cdecl sub_425140(int self)
   {
     v36 = v34 + 8;
     *(_DWORD *)(self + 44) = v36;
-    v37 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v36);
+    v37 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v36);
     if ( v37 )
     {
       v38 = *(_DWORD *)(self + 40);
@@ -310,13 +316,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v33;
-  sub_428680(v33);
+  sub_428680((_DWORD *)self, v33);
   *(float *)&j = COERCE_FLOAT(operator new(0x40u));
   v159 = 4;
   if ( *(float *)&j == 0.0 )
     v40 = 0;
   else
-    v40 = sub_43B390(self);
+    v40 = (int)sub_43B390((_DWORD *)self, 0);
   v41 = *(_DWORD *)(self + 44);
   v42 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -325,7 +331,7 @@ int __cdecl sub_425140(int self)
   {
     v43 = v41 + 8;
     *(_DWORD *)(self + 44) = v43;
-    v44 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v43);
+    v44 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v43);
     if ( v44 )
     {
       v45 = *(_DWORD *)(self + 40);
@@ -335,13 +341,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v40;
-  sub_428680(v40);
+  sub_428680((_DWORD *)self, v40);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 5;
   if ( *(float *)&j == 0.0 )
     v47 = 0;
   else
-    v47 = sub_43B6C0(self);
+    v47 = (int)sub_43B6C0((_DWORD *)self, 0);
   v48 = *(_DWORD *)(self + 44);
   v49 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -350,7 +356,7 @@ int __cdecl sub_425140(int self)
   {
     v50 = v48 + 8;
     *(_DWORD *)(self + 44) = v50;
-    v51 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v50);
+    v51 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v50);
     if ( v51 )
     {
       v52 = *(_DWORD *)(self + 40);
@@ -360,13 +366,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v47;
-  sub_428680(v47);
+  sub_428680((_DWORD *)self, v47);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 6;
   if ( *(float *)&j == 0.0 )
     v54 = 0;
   else
-    v54 = sub_43BA40(self);
+    v54 = (int)sub_43BA40((_DWORD *)self, 0);
   v55 = *(_DWORD *)(self + 44);
   v56 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -375,7 +381,7 @@ int __cdecl sub_425140(int self)
   {
     v57 = v55 + 8;
     *(_DWORD *)(self + 44) = v57;
-    v58 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v57);
+    v58 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v57);
     if ( v58 )
     {
       v59 = *(_DWORD *)(self + 40);
@@ -385,13 +391,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v54;
-  sub_428680(v54);
+  sub_428680((_DWORD *)self, v54);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 7;
   if ( *(float *)&j == 0.0 )
     v61 = 0;
   else
-    v61 = sub_43BB70(self);
+    v61 = (int)sub_43BB70((_DWORD *)self, 0);
   v62 = *(_DWORD *)(self + 44);
   v63 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -400,7 +406,7 @@ int __cdecl sub_425140(int self)
   {
     v64 = v62 + 8;
     *(_DWORD *)(self + 44) = v64;
-    v65 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v64);
+    v65 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v64);
     if ( v65 )
     {
       v66 = *(_DWORD *)(self + 40);
@@ -410,13 +416,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v61;
-  sub_428680(v61);
+  sub_428680((_DWORD *)self, v61);
   *(float *)&j = COERCE_FLOAT(operator new(0x34u));
   v159 = 8;
   if ( *(float *)&j == 0.0 )
     v68 = 0;
   else
-    v68 = sub_43C730(self);
+    v68 = (int)sub_43C730((_DWORD *)self, 0);
   v69 = *(_DWORD *)(self + 44);
   v70 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -425,7 +431,7 @@ int __cdecl sub_425140(int self)
   {
     v71 = v69 + 8;
     *(_DWORD *)(self + 44) = v71;
-    v72 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v71);
+    v72 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v71);
     if ( v72 )
     {
       v73 = *(_DWORD *)(self + 40);
@@ -435,13 +441,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v68;
-  sub_428680(v68);
+  sub_428680((_DWORD *)self, v68);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 9;
   if ( *(float *)&j == 0.0 )
     v75 = 0;
   else
-    v75 = sub_43D040(self);
+    v75 = (int)sub_43D040((_DWORD *)self, 0);
   v76 = *(_DWORD *)(self + 44);
   v77 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -450,7 +456,7 @@ int __cdecl sub_425140(int self)
   {
     v78 = v76 + 8;
     *(_DWORD *)(self + 44) = v78;
-    v79 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v78);
+    v79 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v78);
     if ( v79 )
     {
       v80 = *(_DWORD *)(self + 40);
@@ -460,13 +466,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v75;
-  sub_428680(v75);
+  sub_428680((_DWORD *)self, v75);
   *(float *)&j = COERCE_FLOAT(operator new(0x50u));
   v159 = 10;
   if ( *(float *)&j == 0.0 )
     v82 = 0;
   else
-    v82 = sub_43C990(self);
+    v82 = (int)sub_43C990(self, 0);
   v83 = *(_DWORD *)(self + 44);
   v84 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -475,7 +481,7 @@ int __cdecl sub_425140(int self)
   {
     v85 = v83 + 8;
     *(_DWORD *)(self + 44) = v85;
-    v86 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v85);
+    v86 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v85);
     if ( v86 )
     {
       v87 = *(_DWORD *)(self + 40);
@@ -485,13 +491,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v82;
-  sub_428680(v82);
+  sub_428680((_DWORD *)self, v82);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 11;
   if ( *(float *)&j == 0.0 )
     v89 = 0;
   else
-    v89 = sub_43D0D0(self);
+    v89 = (int)sub_43D0D0((_DWORD *)self, 0);
   v90 = *(_DWORD *)(self + 44);
   v91 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -500,7 +506,7 @@ int __cdecl sub_425140(int self)
   {
     v92 = v90 + 8;
     *(_DWORD *)(self + 44) = v92;
-    v93 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v92);
+    v93 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v92);
     if ( v93 )
     {
       v94 = *(_DWORD *)(self + 40);
@@ -510,13 +516,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v89;
-  sub_428680(v89);
+  sub_428680((_DWORD *)self, v89);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 12;
   if ( *(float *)&j == 0.0 )
     v96 = 0;
   else
-    v96 = sub_43D1D0(self);
+    v96 = (int)sub_43D1D0((_DWORD *)self, 0);
   v97 = *(_DWORD *)(self + 44);
   v98 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -525,7 +531,7 @@ int __cdecl sub_425140(int self)
   {
     v99 = v97 + 8;
     *(_DWORD *)(self + 44) = v99;
-    v100 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v99);
+    v100 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v99);
     if ( v100 )
     {
       v101 = *(_DWORD *)(self + 40);
@@ -535,13 +541,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v96;
-  sub_428680(v96);
+  sub_428680((_DWORD *)self, v96);
   *(float *)&j = COERCE_FLOAT(operator new(0x38u));
   v159 = 13;
   if ( *(float *)&j == 0.0 )
     v103 = 0;
   else
-    v103 = sub_43D280(self);
+    v103 = (int)sub_43D280((_DWORD *)self, 0);
   v104 = *(_DWORD *)(self + 44);
   v105 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -550,7 +556,7 @@ int __cdecl sub_425140(int self)
   {
     v106 = v104 + 8;
     *(_DWORD *)(self + 44) = v106;
-    v107 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v106);
+    v107 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v106);
     if ( v107 )
     {
       v108 = *(_DWORD *)(self + 40);
@@ -560,13 +566,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v103;
-  sub_428680(v103);
+  sub_428680((_DWORD *)self, v103);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 14;
   if ( *(float *)&j == 0.0 )
     v110 = 0;
   else
-    v110 = sub_43D450(self);
+    v110 = (int)sub_43D450((_DWORD *)self, 0);
   v111 = *(_DWORD *)(self + 44);
   v112 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -575,7 +581,7 @@ int __cdecl sub_425140(int self)
   {
     v113 = v111 + 8;
     *(_DWORD *)(self + 44) = v113;
-    v114 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v113);
+    v114 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v113);
     if ( v114 )
     {
       v115 = *(_DWORD *)(self + 40);
@@ -585,13 +591,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v110;
-  sub_428680(v110);
+  sub_428680((_DWORD *)self, v110);
   *(float *)&j = COERCE_FLOAT(operator new(0x78u));
   v159 = 15;
   if ( *(float *)&j == 0.0 )
     v117 = 0;
   else
-    v117 = sub_43BDB0(self);
+    v117 = (int)sub_43BDB0((_DWORD *)self, 0);
   v118 = *(_DWORD *)(self + 44);
   v119 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -600,7 +606,7 @@ int __cdecl sub_425140(int self)
   {
     v120 = v118 + 8;
     *(_DWORD *)(self + 44) = v120;
-    v121 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v120);
+    v121 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v120);
     if ( v121 )
     {
       v122 = *(_DWORD *)(self + 40);
@@ -610,13 +616,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v117;
-  sub_428680(v117);
+  sub_428680((_DWORD *)self, v117);
   *(float *)&j = COERCE_FLOAT(operator new(0x2Cu));
   v159 = 16;
   if ( *(float *)&j == 0.0 )
     v124 = 0;
   else
-    v124 = sub_43C3D0(self);
+    v124 = (int)sub_43C3D0((_DWORD *)self, 0);
   v125 = *(_DWORD *)(self + 44);
   v126 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -625,7 +631,7 @@ int __cdecl sub_425140(int self)
   {
     v127 = v125 + 8;
     *(_DWORD *)(self + 44) = v127;
-    v128 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v127);
+    v128 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v127);
     if ( v128 )
     {
       v129 = *(_DWORD *)(self + 40);
@@ -635,13 +641,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v124;
-  sub_428680(v124);
+  sub_428680((_DWORD *)self, v124);
   *(float *)&j = COERCE_FLOAT(operator new(0x80u));
   v159 = 17;
   if ( *(float *)&j == 0.0 )
     v131 = 0;
   else
-    v131 = sub_43DE90(self);
+    v131 = (int)sub_43DE90((_DWORD *)self, 0);
   v132 = *(_DWORD *)(self + 44);
   v133 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -650,7 +656,7 @@ int __cdecl sub_425140(int self)
   {
     v134 = v132 + 8;
     *(_DWORD *)(self + 44) = v134;
-    v135 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v134);
+    v135 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v134);
     if ( v135 )
     {
       v136 = *(_DWORD *)(self + 40);
@@ -660,13 +666,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v131;
-  sub_428680(v131);
+  sub_428680((_DWORD *)self, v131);
   *(float *)&j = COERCE_FLOAT(operator new(0x30u));
   v159 = 18;
   if ( *(float *)&j == 0.0 )
     v138 = 0;
   else
-    v138 = sub_43D580(self);
+    v138 = (int)sub_43D580((_DWORD *)self, 0);
   v139 = *(_DWORD *)(self + 44);
   v140 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -675,7 +681,7 @@ int __cdecl sub_425140(int self)
   {
     v141 = v139 + 8;
     *(_DWORD *)(self + 44) = v141;
-    v142 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v141);
+    v142 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v141);
     if ( v142 )
     {
       v143 = *(_DWORD *)(self + 40);
@@ -685,13 +691,13 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v138;
-  sub_428680(v138);
+  sub_428680((_DWORD *)self, v138);
   *(float *)&j = COERCE_FLOAT(operator new(0x74u));
   v159 = 19;
   if ( *(float *)&j == 0.0 )
     v145 = 0;
   else
-    v145 = sub_43D7C0(self);
+    v145 = (int)sub_43D7C0((const char **)self, 0);
   v146 = *(_DWORD *)(self + 44);
   v147 = *(_DWORD *)(self + 40) + 1;
   v159 = -1;
@@ -700,7 +706,7 @@ int __cdecl sub_425140(int self)
   {
     v148 = v146 + 8;
     *(_DWORD *)(self + 44) = v148;
-    v149 = sub_488DD7(*(LPVOID *)(self + 36), 4 * v148);
+    v149 = (int)sub_488DD7(*(LPVOID *)(self + 36), 4 * v148);
     if ( v149 )
     {
       v150 = *(_DWORD *)(self + 40);
@@ -710,5 +716,5 @@ int __cdecl sub_425140(int self)
     }
   }
   *(_DWORD *)(*(_DWORD *)(self + 36) + 4 * *(_DWORD *)(self + 40) - 4) = v145;
-  return sub_428680(v145);
+  return (int)sub_428680((_DWORD *)self, v145);
 }

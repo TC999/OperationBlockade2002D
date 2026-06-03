@@ -12,7 +12,8 @@ int __cdecl sub_429E40(FILE ***self)
       fclose(v1[3]);
       v1[3] = 0;
     }
-    return sub_4885A6(v1);
+    sub_4885A6(v1);
+    return 0;
   }
   return result;
 }

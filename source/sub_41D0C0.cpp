@@ -27,10 +27,10 @@ char __cdecl sub_41D0C0(int self, float a2)
   }
   v7 = *(_DWORD *)(self + 32);
   if ( v7 )
-    (*(void (__stdcall **)(int, _DWORD))(*(_DWORD *)v7 + 60))(v7, (__int64)(*(float *)(self + 12) * 10000.0 - 10000.0));
+    (*(void (__stdcall **)(int, _DWORD))(*(_DWORD *)v7 + 60))(v7, (_DWORD)(__int64)(*(float *)(self + 12) * 10000.0 - 10000.0));
   if ( *(_BYTE *)(self + 2) )
   {
-    v3 = sub_41D4F0(self);
+    v3 = sub_41D4F0(self, 0);
     if ( !v3 )
       return v3;
   }

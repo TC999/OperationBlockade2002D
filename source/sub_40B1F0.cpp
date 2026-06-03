@@ -9,7 +9,7 @@ void __cdecl sub_40B1F0(const char *self, char *ArgList, float *a3, float *a4)
   char v10; // al
   const char *v11; // edi
 
-  v5 = (const char *)sub_40B6E0(ArgList, 1);
+  v5 = (const char *)sub_40B6E0((int)self, ArgList, 1);
   *a3 = 0.0;
   *a4 = 0.0;
   if ( v5 )

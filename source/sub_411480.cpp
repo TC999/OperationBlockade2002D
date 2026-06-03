@@ -25,7 +25,7 @@ bool __cdecl sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int
   _DWORD *v29; // esi
   int v30; // edi
   int v31; // eax
-  int *v32; // esi
+  _DWORD *v32; // esi
   _DWORD *v33; // ecx
   int v34; // eax
   int v35; // edx
@@ -49,7 +49,7 @@ bool __cdecl sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int
     return 0;
   v9 = a4;
   v10 = a5;
-  *a4 = (_WORD)a2;
+  *a4 = (uint16)(uintptr_t)a2;
   *(_DWORD *)(v9 + 1) = 0;
   *(float *)dword_5209C0 = *(float *)dword_5209C0 + 1.0;
   *(float *)dword_520A08 = (double)a5 + *(float *)dword_520A08;
@@ -90,17 +90,17 @@ bool __cdecl sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int
     {
       v42 = a3;
       a3 = 1;
-      v50[0] = sub_411B60(v42);
+      v50[0] = (uint32)(uintptr_t)sub_411B60((int)(uintptr_t)self, v42);
     }
     else
     {
-      a3 = sub_4118C0(v50, 4);
+      a3 = sub_4118C0((int)(uintptr_t)self, v50, 4);
     }
     v20 = a3;
     if ( a3 <= 0 )
     {
 LABEL_36:
-      sub_411920(v50, v20);
+      sub_411920((int)(uintptr_t)self, (int **)v50, v20);
       return 1;
     }
     v21 = v50;
@@ -123,7 +123,7 @@ LABEL_36:
       v22[5] = v24;
       v25 = (void *)sub_40E8E0(v10);
       v26 = a4;
-      v22[2] = v25;
+      v22[2] = (uint32)(uintptr_t)v25;
       v22[3] = v10;
       qmemcpy(v25, v26, v10);
       v27 = a5;
@@ -153,7 +153,7 @@ LABEL_36:
         v33 = (_DWORD *)*v32;
         v34 = v31 + 8;
         v32[2] = v34;
-        v35 = sub_488DD7(v33, 4 * v34);
+        v35 = (int)(uintptr_t)sub_488DD7(v33, 4 * v34);
         if ( !v35 )
           goto LABEL_33;
       }
@@ -167,7 +167,7 @@ LABEL_36:
           goto LABEL_33;
         v38 = v37 + 8;
         v32[2] = v38;
-        v35 = sub_488DD7((LPVOID)*v32, 4 * v38);
+        v35 = (int)(uintptr_t)sub_488DD7((LPVOID)(uintptr_t)*v32, 4 * v38);
         if ( !v35 )
           goto LABEL_33;
       }
@@ -177,7 +177,7 @@ LABEL_33:
       v39 = v32[1];
       v40 = (_DWORD *)*v32;
       v21 = a2;
-      v40[v39 - 1] = v22;
+      v40[v39 - 1] = (uint32)(uintptr_t)v22;
       v7 = self;
 LABEL_34:
       ++v21;

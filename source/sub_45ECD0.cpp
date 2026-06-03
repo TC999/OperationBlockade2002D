@@ -33,7 +33,7 @@ int __cdecl sub_45ECD0(int *self)
     while ( v3 < 4 );
     self[128] = 0;
     self[129] = self[220];
-    return sub_463180(self);
+    return sub_463180((uint8 *)self);
   }
   return result;
 }

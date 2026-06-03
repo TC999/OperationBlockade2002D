@@ -34,7 +34,7 @@ int __cdecl sub_42A0E0(_DWORD *self)
     v9 = *((_BYTE *)v1 + 9);
     if ( !isspace(v9) )
       break;
-    sub_42A390(&v9);
+    sub_42A390(v1, (uint8 *)&v9);
   }
   while ( !*v1 );
   sub_42A370(v1);
@@ -134,7 +134,7 @@ int __cdecl sub_42A0E0(_DWORD *self)
 LABEL_45:
           if ( *v1 )
             return v5;
-          v7 = sub_42A010(v1, &v8);
+          v7 = sub_42A010(v1, (uint8 *)&v8);
           *((_BYTE *)v1 + 8) = 0;
           if ( v7 )
           {

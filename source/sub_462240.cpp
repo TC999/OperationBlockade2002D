@@ -1,3 +1,11 @@
+#include "common.h"
+
+extern char aScoringIni[];
+extern char aScoringgroup_0[];
+extern char aIcon[];
+extern char aPosition[];
+extern char aPoints[];
+
 //----- (00462240) --------------------------------------------------------
 int __cdecl sub_462240(int self)
 {
@@ -18,7 +26,7 @@ int __cdecl sub_462240(int self)
 
   if ( *(_BYTE *)(self + 11792) )
   {
-    for ( i = 0; i < *(_DWORD *)(self + 11784); ++i )
+    for ( i = 0; i < (int)*(_DWORD *)(self + 11784); ++i )
       sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 11780) + 4 * i));
   }
   memset(*(void **)(self + 11780), 0, 4 * *(_DWORD *)(self + 11784));
@@ -29,7 +37,7 @@ int __cdecl sub_462240(int self)
   *(_DWORD *)(self + 11780) = 0;
   sub_40A1D0(v15, aScoringIni);
   v16 = 0;
-  while ( sub_40AAF0(v15, aScoringgroup_0, 0) )
+  while ( sub_40AAF0((int)(uintptr_t)v15, aScoringgroup_0, 0) )
   {
     v4 = operator new(0x12Cu);
     v5 = *(_DWORD *)(self + 11788);
@@ -40,7 +48,7 @@ int __cdecl sub_462240(int self)
       v7 = *(void **)(self + 11780);
       v8 = v5 + 8;
       *(_DWORD *)(self + 11788) = v8;
-      v9 = sub_488DD7(v7, 4 * v8);
+      v9 = (int)(uintptr_t)sub_488DD7(v7, 4 * v8);
       if ( v9 )
       {
         v10 = *(_DWORD *)(self + 11784);
@@ -49,15 +57,15 @@ int __cdecl sub_462240(int self)
         memset((void *)(v9 + 4 * v10), 0, 4 * v11);
       }
     }
-    *(_DWORD *)(*(_DWORD *)(self + 11780) + 4 * *(_DWORD *)(self + 11784) - 4) = v4;
-    sub_40AA40((int)v15, aScoringgroup_0);
-    sub_40AFC0(aName_0, (int)&v13);
+    *(_DWORD *)(*(_DWORD *)(self + 11780) + 4 * *(_DWORD *)(self + 11784) - 4) = (uint32)(uintptr_t)v4;
+    sub_40AA40((int)(uintptr_t)v15, aScoringgroup_0);
+    sub_40AFC0((void *)v15, aName_0, (_DWORD *)&v13);
     strcpy((char *)v4, (const char *)v13);
-    sub_40AFC0(aIcon, (int)&v13);
+    sub_40AFC0((void *)v15, aIcon, (_DWORD *)&v13);
     strcpy((char *)v4 + 33, (const char *)v13);
     sub_40AF00((const char *)v15, aPosition, (char **)&v14);
     sub_40AF00((const char *)v15, aPoints, (char **)v4 + 74);
   }
   v16 = -1;
-  return sub_40A830((int)v15);
+  return sub_40A830((int)(uintptr_t)v15);
 }

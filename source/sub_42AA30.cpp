@@ -1,3 +1,77 @@
+#include "common.h"
+
+extern char aFighter[];
+extern char aTransport[];
+extern char aBomber[];
+extern char aDiveBomber[];
+extern char aKamikaze[];
+extern char aV1[];
+extern char aScoringgroup[];
+extern char aGoodguy[];
+extern char aModelfile[];
+extern char aThrust[];
+extern char aFuselage[];
+extern char aRightwing[];
+extern char aLeftwing[];
+extern char aNose[];
+extern char aTail[];
+extern char aHealth[];
+extern char aFormationscale[];
+extern char aFormationhorzv[];
+extern char aFormationvertv[];
+extern char aFormationbreak[];
+extern char aSpeed[];
+extern char aSpeedr[];
+extern char aSpeeds[];
+extern char aSpeedv[];
+extern char aStartdist[];
+extern char aAltitude[];
+extern char aRange[];
+extern char aDivealtitude[];
+extern char aDiverange[];
+extern char aDivecloserange[];
+extern char aDiveyawrange[];
+extern char aPathsegmenttim[];
+extern char aHorizontalvari[];
+extern char aVerticalvariat[];
+extern char aRollfactor[];
+extern char aPath[];
+extern char aCustumPath[];
+extern char aPlanesmokeeffe[];
+extern char aPlanefireeffec[];
+extern char aPlaneexplodeef[];
+extern char aPlanesputteref[];
+extern char aBigimpacts[];
+extern char aSmallimpacts[];
+extern char aEnginesound[];
+extern char aRumblesound[];
+extern char aSputtersound[];
+extern char aSpecialattackt[];
+extern char aTimetillattack[];
+extern char aRangeopendoors[];
+extern char aRangedropbombs[];
+extern char aBay[];
+extern char aBombbayeffect[];
+extern char aTimetilldive[];
+extern char aBomb[];
+extern char aDivebombbullet[];
+extern char aDivesound[];
+extern char aRangedroptorpe[];
+extern char aTimetillkamika[];
+extern char aSplashdamage[];
+extern char aSplashradius[];
+extern char aDeleteTheCorru[];
+extern char aExtradataDatHa[];
+extern char aTheFileExtrada[];
+extern char aTheExtradataDa[];
+extern char aBullet[];
+extern char aImpacts[];
+extern char aAirplaneGun[];
+extern char aGun[];
+extern char asc_4A6264[];
+
+extern "C" void __cdecl __eh_vector_ctor_iterator(void *, unsigned int, int, void (__cdecl *)(void *), void (__cdecl *)(void *));
+
 //----- (0042AA30) --------------------------------------------------------
 int __fastcall sub_42AA30(int a1, int a2, char *k)
 {
@@ -159,32 +233,33 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   int v160; // [esp+30h] [ebp-18h] BYREF
   int v161[2]; // [esp+34h] [ebp-14h] BYREF
   int v162; // [esp+44h] [ebp-4h]
+  int k_idx = 0;
 
   v3 = k;
   v161[1] = a1;
-  sub_468FF0((void *)a1, (int)k);
+  sub_468FF0((void *)a1, (intptr_t)k);
   v162 = 0;
-  *(_BYTE *)(a1 + 608) = (_BYTE)k;
+  *(_BYTE *)(a1 + 608) = 0;
   *(_DWORD *)(a1 + 612) = 0;
   *(_DWORD *)(a1 + 616) = 0;
   *(_DWORD *)(a1 + 620) = 0;
-  LOBYTE(v162) = 1;
-  `eh vector constructor iterator'((void *)(a1 + 624), 0x18u, 5, sub_42CA00, (void (__cdecl *)(void *))sub_42A9D0);
+  *((_BYTE*)&v162) = 1;
+  __eh_vector_ctor_iterator((void *)(a1 + 624), 0x18u, 5, (void (__cdecl *)(void *))sub_42CA00, (void (__cdecl *)(void *))sub_42A9D0);
   *(_DWORD *)(a1 + 932) = 0;
   *(_DWORD *)(a1 + 936) = 0;
   *(_DWORD *)(a1 + 940) = 0;
   *(_BYTE *)(a1 + 944) = 1;
-  v5 = (char)k;
+  v5 = 0;
   *(_DWORD *)(a1 + 980) = 0;
   *(_BYTE *)(a1 + 976) = v5;
   *(_DWORD *)(a1 + 984) = 0;
   *(_DWORD *)(a1 + 988) = 0;
-  *(_DWORD *)a1 = &off_49940C;
+  *(_DWORD *)a1 = (_DWORD)(uintptr_t)&off_49940C;
   v6 = *(const char **)(a1 + 4);
-  LOBYTE(v162) = 4;
-  *(_DWORD *)v155 = v3 + 16;
-  sub_4229D0("Started to load %s in %s", v6, v3 + 16);
-  sub_40AFC0(v3, String2, &String1);
+  *((_BYTE*)&v162) = 4;
+  *(_DWORD *)v155 = (uintptr_t)(v3 + 16);
+  sub_4229D0((char *)"Started to load %s in %s", v6, v3 + 16);
+  sub_40AFC0(v3, String2, (_DWORD *)&String1);
   if ( !strcmp(String1, aFighter) )
   {
     *(_DWORD *)(a1 + 292) = 0;
@@ -211,27 +286,27 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   }
   else
   {
-    sub_40A120(0, "invalid airplane type %s, see %s : %s", String1, *(const char **)(a1 + 4), *(const char **)v155);
+    sub_40A120(0, (char *)"invalid airplane type %s, see %s : %s", String1, *(const char **)(a1 + 4), *(const char **)v155);
   }
   *(_DWORD *)(a1 + 296) = 1065353216;
-  if ( sub_40ABC0(v3, aUnitvalue, 0) )
+  if ( sub_40ABC0((intptr_t)v3, aUnitvalue, 0) )
     sub_40AF60(v3, aUnitvalue, (float *)(a1 + 296));
-  sub_40AFC0(v3, aScoringgroup, &String1);
+  sub_40AFC0(v3, aScoringgroup, (_DWORD *)&String1);
   v7 = sub_462480(*(_DWORD **)(dword_520970 + 280), String1);
   v8 = String1;
-  *(_DWORD *)(a1 + 592) = v7;
-  sub_4282E0(v7 != 0, "Airplane type %s: couldn't find scoring groups %s", *(const char **)(a1 + 4), v8);
+  *(_DWORD *)(a1 + 592) = (uintptr_t)v7;
+  sub_4282E0(v7 != 0, (char *)"Airplane type %s: couldn't find scoring groups %s", *(const char **)(a1 + 4), v8);
   *(_BYTE *)(a1 + 300) = 0;
-  if ( sub_40ABC0(v3, aGoodguy, 0) )
+  if ( sub_40ABC0((intptr_t)v3, aGoodguy, 0) )
     sub_40B130(v3, aGoodguy, (_BYTE *)(a1 + 300));
-  sub_40AFC0(v3, aModelfile, &String1);
+  sub_40AFC0(v3, aModelfile, (_DWORD *)&String1);
   v10 = strlen(String1) + 1;
   v9 = &String1[v10];
   qmemcpy((void *)(a1 + 301), String1, 4 * (v10 >> 2));
   v11 = &v9[4 * (v10 >> 2) - v10];
   v12 = v10 & 3;
   qmemcpy((void *)(a1 + 301 + 4 * (v10 >> 2)), v11, v12);
-  v13 = (int)&v11[v12];
+  v13 = (intptr_t)&v11[v12];
   *(_DWORD *)(a1 + 564) = 0;
   if ( !sub_46A3A0(*(_BYTE **)(dword_520970 + 200), (LPCSTR)(a1 + 301)) )
     sub_42A7C0(a1);
@@ -252,7 +327,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   else
   {
     v15 = *(_DWORD *)(dword_520970 + 200);
-    v160 = (__int64)*(float *)(a1 + 580);
+    v160 = (int)*(float *)(a1 + 580);
     v14 = (int *)sub_46A4C0(v15, &v160, 4u);
   }
   v160 = *v14;
@@ -264,7 +339,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   else
   {
     v17 = *(_DWORD *)(dword_520970 + 200);
-    v160 = (__int64)*(float *)(a1 + 584);
+    v160 = (int)*(float *)(a1 + 584);
     v16 = (int *)sub_46A4C0(v17, &v160, 4u);
   }
   v160 = *v16;
@@ -276,7 +351,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   else
   {
     v19 = *(_DWORD *)(dword_520970 + 200);
-    v160 = (__int64)*(float *)(a1 + 588);
+    v160 = (int)*(float *)(a1 + 588);
     v18 = (int *)sub_46A4C0(v19, &v160, 4u);
   }
   v160 = *v18;
@@ -288,7 +363,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   else
   {
     v21 = *(_DWORD *)(dword_520970 + 200);
-    v160 = (__int64)*(float *)(a1 + 568);
+    v160 = (int)*(float *)(a1 + 568);
     v20 = (int *)sub_46A4C0(v21, &v160, 4u);
   }
   v160 = *v20;
@@ -300,7 +375,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   else
   {
     v23 = *(_DWORD *)(dword_520970 + 200);
-    v160 = (__int64)*(float *)(a1 + 572);
+    v160 = (int)*(float *)(a1 + 572);
     v22 = (int *)sub_46A4C0(v23, &v160, 4u);
   }
   v160 = *v22;
@@ -312,7 +387,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
   else
   {
     v25 = *(_DWORD *)(dword_520970 + 200);
-    v160 = (__int64)*(float *)(a1 + 576);
+    v160 = (int)*(float *)(a1 + 576);
     v24 = (int *)sub_46A4C0(v25, &v160, 4u);
   }
   v160 = *v24;
@@ -345,7 +420,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
       v29 = (_BYTE *)sub_46A4C0(v30, &v152, 4u);
     }
     if ( *v29 )
-      sub_44F190(a1 + 608, *(_DWORD **)(a1 + 616), 1u, &i);
+      sub_44F190(a1 + 608, *(_DWORD **)(a1 + 616), 1u, (_DWORD *)&i);
   }
   if ( !*(_BYTE *)(a1 + 300) )
   {
@@ -371,7 +446,7 @@ int __fastcall sub_42AA30(int a1, int a2, char *k)
         case 4:
           v32 = aTail;
 LABEL_58:
-          *(_DWORD *)ArgList = v32;
+          *(_DWORD *)ArgList = (uintptr_t)v32;
           break;
         default:
           break;
@@ -379,10 +454,10 @@ LABEL_58:
       v33 = k;
       v34 = (_BYTE *)(a1 + 8 * (3 * v156 + 78));
       *v34 = 0;
-      if ( !sub_40ABC0(v33, v32, 0) )
+      if ( !sub_40ABC0((intptr_t)v33, v32, 0) )
         goto LABEL_121;
       *v34 = 1;
-      sub_40AFC0(k, v32, &String1);
+      sub_40AFC0(k, v32, (_DWORD *)&String1);
       v160 = 0;
       v35 = a1 + 24 * v156;
       v159 = v35;
@@ -393,7 +468,7 @@ LABEL_58:
       {
         v37 = (*(_DWORD *)(v35 + 640) - v36) >> 2;
 LABEL_64:
-        sub_44F190(v35 + 632, *(_DWORD **)(v35 + 640), 1 - v37, &v160);
+        sub_44F190(v35 + 632, *(_DWORD **)(v35 + 640), 1 - v37, (_DWORD *)&v160);
         goto LABEL_67;
       }
       if ( (unsigned int)sub_4481C0((_DWORD *)(v35 + 632)) > 1 )
@@ -406,7 +481,7 @@ LABEL_67:
       else
       {
         v39 = *(_DWORD *)(dword_520970 + 200);
-        v160 = sub_405A30(*(_DWORD **)(a1 + 564), String1, -1, 1);
+        v160 = sub_405A30(*(_DWORD **)(a1 + 564), String1, -1, (char)1);
         v38 = (_DWORD *)sub_46A4C0(v39, &v160, 4u);
       }
       **(_DWORD **)(v35 + 636) = *v38;
@@ -415,7 +490,7 @@ LABEL_67:
       if ( v40 )
         sub_40A120(
           *v41 != -1,
-          "airplane section %s not found, see %s : %s",
+          (char *)"airplane section %s not found, see %s : %s",
           v32,
           *(const char **)(a1 + 4),
           *(const char **)v155);
@@ -428,7 +503,7 @@ LABEL_67:
       else
       {
         v43 = *(_DWORD *)(dword_520970 + 200);
-        v160 = sub_405A30(*(_DWORD **)(a1 + 564), asc_4A6264, **(_DWORD **)(v35 + 636), 1);
+        v160 = sub_405A30(*(_DWORD **)(a1 + 564), asc_4A6264, **(_DWORD **)(v35 + 636), (char)1);
         v42 = (_DWORD *)sub_46A4C0(v43, &v160, 4u);
       }
       *(_DWORD *)(v35 + 628) = *v42;
@@ -437,7 +512,7 @@ LABEL_67:
       else
         sub_40A120(
           *(_DWORD *)(v35 + 628) != -1,
-          "failed to find collision node for %s, in model %s, see file %s",
+          (char *)"failed to find collision node for %s, in model %s, see file %s",
           v32,
           (const char *)(*(_DWORD *)(a1 + 564) + 60),
           *(const char **)v155);
@@ -454,7 +529,7 @@ LABEL_67:
         else
         {
           v46 = *(_DWORD *)(dword_520970 + 200);
-          v160 = sub_405A30(*(_DWORD **)(a1 + 564), v44, **(_DWORD **)(a1 + 636), 1);
+          v160 = sub_405A30(*(_DWORD **)(a1 + 564), v44, **(_DWORD **)(a1 + 636), (char)1);
           v45 = (_DWORD *)sub_46A4C0(v46, &v160, 4u);
         }
         v47 = v156;
@@ -464,7 +539,7 @@ LABEL_67:
         else
           sub_40A120(
             *(_DWORD *)(a1 + 4 * v47 + 744) != -1,
-            "failed to load smoke node for %s, see file %s",
+            (char *)"failed to load smoke node for %s, see file %s",
             *(const char **)ArgList,
             *(const char **)v155);
         sub_4885A6(v44);
@@ -540,7 +615,7 @@ LABEL_120:
             v63 = (*(_DWORD *)(v58 + 8) - v60) >> 2;
           else
             v63 = 0;
-          sub_44F190(v58, *(_DWORD **)(v58 + 8), v61 - v63, v161);
+          sub_44F190(v58, *(_DWORD **)(v58 + 8), v61 - v63, (_DWORD *)v161);
           goto LABEL_118;
         }
         if ( v60 )
@@ -582,7 +657,7 @@ LABEL_121:
   else
   {
     v69 = *(_DWORD *)(dword_520970 + 200);
-    v161[0] = sub_405A30(*(_DWORD **)(a1 + 564), asc_4A6264, -1, 1);
+    v161[0] = sub_405A30(*(_DWORD **)(a1 + 564), asc_4A6264, -1, (char)1);
     v68 = (int *)sub_46A4C0(v69, v161, 4u);
   }
   v70 = *v68;
@@ -590,7 +665,7 @@ LABEL_121:
   *(_DWORD *)(a1 + 628) = v70;
   sub_40A120(
     v70 != -1,
-    "failed to find collision node '*' for good guy airplane %s, see %s",
+    (char *)"failed to find collision node '*' for good guy airplane %s, see %s",
     *(const char **)(a1 + 4),
     v71);
 LABEL_129:
@@ -602,12 +677,12 @@ LABEL_129:
   }
   else
   {
-    *(float *)(a1 + 764) = *(float *)&v157 * 0.34999999;
-    v73 = *(float *)&v157 * 0.1;
-    *(float *)(a1 + 768) = v73;
-    *(float *)(a1 + 772) = v73;
-    *(float *)(a1 + 776) = *(float *)&v157 * 0.25;
-    *(float *)(a1 + 780) = *(float *)&v157 * 0.2;
+    *(float *)(a1 + 764) = (float)(*(float *)&v157 * 0.34999999);
+    v73 = (float)(*(float *)&v157 * 0.1);
+    *(float *)(a1 + 768) = (float)v73;
+    *(float *)(a1 + 772) = (float)v73;
+    *(float *)(a1 + 776) = (float)(*(float *)&v157 * 0.25);
+    *(float *)(a1 + 780) = (float)(*(float *)&v157 * 0.2);
   }
   *(_DWORD *)(a1 + 784) = 0;
   *(_DWORD *)(a1 + 788) = 0;
@@ -617,32 +692,32 @@ LABEL_129:
   if ( !v74 || v74 == 3 || v74 == 2 )
   {
     *(_DWORD *)(a1 + 784) = 1140457472;
-    if ( sub_40ABC0(v72, aFormationscale, 0) )
+    if ( sub_40ABC0((intptr_t)v72, aFormationscale, 0) )
       sub_40AF60(v72, aFormationscale, (float *)(a1 + 784));
     *(_DWORD *)(a1 + 788) = 1120403456;
-    if ( sub_40ABC0(v72, aFormationhorzv, 0) )
+    if ( sub_40ABC0((intptr_t)v72, aFormationhorzv, 0) )
       sub_40AF60(v72, aFormationhorzv, (float *)(a1 + 788));
     *(_DWORD *)(a1 + 792) = 1120403456;
-    if ( sub_40ABC0(v72, aFormationvertv, 0) )
+    if ( sub_40ABC0((intptr_t)v72, aFormationvertv, 0) )
       sub_40AF60(v72, aFormationvertv, (float *)(a1 + 792));
     *(_DWORD *)(a1 + 796) = 1167867904;
-    if ( sub_40ABC0(v72, aFormationbreak, 0) )
+    if ( sub_40ABC0((intptr_t)v72, aFormationbreak, 0) )
       sub_40AF60(v72, aFormationbreak, (float *)(a1 + 796));
   }
-  if ( sub_40ABC0(v72, aSpeed, 0) )
+  if ( sub_40ABC0((intptr_t)v72, aSpeed, 0) )
   {
     sub_40AF60(v72, aSpeed, (float *)(a1 + 804));
     *(_DWORD *)(a1 + 800) = *(_DWORD *)(a1 + 804);
     *(_DWORD *)(a1 + 808) = *(_DWORD *)(a1 + 804);
   }
-  if ( sub_40ABC0(v72, aSpeedr, 0) )
+  if ( sub_40ABC0((intptr_t)v72, aSpeedr, 0) )
     sub_40AF60(v72, aSpeedr, (float *)(a1 + 800));
-  if ( sub_40ABC0(v72, aSpeeds, 0) )
+  if ( sub_40ABC0((intptr_t)v72, aSpeeds, 0) )
     sub_40AF60(v72, aSpeeds, (float *)(a1 + 804));
-  if ( sub_40ABC0(v72, aSpeedv, 0) )
+  if ( sub_40ABC0((intptr_t)v72, aSpeedv, 0) )
     sub_40AF60(v72, aSpeedv, (float *)(a1 + 808));
   *(_DWORD *)(a1 + 812) = 0;
-  if ( sub_40ABC0(v72, aStartdist, 0) )
+  if ( sub_40ABC0((intptr_t)v72, aStartdist, 0) )
     sub_40AF60(v72, aStartdist, (float *)(a1 + 812));
   sub_40B1D0(v72, aAltitude, (float *)(a1 + 816), (float *)(a1 + 820));
   sub_40B1D0(v72, aRange, (float *)(a1 + 824), (float *)(a1 + 828));
@@ -664,27 +739,27 @@ LABEL_129:
     sub_40B1B0(v72, aDiverange, (float *)(a1 + 840));
     sub_40AF60(v72, aDivecloserange, (float *)(a1 + 848));
     sub_40AF60(v72, aDiveyawrange, (float *)(a1 + 852));
-    *(float *)(a1 + 852) = *(float *)(a1 + 852) * 0.017453292;
+    *(float *)(a1 + 852) = (float)(*(float *)(a1 + 852) * 0.017453292);
   }
   if ( *(_DWORD *)(a1 + 292) == 5 )
     sub_40B1B0(v72, aDiverange, (float *)(a1 + 840));
   sub_40AF60(v72, aPathsegmenttim, (float *)(a1 + 864));
   sub_40AF60(v72, aHorizontalvari, (float *)(a1 + 868));
-  *(float *)(a1 + 868) = *(float *)(a1 + 868) * 0.017453292;
+  *(float *)(a1 + 868) = (float)(*(float *)(a1 + 868) * 0.017453292);
   sub_40AF60(v72, aVerticalvariat, (float *)(a1 + 872));
-  v76 = *(float *)(a1 + 872) * 0.017453292;
+  v76 = (float)(*(float *)(a1 + 872) * 0.017453292);
   *(_DWORD *)(a1 + 876) = 1065353216;
-  *(float *)(a1 + 872) = v76;
-  if ( sub_40ABC0(v72, aRollfactor, 0) )
+  *(float *)(a1 + 872) = (float)v76;
+  if ( sub_40ABC0((intptr_t)v72, aRollfactor, 0) )
     sub_40AF60(v72, aRollfactor, (float *)(a1 + 876));
-  v77 = operator new(0x148u);
+  v77 = (_DWORD *)operator new(0x148u);
   v78 = v77;
-  v161[0] = (int)v77;
-  LOBYTE(v162) = 5;
+  v161[0] = (intptr_t)v77;
+  *((_BYTE*)&v162) = 5;
   if ( v77 )
   {
-    sub_468FA0((int)v77);
-    *v78 = &off_499224;
+    sub_468FA0((intptr_t)v77);
+    *v78 = (_DWORD)(uintptr_t)&off_499224;
     v79 = v78;
   }
   else
@@ -693,9 +768,9 @@ LABEL_129:
   }
   v80 = *(const char **)v155;
   v81 = (int *)(a1 + 880);
-  LOBYTE(v162) = 4;
-  *(_DWORD *)(a1 + 880) = v79;
-  v79[3] = aPath;
+  *((_BYTE*)&v162) = 4;
+  *(_DWORD *)(a1 + 880) = (_DWORD)(uintptr_t)v79;
+  v79[3] = (_DWORD)(uintptr_t)aPath;
   strcpy((char *)(*(_DWORD *)(a1 + 880) + 16), v80);
   *(_DWORD *)(*v81 + 292) = *(_DWORD *)(a1 + 800);
   *(_DWORD *)(*v81 + 296) = *(_DWORD *)(a1 + 864);
@@ -713,57 +788,57 @@ LABEL_129:
   v84 = k;
   v85 = k;
   *(_DWORD *)(a1 + 884) = 0;
-  if ( sub_40ABC0(v85, aPlanesmokeeffe, 0) )
+  if ( sub_40ABC0((intptr_t)v85, aPlanesmokeeffe, 0) )
   {
-    sub_40AFC0(v84, aPlanesmokeeffe, &String1);
+    sub_40AFC0(v84, aPlanesmokeeffe, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 884), String1, aEffect);
   }
   *(_DWORD *)(a1 + 888) = 0;
-  if ( sub_40ABC0(v84, aPlanefireeffec, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aPlanefireeffec, 0) )
   {
-    sub_40AFC0(v84, aPlanefireeffec, &String1);
+    sub_40AFC0(v84, aPlanefireeffec, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 888), String1, aEffect);
   }
   *(_DWORD *)(a1 + 892) = 0;
-  if ( sub_40ABC0(v84, aPlaneexplodeef, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aPlaneexplodeef, 0) )
   {
-    sub_40AFC0(v84, aPlaneexplodeef, &String1);
+    sub_40AFC0(v84, aPlaneexplodeef, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 892), String1, aEffect);
   }
   *(_DWORD *)(a1 + 896) = 0;
-  if ( sub_40ABC0(v84, aPlanesputteref, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aPlanesputteref, 0) )
   {
-    sub_40AFC0(v84, aPlanesputteref, &String1);
+    sub_40AFC0(v84, aPlanesputteref, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 896), String1, aEffect);
   }
   *(_DWORD *)(a1 + 900) = 0;
-  if ( sub_40ABC0(v84, aBigimpacts, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aBigimpacts, 0) )
   {
-    sub_40AFC0(v84, aBigimpacts, &String1);
+    sub_40AFC0(v84, aBigimpacts, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 900), String1, aImpacts);
   }
   *(_DWORD *)(a1 + 904) = 0;
-  if ( sub_40ABC0(v84, aSmallimpacts, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aSmallimpacts, 0) )
   {
-    sub_40AFC0(v84, aSmallimpacts, &String1);
+    sub_40AFC0(v84, aSmallimpacts, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 904), String1, aImpacts);
   }
   *(_DWORD *)(a1 + 908) = 0;
-  if ( sub_40ABC0(v84, aEnginesound, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aEnginesound, 0) )
   {
-    sub_40AFC0(v84, aEnginesound, &String1);
+    sub_40AFC0(v84, aEnginesound, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 908), String1, aSoundEffect);
   }
   *(_DWORD *)(a1 + 912) = 0;
-  if ( sub_40ABC0(v84, aRumblesound, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aRumblesound, 0) )
   {
-    sub_40AFC0(v84, aRumblesound, &String1);
+    sub_40AFC0(v84, aRumblesound, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 912), String1, aSoundEffect);
   }
   *(_DWORD *)(a1 + 916) = 0;
-  if ( sub_40ABC0(v84, aSputtersound, 0) )
+  if ( sub_40ABC0((intptr_t)v84, aSputtersound, 0) )
   {
-    sub_40AFC0(v84, aSputtersound, &String1);
+    sub_40AFC0(v84, aSputtersound, (_DWORD *)&String1);
     sub_469160(a1, (_DWORD *)(a1 + 916), String1, aSoundEffect);
   }
   v86 = *(_DWORD *)(a1 + 292);
@@ -771,7 +846,7 @@ LABEL_129:
   {
     case 0:
       *(_DWORD *)(a1 + 920) = 0;
-      if ( sub_40ABC0(v84, aSpecialattackt, 0) )
+      if ( sub_40ABC0((intptr_t)v84, aSpecialattackt, 0) )
         sub_40AF60(v84, aSpecialattackt, (float *)(a1 + 920));
       sub_40B1B0(v84, aTimetillattack, (float *)(a1 + 924));
       if ( sub_46A490(*(_BYTE **)(dword_520970 + 200)) )
@@ -784,7 +859,7 @@ LABEL_129:
         v161[0] = *(_DWORD *)(*(_DWORD *)(a1 + 564) + 8);
         v160 = *(_DWORD *)sub_46A4C0(v87, v161, 4u);
       }
-      for ( k = 0; (int)k < v160; ++k )
+      for ( k_idx = 0; k_idx < v160; ++k_idx )
       {
         if ( sub_46A490(*(_BYTE **)(dword_520970 + 200)) )
         {
@@ -795,11 +870,11 @@ LABEL_129:
         else
         {
           v91 = *(_DWORD *)(dword_520970 + 200);
-          v161[0] = strlen((const char *)sub_405C20(*(_DWORD **)(a1 + 564), (int)k));
+          v161[0] = strlen((const char *)sub_405C20(*(_DWORD **)(a1 + 564), k_idx));
           ++v161[0];
           v92 = *(_DWORD *)(dword_520970 + 200);
           v150 = *(_DWORD *)sub_46A4C0(v91, v161, 4u);
-          v93 = (const void *)sub_405C20(*(_DWORD **)(a1 + 564), (int)k);
+          v93 = (const void *)sub_405C20(*(_DWORD **)(a1 + 564), k_idx);
           v90 = (const char *)sub_46A4C0(v92, v93, v150);
         }
         v94 = (char *)v90;
@@ -831,11 +906,11 @@ LABEL_129:
           }
           if ( v97 >= v96 )
           {
-            v99 = operator new(0x14u);
+            v99 = (_DWORD *)operator new(0x14u);
             if ( v99 )
             {
               v100 = v99;
-              *((_BYTE *)v99 + 4) = (_BYTE)k;
+              *((_BYTE *)v99 + 4) = (_BYTE)k_idx;
               v99[2] = 0;
               v99[3] = 0;
               v99[4] = 0;
@@ -856,18 +931,18 @@ LABEL_129:
               {
                 v105 = *(_DWORD *)(a1 + 936);
                 v106 = *(_DWORD *)(a1 + 940) - v105;
-                *(_DWORD *)(a1 + 932) = v104;
+                *(_DWORD *)(a1 + 932) = (_DWORD)(uintptr_t)v104;
                 memset(&v104[4 * v105], 0, 4 * v106);
               }
             }
-            *(_DWORD *)(*(_DWORD *)(a1 + 932) + 4 * *(_DWORD *)(a1 + 936) - 4) = v100;
+            *(_DWORD *)(*(_DWORD *)(a1 + 932) + 4 * *(_DWORD *)(a1 + 936) - 4) = (_DWORD)(uintptr_t)v100;
             v107 = (char *)operator new(0x40u);
             sprintf(v107, "Airplane Gun %d", v159);
             sub_469160(a1, v100, v107, aAirplaneGun);
             sub_4885A6(v107);
           }
           v108 = *(_DWORD *)(*(_DWORD *)(a1 + 932) + 4 * v97);
-          sub_44F190(v108 + 4, *(_DWORD **)(v108 + 12), 1u, &k);
+          sub_44F190(v108 + 4, *(_DWORD **)(v108 + 12), 1u, (_DWORD *)&k_idx);
         }
       }
       break;
@@ -883,7 +958,7 @@ LABEL_129:
       else
       {
         v110 = *(_DWORD *)(dword_520970 + 200);
-        v161[0] = sub_405A30(*(_DWORD **)(a1 + 564), aBay, -1, 1);
+        v161[0] = sub_405A30(*(_DWORD **)(a1 + 564), aBay, -1, (char)1);
         v109 = (_DWORD *)sub_46A4C0(v110, v161, 4u);
       }
       *(_DWORD *)(a1 + 964) = *v109;
@@ -892,7 +967,7 @@ LABEL_129:
       else
         sub_40A120(
           *(_DWORD *)(a1 + 964) != -1,
-          "failed to find bomb bay node in model %s",
+          (char *)"failed to find bomb bay node in model %s",
           (const char *)(*(_DWORD *)(a1 + 564) + 60));
       if ( sub_46A490(*(_BYTE **)(dword_520970 + 200)) )
       {
@@ -936,7 +1011,7 @@ LABEL_129:
       {
         sub_40A120(
           0,
-          "failed to find bomb bay id number for a bomb bay in model file %s",
+          (char *)"failed to find bomb bay id number for a bomb bay in model file %s",
           (const char *)(*(_DWORD *)(a1 + 564) + 60));
       }
       *(_DWORD *)(a1 + 968) = 0;
@@ -952,7 +1027,7 @@ LABEL_129:
       }
       v123 = *v121;
       v124 = *(_DWORD *)(a1 + 964);
-      *(float *)(a1 + 972) = v123;
+      *(float *)(a1 + 972) = (float)v123;
       while ( 1 )
       {
         while ( 1 )
@@ -968,7 +1043,7 @@ LABEL_129:
             v161[0] = *(_DWORD *)(*(_DWORD *)(a1 + 564) + 8);
             v125 = (_DWORD *)sub_46A4C0(v126, v161, 4u);
           }
-          if ( *(int *)ArgList >= *v125
+          if ( *(int *)ArgList >= (int)*v125
             || (!sub_46A490(*(_BYTE **)(dword_520970 + 200))
               ? (v128 = *(_DWORD *)(dword_520970 + 200),
                  v161[0] = sub_405BB0(*(_DWORD **)(a1 + 564), *(int *)ArgList),
@@ -994,15 +1069,15 @@ LABEL_129:
                 v145 = 0;
               sub_40A120(
                 v145 != 0,
-                "a bomber did not have any drop point nodes, see %s : %s : %s",
+                (char *)"a bomber did not have any drop point nodes, see %s : %s : %s",
                 (const char *)(*(_DWORD *)(a1 + 564) + 60),
                 *(const char **)(a1 + 4),
                 *(const char **)v155);
             }
             *(_DWORD *)(a1 + 992) = 0;
-            if ( sub_40ABC0(v84, aBombbayeffect, 0) )
+            if ( sub_40ABC0((intptr_t)v84, aBombbayeffect, 0) )
             {
-              sub_40AFC0(v84, aBombbayeffect, &String1);
+              sub_40AFC0(v84, aBombbayeffect, (_DWORD *)&String1);
               sub_469160(a1, (_DWORD *)(a1 + 992), String1, aEffect);
             }
             goto LABEL_301;
@@ -1037,10 +1112,10 @@ LABEL_273:
         }
         v133 = *(_DWORD **)(a1 + 984);
         v134 = v133;
-        if ( (*(_DWORD *)(a1 + 988) - (int)v133) >> 2 )
+        if ( (*(_DWORD *)(a1 + 988) - (intptr_t)v133) >> 2 )
         {
           sub_448B80(v133, v133, v133 + 1);
-          sub_44B480(*(_DWORD **)(a1 + 984), (_DWORD *)(1 - ((*(_DWORD *)(a1 + 984) - (int)v134) >> 2)), ArgList);
+          sub_44B480(*(_DWORD **)(a1 + 984), (_DWORD *)(1 - ((*(_DWORD *)(a1 + 984) - (intptr_t)v134) >> 2)), (_DWORD *)ArgList);
           for ( ii = *(_DWORD **)(a1 + 984); v134 != ii; ++v134 )
             *v134 = *(_DWORD *)ArgList;
           v84 = k;
@@ -1048,7 +1123,7 @@ LABEL_273:
           goto LABEL_273;
         }
         v135 = *(_DWORD *)(a1 + 980);
-        if ( !v135 || (v136 = ((int)v133 - v135) >> 2, v136 <= 1) )
+        if ( !v135 || (v136 = ((intptr_t)v133 - v135) >> 2, v136 <= 1) )
           v136 = 1;
         v137 = sub_4481C0((_DWORD *)(a1 + 976));
         v138 = (int)(v136 + v137) < 0;
@@ -1056,15 +1131,15 @@ LABEL_273:
         v160 = v139;
         if ( v138 )
           v139 = 0;
-        v140 = operator new(4 * v139);
-        v161[0] = (int)sub_448B80(*(_DWORD **)(a1 + 980), v134, v140);
-        sub_44B480((_DWORD *)v161[0], (_DWORD *)1, ArgList);
+        v140 = (_DWORD *)operator new(4 * v139);
+        v161[0] = (intptr_t)sub_448B80(*(_DWORD **)(a1 + 980), v134, v140);
+        sub_44B480((_DWORD *)v161[0], (_DWORD *)1, (_DWORD *)ArgList);
         sub_448B80(v134, *(_DWORD **)(a1 + 984), (_DWORD *)(v161[0] + 4));
         nullsub_8(*(_DWORD *)(a1 + 980), *(_DWORD *)(a1 + 984));
         sub_4885A6(*(LPVOID *)(a1 + 980));
-        *(_DWORD *)(a1 + 988) = &v140[v160];
-        v141 = (int)&v140[sub_4481C0((_DWORD *)(a1 + 976)) + 1];
-        *(_DWORD *)(a1 + 980) = v140;
+        *(_DWORD *)(a1 + 988) = (_DWORD)(uintptr_t)&v140[v160];
+        v141 = (intptr_t)&v140[sub_4481C0((_DWORD *)(a1 + 976)) + 1];
+        *(_DWORD *)(a1 + 980) = (_DWORD)(uintptr_t)v140;
         v84 = k;
         *(_DWORD *)(a1 + 984) = v141;
         v124 = *(_DWORD *)ArgList;
@@ -1078,8 +1153,8 @@ LABEL_273:
       else
       {
         v148 = *(_DWORD *)(dword_520970 + 200);
-        k = (char *)sub_405A30(*(_DWORD **)(a1 + 564), aBomb, -1, 1);
-        v147 = (_DWORD *)sub_46A4C0(v148, &k, 4u);
+        k_idx = sub_405A30(*(_DWORD **)(a1 + 564), aBomb, -1, (char)1);
+        v147 = (_DWORD *)sub_46A4C0(v148, &k_idx, 4u);
       }
       *(_DWORD *)(a1 + 1004) = *v147;
       if ( sub_46A490(*(_BYTE **)(dword_520970 + 200)) )
@@ -1087,16 +1162,16 @@ LABEL_273:
       else
         sub_40A120(
           *(_DWORD *)(a1 + 1004) != -1,
-          "could not find a bomb node for a DiveBomber, see %s : %s : %s",
+          (char *)"could not find a bomb node for a DiveBomber, see %s : %s : %s",
           (const char *)(*(_DWORD *)(a1 + 564) + 60),
           *(const char **)(a1 + 4),
           *(const char **)v155);
-      sub_40AFC0(v84, aDivebombbullet, v161);
+      sub_40AFC0(v84, aDivebombbullet, (_DWORD *)v161);
       sub_469160(a1, (_DWORD *)(a1 + 1008), (const char *)v161[0], aBullet);
       *(_DWORD *)(a1 + 1012) = 0;
-      if ( sub_40ABC0(v84, aDivesound, 0) )
+      if ( sub_40ABC0((intptr_t)v84, aDivesound, 0) )
       {
-        sub_40AFC0(v84, aDivesound, &String1);
+        sub_40AFC0(v84, aDivesound, (_DWORD *)&String1);
         sub_469160(a1, (_DWORD *)(a1 + 1012), String1, aSoundEffect);
       }
       if ( *(_BYTE *)(a1 + 300) )
@@ -1110,11 +1185,11 @@ LABEL_273:
       sub_40AF60(v84, aSplashradius, (float *)(a1 + 1036));
       break;
     default:
-      sub_40A120(0, "airplane type invalid, see file %s", *(const char **)v155);
+      sub_40A120(0, (char *)"airplane type invalid, see file %s", *(const char **)v155);
       break;
   }
 LABEL_301:
   sub_42A840((_DWORD *)a1);
-  sub_4229D0("Finished loading %s in %s", *(const char **)(a1 + 4), *(const char **)v155);
+  sub_4229D0((char *)"Finished loading %s in %s", *(const char **)(a1 + 4), *(const char **)v155);
   return a1;
 }

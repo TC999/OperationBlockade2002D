@@ -8,6 +8,6 @@ _DWORD *__cdecl sub_449AE0(_DWORD *self)
   self[2] = 0;
   self[3] = 0;
   *((_BYTE *)self + 16) = 1;
-  *self = &off_499A3C;
+  *self = (uint32)&off_499A3C;
   return result;
 }

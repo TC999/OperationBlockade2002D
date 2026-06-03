@@ -1,11 +1,13 @@
 //----- (00458DE0) --------------------------------------------------------
+extern "C" void __cdecl __eh_vector_dtor_iterator(void *, unsigned int, int, void (__cdecl *)(void *));
+
 void __cdecl sub_458DE0(char *self)
 {
   LPVOID *v2; // edi
   void *v3; // edi
   void *v4; // edi
 
-  *(_DWORD *)self = &off_499B48;
+  *(_DWORD *)self = (DWORD)&off_499B48;
   v2 = (LPVOID *)*((_DWORD *)self + 57);
   if ( v2 )
   {
@@ -33,6 +35,6 @@ void __cdecl sub_458DE0(char *self)
   *((_DWORD *)self + 30) = 0;
   *((_DWORD *)self + 31) = 0;
   *((_DWORD *)self + 32) = 0;
-  `eh vector destructor iterator'(self + 24, 0x10u, 3, (void (__cdecl *)(void *))sub_45C880);
-  *(_DWORD *)self = &off_499040;
+  __eh_vector_dtor_iterator(self + 24, 0x10u, 3, (void (__cdecl *)(void *))sub_45C880);
+  *(_DWORD *)self = (DWORD)&off_499040;
 }

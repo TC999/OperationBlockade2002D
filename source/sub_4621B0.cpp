@@ -22,7 +22,7 @@ void __cdecl sub_4621B0(int *self)
     {
       v4 = *v2;
       v5 = 0;
-      v6 = dword_499B68;
+      v6 = (int *)&dword_499B68;
       do
       {
         if ( v4 == *v6 )
@@ -39,7 +39,7 @@ void __cdecl sub_4621B0(int *self)
   v7 = 0;
   if ( v1 > 0 )
   {
-    v8 = self + 223;
+    v8 = (_DWORD *)(self + 223);
     do
     {
       if ( !*v8 )
@@ -51,7 +51,7 @@ void __cdecl sub_4621B0(int *self)
             goto LABEL_16;
         }
         *((_BYTE *)&v10 + v9) = 1;
-        *v8 = dword_499B68[v9];
+        *v8 = ((int *)&dword_499B68)[v9];
       }
 LABEL_16:
       ++v7;

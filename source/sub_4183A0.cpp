@@ -23,7 +23,7 @@ int __cdecl sub_4183A0(int self, int a2, float a3)
   if ( result >= 6 )
   {
     sub_417770((float *)self);
-    return sub_418420(a2, a3, 0, 0, 0);
+    return sub_418420(self, a2, a3, 0, 0, 0);
   }
   return result;
 }

@@ -1,4 +1,6 @@
 //----- (00481EA9) --------------------------------------------------------
+unsigned __int8 **__cdecl sub_481DA2(unsigned __int8 **a1, int a2, unsigned __int8 **a3, int *a4);
+
 int __cdecl sub_481EA9(int a1)
 {
   int result; // eax
@@ -23,8 +25,8 @@ int __cdecl sub_481EA9(int a1)
   v3 = result;
   *(_DWORD *)(a1 + 412) = result;
   *(_BYTE *)(result + 8) = 0;
-  *(_DWORD *)result = sub_481A65;
-  *(_DWORD *)(result + 4) = sub_481A82;
+  *(_DWORD *)result = (uintptr_t)sub_481A65;
+  *(_DWORD *)(result + 4) = (uintptr_t)sub_481A82;
   v14 = result;
   if ( *(_BYTE *)(a1 + 264) )
   {
@@ -55,9 +57,9 @@ int __cdecl sub_481EA9(int a1)
             if ( v7 == v17 )
             {
               if ( v18 && *(_DWORD *)(v5 + 4) > 2u )
-                *v4 = sub_481CFE;
+                *v4 = (uintptr_t)sub_481CFE;
               else
-                *v4 = sub_481C3D;
+                *v4 = (uintptr_t)sub_481C3D;
 LABEL_30:
               v12 = *(_DWORD *)(a1 + 272);
               v9 = *(_DWORD *)(a1 + 4);
@@ -71,12 +73,12 @@ LABEL_30:
             {
               if ( v18 && *(_DWORD *)(v5 + 4) > 2u )
               {
-                *v4 = sub_481DA2;
+                *v4 = (uintptr_t)sub_481DA2;
                 *(_BYTE *)(v14 + 8) = 1;
               }
               else
               {
-                *v4 = sub_481C94;
+                *v4 = (uintptr_t)sub_481C94;
               }
               goto LABEL_30;
             }
@@ -88,17 +90,17 @@ LABEL_30:
           }
           else
           {
-            *v4 = sub_481B60;
+            *v4 = (uintptr_t)sub_481B60;
             *(_BYTE *)(v16 + v14 + 140) = v8 / v15;
             *(_BYTE *)(v16 + v14 + 150) = v17 / v7;
           }
           goto LABEL_30;
         }
-        *v4 = sub_481B48;
+        *v4 = (uintptr_t)sub_481B48;
       }
       else
       {
-        *v4 = sub_481B55;
+        *v4 = (uintptr_t)sub_481B55;
       }
 LABEL_31:
       result = ++v16;

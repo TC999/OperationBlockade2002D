@@ -23,7 +23,7 @@ void __cdecl sub_48455F(_DWORD *a1)
         *(_BYTE *)(v2 + 84) = 0;
         v5 = (void **)(v2 + 68);
         v6 = *(_DWORD *)(v2 + 68) == 0;
-        *(_DWORD *)(v2 + 4) = sub_48439D;
+        *(_DWORD *)(v2 + 4) = (int)sub_48439D;
         if ( v6 )
           sub_484521(a1);
         v7 = 0;
@@ -42,9 +42,9 @@ void __cdecl sub_48455F(_DWORD *a1)
     else
     {
       if ( a1[25] == 3 )
-        *(_DWORD *)(v2 + 4) = sub_48429E;
+        *(_DWORD *)(v2 + 4) = (int)sub_48429E;
       else
-        *(_DWORD *)(v2 + 4) = sub_4841B3;
+        *(_DWORD *)(v2 + 4) = (int)sub_4841B3;
       v6 = *(_BYTE *)(v2 + 28) == 0;
       *(_DWORD *)(v2 + 48) = 0;
       if ( v6 )
@@ -55,10 +55,10 @@ void __cdecl sub_48455F(_DWORD *a1)
   }
   else if ( a1[25] == 3 )
   {
-    *(_DWORD *)(v2 + 4) = sub_484126;
+    *(_DWORD *)(v2 + 4) = (int)sub_484126;
   }
   else
   {
-    *(_DWORD *)(v2 + 4) = sub_48409E;
+    *(_DWORD *)(v2 + 4) = (int)sub_48409E;
   }
 }

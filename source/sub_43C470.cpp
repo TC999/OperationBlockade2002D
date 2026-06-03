@@ -1,3 +1,6 @@
+extern char aHostip[];
+extern char a127001[];
+
 //----- (0043C470) --------------------------------------------------------
 const char *__cdecl sub_43C470(int self)
 {
@@ -14,7 +17,8 @@ const char *__cdecl sub_43C470(int self)
     if ( result )
     {
       sub_422D00(AppName, aHostip, (CHAR *)0x10, ReturnedString, a127001);
-      return (const char *)sub_421110(*((LPVOID **)v3 + 28), ReturnedString);
+      sub_421110(*((LPVOID **)v3 + 28), ReturnedString);
+      return (const char *)0;
     }
   }
   return result;

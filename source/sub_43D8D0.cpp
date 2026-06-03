@@ -1,3 +1,6 @@
+static char aLevelscore[] = "LevelScore";
+static char aGamescore[] = "GameScore";
+
 //----- (0043D8D0) --------------------------------------------------------
 int __cdecl sub_43D8D0(_DWORD *self)
 {
@@ -21,7 +24,7 @@ int __cdecl sub_43D8D0(_DWORD *self)
   v2 = *(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 72);
   v18 = v2;
   if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
-    sub_45EA00(v2);
+    sub_45EA00((_DWORD *)*(_DWORD *)(dword_520970 + 236), v2);
   self[14] = 0;
   self[13] = 0;
   v3 = dword_520970;
@@ -54,16 +57,16 @@ int __cdecl sub_43D8D0(_DWORD *self)
   else
     v12 = 0.0;
   self[14] += (__int64)v12;
-  sub_4624D0((__int64)v12);
+  sub_4624D0(*(_DWORD **)(dword_520970 + 280), (int)v12);
   v13 = self[14];
   self[16] = v13;
   if ( !*(_BYTE *)(dword_4F5CC4 + 936) && !*(_BYTE *)(dword_4F5CC4 + 937) )
   {
-    self[15] = sub_45E9B0(v2, v13);
-    self[16] = sub_45EA60(*(_DWORD *)(dword_520970 + 280));
+    self[15] = sub_45E9B0((_DWORD *)*(_DWORD *)(dword_520970 + 236), v2, v13);
+    self[16] = sub_45EA60((_DWORD *)*(_DWORD *)(dword_520970 + 280));
   }
   v14 = sub_424350(self, aLevelscore);
-  sub_421190(*((_DWORD *)v14 + 28), "%d", self[14]);
+  sub_421190(*((_DWORD *)v14 + 28), (char *)"%d", self[14]);
   v15 = sub_424350(self, aGamescore);
-  return sub_421190(*((_DWORD *)v15 + 28), "%d", self[16]);
+  return sub_421190(*((_DWORD *)v15 + 28), (char *)"%d", self[16]);
 }

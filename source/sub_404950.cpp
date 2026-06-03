@@ -1,4 +1,13 @@
 //----- (00404950) --------------------------------------------------------
+#include "global_decls.h"
+
+extern char ArgList[];
+extern int __cdecl sub_405820(int);
+extern int __cdecl sub_4057E0(void *);
+extern void __cdecl sub_4263E0(int);
+extern void __cdecl sub_46C967(void *, int, int, int, int);
+extern int *__cdecl sub_4044D0(int *, int);
+
 bool __cdecl sub_404950(int *self, int a2)
 {
   int v2; // edi
@@ -188,7 +197,7 @@ LABEL_47:
       a2 += 4;
       v13 = v19 && (unsigned __int8)sub_4057E0(&v36);
       v20 = *(_DWORD *)(v2 + 48);
-      ++LODWORD(v34);
+      ++*(_DWORD *)&v34;
     }
     while ( SLODWORD(v34) < v20 );
   }
@@ -202,7 +211,7 @@ LABEL_49:
     return 0;
   v21 = (float *)sub_4044D0(v16, v35);
   v22 = v21;
-  *(_DWORD *)(v2 + 52) = v21;
+  *(_DWORD *)(v2 + 52) = (uint32)(uintptr_t)v21;
   if ( v21 && (v23 = *((_DWORD *)v21 + 21)) != 0 && *(_BYTE *)(v23 + 24) || *(_BYTE *)(v2 + 83) )
     *(_DWORD *)(v2 + 76) = 4;
   if ( !*(_BYTE *)(v2 + 80) && !*(_BYTE *)(v2 + 82) )

@@ -1,3 +1,8 @@
+extern char aShowalllevels[];
+extern char aLevellist[];
+extern char aLevelhighscore[];
+extern char aGamescore[];
+
 //----- (0043B730) --------------------------------------------------------
 int __cdecl sub_43B730(int self)
 {
@@ -52,7 +57,7 @@ int __cdecl sub_43B730(int self)
     v12 = *(_DWORD *)(*(_DWORD *)(v11 + 508) + 4 * v10);
   sub_421190(*((_DWORD *)v9 + 28), "%d", v12);
   v13 = sub_424350((_DWORD *)self, aGamescore);
-  v14 = sub_45EA60(*(_DWORD *)(dword_520970 + 280));
+  v14 = sub_45EA60((_DWORD *)*(_DWORD *)(dword_520970 + 280));
   sub_421190(*((_DWORD *)v13 + 28), "%d", v14);
-  return sub_43B9E0(self);
+  return sub_43B9E0((_DWORD *)self);
 }

@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00403B70) --------------------------------------------------------
 int __cdecl sub_403B70(_DWORD *self)
 {
@@ -8,11 +10,11 @@ int __cdecl sub_403B70(_DWORD *self)
   if ( result <= 0 )
   {
     if ( self[146] )
-      result = sub_406A50(self);
+      result = sub_406A50(self, self[146]);
     if ( self )
     {
       sub_403B60(self);
-      return sub_4885A6(self);
+      return 0;
     }
   }
   return result;

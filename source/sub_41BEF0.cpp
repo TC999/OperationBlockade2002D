@@ -11,7 +11,7 @@ int __cdecl sub_41BEF0(_DWORD *self, int a2, int a3, int a4, int a5)
     self[a2 + 7] = a3;
     if ( a3 )
     {
-      sub_422270(a2);
+      sub_422270(0, a2);
       (*(void (__stdcall **)(_DWORD, int, int, int))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, a2, 1, 4);
       (*(void (__stdcall **)(_DWORD, int, int, int))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, a2, 4, 4);
     }

@@ -1,3 +1,7 @@
+extern char aCanTObtainKeyb[];
+extern char aCanTSetDirecti[];
+extern char aCanTSetKeyboar[];
+
 //----- (0040C130) --------------------------------------------------------
 _DWORD *__cdecl sub_40C130(_DWORD **self, _DWORD *a2, int a3, char a4)
 {
@@ -8,7 +12,7 @@ _DWORD *__cdecl sub_40C130(_DWORD **self, _DWORD *a2, int a3, char a4)
   char *v8; // [esp+14h] [ebp-24h]
   _DWORD v9[5]; // [esp+24h] [ebp-14h] BYREF
 
-  v4 = self + 3;
+  v4 = (_DWORD *)(self + 3);
   v5 = (*(int (__stdcall **)(_DWORD *, void *, _DWORD **, _DWORD))(*self[2] + 12))(self[2], &unk_499E24, self + 3, 0);
   if ( v5 < 0 )
   {

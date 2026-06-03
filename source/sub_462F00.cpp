@@ -4,7 +4,7 @@ int __cdecl sub_462F00(int self, int a2)
   int v3; // eax
   char v5; // [esp+0h] [ebp-4h]
 
-  if ( sub_408F30(dword_520970) != self
+  if ( sub_408F30((uint32*)(uintptr_t)(dword_520970)) != self
     || *(_BYTE *)(self + 2584)
     || *(int *)(*(_DWORD *)(*(_DWORD *)(self + 2568) + 8 * *(_DWORD *)(self + 2580)) + 808) < 0 )
   {

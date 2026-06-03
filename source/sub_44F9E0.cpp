@@ -1,3 +1,19 @@
+#include "common.h"
+
+extern char aViewer[];
+extern char aCorrectUsageVi[];
+extern char aViewerIni[];
+extern char aChasecam[];
+extern char aRadius_0[];
+extern char aZrange[];
+extern char aRunmission[];
+extern char aHost_0[];
+extern char aJoin_0[];
+extern char aTakeback[];
+extern char aCorrectUsageJo[];
+extern char aCorrectUsageHo[];
+extern char aConnecting[];
+
 //----- (0044F9E0) --------------------------------------------------------
 char __cdecl sub_44F9E0(int self)
 {
@@ -101,17 +117,17 @@ char __cdecl sub_44F9E0(int self)
     else
       v3 = 0;
     v89 = -1;
-    std::codecvt_base::do_always_noconv((std::codecvt_base *)v3);
+    nullsub_1(v3);
     sub_428680((_DWORD *)self, (int)v3);
-    sub_4113F0((_DWORD *)dword_4F5CC4, self, 65280, 0, 1);
-    sub_411EE0(dword_4F5CC4, 0, &v85, (_DWORD *)&v84 + 1, &v84);
+    sub_4113F0((_DWORD *)(INT_PTR)dword_4F5CC4, self, 65280, 0, 1);
+    sub_411EE0(dword_4F5CC4, 0, (_DWORD *)&v85, (_DWORD *)&v84 + 1, (_DWORD *)&v84);
     *(_DWORD *)(self + 192) = 0;
     *(_BYTE *)(self + 196) = 0;
     v4 = operator new(0x30u);
     v82 = (int)v4;
     v89 = 1;
     if ( v4 )
-      v5 = sub_468A00(v4);
+      v5 = sub_468A00((int)(INT_PTR)v4);
     else
       v5 = 0;
     v89 = -1;
@@ -122,7 +138,7 @@ char __cdecl sub_44F9E0(int self)
     v82 = (int)v6;
     v89 = 2;
     if ( v6 )
-      v7 = sub_45DF90(v6);
+      v7 = sub_45DF90((int)(INT_PTR)v6);
     else
       v7 = 0;
     v89 = -1;
@@ -131,13 +147,13 @@ char __cdecl sub_44F9E0(int self)
     v82 = (int)v8;
     v89 = 3;
     if ( v8 )
-      v9 = sub_4694A0(v8);
+      v9 = (int)(INT_PTR)sub_4694A0(v8);
     else
       v9 = 0;
     v89 = -1;
     *(_DWORD *)(self + 200) = v9;
     sub_4697A0(v9);
-    v10 = operator new(0x34u);
+    v10 = (_DWORD *)operator new(0x34u);
     v82 = (int)v10;
     v89 = 4;
     if ( v10 )
@@ -145,44 +161,44 @@ char __cdecl sub_44F9E0(int self)
     else
       v11 = 0;
     v89 = -1;
-    *(_DWORD *)(self + 204) = v11;
+    *(_DWORD *)(self + 204) = (int)(INT_PTR)v11;
     v12 = operator new(0x43360u);
     v82 = (int)v12;
     v89 = 5;
     if ( v12 )
-      v13 = (_DWORD *)sub_449AE0(v12);
+      v13 = (_DWORD *)sub_449AE0((_DWORD *)v12);
     else
       v13 = 0;
     v89 = -1;
-    *(_DWORD *)(self + 276) = v13;
+    *(_DWORD *)(self + 276) = (int)(INT_PTR)v13;
     sub_449B70(v13);
     v14 = operator new(0xF0u);
     v82 = (int)v14;
     v89 = 6;
     if ( v14 )
-      v15 = sub_458CF0(v14);
+      v15 = (int)(INT_PTR)sub_458CF0((_DWORD *)v14);
     else
       v15 = 0;
     v89 = -1;
     *(_DWORD *)(self + 236) = v15;
     sub_458EE0(v15);
-    v16 = sub_468BE0(0, 0, 0);
+    v16 = sub_468BE0(0, 0, 0, 0);
     lpMem[0] = 0;
     lpMem[1] = 0;
     v87 = v16 + 120.0;
-    sub_45E2A0(*(_DWORD *)(self + 280), *(_DWORD *)(self + 276), 0, 0, LODWORD(v87));
+    sub_45E2A0(*(_DWORD *)(self + 280), *(_DWORD *)(self + 276), 0, 0, LODWORD(v87), 0);
     sub_408EF0(self, *(_DWORD *)(self + 280));
     *(_DWORD *)(self + 272) = 0;
     v17 = operator new(0x19Cu);
     v82 = (int)v17;
     v89 = 7;
     if ( v17 )
-      v18 = sub_455750(v17);
+      v18 = sub_455750((int)(INT_PTR)v17);
     else
       v18 = 0;
     v89 = -1;
     *(_DWORD *)(self + 216) = v18;
-    sub_455830(v18);
+    sub_455830((void *)(INT_PTR)v18);
     *(_DWORD *)(self + 256) = -1;
     v19 = operator new(0x38u);
     v82 = (int)v19;
@@ -193,7 +209,7 @@ char __cdecl sub_44F9E0(int self)
       v20 = 0;
     v89 = -1;
     *(_DWORD *)(self + 208) = v20;
-    sub_42CB00(v20);
+    sub_42CB00((void *)(INT_PTR)v20);
     v21 = operator new(0x38u);
     v82 = (int)v21;
     v89 = 9;
@@ -208,12 +224,12 @@ char __cdecl sub_44F9E0(int self)
     v82 = (int)v23;
     v89 = 10;
     if ( v23 )
-      v24 = sub_465C10(v23);
+      v24 = sub_465C10((int)(INT_PTR)v23);
     else
       v24 = 0;
     v89 = -1;
     *(_DWORD *)(self + 220) = v24;
-    sub_465CD0(v24);
+    sub_465CD0((void *)(INT_PTR)v24);
     sub_428680((_DWORD *)self, *(_DWORD *)(self + 204));
     v25 = operator new(0x1A8u);
     v82 = (int)v25;
@@ -223,7 +239,7 @@ char __cdecl sub_44F9E0(int self)
     else
       v26 = 0;
     v89 = -1;
-    *(_DWORD *)(self + 264) = v26;
+    *(_DWORD *)(self + 264) = (int)(INT_PTR)v26;
     sub_40ED70(v26, 0, -990248960, 1157234688, 0, 1110704128);
     sub_428680((_DWORD *)self, *(_DWORD *)(self + 264));
     *(_DWORD *)(self + 292) = 0;
@@ -238,9 +254,9 @@ char __cdecl sub_44F9E0(int self)
       byte_520A70 = 0;
       sub_4282E0(dword_52233C > 2, aCorrectUsageVi);
       v27 = sub_4069C0(*(_DWORD **)(self + 128), *(char **)(dword_522340 + 8));
-      *(_DWORD *)(self + 184) = v27;
+      *(_DWORD *)(self + 184) = (int)(INT_PTR)v27;
       if ( !v27 )
-        sub_4281B0("Viewer: Can't load model '%s'", *(const char **)(dword_522340 + 8));
+        sub_4281B0((char *)"Viewer: Can't load model '%s'", *(const char **)(dword_522340 + 8));
       if ( dword_52233C > 3 )
       {
         v28 = 3;
@@ -255,7 +271,7 @@ char __cdecl sub_44F9E0(int self)
         *(_DWORD *)(v29 + 36) = 1065353216;
         sub_428680((_DWORD *)self, *(_DWORD *)(self + 188));
       }
-      v30 = sub_409AD0(1, 256);
+      v30 = (int)(INT_PTR)sub_409AD0(NULL, 1, 256);
       *(_DWORD *)(self + 288) = v30;
       sub_421300(v30, 0xFFu, 0xFFu, 0xFFu, 255);
       sub_421370(*(_DWORD **)(self + 288), 0, 0, 0, 255);
@@ -278,7 +294,7 @@ char __cdecl sub_44F9E0(int self)
 LABEL_139:
       if ( sub_422AE0(aViewerIni) )
       {
-        v35 = sub_409AD0(1, 256);
+        v35 = (int)(INT_PTR)sub_409AD0(NULL, 1, 256);
         *(_DWORD *)(self + 288) = v35;
         sub_421300(v35, 0xFFu, 0xFFu, 0, 255);
         sub_421370(*(_DWORD **)(self + 288), 0, 0, 0, 255);
@@ -294,7 +310,7 @@ LABEL_139:
         *(_BYTE *)(v37 + 32) = 1;
         *(float *)(v37 + 12) = v39;
         *(float *)(v37 + 16) = v38;
-        v40 = sub_409AD0(1, 256);
+        v40 = (int)(INT_PTR)sub_409AD0(NULL, 1, 256);
         *(_DWORD *)(self + 292) = v40;
         sub_421300(v40, 0xFFu, 0xFFu, 0xFFu, 255);
         sub_421370(*(_DWORD **)(self + 292), 0, 0, 0, 255);
@@ -320,12 +336,12 @@ LABEL_139:
           v46 = 0;
         v47 = *(_DWORD **)(self + 264);
         v89 = -1;
-        *(_DWORD *)(self + 172) = v46;
+        *(_DWORD *)(self + 172) = (int)(INT_PTR)v46;
         *(_DWORD *)(self + 176) = 0;
         sub_40ED70(v47, 1184901120, 0, 1114636288, -1036779520, 1119092736);
-        if ( sub_40AAF0(*(_DWORD **)(self + 172), aChasecam, 0) )
+        if ( sub_40AAF0((int)*(_DWORD **)(self + 172), aChasecam, 0) )
         {
-          v48 = operator new(0x1A4u);
+          v48 = (_DWORD *)operator new(0x1A4u);
           lpMem[0] = v48;
           v89 = 13;
           if ( v48 )
@@ -333,12 +349,12 @@ LABEL_139:
           else
             v49 = 0;
           v89 = -1;
-          *(_DWORD *)(self + 268) = v49;
+          *(_DWORD *)(self + 268) = (int)(INT_PTR)v49;
           sub_428680((_DWORD *)self, (int)v49);
           sub_40AA40(*(_DWORD *)(self + 172), aChasecam);
           sub_40AF60(*(const char **)(self + 172), aRadius_0, (float *)&v82);
           sub_40AF60(*(const char **)(self + 172), aZrange, (float *)&v81);
-          sub_402670(v82, v81);
+          sub_402670(*(_DWORD **)(self + 268), v82, v81);
         }
         sub_450D30(self);
         (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(self + 260) + 24))(*(_DWORD *)(self + 260), 0);
@@ -356,18 +372,18 @@ LABEL_139:
     lpMem[0] = v51;
     v89 = 14;
     if ( v51 )
-      v52 = sub_464730(v51);
+      v52 = (int)(INT_PTR)sub_464730((_DWORD *)v51);
     else
       v52 = 0;
     v89 = -1;
     *(_DWORD *)(self + 252) = v52;
-    sub_464810(0, 1);
+    sub_464810(*(_DWORD **)(self + 252), 0, 1);
     sub_428680((_DWORD *)self, *(_DWORD *)(self + 252));
     v53 = *(_DWORD *)(self + 184);
     *(_DWORD *)(self + 284) = 0;
     if ( v53 )
     {
-      v54 = operator new(0x44u);
+        v54 = (_DWORD *)operator new(0x44u);
       lpMem[0] = v54;
       v89 = 15;
       if ( v54 )
@@ -375,10 +391,10 @@ LABEL_139:
       else
         v55 = 0;
       v89 = -1;
-      *(_DWORD *)(self + 284) = v55;
+      *(_DWORD *)(self + 284) = (int)(INT_PTR)v55;
       sub_409BE0((int)v55, 0, self, 1065353216, -1, -5000.0, 5000.0, -5000.0, 5000.0, 50.0, -8355712, v76, v77, v78);
       sub_428680((_DWORD *)self, *(_DWORD *)(self + 284));
-      LOBYTE(v56) = *(_DWORD *)(self + 172) == 0;
+      *(_BYTE *)&v56 = *(_DWORD *)(self + 172) == 0;
       v57 = (*(int (__cdecl **)(_DWORD, int))(**(_DWORD **)(self + 284) + 24))(*(_DWORD *)(self + 284), v56);
       v58 = *(_DWORD *)(self + 260);
       if ( v58 )
@@ -386,7 +402,7 @@ LABEL_139:
       v59 = *(_DWORD *)(self + 252);
       if ( v59 )
       {
-        LOBYTE(v57) = *(_DWORD *)(self + 172) != 0;
+        *(_BYTE *)&v57 = *(_DWORD *)(self + 172) != 0;
         (*(void (__cdecl **)(int, int))(*(_DWORD *)v59 + 24))(v59, v57);
       }
     }
@@ -402,18 +418,18 @@ LABEL_139:
       *(_DWORD *)(self + 224) = v61;
       v89 = -1;
       *(_BYTE *)(v61 + 40) = 0;
-      v62 = operator new(0x34u);
+        v62 = (_DWORD *)operator new(0x34u);
       lpMem[0] = v62;
       v89 = 17;
       if ( v62 )
-        v63 = sub_43A180(v62);
+        v63 = (int *)sub_43A180(v62);
       else
         v63 = 0;
-      *(_DWORD *)(self + 228) = v63;
+      *(_DWORD *)(self + 228) = (int)(INT_PTR)v63;
       v64 = *v63;
       v89 = -1;
       (*(void (__cdecl **)(int *, _DWORD))(v64 + 24))(v63, 0);
-      v65 = operator new(0x5Cu);
+        v65 = (_DWORD *)operator new(0x5Cu);
       lpMem[0] = v65;
       v89 = 18;
       if ( v65 )
@@ -421,8 +437,8 @@ LABEL_139:
       else
         v66 = 0;
       v89 = -1;
-      *(_DWORD *)(self + 232) = v66;
-      v67 = operator new(0x77E4u);
+      *(_DWORD *)(self + 232) = (int)(INT_PTR)v66;
+        v67 = (_DWORD *)operator new(0x77E4u);
       lpMem[0] = v67;
       v89 = 19;
       if ( v67 )
@@ -430,7 +446,7 @@ LABEL_139:
       else
         v68 = 0;
       v89 = -1;
-      *(_DWORD *)(self + 240) = v68;
+      *(_DWORD *)(self + 240) = (int)(INT_PTR)v68;
       sub_44CB20((int)v68);
       v69 = operator new(0x54u);
       lpMem[0] = v69;
@@ -440,7 +456,7 @@ LABEL_139:
       else
         v70 = 0;
       v89 = -1;
-      *(_DWORD *)(self + 244) = v70;
+      *(_DWORD *)(self + 244) = (int)(INT_PTR)v70;
       sub_414E60(v70);
       v71 = operator new(0x1F8u);
       lpMem[0] = v71;
@@ -449,7 +465,7 @@ LABEL_139:
         v72 = (int *)sub_4385C0((int)v71);
       else
         v72 = 0;
-      *(_DWORD *)(self + 248) = v72;
+      *(_DWORD *)(self + 248) = (int)(INT_PTR)v72;
       v73 = *v72;
       v89 = -1;
       (*(void (__cdecl **)(int *, _DWORD))(v73 + 24))(v72, 0);
@@ -500,10 +516,10 @@ LABEL_139:
               strcpy((char *)(dword_4F5CC4 + 140), *(const char **)(dword_522340 + 8));
               v74 = dword_522340;
               strcpy(&byte_520C3C, *(const char **)(dword_522340 + 12));
-              sub_43EFC0((void *)dword_4F5CC4, v88, *(const CHAR **)(v74 + 12), 52973);
+              sub_43EFC0((void *)dword_4F5CC4, (_DWORD *)v88, *(const CHAR **)(v74 + 12), 52973);
               v89 = 23;
               if ( v88[0] )
-                sub_4281B0("Unable to Connect to '%s': '%s'", *(const char **)(dword_522340 + 12), (const char *)v88[1]);
+                sub_4281B0((char *)"Unable to Connect to '%s': '%s'", *(const char **)(dword_522340 + 12), (const char *)v88[1]);
               sub_4261C0(*(_DWORD **)(self + 232), aConnecting, 0);
               v79 = 1;
               v89 = -1;
@@ -515,10 +531,10 @@ LABEL_139:
             *(_BYTE *)(self + 320) = 1;
             sub_4282E0(dword_52233C == 3, aCorrectUsageHo);
             strcpy((char *)(dword_4F5CC4 + 140), *(const char **)(dword_522340 + 8));
-            sub_43EF90((void *)dword_4F5CC4, lpMem, 52973);
+            sub_43EF90((void *)dword_4F5CC4, (_DWORD *)lpMem, 52973);
             v89 = 22;
             if ( lpMem[0] )
-              sub_4281B0("Unable to Host: '%s'", (const char *)lpMem[1]);
+              sub_4281B0((char *)"Unable to Host: '%s'", (const char *)lpMem[1]);
             *(_BYTE *)(dword_4F5CC4 + 108) = 1;
             sub_4261C0(*(_DWORD **)(self + 232), aStaging, 0);
             v79 = 1;
@@ -527,7 +543,7 @@ LABEL_139:
           }
         }
         if ( !v79 )
-          sub_4281B0("Invalid Command Line Argument '%s'", String1);
+          sub_4281B0((char *)"Invalid Command Line Argument '%s'", String1);
       }
       else
       {
@@ -536,7 +552,7 @@ LABEL_139:
       sub_4227C0(*(_DWORD **)(self + 124));
     }
     *(_QWORD *)lpMem = timeGetTime() - Time;
-    sub_4229D0("Load time = %f secs", (double)*(__int64 *)lpMem * 0.001);
+    sub_4229D0((char *)"Load time = %f secs", (double)*(__int64 *)lpMem * 0.001);
   }
   return 1;
 }

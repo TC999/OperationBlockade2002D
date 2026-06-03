@@ -1,4 +1,7 @@
 //----- (00403FE0) --------------------------------------------------------
+extern char asc_4A1DC4[];
+extern char aFailedToLoadTe[];
+
 char __cdecl sub_403FE0(void *self)
 {
   void *v1; // ebp
@@ -35,7 +38,7 @@ char __cdecl sub_403FE0(void *self)
 
   v1 = self;
   v30 = self;
-  v2 = (unsigned __int8)sub_405820(-267549883) && (unsigned __int8)sub_4057E0(&Buffer);
+  v2 = (unsigned __int8)sub_405820((FILE **)self, (FILE **)-267549883) && (unsigned __int8)sub_4057E0((FILE **)self, &Buffer);
   v32 = 0;
   memset(v29, 0, sizeof(v29));
   if ( !v2 )
@@ -56,7 +59,7 @@ char __cdecl sub_403FE0(void *self)
         v5 = 0;
       }
       v6 = Buffer;
-      *((_DWORD *)v1 + 3) = v5;
+      *((_DWORD *)v1 + 3) = (int)v5;
       memset(v5, 0, 4 * ((unsigned int)(88 * v6) >> 2));
       v3 = Buffer;
     }
@@ -67,7 +70,7 @@ char __cdecl sub_403FE0(void *self)
       while ( 1 )
       {
         memset(v29, 0, sizeof(v29));
-        v7 = v2 && (unsigned __int8)sub_4057E0(v29);
+        v7 = v2 && (unsigned __int8)sub_4057E0((FILE **)self, v29);
         if ( *((int *)v1 + 6) < 3 )
         {
           v29[5] = 1065353216;
@@ -85,24 +88,24 @@ char __cdecl sub_403FE0(void *self)
         else
         {
           v8 = v7
-            && (unsigned __int8)sub_4057E0(&v29[5])
-            && (unsigned __int8)sub_4057E0(&v29[6])
-            && (unsigned __int8)sub_4057E0(&v29[7]);
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[5])
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[6])
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[7]);
           v29[8] = 1065353216;
           v9 = v8
-            && (unsigned __int8)sub_4057E0(&v29[1])
-            && (unsigned __int8)sub_4057E0(&v29[2])
-            && (unsigned __int8)sub_4057E0(&v29[3]);
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[1])
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[2])
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[3]);
           v29[4] = 1065353216;
           v7 = v9
-            && (unsigned __int8)sub_4057E0(&v29[9])
-            && (unsigned __int8)sub_4057E0(&v29[10])
-            && (unsigned __int8)sub_4057E0(&v29[11]);
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[9])
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[10])
+            && (unsigned __int8)sub_4057E0((FILE **)self, &v29[11]);
         }
         v10 = *((_DWORD *)v1 + 6);
         v29[12] = 1065353216;
         if ( v10 >= 3 )
-          v7 = v7 && (unsigned __int8)sub_405800(&v29[18]) && (unsigned __int8)sub_405800((char *)&v29[18] + 1);
+          v7 = v7 && (unsigned __int8)sub_405800((FILE **)self, &v29[18]) && (unsigned __int8)sub_405800((FILE **)self, (char *)&v29[18] + 1);
         if ( LOBYTE(v29[18]) )
         {
           v29[13] = v29[1];
@@ -112,7 +115,7 @@ char __cdecl sub_403FE0(void *self)
         }
         if ( !v7 )
           goto LABEL_58;
-        v11 = sub_405770((int)&v28);
+        v11 = sub_405770((FILE **)self, (unsigned int)&v28);
         v12 = (char *)v28;
         v13 = v11 != 0;
         if ( *(_BYTE *)v28 )
@@ -134,7 +137,7 @@ char __cdecl sub_403FE0(void *self)
             qmemcpy(v17, v18, v19 & 3);
           }
           strcat(v31, v12);
-          v29[19] = operator new(strlen(v31) + 1);
+          v29[19] = (int)operator new(strlen(v31) + 1);
           strcpy((char *)v29[19], v31);
           v12 = (char *)v28;
         }
@@ -143,7 +146,7 @@ char __cdecl sub_403FE0(void *self)
           v29[19] = 0;
         }
         sub_4885A6(v12);
-        if ( v13 && (unsigned __int8)sub_405800(&v29[20]) )
+        if ( v13 && (unsigned __int8)sub_405800((FILE **)self, &v29[20]) )
           v2 = 1;
         else
 LABEL_58:
@@ -156,7 +159,7 @@ LABEL_58:
         }
         if ( !byte_4A1D44 )
           break;
-        v29[21] = sub_422400((char *)v29[19], 0);
+        v29[21] = (int)sub_422400((_DWORD *)self, (char *)v29[19], 0);
         v20 = (void *)v29[19];
         if ( !v29[21] )
           goto LABEL_64;
@@ -175,7 +178,7 @@ LABEL_67:
       }
       v29[21] = 0;
 LABEL_64:
-      sub_4229D0(aFailedToLoadTe, (char)v20);
+      sub_4229D0(aFailedToLoadTe, (uintptr_t)v20);
       v20 = (void *)v29[19];
       goto LABEL_67;
     }
@@ -183,7 +186,7 @@ LABEL_71:
     if ( !*((_DWORD *)v1 + 13) )
       *((_DWORD *)v1 + 4) = v3;
   }
-  if ( v2 && (unsigned __int8)sub_405820(-267549882) )
+  if ( v2 && (unsigned __int8)sub_405820((FILE **)self, (FILE **)-267549882) )
     v22 = 1;
   else
 LABEL_76:

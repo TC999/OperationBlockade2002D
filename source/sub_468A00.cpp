@@ -1,4 +1,6 @@
 //----- (00468A00) --------------------------------------------------------
+extern char aIsland[];
+
 int __cdecl sub_468A00(int self)
 {
   void *v2; // eax
@@ -17,7 +19,7 @@ int __cdecl sub_468A00(int self)
   *(_DWORD *)(self + 8) = 0;
   *(_DWORD *)(self + 12) = 0;
   *(_BYTE *)(self + 16) = 1;
-  *(_DWORD *)self = &off_499CF8;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499CF8;
   *(_DWORD *)(self + 20) = 0;
   *(_DWORD *)(self + 24) = 0;
   *(_DWORD *)(self + 44) = 0;
@@ -66,6 +68,6 @@ int __cdecl sub_468A00(int self)
     v12 = sub_450FB0(v11, 64, *(_DWORD *)(self + 24), v10);
   else
     v12 = 0;
-  *(_DWORD *)(self + 44) = v12;
+  *(_DWORD *)(self + 44) = (uint32)(uintptr_t)v12;
   return self;
 }

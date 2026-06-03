@@ -47,14 +47,14 @@ int __cdecl sub_46F37E(_DWORD *self)
         v11 = *v7;
         v19 = *v8;
         v12 = (v11 & 0xFFFF00F0) + (v19 & 0xFFFF00F0) + (v10 & 0xFFFF00F0) + (v9 & 0xFFFF00F0) + 32;
-        LOWORD(v11) = v11 & 0xF0F;
-        LOWORD(v9) = v9 & 0xF0F;
+        *(_WORD *)&v11 = v11 & 0xF0F;
+        *(_WORD *)&v9 = v9 & 0xF0F;
         v13 = v11 + (v19 & 0xFFFF0F0F) + (v10 & 0xFFFF0F0F);
         v7 = v21 + 2;
         v21 += 2;
-        LOWORD(v12) = ((unsigned int)(v13 + v9 + 514) >> 2) & 0xF0F | (v12 >> 2) & 0xF0;
+        *(_WORD *)&v12 = (unsigned __int16)(((unsigned int)(v13 + v9 + 514) >> 2) & 0xF0F | (v12 >> 2) & 0xF0);
         v14 = v23++;
-        *v14 = v12;
+        *v14 = (unsigned __int16)v12;
         v8 = v22 + 2;
         v22 += 2;
       }

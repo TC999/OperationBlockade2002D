@@ -1,4 +1,6 @@
 //----- (0044DF20) --------------------------------------------------------
+extern char aBlood[];
+
 void __cdecl sub_44DF20(char *self, float a2, float a3, float *a4)
 {
   int v6; // edx
@@ -18,7 +20,7 @@ void __cdecl sub_44DF20(char *self, float a2, float a3, float *a4)
     v14 = 0.0;
     if ( v6 && (byte_4AC684 || _strnicmp(*(const char **)(v6 + 4), aBlood, strlen(aBlood))) )
     {
-      sub_44D7C0(*(_DWORD *)(LODWORD(a2) + 292), (_DWORD *)LODWORD(v7), &a3);
+      sub_44D7C0(*(_DWORD *)(LODWORD(a2) + 292), (_DWORD *)LODWORD(v7), (_DWORD*)(&a3));
       if ( a3 >= 0.0 )
         v14 = a3;
     }

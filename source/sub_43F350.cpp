@@ -11,7 +11,7 @@ unsigned int __cdecl sub_43F350(int self)
   if ( !result )
   {
     v3 = sub_4069C0(*(_DWORD **)(dword_520970 + 128), (char *)(self + 304));
-    *(_DWORD *)(self + 564) = v3;
+    *(_DWORD *)(self + 564) = (uint32)(uintptr_t)(v3);
     sub_4282E0(v3 != 0, "failed to load model %s, see file %s", (const char *)(self + 304), (const char *)(self + 16));
     v4 = 0;
     for ( i = 0; ; i += 260 )

@@ -1,4 +1,5 @@
 //----- (004281B0) --------------------------------------------------------
+extern char aOperationBlock_1[];
 void sub_4281B0(char *Format, ...)
 {
   int v1; // esi

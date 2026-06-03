@@ -62,7 +62,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
       {
         do
         {
-          sub_44F3A0(v32, v31);
+           sub_44F3A0(v32, (int)v31);
           v31 += 40;
           v32 += 40;
         }
@@ -75,7 +75,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
       if ( a2 != (char *)v33 - v30 )
       {
         v35 = v33 + 4;
-        v36 = v34 + 16;
+        v36 = (_DWORD *)(v34 + 16);
         while ( 1 )
         {
           v37 = *((_DWORD *)v34 - 10);
@@ -89,7 +89,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
           *(v35 - 1) = *(v36 - 1);
           *v35 = *v36;
           v35[1] = v36[1];
-          sub_44F490(v36 + 2);
+          sub_44F490(v36 + 2, v36 + 2);
           if ( v34 == a2 )
             break;
           v33 = v45;
@@ -101,7 +101,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
       v46 = &a2[v30];
       if ( a2 == &a2[v30] )
         goto LABEL_50;
-      v38 = a2 + 16;
+      v38 = (_DWORD *)(a2 + 16);
       do
       {
         *(v38 - 4) = *a4;
@@ -110,7 +110,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
         *(v38 - 1) = a4[3];
         *v38 = a4[4];
         v38[1] = a4[5];
-        sub_44F490(a4 + 6);
+        sub_44F490(a4 + 6, a4 + 6);
         result = (unsigned int)v46;
         v38 += 10;
       }
@@ -125,7 +125,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
         v44 = &a2[40 * a3];
         do
         {
-          sub_44F3A0(v44, v22);
+          sub_44F3A0((int)v44, (int)v22);
           v22 += 40;
           v44 += 40;
         }
@@ -141,7 +141,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
         v28 = v26;
         do
         {
-          sub_44F3A0(v23, a4);
+          sub_44F3A0(v23, (int)a4);
           v23 += 40;
           --v28;
         }
@@ -152,7 +152,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
       v47 = (_DWORD *)result;
       if ( a2 == (char *)result )
         goto LABEL_49;
-      v29 = a2 + 16;
+      v29 = (_DWORD *)(a2 + 16);
       do
       {
         *(v29 - 4) = *a4;
@@ -161,7 +161,7 @@ unsigned int __cdecl sub_44ED60(_DWORD *self, char *a2, unsigned int a3, _DWORD 
         *(v29 - 1) = a4[3];
         *v29 = a4[4];
         v29[1] = a4[5];
-        sub_44F490(a4 + 6);
+        sub_44F490(a4 + 6, a4 + 6);
         result = (unsigned int)v47;
         v29 += 10;
       }
@@ -189,12 +189,12 @@ LABEL_50:
   v10 = v41;
   for ( i = (char *)v39[1]; i != a2; v10 += 40 )
   {
-    sub_44F3A0(v10, i);
+    sub_44F3A0((int)v10, (int)i);
     i += 40;
   }
   for ( j = v10; a3; --a3 )
   {
-    sub_44F3A0(j, a4);
+    sub_44F3A0((int)j, (int)a4);
     j += 40;
   }
   v13 = a2;
@@ -205,7 +205,7 @@ LABEL_50:
     v42 = v14;
     do
     {
-      sub_44F3A0(v42, v13);
+      sub_44F3A0((int)v42, (int)v13);
       v13 += 40;
       v42 += 40;
     }
@@ -216,19 +216,19 @@ LABEL_50:
     sub_44C220(k);
   sub_4885A6((LPVOID)v39[1]);
   result = v39[1];
-  v39[3] = &v41[40 * v40];
+  v39[3] = (DWORD)&v41[40 * v40];
   if ( result )
   {
     v19 = v39[2];
-    v39[1] = v41;
+    v39[1] = (DWORD)(uintptr_t)v41;
     v20 = v19 - result;
     result = (unsigned int)((unsigned __int64)(1717986919LL * (int)(v19 - result)) >> 32) >> 31;
     v5 += v20 / 40;
   }
   else
   {
-    v39[1] = v41;
+    v39[1] = (DWORD)(uintptr_t)v41;
   }
-  v39[2] = &v41[40 * v5];
+  v39[2] = (DWORD)&v41[40 * v5];
   return result;
 }

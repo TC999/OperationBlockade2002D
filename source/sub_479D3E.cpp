@@ -175,7 +175,7 @@ unsigned __int8 *__cdecl sub_479D3E(int *a1, _BYTE *a2, unsigned __int8 *a3, int
     {
       if ( v7 == 2 )
       {
-        v39 = a2;
+        v39 = (char *)a2;
         if ( v8 )
         {
           v38 = ((unsigned int)(v8 - 1) >> 2) + 1;
@@ -184,7 +184,7 @@ unsigned __int8 *__cdecl sub_479D3E(int *a1, _BYTE *a2, unsigned __int8 *a3, int
             v26 = *v39;
             v27 = *v39 & 0xC;
             v28 = *v39 & 0x30;
-            LOBYTE(v27) = a3[*v39 & 0xC0 | ((*v39 & 0xC0 | ((*v39 & 0xC0 | ((*v39 & 0xC0) >> 2)) >> 2)) >> 2)] & 0xC0
+            *(_BYTE*)&(v27) = a3[*v39 & 0xC0 | ((*v39 & 0xC0 | ((*v39 & 0xC0 | ((*v39 & 0xC0) >> 2)) >> 2)) >> 2)] & 0xC0
                         | ((unsigned __int8)(a3[v28 | (4 * v28) | ((v28 | (v28 >> 2)) >> 2)] & 0xC3
                                            | ((unsigned __int8)((a3[v26 & 3
                                                                   | (4 * (v26 & 3 | (4 * (v26 & 3 | (4 * (v26 & 3))))))] >> 2)

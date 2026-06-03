@@ -1,4 +1,6 @@
 //----- (00424E30) --------------------------------------------------------
+extern const char asc_4A4C9C[];
+
 int __cdecl sub_424E30(_DWORD *self, int a2)
 {
   int v3; // eax
@@ -32,7 +34,7 @@ int __cdecl sub_424E30(_DWORD *self, int a2)
               sub_421280(*(_DWORD **)(v5 + 112));
               sub_421280(*(_DWORD **)(self[19] + 112));
               sub_4211E0(*(const char ***)(self[19] + 112), 95);
-              return sub_4285C0(a2);
+              return sub_4285C0(self, a2);
             }
           }
         }
@@ -48,7 +50,7 @@ int __cdecl sub_424E30(_DWORD *self, int a2)
             sub_421280(v8);
             sub_421280(*(_DWORD **)(self[19] + 112));
             sub_4211E0(*(const char ***)(self[19] + 112), 95);
-            return sub_4285C0(a2);
+            return sub_4285C0(self, a2);
           }
         }
       }
@@ -56,27 +58,27 @@ int __cdecl sub_424E30(_DWORD *self, int a2)
     else
     {
       if ( isupper((char)a2) )
-        LOBYTE(a2) = tolower((char)a2);
+        a2 = (a2 & 0xFFFFFF00) | (unsigned __int8)tolower((char)a2);
       v9 = 0;
       v10 = *(_DWORD *)(self[13] + 28);
       if ( v10 > 0 )
       {
         while ( 1 )
         {
-          v11 = (_BYTE *)sub_424390(v9);
+          v11 = (_BYTE *)sub_424390((_DWORD *)self[13], v9);
           v12 = (int)v11;
           if ( (_BYTE)a2 == v11[180] && v11[44] && v11[45] )
             break;
           if ( ++v9 >= v10 )
-            return sub_4285C0(a2);
+            return sub_4285C0(self, a2);
         }
         sub_41CF00(self[22]);
         v13 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
         sub_41CFD0(self[22], v13);
         sub_41CD90(self[22]);
-        sub_426060(v12, 0);
+        sub_426060((int)self, v12, 0);
       }
     }
   }
-  return sub_4285C0(a2);
+  return sub_4285C0(self, a2);
 }

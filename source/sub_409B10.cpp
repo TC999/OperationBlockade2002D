@@ -17,6 +17,6 @@ _DWORD *__cdecl sub_409B10(_DWORD *self)
   self[13] = 0;
   self[14] = 0;
   self[15] = 0;
-  *self = &off_49914C;
+  *self = (uint32)&off_49914C;
   return result;
 }

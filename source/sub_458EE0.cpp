@@ -1,5 +1,61 @@
+#include "common.h"
+
 //----- (00458EE0) --------------------------------------------------------
-char __fastcall sub_458EE0(int a1)
+extern char aSoundsMissionc[];
+extern char aSoundsMissionf[];
+extern char aStartedLoading[];
+extern char aShowmissionwav[];
+extern char aCommander[];
+extern char aMissionsMissio[];
+extern char aMissionsSpecia[];
+extern char aMissionsMissio_0[];
+extern char aMissionsSpecia_0[];
+extern char aMissionsMissio_1[];
+extern char aMissionsSpecia_1[];
+extern char aMission[];
+extern char aPlayerhealth[];
+extern char aGuntype[];
+extern char aGun_0[];
+extern char aCargoShip[];
+extern char aBoat[];
+extern char aCargoShipBoatN[];
+extern char aJunkers[];
+extern char aJunkersAirplan[];
+extern char aResupplyhealth[];
+extern char aResupplyammo[];
+extern char aResupplymaxuni[];
+extern char aResupplyfreq[];
+extern char aGunguys[];
+extern char aInfantry[];
+extern char aMortarguys[];
+extern char aTanks[];
+extern char aTank[];
+extern char aAirstrikeairpl[];
+extern char aAirstrikenumpl[];
+extern char aAirstrikereloa[];
+extern char aAirstriketime[];
+extern char aTorpedorunairp[];
+extern char aTorpedorunnump[];
+extern char aTorpedorunrelo[];
+extern char aBombingrunairp[];
+extern char aBombingrunnump[];
+extern char aBombingrunrelo[];
+extern char aMissionWave[];
+extern char aTime[];
+extern char aUnitstokill[];
+extern char aMustkillalluni[];
+extern char aMustkillunit[];
+extern char aMustkilltext[];
+extern char aMustkilleveryt[];
+extern char aObjectivetimet[];
+extern char aDialogue[];
+extern char aDialogueShould[];
+extern char aProvincetaken[];
+extern char aBoattype[];
+extern char aCarrierwaves[];
+extern char aAirplanetype[];
+
+char __cdecl sub_458EE0(int a1)
 {
   int v1; // esi
   _DWORD *v2; // eax
@@ -149,30 +205,30 @@ char __fastcall sub_458EE0(int a1)
   v1 = a1;
   v132 = a1;
   *(_DWORD *)(a1 + 228) = 0;
-  v2 = operator new(0x15Cu);
-  v129 = (int)v2;
+  v2 = (_DWORD *)operator new(0x15Cu);
+  v129 = (uint32)(uintptr_t)v2;
   v145 = 0;
   if ( v2 )
     v3 = sub_41C6A0(v2);
   else
     v3 = 0;
   v145 = -1;
-  *(_DWORD *)(v1 + 232) = v3;
-  sub_41C760((int)v3, aSoundsMissionc);
+  *(_DWORD *)(v1 + 232) = (uint32)(uintptr_t)v3;
+  sub_41C760((int)(uintptr_t)v3, aSoundsMissionc);
   sub_41C7E0(*(_BYTE **)(v1 + 232), 1);
   sub_41C7A0(*(_DWORD *)(v1 + 232), 1);
   v125 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
   sub_41CFD0(*(_DWORD *)(v1 + 232), v125);
-  v4 = operator new(0x15Cu);
-  v129 = (int)v4;
+  v4 = (_DWORD *)operator new(0x15Cu);
+  v129 = (uint32)(uintptr_t)v4;
   v145 = 1;
   if ( v4 )
     v5 = sub_41C6A0(v4);
   else
     v5 = 0;
   v145 = -1;
-  *(_DWORD *)(v1 + 236) = v5;
-  sub_41C760((int)v5, aSoundsMissionf);
+  *(_DWORD *)(v1 + 236) = (uint32)(uintptr_t)v5;
+  sub_41C760((int)(uintptr_t)v5, aSoundsMissionf);
   sub_41C7E0(*(_BYTE **)(v1 + 236), 1);
   sub_41C7A0(*(_DWORD *)(v1 + 236), 1);
   v126 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
@@ -182,7 +238,7 @@ char __fastcall sub_458EE0(int a1)
   *(_DWORD *)(v1 + 88) = 0;
   *(_DWORD *)(v1 + 84) = 0;
   *(_BYTE *)(v1 + 140) = 0;
-  *(_DWORD *)(v1 + 92) = sub_403620((_DWORD *)dword_4B5AB0, aCommander);
+  *(_DWORD *)(v1 + 92) = (int)sub_403620((_DWORD *)dword_4B5AB0, aCommander);
   *(_BYTE *)(v1 + 96) = 1;
   *(_DWORD *)(v1 + 20) = 0;
   do
@@ -209,13 +265,13 @@ char __fastcall sub_458EE0(int a1)
     sub_40A1D0(v139, Buffer);
     v145 = 2;
     sub_40A1D0(v141, FileName);
-    LOBYTE(v145) = 3;
-    if ( sub_40AAF0(v139, aMission, 0) )
+    *(_BYTE *)&v145 = 3;
+    if ( sub_40AAF0((int)(uintptr_t)v139, aMission, 0) )
     {
       do
       {
         v7 = (char *)operator new(0x1CCu);
-        v129 = (int)v7;
+        v129 = (uint32)(uintptr_t)v7;
         if ( v7 )
         {
           v8 = v133;
@@ -227,17 +283,17 @@ char __fastcall sub_458EE0(int a1)
           *((_DWORD *)v7 + 103) = 0;
           *((_DWORD *)v7 + 104) = 0;
           v7[420] = 1;
-          LOBYTE(v145) = 6;
-          sub_45C860(1);
-          LOBYTE(v145) = 7;
-          sub_45C860(1);
+          *(_BYTE *)&v145 = 6;
+          sub_45C860((_DWORD *)(v7 + 424), 1);
+          *(_BYTE *)&v145 = 7;
+          sub_45C860((_DWORD *)(v7 + 444), 1);
         }
         else
         {
           v7 = 0;
         }
         v9 = *(_DWORD *)(v1 + 20);
-        LOBYTE(v145) = 3;
+        *(_BYTE *)&v145 = 3;
         v9 *= 16;
         v10 = *(_DWORD *)(v9 + v1 + 28);
         v11 = *(_DWORD *)(v9 + v1 + 32);
@@ -247,7 +303,7 @@ char __fastcall sub_458EE0(int a1)
         {
           v13 = v11 + 8;
           *(_DWORD *)(v12 + 8) = v13;
-          v14 = sub_488DD7(*(LPVOID *)v12, 4 * v13);
+          v14 = (int)sub_488DD7(*(LPVOID *)v12, 4 * v13);
           if ( v14 )
           {
             v15 = *(_DWORD *)(v12 + 4);
@@ -256,13 +312,13 @@ char __fastcall sub_458EE0(int a1)
             memset((void *)(v14 + 4 * v15), 0, 4 * v16);
           }
         }
-        *(_DWORD *)(*(_DWORD *)v12 + 4 * *(_DWORD *)(v12 + 4) - 4) = v7;
-        sub_40AA40((int)v139, aMission);
-        sub_40AFC0(aName_0, (int)ArgList);
+        *(_DWORD *)(*(_DWORD *)v12 + 4 * *(_DWORD *)(v12 + 4) - 4) = (uint32)(uintptr_t)v7;
+        sub_40AA40((int)(uintptr_t)v139, aMission);
+        sub_40AFC0((void *)v139, aName_0, (_DWORD *)ArgList);
         strcpy(v7, *(const char **)ArgList);
         sub_40AF60((const char *)v139, aPlayerhealth, (float *)v7 + 64);
         memset(v7 + 260, 0, 0x28u);
-        for ( ; sub_40ABC0(v139, aGuntype, 0); *(_DWORD *)v24 += v138 )
+        for ( ; sub_40ABC0((int)(uintptr_t)v139, aGuntype, 0); *(_DWORD *)v24 += v138 )
         {
           v17 = *((_DWORD *)v7 + 76);
           v130 = 0;
@@ -287,99 +343,99 @@ char __fastcall sub_458EE0(int a1)
               v22 = (*((_DWORD *)v7 + 77) - v20) >> 2;
             else
               v22 = 0;
-            sub_44F190((int)(v7 + 300), *((_DWORD **)v7 + 77), v19 - v22, &v130);
+            sub_44F190((int)(uintptr_t)(v7 + 300), *((_DWORD **)v7 + 77), v19 - v22, (_DWORD *)&v130);
           }
-          sub_40B310((const char *)v139, aGuntype, &v138, (const char **)ArgList);
+          sub_40B310((const char *)v139, aGuntype, (_DWORD *)&v138, (const char **)ArgList);
           v23 = *((_DWORD *)v7 + 77);
-          *(_DWORD *)(v23 - 4) = sub_469650(*(char **)ArgList, aGun_0, 1);
+          *(_DWORD *)(v23 - 4) = sub_469650((_DWORD *)v1, *(char **)ArgList, aGun_0, 1);
           sub_40A120(
             *(_DWORD *)(*((_DWORD *)v7 + 77) - 4) != 0,
-            "failed to load gun %s, see file %s",
+            (char *)"failed to load gun %s, see file %s",
             *(const char **)ArgList,
             v140);
           v24 = &v7[4 * *(_DWORD *)(*(_DWORD *)(*((_DWORD *)v7 + 77) - 4) + 296) + 260];
         }
-        v25 = sub_469650(aCargoShip, aBoat, 1);
+        v25 = sub_469650((_DWORD *)v1, aCargoShip, aBoat, 1);
         *((_DWORD *)v7 + 79) = v25;
         sub_40A120(v25 != 0, aCargoShipBoatN);
-        v26 = sub_469650(aJunkers, aAirplane, 1);
+        v26 = sub_469650((_DWORD *)v1, aJunkers, aAirplane, 1);
         *((_DWORD *)v7 + 80) = v26;
         sub_40A120(v26 != 0, aJunkersAirplan);
-        sub_40B1B0((char)aResupplyhealth, (int)(v7 + 324));
+        sub_40B1B0((const char *)v139, aResupplyhealth, (float *)(v7 + 324));
         *((float *)v7 + 81) = *((float *)v7 + 81) * 0.0099999998;
         *((float *)v7 + 82) = *((float *)v7 + 82) * 0.0099999998;
-        sub_40B1B0((char)aResupplyammo, (int)(v7 + 332));
+        sub_40B1B0((const char *)v139, aResupplyammo, (float *)(v7 + 332));
         v27 = *((float *)v7 + 83) * 0.0099999998;
         *((_DWORD *)v7 + 85) = 0;
         *((float *)v7 + 83) = v27;
         *((float *)v7 + 84) = *((float *)v7 + 84) * 0.0099999998;
-        if ( sub_40ABC0(v139, aResupplymaxuni, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aResupplymaxuni, 0) )
         {
           sub_40AF00((const char *)v139, aResupplymaxuni, (char **)v7 + 85);
-          sub_40B1B0((char)aResupplyfreq, (int)(v7 + 344));
+          sub_40B1B0((const char *)v139, aResupplyfreq, (float *)(v7 + 344));
         }
         *((_DWORD *)v7 + 88) = 0;
-        if ( sub_40ABC0(v139, aGunguys, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aGunguys, 0) )
         {
-          sub_40AFC0(aGunguys, (int)ArgList);
-          v28 = sub_469650(*(char **)ArgList, aInfantry, 1);
+          sub_40AFC0((void *)v139, aGunguys, (_DWORD *)ArgList);
+          v28 = sub_469650((_DWORD *)v1, *(char **)ArgList, aInfantry, 1);
           *((_DWORD *)v7 + 88) = v28;
           v29 = v28 && !*(_DWORD *)(v28 + 296);
-          sub_40A120(v29, "invalid gunGuys, see mission %s", v7);
+          sub_40A120(v29, (char *)"invalid gunGuys, see mission %s", v7);
         }
         *((_DWORD *)v7 + 89) = 0;
-        if ( sub_40ABC0(v139, aMortarguys, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aMortarguys, 0) )
         {
-          sub_40AFC0(aMortarguys, (int)ArgList);
-          v30 = sub_469650(*(char **)ArgList, aInfantry, 1);
+          sub_40AFC0((void *)v139, aMortarguys, (_DWORD *)ArgList);
+          v30 = sub_469650((_DWORD *)v1, *(char **)ArgList, aInfantry, 1);
           *((_DWORD *)v7 + 89) = v30;
           v31 = v30 && *(_DWORD *)(v30 + 296) == 1;
-          sub_40A120(v31, "invalid mortarGuys, see mission %s", v7);
+          sub_40A120(v31, (char *)"invalid mortarGuys, see mission %s", v7);
         }
         *((_DWORD *)v7 + 90) = 0;
-        if ( sub_40ABC0(v139, aTanks, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aTanks, 0) )
         {
-          sub_40AFC0(aTanks, (int)ArgList);
-          v32 = sub_469650(*(char **)ArgList, aTank, 1);
+          sub_40AFC0((void *)v139, aTanks, (_DWORD *)ArgList);
+          v32 = sub_469650((_DWORD *)v1, *(char **)ArgList, aTank, 1);
           *((_DWORD *)v7 + 90) = v32;
-          sub_40A120(v32 != 0, "invalid tanks, see mission %s", v7);
+          sub_40A120(v32 != 0, (char *)"invalid tanks, see mission %s", v7);
         }
         *((_DWORD *)v7 + 91) = 0;
-        if ( sub_40ABC0(v139, aAirstrikeairpl, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aAirstrikeairpl, 0) )
         {
-          sub_40AFC0(aAirstrikeairpl, (int)ArgList);
-          v33 = sub_469650(*(char **)ArgList, aAirplane, 1);
+          sub_40AFC0((void *)v139, aAirstrikeairpl, (_DWORD *)ArgList);
+          v33 = sub_469650((_DWORD *)v1, *(char **)ArgList, aAirplane, 1);
           *((_DWORD *)v7 + 91) = v33;
-          sub_40A120(v33 != 0, "invalid air-strike airplane type, see mission %s", v7);
+          sub_40A120(v33 != 0, (char *)"invalid air-strike airplane type, see mission %s", v7);
           sub_40AF00((const char *)v139, aAirstrikenumpl, (char **)v7 + 92);
           sub_40AF60((const char *)v139, aAirstrikereloa, (float *)v7 + 93);
           sub_40AF60((const char *)v139, aAirstriketime, (float *)v7 + 94);
         }
         *((_DWORD *)v7 + 95) = 0;
-        if ( sub_40ABC0(v139, aTorpedorunairp, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aTorpedorunairp, 0) )
         {
-          sub_40AFC0(aTorpedorunairp, (int)ArgList);
-          v34 = sub_469650(*(char **)ArgList, aAirplane, 1);
+          sub_40AFC0((void *)v139, aTorpedorunairp, (_DWORD *)ArgList);
+          v34 = sub_469650((_DWORD *)v1, *(char **)ArgList, aAirplane, 1);
           *((_DWORD *)v7 + 95) = v34;
-          sub_40A120(v34 != 0, "invalid torpedo run airplane '%s' type, see mission %s", *(const char **)ArgList, v7);
+          sub_40A120(v34 != 0, (char *)"invalid torpedo run airplane '%s' type, see mission %s", *(const char **)ArgList, v7);
           sub_40AF00((const char *)v139, aTorpedorunnump, (char **)v7 + 96);
           sub_40AF60((const char *)v139, aTorpedorunrelo, (float *)v7 + 97);
         }
         *((_DWORD *)v7 + 98) = 0;
-        if ( sub_40ABC0(v139, aBombingrunairp, 0) )
+        if ( sub_40ABC0((int)(uintptr_t)v139, aBombingrunairp, 0) )
         {
-          sub_40AFC0(aBombingrunairp, (int)ArgList);
-          v35 = sub_469650(*(char **)ArgList, aAirplane, 1);
+          sub_40AFC0((void *)v139, aBombingrunairp, (_DWORD *)ArgList);
+          v35 = sub_469650((_DWORD *)v1, *(char **)ArgList, aAirplane, 1);
           *((_DWORD *)v7 + 98) = v35;
-          sub_40A120(v35 != 0, "invalid bombing run airplane '%s' type, see mission %s", *(const char **)ArgList, v7);
+          sub_40A120(v35 != 0, (char *)"invalid bombing run airplane '%s' type, see mission %s", *(const char **)ArgList, v7);
           sub_40AF00((const char *)v139, aBombingrunnump, (char **)v7 + 99);
           sub_40AF60((const char *)v139, aBombingrunrelo, (float *)v7 + 100);
         }
-        v129 = (int)(v7 + 404);
+        v129 = (uint32)(uintptr_t)(v7 + 404);
         *((_DWORD *)v7 + 101) = -1;
-        while ( sub_40AAF0(v139, aMissionWave, 1) )
+        while ( sub_40AAF0((int)(uintptr_t)v139, aMissionWave, 1) )
         {
-          v36 = operator new(0x34u);
+          v36 = (_DWORD *)operator new(0x34u);
           if ( v36 )
           {
             v36[5] = 0;
@@ -403,7 +459,7 @@ char __fastcall sub_458EE0(int a1)
           {
             v40 = v38 + 8;
             *((_DWORD *)v7 + 104) = v40;
-            v41 = sub_488DD7(*((LPVOID *)v7 + 102), 4 * v40);
+            v41 = (int)sub_488DD7(*((LPVOID *)v7 + 102), 4 * v40);
             if ( v41 )
             {
               v42 = *((_DWORD *)v7 + 103);
@@ -412,25 +468,25 @@ char __fastcall sub_458EE0(int a1)
               memset((void *)(v41 + 4 * v42), 0, 4 * v43);
             }
           }
-          *(_DWORD *)(*((_DWORD *)v7 + 102) + 4 * *((_DWORD *)v7 + 103) - 4) = v37;
-          sub_40AA40((int)v139, aMissionWave);
+          *(_DWORD *)(*((_DWORD *)v7 + 102) + 4 * *((_DWORD *)v7 + 103) - 4) = (uint32)(uintptr_t)v37;
+          sub_40AA40((int)(uintptr_t)v139, aMissionWave);
           *(_DWORD *)v37 = 0;
-          if ( sub_40ABC0(v139, aTime, 0) )
+          if ( sub_40ABC0((int)(uintptr_t)v139, aTime, 0) )
             sub_40AF60((const char *)v139, aTime, (float *)v37);
           *((_DWORD *)v37 + 1) = 0;
-          if ( sub_40ABC0(v139, aUnitstokill, 0) )
+          if ( sub_40ABC0((int)(uintptr_t)v139, aUnitstokill, 0) )
             sub_40AF60((const char *)v139, aUnitstokill, (float *)v37 + 1);
           *((_BYTE *)v37 + 8) = 0;
-          if ( !sub_40AAF0(v139, aMissionWave, 1) )
+          if ( !sub_40AAF0((int)(uintptr_t)v139, aMissionWave, 1) )
             *((_BYTE *)v37 + 8) = 1;
-          if ( sub_40ABC0(v139, aMustkillalluni, 0) )
+          if ( sub_40ABC0((int)(uintptr_t)v139, aMustkillalluni, 0) )
             sub_40B130((const char *)v139, aMustkillalluni, (_BYTE *)v37 + 8);
           *((_BYTE *)v37 + 9) = 0;
           *((_DWORD *)v37 + 3) = -1;
           *((_DWORD *)v37 + 4) = 0;
-          while ( sub_40ABC0(v139, aBoattype, 0) )
+          while ( sub_40ABC0((int)(uintptr_t)v139, aBoattype, 0) )
           {
-            v44 = operator new(0x18u);
+            v44 = (_DWORD *)operator new(0x18u);
             v45 = *((_DWORD *)v37 + 7);
             v46 = *((_DWORD *)v37 + 6) + 1;
             *((_DWORD *)v37 + 6) = v46;
@@ -438,7 +494,7 @@ char __fastcall sub_458EE0(int a1)
             {
               v47 = v45 + 8;
               *((_DWORD *)v37 + 7) = v47;
-              v48 = sub_488DD7(*((LPVOID *)v37 + 5), 4 * v47);
+              v48 = (int)sub_488DD7(*((LPVOID *)v37 + 5), 4 * v47);
               if ( v48 )
               {
                 v49 = *((_DWORD *)v37 + 6);
@@ -447,24 +503,24 @@ char __fastcall sub_458EE0(int a1)
                 memset((void *)(v48 + 4 * v49), 0, 4 * v50);
               }
             }
-            *(_DWORD *)(*((_DWORD *)v37 + 5) + 4 * *((_DWORD *)v37 + 6) - 4) = v44;
+            *(_DWORD *)(*((_DWORD *)v37 + 5) + 4 * *((_DWORD *)v37 + 6) - 4) = (uint32)(uintptr_t)v44;
             sub_40B530((const char *)v139, aBoattype, v44, v44 + 1, (const char **)ArgList);
-            v51 = sub_469650(*(char **)ArgList, aBoat, 1);
+            v51 = sub_469650((_DWORD *)v1, *(char **)ArgList, aBoat, 1);
             v44[2] = v51;
-            sub_4282E0(v51 != 0, "failed to load boat %s, see file %s", *(const char **)ArgList, v140);
+            sub_4282E0(v51 != 0, (char *)"failed to load boat %s, see file %s", *(const char **)ArgList, v140);
             if ( (int)v44[1] > 0 )
               *((_BYTE *)v37 + 9) = 1;
             if ( *(_DWORD *)(v44[2] + 292) == 6 )
             {
               sub_40B530((const char *)v139, aCarrierwaves, v44 + 3, v44 + 4, (const char **)ArgList);
-              v52 = sub_469650(*(char **)ArgList, aAirplane, 1);
+              v52 = sub_469650((_DWORD *)v1, *(char **)ArgList, aAirplane, 1);
               v44[5] = v52;
-              sub_40A120(v52 != 0, "failed to load carrier airplane %s, see file %s", *(const char **)ArgList, v140);
+              sub_40A120(v52 != 0, (char *)"failed to load carrier airplane %s, see file %s", *(const char **)ArgList, v140);
             }
           }
-          while ( sub_40ABC0(v139, aAirplanetype, 0) )
+          while ( sub_40ABC0((int)(uintptr_t)v139, aAirplanetype, 0) )
           {
-            v53 = operator new(0xCu);
+            v53 = (_DWORD *)operator new(0xCu);
             v54 = *((_DWORD *)v37 + 11);
             v55 = *((_DWORD *)v37 + 10) + 1;
             *((_DWORD *)v37 + 10) = v55;
@@ -473,7 +529,7 @@ char __fastcall sub_458EE0(int a1)
               v56 = (void *)*((_DWORD *)v37 + 9);
               v57 = v54 + 8;
               *((_DWORD *)v37 + 11) = v57;
-              v58 = sub_488DD7(v56, 4 * v57);
+              v58 = (int)sub_488DD7(v56, 4 * v57);
               if ( v58 )
               {
                 v59 = *((_DWORD *)v37 + 10);
@@ -482,11 +538,11 @@ char __fastcall sub_458EE0(int a1)
                 memset((void *)(v58 + 4 * v59), 0, 4 * v60);
               }
             }
-            *(_DWORD *)(*((_DWORD *)v37 + 9) + 4 * *((_DWORD *)v37 + 10) - 4) = v53;
+            *(_DWORD *)(*((_DWORD *)v37 + 9) + 4 * *((_DWORD *)v37 + 10) - 4) = (uint32)(uintptr_t)v53;
             sub_40B530((const char *)v139, aAirplanetype, v53, v53 + 1, (const char **)ArgList);
-            v61 = sub_469650(*(char **)ArgList, aAirplane, 1);
+            v61 = sub_469650((_DWORD *)v1, *(char **)ArgList, aAirplane, 1);
             v53[2] = v61;
-            sub_40A120(v61 != 0, "failed to load airplane %s, see file %s", *(const char **)ArgList, v140);
+            sub_40A120(v61 != 0, (char *)"failed to load airplane %s, see file %s", *(const char **)ArgList, v140);
             if ( (int)v53[1] > 0 )
               *((_BYTE *)v37 + 9) = 1;
           }
@@ -499,16 +555,16 @@ char __fastcall sub_458EE0(int a1)
         memset(*((void **)v7 + 106), 0, 4 * *((_DWORD *)v7 + 107));
         v63 = (void *)*((_DWORD *)v7 + 106);
         *((_DWORD *)v7 + 107) = 0;
-        sub_488CEE(v63);
+        (void)sub_488CEE(v63);
         v64 = v132;
         *((_DWORD *)v7 + 108) = 0;
         *((_DWORD *)v7 + 106) = 0;
         *((_DWORD *)v7 + 110) = -10;
         sprintf(String2, "Mission %d", *(_DWORD *)(16 * *(_DWORD *)(v64 + 20) + v64 + 28));
-        if ( sub_40AAF0(v141, String2, 0) )
+        if ( sub_40AAF0((int)(uintptr_t)v141, String2, 0) )
         {
-          sub_40AA40((int)v141, String2);
-          while ( sub_40ABC0(v141, aMustkillunit, 0) )
+          sub_40AA40((int)(uintptr_t)v141, String2);
+          while ( sub_40ABC0((int)(uintptr_t)v141, aMustkillunit, 0) )
           {
             v65 = (int *)operator new(0x94u);
             v66 = *((_DWORD *)v7 + 108);
@@ -518,7 +574,7 @@ char __fastcall sub_458EE0(int a1)
             {
               v68 = v66 + 8;
               *((_DWORD *)v7 + 108) = v68;
-              v69 = sub_488DD7(*((LPVOID *)v7 + 106), 4 * v68);
+              v69 = (int)sub_488DD7(*((LPVOID *)v7 + 106), 4 * v68);
               if ( v69 )
               {
                 v70 = *((_DWORD *)v7 + 107);
@@ -527,24 +583,24 @@ char __fastcall sub_458EE0(int a1)
                 memset((void *)(v69 + 4 * v70), 0, 4 * v71);
               }
             }
-            *(_DWORD *)(*((_DWORD *)v7 + 106) + 4 * *((_DWORD *)v7 + 107) - 4) = v65;
+            *(_DWORD *)(*((_DWORD *)v7 + 106) + 4 * *((_DWORD *)v7 + 107) - 4) = (uint32)(uintptr_t)v65;
             v65[4] = 0;
             *((_BYTE *)v65 + 20) = 0;
-            sub_40B310((const char *)v141, aMustkillunit, v65 + 3, (const char **)&v131);
-            if ( sub_40ABC0(v141, aMustkilltext, 0) )
+            sub_40B310((const char *)v141, aMustkillunit, (_DWORD *)(v65 + 3), (const char **)&v131);
+            if ( sub_40ABC0((int)(uintptr_t)v141, aMustkilltext, 0) )
             {
-              sub_40B310((const char *)v141, aMustkilltext, v65 + 4, (const char **)ArgList);
+              sub_40B310((const char *)v141, aMustkilltext, (_DWORD *)(v65 + 4), (const char **)ArgList);
               --v65[4];
               strcpy((char *)v65 + 20, *(const char **)ArgList);
             }
-            v65[1] = sub_469650(v131, aAirplane, 0);
-            v72 = sub_469650(v131, aBoat, 0);
+            v65[1] = sub_469650((_DWORD *)v1, v131, aAirplane, 0);
+            v72 = sub_469650((_DWORD *)v1, v131, aBoat, 0);
             v73 = v65[1];
             *v65 = v72;
             v74 = v73 || v72;
             sub_40A120(
               v74,
-              "failed to find a 'mustKillUnit', must be a Boat or Airplane, see %s : %s : SpecialMissions.ini",
+              (char *)"failed to find a 'mustKillUnit', must be a Boat or Airplane, see %s : %s : SpecialMissions.ini",
               v131,
               String2);
             v65[2] = 0;
@@ -585,17 +641,17 @@ char __fastcall sub_458EE0(int a1)
             }
             sub_40A120(
               v65[2] >= v65[3],
-              "there are not enough %s's in %s to kill %d of them, see SpecialMissions.ini",
+              (char *)"there are not enough %s's in %s to kill %d of them, see SpecialMissions.ini",
               v131,
               String2,
               v65[3]);
           }
-          if ( sub_40ABC0(v141, aMustkilleveryt, 0) )
+          if ( sub_40ABC0((int)(uintptr_t)v141, aMustkilleveryt, 0) )
           {
             sub_40AF00((const char *)v141, aMustkilleveryt, (char **)v7 + 110);
             --*((_DWORD *)v7 + 110);
           }
-          while ( sub_40ABC0(v141, aObjectivetimet, 0) )
+          while ( sub_40ABC0((int)(uintptr_t)v141, aObjectivetimet, 0) )
           {
             v84 = (char *)operator new(0x84u);
             v85 = *((_DWORD *)v7 + 113);
@@ -606,7 +662,7 @@ char __fastcall sub_458EE0(int a1)
               v87 = (void *)*((_DWORD *)v7 + 111);
               v88 = v85 + 8;
               *((_DWORD *)v7 + 113) = v88;
-              v89 = sub_488DD7(v87, 4 * v88);
+              v89 = (int)sub_488DD7(v87, 4 * v88);
               if ( v89 )
               {
                 v90 = *((_DWORD *)v7 + 112);
@@ -615,15 +671,15 @@ char __fastcall sub_458EE0(int a1)
                 memset((void *)(v89 + 4 * v90), 0, 4 * v91);
               }
             }
-            *(_DWORD *)(*((_DWORD *)v7 + 111) + 4 * *((_DWORD *)v7 + 112) - 4) = v84;
-            sub_40B310((const char *)v141, aObjectivetimet, v84, (const char **)ArgList);
+            *(_DWORD *)(*((_DWORD *)v7 + 111) + 4 * *((_DWORD *)v7 + 112) - 4) = (uint32)(uintptr_t)v84;
+            sub_40B310((const char *)v141, aObjectivetimet, (_DWORD *)v84, (const char **)ArgList);
             --*(_DWORD *)v84;
             strcpy(v84 + 4, *(const char **)ArgList);
           }
-          while ( sub_40ABC0(v141, aDialogue, 0) )
+          while ( sub_40ABC0((int)(uintptr_t)v141, aDialogue, 0) )
           {
-            sub_40AFC0(aDialogue, (int)&v136);
-            if ( sscanf(v136, "%d,%d,%f", &v134, &v137, &v135) == 3 )
+            sub_40AFC0((void *)v141, aDialogue, (_DWORD *)&v136);
+            if ( sscanf(v136, "%d,%d,%f", &v134, &v137, (float *)&v135) == 3 )
             {
               if ( v134 - 1 < *((_DWORD *)v7 + 103) )
               {
@@ -637,22 +693,22 @@ char __fastcall sub_458EE0(int a1)
               sub_40A120(0, aDialogueShould);
             }
           }
-          if ( sub_40ABC0(v141, aProvincetaken, 0) )
+          if ( sub_40ABC0((int)(uintptr_t)v141, aProvincetaken, 0) )
           {
             v93 = (_DWORD *)v129;
             sub_40AF00((const char *)v141, aProvincetaken, (char **)v129);
             --*v93;
           }
         }
-        v94 = sub_40AAF0(v139, aMission, 0);
+        v94 = sub_40AAF0((int)(uintptr_t)v139, aMission, 0);
         v1 = v132;
       }
       while ( v94 );
     }
-    LOBYTE(v145) = 2;
-    sub_40A830((int)v141);
+    *(_BYTE *)&v145 = 2;
+    sub_40A830((int)(uintptr_t)v141);
     v145 = -1;
-    sub_40A830((int)v139);
+    sub_40A830((int)(uintptr_t)v139);
     v95 = *(_DWORD *)(v1 + 20) + 1;
     *(_DWORD *)(v1 + 20) = v95;
   }
@@ -684,7 +740,7 @@ char __fastcall sub_458EE0(int a1)
     v100 = *(_DWORD **)(v1 + 124);
     v101 = v98 - v96;
     v102 = v100;
-    v103 = (*(_DWORD *)(v1 + 128) - (int)v100) >> 2;
+      v103 = (*(_DWORD *)(v1 + 128) - (uintptr_t)v100) >> 2;
     v130 = v101;
     if ( v103 >= v101 )
     {
@@ -707,10 +763,10 @@ char __fastcall sub_458EE0(int a1)
     }
     else
     {
-      if ( !v97 || (v104 = ((int)v100 - v97) >> 2, v101 >= v104) )
+      if ( !v97 || (v104 = ((uintptr_t)v100 - v97) >> 2, v101 >= v104) )
         v104 = v101;
       if ( v97 )
-        v105 = ((int)v100 - v97) >> 2;
+        v105 = ((uintptr_t)v100 - v97) >> 2;
       else
         v105 = 0;
       v106 = v104 + v105;

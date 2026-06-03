@@ -44,8 +44,8 @@ int __cdecl sub_47406E(float *self, int a2, int a3, float *a4)
       v20 = *v18 * 255.0 + v14;
       v13 = (int)v20;
       v18 += 4;
-      LOBYTE(v8) = 0;
-      HIBYTE(v8) = v13;
+      ((_BYTE*)&(v8))[0] = 0;
+      ((_BYTE*)&(v8))[1] = v13;
       *v5++ = v16 | v8;
       ++v6;
     }

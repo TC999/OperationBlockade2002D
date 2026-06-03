@@ -1,6 +1,6 @@
 //----- (00403B60) --------------------------------------------------------
 void __cdecl sub_403B60(_DWORD *self)
 {
-  *self = &off_4990BC;
+  *self = (uint32)(INT_PTR)&off_4990BC;
   sub_403CE0(self);
 }

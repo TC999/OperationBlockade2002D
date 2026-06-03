@@ -1,5 +1,5 @@
 //----- (0047CDBD) --------------------------------------------------------
-char __fastcall sub_47CDBD(int a1, int a2)
+char __cdecl sub_47CDBD(int a1, int a2)
 {
   _DWORD *v2; // ecx
   char result; // al

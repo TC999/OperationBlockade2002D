@@ -40,12 +40,12 @@ LABEL_10:
   v11 = (int)v7;
   if ( v6 > 0 )
   {
-    v8 = v7 + 2;
+    v8 = (_BYTE*)(v7 + 2);
     v12 = v6;
     do
     {
-      sub_47D9E9(v3, (int)&Buf, 3);
-      *((_WORD *)v8 - 1) = (_WORD)Buf;
+      sub_47D9E9((int)v3, (int)&Buf, 3);
+      *((_WORD *)v8 - 1) = *(_WORD *)&Buf;
       *v8 = BYTE2(Buf);
       v8 += 3;
       --v12;

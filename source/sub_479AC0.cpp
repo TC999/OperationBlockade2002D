@@ -13,7 +13,7 @@ int __cdecl sub_479AC0(int a1, _BYTE *a2)
   if ( *(_BYTE *)(a1 + 9) == 16 )
   {
     v3 = a2;
-    v4 = a2;
+    v4 = (char *)a2;
     if ( *(_DWORD *)a1 * *(unsigned __int8 *)(a1 + 10) )
     {
       v5 = *(_DWORD *)a1 * *(unsigned __int8 *)(a1 + 10);

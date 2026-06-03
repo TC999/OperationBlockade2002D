@@ -51,10 +51,10 @@ _DWORD *__cdecl sub_463B30(
   v14 = (char)a10;
   self[11] = a9;
   v15 = a12;
-  *self = &off_499BDC;
+  *self = (uint32)&off_499BDC;
   *((_BYTE *)self + 48) = v14;
   self[13] = v15;
-  self[5] = a2;
+  self[5] = (uint32)(uintptr_t)a2;
   if ( a2 )
     ++*a2;
   v16 = a7 * 0.25;
@@ -64,19 +64,19 @@ _DWORD *__cdecl sub_463B30(
   *((float *)self + 14) = v16;
   self[19] = 0;
   self[16] = 0;
-  if ( v18 )
+  if ( v16 == 0.0f )
     v19 = 1.0;
   else
     v19 = a6 / v16;
-  v20 = (__int64)v19 + 1;
+  v20 = (int)((__int64)v19 + 1);
   self[17] = v20;
   v21 = (char *)operator new(16 * v20);
   if ( v21 )
   {
     if ( (int)(__int64)v19 >= 0 )
     {
-      v22 = v21 + 8;
-      v23 = (__int64)v19 + 1;
+      v22 = (_DWORD *)(v21 + 8);
+      v23 = (int)((__int64)v19 + 1);
       do
       {
         *(v22 - 2) = 0;
@@ -93,18 +93,18 @@ _DWORD *__cdecl sub_463B30(
     v21 = 0;
   }
   v24 = *((float *)self + 18);
-  self[6] = v21;
+  self[6] = (uint32)(uintptr_t)v21;
   if ( v24 == 0.0 )
     v25 = 1.0;
   else
     v25 = *((float *)self + 20) / v24;
-  v26 = 2 * (__int64)v25 + 4;
+  v26 = (int)(2 * (__int64)v25 + 4);
   a11 = v26 / 2;
   self[30] = v26 / 2;
-  self[24] = operator new(4 * (v26 / 2));
+  self[24] = (uint32)(uintptr_t)operator new(4 * (v26 / 2));
   for ( i = 0; i < self[30]; ++i )
   {
-    *(_DWORD *)(self[24] + 4 * i) = sub_409960((_DWORD *)dword_520970, (int)self);
+    *(_DWORD *)(self[24] + 4 * i) = (uint32)(uintptr_t)sub_409960((_DWORD *)dword_520970, (int)self);
     if ( *((_BYTE *)self + 48) )
       *(_DWORD *)(*(_DWORD *)(self[24] + 4 * i) + 12) = 4;
     else

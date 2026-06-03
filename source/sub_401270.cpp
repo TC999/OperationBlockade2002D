@@ -37,7 +37,7 @@ _DWORD *__cdecl sub_401270(_DWORD *self)
   self[85] = 0;
   self[84] = 0;
   self[83] = 0;
-  *self = &off_49901C;
+  *self = (_DWORD)(INT_PTR)&off_49901C;
   sub_401450(self);
   self[5] = dword_4A4DB4;
   self[6] = dword_4A4DB8;

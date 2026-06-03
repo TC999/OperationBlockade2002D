@@ -1,3 +1,19 @@
+extern char aPreferred[];
+extern char aLoad[];
+extern char aAddress[];
+extern char aIs[];
+extern char aStart[];
+extern char aLength[];
+extern char aName[];
+extern char aClass[];
+extern char aAddress_0[];
+extern char aPublics[];
+extern char aBy[];
+extern char aValue[];
+extern char aRvaBase[];
+extern char aLibObject[];
+extern char SubStr[];
+
 //----- (00428860) --------------------------------------------------------
 _DWORD *__cdecl sub_428860(_DWORD *self, char *FileName)
 {
@@ -20,7 +36,7 @@ _DWORD *__cdecl sub_428860(_DWORD *self, char *FileName)
   int v21; // [esp+840h] [ebp-4h]
 
   v2 = self;
-  v3 = operator new(0x128u);
+  v3 = (_DWORD*)operator new(0x128u);
   v4 = v3;
   v21 = 0;
   if ( v3 )
@@ -32,59 +48,59 @@ _DWORD *__cdecl sub_428860(_DWORD *self, char *FileName)
     v3[68] = 0;
     v3[69] = 0;
     v3[70] = 0;
-    sub_429DE0(FileName);
-    LOBYTE(v21) = 3;
+    sub_429DE0(v4, FileName);
+    *(_BYTE *)&v21 = 3;
     v4[72] = 0;
-    sub_429E70(v4 + 1, 256);
-    if ( (unsigned __int8)sub_429E70(v20, 1024) )
+    sub_429E70(v4, (_BYTE*)(v4 + 1), 256);
+    if ( (unsigned __int8)sub_429E70(v4, (_BYTE*)v20, 1024) )
     {
       do
       {
         if ( !strcmp(aPreferred, v20) )
         {
-          sub_428D50(aLoad);
-          sub_428D50(aAddress);
-          sub_428D50(aIs);
+          sub_428D50(v4, aLoad);
+          sub_428D50(v4, aAddress);
+          sub_428D50(v4, aIs);
           *v4 = sub_42A0E0(v4 + 71);
         }
         else if ( !strcmp(aStart, v20) )
         {
-          sub_428D50(aLength);
-          sub_428D50(aName);
-          sub_428D50(aClass);
+          sub_428D50(v4, aLength);
+          sub_428D50(v4, aName);
+          sub_428D50(v4, aClass);
           sub_42A400(v4 + 71);
           if ( !sub_428C90(v4) )
           {
             do
             {
               v5 = sub_42A0E0(v4 + 71);
-              sub_428DE0(58);
+              sub_428DE0(v4, 58);
               v6 = sub_42A0E0(v4 + 71);
               v15 = sub_42A0E0(v4 + 71);
-              sub_428DE0(72);
-              sub_429E70(Source, 256);
-              v7 = sub_429A90(v5, v6, v15, Source);
-              sub_4291F0(v7);
+              sub_428DE0(v4, 72);
+              sub_429E70(v4, (_BYTE*)Source, 256);
+              v7 = (int)sub_429A90(v4 + 71, v5, v6, v15, Source);
+              sub_4291F0(v4, (const void*)v7);
             }
-            while ( !(unsigned __int8)sub_428CD0(v4) && !sub_428C90(v4) );
+            while ( !(unsigned __int8)sub_428CD0((char*)v4) && !sub_428C90(v4) );
           }
         }
         else if ( !strcmp(aAddress_0, v20) )
         {
-          sub_428D50(aPublics);
-          sub_428D50(aBy);
-          sub_428D50(aValue);
-          sub_428D50(aRvaBase);
-          sub_428D50(aLibObject);
+          sub_428D50(v4, aPublics);
+          sub_428D50(v4, aBy);
+          sub_428D50(v4, aValue);
+          sub_428D50(v4, aRvaBase);
+          sub_428D50(v4, aLibObject);
           sub_42A400(v4 + 71);
           if ( !sub_428C90(v4) )
           {
             do
             {
               v8 = sub_42A0E0(v4 + 71);
-              sub_428DE0(58);
+              sub_428DE0(v4, 58);
               v16 = sub_42A0E0(v4 + 71);
-              sub_429E70(Str, 256);
+              sub_429E70(v4, (_BYTE*)Str, 256);
               v9 = Str;
               v10 = strstr(Str, SubStr);
               if ( v10 )
@@ -101,10 +117,10 @@ _DWORD *__cdecl sub_428860(_DWORD *self, char *FileName)
                 }
                 while ( *++v11 );
               }
-              v13 = sub_429A90(v8, v16, 0, v9);
-              sub_4291F0(v13);
+              v13 = (int)sub_429A90(v4 + 71, v8, v16, 0, v9);
+              sub_4291F0(v4, (const void*)v13);
             }
-            while ( !(unsigned __int8)sub_428CD0(v4) && !sub_428C90(v4) );
+            while ( !(unsigned __int8)sub_428CD0((char*)v4) && !sub_428C90(v4) );
           }
         }
         else
@@ -112,12 +128,12 @@ _DWORD *__cdecl sub_428860(_DWORD *self, char *FileName)
           sub_42A070(v4 + 71);
         }
       }
-      while ( (unsigned __int8)sub_429E70(v20, 1024) );
+      while ( (unsigned __int8)sub_429E70(v4, (_BYTE*)v20, 1024) );
       v2 = self;
     }
-    sub_429310(v4[65], v4[65] + 272 * v4[66]);
-    sub_429310(v4[68], v4[68] + 272 * v4[69]);
-    *v2 = v4;
+    sub_429310((char*)v4[65], (char*)(v4[65] + 272 * v4[66]));
+    sub_429310((char*)v4[68], (char*)(v4[68] + 272 * v4[69]));
+    *v2 = (uint32)v4;
     return v2;
   }
   else

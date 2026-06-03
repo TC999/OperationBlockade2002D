@@ -54,7 +54,7 @@ LABEL_27:
     v5 = sub_47D91C(Buf, Size);
     *((_BYTE *)Buf + 93) |= 0x20u;
     Buf[87] = (int)v5;
-    sub_47D9E9(Buf, (int)v5, Size);
+    sub_47D9E9((int)Buf, (int)v5, Size);
     *((_WORD *)Buf + 133) = Size;
     goto LABEL_24;
   }
@@ -67,7 +67,7 @@ LABEL_27:
     }
     if ( Size == 2 )
     {
-      sub_47D9E9(Buf, (int)&v9, 2);
+      sub_47D9E9((int)Buf, (int)&v9, 2);
       *((_WORD *)Buf + 180) = v10 + (v9 << 8);
       goto LABEL_23;
     }
@@ -77,7 +77,7 @@ LABEL_21:
   }
   if ( Size != 6 )
     goto LABEL_21;
-  sub_47D9E9(Buf, (int)&v9, 6);
+  sub_47D9E9((int)Buf, (int)&v9, 6);
   v6 = v12;
   *((_WORD *)Buf + 177) = v10 + (v9 << 8);
   v7 = v6 + (v11 << 8);

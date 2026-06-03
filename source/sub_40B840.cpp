@@ -72,7 +72,7 @@ unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
             v30 -= 24;
             v29 -= 24;
             *(_DWORD *)v29 = v31;
-            sub_40BCC0(v30 + 4);
+            sub_40BCC0((int *)(v29 + 4), (int *)(v30 + 4));
             *(_BYTE *)(v29 + 20) = *(_BYTE *)(v30 + 20);
           }
           while ( v30 != a2 );
@@ -86,7 +86,7 @@ unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
           do
           {
             *(_DWORD *)v33 = *(_DWORD *)a4;
-            sub_40BCC0(a4 + 4);
+            sub_40BCC0((int *)(v33 + 4), (int *)(a4 + 4));
             *(_BYTE *)(v33 + 20) = *(_BYTE *)(a4 + 20);
             v33 += 24;
           }
@@ -127,7 +127,7 @@ unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
         do
         {
           *(_DWORD *)v25 = *(_DWORD *)a4;
-          sub_40BCC0(a4 + 4);
+          sub_40BCC0((int *)(v25 + 4), (int *)(a4 + 4));
           *(_BYTE *)(v25 + 20) = *(_BYTE *)(a4 + 20);
           v25 += 24;
         }
@@ -154,12 +154,12 @@ unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
     v10 = v36;
     for ( j = v34[1]; j != a2; v10 += 24 )
     {
-      sub_40BBF0(v10, j);
+      sub_40BBF0((int)v10, j);
       j += 24;
     }
     for ( k = v10; a3; --a3 )
     {
-      sub_40BBF0(k, a4);
+      sub_40BBF0((int)k, a4);
       k += 24;
     }
     v13 = a2;
@@ -170,7 +170,7 @@ unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
       v37 = v14;
       do
       {
-        sub_40BBF0(v37, v13);
+        sub_40BBF0((int)v37, v13);
         v13 += 24;
         v37 += 24;
       }
@@ -181,20 +181,20 @@ unsigned int __cdecl sub_40B840(_DWORD *self, int a2, unsigned int a3, int a4)
       sub_40A800(m);
     sub_4885A6((LPVOID)v34[1]);
     result = v34[1];
-    v34[3] = &v36[24 * v35];
+    v34[3] = (DWORD)&v36[24 * v35];
     if ( result )
     {
       v19 = v34[2];
-      v34[1] = v36;
+      v34[1] = (DWORD)(uintptr_t)v36;
       v20 = v19 - result;
       result = (unsigned int)((unsigned __int64)(715827883LL * (int)(v19 - result)) >> 32) >> 31;
       v5 += v20 / 24;
     }
     else
     {
-      v34[1] = v36;
+      v34[1] = (DWORD)(uintptr_t)v36;
     }
-    v34[2] = &v36[24 * v5];
+    v34[2] = (DWORD)&v36[24 * v5];
   }
   return result;
 }

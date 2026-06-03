@@ -1,4 +1,31 @@
 //----- (0040FEE0) --------------------------------------------------------
+extern char aMpCreatingPeer[];
+extern char aMpCreatingPeer_0[];
+extern char aMpInitPeer[];
+extern char aMpInitPeerDone[];
+extern char aMpCreateDevice[];
+extern char aMpDoneCreating_0[];
+extern char aMpSettingSp[];
+extern char aMpSettingPeerI[];
+extern char aMpDoneSettingS[];
+extern char aCouldnTCreateD[];
+extern char aCouldnTCreateD_0[];
+extern char aCouldnTCreateD_1[];
+extern char aCouldnTInitPee[];
+extern char aCouldnTInitDpl[];
+extern char aCouldnTSetDevi[];
+extern char aCouldnTSetPeer[];
+extern char aMpHosting[];
+extern char aMpDoneHostIng[];
+extern char aMpLaunchSucces[];
+extern char aInvalidDeviceA[];
+extern char aInvalidParam[];
+extern char aDataTooLarge[];
+extern char aCouldnTHost[];
+extern GUID stru_499DF4;
+extern GUID stru_499DE4;
+extern GUID stru_499E14;
+extern GUID stru_499E04;
 _DWORD *__cdecl sub_40FEE0(int self, _DWORD *a2)
 {
   _DWORD *v3; // ebx
@@ -34,7 +61,7 @@ _DWORD *__cdecl sub_40FEE0(int self, _DWORD *a2)
   v22[3] = 286568599;
   sub_4229D0(aMpCreatingPeer, v10);
   v3 = (_DWORD *)(self + 24);
-  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(self + 24)) < 0 )
+  if ( CoCreateInstance(stru_499DF4, 0, 1u, stru_499DE4, (LPVOID *)(self + 24)) < 0 )
   {
     sub_4229D0(aCouldnTCreateD, v11);
     v9 = aCouldnTCreateD_0;
@@ -47,7 +74,7 @@ LABEL_27:
   if ( (*(int (__stdcall **)(_DWORD, int, int (__stdcall *)(int, int, int), _DWORD))(*(_DWORD *)*v3 + 12))(
          *v3,
          self,
-         sub_410A90,
+         (int (__stdcall *)(int, int, int))sub_410A90,
          0) < 0 )
   {
     sub_4229D0(aCouldnTInitPee, v13);
@@ -57,7 +84,7 @@ LABEL_27:
   sub_4229D0(aMpInitPeerDone, v13);
   sub_4229D0(aMpCreateDevice, v14);
   v5 = (_DWORD *)(self + 96);
-  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 96)) < 0 )
+  if ( CoCreateInstance(stru_499E14, 0, 1u, stru_499E04, (LPVOID *)(self + 96)) < 0 )
   {
     sub_403A30(a2, 5, aCouldnTCreateD_1);
     return a2;
@@ -83,7 +110,7 @@ LABEL_27:
   memset(v24, 0, sizeof(v24));
   v24[0] = 24;
   v24[1] = 1;
-  v24[2] = WideCharStr;
+  v24[2] = (int)WideCharStr;
   sub_4229D0(aMpSettingPeerI, v18);
   if ( (*(int (__stdcall **)(_DWORD, _DWORD *, _DWORD, _DWORD, unsigned int))(*(_DWORD *)*v3 + 80))(
          *v3,
@@ -99,7 +126,7 @@ LABEL_27:
   {
     sub_428820(String, (LPCCH)(self + 400), -1);
     v7 = wcslen(String);
-    v23[12] = operator new(2 * v7 + 2);
+    v23[12] = (int)operator new(2 * v7 + 2);
     wcscpy((wchar_t *)v23[12], String);
   }
   else

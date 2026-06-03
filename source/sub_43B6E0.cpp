@@ -1,3 +1,5 @@
+extern char aLevelhighscore[];
+
 //----- (0043B6E0) --------------------------------------------------------
 char __cdecl sub_43B6E0(_DWORD *self, int a2, int a3, int a4)
 {

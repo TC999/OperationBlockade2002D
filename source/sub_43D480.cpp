@@ -1,3 +1,6 @@
+extern char aRetrybutton[];
+extern char aAbortbutton[];
+
 //----- (0043D480) --------------------------------------------------------
 const char *__cdecl sub_43D480(int self)
 {

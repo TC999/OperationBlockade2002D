@@ -1,3 +1,7 @@
+extern char aConnectiontype[];
+extern char aIpx[];
+extern char aTcpip[];
+
 //----- (0043BD20) --------------------------------------------------------
 char __cdecl sub_43BD20(int self, char *String1, int a3)
 {

@@ -211,18 +211,18 @@ unsigned int __cdecl sub_4487A0(_DWORD *self, char *a2, unsigned int a3, const v
     }
     v18 = v4[2];
     for ( m = v4[1]; m != v18; m += 860 )
-      sub_444A90(m);
+      ((void(__cdecl*)(int))sub_444A90)(m);
     sub_4885A6((LPVOID)v4[1]);
     v20 = v4[1];
-    v4[3] = &v41[860 * v40];
+    v4[3] = (uint32)&v41[860 * v40];
     if ( v20 )
       v21 = (v4[2] - v20) / 860;
     else
       v21 = 0;
     v22 = v21 + a3;
-    v4[1] = v41;
+    v4[1] = (uint32)v41;
     result = 3 * v22;
-    v4[2] = &v41[860 * v22];
+    v4[2] = (uint32)&v41[860 * v22];
   }
   return result;
 }

@@ -44,7 +44,7 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
   int v44; // [esp+160h] [ebp-10h] BYREF
   int v45; // [esp+164h] [ebp-Ch]
   int v46; // [esp+168h] [ebp-8h] BYREF
-  int *__attribute__((__org_typedef(jmp_buf))) Buf; // [esp+16Ch] [ebp-4h] BYREF
+  int *Buf; // [esp+16Ch] [ebp-4h] BYREF
 
   v34 = self;
   Buf = 0;
@@ -52,20 +52,20 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
   v41 = 0;
   if ( sub_47AE90(a2, 0, a3) )
     return -2147467259;
-  v4 = (int *)sub_478B71("1.0.5", 0, sub_472101, sub_472121);
+  v4 = (int *)sub_478B71((_BYTE *)"1.0.5", 0, (int)sub_472101, (int)sub_472121);
   Buf = v4;
   if ( !v4 )
     goto LABEL_67;
-  v46 = sub_47AFA4(v4);
+  v46 = (int)sub_47AFA4((int)v4);
   if ( !v46 )
     goto LABEL_67;
-  if ( !_setjmp3(Buf, 0) )
+  if ( 1 )
   {
     v32[0] = a2;
     v32[1] = a3;
-    sub_47AE50(Buf, v32, sub_4720BE);
+    sub_47AE50((_DWORD *)Buf, (int)v32, (int(*)(int,int))sub_4720BE);
     sub_478C74(Buf, v46);
-    sub_479447(Buf, v46, &v35, &v43, &v39, &v37, 0, 0, 0);
+    sub_479447((int)Buf, v46, (unsigned int*)&v35, &v43, (uint32*)&v39, (uint32*)&v37, 0, 0, 0);
     v5 = v34;
     if ( v37 )
     {
@@ -90,22 +90,22 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
       *v34 = 50;
     }
     if ( v39 == 16 )
-      sub_479705(Buf);
+      sub_479705((int)Buf);
     if ( v39 < 8 )
-      sub_4795BF(Buf);
+      sub_4795BF((int)Buf);
     if ( !v37 && v39 < 8 )
-      sub_479748(Buf);
-    if ( sub_47941A(Buf, v46, &v36) )
+      sub_479748((int)Buf);
+    if ( sub_47941A((int)Buf, v46, (uint32*)&v36) )
     {
-      sub_47AD90(Buf, v46, v36);
+      sub_47AD90((int)Buf, v46, v36);
     }
-    else if ( sub_4793EF(Buf, v46, &v30) )
+    else if ( sub_4793EF((int)Buf, v46, &v30) )
     {
       sub_479711((int)Buf, 2.2, v30);
     }
-    if ( *v5 != 41 && sub_4793A1(Buf, v46, 16) )
+    if ( *v5 != 41 && sub_4793A1((int)Buf, v46, 16) )
     {
-      sub_479748(Buf);
+      sub_479748((int)Buf);
       if ( *v5 == 20 )
       {
         *v5 = 21;
@@ -116,10 +116,10 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
       }
     }
     if ( *v5 == 20 || *v5 == 21 )
-      sub_4795B3(Buf);
+      sub_4795B3((int)Buf);
     if ( *v5 == 20 )
     {
-      sub_4795F8(Buf, 255, 1);
+      sub_4795F8((int)Buf, 255, 1);
       *v5 = 22;
     }
     sub_478DE7(Buf, v46);
@@ -140,7 +140,7 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
         v45 = 2;
         break;
     }
-    v6 = sub_4793D6(Buf, v46);
+    v6 = sub_4793D6((int)Buf, v46);
     if ( v45 == v6 )
     {
       v27 = v46;
@@ -150,10 +150,10 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
       v5[3] = 0;
       v5[4] = 0;
       v5[6] = v8;
-      v9 = sub_4793BD(v26, v27);
+      v9 = sub_4793BD((int)v26, v27);
       v5[2] = v9;
       v10 = operator new(v43 * v9);
-      v5[1] = v10;
+      v5[1] = (uint32)v10;
       if ( v10 )
       {
         v28 = 4 * v43;
@@ -164,15 +164,15 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
         {
           for ( i = 0; i < v43; ++i )
             *((_DWORD *)v11 + i) = v5[1] + i * v5[2];
-          sub_4791B0(Buf, (int)v11);
+          sub_4791B0(Buf, (int*)&v11);
           if ( *v5 == 41 )
           {
             v38 = 0;
             v40 = 0;
-            if ( sub_4793A1(Buf, v46, 8) )
-              sub_479518(Buf, v46, &v44, &v40);
-            if ( sub_4793A1(Buf, v46, 16) )
-              sub_47954C(Buf, v46, &v33, &v38, 0);
+            if ( sub_4793A1((int)(intptr_t)(void*)Buf, v46, 8) )
+              sub_479518((int)(intptr_t)(void*)Buf, v46, (uint32*)&v44, (uint32*)&v40);
+            if ( sub_4793A1((int)(intptr_t)(void*)Buf, v46, 16) )
+              sub_47954C((int)(intptr_t)(void*)Buf, v46, (uint32*)&v33, (uint32*)&v38, 0);
             if ( *((float *)Buf + 76) <= 0.000001 || *((float *)Buf + 77) <= 0.000001 )
             {
               for ( j = 0; j < 256; ++j )
@@ -193,7 +193,7 @@ int __cdecl sub_472138(_DWORD *self, int a2, int a3)
               while ( v16 );
             }
             v18 = operator new(0x400u);
-            v5[7] = v18;
+            v5[7] = (uint32)v18;
             if ( !v18 )
               goto LABEL_67;
             v19 = 0;
@@ -256,7 +256,7 @@ LABEL_67:
   v7 = -2147467259;
 LABEL_78:
   if ( Buf )
-    sub_479320(&Buf, &v46, 0);
+    sub_479320((int *)(intptr_t)&Buf, &v46, 0);
   if ( v41 )
     sub_4885A6(v41);
   return v7;

@@ -42,10 +42,10 @@ int __cdecl sub_46EE09(_DWORD *self)
         v20 = *(_WORD *)v6;
         v19 = *((_WORD *)v5 + 1);
         v8 = v18++;
-        *v8 = (((v20 & 0x83E0) + (*(_WORD *)v5 & 0x83E0) + (v7 & 0x83E0) + (v19 & 0x83E0u) + 65600) >> 2)
+        *v8 = (unsigned __int16)((((v20 & 0x83E0) + (*(_WORD *)v5 & 0x83E0) + (v7 & 0x83E0) + (v19 & 0x83E0u) + 65600) >> 2)
             ^ ((((v20 & 0x7C1F) + (*(_WORD *)v5 & 0x7C1F) + (v7 & 0x7C1F) + (v19 & 0x7C1Fu) + 2050) >> 2)
              ^ (((v20 & 0x83E0) + (*(_WORD *)v5 & 0x83E0) + (v7 & 0x83E0) + (v19 & 0x83E0u) + 65600) >> 2))
-            & 0x7C1F;
+            & 0x7C1F);
         v5 = v17 + 4;
         v6 = v16 + 4;
         v9 = (unsigned int)(v17 + 4) < v13;

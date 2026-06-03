@@ -50,7 +50,7 @@ char __cdecl sub_4318B0(_DWORD *self)
       v30 = v4;
       v7 = (_DWORD *)self[568];
       v33 = self[330];
-      sub_41D960(v7, &v31, &v28);
+      sub_41D960(v7, (_DWORD *)&v31, (_DWORD *)&v28);
     }
     if ( !self[567] )
     {
@@ -69,7 +69,7 @@ char __cdecl sub_4318B0(_DWORD *self)
         v28 = v11;
         v29 = v12;
         v30 = v13;
-        sub_41D960((_DWORD *)self[569], &v28, &v31);
+        sub_41D960((_DWORD *)self[569], (_DWORD *)&v28, (_DWORD *)&v31);
       }
     }
   }
@@ -90,7 +90,7 @@ char __cdecl sub_4318B0(_DWORD *self)
       v33 = v16;
       v19 = (_DWORD *)self[570];
       v30 = self[330];
-      sub_41D960(v19, &v28, &v31);
+      sub_41D960(v19, (_DWORD *)&v28, (_DWORD *)&v31);
     }
   }
   v20 = self[107];
@@ -99,7 +99,7 @@ char __cdecl sub_4318B0(_DWORD *self)
     v21 = self[356];
     if ( v21 )
     {
-      LOBYTE(v20) = *(_BYTE *)(v21 + 16);
+      SLOBYTE(v20) = *(_BYTE *)(v21 + 16);
       if ( (_BYTE)v20 )
       {
         v22 = self[336];
@@ -113,7 +113,7 @@ char __cdecl sub_4318B0(_DWORD *self)
         v26 = self[330];
         v29 = v25;
         v30 = v26;
-        LOBYTE(v20) = sub_41D960((_DWORD *)v21, &v28, &v31);
+        SLOBYTE(v20) = (char)sub_41D960((_DWORD *)v21, (_DWORD *)&v28, (_DWORD *)&v31);
       }
     }
   }

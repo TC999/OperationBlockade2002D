@@ -68,7 +68,7 @@ LABEL_20:
           }
           else
           {
-            *(_DWORD *)a1 = &v12[a3];
+            *(_DWORD *)a1 = (uint32)&v12[a3];
             *(_DWORD *)(a1 + 4) = v14 - a3;
           }
           *v12 = a3;
@@ -120,7 +120,7 @@ LABEL_19:
   }
   else
   {
-    *(_DWORD *)a1 = &v7[a3];
+    *(_DWORD *)a1 = (uint32)&v7[a3];
     *(_DWORD *)(a1 + 4) = v11 - a3;
   }
   *v7 = a3;

@@ -15,10 +15,10 @@ char __cdecl sub_43A080(_DWORD *self, int a2, int a3)
       if ( v4 < 0 )
         self[100] = 12;
 LABEL_8:
-      v8 = off_4AA5F0[self[100]];
-      v6 = (LPVOID *)sub_450BF0(1, 2.0);
+      v8 = ((const char **)off_4AA5F0)[self[100]];
+      v6 = (LPVOID *)sub_450BF0((_DWORD *)dword_520970, 1, 2.0);
       sub_421110(v6, v8);
-      sub_43A120(self[100]);
+      sub_43A120((int)self, self[100]);
       return sub_428590(self, a2, a3);
     }
     if ( a2 == 13 )

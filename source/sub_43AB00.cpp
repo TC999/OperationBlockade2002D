@@ -1,3 +1,7 @@
+extern char aDoppler[];
+// aShowcrosshair is defined as a macro in common.h
+extern char aGore[];
+
 //----- (0043AB00) --------------------------------------------------------
 int __cdecl sub_43AB00(_DWORD *self)
 {

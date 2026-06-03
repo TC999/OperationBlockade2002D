@@ -125,7 +125,7 @@ LABEL_36:
     v4 = operator new(0x7Cu);
     v17 = 0;
     if ( v4 )
-      v5 = sub_41BB80(v4);
+      v5 = (int)sub_41BB80((_DWORD *)v4);
     else
       v5 = 0;
     dword_520A50 = v5;

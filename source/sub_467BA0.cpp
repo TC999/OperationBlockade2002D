@@ -66,7 +66,7 @@ void __cdecl sub_467BA0(int self, float a2)
           v35[2] = (float)v45;
           v26 = *(__int16 *)(v3 + 17);
           v46 = (double)v25 * 0.0039215689;
-          v27 = sub_417190(v22, *(__int16 *)(v3 + 8), v35, v32);
+          v27 = sub_417190(v22, *(__int16 *)(v3 + 8), (uint32 *)v35, v32);
           sub_415930(*(_DWORD *)(self + 452), v26, v46);
           if ( v27 )
             *(_BYTE *)(self + 436) = 1;
@@ -93,7 +93,7 @@ void __cdecl sub_467BA0(int self, float a2)
             v31 = *(const char **)(*(_DWORD *)(self + 412) + 4);
             v29 = (const char *)(v15 + 3);
             v16 = sub_436A90(*(_DWORD *)(dword_520970 + 224));
-            sub_421190(v16, "%s destroyed a %s", v29, v31);
+            sub_421190(v16, (char *)"%s destroyed a %s", v29, v31);
           }
           sub_411BB0(dword_4F5CC4, *(_DWORD *)(LODWORD(a2) + 4));
         }
@@ -104,11 +104,10 @@ void __cdecl sub_467BA0(int self, float a2)
         v38 = v17;
         v20 = *(_DWORD *)(v3 + 24);
         v39 = v18;
-        LOBYTE(v18) = *(_BYTE *)(v3 + 28);
         v40 = v19;
         v21 = *(_DWORD *)(v3 + 8);
         v41 = v20;
-        v42 = v18;
+        v42 = *(_BYTE *)(v3 + 28);
         v37 = v21;
         if ( v14 )
           v43 = *(_DWORD *)(LODWORD(a2) + 4);
@@ -135,7 +134,7 @@ void __cdecl sub_467BA0(int self, float a2)
           v30 = *(const char **)(*(_DWORD *)(self + 412) + 4);
           v28 = (const char *)(v8 + 3);
           v9 = sub_436A90(*(_DWORD *)(dword_520970 + 224));
-          sub_421190(v9, "%s destroyed a %s", v28, v30);
+          sub_421190(v9, (char *)"%s destroyed a %s", v28, v30);
         }
         sub_411BB0(dword_4F5CC4, *(_DWORD *)(v3 + 29));
       }

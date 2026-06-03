@@ -1,4 +1,6 @@
 //----- (004442A0) --------------------------------------------------------
+extern char aInvalidBoatTyp[];
+
 char __cdecl sub_4442A0(int self)
 {
   int v2; // eax
@@ -105,7 +107,7 @@ char __cdecl sub_4442A0(int self)
         *(_DWORD *)(self + 436) = 6;
         v11 = sub_448BB0(*(int **)(self + 528), *(int **)(self + 528), *(_DWORD **)(self + 524));
         nullsub_8(v11, *(_DWORD *)(self + 528));
-        *(_DWORD *)(self + 528) = v11;
+        *(_DWORD *)(self + 528) = (uint32)(uintptr_t)v11;
         if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
         {
           v12 = sub_45A840(*(_DWORD **)(dword_520970 + 236));
@@ -130,7 +132,7 @@ char __cdecl sub_4442A0(int self)
         *(_DWORD *)(self + 540) = 1077936128;
         v15 = sub_448BB0(*(int **)(self + 1396), *(int **)(self + 1396), *(_DWORD **)(self + 1392));
         nullsub_8(v15, *(_DWORD *)(self + 1396));
-        *(_DWORD *)(self + 1396) = v15;
+        *(_DWORD *)(self + 1396) = (uint32)(uintptr_t)v15;
         v16 = *(_DWORD *)(self + 408);
         v38 = *(float *)(v16 + 880);
         v44 = *(float *)(v16 + 884);
@@ -169,7 +171,7 @@ char __cdecl sub_4442A0(int self)
   }
   *(_BYTE *)(self + 1424) = 1;
   *(_BYTE *)(self + 1425) = 0;
-  Iostream_init::Iostream_init((Iostream_init *)v52);
+  memset(v52, 0, sizeof(v52));
   v18 = *(_DWORD *)(self + 1432);
   v19 = *(_DWORD *)(*(_DWORD *)(self + 408) + 928);
   v53 = 0;
@@ -242,7 +244,7 @@ char __cdecl sub_4442A0(int self)
     v31 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * v23);
     if ( *(_DWORD *)(v31 + 32) == -1 )
     {
-      sub_46B97C(v50, v48, v49);
+      sub_46B97C((int)v50, (int)v48, (int)v49);
       sub_4073F0(
         *(_DWORD **)(self + 412),
         *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * v23) + 28),
@@ -274,6 +276,6 @@ char __cdecl sub_4442A0(int self)
   *(_DWORD *)(self + 1448) = 0;
   v32 = *(_DWORD *)(self + 1452);
   if ( v32 )
-    LOBYTE(v25) = sub_41D840(v32);
+    v25 = sub_41D840(v32);
   return v25;
 }

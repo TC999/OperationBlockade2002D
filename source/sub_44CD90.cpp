@@ -7,7 +7,7 @@ int __cdecl sub_44CD90(_DWORD *self, float a2)
   if ( result )
   {
     if ( *(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 100) == 6 )
-      return sub_44DAD0(*(_DWORD *)(result + 812), a2, 0.0, 0);
+      return (int)(uintptr_t)sub_44DAD0((int*)(uintptr_t)(*(_DWORD *)(result + 812)), &a2, 0.0, 0);
   }
   return result;
 }

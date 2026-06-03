@@ -15,8 +15,8 @@ _UNKNOWN **__cdecl sub_48E300(LPVOID *lpMem)
   }
   else
   {
-    *(_DWORD *)lpMem[1] = *lpMem;
-    *((_DWORD *)*lpMem + 1) = lpMem[1];
+    *(_DWORD *)lpMem[1] = (uint32)*lpMem;
+    *((_DWORD *)*lpMem + 1) = (uint32)lpMem[1];
     return (_UNKNOWN **)HeapFree(hHeap, 0, lpMem);
   }
   return result;

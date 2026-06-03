@@ -5,7 +5,7 @@ int sub_411E40()
 
   result = 0;
   byte_4F5CB4 = 1;
-  Base = 0;
+  *(char **)&Base = 0;
   NumOfElements = 0;
   dword_4F5CB0 = 0;
   return result;

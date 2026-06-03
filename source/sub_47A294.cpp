@@ -108,11 +108,11 @@ int __cdecl sub_47A294(int *a1, int a2, _WORD *a3)
             v59 = *a1;
             while ( 1 )
             {
-              HIBYTE(v39) = *(v37 - 5);
-              LOBYTE(v39) = *(v37 - 4);
+              *((_BYTE*)&(v39)+1) = *(v37 - 5);
+              *(_BYTE*)&(v39) = *(v37 - 4);
               if ( v39 == v31[1]
-                && (HIBYTE(v40) = *(v37 - 3), LOBYTE(v40) = *(v37 - 2), v40 == a3[2])
-                && (HIBYTE(v41) = *(v37 - 1), LOBYTE(v41) = *v37, v41 == a3[3]) )
+                && ((*((_BYTE*)&(v40)+1) = *(v37 - 3), *(_BYTE*)&(v40) = *(v37 - 2), v40 == a3[2]))
+                && ((*((_BYTE*)&(v41)+1) = *(v37 - 1), *(_BYTE*)&(v41) = *v37, v41 == a3[3])) )
               {
                 *v38 = 0;
                 v42 = v38 - 1;
@@ -167,7 +167,7 @@ int __cdecl sub_47A294(int *a1, int a2, _WORD *a3)
           {
             v51 = (_BYTE *)(result + a2 - 1);
             v50 = 17 * v6;
-            LOBYTE(v10) = 4 - 4 * ((result - 1) & 1);
+            *(_BYTE*)&(v10) = 4 - 4 * ((result - 1) & 1);
             v11 = (unsigned __int8 *)(a2 + ((unsigned int)(result - 1) >> 1));
             v54 = 4 - 4 * (((_BYTE)result - 1) & 1);
             if ( result )
@@ -291,8 +291,8 @@ int __cdecl sub_47A294(int *a1, int a2, _WORD *a3)
           v57 = result;
           do
           {
-            HIBYTE(v26) = *(v24 - 1);
-            LOBYTE(v26) = *v24;
+            *((_BYTE*)&(v26)+1) = *(v24 - 1);
+            *(_BYTE*)&(v26) = *v24;
             if ( v26 == v49 )
             {
               *v25 = 0;

@@ -1,4 +1,6 @@
 //----- (0040FC90) --------------------------------------------------------
+extern char aStopsearchfori[];
+extern char aStopsearchfori_0[];
 int __cdecl sub_40FC90(struct _RTL_CRITICAL_SECTION *self)
 {
   PRTL_CRITICAL_SECTION_DEBUG DebugInfo; // eax
@@ -46,5 +48,5 @@ int __cdecl sub_40FC90(struct _RTL_CRITICAL_SECTION *self)
   }
   self[39].SpinCount = 0;
   LeaveCriticalSection(v3);
-  return sub_4229D0(aStopsearchfori_0, v10);
+  return (int)sub_4229D0(aStopsearchfori_0, v10);
 }

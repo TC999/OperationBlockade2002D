@@ -31,8 +31,8 @@ char __cdecl sub_477BE1(_DWORD *a1)
     v16 = v1[1];
   }
   v17 = v16 - 1;
-  LOBYTE(v3) = 0;
-  HIBYTE(v3) = *v2;
+  ((_BYTE*)&(v3))[0] = 0;
+  ((_BYTE*)&(v3))[1] = *v2;
   v4 = v2 + 1;
   v13 = v3;
   if ( v17 )

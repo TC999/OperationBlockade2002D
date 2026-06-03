@@ -41,11 +41,7 @@ int __cdecl sub_47C69E(_DWORD *a1)
   }
   if ( v3 > 0 )
   {
-    result = ((int (__cdecl *)(_DWORD *, int, int, _DWORD))std::_Unchecked<std::_Vector_val<std::_Simple_types<void *>>>)(
-               a1,
-               v3,
-               v4,
-               v1[18]);
+    result = sub_47EDFC((int)a1);
     if ( result < v4 )
     {
       result /= v3;
@@ -66,7 +62,7 @@ int __cdecl sub_47C69E(_DWORD *a1)
         if ( (int)((v9 - 1) / v10 + 1) > v14 )
         {
           *(_DWORD *)(i + 16) = v14 * v10;
-          sub_47EDFC(a1);
+          sub_47EDFC((int)a1);
           *(_BYTE *)(i + 34) = 1;
         }
         else
@@ -90,7 +86,7 @@ int __cdecl sub_47C69E(_DWORD *a1)
         if ( (int)((v12 - 1) / v13 + 1) > v14 )
         {
           *(_DWORD *)(j + 16) = v14 * v13;
-          sub_47EDFC(a1);
+          sub_47EDFC((int)a1);
           *(_BYTE *)(j + 34) = 1;
         }
         else

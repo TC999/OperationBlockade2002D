@@ -10,9 +10,9 @@ int __cdecl sub_4791FD(int a1, int a2, int a3)
 
   v3 = 0;
   if ( a2 )
-    sub_47AF93(a1, a2);
+    sub_47AF93(a1, (void *)a2);
   if ( a3 )
-    sub_47AF93(a1, a3);
+    sub_47AF93(a1, (void *)a3);
   sub_47D953(a1, *(LPVOID *)(a1 + 156));
   sub_47D953(a1, *(LPVOID *)(a1 + 220));
   sub_47D953(a1, *(LPVOID *)(a1 + 216));
@@ -20,7 +20,7 @@ int __cdecl sub_4791FD(int a1, int a2, int a3)
   sub_47D953(a1, *(LPVOID *)(a1 + 376));
   sub_47D953(a1, *(LPVOID *)(a1 + 312));
   if ( (*(_BYTE *)(a1 + 93) & 0x10) != 0 )
-    sub_47AF2E(a1, *(_DWORD *)(a1 + 260));
+    sub_47AF2E(a1, (LPVOID)*(_DWORD *)(a1 + 260));
   if ( (*(_BYTE *)(a1 + 93) & 0x20) != 0 )
     sub_47D953(a1, *(LPVOID *)(a1 + 348));
   if ( *(_DWORD *)(a1 + 324) )
@@ -34,7 +34,7 @@ int __cdecl sub_4791FD(int a1, int a2, int a3)
     }
     sub_47D953(a1, *(LPVOID *)(a1 + 324));
   }
-  sub_47D414(a1 + 100);
+  sub_47D414((_DWORD *)(a1 + 100));
   result = *(_DWORD *)(a1 + 72);
   v6 = *(_DWORD *)(a1 + 64);
   qmemcpy(v8, (const void *)a1, sizeof(v8));

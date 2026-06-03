@@ -1,3 +1,5 @@
+extern char aSoundsScorescr[];
+
 //----- (0043DC90) --------------------------------------------------------
 char __cdecl sub_43DC90(_DWORD *self)
 {
@@ -15,12 +17,12 @@ char __cdecl sub_43DC90(_DWORD *self)
     *((_BYTE *)v2 + 44) = 0;
   else
     *((_BYTE *)v2 + 44) = 1;
-  v3 = operator new(0x15Cu);
+  v3 = (_DWORD *)operator new(0x15Cu);
   if ( v3 )
     v4 = sub_41C6A0(v3);
   else
     v4 = 0;
-  self[11] = v4;
+  self[11] = *(uint32*)(v4);
   sub_41C7A0((int)v4, 1);
   sub_41C760(self[11], aSoundsScorescr);
   *(_BYTE *)self[11] = 0;

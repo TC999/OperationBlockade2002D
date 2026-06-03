@@ -149,8 +149,8 @@ int __cdecl sub_4847CB(int *a1, int *a2, int a3)
           v70 = -3;
           goto LABEL_7;
         }
-        sub_486515(&v74, &v75, &v76, &v77);
-        v19 = sub_485A50(v74, v75, v76, v77, v5);
+        sub_486515((uint32*)&v74, (uint32*)&v75, (uint32*)&v76, (uint32*)&v77);
+        v19 = sub_485A50(v74, v75, v76, v77, (int)v5);
         a1[1] = v19;
         if ( !v19 )
           goto LABEL_120;
@@ -187,7 +187,7 @@ LABEL_8:
 LABEL_9:
             *v5 = (int)v7;
             a1[13] = v11;
-            return sub_486544(a1, v5, v70);
+            return sub_486544((uint32*)a1, (_DWORD*)v5, v70);
           }
           break;
         }
@@ -231,7 +231,7 @@ LABEL_5:
                 (v80 = v8) == 0) )
           {
             a1[13] = (int)v81;
-            v27 = sub_486544(a1, v5, a3);
+            v27 = sub_486544((uint32*)a1, (_DWORD*)v5, a3);
             v28 = a1[12];
             v86 = v27;
             v81 = (char *)a1[13];
@@ -351,7 +351,7 @@ LABEL_71:
             i += 8;
           }
           v41 = v83;
-          v42 = dword_49CF58[a1[2]];
+          v42 = ((int*)&dword_49CF58)[a1[2]];
           v43 = a1[3];
           v83 >>= 3;
           *(_DWORD *)(v43 + 4 * v42) = v41 & 7;
@@ -359,11 +359,11 @@ LABEL_71:
           v84 -= 3;
         }
         while ( (unsigned int)a1[2] < 0x13 )
-          *(_DWORD *)(a1[3] + 4 * dword_49CF58[a1[2]++]) = 0;
+          *(_DWORD *)(a1[3] + 4 * ((int*)&dword_49CF58)[a1[2]++]) = 0;
         v68 = a1[9];
         v67 = a1[3];
         a1[4] = 7;
-        v80 = sub_486393(v67, a1 + 4, a1 + 5, v68, v5);
+        v80 = sub_486393((uint32*)v67, (unsigned int*)(a1 + 4), (uint32*)(a1 + 5), v68, (int)v5);
         if ( v80 )
         {
           ((void (__cdecl *)(int, int))v5[9])(v5[10], a1[3]);
@@ -391,7 +391,7 @@ LABEL_97:
             ++v7;
             v84 += 8;
           }
-          v46 = a1[5] + 8 * (v83 & dword_4B2710[v44]);
+          v46 = a1[5] + 8 * (v83 & ((int*)&dword_4B2710)[v44]);
           v47 = *(unsigned __int8 *)(v46 + 1);
           v48 = *(_DWORD *)(v46 + 4);
           v80 = v47;
@@ -415,7 +415,7 @@ LABEL_97:
               v84 += 8;
             }
             v83 >>= v80;
-            v79 += v83 & dword_4B2710[v49];
+            v79 += v83 & ((int*)&dword_4B2710)[v49];
             v83 >>= v49;
             v84 -= v80 + v49;
             v51 = a1[2];
@@ -433,7 +433,7 @@ LABEL_115:
               v63 = v81;
               *v5 = (int)v7;
               a1[13] = (int)v63;
-              return sub_486544(a1, v5, -3);
+              return sub_486544((uint32*)a1, (_DWORD*)v5, -3);
             }
             if ( v73 == 16 )
             {
@@ -466,7 +466,7 @@ LABEL_115:
         v66 = a1[3];
         v78 = 9;
         v79 = 6;
-        v54 = sub_486412((v53 & 0x1F) + 257, ((v53 >> 5) & 0x1F) + 1, v66, &v78, &v79, &v71, &v72, v69, v5);
+        v54 = sub_486412((v53 & 0x1F) + 257, ((v53 >> 5) & 0x1F) + 1, (uint32*)v66, (unsigned int*)&v78, (unsigned int*)&v79, (uint32*)&v71, (uint32*)&v72, v69, (int)v5);
         v65 = a1[3];
         v80 = v54;
         ((void (__cdecl *)(int, int))v5[9])(v5[10], v65);
@@ -475,7 +475,7 @@ LABEL_115:
           v61 = v80 == -3;
           goto LABEL_117;
         }
-        v55 = sub_485A50(v78, v79, v71, v72, v5);
+        v55 = sub_485A50(v78, v79, v71, v72, (int)v5);
         if ( !v55 )
         {
 LABEL_120:
@@ -492,11 +492,11 @@ LABEL_101:
         v56 = v81;
         *v5 = (int)v7;
         a1[13] = (int)v56;
-        v57 = sub_485A84(a1, v5, a3);
+        v57 = sub_485A84((uint32*)a1, (_DWORD*)v5, a3);
         if ( v57 != 1 )
-          return sub_486544(a1, v5, v57);
+          return sub_486544((uint32*)a1, (_DWORD*)v5, v57);
         a3 = 0;
-        sub_485FE8(a1[1], v5);
+        sub_485FE8(a1[1], (int)v5);
         v7 = (unsigned __int8 *)*v5;
         v82 = v5[1];
         v83 = a1[8];
@@ -519,7 +519,7 @@ LABEL_101:
         *a1 = 7;
 LABEL_122:
         a1[13] = (int)v81;
-        v57 = sub_486544(a1, v5, a3);
+        v57 = sub_486544((uint32*)a1, (_DWORD*)v5, a3);
         v61 = a1[12] == a1[13];
         v81 = (char *)a1[13];
         if ( v61 )
@@ -536,7 +536,7 @@ LABEL_126:
         *v5 = (int)v7;
         v5[2] += (int)v64;
         a1[13] = (int)v81;
-        return sub_486544(a1, v5, v57);
+        return sub_486544((uint32*)a1, (_DWORD*)v5, v57);
       case 4:
         goto LABEL_71;
       case 5:

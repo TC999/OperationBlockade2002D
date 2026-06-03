@@ -51,19 +51,19 @@ int __cdecl sub_46CB5B(
 
   if ( !a1 )
   {
-    sub_46D8FD(0, "pDevice pointer is invalid", v32);
+    sub_46D8FD(0, (char *)"pDevice pointer is invalid", v32);
     return -2005530516;
   }
   if ( a7 == -1 )
     a7 = 0;
   if ( a7 != (a7 & 3) || a10 == 2 && (a7 & 3) != 0 )
   {
-    sub_46D8FD(0, "Usage parameter is invalid", a2);
+    sub_46D8FD(0, (char *)"Usage parameter is invalid", a2);
     return -2005530516;
   }
   if ( a9 > 2 )
   {
-    sub_46D8FD(0, "Pool parameter is invalid", a2);
+    sub_46D8FD(0, (char *)"Pool parameter is invalid", a2);
     return -2005530516;
   }
   (*(void (__stdcall **)(int, unsigned int *, char))(*(_DWORD *)a1 + 24))(a1, &v48, a2);

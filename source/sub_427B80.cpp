@@ -26,7 +26,7 @@ int sub_427B80()
   v3[2] = 1058055127;
   v3[3] = 1065353216;
   v1[2] = -1063256064;
-  sub_46B970(&v3[16], v1);
+  sub_46B970((int)&v3[16], (int)v1);
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD *))(**(_DWORD **)ArgList + 176))(*(_DWORD *)ArgList, 0, v3);
   return (*(int (__stdcall **)(_DWORD, _DWORD, int))(**(_DWORD **)ArgList + 184))(*(_DWORD *)ArgList, 0, 1);
 }

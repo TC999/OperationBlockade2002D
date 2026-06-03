@@ -1,4 +1,13 @@
 //----- (00426D40) --------------------------------------------------------
+extern char aCleanup[];
+extern char aGGameShutdownO[];
+extern char aSpheredestroyW[];
+extern char aSpritedestroyW[];
+extern char aDeleteInputlay[];
+extern char aCleanupsoundWo[];
+extern char aDeviceReleaseW[];
+extern char aD3dReleaseWork[];
+void __cdecl sub_40BFD0(_DWORD *self);
 int sub_426D40()
 {
   void *v0; // esi
@@ -31,5 +40,6 @@ int sub_426D40()
   if ( dword_520A14 )
     (*(void (__stdcall **)(int))(*(_DWORD *)dword_520A14 + 8))(dword_520A14);
   sub_4229D0(aD3dReleaseWork);
-  return sub_4885A6((LPVOID)dword_520A50);
+  sub_4885A6((LPVOID)dword_520A50);
+  return 0;
 }

@@ -42,8 +42,8 @@ char __cdecl sub_477FCC(_DWORD *a1)
     v28 = v1[1];
   }
   v29 = v28 - 1;
-  LOBYTE(v3) = 0;
-  HIBYTE(v3) = *v2;
+  ((_BYTE*)&(v3))[0] = 0;
+  ((_BYTE*)&(v3))[1] = *v2;
   v4 = v2 + 1;
   v25 = v3;
   if ( v29 )
@@ -89,7 +89,7 @@ LABEL_7:
     v19 = v10;
     if ( !*v10 )
     {
-      *v10 = sub_47CD7F(a1);
+      *v10 = sub_47CD7F((int)a1);
       v10 = v19;
     }
     v16 = *v10;
@@ -106,8 +106,8 @@ LABEL_7:
           v30 = v1[1];
         }
         --v30;
-        LOBYTE(v11) = 0;
-        HIBYTE(v11) = *v5++;
+        ((_BYTE*)&(v11))[0] = 0;
+        ((_BYTE*)&(v11))[1] = *v5++;
         v22 = v11;
         if ( !v30 )
         {

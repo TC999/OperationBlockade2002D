@@ -13,7 +13,7 @@ double __cdecl sub_4886ED(
   {
     if ( (a2 & 0xFFFFF) != 0 || a5 )
     {
-      _convertTOStoQNaN();
+      _convertTOStoQNaN(0);
       goto LABEL_16;
     }
 LABEL_15:
@@ -22,11 +22,11 @@ LABEL_16:
     if ( dword_522320 )
       return result;
 LABEL_17:
-    _startOneArgErrorHandling(aAsin, 14);
+    _startOneArgErrorHandling((int)aAsin, 14, 0);
     return result;
   }
   if ( a3 != 639 )
-    _load_CW();
+    _load_CW(0);
   if ( a2 < 0x3FF00000 )
   {
     result = atan2(result, sqrt((result + 1.0) * (1.0 - result)));

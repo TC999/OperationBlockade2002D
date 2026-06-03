@@ -1,4 +1,6 @@
 //----- (00412140) --------------------------------------------------------
+static const char asc_4A1DC4[] = "*.*";
+
 int __stdcall sub_412140(const char *a1, const char *a2)
 {
   void *v2; // ebp
@@ -12,7 +14,7 @@ int __stdcall sub_412140(const char *a1, const char *a2)
   if ( !FileName[0] || FileName[strlen(FileName) - 1] != 92 )
     strcat(FileName, asc_4A1DC4);
   strcat(FileName, a2);
-  v2 = (void *)_findfirst(FileName, (int)v8);
+  v2 = (void *)_findfirst(FileName, (struct _finddata64i32_t *)v8);
   if ( v2 != (void *)-1 )
   {
     do
@@ -23,16 +25,16 @@ int __stdcall sub_412140(const char *a1, const char *a2)
       if ( (int)++NumOfElements > dword_4F5CB0 )
       {
         dword_4F5CB0 += 8;
-        v4 = (char *)sub_488DD7(Base, 4 * dword_4F5CB0);
+        v4 = (char *)sub_488DD7(*(void **)Base, 4 * dword_4F5CB0);
         if ( v4 )
         {
-          Base = v4;
+          *(char **)Base = v4;
           memset(&v4[4 * NumOfElements], 0, 4 * (dword_4F5CB0 - NumOfElements));
         }
       }
-      *((_DWORD *)Base + NumOfElements - 1) = v3;
+      *(_DWORD *)(*(char **)Base + 4 * (NumOfElements - 1)) = (int)v3;
     }
-    while ( !_findnext(v2, (int)v8) );
+    while ( !_findnext((intptr_t)v2, (struct _finddata64i32_t *)v8) );
   }
   return _findclose((intptr_t)v2);
 }

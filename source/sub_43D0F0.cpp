@@ -1,3 +1,7 @@
+extern char aLine1[];
+extern char aAreYouSureYouW[];
+extern char aLine2[];
+
 //----- (0043D0F0) --------------------------------------------------------
 const char *__cdecl sub_43D0F0(int self)
 {
@@ -10,6 +14,6 @@ const char *__cdecl sub_43D0F0(int self)
     sub_421110(*((LPVOID **)v2 + 28), aAreYouSureYouW);
   result = sub_424350((_DWORD *)self, aLine2);
   if ( result )
-    return (const char *)sub_421190(*((_DWORD *)result + 28), "saved game '%s'?", byte_521580);
+    return (const char *)sub_421190(*((_DWORD *)result + 28), "saved game '%s'?", &byte_521580);
   return result;
 }

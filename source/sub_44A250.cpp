@@ -42,7 +42,7 @@ float *__cdecl sub_44A250(int a1, float *a2, float *a3, float *a4, float *a5, fl
   v18 = v11 - v9;
   v19 = v23 - v26;
   *(float *)&v29 = v19 * v19 + v18 * v18;
-  sub_46B970(&v18, &v18);
+  sub_46B970((int)&v18, (int)&v18);
   if ( a6 == 0.0 )
     v12 = 0.0;
   else

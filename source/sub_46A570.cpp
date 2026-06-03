@@ -199,13 +199,13 @@ int __cdecl sub_46A570(_DWORD *self, char *a2, unsigned int a3, const void *a4)
       while ( v17 != v15 );
     }
     sub_4885A6((LPVOID)v4[1]);
-    v4[3] = &v38[280 * v39];
+    v4[3] = (uint32)(uintptr_t)&v38[280 * v39];
     v18 = v4[1];
     if ( v18 )
       v19 = (v4[2] - v18) / 280;
     else
       v19 = 0;
-    v4[1] = v38;
+    v4[1] = (uint32)(uintptr_t)v38;
     result = (int)&v38[280 * v19 + 280 * a3];
     v4[2] = result;
   }

@@ -22,17 +22,17 @@ int __stdcall sub_46C967(float *a1, unsigned int a2, unsigned int a3, float *a4,
   sub_46C888(&v14, a3);
   if ( !a1 )
   {
-    sub_46D8FD(0, "D3DXComputeBoundingSphere: NULL input vertex array\n", v13);
+    sub_46D8FD(0, (char *)"D3DXComputeBoundingSphere: NULL input vertex array\n", v13);
     return -2005530516;
   }
   if ( !a4 )
   {
-    sub_46D8FD(0, "D3DXComputeBoundingSphere: NULL center output parameter\n", v13);
+    sub_46D8FD(0, (char *)"D3DXComputeBoundingSphere: NULL center output parameter\n", v13);
     return -2005530516;
   }
   if ( !a5 )
   {
-    sub_46D8FD(0, "D3DXComputeBoundingSphere: NULL radius output paramter\n", v13);
+    sub_46D8FD(0, (char *)"D3DXComputeBoundingSphere: NULL radius output paramter\n", v13);
     return -2005530516;
   }
   v17 = 0.0;

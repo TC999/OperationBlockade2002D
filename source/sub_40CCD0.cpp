@@ -5,8 +5,6 @@ char __cdecl sub_40CCD0(float *a1, float a2, float *a3, float *a4, float *a5, fl
   double v9; // st6
   double v10; // st5
   double v11; // st7
-  unsigned __int8 v13; // c0
-  unsigned __int8 v14; // c3
   double v15; // st7
   long double v16; // st6
   double v17; // st6
@@ -18,7 +16,6 @@ char __cdecl sub_40CCD0(float *a1, float a2, float *a3, float *a4, float *a5, fl
   double v23; // st7
   double v24; // st6
   double v26; // st7
-  char v27; // c0
   double v28; // st7
   double v29; // st6
   double v30; // st7
@@ -76,12 +73,12 @@ char __cdecl sub_40CCD0(float *a1, float a2, float *a3, float *a4, float *a5, fl
   v39 = fabs(v36 * v37 - v38 * v38);
   *(float *)&v63 = *(float *)&v61 * v38 - *(float *)&v65 * v36;
   v11 = *(float *)&v65 * v38 - *(float *)&v61 * v37;
-  if ( !(v13 | v14) )
+  if ( v39 > 0.0 )
   {
     if ( *(float *)&v63 >= 0.0 )
     {
       v26 = *(float *)&v61;
-      if ( v27 )
+      if ( v11 < 0.0 )
       {
         v28 = v26 + v38;
         v29 = *(float *)&v65 + v37;

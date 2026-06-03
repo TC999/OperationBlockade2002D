@@ -36,7 +36,7 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
     {
       case 1u:
         v4 = *(_DWORD *)(a1 + 184);
-        v13 = a2;
+        v13 = (_BYTE*)a2;
         v14 = (unsigned __int8 *)(*(_DWORD *)(a1 + 220) + 1);
         v24 = 128;
         v15 = 7;
@@ -45,10 +45,10 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
           v20 = *(_DWORD *)(a1 + 184);
           do
           {
-            LOBYTE(v4) = a3;
+            BYTEn(v4, 0) = a3;
             if ( (a3 & v24) != 0 )
             {
-              LOBYTE(v4) = ((*v14 >> v15) & 1) << v15;
+              BYTEn(v4, 0) = ((*v14 >> v15) & 1) << v15;
               *v13 = v4 | *v13 & (32639 >> (7 - v15));
             }
             if ( v15 )
@@ -72,7 +72,7 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
         break;
       case 2u:
         v4 = *(_DWORD *)(a1 + 184);
-        v10 = a2;
+        v10 = (_BYTE*)a2;
         v11 = (unsigned __int8 *)(*(_DWORD *)(a1 + 220) + 1);
         v23 = 128;
         v12 = 6;
@@ -81,10 +81,10 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
           v19 = *(_DWORD *)(a1 + 184);
           do
           {
-            LOBYTE(v4) = a3;
+            BYTEn(v4, 0) = a3;
             if ( (a3 & v23) != 0 )
             {
-              LOBYTE(v4) = ((*v11 >> v12) & 3) << v12;
+              BYTEn(v4, 0) = ((*v11 >> v12) & 3) << v12;
               *v10 = v4 | *v10 & (16191 >> (6 - v12));
             }
             if ( v12 )
@@ -108,7 +108,7 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
         break;
       case 4u:
         v4 = *(_DWORD *)(a1 + 184);
-        v7 = a2;
+        v7 = (_BYTE*)a2;
         v8 = (unsigned __int8 *)(*(_DWORD *)(a1 + 220) + 1);
         v22 = 128;
         v9 = 4;
@@ -117,10 +117,10 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
           v18 = *(_DWORD *)(a1 + 184);
           do
           {
-            LOBYTE(v4) = a3;
+            BYTEn(v4, 0) = a3;
             if ( (a3 & v22) != 0 )
             {
-              LOBYTE(v4) = ((*v8 >> v9) & 0xF) << v9;
+              BYTEn(v4, 0) = ((*v8 >> v9) & 0xF) << v9;
               *v7 = v4 | *v7 & (3855 >> (4 - v9));
             }
             if ( v9 )
@@ -153,7 +153,7 @@ char __cdecl sub_47DAC5(int a1, char *a2, int a3)
           v17 = *(_DWORD *)(a1 + 184);
           do
           {
-            LOBYTE(v4) = a3;
+            BYTEn(v4, 0) = a3;
             if ( ((unsigned __int8)a3 & v25) != 0 )
             {
               v4 = v3 >> 3;

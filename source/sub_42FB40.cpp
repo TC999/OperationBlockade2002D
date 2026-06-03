@@ -16,7 +16,7 @@ int __cdecl sub_42FB40(_DWORD *self, int a2, int a3, float a4, int a5)
     if ( *(_BYTE *)(v9 + 16) )
     {
       if ( *(_BYTE *)(LODWORD(a4) + 8) != *(_BYTE *)(*(_DWORD *)(v9 + 428) + 300) )
-        result = sub_430BC0(a2, a3, a4, a5);
+        result = sub_430BC0((int)self, (int*)(intptr_t)(a2), (int*)(intptr_t)a3, SLODWORD(a4), (int*)(intptr_t)a5);
       if ( result )
         break;
     }

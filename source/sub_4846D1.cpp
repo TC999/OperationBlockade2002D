@@ -20,8 +20,8 @@ int (__cdecl *__cdecl sub_4846D1(_DWORD *a1, int a2, _DWORD *a3))(_DWORD, _DWORD
   if ( result )
   {
     result = (int (__cdecl *)(_DWORD, _DWORD, _DWORD))result(0, 0, 0);
-    a1[15] = result;
-    *(_DWORD *)(a2 + 48) = result;
+    a1[15] = (uint32)(size_t)result;
+    *(_DWORD *)(a2 + 48) = (uint32)(size_t)result;
   }
   return result;
 }

@@ -25,7 +25,7 @@ int __cdecl sub_45EE50(int self, int a2)
         break;
       v6 = *(_DWORD *)(*(_DWORD *)(v5 + 8 * i) + 652);
       v7 = *(_DWORD *)(self + 2580);
-      LOBYTE(v7) = i == v7;
+      v7 = (i == v7) ? 1 : 0;
       (*(void (__cdecl **)(int, int))(*(_DWORD *)v6 + 24))(v6, v7);
       ++i;
       *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 2568) + 8 * i - 8) + 652) + 32) = 0;

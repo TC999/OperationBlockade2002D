@@ -10,7 +10,7 @@ int (__cdecl **__cdecl sub_4819E1(int a1, char a2))(int a1, int a2)
 
   result = (int (__cdecl **)(int, int))(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 28);
   v3 = result;
-  *(_DWORD *)(a1 + 392) = result;
+  *(_DWORD *)(a1 + 392) = (uint32)(size_t)result;
   *result = sub_481939;
   result[2] = 0;
   result[3] = 0;

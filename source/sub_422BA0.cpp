@@ -1,5 +1,5 @@
 //----- (00422BA0) --------------------------------------------------------
-INT __cdecl sub_422BA0(CHAR *lpAppName, LPCSTR lpKeyName, INT nDefault)
+int __cdecl sub_422BA0(char *lpAppName, char *lpKeyName, int nDefault)
 {
   INT v3; // esi
   INT result; // eax
@@ -9,7 +9,7 @@ INT __cdecl sub_422BA0(CHAR *lpAppName, LPCSTR lpKeyName, INT nDefault)
 
   if ( dword_4A3F58 )
   {
-    if ( (unsigned __int8)sub_422C40(&phkResult, (int)&lpAppName, 0) )
+    if ( (unsigned __int8)sub_422C40((const char *)&phkResult, (const char **)&lpAppName, 0) )
     {
       cbData = 4;
       RegQueryValueExA((HKEY)lpAppName, lpKeyName, 0, &Type, Data, &cbData);

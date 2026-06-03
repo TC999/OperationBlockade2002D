@@ -66,7 +66,7 @@ int __cdecl sub_486544(_DWORD *a1, _DWORD *a2, int a3)
     v14 = (char *)a1[10];
     v29 = v14;
     if ( (char *)a1[13] == v13 )
-      a1[13] = v14;
+      a1[13] = (uint32)v14;
     v15 = a2[4];
     v16 = a1[13] - (_DWORD)v14;
     v26 = v16;
@@ -95,7 +95,7 @@ int __cdecl sub_486544(_DWORD *a1, _DWORD *a2, int a3)
     v28 = &v29[v26];
     qmemcpy(v21, &v14[4 * v20], v19 & 3);
   }
-  a2[3] = v24;
-  a1[12] = v28;
+  a2[3] = (uint32)v24;
+  a1[12] = (uint32)v28;
   return a3;
 }

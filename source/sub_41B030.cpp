@@ -1,4 +1,9 @@
 //----- (0041B030) --------------------------------------------------------
+extern char aRef[];
+extern char aModeDDXDDBits[];
+extern int __cdecl CompareFunction(const void *, const void *);
+int sub_427EA0(int, int, int);
+int __cdecl sub_41B970(int a1, int a2, int a3, _DWORD *a4);
 int sub_41B030()
 {
   int v0; // ecx
@@ -67,8 +72,8 @@ int sub_41B030()
   v44 = 0;
   v33 = 0;
   v0 = *(_DWORD *)dword_520A14;
-  v46[0] = &off_4A2AEC;
-  v46[1] = aRef;
+  v46[0] = (_DWORD)(unsigned int)&off_4A2AEC;
+  v46[1] = (_DWORD)(unsigned int)aRef;
   v47[0] = 1;
   v47[1] = 2;
   if ( !(*(int (__stdcall **)(int))(v0 + 16))(dword_520A14) )
@@ -227,7 +232,7 @@ LABEL_47:
           if ( v54[v15] )
           {
 LABEL_44:
-            if ( dword_4A2988 && !sub_41B970(v33, *v13, v16, &v56[4 * v15 + 76]) )
+            if ( dword_4A2988 && !sub_41B970(v33, *v13, v16, (_DWORD *)&v56[4 * v15 + 76]) )
               v54[v15] = 0;
             goto LABEL_47;
           }
@@ -276,7 +281,7 @@ LABEL_48:
       v24 = 0;
       if ( v23 )
       {
-        v25 = v13 + 59;
+        v25 = (int *)(v13 + 59);
         do
         {
           if ( *(v25 - 2) == 640 && *(v25 - 1) == 480 )
@@ -327,8 +332,8 @@ LABEL_81:
   }
   dword_5200C8 = v28;
   dword_4F5D18 = 1;
-  dword_4FA0A8[4323 * v28] = v30;
-  if ( dword_4F6160[4323 * v28 + 810 * v30] == 2 )
+  ((int*)&dword_4FA0A8)[4323 * v28] = v30;
+  if ( ((int*)&dword_4F6160)[4323 * v28 + 810 * v30] == 2 )
   {
     if ( !v45 )
     {

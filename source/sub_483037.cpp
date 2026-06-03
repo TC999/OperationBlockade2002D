@@ -106,7 +106,7 @@ int __cdecl sub_483037(int a1, int a2, int a3, int a4)
         *(v6 - 3) = v16 + 1;
       }
       sub_482CFF(a1, v7);
-      sub_482CFF(a1, v6 - 3);
+      sub_482CFF(a1, (int*)(v6 - 3));
       v19 += 2;
       result = a3 + 1;
       v6 += 8;

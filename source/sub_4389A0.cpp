@@ -11,7 +11,7 @@ int __cdecl sub_4389A0(_DWORD *self)
     result = sub_4286C0(self, self[102]);
     v3 = (int (__cdecl ***)(_DWORD, int))self[102];
     if ( v3 )
-      result = (**v3)(v3, 1);
+      result = (**v3)((_DWORD)v3, 1);
     self[102] = 0;
   }
   v4 = (_DWORD *)self[101];

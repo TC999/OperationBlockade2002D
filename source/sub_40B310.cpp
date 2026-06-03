@@ -9,9 +9,11 @@ char __cdecl sub_40B310(const char *self, char *ArgList, _DWORD *a3, const char 
   char v10; // al
   char v11; // al
   const char *v12; // edi
+  char ret; // al
 
-  v5 = sub_40B6E0(ArgList, 1);
+  v5 = sub_40B6E0((int)self, ArgList, 1);
   v6 = (const char *)v5;
+  ret = 0;
   *a3 = 0;
   *a4 = 0;
   if ( v5 )
@@ -26,8 +28,8 @@ char __cdecl sub_40B310(const char *self, char *ArgList, _DWORD *a3, const char 
     }
     v9 = self + 16;
     sub_40A120(v6[i] != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, self + 16);
-    LOBYTE(v5) = v6[i];
-    if ( (_BYTE)v5 )
+    ret = v6[i];
+    if ( ret )
     {
       *a3 = sub_48A1BB((char *)&v6[i]);
       while ( 1 )
@@ -38,8 +40,8 @@ char __cdecl sub_40B310(const char *self, char *ArgList, _DWORD *a3, const char 
         ++i;
       }
       sub_40A120(v6[i] != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, v9);
-      LOBYTE(v5) = v6[i];
-      if ( (_BYTE)v5 )
+      ret = v6[i];
+      if ( ret )
       {
         while ( 1 )
         {
@@ -50,11 +52,11 @@ char __cdecl sub_40B310(const char *self, char *ArgList, _DWORD *a3, const char 
         }
         v12 = &v6[i];
         sub_40A120(*v12 != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, v9);
-        LOBYTE(v5) = *v12;
-        if ( *v12 )
+        ret = *v12;
+        if ( ret )
           *a4 = v12;
       }
     }
   }
-  return v5;
+  return ret;
 }

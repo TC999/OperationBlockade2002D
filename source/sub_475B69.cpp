@@ -11,7 +11,7 @@ int __cdecl sub_475B69(int self, int a2)
   int v11; // [esp+2Ch] [ebp+8h]
 
   sub_4733C5((float *)self, (float *)a2, 0, 1);
-  *(_DWORD *)self = &off_49A818;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_49A818;
   *(_DWORD *)(self + 4248) = 0;
   if ( *(_DWORD *)(a2 + 24) == 1 )
   {
@@ -70,7 +70,7 @@ LABEL_13:
     {
       v7 = 0;
     }
-    *v5 = v7;
+    *v5 = (uint32)(uintptr_t)v7;
     if ( !v7 )
       *(_DWORD *)(self + 4244) = 0;
     ++v5;

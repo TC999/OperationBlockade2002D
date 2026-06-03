@@ -33,7 +33,7 @@ int __cdecl sub_4213B0(int self)
     }
   }
 LABEL_8:
-  result = sub_4885A6(*(LPVOID *)(self + 8));
+  result = 0;
   v9 = *(void **)(self + 44);
   if ( v9 )
     return sub_409A00(dword_520970, v9);

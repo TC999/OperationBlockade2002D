@@ -26,7 +26,7 @@ void __cdecl sub_47E34C(jmp_buf Buf, int a2, int a3)
   if ( a3 != 13 )
     sub_478AEB(Buf, (int)"Invalid IHDR chunk");
   Buf[22] |= 1u;
-  sub_47D9E9(Buf, (int)&v11, 13);
+  sub_47D9E9((int)Buf, (int)&v11, 13);
   sub_47E2BE(Buf, 0);
   v4 = sub_47D9C3((unsigned __int8 *)&v11);
   v5 = sub_47D9C3(v12);

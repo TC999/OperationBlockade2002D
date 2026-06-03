@@ -1,3 +1,6 @@
+extern char aSoundsInterfac[];
+extern char aCouldnTLoadBan[];
+
 //----- (0043A950) --------------------------------------------------------
 int __cdecl sub_43A950(int self)
 {
@@ -11,7 +14,7 @@ int __cdecl sub_43A950(int self)
   if ( !*(_DWORD *)(self + 84) )
   {
     v2 = sub_41DE10(*(_DWORD **)(dword_520970 + 120), aSoundsInterfac, 1, 0, 1, 0, 0);
-    *(_DWORD *)(self + 84) = v2;
+    *(_DWORD *)(self + 84) = (int)v2;
     sub_4282E0(v2 != 0, aCouldnTLoadBan);
   }
   v3 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), *(_DWORD *)(self + 84), 0, 1);
@@ -45,11 +48,14 @@ int __cdecl sub_43A950(int self)
   switch ( result )
   {
     case 0:
-      return sub_421110(*(LPVOID **)(*(_DWORD *)(self + 48) + 112), aLow);
+      sub_421110(*(LPVOID **)(*(_DWORD *)(self + 48) + 112), aLow);
+      return 1;
     case 1:
-      return sub_421110(*(LPVOID **)(*(_DWORD *)(self + 48) + 112), aMedium);
+      sub_421110(*(LPVOID **)(*(_DWORD *)(self + 48) + 112), aMedium);
+      return 1;
     case 2:
-      return sub_421110(*(LPVOID **)(*(_DWORD *)(self + 48) + 112), aHigh);
+      sub_421110(*(LPVOID **)(*(_DWORD *)(self + 48) + 112), aHigh);
+      return 1;
   }
   return result;
 }

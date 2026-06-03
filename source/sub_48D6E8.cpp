@@ -47,7 +47,7 @@ _DWORD *__cdecl sub_48D6E8(_DWORD *a1, int a2)
       {
         if ( v7 >= 0x20 )
         {
-          v11 = (char *)result + v7 + 4;
+          v11 = (_BYTE *)((char *)result + v7 + 4);
           v12 = ~(0x80000000 >> (v7 - 32));
           result[v4 + 49] &= v12;
           v10 = (*v11)-- == 1;
@@ -56,7 +56,7 @@ _DWORD *__cdecl sub_48D6E8(_DWORD *a1, int a2)
         }
         else
         {
-          v8 = (char *)result + v7 + 4;
+          v8 = (_BYTE *)((char *)result + v7 + 4);
           v9 = ~(0x80000000 >> v7);
           result[v4 + 17] &= v9;
           v10 = (*v8)-- == 1;
@@ -119,8 +119,8 @@ _DWORD *__cdecl sub_48D6E8(_DWORD *a1, int a2)
       v17 = &v19[2 * v13];
       v3[1] = v17[1];
       v3[2] = (int)v17;
-      v17[1] = v3;
-      *(_DWORD *)(v3[1] + 8) = v3;
+      v17[1] = (uint32)v3;
+      *(_DWORD *)(v3[1] + 8) = (uint32)v3;
       if ( v3[1] == v3[2] )
       {
         v25 = *((_BYTE *)result + v13 + 4);
@@ -161,16 +161,16 @@ _DWORD *__cdecl sub_48D6E8(_DWORD *a1, int a2)
         {
           VirtualFree(v18[3], 0, 0x8000u);
           HeapFree(hHeap, 0, *((LPVOID *)dword_523A70 + 4));
-          memcpy(dword_523A70, (char *)dword_523A70 + 20, (size_t)lpMem + 20 * dword_523A74 - (_DWORD)dword_523A70 - 20);
+          memcpy((void*)dword_523A70, (char *)dword_523A70 + 20, (size_t)lpMem + 20 * dword_523A74 - (_DWORD)dword_523A70 - 20);
           --dword_523A74;
-          if ( a1 > dword_523A70 )
+          if ( (int)a1 > dword_523A70 )
             a1 -= 5;
           dword_523A6C = (int)lpMem;
         }
       }
       result = a1;
       dword_523A68 = v4;
-      dword_523A70 = a1;
+      dword_523A70 = (int)a1;
     }
   }
   return result;

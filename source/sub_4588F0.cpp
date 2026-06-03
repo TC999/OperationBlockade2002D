@@ -25,7 +25,7 @@ char __cdecl sub_4588F0(_DWORD *self, int a2)
   v3 = *(_DWORD *)(a2 + 16);
   if ( *(_WORD *)(a2 + 12) == 2308 )
   {
-    LOBYTE(v4) = dword_4F5CC4;
+    BYTEn(v4, 0) = (_BYTE)dword_4F5CC4;
     if ( *(_BYTE *)(dword_4F5CC4 + 936) )
     {
       dword_5216E8 = *(_DWORD *)(a2 + 4);
@@ -39,16 +39,15 @@ char __cdecl sub_4588F0(_DWORD *self, int a2)
       v17 = v7;
       v9 = *(_DWORD *)(v3 + 27);
       v16 = v6;
-      LOBYTE(v6) = *(_BYTE *)(v3 + 26);
       v20 = v9;
       v18 = v8;
       v10 = *(_DWORD *)(v3 + 31);
-      v19 = v6;
+      v19 = *(_BYTE *)(v3 + 26);
       v11 = *(_DWORD *)(v3 + 35);
       v21 = v10;
       v22 = v11;
       v23 = 0;
-      LOBYTE(v4) = sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x905, v13, 43, 10, 2000);
+      BYTEn(v4, 0) = sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x905, v13, 43, 10, 2000);
       dword_5216E8 = 0;
     }
   }
@@ -56,7 +55,7 @@ char __cdecl sub_4588F0(_DWORD *self, int a2)
   {
     v4 = *(_WORD *)(a2 + 12) - 2309;
     if ( *(_WORD *)(a2 + 12) == 2309 )
-      LOBYTE(v4) = sub_456C50(
+      BYTEn(v4, 0) = sub_456C50(
                      (int)self,
                      (float *)(v3 + 10),
                      *(float *)(v3 + 22),

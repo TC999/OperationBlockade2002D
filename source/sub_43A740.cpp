@@ -2,6 +2,6 @@
 _DWORD *__cdecl sub_43A740(_DWORD *self, int a2)
 {
   sub_4233C0(self, a2, aMainmenu);
-  *self = &off_499588;
+  *self = (int)&off_499588;
   return self;
 }

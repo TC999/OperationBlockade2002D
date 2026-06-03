@@ -37,15 +37,15 @@ int __cdecl sub_425030(_DWORD *self, int ArgList, int a3)
       {
 LABEL_15:
         self[18] = v7;
-        return sub_4285F0(ArgList, a3);
+        return sub_4285F0(self, ArgList, a3);
       }
       if ( *(_BYTE *)(v7 + 44) && *(_BYTE *)(v7 + 45) )
       {
         v8 = *(_DWORD *)(v7 + 36);
         if ( v8 == 6 || v8 == 3 )
         {
-          sub_426060(v7, ArgList);
-          return sub_4285F0(ArgList, a3);
+          sub_426060((int)self, v7, ArgList);
+          return sub_4285F0(self, ArgList, a3);
         }
         goto LABEL_15;
       }
@@ -54,9 +54,9 @@ LABEL_15:
     {
       v10 = self[17];
       if ( v10 == self[18] && v10 && *(_BYTE *)(v10 + 44) && *(_BYTE *)(v10 + 45) )
-        sub_426060(v10, ArgList);
+        sub_426060((int)self, v10, ArgList);
       self[18] = 0;
     }
   }
-  return sub_4285F0(ArgList, a3);
+  return sub_4285F0(self, ArgList, a3);
 }

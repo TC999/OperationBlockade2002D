@@ -22,27 +22,27 @@ int __stdcall sub_46CF1A(int a1, int a2, int *a3, int a4, int a5, int a6, int a7
   int v29; // [esp+E4h] [ebp-4h]
   int v30; // [esp+F0h] [ebp+8h]
 
-  sub_46DA95(v24);
+  sub_46DA95((uint32 *)(void*)v24);
   v10 = a1;
   if ( !a1 )
   {
-    v17 = "pDestSurface pointer is invalid";
+    v17 = (char *)"pDestSurface pointer is invalid";
 LABEL_3:
     sub_46D8FD(0, v17, v18);
 LABEL_18:
     v11 = -2005530516;
 LABEL_33:
-    sub_46DA9F(v24);
+    sub_46DA9F((uint32 *)(void*)v24);
     return v11;
   }
   if ( !a4 )
   {
-    v17 = "pSrcMemory pointer is invalid";
+    v17 = (char *)"pSrcMemory pointer is invalid";
     goto LABEL_3;
   }
   if ( !a8 )
   {
-    v17 = "pSrcRect pointer is invalid";
+    v17 = (char *)"pSrcRect pointer is invalid";
     goto LABEL_3;
   }
   if ( a9 == -1 )
@@ -56,7 +56,7 @@ LABEL_33:
     v29 = a3[3];
     if ( v26 < 0 || v28 > v22 || v26 > v28 || v27 < 0 || v29 > v23 || v27 > v29 )
     {
-      sub_46D8FD(0, "Invalid destination rect", v18);
+      sub_46D8FD(0, (char *)"Invalid destination rect", v18);
       goto LABEL_18;
     }
     v10 = a1;
@@ -79,7 +79,7 @@ LABEL_33:
     v13 = (*(int (__stdcall **)(int, _DWORD *, _DWORD, int))(*(_DWORD *)v10 + 36))(v10, v25, 0, 2048);
     if ( v13 < 0 )
     {
-      sub_46D8FD(0, "Could not lock destination surface", v18);
+      sub_46D8FD(0, (char *)"Could not lock destination surface", v18);
       v11 = v13;
       goto LABEL_33;
     }
@@ -90,8 +90,8 @@ LABEL_33:
     v30 = (*(int (__stdcall **)(int, _DWORD *, int *, int))(*(_DWORD *)v10 + 36))(v10, v25, &v26, 2048);
     if ( v30 < 0 )
     {
-      sub_46D8FD(0, "Could not lock destination surface", v18);
-      sub_46DA9F(v24);
+      sub_46D8FD(0, (char *)"Could not lock destination surface", v18);
+    sub_46DA9F((uint32 *)(void*)v24);
       return v30;
     }
     v28 -= v26;
@@ -129,10 +129,10 @@ LABEL_33:
   v20[14] = 0;
   v19[3] = 0;
   v19[14] = 0;
-  v16 = sub_470E39(v24, v20, v19, a9);
+  v16 = sub_470E39((int **)(void*)v24, (int)v20, (int)v19, (int *)a9);
   if ( v16 >= 0 )
     v16 = 0;
   (*(void (__stdcall **)(int))(*(_DWORD *)v10 + 40))(v10);
-  sub_46DA9F(v24);
+  sub_46DA9F((uint32 *)(void*)v24);
   return v16;
 }

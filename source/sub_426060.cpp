@@ -17,7 +17,7 @@ char __cdecl sub_426060(int self, int a2, int ArgList)
   v4 = *(_DWORD *)(a2 + 36);
   if ( v4 == 6 )
   {
-    v5 = sub_421B20(*(_DWORD *)(a2 + 108));
+    v5 = sub_421B20((_DWORD*)*(_DWORD *)(self + 52), *(_DWORD *)(a2 + 108));
     v6 = *(_DWORD *)(self + 64) - *(_DWORD *)(a2 + 88);
     v7 = v5 - 2;
     if ( v5 == 2 )
@@ -37,7 +37,7 @@ char __cdecl sub_426060(int self, int a2, int ArgList)
     {
       v10 = v9 + 1;
     }
-    LOBYTE(v11) = (*(int (__cdecl **)(_DWORD, int, _DWORD, int))(**(_DWORD **)(self + 52) + 48))(
+    *(char*)&v11 = (char)(*(int (__cdecl **)(_DWORD, int, _DWORD, int))(**(_DWORD **)(self + 52) + 48))(
                     *(_DWORD *)(self + 52),
                     a2,
                     *(_DWORD *)(a2 + 124),
@@ -46,7 +46,7 @@ char __cdecl sub_426060(int self, int a2, int ArgList)
     {
       *(_DWORD *)(a2 + 124) = v10;
       *(_BYTE *)(a2 + 136) = 1;
-      LOBYTE(v11) = (unsigned __int8)sub_4229D0(
+      *(char*)&v11 = (char)sub_4229D0(
                                        "UI: button %d clicked listbox %s item %d",
                                        ArgList,
                                        (const char *)a2,
@@ -56,7 +56,7 @@ char __cdecl sub_426060(int self, int a2, int ArgList)
   }
   if ( v4 == 3 )
   {
-    LOBYTE(v11) = (*(int (__cdecl **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
+    *(char*)&v11 = (char)(*(int (__cdecl **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
                     *(_DWORD *)(self + 52),
                     a2,
                     ArgList);
@@ -75,7 +75,7 @@ char __cdecl sub_426060(int self, int a2, int ArgList)
         v13 = *(const char ***)(a2 + 112);
         if ( v13 )
           sub_4211E0(v13, 95);
-        LOBYTE(v11) = (unsigned __int8)sub_4229D0("UI: button %d clicked editbox %s", ArgList, (const char *)a2);
+        *(char*)&v11 = (char)sub_4229D0("UI: button %d clicked editbox %s", ArgList, (const char *)a2);
       }
       *(_DWORD *)(self + 76) = a2;
     }
@@ -84,7 +84,7 @@ char __cdecl sub_426060(int self, int a2, int ArgList)
   {
 LABEL_23:
     sub_4229D0("UI: button %d clicked %s", ArgList, (const char *)a2);
-    LOBYTE(v11) = (*(int (__cdecl **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
+    *(char*)&v11 = (char)(*(int (__cdecl **)(_DWORD, int, int))(**(_DWORD **)(self + 52) + 44))(
                     *(_DWORD *)(self + 52),
                     a2,
                     ArgList);
@@ -95,7 +95,7 @@ LABEL_23:
         v11 = *(_DWORD *)(a2 + 36);
         if ( v11 == 5 || v11 == 4 )
         {
-          LOBYTE(v11) = *(_BYTE *)(a2 + 172);
+          *(char*)&v11 = *(_BYTE *)(a2 + 172);
           *(_BYTE *)(a2 + 172) = (_BYTE)v11 == 0;
         }
       }

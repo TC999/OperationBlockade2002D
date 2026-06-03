@@ -1,4 +1,6 @@
 //----- (00414E60) --------------------------------------------------------
+struct Iostream_init { int _dummy[3]; };
+static int __cdecl Iostream_init_ctor(int p) { memset((void*)p, 0, 12); return p; }
 char __cdecl sub_414E60(_DWORD *self)
 {
   int v2; // ebx
@@ -29,17 +31,17 @@ char __cdecl sub_414E60(_DWORD *self)
   char v28[12]; // [esp+24h] [ebp-3Ch] BYREF
   char v29[48]; // [esp+30h] [ebp-30h] BYREF
 
-  sub_4013C0((int)v29, 12, 3, (int (__cdecl *)(int))Iostream_init::Iostream_init);
+  sub_4013C0((int)v29, 12, 3, Iostream_init_ctor);
   if ( (unsigned int)sub_419CC0(self + 13) >= 2 )
   {
     if ( (unsigned int)sub_419CC0(self + 13) > 2 )
-      sub_41A300(self[14] + 120, self[15]);
+      sub_41A300((_DWORD *)(self[14] + 120), (char *)self[15], 0);
   }
   else
   {
     v2 = self[15];
     v3 = sub_419CC0(self + 13);
-    sub_41A000(v2, 2 - v3, v28);
+    sub_41A000((_DWORD *)v2, (char *)(2 - v3), (unsigned int)(size_t)v28, 0);
   }
   v4 = (_DWORD *)self[14];
   v25 = 1065353216;
@@ -100,13 +102,13 @@ char __cdecl sub_414E60(_DWORD *self)
   if ( v18 && (unsigned int)((self[11] - v18) >> 4) >= 6 )
   {
     if ( (unsigned int)sub_448730(self + 9) > 6 )
-      sub_448750(self[10] + 96, self[11]);
+      sub_448750((_DWORD *)(self[10] + 96), (_DWORD *)self[11], 0);
   }
   else
   {
     v19 = self[11];
     v20 = sub_448730(self + 9);
-    sub_419CF0(v19, 6 - v20, &v25);
+    sub_419CF0((char *)v19, (char *)(6 - v20), (unsigned int)(size_t)&v25, 0);
   }
   *(_DWORD *)self[10] = -975202673;
   *(_DWORD *)(self[10] + 4) = -1036427723;
@@ -143,7 +145,7 @@ char __cdecl sub_414E60(_DWORD *self)
   {
     v23 = (self[19] - v21) >> 4;
 LABEL_14:
-    sub_419CF0(self[19], 1 - v23, &v25);
+    sub_419CF0((char *)self[19], (char *)(1 - v23), (unsigned int)(size_t)&v25, 0);
     goto LABEL_17;
   }
   if ( v22 > 1 )

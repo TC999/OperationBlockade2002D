@@ -66,8 +66,8 @@ unsigned int __cdecl sub_471E3C(_DWORD *self, _BYTE *a2, unsigned int a3)
           {
             if ( !v6 )
               return -2147467259;
-            v8 = operator new(4 * v13 * v6);
-            self[1] = v8;
+            v8 = (uint8 *)operator new(4 * v13 * v6);
+            self[1] = (uint32)v8;
             if ( !v8 )
               return -2147024882;
             self[3] = 0;

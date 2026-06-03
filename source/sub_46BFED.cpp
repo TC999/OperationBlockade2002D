@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (0046BFED) --------------------------------------------------------
 float *__stdcall sub_46BFED(int a1, int a2, float a3)
 {
@@ -33,7 +35,7 @@ float *__stdcall sub_46BFED(int a1, int a2, float a3)
   v15 = *v5;
   a3 = 1.0 - *(float *)&a1;
   v16 = v5[1];
-  sub_46B970(&v14, &v14);
+  sub_46B970((int)(uintptr_t)&v14, (int)(uintptr_t)&v14);
   v6 = a3;
   a3 = v15 * v14 * a3;
   v7 = v16;

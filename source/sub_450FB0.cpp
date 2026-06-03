@@ -13,7 +13,7 @@ void *__cdecl sub_450FB0(void *self, int a2, int a3, int a4)
   int i; // [esp+1Ch] [ebp+4h]
 
   *((_DWORD *)self + 3) = a2;
-  *(_DWORD *)self = operator new(4 * a2 * a2);
+  *(_DWORD *)self = (uint32)(uintptr_t)operator new(4 * a2 * a2);
   sub_408680(
     a3,
     a4,

@@ -17,12 +17,12 @@ char __cdecl sub_479646(int *a1, char *a2)
   char v15; // dl
   char v16; // cl
 
-  LOBYTE(v2) = (_BYTE)a1;
+  *(_BYTE*)&(v2) = (_BYTE)a1;
   v3 = *((_BYTE *)a1 + 8);
   if ( (v3 & 2) != 0 )
   {
     v4 = *a1;
-    LOBYTE(v2) = *((_BYTE *)a1 + 9);
+    *(_BYTE*)&(v2) = *((_BYTE *)a1 + 9);
     if ( (_BYTE)v2 == 8 )
     {
       if ( v3 == 2 )

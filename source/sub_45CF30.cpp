@@ -14,7 +14,7 @@ char __cdecl sub_45CF30(int self, char a2)
   *(_DWORD *)(self + 4) = 0;
   if ( a2 )
   {
-    result = sub_488CEE(*(LPVOID *)self);
+    (void)sub_488CEE(*(LPVOID *)self);
     *(_DWORD *)(self + 8) = 0;
     *(_DWORD *)self = 0;
   }

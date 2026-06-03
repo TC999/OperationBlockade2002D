@@ -11,7 +11,7 @@ int __cdecl sub_41F2A0(int *self)
   v3 = (void *)*self;
   v2 += 8;
   self[2] = v2;
-  v4 = sub_488DD7(v3, 4 * v2);
+  v4 = (int)sub_488DD7(v3, 4 * v2);
   if ( !v4 )
     return 0;
   v5 = self[2];

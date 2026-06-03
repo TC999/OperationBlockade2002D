@@ -25,7 +25,7 @@ void __cdecl sub_47C0E8(int a1)
         }
         v2 = (void *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 130);
         qmemcpy(v2, *(const void **)(a1 + 4 * v1 + 144), 0x82u);
-        *(_DWORD *)(v3 + 76) = v2;
+        *(_DWORD *)(v3 + 76) = (uint32)(size_t)v2;
       }
       ++v4;
       ++v5;

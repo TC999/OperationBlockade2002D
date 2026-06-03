@@ -1,3 +1,12 @@
+extern char aCanTRegisterWi[];
+extern char aInitializedKey[];
+extern char aInitializedMou[];
+
+extern int (__stdcall *DirectInputCreateA)(int, int, void *, void *);
+
+
+
+
 //----- (0040BFE0) --------------------------------------------------------
 _DWORD *__cdecl sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
 {
@@ -18,7 +27,7 @@ _DWORD *__cdecl sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
   v6 = ((int (__stdcall *)(int, int, _BYTE *, _DWORD))DirectInputCreateA)(a3, 768, self + 8, 0);
   if ( v6 >= 0 )
   {
-    sub_40C130(self, &v14, a4, a5);
+    sub_40C130((_DWORD **)self, (uint32 *)&v14, a4, a5);
     v18 = 0;
     if ( v14 )
     {
@@ -27,16 +36,16 @@ _DWORD *__cdecl sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
       v8 = Source;
       if ( Source )
       {
-        a2[1] = _strdup(Source);
+          a2[1] = (uint32)(uintptr_t)_strdup(Source);
         v8 = Source;
       }
-      sub_488CEE(v8);
+      (void)sub_488CEE(v8);
     }
     else
     {
       sub_4229D0(aInitializedKey, v12);
-      sub_40C1F0(self, &v16, a4, a5);
-      LOBYTE(v18) = 1;
+      sub_40C1F0((_DWORD **)self, (uint32 *)&v16, a4, a5);
+      *(_BYTE *)&v18 = 1;
       if ( v16 )
       {
         v7 = a2;
@@ -44,11 +53,11 @@ _DWORD *__cdecl sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
         v9 = v17;
         if ( v17 )
         {
-          a2[1] = _strdup(v17);
+          a2[1] = (uint32)(uintptr_t)_strdup(v17);
           v9 = v17;
         }
-        sub_488CEE(v9);
-        sub_488CEE(Source);
+        (void)sub_488CEE(v9);
+        (void)sub_488CEE(Source);
       }
       else
       {
@@ -58,8 +67,8 @@ _DWORD *__cdecl sub_40BFE0(_BYTE *self, _DWORD *a2, int a3, int a4, int a5)
         v7 = a2;
         *a2 = 0;
         a2[1] = 0;
-        sub_488CEE(v10);
-        sub_488CEE(Source);
+        (void)sub_488CEE(v10);
+        (void)sub_488CEE(Source);
       }
     }
   }

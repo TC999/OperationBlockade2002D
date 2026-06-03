@@ -4,14 +4,14 @@ int __cdecl sub_43F3E0(LPVOID *self)
   int i; // edi
   void *v3; // eax
 
-  *self = &off_4999BC;
-  sub_42A840(self);
+  *self = (LPVOID)(uintptr_t)&off_4999BC;
+  sub_42A840((_DWORD *)self);
   if ( *((_BYTE *)self + 936) )
   {
     for ( i = 0; i < (int)self[232]; ++i )
     {
       if ( *((_DWORD *)self[231] + i) )
-        sub_448C00(1);
+        sub_448C00(NULL, 1);
     }
   }
   memset(self[231], 0, 4 * (_DWORD)self[232]);

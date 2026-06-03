@@ -19,7 +19,7 @@ int __cdecl sub_437540(_DWORD *self, int a2)
     v5 = (void *)self[6];
     v6 = v3 + 8;
     self[8] = v6;
-    v7 = sub_488DD7(v5, 4 * v6);
+    v7 = (int)sub_488DD7(v5, 4 * v6);
     if ( v7 )
     {
       v8 = self[7];

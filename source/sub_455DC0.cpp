@@ -17,7 +17,7 @@ int __cdecl sub_455DC0(_DWORD *self, int a2)
     if ( !result || i >= (self[101] - result) >> 2 )
       break;
     if ( *(_DWORD *)(*(_DWORD *)(result + 4 * i) + 400) == a2 )
-      sub_456370();
+      sub_456370(*(_DWORD *)(result + 4 * i));
   }
   return result;
 }

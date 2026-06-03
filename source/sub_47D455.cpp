@@ -15,11 +15,11 @@ int __cdecl sub_47D455(_DWORD *a1, int a2, _BYTE *a3, int a4)
   a1[6] = 0;
   if ( v4 )
   {
-    a1[8] = sub_4850B5;
+    a1[8] = (uint32)(size_t)sub_4850B5;
     a1[10] = 0;
   }
   if ( !a1[9] )
-    a1[9] = sub_47EDE6;
+    a1[9] = (uint32)(size_t)sub_47EDE6;
   v5 = ((int (__cdecl *)(_DWORD, int, int))a1[8])(a1[10], 1, 24);
   a1[7] = v5;
   if ( v5 )
@@ -39,7 +39,7 @@ int __cdecl sub_47D455(_DWORD *a1, int a2, _BYTE *a3, int a4)
     else
     {
       *(_DWORD *)(a1[7] + 16) = v6;
-      *(_DWORD *)(a1[7] + 20) = sub_48473D(a1, *(_DWORD *)(a1[7] + 12) == 0 ? sub_484F9C : 0, 1 << v6);
+      *(_DWORD *)(a1[7] + 20) = (uint32)(size_t)sub_48473D((int)a1, *(_DWORD *)(a1[7] + 12) == 0 ? (uint32)(size_t)sub_484F9C : 0, 1 << v6);
       if ( *(_DWORD *)(a1[7] + 20) )
       {
         sub_47D3D1(a1);

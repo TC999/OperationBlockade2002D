@@ -38,7 +38,7 @@ int __cdecl sub_47EEBF(_DWORD *a1)
   {
     v3 = (_DWORD *)(result + 12);
     v21 = (_DWORD *)(result + 12);
-    v22 = v1 + 2;
+    v22 = (int *)(v1 + 2);
     while ( 1 )
     {
       v4 = *v3 * v3[6] / a1[69];

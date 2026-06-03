@@ -5,7 +5,7 @@ int __cdecl sub_4690A0(void *self)
   int result; // eax
 
   v2 = (void *)*((_DWORD *)self + 1);
-  *(_DWORD *)self = &off_499D18;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499D18;
   sub_4885A6(v2);
   sub_4885A6(*((LPVOID *)self + 70));
   result = 0;

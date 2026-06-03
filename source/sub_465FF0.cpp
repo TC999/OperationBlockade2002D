@@ -1,4 +1,8 @@
+#include "common.h"
+
 //----- (00465FF0) --------------------------------------------------------
+struct Iostream_init { int _dummy[3]; };
+
 _DWORD *__cdecl sub_465FF0(_DWORD *self, int a2, int a3)
 {
   _DWORD *v4; // eax
@@ -25,22 +29,22 @@ _DWORD *__cdecl sub_465FF0(_DWORD *self, int a2, int a3)
   v20[1] = (int)self;
   sub_401270(self);
   v24 = 0;
-  Iostream_init::Iostream_init((Iostream_init *)(self + 129));
-  *self = &off_499C98;
+  memset((void *)(self + 129), 0, sizeof(Iostream_init));
+  *self = (uint32)(uintptr_t)&off_499C98;
   self[98] = a3;
   self[103] = a2;
   sub_4282E0(
     *(_DWORD *)(a2 + 560) != 0,
-    "model for %s not loaded, try deleting ExtraData.dat",
+    (char *)"model for %s not loaded, try deleting ExtraData.dat",
     *(const char **)(a2 + 4));
-  v4 = operator new(0x34u);
-  LOBYTE(v24) = 2;
+  v4 = (_DWORD *)operator new(0x34u);
+  *(_BYTE *)&v24 = 2;
   if ( v4 )
     v5 = sub_406B00(v4, *(_DWORD *)(a2 + 560), 0);
   else
     v5 = 0;
-  LOBYTE(v24) = 1;
-  self[104] = v5;
+  *(_BYTE *)&v24 = 1;
+  self[104] = (uint32)(uintptr_t)v5;
   sub_428680(self, (int)v5);
   self[113] = sub_415270(*(_DWORD *)(dword_520970 + 244), *(_DWORD *)(a2 + 1220));
   v6 = self[103];
@@ -50,21 +54,21 @@ _DWORD *__cdecl sub_465FF0(_DWORD *self, int a2, int a3)
   {
     sub_4282E0(
       *(_BYTE *)(v7 + 301),
-      "engine sound did not set 'engine = true', see %s : %s",
+      (char *)"engine sound did not set 'engine = true', see %s : %s",
       *(const char **)(v6 + 4),
       (const char *)(v6 + 16));
     v8 = self[103];
     v21 = 0;
     v22 = 0;
     v23 = 0;
-    sub_44D850(*(_DWORD *)(v8 + 1236), (float *)&v21, &v19, v20);
+    sub_44D850(*(_DWORD *)(v8 + 1236), (float *)&v21, (_DWORD *)&v19, (_DWORD *)v20);
     if ( v19 )
     {
       v9 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v19, 0, 1);
       self[338] = v9;
       if ( v9 )
       {
-        sub_41D8A0(*(_BYTE *)(*(_DWORD *)(self[103] + 1236) + 330));
+        sub_41D8A0((_BYTE *)self[338], *(_BYTE *)(*(_DWORD *)(self[103] + 1236) + 330));
         sub_41D8B0(
           (_DWORD *)self[338],
           *(_DWORD *)v20[0],
@@ -86,21 +90,21 @@ _DWORD *__cdecl sub_465FF0(_DWORD *self, int a2, int a3)
   {
     sub_4282E0(
       *(_BYTE *)(v13 + 301),
-      "idle sound did not set 'engine = true', see %s : %s",
+      (char *)"idle sound did not set 'engine = true', see %s : %s",
       *(const char **)(v12 + 4),
       (const char *)(v12 + 16));
     v14 = self[103];
     v21 = 0;
     v22 = 0;
     v23 = 0;
-    sub_44D850(*(_DWORD *)(v14 + 1240), (float *)&v21, &v19, v20);
+    sub_44D850(*(_DWORD *)(v14 + 1240), (float *)&v21, (_DWORD *)&v19, (_DWORD *)v20);
     if ( v19 )
     {
       v15 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v19, 0, 1);
       self[339] = v15;
       if ( v15 )
       {
-        sub_41D8A0(*(_BYTE *)(*(_DWORD *)(self[103] + 1240) + 330));
+        sub_41D8A0((_BYTE *)self[339], *(_BYTE *)(*(_DWORD *)(self[103] + 1240) + 330));
         sub_41D8B0(
           (_DWORD *)self[339],
           *(_DWORD *)v20[0],
@@ -115,6 +119,6 @@ _DWORD *__cdecl sub_465FF0(_DWORD *self, int a2, int a3)
       }
     }
   }
-  sub_466AA0(self);
+  sub_466AA0((int)(uintptr_t)self);
   return self;
 }

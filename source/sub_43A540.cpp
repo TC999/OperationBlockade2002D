@@ -66,7 +66,7 @@ char __cdecl sub_43A540(int self, int a2)
     do
     {
       v23 = (1.0 - (1.0 - v14) * (1.0 - v14)) * 3600.0 * 0.017453292;
-      sub_413100(LODWORD(v15), LODWORD(v16), LODWORD(v23));
+      sub_413100(*(_DWORD *)v10, LODWORD(v15), LODWORD(v16), LODWORD(v23));
       v10 += 4;
       --v11;
     }

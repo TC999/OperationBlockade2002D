@@ -36,7 +36,7 @@ char __cdecl sub_456A40(int self, float *a2, int a3, float a4, int a5, int a6)
   v19 = 0.0;
   v7 = *(_DWORD *)(self + 392);
   v20 = 0.0;
-  v8 = (float *)(*(_DWORD *)(*(_DWORD *)(dword_5216EC[*(_DWORD *)(v7 + 292)] + 8) + 12 * *(_DWORD *)(self + 464) + 8)
+  v8 = (float *)(*(_DWORD *)(*(_DWORD *)(((int *)dword_5216EC)[*(_DWORD *)(v7 + 292)] + 8) + 12 * *(_DWORD *)(self + 464) + 8)
                + 36 * *(_DWORD *)(self + 468));
   *(float *)&v16 = *(float *)(v7 + 320) * *(float *)(v7 + 316) + *(float *)(self + 436);
   result = sub_420B50(
@@ -91,7 +91,7 @@ char __cdecl sub_456A40(int self, float *a2, int a3, float a4, int a5, int a6)
       v23 = v20 - v15;
       v26 = v23;
       v17 = *(float *)&a3 * a4;
-      return sub_456C50(self, &v18, LODWORD(v17), 1, &v24);
+      return sub_456C50(self, (float *)&v18, v17, 1, (_DWORD *)&v24);
     }
   }
   return result;

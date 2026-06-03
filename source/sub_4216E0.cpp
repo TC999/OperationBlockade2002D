@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004216E0) --------------------------------------------------------
 int __cdecl sub_4216E0(void *self)
 {
@@ -10,8 +12,9 @@ int __cdecl sub_4216E0(void *self)
   int j; // edi
   void *v9; // eax
   int result; // eax
+  (void)result;
 
-  *(_DWORD *)self = &off_499314;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499314;
   v2 = *((_DWORD *)self + 14);
   if ( v2 )
   {
@@ -26,7 +29,7 @@ int __cdecl sub_4216E0(void *self)
   }
   if ( *((_BYTE *)self + 48) )
   {
-    for ( i = 0; i < *((_DWORD *)self + 10); ++i )
+    for ( i = 0; i < (int)*((_DWORD *)self + 10); ++i )
     {
       v5 = *((_DWORD *)self + 9);
       v6 = *(void **)(v5 + 4 * i);
@@ -45,15 +48,15 @@ int __cdecl sub_4216E0(void *self)
   *((_DWORD *)self + 9) = 0;
   if ( *((_BYTE *)self + 32) )
   {
-    for ( j = 0; j < *((_DWORD *)self + 6); ++j )
+    for ( j = 0; j < (int)*((_DWORD *)self + 6); ++j )
       sub_4885A6(*(LPVOID *)(*((_DWORD *)self + 5) + 4 * j));
   }
   memset(*((void **)self + 5), 0, 4 * *((_DWORD *)self + 6));
   v9 = (void *)*((_DWORD *)self + 5);
   *((_DWORD *)self + 6) = 0;
-  result = sub_488CEE(v9);
+  sub_488CEE(v9);
   *((_DWORD *)self + 7) = 0;
   *((_DWORD *)self + 5) = 0;
-  *(_DWORD *)self = &off_499040;
-  return result;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499040;
+  return 0;
 }

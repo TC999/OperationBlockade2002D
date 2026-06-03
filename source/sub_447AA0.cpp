@@ -61,7 +61,7 @@ void __cdecl sub_447AA0(_DWORD *self, float a2)
         v39 = (double)v7 * 0.0039215689;
         if ( v8 )
         {
-          v11 = sub_417190(v8, v9, v29, v28);
+          v11 = sub_417190(v8, v9, (_DWORD*)(v29), v28);
           sub_415930(*(_DWORD *)(v5 + 444), v10, v39);
           if ( v11 )
             (*(void (__cdecl **)(int, int))(*(_DWORD *)v5 + 24))(v5, 1);
@@ -76,7 +76,7 @@ void __cdecl sub_447AA0(_DWORD *self, float a2)
       if ( *(_BYTE *)(dword_4F5CC4 + 936) )
       {
         dword_5216E8 = *(_DWORD *)(LODWORD(a2) + 4);
-        LOBYTE(v4) = *(_BYTE *)(v3 + 28);
+        *(_BYTE *)&v4 = *(_BYTE *)(v3 + 28);
         v14 = sub_443CD0((int)self, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), v4);
         v40 = v14;
         if ( v14 )
@@ -102,9 +102,8 @@ void __cdecl sub_447AA0(_DWORD *self, float a2)
         v33 = v19;
         v21 = *(_DWORD *)(v3 + 24);
         v34 = v20;
-        LOBYTE(v20) = *(_BYTE *)(v3 + 28);
+        v36 = *(_BYTE *)(v3 + 28);
         v35 = v21;
-        v36 = v20;
         if ( v14 )
           v37 = *(_DWORD *)(LODWORD(a2) + 4);
         else
@@ -114,8 +113,10 @@ void __cdecl sub_447AA0(_DWORD *self, float a2)
       }
       break;
     case 0x204:
-      LOBYTE(self) = *(_BYTE *)(v3 + 28);
-      sub_443CD0(v5, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), *(float *)&self);
+      {
+        char v5tmp = *(_BYTE *)(v3 + 28);
+        sub_443CD0((int)self, *(_DWORD *)(v3 + 8), v3 + 12, *(float *)(v3 + 24), (float)(unsigned __int8)v5tmp);
+      }
       if ( *(_DWORD *)(v3 + 29) )
       {
         v22 = sub_411B60(dword_4F5CC4, *(_DWORD *)(v3 + 29));

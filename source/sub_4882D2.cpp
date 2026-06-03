@@ -59,8 +59,8 @@ int __cdecl sub_4882D2(int a1, int a2, int a3, int a4, _DWORD *a5, unsigned __in
   else
     v12 = v11 - (_DWORD)v8 - 1;
   v40 = v12;
-  v39 = dword_4B2710[a1];
-  v38 = dword_4B2710[a2];
+  v39 = ((int*)&dword_4B2710)[a1];
+  v38 = ((int*)&dword_4B2710)[a2];
 LABEL_6:
   while ( j < 0x14 )
   {
@@ -95,7 +95,7 @@ LABEL_32:
     j -= v13[1];
     if ( (v47 & 0x10) != 0 )
     {
-      v41 = *((_DWORD *)v13 + 1) + (v9 & dword_4B2710[v47 & 0xF]);
+      v41 = *((_DWORD *)v13 + 1) + (v9 & ((int*)&dword_4B2710)[v47 & 0xF]);
       v16 = v47 & 0xF;
       v17 = v9 >> v16;
       v18 = j - v16;
@@ -128,7 +128,7 @@ LABEL_32:
             j += 8;
           }
           v7 = a5;
-          v24 = *((_DWORD *)v20 + 1) + (v45 & dword_4B2710[v23]);
+          v24 = *((_DWORD *)v20 + 1) + (v45 & ((int*)&dword_4B2710)[v23]);
           v40 -= v41;
           v25 = a5[10];
           v48 = v24;
@@ -161,7 +161,7 @@ LABEL_32:
             *v51 = v51[-v24];
             v51[1] = v51[-v24 + 1];
             v26 = v51 + 2;
-            v27 = &v51[-v48 + 2];
+            v27 = (char *)&v51[-v48 + 2];
             v41 -= 2;
           }
           do
@@ -176,12 +176,12 @@ LABEL_32:
         }
         if ( (v22 & 0x40) != 0 )
           break;
-        v20 += 8 * *((_DWORD *)v20 + 1) + 8 * (v45 & dword_4B2710[v22]);
+        v20 += 8 * *((_DWORD *)v20 + 1) + 8 * (v45 & ((int*)&dword_4B2710)[v22]);
         v21 = v20[1];
         v45 >>= v21;
       }
       v32 = (unsigned int)&a6[1][-v43];
-      a6[6] = "invalid distance code";
+      a6[6] = (unsigned __int8 *)"invalid distance code";
       if ( j >> 3 < v32 )
         v32 = j >> 3;
       v7 = a5;
@@ -190,7 +190,7 @@ LABEL_32:
     }
     if ( (v47 & 0x40) != 0 )
       break;
-    v13 += 8 * *((_DWORD *)v13 + 1) + 8 * (v9 & dword_4B2710[v47]);
+    v13 += 8 * *((_DWORD *)v13 + 1) + 8 * (v9 & ((int*)&dword_4B2710)[v47]);
     v47 = *v13;
   }
   v33 = j >> 3;
@@ -198,7 +198,7 @@ LABEL_32:
   if ( (v47 & 0x20) == 0 )
   {
     v32 = (unsigned int)&v34[-v43];
-    a6[6] = "invalid literal/length code";
+    a6[6] = (unsigned __int8 *)"invalid literal/length code";
     if ( v33 < v32 )
       v32 = j >> 3;
 LABEL_46:
@@ -217,6 +217,6 @@ LABEL_47:
   v36 = &v42[-v32] - *a6;
   *a6 = v35;
   a6[2] += v36;
-  v7[13] = v51;
+  v7[13] = (uint32)v51;
   return v50;
 }

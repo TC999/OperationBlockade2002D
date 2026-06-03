@@ -14,7 +14,7 @@ int __cdecl sub_406620(_DWORD *self, int a2, void *a3, float *a4, float a5, int 
     if ( v9 == -1 )
       break;
     sub_4063E0(self, v9, v10, (float *)&a6, a5, v6);
-    sub_46B97C(a3, a3, v10);
+    sub_46B97C((int)(intptr_t)(a3), (int)(intptr_t)a3, (int)(intptr_t)v10);
   }
   return result;
 }

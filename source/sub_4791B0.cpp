@@ -7,7 +7,7 @@ int (__cdecl *__cdecl sub_4791B0(jmp_buf Buf, int *a2))(jmp_buf, int, _DWORD)
   int (__cdecl *v6)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD); // [esp+8h] [ebp-4h]
   int *__attribute__((__org_typedef(jmp_buf))) Bufa; // [esp+14h] [ebp+8h]
 
-  result = (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_4795DB(Buf);
+  result = (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_4795DB((int)Buf);
   v4 = Buf[47];
   Buf[48] = v4;
   if ( (int)result > 0 )
@@ -21,7 +21,7 @@ int (__cdecl *__cdecl sub_4791B0(jmp_buf Buf, int *a2))(jmp_buf, int, _DWORD)
         Bufa = (int *)v4;
         do
         {
-          result = sub_478E09(Buf, *v5++, 0);
+          result = (int (__cdecl *)(int *__attribute__((__org_typedef(jmp_buf))), int, _DWORD))sub_478E09(Buf, *v5++, 0);
           Bufa = (int *)((char *)Bufa - 1);
         }
         while ( Bufa );

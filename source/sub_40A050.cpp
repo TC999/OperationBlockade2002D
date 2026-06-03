@@ -2,5 +2,4 @@
 void sub_40A050()
 {
   sub_40A060();
-  JUMPOUT(0x40A070);
 }

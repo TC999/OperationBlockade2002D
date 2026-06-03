@@ -34,8 +34,8 @@ void *__cdecl sub_488DD7(LPVOID lpMem, SIZE_T dwBytes)
         if ( v4 <= 0xFFFFFFE0 )
         {
           _lock(9);
-          ms_exc.registration.TryLevel = 0;
-          block = __sbh_find_block(lpMem);
+          *((int*)&ms_exc + 5) = 0;
+          block = __sbh_find_block(lpMem, lpMem);
           v16 = block;
           if ( block )
           {
@@ -47,7 +47,7 @@ void *__cdecl sub_488DD7(LPVOID lpMem, SIZE_T dwBytes)
               }
               else
               {
-                v17 = (void *)((int (__cdecl *)(SIZE_T))__sbh_alloc_block)(v4);
+                v17 = (void *)((int (__cdecl *)(SIZE_T, int, int))__sbh_alloc_block)(v4, 0, 0);
                 if ( v17 )
                 {
                   v6 = *((_DWORD *)lpMem - 1) - 1;
@@ -55,8 +55,8 @@ void *__cdecl sub_488DD7(LPVOID lpMem, SIZE_T dwBytes)
                   if ( v6 >= v4 )
                     v6 = v4;
                   memcpy_0(v17, lpMem, v6);
-                  v16 = __sbh_find_block(lpMem);
-                  sub_48D6E8(v16, lpMem);
+                  v16 = (int)__sbh_find_block(lpMem, lpMem);
+                  sub_48D6E8((_DWORD *)v16, (int)lpMem);
                 }
               }
             }
@@ -73,11 +73,11 @@ void *__cdecl sub_488DD7(LPVOID lpMem, SIZE_T dwBytes)
                 if ( v7 >= v4 )
                   v7 = v4;
                 memcpy_0(v17, lpMem, v7);
-                sub_48D6E8(v16, lpMem);
+                sub_48D6E8((_DWORD *)v16, (int)lpMem);
               }
             }
           }
-          ms_exc.registration.TryLevel = -1;
+          *((int*)&ms_exc + 5) = -1;
           _unlock(9);
           if ( !v16 )
           {
@@ -104,15 +104,15 @@ void *__cdecl sub_488DD7(LPVOID lpMem, SIZE_T dwBytes)
         if ( v4 <= 0xFFFFFFE0 )
         {
           _lock(9);
-          ms_exc.registration.TryLevel = 1;
-          v8 = (unsigned __int8 *)sub_48E418(v2, &v12, &v15);
+          *((int*)&ms_exc + 5) = 1;
+          v8 = (unsigned __int8 *)sub_48E418((unsigned int)v2, (_DWORD *)&v12, (unsigned int *)&v15);
           v9 = v8;
           v14 = v8;
           if ( v8 )
           {
             if ( v4 < dword_4B498C )
             {
-              if ( sub_48E7E0(v12, v15, v8, v4 >> 4) )
+              if ( sub_48E7E0(v12, (_DWORD *)v15, v8, v4 >> 4) )
               {
                 v17 = lpMem;
               }
@@ -149,7 +149,7 @@ void *__cdecl sub_488DD7(LPVOID lpMem, SIZE_T dwBytes)
           {
             v17 = HeapReAlloc(hHeap, 0, v2, v4);
           }
-          ms_exc.registration.TryLevel = -1;
+          *((int*)&ms_exc + 5) = -1;
           _unlock(9);
         }
         result = v17;

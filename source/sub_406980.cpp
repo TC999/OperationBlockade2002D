@@ -5,7 +5,7 @@ int __cdecl sub_406980(_DWORD *self)
   int v2; // edx
 
   result = self[5];
-  *self = &off_4990C8;
+  *self = (uint32)&off_4990C8;
   if ( result )
   {
     do
@@ -18,6 +18,6 @@ int __cdecl sub_406980(_DWORD *self)
     while ( v2 );
   }
   self[5] = 0;
-  *self = &off_499040;
+  *self = (uint32)&off_499040;
   return result;
 }

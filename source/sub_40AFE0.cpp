@@ -5,7 +5,7 @@ char *__stdcall sub_40AFE0(char *String2, char **a2)
   char *v3; // esi
   unsigned int v4; // kr04_4
 
-  result = (char *)sub_40B6E0(String2, 1);
+  result = (char *)sub_40B6E0(0, String2, 1);
   v3 = result;
   if ( result )
   {

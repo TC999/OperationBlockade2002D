@@ -21,9 +21,9 @@ _WORD *__cdecl sub_442F80(_DWORD *self, _WORD *a2)
   {
     v4 = self[6];
     if ( v4 )
-      v5 = sub_443250(v3, (self[7] - v4) >> 2);
+      v5 = sub_443250((int)v8, v3, (self[7] - v4) >> 2);
     else
-      v5 = sub_443250(v3, 0);
+      v5 = sub_443250((int)v8, v3, 0);
   }
   else
   {
@@ -32,8 +32,8 @@ _WORD *__cdecl sub_442F80(_DWORD *self, _WORD *a2)
   v6 = self[7];
   a2 = (_WORD *)v5;
   v10 = -1;
-  sub_44F190(v6, 1, &a2);
-  sub_4442A0(a2);
+  sub_44F190(v6, (_DWORD *)1, 0, (_DWORD *)&a2);
+  sub_4442A0((int)a2);
   sub_428680(self, (int)a2);
   if ( *(_BYTE *)(dword_4F5CC4 + 937) )
     (*(void (__cdecl **)(_WORD *, _DWORD))(*(_DWORD *)a2 + 24))(a2, 0);

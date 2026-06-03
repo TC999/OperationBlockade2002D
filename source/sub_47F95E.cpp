@@ -46,7 +46,7 @@ char __cdecl sub_47F95E(int a1)
       v4 = (int *)(v11 + *(_DWORD *)(a1 + 140));
       if ( *v4 < 0 )
         break;
-      v5 = v4 + 1;
+      v5 = (_DWORD *)(v4 + 1);
       v6 = v12 - (_DWORD)v4;
       v7 = 5;
       do

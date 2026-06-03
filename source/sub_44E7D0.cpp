@@ -31,16 +31,16 @@ char __cdecl sub_44E7D0(_DWORD *self, int a2)
         ++v4;
       }
     }
-    v8 = v3 + 34;
+    v8 = (int*)(v3 + 34);
     v9 = 16;
     do
     {
       v10 = *v8;
       if ( *v8 )
       {
-        LOBYTE(v2) = *(_BYTE *)(v10 + 53);
+        *(_BYTE *)&v2 = *(_BYTE *)(v10 + 53);
         if ( !(_BYTE)v2 )
-          LOBYTE(v2) = sub_41D9A0(v10);
+          *(_BYTE *)&v2 = sub_41D9A0(v10);
       }
       ++v8;
       --v9;

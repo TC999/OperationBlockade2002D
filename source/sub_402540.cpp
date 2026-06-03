@@ -3,7 +3,7 @@ int __cdecl sub_402540(int self, int a2)
 {
   double v3; // st7
   double v4; // st7
-  char v6; // c0
+  char v6 = 1; // c0
   long double v7; // st6
   int v8; // ecx
   int v9; // edx
@@ -14,8 +14,8 @@ int __cdecl sub_402540(int self, int a2)
   v3 = 0.0;
   if ( !*(_BYTE *)(dword_520970 + 296) )
   {
-    v11 = sub_408F80(0);
-    v3 = sub_408F80(1);
+    v11 = sub_408F80((float*)dword_520970, 0);
+    v3 = sub_408F80((float*)dword_520970, 1);
   }
   v12 = v11 * 0.25 + *(float *)(self + 404);
   *(float *)(self + 404) = v12;
@@ -42,5 +42,5 @@ int __cdecl sub_402540(int self, int a2)
   *(float *)(self + 32) = sin(v7) * *(float *)(self + 412) + *(float *)(self + 392);
   *(float *)(self + 36) = cos(v7) * *(float *)(self + 412) + *(float *)(self + 396);
   *(float *)(self + 40) = v4 * *(float *)(self + 416) + *(float *)(self + 400);
-  return sub_428620(a2);
+  return sub_428620((_DWORD*)self, a2);
 }

@@ -1,4 +1,7 @@
 //----- (0044F6F0) --------------------------------------------------------
+extern char aLoading[];
+extern "C" { __time32_t __cdecl _time32(__time32_t *); }
+
 char __cdecl sub_44F6F0(int self)
 {
   char result; // al
@@ -54,12 +57,12 @@ char __cdecl sub_44F6F0(int self)
   result = sub_408D20(self);
   if ( result )
   {
-    v3 = time(0);
+    v3 = _time32(0);
     srand(v3);
-    sub_421810(*(_DWORD *)(self + 132), off_4A70F0, (int)&unk_4A70F8, 0);
-    sub_421810(*(_DWORD *)(self + 132), off_4A7B78, (int)&unk_4A7B80, (int)&unk_4A8600);
-    sub_421810(*(_DWORD *)(self + 132), off_4A90B8, (int)&unk_4A90C0, (int)&unk_4A9B40);
-    v4 = sub_409AD0(1, 128);
+    sub_421810(*(_DWORD *)(self + 132), (const char *)off_4A70F0, (int)&unk_4A70F8, 0);
+    sub_421810(*(_DWORD *)(self + 132), (const char *)off_4A7B78, (int)&unk_4A7B80, (int)&unk_4A8600);
+    sub_421810(*(_DWORD *)(self + 132), (const char *)off_4A90B8, (int)&unk_4A90C0, (int)&unk_4A9B40);
+    v4 = (int)sub_409AD0((int*)self, 1, 128);
     *(_DWORD *)(self + 300) = v4;
     sub_421300(v4, 0xFFu, 0xFFu, 0xFFu, 255);
     sub_421370(*(_DWORD **)(self + 300), 0, 0, 0, 255);
@@ -73,7 +76,7 @@ char __cdecl sub_44F6F0(int self)
     v7 = *(_DWORD *)(self + 300);
     *(_BYTE *)(v7 + 33) = 1;
     sub_421540((void **)v7);
-    v8 = sub_409AD0(1, 128);
+    v8 = (int)sub_409AD0((int*)self, 1, 128);
     *(_DWORD *)(self + 304) = v8;
     sub_421300(v8, 0xFFu, 0xFFu, 0xFFu, 255);
     sub_421370(*(_DWORD **)(self + 304), 0, 0, 0, 255);
@@ -88,11 +91,11 @@ char __cdecl sub_44F6F0(int self)
     v12 = *(_DWORD *)(self + 304);
     *(_BYTE *)(v12 + 33) = 1;
     sub_421540((void **)v12);
-    v13 = sub_409AD0(2, 128);
+    v13 = (int)sub_409AD0((int*)self, 2, 128);
     *(_DWORD *)(self + 308) = v13;
     sub_421300(v13, 0xFFu, 0xFFu, 0xFFu, 178);
     *(_BYTE *)(self + 168) = 1;
-    v14 = (LPVOID *)sub_450BF0(1, 4.0);
+    v14 = (LPVOID *)sub_450BF0((_DWORD*)self, 1, 4.0f);
     sub_421110(v14, aLoading);
     return 1;
   }

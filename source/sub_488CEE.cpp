@@ -15,12 +15,12 @@ void __cdecl sub_488CEE(LPVOID lpMem)
     if ( dword_523A84 == 3 )
     {
       ((void (__cdecl *)(int))_lock)(9);
-      ms_exc.registration.TryLevel = 0;
-      v1 = ((int (__cdecl *)(LPVOID))__sbh_find_block)(lpMem);
+      *((int*)&ms_exc + 5) = 0;
+      v1 = ((int (__cdecl *)(LPVOID, LPVOID))__sbh_find_block)(lpMem, lpMem);
       v7 = v1;
       if ( v1 )
-        sub_48D6E8(v1, lpMem);
-      ms_exc.registration.TryLevel = -1;
+        sub_48D6E8((_DWORD *)v1, (int)lpMem);
+      *((int*)&ms_exc + 5) = -1;
       ((void (__cdecl *)(int))_unlock)(9);
       v2 = v7 == 0;
     }
@@ -33,12 +33,12 @@ LABEL_11:
         return;
       }
       ((void (__cdecl *)(int))_lock)(9);
-      ms_exc.registration.TryLevel = 1;
-      v3 = sub_48E418(lpMem, &v4, &v6);
+      *((int*)&ms_exc + 5) = 1;
+      v3 = sub_48E418((unsigned int)lpMem, (_DWORD *)&v4, (unsigned int *)&v6);
       v5 = v3;
       if ( v3 )
-        sub_48E46F(v4, v6, v3);
-      ms_exc.registration.TryLevel = -1;
+        sub_48E46F(v4, v6, (_BYTE *)v3);
+      *((int*)&ms_exc + 5) = -1;
       ((void (__cdecl *)(int))_unlock)(9);
       v2 = v5 == 0;
     }

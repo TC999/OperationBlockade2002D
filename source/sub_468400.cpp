@@ -1,4 +1,7 @@
 //----- (00468400) --------------------------------------------------------
+extern char aIsland[];
+extern char aWater[];
+
 int __cdecl sub_468400(int self, float a2)
 {
   double v3; // st7
@@ -39,7 +42,7 @@ int __cdecl sub_468400(int self, float a2)
     }
   }
   *(float *)&v18 = *(float *)(dword_520970 + 72) * 0.0026179941;
-  sub_4685D0(aWater, v18, 0.059999999, 0.015);
+  sub_4685D0((int)aWater, v18, (char *)"", 0, 0.059999999f, 0.015f, 0.0f);
   result = *(_DWORD *)(self + 620);
   for ( i = 0; i < result; ++i )
   {
@@ -91,7 +94,7 @@ int __cdecl sub_468400(int self, float a2)
       v10 = *(float *)(v8 + 12) * 1.5707964;
     }
     v19 = sin(v10);
-    sub_468750(*(_DWORD *)v8, v19);
+    sub_468750((_DWORD *)(*(_DWORD *)v8), v19);
     result = *(_DWORD *)(self + 620);
   }
   return result;

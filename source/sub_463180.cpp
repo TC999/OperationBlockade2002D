@@ -1,3 +1,5 @@
+extern char aHostSendingLis[];
+
 //----- (00463180) --------------------------------------------------------
 int __cdecl sub_463180(_BYTE *self)
 {
@@ -31,7 +33,7 @@ int __cdecl sub_463180(_BYTE *self)
   v5 = self + 896;
   do
   {
-    sub_4229D0("%d: %s", *(_DWORD *)ArgList, v5 + 3);
+    sub_4229D0((char *)"%d: %s", *(_DWORD *)ArgList, v5 + 3);
     v6 = *v5;
     v7 = v5[2];
     *((_DWORD *)v4 - 7) = *((_DWORD *)v5 - 2);
@@ -44,13 +46,13 @@ int __cdecl sub_463180(_BYTE *self)
     v10 = v4 - 24;
     v5 += 352;
     v4 += 35;
-    strcpy(v10, v5 + 3);
+    strcpy(v10, (const char *)(v5 + 3));
     ++*(_DWORD *)ArgList;
   }
   while ( *(int *)ArgList < 4 );
   v15[472] = 0;
-  sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x601, v16, 148, 15, 0);
-  sub_436E20(*(_DWORD *)(dword_520970 + 224));
+  sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x601, (_WORD *)v16, 148, 15, 0);
+  sub_436E20((char *)(uintptr_t)*(_DWORD *)(dword_520970 + 224));
   result = *((_DWORD *)v15 + 130);
   v12 = 0;
   if ( result > 0 )
@@ -58,7 +60,7 @@ int __cdecl sub_463180(_BYTE *self)
     v13 = v15 + 884;
     do
     {
-      *(_DWORD *)v13 = sub_436E40(*(char **)(dword_520970 + 224), v13 + 15);
+      *(_DWORD *)v13 = sub_436E40(*(char **)(dword_520970 + 224), (const char *)(v13 + 15));
       result = *((_DWORD *)v15 + 130);
       ++v12;
       v13 += 352;

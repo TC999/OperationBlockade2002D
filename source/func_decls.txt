@@ -832,7 +832,7 @@ int __stdcall sub_46CF1A(int a1, int a2, int *a3, int a4, int a5, int a6, int a7
 int __thiscall sub_4013F0(_DWORD *self);
 int __thiscall sub_401450(_DWORD *self);
 int __thiscall sub_401550(float *self);
-int __thiscall sub_401600(float *self);
+float *__cdecl sub_401600(float *self);
 int __thiscall sub_401EC0(int self);
 int __thiscall sub_402430(char *self, int a2, int a3);
 int __thiscall sub_402530(_DWORD *self);

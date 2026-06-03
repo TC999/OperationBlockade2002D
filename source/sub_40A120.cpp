@@ -13,8 +13,8 @@ char sub_40A120(char a1, char *Format, ...)
     if ( _vsnprintf(Buffer, 0x1FEu, Format, va) == -1 )
       Buffer[510] = 0;
     strcat(Buffer, asc_4A1F30);
-    fputs(Buffer, dword_4F5B04);
-    return fflush(dword_4F5B04);
+    fputs(Buffer, (FILE *)dword_4F5B04);
+    return (char)fflush((FILE *)dword_4F5B04);
   }
   return result;
 }

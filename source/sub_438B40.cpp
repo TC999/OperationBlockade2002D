@@ -1,3 +1,9 @@
+extern char aSoundsCelebrat[];
+extern char aSoundsWarmapLo[];
+extern char aCommander[];
+extern char aCommandertakeb[];
+extern char aCommanderprovi[];
+
 //----- (00438B40) --------------------------------------------------------
 char *__cdecl sub_438B40(int self)
 {
@@ -10,12 +16,12 @@ char *__cdecl sub_438B40(int self)
   char *v8; // eax
   float v10; // [esp+0h] [ebp-20h]
 
-  v2 = operator new(0x15Cu);
+  v2 = (_DWORD *)operator new(0x15Cu);
   if ( v2 )
     v3 = sub_41C6A0(v2);
   else
     v3 = 0;
-  *(_DWORD *)(self + 412) = v3;
+  *(_DWORD *)(self + 412) = (int)v3;
   sub_41C7A0((int)v3, 1);
   if ( *(_DWORD *)(self + 396) == 11 )
   {
@@ -57,9 +63,9 @@ char *__cdecl sub_438B40(int self)
     v6[34] = 1084227584;
   }
   while ( v5 < 1680 );
-  sub_43A120(*(_DWORD *)(self + 396));
+  sub_43A120(self, *(_DWORD *)(self + 396));
   v8 = sub_403620((_DWORD *)dword_4B5AB0, aCommander);
-  *(_DWORD *)(self + 468) = v8;
+  *(_DWORD *)(self + 468) = (int)v8;
   sub_402FC0((int)v8);
   sub_4030B0(*(_DWORD **)(self + 468), 0, aCommandertakeb, -1);
   sub_4030B0(*(_DWORD **)(self + 468), 0, aCommanderprovi, *(_DWORD *)(self + 396));

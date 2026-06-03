@@ -12,7 +12,7 @@ float *__cdecl sub_47B28E(float *a1, float *a2)
   char *v10; // [esp+14h] [ebp-4h]
 
   v2 = (char *)a2 - (char *)a1;
-  v10 = (char *)((char *)flt_4B1580 - (char *)a1);
+  v10 = (char *)((char *)&flt_4B1580 - (char *)a1);
   v3 = a1;
   v9 = 3;
   do
@@ -39,7 +39,7 @@ float *__cdecl sub_47B28E(float *a1, float *a2)
     v2 = (char *)a2 - (char *)a1;
     if ( result )
     {
-      v8 = (*v6 - *v3) / (*(float *)((char *)v3 + (char *)a2 - (char *)a1) - *v3);
+      v8 = (*v6 - *v3) / (*(float *)((char *)v3 + (int)((char *)a2 - (char *)a1)) - *v3);
       if ( *v3 <= (double)*v6 )
       {
         result = a2;

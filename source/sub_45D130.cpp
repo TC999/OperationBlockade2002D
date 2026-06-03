@@ -14,7 +14,7 @@ int __cdecl sub_45D130(_DWORD *self)
       v4 = (int (__cdecl ***)(_DWORD, int))self[163];
       self[162] = 0;
       if ( v4 )
-        result = (**v4)(v4, 1);
+        result = (**v4)((uint32)(uintptr_t)v4, 1);
       self[163] = 0;
     }
   }

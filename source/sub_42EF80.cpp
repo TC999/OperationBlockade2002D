@@ -87,7 +87,7 @@ void __stdcall sub_42EF80(int ArgList, int a2, float *a3)
     v4 = v79;
     do
     {
-      *v4++ = sub_42FCC0(a2, LODWORD(v25), -1);
+      *v4++ = sub_42FCC0((_DWORD *)a2, LODWORD(v25), -1, -1);
       --v3;
     }
     while ( v3 );
@@ -196,7 +196,7 @@ void __stdcall sub_42EF80(int ArgList, int a2, float *a3)
         v35 = v13 + v44 * v23 + v38;
         v36 = v36 + v75;
         v37 = v37 + v76;
-        if ( !sub_416350(*(_DWORD *)(v11 + 468), &v35, 1) )
+        if ( !sub_416350(*(_DWORD *)(v11 + 468), (_DWORD*)(&v35), 1) )
           break;
         v14 = (_DWORD *)(*(_DWORD *)(v11 + 468) + 120);
         *v14 = *(_DWORD *)a3;
@@ -208,7 +208,7 @@ void __stdcall sub_42EF80(int ArgList, int a2, float *a3)
         v22 = 0;
         while ( sub_4196F0(*(_DWORD *)(v11 + 468), a3, 3.1415927, COERCE_FLOAT(1), 1, 0) )
         {
-          v15 = sub_417140(0);
+          v15 = sub_417140(*(_DWORD **)(v11 + 468), 0);
           v66 = *(float *)v15;
           v16 = v66 * *a3;
           v67 = *(float *)(v15 + 4);

@@ -85,13 +85,13 @@ LABEL_12:
   v33 = *(float *)(v18 + 300);
   if ( *(_BYTE *)(v18 + 312) || (v19 = fabs(v29), v30 = v19, v19 <= *(float *)(self + 460)) )
   {
-    sub_462090(v33);
+    sub_462090(self, v33);
     return 4;
   }
   else if ( v30 >= (double)*(float *)(self + 464) )
   {
     v35 = *(float *)(self + 468) * 0.0099999998 * v33;
-    sub_462090(v35);
+    sub_462090(self, v35);
     return 4;
   }
   else
@@ -103,7 +103,7 @@ LABEL_12:
     else
       v22 = (v30 - v20) / v21;
     v34 = (v22 * *(float *)(self + 468) + (1.0 - v22) * 100.0) * 0.0099999998 * v33;
-    sub_462090(v34);
+    sub_462090(self, v34);
     return 4;
   }
 }

@@ -1,4 +1,7 @@
 //----- (00449B70) --------------------------------------------------------
+extern char aImpacts[];
+extern char aDefaultImpacts[];
+
 char __cdecl sub_449B70(_DWORD *self)
 {
   int v2; // edi
@@ -28,7 +31,7 @@ char __cdecl sub_449B70(_DWORD *self)
     self[5] = v4;
   }
 LABEL_7:
-  v5 = self + 8;
+  v5 = (_BYTE *)(self + 8);
   v6 = 2024;
   do
   {

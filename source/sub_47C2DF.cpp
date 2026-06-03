@@ -48,9 +48,9 @@ int __cdecl sub_47C2DF(_DWORD *a1, unsigned int a2, unsigned int a3)
 LABEL_11:
     v7 = v4 + 16;
     if ( v13 )
-      v8 = dword_49C2A8[a2];
+      v8 = ((int*)&dword_49C2A8)[a2];
     else
-      v8 = dword_49C2A0[a2];
+      v8 = ((int*)&dword_49C2A0)[a2];
     if ( v8 > 1000000000 - v7 )
       v8 = 1000000000 - v7;
     while ( 1 )
@@ -74,7 +74,7 @@ LABEL_11:
     v6[2] = a3 + v8;
     if ( !v13 )
       v9 = v14;
-    *v9 = v6;
+    *v9 = (uint32)(size_t)v6;
   }
   v10 = v6[1];
   v6[2] -= v4;

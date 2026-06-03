@@ -37,9 +37,10 @@ void __cdecl sub_47DCDB(int *a1, int a2, int a3)
 
   if ( a2 && a1 )
   {
+    int *sample_table = (int*)&dword_49C33C;
     v3 = *a1;
-    v4 = dword_49C33C[a3] * *a1;
-    v29 = dword_49C33C[a3];
+    v4 = sample_table[a3] * *a1;
+    v29 = sample_table[a3];
     v5 = *((unsigned __int8 *)a1 + 11);
     if ( v5 == 1 )
     {
@@ -201,7 +202,7 @@ void __cdecl sub_47DCDB(int *a1, int a2, int a3)
           qmemcpy(v26, v7, 4 * (v30 >> 2));
           v11 = &v7[4 * v9];
           v10 = &v26[4 * v9];
-          LOBYTE(v9) = v8;
+          BYTEn(v9, 0) = v8;
           v12 = v29;
           v13 = v29 <= 0;
           qmemcpy(v10, v11, v9 & 3);

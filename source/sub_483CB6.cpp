@@ -65,7 +65,7 @@ int __cdecl sub_483CB6(_DWORD *a1, char *a2)
     {
       v9 = v16;
       if ( v2[10] == 2 )
-        v9 = dword_49CF48[v16];
+        v9 = ((int*)&dword_49CF48)[v16];
       v10 = (int *)&a2[4 * v9];
       v11 = *v10 + 1;
       v12 = v11 * (v15 / *v10);

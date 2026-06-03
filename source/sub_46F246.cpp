@@ -51,16 +51,16 @@ int __cdecl sub_46F246(_DWORD *self)
         v11 = v3[1];
         v26 = *v8;
         v24 = v10;
-        LOWORD(v10) = *v3 & 0xE3;
+        *(_WORD *)&v10 = *v3 & 0xE3;
         v12 = (v26 & 0xE3) + v10 + (v9 & 0xE3) + (v11 & 0xFFFF00E3) + 66;
-        HIWORD(v13) = 0;
+        ((_WORD *)&v13)[1] = 0;
         v14 = v11 & 0xFF1C;
-        LOWORD(v13) = v14;
+        *(_WORD *)&v13 = (unsigned __int16)v14;
         v15 = v25++;
-        *v15 = (((v26 & 0xFF1C) + (v24 & 0xFF1C) + (v9 & 0xFF1Cu) + v14 + 520) >> 2)
+        *v15 = (unsigned __int16)((((v26 & 0xFF1C) + (v24 & 0xFF1C) + (v9 & 0xFF1Cu) + v14 + 520) >> 2)
              ^ ((unsigned __int8)(((v26 & 0xFFFFFF1C) + (v24 & 0xFFFFFF1C) + (v9 & 0xFF1C) + v13 + 520) >> 2)
               ^ (unsigned __int8)(v12 >> 2))
-             & 0xE3;
+             & 0xE3);
         v3 = v23 + 2;
         v8 = v22 + 2;
         v23 = v3;

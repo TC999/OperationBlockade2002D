@@ -38,7 +38,7 @@ LABEL_5:
     sub_47E2BE(v3, a3);
     return;
   }
-  sub_47D9E9(v3, (int)&Buf, 4);
+  sub_47D9E9((int)v3, (int)&Buf, 4);
   if ( !sub_47E2BE(v3, 0) )
   {
     v7 = sub_47D9C3((unsigned __int8 *)&Buf);

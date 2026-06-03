@@ -8,7 +8,7 @@ _DWORD *__cdecl sub_412AB0(_DWORD *self)
   char *v7; // [esp+34h] [ebp-28h]
   _DWORD v8[5]; // [esp+48h] [ebp-14h] BYREF
 
-  v8[1] = self;
+  v8[1] = (int)self;
   self[1] = 0;
   self[2] = 0;
   self[3] = 0;
@@ -39,7 +39,7 @@ _DWORD *__cdecl sub_412AB0(_DWORD *self)
   *((_BYTE *)self + 112) = 1;
   self[29] = 0;
   self[30] = 0;
-  *self = &off_4991D4;
+  *self = (uint32)&off_4991D4;
   v7 = (char *)(self + 30);
   v4 = **(_DWORD **)ArgList;
   v8[4] = 0;

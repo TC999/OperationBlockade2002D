@@ -61,7 +61,7 @@ void __cdecl sub_4685D0(int a1, int a2, char *String2, int a4, float a5, float a
         (*(void (**)(void))(*(_DWORD *)a2 + 48))();
       }
       v8 += 172;
-      ++LODWORD(v19);
+      ++*(_DWORD *)&v19;
     }
     while ( SLODWORD(v19) < *(_DWORD *)(a1 + 8) );
   }

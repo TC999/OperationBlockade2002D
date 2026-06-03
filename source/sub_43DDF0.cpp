@@ -1,3 +1,6 @@
+extern char aIconup[];
+extern char aIcondown[];
+
 //----- (0043DDF0) --------------------------------------------------------
 char __cdecl sub_43DDF0(_DWORD *self, char *String1, int a3)
 {

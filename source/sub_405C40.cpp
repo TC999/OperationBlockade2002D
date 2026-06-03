@@ -18,7 +18,7 @@ int __stdcall sub_405C40(int a1, int a2, int a3)
   if ( !v4 )
   {
 LABEL_28:
-    sub_41BEF0(a2, 0, -1, -1);
+    sub_41BEF0((_DWORD *)dword_520A50, a2, 0, -1, -1);
     goto LABEL_29;
   }
   v5 = a3;
@@ -57,13 +57,13 @@ LABEL_28:
   if ( *(_BYTE *)(v7 + 80) )
     v3 = 1;
   if ( v5 && (v9 = *(_DWORD *)(v5 + 92)) != 0 && *(_BYTE *)(v9 + 84) )
-    sub_41BEF0(a2, *(_DWORD *)(v9 + 88), v3 != 0, 0);
+    sub_41BEF0((_DWORD *)dword_520A50, a2, *(_DWORD *)(v9 + 88), v3 != 0, 0);
   else
-    sub_41BEF0(a2, v8, v3 != 0, 0);
+    sub_41BEF0((_DWORD *)dword_520A50, a2, v8, v3 != 0, 0);
 LABEL_29:
   if ( *(_BYTE *)(a1 + 56) )
     v10 = 2;
   else
     v10 = v12 != 0;
-  return sub_41BC00(-1, v10, 1, 0, 1, -1, *(_BYTE *)(a1 + 82) == 0);
+  return sub_41BC00((_DWORD *)dword_520A50, -1, v10, 1, 0, 1, -1, *(_BYTE *)(a1 + 82) == 0);
 }

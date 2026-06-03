@@ -1,3 +1,5 @@
+extern char aScore[];
+
 //----- (00436EC0) --------------------------------------------------------
 unsigned int __cdecl sub_436EC0(_DWORD *self, unsigned int a2, int a3, int ArgList)
 {

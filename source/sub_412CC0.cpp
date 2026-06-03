@@ -32,10 +32,10 @@ int __cdecl sub_412CC0(int self, int a2)
         v9 = (v3 - *(float *)(self + 72)) / v8;
       v7 = (__int64)(((double)*(int *)(self + 84) - (double)*(int *)(self + 80)) * v9 + (double)*(int *)(self + 80));
     }
-    sub_413180(v7, 0);
+    sub_413180(self, (int)v7, 0);
   }
   if ( !*(_DWORD *)(self + 124) )
-    *(_DWORD *)(self + 124) = sub_409960((_DWORD *)dword_520970, self);
+    *(_DWORD *)(self + 124) = (int)sub_409960((_DWORD *)dword_520970, self);
   *(_DWORD *)(*(_DWORD *)(self + 124) + 28) = 0;
   *(_DWORD *)(*(_DWORD *)(self + 124) + 12) = 6;
   *(_DWORD *)(*(_DWORD *)(self + 124) + 36) = *(_DWORD *)(self + 108);

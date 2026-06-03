@@ -12,11 +12,11 @@ _DWORD *__cdecl sub_4233C0(_DWORD *self, int a2, const char *a3)
   self[8] = 0;
   *((_BYTE *)self + 36) = 1;
   self[10] = a2;
-  *self = &off_499368;
+  *self = (uint32)&off_499368;
   v4 = (char *)operator new(strlen(a3) + 1);
-  self[5] = v4;
+  self[5] = (uint32)v4;
   strcpy(v4, a3);
   sub_423600(self);
-  sub_423520(0);
+  sub_423520((int)self, 0);
   return self;
 }

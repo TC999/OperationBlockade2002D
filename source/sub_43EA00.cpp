@@ -15,11 +15,11 @@ int __cdecl sub_43EA00(_DWORD *self, const char *a2, int a3, int a4, char a5)
     v6 = self[30];
     if ( v6 <= 0 || (v7 = *(_DWORD *)(self[31] + 72 * v6 - 72), v7 != a4) && v7 )
     {
-      v8 = sub_45E6F0(a4);
+      v8 = sub_45E6F0((_DWORD *)a4, 0);
       if ( v8 > -1 )
       {
         sprintf(Buffer, "%s:", (const char *)(*(_DWORD *)(dword_520970 + 280) + 352 * v8 + 899));
-        sub_43EA00(Buffer, a3, a4, 0);
+        sub_43EA00(self, Buffer, a3, a4, 0);
       }
     }
   }

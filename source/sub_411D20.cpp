@@ -23,7 +23,7 @@ int __cdecl sub_411D20(_DWORD *self)
     v5 = v3[1];
     *v3 = 0;
     v3[1] = self[7];
-    self[7] = v3;
+    self[7] = (uint32)(uintptr_t)(v3);
     self[8] = v5;
     if ( !v5 )
       self[9] = 0;

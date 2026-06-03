@@ -1,4 +1,7 @@
 //----- (0046D957) --------------------------------------------------------
+typedef BOOL (WINAPI *IsDebuggerPresentFunc)(void);
+static IsDebuggerPresentFunc pfnIsDebuggerPresent = 0;
+static DWORD s_dwData = 0;
 BOOL __stdcall sub_46D957(const char *ArgList, int a2, const char *a3)
 {
   HMODULE ModuleHandleA; // eax
@@ -9,26 +12,26 @@ BOOL __stdcall sub_46D957(const char *ArgList, int a2, const char *a3)
   HKEY phkResult; // [esp+110h] [ebp-8h] BYREF
   DWORD cbData; // [esp+114h] [ebp-4h] BYREF
 
-  sub_46D8FD(0, "Assertion failure! (%s %d): %s", ArgList, a2, a3);
+  sub_46D8FD(0, (char *)"Assertion failure! (%s %d): %s", ArgList, a2, a3);
   if ( !dword_521724 )
   {
     cbData = 4;
     dword_521724 = 1;
     ModuleHandleA = GetModuleHandleA("kernel32.dll");
     if ( ModuleHandleA || (ModuleHandleA = LoadLibraryA("kernel32.dll")) != 0 )
-      IsDebuggerPresent = GetProcAddress(ModuleHandleA, "IsDebuggerPresent");
+      pfnIsDebuggerPresent = (IsDebuggerPresentFunc)GetProcAddress(ModuleHandleA, "IsDebuggerPresent");
     if ( RegOpenKeyA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Direct3D", &phkResult) )
       return 0;
-    v4 = RegQueryValueExA(phkResult, "D3DX", 0, &Type, &Data, &cbData);
+    v4 = RegQueryValueExA(phkResult, "D3DX", 0, &Type, (LPBYTE)&dword_521724, &cbData);
     RegCloseKey(phkResult);
     if ( v4 || Type != 4 || cbData != 4 )
       return 0;
   }
-  if ( !*(_DWORD *)&Data )
+  if ( !*(_DWORD *)&s_dwData )
     return 0;
-  if ( *(_DWORD *)&Data == 1 )
+  if ( *(_DWORD *)&s_dwData == 1 )
     return 1;
-  if ( *(_DWORD *)&Data != 3 && (!IsDebuggerPresent || IsDebuggerPresent()) )
+  if ( *(_DWORD *)&s_dwData != 3 && (!pfnIsDebuggerPresent || pfnIsDebuggerPresent()) )
     return 0;
   _snprintf(
     Text,

@@ -3,7 +3,7 @@ int __cdecl sub_47F659(_DWORD *a1)
 {
   _DWORD *v2; // edi
   int v3; // eax
-  _DWORD *i; // eax
+  int i; // eax
   unsigned int v5; // ebx
   bool v6; // cf
   bool v7; // cc
@@ -20,7 +20,7 @@ int __cdecl sub_47F659(_DWORD *a1)
   _DWORD *v20; // [esp+30h] [ebp-10h]
   int v21; // [esp+34h] [ebp-Ch]
   int v22; // [esp+38h] [ebp-8h]
-  _DWORD *v23; // [esp+3Ch] [ebp-4h]
+  union { _DWORD *ptr; int val; } v23; // [esp+3Ch] [ebp-4h]
   int v24; // [esp+48h] [ebp+8h]
   int v25; // [esp+48h] [ebp+8h]
 
@@ -28,24 +28,24 @@ int __cdecl sub_47F659(_DWORD *a1)
   v2 = (_DWORD *)a1[97];
   if ( (int)a1[72] > 0 )
   {
-    v23 = a1 + 73;
+    v23.ptr = a1 + 73;
     do
     {
       v3 = (*(int (__cdecl **)(_DWORD *, _DWORD, int, _DWORD, int))(a1[1] + 32))(
              a1,
-             v2[*(_DWORD *)(*v23 + 4) + 18],
-             *(_DWORD *)(*v23 + 12) * a1[32],
-             *(_DWORD *)(*v23 + 12),
+             v2[*(_DWORD *)(*v23.ptr + 4) + 18],
+             *(_DWORD *)(*v23.ptr + 12) * a1[32],
+             *(_DWORD *)(*v23.ptr + 12),
              1);
-      ++v23;
+      ++v23.ptr;
       v14[v24++] = v3;
     }
     while ( v24 < a1[72] );
   }
-  for ( i = (_DWORD *)v2[6]; ; i = (_DWORD *)((char *)i + 1) )
+  for ( i = v2[6]; ; ++i )
   {
-    v7 = (int)i < v2[7];
-    v23 = i;
+    v7 = i < (int)v2[7];
+    v23.val = i;
     if ( !v7 )
     {
       if ( ++a1[32] >= a1[70] )
@@ -83,14 +83,14 @@ LABEL_20:
         if ( *(int *)(v8 + 56) > 0 )
         {
           v16 = (v17 * v9) << 7;
-          v20 = (_DWORD *)(v14[v25] + 4 * (_DWORD)v23);
+          v20 = (_DWORD *)(v14[v25] + 4 * v23.val);
           do
           {
             v10 = v16 + *v20;
             v21 = 0;
             if ( v9 > 0 )
             {
-              for ( j = &v2[v22 + 8]; ; j = v15 )
+              for ( j = (int *)&v2[v22 + 8]; ; j = v15 )
               {
                 ++v22;
                 *j = v10;
@@ -119,11 +119,11 @@ LABEL_20:
     v17 = v5;
     if ( !v6 )
     {
-      i = v23;
+      i = v23.val;
       goto LABEL_20;
     }
   }
-  v2[6] = v23;
+  v2[6] = v23.val;
   v2[5] = v5;
   return 0;
 }

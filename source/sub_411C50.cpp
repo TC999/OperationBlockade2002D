@@ -1,4 +1,7 @@
 //----- (00411C50) --------------------------------------------------------
+extern char aMpStartingDisc[];
+extern char aMpDisconnectFi[];
+
 int __cdecl sub_411C50(int self)
 {
   int v2; // eax
@@ -42,6 +45,6 @@ int __cdecl sub_411C50(int self)
     (*(void (__stdcall **)(_DWORD))(*(_DWORD *)v4 + 8))(*(_DWORD *)(self + 96));
     *(_DWORD *)(self + 96) = 0;
   }
-  sub_411D20(self);
-  return sub_4229D0(aMpDisconnectFi, v7);
+  sub_411D20((_DWORD *)self);
+  return (int)sub_4229D0(aMpDisconnectFi, v7);
 }

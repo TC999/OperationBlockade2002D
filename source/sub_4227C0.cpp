@@ -1,4 +1,7 @@
 //----- (004227C0) --------------------------------------------------------
+extern char aTexturesLoaded[];
+extern char aSDxDDk[];
+extern char aTotalOfDTextur[];
 int __cdecl sub_4227C0(_DWORD *self)
 {
   _DWORD *v2; // esi
@@ -15,5 +18,5 @@ int __cdecl sub_4227C0(_DWORD *self)
     ++i;
     sub_4229D0(aSDxDDk, v2[3]);
   }
-  return sub_4229D0(aTotalOfDTextur, i);
+  return (int)(uintptr_t)sub_4229D0(aTotalOfDTextur, i);
 }

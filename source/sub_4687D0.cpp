@@ -1,4 +1,8 @@
 //----- (004687D0) --------------------------------------------------------
+extern char aWater[];
+extern char aWave[];
+extern char aFoam[];
+
 int __cdecl sub_4687D0(int *self, int a2, int a3)
 {
   int result; // eax

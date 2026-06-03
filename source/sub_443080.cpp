@@ -1,4 +1,6 @@
 //----- (00443080) --------------------------------------------------------
+extern char aBoatmanagerRes[];
+
 int __cdecl sub_443080(_DWORD *self)
 {
   int v2; // eax
@@ -20,7 +22,7 @@ int __cdecl sub_443080(_DWORD *self)
     sub_4286C0(self, *(_DWORD *)(self[6] + 4 * i));
     v5 = *(void (__cdecl ****)(_DWORD, int))(self[6] + 4 * i);
     if ( v5 )
-      (**v5)(v5, 1);
+      (**v5)((_DWORD)(uintptr_t)v5, 1);
   }
   result = self[7];
   self[7] = self[6];

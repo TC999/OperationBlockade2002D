@@ -15,7 +15,7 @@ int __cdecl sub_465CF0(_DWORD *self, int a2, int a3, int a4, float a5)
       break;
     if ( *(_BYTE *)(*(_DWORD *)(v8 + 4 * i) + 16) )
     {
-      result = sub_466410(a2, a3, a4, a5);
+      result = sub_466410((int)a2, (int *)a3, (int *)a4, (int)LODWORD(a5), 0);
       if ( result )
         break;
     }

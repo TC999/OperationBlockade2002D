@@ -5,13 +5,13 @@ int __cdecl sub_443590(int self)
   int v3; // ebp
   int v5; // [esp+Ch] [ebp-14h]
 
-  *(_DWORD *)self = &off_4999E8;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_4999E8;
   if ( *(_DWORD *)(self + 444) )
   {
-    sub_415910();
+    sub_415910((void *)self);
     *(_DWORD *)(self + 444) = 0;
   }
-  sub_444030(0);
+  sub_444030((_DWORD *)self, 0);
   sub_4229D0("Deleting Boat: %d %s", *(_DWORD *)(self + 1456), *(const char **)(*(_DWORD *)(self + 408) + 4));
   v2 = *(_DWORD *)(self + 1432);
   v5 = *(_DWORD *)(self + 1436);

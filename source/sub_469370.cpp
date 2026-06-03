@@ -25,10 +25,10 @@ unsigned int __cdecl sub_469370(int self, int a2)
     v6 = *(_DWORD *)(self + 280);
     if ( !*(_DWORD *)(v2 + v6 + 4) )
     {
-      *(_DWORD *)(v2 + v6 + 4) = sub_469650(*(char **)(v2 + v6 + 8), *(char **)(v2 + v6 + 12), 1);
+      *(_DWORD *)(v2 + v6 + 4) = sub_469650((_DWORD *)self, *(char **)(v2 + v6 + 12), *(char **)(v2 + v6 + 8), 1);
       sub_40A120(
         *(_DWORD *)(*(_DWORD *)(self + 280) + v2 + 4) != 0,
-        "could not find type info for %s, see %s",
+        (char *)"could not find type info for %s, see %s",
         *(const char **)(*(_DWORD *)(self + 280) + v2 + 8),
         *(const char **)(self + 4));
       v7 = *(_DWORD *)(self + 280);
@@ -40,7 +40,7 @@ unsigned int __cdecl sub_469370(int self, int a2)
         v8 = sub_4696E0(*(_DWORD *)(v2 + v7 + 4), v9);
         sub_40A120(
           v8,
-          "linking mismatch, requested %s, received %s, see %s : %s",
+          (char *)"linking mismatch, requested %s, received %s, see %s : %s",
           v9,
           v10,
           v11,

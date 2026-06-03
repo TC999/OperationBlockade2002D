@@ -9,7 +9,7 @@ char __cdecl sub_4809B7(_DWORD *a1)
   v1 = a1[101];
   *(_DWORD *)(a1[100] + 88) += *(_DWORD *)(v1 + 20) / 8;
   *(_DWORD *)(v1 + 20) = 0;
-  result = (*(int (__cdecl **)(_DWORD *))(a1[100] + 8))(a1);
+  result = (char)(*(int (__cdecl **)(_DWORD *))(a1[100] + 8))(a1);
   if ( result )
   {
     v3 = 0;

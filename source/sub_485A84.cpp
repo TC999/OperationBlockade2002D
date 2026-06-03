@@ -70,16 +70,16 @@ LABEL_83:
           a1[8] = v49;
           a1[7] = v48;
           a2[1] = v46;
-          a2[2] += &v47[-*a2];
-          *a2 = v47;
-          a1[13] = v5;
+          a2[2] += (uint32)&v47[-*a2];
+          *a2 = (uint32)v47;
+          a1[13] = (uint32)v5;
           v9 = sub_4882D2(
                  *(unsigned __int8 *)(v6 + 16),
                  *(unsigned __int8 *)(v6 + 17),
                  *(_DWORD *)(v6 + 20),
                  *(_DWORD *)(v6 + 24),
                  a1,
-                 a2);
+                 (unsigned __int8 **)a2);
           v5 = (_BYTE *)a1[13];
           a3 = v9;
           v47 = (unsigned __int8 *)*a2;
@@ -106,7 +106,7 @@ LABEL_15:
           v12 = *(_DWORD *)(v6 + 12);
           if ( v48 >= v12 )
           {
-            v13 = (unsigned __int8 *)(*(_DWORD *)(v6 + 8) + 8 * (v49 & dword_4B2710[v12]));
+            v13 = (unsigned __int8 *)(*(_DWORD *)(v6 + 8) + 8 * (v49 & ((int*)&dword_4B2710)[v12]));
             v49 >>= v13[1];
             v48 -= v13[1];
             v39 = *v13;
@@ -127,7 +127,7 @@ LABEL_15:
                   goto LABEL_36;
                 }
                 *(_DWORD *)v6 = 9;
-                a2[6] = "invalid literal/length code";
+                a2[6] = (uint32)"invalid literal/length code";
 LABEL_89:
                 v38 = -3;
                 goto LABEL_85;
@@ -176,7 +176,7 @@ LABEL_91:
           break;
         }
         v16 = *(_DWORD *)(v6 + 8);
-        *(_DWORD *)(v6 + 4) += v49 & dword_4B2710[v15];
+        *(_DWORD *)(v6 + 4) += v49 & ((int*)&dword_4B2710)[v15];
         v49 >>= v16;
         v48 -= v16;
         *(_DWORD *)(v6 + 12) = *(unsigned __int8 *)(v6 + 17);
@@ -195,7 +195,7 @@ LABEL_30:
           v49 |= *v47++ << v48;
           v48 += 8;
         }
-        v18 = (unsigned __int8 *)(*(_DWORD *)(v6 + 8) + 8 * (v49 & dword_4B2710[v17]));
+        v18 = (unsigned __int8 *)(*(_DWORD *)(v6 + 8) + 8 * (v49 & ((int*)&dword_4B2710)[v17]));
         v49 >>= v18[1];
         v48 -= v18[1];
         v19 = v18;
@@ -210,13 +210,13 @@ LABEL_30:
         if ( (v20 & 0x40) != 0 )
         {
           *(_DWORD *)v6 = 9;
-          a2[6] = "invalid distance code";
+          a2[6] = (uint32)"invalid distance code";
           goto LABEL_89;
         }
         *(_DWORD *)(v6 + 12) = v20;
         v14 = &v19[8 * *((_DWORD *)v19 + 1)];
 LABEL_35:
-        *(_DWORD *)(v6 + 8) = v14;
+        *(_DWORD *)(v6 + 8) = (uint32)v14;
 LABEL_36:
         v8 = v45;
         continue;
@@ -241,7 +241,7 @@ LABEL_36:
           break;
         }
         v22 = *(_DWORD *)(v6 + 8);
-        *(_DWORD *)(v6 + 12) += v49 & dword_4B2710[v21];
+        *(_DWORD *)(v6 + 12) += v49 & ((int*)&dword_4B2710)[v21];
         v49 >>= v22;
         v48 -= v22;
         *(_DWORD *)v6 = 5;
@@ -272,7 +272,7 @@ LABEL_45:
               goto LABEL_62;
           }
         }
-        a1[13] = v5;
+        a1[13] = (uint32)v5;
         v26 = sub_486544(a1, a2, a3);
         v5 = (_BYTE *)a1[13];
         v50 = v26;
@@ -314,10 +314,10 @@ LABEL_85:
         a2[1] = v46;
 LABEL_86:
         v34 = &v47[-*a2];
-        *a2 = v47;
-        a2[2] += v34;
+        *a2 = (uint32)v47;
+        a2[2] += (uint32)v34;
 LABEL_87:
-        a1[13] = v5;
+        a1[13] = (uint32)v5;
         return sub_486544(a1, a2, v38);
       case 5:
         goto LABEL_41;
@@ -328,7 +328,7 @@ LABEL_87:
             || (v29 = a1[12], v30 = a1[10], v29 == v30)
             || ((v5 = (_BYTE *)a1[10], v30 >= v29) ? (v8 = a1[11] - v30) : (v8 = v29 - v30 - 1), !v8) )
           {
-            a1[13] = v5;
+            a1[13] = (uint32)v5;
             v31 = sub_486544(a1, a2, a3);
             v5 = (_BYTE *)a1[13];
             v50 = v31;
@@ -367,7 +367,7 @@ LABEL_87:
           ++v46;
           --v47;
         }
-        a1[13] = v5;
+        a1[13] = (uint32)v5;
         v36 = sub_486544(a1, a2, a3);
         v5 = (_BYTE *)a1[13];
         if ( (_BYTE *)a1[12] != v5 )
@@ -376,8 +376,8 @@ LABEL_87:
           a1[7] = v48;
           a2[1] = v46;
           v37 = &v47[-*a2];
-          *a2 = v47;
-          a2[2] += v37;
+          *a2 = (uint32)v47;
+          a2[2] += (uint32)v37;
           v38 = v36;
           goto LABEL_87;
         }

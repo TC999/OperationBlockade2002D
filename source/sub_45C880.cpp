@@ -20,7 +20,7 @@ void __cdecl sub_45C880(_DWORD *self)
   memset((void *)*self, 0, 4 * self[1]);
   v4 = (void *)*self;
   self[1] = 0;
-  sub_488CEE(v4);
+  (void)sub_488CEE(v4);
   self[2] = 0;
   *self = 0;
 }

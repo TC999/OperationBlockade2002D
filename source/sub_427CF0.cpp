@@ -1,4 +1,7 @@
 //----- (00427CF0) --------------------------------------------------------
+extern char aPresentNotRese[];
+extern char aPresentDeviceL[];
+extern char aPresentInvalid[];
 int sub_427CF0()
 {
   void **v0; // ecx

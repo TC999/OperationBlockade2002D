@@ -1,3 +1,5 @@
+extern char aSoundsUiMusicW[];
+
 //----- (00438DC0) --------------------------------------------------------
 char __cdecl sub_438DC0(int *self)
 {
@@ -23,8 +25,8 @@ char __cdecl sub_438DC0(int *self)
   int v21; // [esp+10h] [ebp-20h]
   int v22; // [esp+18h] [ebp-18h]
 
-  v2 = &off_4AA1E8;
-  v22 = sub_421B20(1);
+  v2 = (char **)&off_4AA1E8;
+  v22 = sub_421B20((_DWORD *)dword_520970, 1);
   v21 = (__int64)((double)(unsigned int)dword_5209D8 + 20.0);
   if ( off_4AA1E8 )
   {
@@ -33,7 +35,7 @@ char __cdecl sub_438DC0(int *self)
       if ( **v2 )
       {
         v3 = (int *)operator new(8u);
-        v4 = (LPVOID *)sub_409AD0(1, 1);
+        v4 = (LPVOID *)sub_409AD0((int *)dword_520970, 1, 1);
         *v3 = (int)v4;
         sub_421110(v4, *v2);
         *(_DWORD *)(*v3 + 20) = 1092616192;
@@ -54,7 +56,7 @@ char __cdecl sub_438DC0(int *self)
           v11 = (void *)self[122];
           v12 = v10 + 8;
           self[124] = v12;
-          v13 = sub_488DD7(v11, 4 * v12);
+          v13 = (int)sub_488DD7(v11, 4 * v12);
           if ( v13 )
           {
             v14 = self[123];
@@ -63,7 +65,7 @@ char __cdecl sub_438DC0(int *self)
             memset((void *)(v13 + 4 * v14), 0, 4 * v15);
           }
         }
-        *(_DWORD *)(self[122] + 4 * self[123] - 4) = v3;
+        *(_DWORD *)(self[122] + 4 * self[123] - 4) = (int)v3;
       }
       v16 = v2[1];
       ++v2;
@@ -71,7 +73,7 @@ char __cdecl sub_438DC0(int *self)
     }
     while ( v16 );
   }
-  v17 = operator new(0x15Cu);
+  v17 = (_DWORD *)operator new(0x15Cu);
   if ( v17 )
     v18 = sub_41C6A0(v17);
   else

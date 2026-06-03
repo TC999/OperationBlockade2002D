@@ -73,7 +73,7 @@ _BYTE *__cdecl sub_4850C7(int a1, int a2, int a3, int a4, int a5)
       v56 = v7[8];
       v10 = *v7;
       v53 = *(v7 - 8);
-      LOWORD(v50) = *(v7 - 24);
+      *(_WORD*)&v50 = *(v7 - 24);
       v11 = *(v7 - 40);
       v45 = v10;
       v49 = v11;
@@ -94,7 +94,7 @@ _BYTE *__cdecl sub_4850C7(int a1, int a2, int a3, int a4, int a5)
         v18 = ((__int16)*(v7 - 48) * v15) << 14;
         v19 = v17 + v18;
         v20 = v18 - v17;
-        LOWORD(v17) = v56 * v9[8];
+        *(_WORD*)&v17 = v56 * v9[8];
         v57 = v50 * *(v9 - 24);
         v54 = v53 * *(v9 - 8);
         v49 = (__int16)v49 * (__int16)*(v9 - 40);
@@ -154,7 +154,7 @@ _BYTE *__cdecl sub_4850C7(int a1, int a2, int a3, int a4, int a5)
       v41 = v34 - v39;
       v6 = v48;
       *result = *(_BYTE *)((v40 & 0x3FF) + v48);
-      LOBYTE(v40) = *(_BYTE *)((((v41 + 0x40000) >> 19) & 0x3FF) + v6);
+      *(_BYTE*)&v40 = *(_BYTE *)((((v41 + 0x40000) >> 19) & 0x3FF) + v6);
       v42 = v49;
       result[3] = v40;
       result[1] = *(_BYTE *)((((v42 + v38 + 0x40000) >> 19) & 0x3FF) + v6);

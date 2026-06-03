@@ -197,8 +197,8 @@ bool __cdecl sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
 bool __cdecl sub_408660(_DWORD *self, int a2);
 BOOL __cdecl sub_4088A0(int self);
 BOOL __cdecl sub_4088E0(int self);
-bool __cdecl sub_40AAF0(_DWORD *self, char *String2, char a3);
-bool __cdecl sub_40ABC0(_DWORD *self, char *String2, char a3);
+bool __cdecl sub_40AAF0(int self, char *String2, char a3);
+bool __cdecl sub_40ABC0(int self, char *String2, char a3);
 bool __cdecl sub_411480(_DWORD *self, _DWORD *a2, int a3, _WORD *a4, int a5, int a6, int a7);
 bool __cdecl sub_4117A0(_DWORD *self, _DWORD *a2, _WORD *a3, int a4, int a5, int a6);
 bool __cdecl sub_4117D0(int self, _DWORD *a2, _WORD *a3, int a4, int a5, int a6);
@@ -861,7 +861,7 @@ int __stdcall sub_46CF1A(int a1, int a2, int *a3, int a4, int a5, int a6, int a7
 int __cdecl sub_4013F0(_DWORD *self);
 int __cdecl sub_401450(_DWORD *self);
 int __cdecl sub_401550(float *self);
-int __cdecl sub_401600(float *self);
+float *__cdecl sub_401600(float *self);
 int __cdecl sub_401EC0(int self);
 int __cdecl sub_402430(char *self, int a2, int a3);
 int __cdecl sub_402530(_DWORD *self);

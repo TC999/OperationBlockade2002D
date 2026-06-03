@@ -56,15 +56,15 @@ LABEL_19:
     switch ( v10 )
     {
       case 827611204:
-        sub_47B039(self[6] + v6 * self[1043] + self[1042] * (a2 >> 2) + 8 * (v9 >> 2), v18);
+        sub_47B039(self[6] + v6 * self[1043] + self[1042] * (a2 >> 2) + 8 * (v9 >> 2), (int)(intptr_t)v18);
         break;
       case 844388420:
       case 861165636:
-        sub_47B9A3(self[6] + 16 * (v9 >> 2) + v6 * self[1043] + self[1042] * (a2 >> 2), v18);
+        sub_47B9A3(self[6] + 16 * (v9 >> 2) + v6 * self[1043] + self[1042] * (a2 >> 2), (char *)v18);
         break;
       case 877942852:
       case 894720068:
-        sub_47B9F1(self[6] + 16 * (v9 >> 2) + v6 * self[1043] + self[1042] * (a2 >> 2), v18);
+        sub_47B9F1((unsigned short *)(self[6] + 16 * (v9 >> 2) + v6 * self[1043] + self[1042] * (a2 >> 2)), (char *)v18);
         break;
     }
     v11 = v18;

@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00405770) --------------------------------------------------------
 bool __cdecl sub_405770(FILE **self, unsigned int Buffer)
 {
@@ -12,6 +14,6 @@ bool __cdecl sub_405770(FILE **self, unsigned int Buffer)
     return 0;
   v5 = operator new(Buffer);
   v6 = Buffer;
-  *v2 = v5;
+  *v2 = (uint32)(uintptr_t)(v5);
   return sub_4898CA(v5, v6, 1u, self[5]) == 1;
 }

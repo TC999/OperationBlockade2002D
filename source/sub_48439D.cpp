@@ -46,12 +46,12 @@ char __cdecl sub_48439D(_DWORD *a1, int a2, void **a3, int a4)
       v31 = 0;
       if ( v30 > 0 )
       {
-        v21 = (void **)((char *)v32 + v7);
+        v21 = (_DWORD*)((char *)v32 + v7);
         v29 = (_DWORD *)(v4 + 68);
         do
         {
           v8 = (unsigned __int8 *)(v31 + *v21);
-          v9 = *v32;
+          v9 = (_BYTE*)*v32;
           if ( *(_BYTE *)(v4 + 84) )
           {
             v27 = -1;
@@ -99,7 +99,7 @@ char __cdecl sub_48439D(_DWORD *a1, int a2, void **a3, int a4)
         while ( v31 < v30 );
         v7 = a2 - (_DWORD)a3;
       }
-      LOBYTE(v5) = *(_BYTE *)(v4 + 84) == 0;
+      *((_BYTE *)&v5) = *(_BYTE *)(v4 + 84) == 0;
       ++v32;
       v14 = v22-- == 1;
       *(_BYTE *)(v4 + 84) = v5;

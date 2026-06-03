@@ -1,3 +1,7 @@
+#include "common.h"
+
+struct Iostream_init { int _dummy[3]; Iostream_init(Iostream_init* p) { memset(p, 0, sizeof(Iostream_init)); } };
+
 //----- (0042FEB0) --------------------------------------------------------
 int __cdecl sub_42FEB0(int self, float a2, float a3)
 {
@@ -77,43 +81,43 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
   sub_401270((_DWORD *)self);
   v75 = 0;
   Iostream_init::Iostream_init((Iostream_init *)(self + 472));
-  v4 = LOBYTE(a2);
+  v4 = SLOBYTE(a2);
   *(_DWORD *)(self + 1368) = 0;
   *(_BYTE *)(self + 1364) = v4;
   *(_DWORD *)(self + 1372) = 0;
   *(_DWORD *)(self + 1376) = 0;
-  v5 = LOBYTE(a2);
+  v5 = SLOBYTE(a2);
   *(_DWORD *)(self + 1400) = 0;
   *(_BYTE *)(self + 1396) = v5;
   *(_DWORD *)(self + 1404) = 0;
   *(_DWORD *)(self + 1408) = 0;
   Iostream_init::Iostream_init((Iostream_init *)(self + 1432));
-  v6 = LOBYTE(a2);
+  v6 = SLOBYTE(a2);
   *(_DWORD *)(self + 2288) = 0;
   *(_BYTE *)(self + 2284) = v6;
   *(_DWORD *)(self + 2292) = 0;
   *(_DWORD *)(self + 2296) = 0;
   v7 = a2;
-  *(_DWORD *)self = &off_499458;
-  LOBYTE(v75) = 5;
-  sub_4229D0("Adding new airplane '%s'", *(const char **)(LODWORD(v7) + 4));
+  *(_DWORD *)self = (uintptr_t)&off_499458;
+  *(_BYTE *)&v75 = 5;
+  sub_4229D0((char *)"Adding new airplane '%s'", *(const char **)(LODWORD(v7) + 4));
   v8 = a3;
   *(_DWORD *)(self + 392) = -1;
   *(float *)(self + 464) = v8;
   *(float *)(self + 428) = v7;
   sub_4282E0(
     *(_DWORD *)(LODWORD(v7) + 564) != 0,
-    "model for %s not loaded, try deleting ExtraData.dat",
+    (char *)"model for %s not loaded, try deleting ExtraData.dat",
     *(const char **)(LODWORD(v7) + 4));
   v9 = COERCE_FLOAT(operator new(0x34u));
   a2 = v9;
-  LOBYTE(v75) = 6;
+  *(_BYTE *)&v75 = 6;
   if ( v9 == 0.0 )
     v10 = 0;
   else
     v10 = sub_406B00((_DWORD *)LODWORD(v9), *(_DWORD *)(LODWORD(v7) + 564), 0);
-  LOBYTE(v75) = 5;
-  *(_DWORD *)(self + 432) = v10;
+  *(_BYTE *)&v75 = 5;
+  *(_DWORD *)(self + 432) = (uint32)(uintptr_t)v10;
   sub_428680((_DWORD *)self, (int)v10);
   v72 = 0;
   v73 = 1203982336;
@@ -138,21 +142,21 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
   {
     sub_4282E0(
       *(_BYTE *)(v14 + 301),
-      "engine sound did not set 'engine = true', see %s : %s",
+      (char *)"engine sound did not set 'engine = true', see %s : %s",
       *(const char **)(v13 + 4),
       (const char *)(v13 + 16));
     v15 = *(_DWORD *)(self + 428);
     v72 = 0;
     v73 = 0;
     v74 = 0;
-    sub_44D850(*(_DWORD *)(v15 + 908), (int)&v72, COERCE_FLOAT(&v68), (int)&v69);
+    sub_44D850(*(_DWORD *)(v15 + 908), (float *)&v72, (_DWORD *)&v68, (_DWORD *)&v69);
     if ( v68 )
     {
       v16 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v68, 0, 1);
       *(_DWORD *)(self + 2272) = v16;
       if ( v16 )
       {
-        sub_41D8A0(*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 908) + 330));
+        sub_41D8A0(*(_BYTE **)(self + 2272), *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 908) + 330));
         sub_41D8B0(
           *(_DWORD **)(self + 2272),
           *(_DWORD *)v69,
@@ -181,21 +185,21 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
   {
     sub_4282E0(
       *(_BYTE *)(v19 + 301),
-      "rumble sound did not set 'engine = true', see %s : %s",
+      (char *)"rumble sound did not set 'engine = true', see %s : %s",
       *(const char **)(v18 + 4),
       (const char *)(v18 + 16));
     v20 = *(_DWORD *)(self + 428);
     v72 = 0;
     v73 = 0;
     v74 = 0;
-    sub_44D850(*(_DWORD *)(v20 + 912), (int)&v72, COERCE_FLOAT(&v68), (int)&v69);
+    sub_44D850(*(_DWORD *)(v20 + 912), (float *)&v72, (_DWORD *)&v68, (_DWORD *)&v69);
     if ( v68 )
     {
       v21 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v68, 0, 1);
       *(_DWORD *)(self + 2276) = v21;
       if ( v21 )
       {
-        sub_41D8A0(*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 912) + 330));
+        sub_41D8A0(*(_BYTE **)(self + 2276), *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 912) + 330));
         sub_41D8B0(
           *(_DWORD **)(self + 2276),
           *(_DWORD *)v69,
@@ -224,21 +228,21 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
   {
     sub_4282E0(
       *(_BYTE *)(v24 + 301),
-      "sputter sound did not set 'engine = true', see %s : %s",
+      (char *)"sputter sound did not set 'engine = true', see %s : %s",
       *(const char **)(v23 + 4),
       (const char *)(v23 + 16));
     v25 = *(_DWORD *)(self + 428);
     v72 = 0;
     v73 = 0;
     v74 = 0;
-    sub_44D850(*(_DWORD *)(v25 + 916), (int)&v72, COERCE_FLOAT(&v68), (int)&v69);
+    sub_44D850(*(_DWORD *)(v25 + 916), (float *)&v72, (_DWORD *)&v68, (_DWORD *)&v69);
     if ( v68 )
     {
       v26 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v68, 0, 1);
       *(_DWORD *)(self + 2280) = v26;
       if ( v26 )
       {
-        sub_41D8A0(*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 916) + 330));
+        sub_41D8A0(*(_BYTE **)(self + 2280), *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 916) + 330));
         sub_41D8B0(
           *(_DWORD **)(self + 2280),
           *(_DWORD *)v69,
@@ -261,7 +265,7 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
     }
   }
   if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
-    sub_4317B0(0);
+    sub_4317B0((_DWORD *)self, 0);
   v28 = *(_DWORD **)(self + 432);
   *(_BYTE *)(self + 396) = 1;
   sub_407250(v28);
@@ -289,7 +293,7 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
   if ( *(_BYTE *)(dword_4F5CC4 + 937) )
     sub_415770(*(_DWORD *)(self + 468), (float *)(v33 + 568), (float *)(v33 + 580), self, 0);
   else
-    sub_415770(*(_DWORD *)(self + 468), (float *)(v33 + 568), (float *)(v33 + 580), self, (int)sub_433790);
+    sub_415770(*(_DWORD *)(self + 468), (float *)(v33 + 568), (float *)(v33 + 580), self, (int)(uintptr_t)sub_433790);
   *(_DWORD *)(*(_DWORD *)(self + 468) + 4144) = 0;
   *(_BYTE *)(*(_DWORD *)(self + 468) + 4148) = 0;
   v34 = *(_DWORD *)(self + 428);
@@ -341,7 +345,7 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
             v56 = (*(_DWORD *)(self + 1404) - v53) >> 2;
           else
             v56 = 0;
-          sub_44F190(*(_DWORD *)(self + 1404), v52 - v56, &a2);
+          sub_44F190(self + 1396, *(_DWORD **)(self + 1404), v52 - v56, (_DWORD *)&a2);
         }
         v57 = 0;
         while ( 1 )
@@ -386,21 +390,21 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
         {
           sub_4282E0(
             *(_BYTE *)(v62 + 301),
-            "dive sound did not set 'engine = true', see %s : %s",
+            (char *)"dive sound did not set 'engine = true', see %s : %s",
             *(const char **)(v61 + 4),
             (const char *)(v61 + 16));
           v63 = *(_DWORD *)(self + 428);
           v72 = 0;
           v73 = 0;
           v74 = 0;
-          sub_44D850(*(_DWORD *)(v63 + 1012), (int)&v72, COERCE_FLOAT(&v68), (int)&v69);
+          sub_44D850(*(_DWORD *)(v63 + 1012), (float *)&v72, (_DWORD *)&v68, (_DWORD *)&v69);
           if ( v68 )
           {
             v64 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v68, 0, 1);
             *(_DWORD *)(self + 1424) = v64;
             if ( v64 )
             {
-              sub_41D8A0(*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 1012) + 330));
+              sub_41D8A0(*(_BYTE **)(self + 1424), *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 428) + 1012) + 330));
               sub_41D8B0(
                 *(_DWORD **)(self + 1424),
                 *(_DWORD *)v69,
@@ -484,7 +488,7 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
         v43 = (*(_DWORD *)(self + 1372) - v41) >> 2;
       else
         v43 = 0;
-      sub_44F190(*(_DWORD *)(self + 1372), v40 - v43, &a2);
+      sub_44F190(self + 1364, *(_DWORD **)(self + 1372), v40 - v43, (_DWORD *)&a2);
     }
     for ( i = 0; ; *(_DWORD *)(*(_DWORD *)(self + 1368) + 4 * i - 4) = 0 )
     {
@@ -496,6 +500,6 @@ int __cdecl sub_42FEB0(int self, float a2, float a3)
     *(_DWORD *)(self + 1380) = 0;
     *(_DWORD *)(self + 1384) = 0;
   }
-  sub_4229D0("Done adding new airplane '%s'", *(const char **)(*(_DWORD *)(self + 428) + 4));
+  sub_4229D0((char *)"Done adding new airplane '%s'", *(const char **)(*(_DWORD *)(self + 428) + 4));
   return self;
 }

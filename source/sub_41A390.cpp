@@ -1,4 +1,5 @@
 //----- (0041A390) --------------------------------------------------------
+extern char aDXD[];
 LRESULT sub_41A390()
 {
   LRESULT (__stdcall *v0)(HWND, UINT, WPARAM, LPARAM); // ebp
@@ -26,13 +27,13 @@ LRESULT sub_41A390()
   char lParam[256]; // [esp+24h] [ebp-100h] BYREF
 
   v0 = SendMessageA;
-  SendMessageA(dword_5200C4, 0x14Bu, 0, 0);
+  SendMessageA((HWND)dword_5200C4, 0x14Bu, 0, 0);
   if ( (_BYTE)dword_5200AC )
   {
-    v1 = SendMessageA(dword_5200C0, 0x147u, 0, 0);
+    v1 = SendMessageA((HWND)dword_5200C0, 0x147u, 0, 0);
     v16 = 0;
     v21 = 0;
-    v2 = &dword_4F6160[4323 * SendMessageA(dword_5200C0, 0x150u, v1, 0)];
+    v2 = &((int*)&dword_4F6160)[4323 * SendMessageA((HWND)dword_5200C0, 0x150u, v1, 0)];
     wParam = -1;
     v19 = -1;
     v22 = v2;
@@ -48,7 +49,7 @@ LRESULT sub_41A390()
       v6 = *(v3 - 1);
       v7 = *(v3 - 2);
       sprintf(lParam, "%d x %d - %d bit", v7, v6, v5);
-      v8 = SendMessageA(dword_5200C4, 0x143u, 0, (LPARAM)lParam);
+      v8 = SendMessageA((HWND)dword_5200C4, 0x143u, 0, (LPARAM)lParam);
       if ( v7 == *(_DWORD *)dword_4F5CD4 && v6 == *(_DWORD *)&dword_5200BC && !v16 )
       {
         wParam = v8;
@@ -65,7 +66,7 @@ LRESULT sub_41A390()
     if ( wParam <= -1 )
 LABEL_17:
       v9 = v19;
-    return v0(dword_5200C4, 0x14Eu, v9, 0);
+    return v0((HWND)dword_5200C4, 0x14Eu, v9, 0);
   }
   else
   {
@@ -77,7 +78,7 @@ LABEL_17:
       v12 = *v11;
       v13 = *(v11 - 1);
       sprintf(lParam, "%d x %d", v13, *v11);
-      v14 = SendMessageA(dword_5200C4, 0x143u, 0, (LPARAM)lParam);
+      v14 = SendMessageA((HWND)dword_5200C4, 0x143u, 0, (LPARAM)lParam);
       if ( v13 == *(_DWORD *)dword_4F5CD4 && v12 == *(_DWORD *)&dword_5200BC )
         v20 = v14;
       if ( v13 == 640 && v12 == 480 )
@@ -88,6 +89,6 @@ LABEL_17:
     v15 = v20;
     if ( v20 <= -1 )
       v15 = wParama;
-    return SendMessageA(dword_5200C4, 0x14Eu, v15, 0);
+    return SendMessageA((HWND)dword_5200C4, 0x14Eu, v15, 0);
   }
 }

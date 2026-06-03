@@ -1,5 +1,5 @@
 //----- (00401600) --------------------------------------------------------
-int __cdecl sub_401600(float *self)
+float *__cdecl sub_401600(float *self)
 {
   double v2; // st7
   double v3; // st7
@@ -77,10 +77,9 @@ int __cdecl sub_401600(float *self)
   float v76; // [esp+A8h] [ebp-18h] BYREF
   float v77; // [esp+ACh] [ebp-14h]
   float v78; // [esp+B0h] [ebp-10h]
-  __int64 v79; // [esp+B4h] [ebp-Ch]
+  float v79; // [esp+B4h] [ebp-Ch]
   float v80; // [esp+BCh] [ebp-4h]
 
-  v79 = (unsigned int)dword_5209D8;
   v2 = (double)(unsigned int)dword_5209D8;
   if ( v2 == 0.0 )
   {
@@ -88,7 +87,6 @@ int __cdecl sub_401600(float *self)
   }
   else
   {
-    v79 = (unsigned int)dword_5209F4;
     v23 = (double)(unsigned int)dword_5209F4 / v2;
   }
   v48 = self[11];
@@ -100,7 +98,7 @@ int __cdecl sub_401600(float *self)
   v50 = v4;
   v49 = v5;
   v50 = v4 - self[10];
-  sub_46B970(&v48, &v48);
+  sub_46B970((int)(LONG_PTR)&v48, (int)(LONG_PTR)&v48);
   v6 = v49 * self[16];
   v7 = v50 * self[15];
   v52 = v48;
@@ -126,7 +124,7 @@ int __cdecl sub_401600(float *self)
   v51 = v13;
   v24 = v13 * v23;
   v78 = self[16];
-  sub_46B970(&v76, &v76);
+  sub_46B970((int)(LONG_PTR)&v76, (int)(LONG_PTR)&v76);
   v76 = v76 * v51;
   v58 = v76;
   v64 = v76;
@@ -179,7 +177,7 @@ int __cdecl sub_401600(float *self)
   v68 = v27 + v68;
   v69 = v31 + v69;
   v19 = v35 + v45;
-  *(float *)&v79 = v19;
+  v79 = v19;
   v71 = v46 + v37;
   v63 = v78;
   v62 = v77;
@@ -218,7 +216,7 @@ int __cdecl sub_401600(float *self)
   v42 = v47 + v41;
   v39 = v20 * v38;
   v43 = v20 * v42;
-  v36 = v52 + *(float *)&v79 * v20;
+  v36 = v52 + v79 * v20;
   v40 = v53 + v39;
   v44 = v54 + v43;
   self[42] = v58 + self[8];

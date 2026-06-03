@@ -6,7 +6,10 @@ int __cdecl sub_47D953(int a1, LPVOID lpMem)
   if ( a1 )
   {
     if ( lpMem )
-      return sub_488CEE(lpMem);
+    {
+      sub_488CEE(lpMem);
+      return 0;
+    }
   }
   return result;
 }

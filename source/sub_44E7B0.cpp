@@ -5,6 +5,6 @@ int __cdecl sub_44E7B0(_DWORD *self, int a2)
 
   result = sub_44D770(self, a2);
   if ( result != -1 )
-    return sub_44E7D0(result);
+    return sub_44E7D0(self, result);
   return result;
 }

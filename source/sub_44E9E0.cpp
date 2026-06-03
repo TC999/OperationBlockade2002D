@@ -198,16 +198,16 @@ unsigned int __cdecl sub_44E9E0(_DWORD *self, char *a2, unsigned int a3, const v
       while ( v17 != v15 );
     }
     sub_4885A6((LPVOID)v4[1]);
-    v4[3] = &v38[268 * v39];
+    v4[3] = (uint32)&v38[268 * v39];
     v18 = v4[1];
     if ( v18 )
       v19 = (v4[2] - v18) / 268;
     else
       v19 = 0;
     v20 = v19 + a3;
-    v4[1] = v38;
+    v4[1] = (uint32)v38;
     result = 67 * v20;
-    v4[2] = &v38[268 * v20];
+    v4[2] = (uint32)&v38[268 * v20];
   }
   return result;
 }

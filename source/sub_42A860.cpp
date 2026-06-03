@@ -1,4 +1,5 @@
 //----- (0042A860) --------------------------------------------------------
+extern "C" void __cdecl __eh_vector_dtor_iterator(void *, unsigned int, int, void (__cdecl *)(void *));
 int __cdecl sub_42A860(LPVOID *self)
 {
   int i; // ebp
@@ -6,7 +7,7 @@ int __cdecl sub_42A860(LPVOID *self)
   void *v4; // eax
 
   *self = &off_49940C;
-  sub_42A840(self);
+  sub_42A840((uint32*)self);
   sub_4885A6(self[245]);
   self[245] = 0;
   self[246] = 0;
@@ -32,7 +33,7 @@ int __cdecl sub_42A860(LPVOID *self)
   sub_488CEE(v4);
   self[235] = 0;
   self[233] = 0;
-  `eh vector destructor iterator'(self + 156, 0x18u, 5, (void (__cdecl *)(void *))sub_42A9D0);
+  __eh_vector_dtor_iterator(self + 156, 0x18u, 5, (void (__cdecl *)(void *))sub_42A9D0);
   sub_4885A6(self[153]);
   self[153] = 0;
   self[154] = 0;

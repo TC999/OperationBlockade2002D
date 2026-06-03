@@ -13,7 +13,7 @@ char __cdecl sub_48D4A3(int a1)
     {
       ModuleHandleA = (HMODULE)((char *)ModuleHandleA + v2);
       *(_BYTE *)a1 = *((_BYTE *)ModuleHandleA + 26);
-      LOBYTE(ModuleHandleA) = *((_BYTE *)ModuleHandleA + 27);
+      *(_BYTE*)&(ModuleHandleA) = *((_BYTE *)ModuleHandleA + 27);
       *(_BYTE *)(a1 + 1) = (_BYTE)ModuleHandleA;
     }
   }

@@ -112,7 +112,7 @@ int __cdecl sub_406110(_DWORD *a1, int a2, int a3, float *a4, int a5, char a6)
                   v23 = v34;
                   v22 = v33;
                   v21 = v32;
-                  v19 = (float *)sub_408F30(dword_520970);
+                   v19 = (float *)sub_408F30((_DWORD *)dword_520970);
                   if ( sub_402170(v19, v21, v22, v23, v24, v25, v27) )
                   {
                     sub_405E20(v8, v16, (int)a4, 0);

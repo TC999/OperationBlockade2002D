@@ -1,3 +1,5 @@
+extern char aDeleteExtradat[];
+
 //----- (0045CFA0) --------------------------------------------------------
 int __cdecl sub_45CFA0(int self)
 {
@@ -5,7 +7,7 @@ int __cdecl sub_45CFA0(int self)
   _DWORD *v3; // edi
   int v4; // eax
 
-  sub_45D070();
+  sub_45D070(self);
   v2 = 0;
   if ( *(int *)(self + 656) > 0 )
   {
@@ -14,9 +16,9 @@ int __cdecl sub_45CFA0(int self)
     {
       v4 = *(v3 - 1);
       if ( v4 != -1 )
-        sub_403C80(v4, 1);
+        sub_403C80((_DWORD *)v4, 1, 0);
       if ( *v3 != -1 )
-        sub_403C80(*v3, 1);
+        sub_403C80((_DWORD *)*v3, 1, 0);
       ++v2;
       v3 += 3;
     }
@@ -25,7 +27,7 @@ int __cdecl sub_45CFA0(int self)
   if ( !*(_DWORD *)(self + 292) && *(_BYTE *)(self + 805) )
   {
     sub_4282E0(*(_DWORD *)(self + 808) > -1, aDeleteExtradat);
-    sub_408640(*(_DWORD *)(self + 808), 0);
+    sub_408640((_DWORD *)self, *(_DWORD *)(self + 808), 0);
   }
-  return sub_4690E0(self);
+  return sub_4690E0((_DWORD *)(uintptr_t)self);
 }

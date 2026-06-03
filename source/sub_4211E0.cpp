@@ -12,7 +12,7 @@ int __cdecl sub_4211E0(const char **self, char a2)
     self[2] = v5;
     self[1] = (const char *)(v3 + 1);
   }
-  self[2][v3 - 1] = a2;
-  self[2][v3] = 0;
-  return sub_421AB0(*self, self[2], self + 6, self + 7);
+  const_cast<char *>(self[2])[v3 - 1] = a2;
+  const_cast<char *>(self[2])[v3] = 0;
+  return sub_421AB0((int)*self, (char *)self[2], (float *)(self + 6), (_DWORD *)(self + 7));
 }

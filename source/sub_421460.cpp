@@ -26,7 +26,7 @@ void __cdecl sub_421460(int self, int a2)
           v4 = (v5 - *(float *)(self + 64)) / v3;
         sub_4212C0(
           self,
-          (__int64)(((double)*(int *)(self + 76) - (double)*(int *)(self + 72)) * v4 + (double)*(int *)(self + 72)));
+          (int)(((double)*(int *)(self + 76) - (double)*(int *)(self + 72)) * v4 + (double)*(int *)(self + 72)));
       }
     }
     else

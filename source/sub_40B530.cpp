@@ -12,7 +12,7 @@ char __cdecl sub_40B530(const char *self, char *ArgList, _DWORD *a3, _DWORD *a4,
   char v14; // al
   const char *v15; // edi
 
-  v6 = (const char *)sub_40B6E0(ArgList, 1);
+  v6 = (const char *)sub_40B6E0((int)self, ArgList, 1);
   result = (char)a5;
   *a3 = 0;
   *a4 = 0;

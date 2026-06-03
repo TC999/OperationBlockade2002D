@@ -1,3 +1,7 @@
+extern char aNameedit[];
+extern char aNetusername[];
+extern char Default[];
+
 //----- (0043BB90) --------------------------------------------------------
 const char *__cdecl sub_43BB90(int self)
 {
@@ -10,7 +14,8 @@ const char *__cdecl sub_43BB90(int self)
   if ( result )
   {
     sub_422D00(AppName, aNetusername, (CHAR *)0x18, String, Default);
-    return (const char *)sub_421110(*((LPVOID **)v3 + 28), String);
+    sub_421110(*((LPVOID **)v3 + 28), String);
+    return String;
   }
   return result;
 }

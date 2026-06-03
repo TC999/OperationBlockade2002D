@@ -1,4 +1,10 @@
 //----- (00411EE0) --------------------------------------------------------
+static const char aCheckingFileCh[] = "Checking file checksums...";
+static const char aIni[] = "*.ini";
+static const char aPf3[] = "*.pf3";
+static const char a0x08xS[] = "0x%08x %s";
+static const char aChecksumDFiles[] = "Checksum: %d files";
+
 int __cdecl sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
 {
   signed int i; // esi
@@ -14,7 +20,7 @@ int __cdecl sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
   if ( !*(_BYTE *)(a1 + 988) )
   {
     *(_BYTE *)(a1 + 988) = 1;
-    sub_4229D0(aCheckingFileCh, a2);
+    sub_4229D0((char *)aCheckingFileCh, a2);
     *(_DWORD *)(a1 + 996) = -1;
     *(_DWORD *)(a1 + 992) = 0;
     *(_DWORD *)(a1 + 1000) = 0;
@@ -27,10 +33,10 @@ int __cdecl sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
     NumOfElements = 0;
     sub_488CEE(Base);
     dword_4F5CB0 = 0;
-    Base = 0;
+    *(char **)Base = 0;
     sub_412140(".\\", aIni);
     sub_412140(".\\", aPf3);
-    qsort(Base, NumOfElements, 4u, sub_412120);
+    qsort(Base, NumOfElements, 4u, (int (__cdecl *)(const void *,const void *))sub_412120);
     v7 = (char *)operator new(0x108u);
     strcpy(v7, *(const char **)dword_522340);
     *((_DWORD *)v7 + 65) = 0;
@@ -40,12 +46,12 @@ int __cdecl sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
       v8 = (char *)sub_488DD7(Base, 4 * dword_4F5CB0);
       if ( v8 )
       {
-        Base = v8;
+        *(char **)Base = v8;
         memset(&v8[4 * NumOfElements], 0, 4 * (dword_4F5CB0 - NumOfElements));
       }
     }
     v9 = 0;
-    *((_DWORD *)Base + NumOfElements - 1) = v7;
+    *((_DWORD *)Base + NumOfElements - 1) = (int)v7;
     v10 = (int)NumOfElements <= 0;
     *(_DWORD *)(a1 + 992) = NumOfElements;
     if ( !v10 )
@@ -53,9 +59,9 @@ int __cdecl sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
       do
       {
         v11 = *((_DWORD *)Base + v9);
-        v12 = sub_423340((char *)v11, *(_DWORD *)(a1 + 996));
+        v12 = (int)sub_423340((char *)v11, *(_DWORD *)(a1 + 996));
         *(_DWORD *)(a1 + 996) = v12;
-        sub_4229D0(a0x08xS, v12);
+        sub_4229D0((char *)a0x08xS, v12);
         v13 = *(_DWORD *)(a1 + 992);
         ++v9;
         *(_DWORD *)(a1 + 1000) += *(_DWORD *)(v11 + 260);
@@ -63,7 +69,7 @@ int __cdecl sub_411EE0(int a1, char a2, _DWORD *a3, _DWORD *a4, _DWORD *a5)
       while ( v9 < v13 );
     }
   }
-  sub_4229D0(aChecksumDFiles, *(_DWORD *)(a1 + 992));
+  sub_4229D0((char *)aChecksumDFiles, *(_DWORD *)(a1 + 992));
   *a3 = *(_DWORD *)(a1 + 992);
   *a4 = *(_DWORD *)(a1 + 996);
   result = *(_DWORD *)(a1 + 1000);

@@ -21,7 +21,7 @@ int __cdecl sub_4729A4(int self, unsigned __int8 *a2, unsigned int a3, _DWORD *a
         v6 = sub_471E3C((_DWORD *)self, a2, a3);
         goto LABEL_16;
       case 2:
-        v6 = sub_47264E((int *)self, a2, a3);
+        v6 = sub_47264E((int *)self, (_DWORD*)a2, a3);
         goto LABEL_16;
       case 3:
         v6 = sub_471771((_DWORD *)self, (int)a2, a3);
@@ -61,7 +61,7 @@ LABEL_16:
   while ( v11 < 7 );
   if ( v11 == 7 )
   {
-    sub_46D8FD(0, "Unsupported file format");
+    sub_46D8FD(0, (char *)"Unsupported file format");
     return -2005529767;
   }
   else

@@ -1,9 +1,11 @@
+#include <time.h>
+
 //----- (004228F0) --------------------------------------------------------
 char *__cdecl sub_4228F0(char *Str)
 {
   struct tm *v1; // eax
   char *result; // eax
-  __time32_t Time; // [esp+8h] [ebp-4h] BYREF
+  time_t Time; // [esp+8h] [ebp-4h] BYREF
 
   time(&Time);
   v1 = localtime(&Time);

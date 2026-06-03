@@ -11,7 +11,7 @@ _DWORD *__cdecl sub_406B00(_DWORD *self, int a2, char a3)
   self[2] = 0;
   self[3] = 0;
   *((_BYTE *)self + 16) = 1;
-  *self = &off_499040;
+  *self = (uint32)&off_499040;
   v4 = *(_DWORD *)(a2 + 8);
   self[6] = 0;
   self[5] = v4;
@@ -21,7 +21,7 @@ _DWORD *__cdecl sub_406B00(_DWORD *self, int a2, char a3)
   *((_BYTE *)self + 40) = a3;
   self[11] = 0;
   *((_BYTE *)self + 48) = 0;
-  *self = &off_4990E8;
+  *self = (uint32)&off_4990E8;
   self[8] = **(_DWORD **)(a2 + 44);
   v6 = operator new(96 * v5);
   if ( v6 )
@@ -29,7 +29,7 @@ _DWORD *__cdecl sub_406B00(_DWORD *self, int a2, char a3)
   else
     v7 = 0;
   v8 = self[5];
-  self[6] = v7;
+  self[6] = (uint32)v7;
   memset(v7, 0, 4 * ((unsigned int)(96 * v8) >> 2));
   return self;
 }

@@ -9,7 +9,7 @@ int __cdecl sub_4476E0(_DWORD *self, int a2, int a3)
   {
     do
     {
-      result = sub_465E00(a3, self[364]);
+      result = sub_465E00(self, a3, self[364]);
       --v3;
     }
     while ( v3 );

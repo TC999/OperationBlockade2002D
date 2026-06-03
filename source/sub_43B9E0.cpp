@@ -1,3 +1,7 @@
+extern char aLevelup[];
+extern char aLeveldown[];
+extern char aLevellist[];
+
 //----- (0043B9E0) --------------------------------------------------------
 bool __cdecl sub_43B9E0(_DWORD *self)
 {

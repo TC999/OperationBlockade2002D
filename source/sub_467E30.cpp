@@ -16,7 +16,7 @@ char __cdecl sub_467E30(int a1)
   float v13; // [esp+4h] [ebp-8h]
   int v14; // [esp+8h] [ebp-4h]
 
-  if ( !*(_DWORD *)(a1 + 448) || sub_417160(*(_DWORD *)(a1 + 452)) > 0 )
+  if ( !*(_DWORD *)(a1 + 448) || sub_417160(*(_DWORD **)(a1 + 452)) > 0 )
     return sub_418E50(*(_DWORD *)(a1 + 452), 1, COERCE_FLOAT(1));
   v1 = *(_DWORD *)(a1 + 448);
   if ( v1 == 1 )
@@ -61,7 +61,7 @@ LABEL_12:
   {
     if ( v1 != 2 )
       return 0;
-    v9 = (_DWORD *)sub_417140(0);
+    v9 = (_DWORD *)sub_417140(*(_DWORD **)(a1 + 452), 0);
     return sub_416350(*(_DWORD *)(a1 + 452), v9, 0);
   }
   return result;

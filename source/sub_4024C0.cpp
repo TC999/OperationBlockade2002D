@@ -2,7 +2,7 @@
 _DWORD *__cdecl sub_4024C0(_DWORD *self)
 {
   sub_401270(self);
-  *self = &off_499064;
+  *self = (uint32)(INT_PTR)&off_499064;
   self[98] = 0;
   self[99] = 0;
   self[100] = 0;

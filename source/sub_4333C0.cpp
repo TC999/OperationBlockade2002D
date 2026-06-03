@@ -11,11 +11,11 @@ char __cdecl sub_4333C0(int self, int a2)
   if ( !*(_BYTE *)(self + 396) )
     return 0;
   if ( !*(_BYTE *)(dword_4F5CC4 + 937) && (_BYTE)a2 )
-    sub_462520(*(_DWORD *)(*(_DWORD *)(self + 428) + 592), dword_5216E8);
+    sub_462520(*(_DWORD **)(*(_DWORD *)(self + 428) + 592), dword_5216E8, 0);
   v4 = *(_DWORD *)(self + 428);
   *(_BYTE *)(self + 396) = 0;
-  LOBYTE(v3) = *(_DWORD *)(v4 + 292) == 1;
-  sub_45A420(*(_DWORD *)(dword_520970 + 236), v4, a2, v3, 1);
+  SLOBYTE(v3) = *(_DWORD *)(v4 + 292) == 1;
+  sub_45A420(*(float **)(dword_520970 + 236), v4, a2, v3, 1);
   v5 = *(_DWORD *)(self + 428);
   if ( *(_BYTE *)(v5 + 300) )
   {
@@ -31,7 +31,7 @@ char __cdecl sub_4333C0(int self, int a2)
     {
       v7 = 0;
     }
-    sub_45F350(v7, a2);
+    sub_45F350((_DWORD *)v7, a2, 0);
   }
   return 1;
 }

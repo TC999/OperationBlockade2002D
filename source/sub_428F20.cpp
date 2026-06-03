@@ -10,7 +10,7 @@ int __cdecl sub_428F20(int *self)
   result = *(_DWORD *)(v1 + 288);
   if ( !result )
   {
-    v3 = sub_428EB0(v1 + 284) - 1;
+    v3 = sub_428EB0((void*)(v1 + 284)) - 1;
     if ( v3 )
     {
       v4 = v3 - 1;

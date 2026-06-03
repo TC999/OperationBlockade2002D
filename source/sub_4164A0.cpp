@@ -10,5 +10,6 @@ int __cdecl sub_4164A0(_DWORD *self, int a2)
   if ( self[1035] < v2 + a2 )
     v3 = self[1035];
   self[1035] = v3;
-  return sub_4164D0(self);
+  sub_4164D0((float *)self);
+  return v3;
 }

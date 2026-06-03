@@ -15,7 +15,7 @@ int __cdecl sub_46D30C(char a1, int a2, int a3, unsigned int a4, int a5)
   v5 = a2;
   if ( !a2 )
   {
-    sub_46D8FD(0, "pTexture pointer is invalid", v12);
+    sub_46D8FD(0, (char *)"pTexture pointer is invalid", v12);
     return -2005530516;
   }
   if ( a5 == -1 )
@@ -30,7 +30,7 @@ int __cdecl sub_46D30C(char a1, int a2, int a3, unsigned int a4, int a5)
     v8 = 0;
   if ( v8 >= v7 )
   {
-    sub_46D8FD(0, "uSrcLevel larger than num Mip level in the texture", a1);
+    sub_46D8FD(0, (char *)"uSrcLevel larger than num Mip level in the texture", a1);
     return -2005530516;
   }
   v16 = 0;

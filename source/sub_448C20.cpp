@@ -6,5 +6,5 @@ int __cdecl sub_448C20(int self)
   *(_DWORD *)(self + 44) = 0;
   *(_DWORD *)(self + 48) = 0;
   nullsub_1(self + 16);
-  return nullsub_1(self + 4);
+  return 0;
 }

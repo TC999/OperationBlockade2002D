@@ -16,8 +16,8 @@ _BYTE *__cdecl sub_478A49(int a1, const void *a2)
     {
       result[v2] = 91;
       v6 = result + 1;
-      v6[v2] = byte_49BD08[(v5 >> 4) & 0xF];
-      (++v6)[v2] = byte_49BD08[v5 & 0xF];
+      v6[v2] = ((char*)&byte_49BD08)[(v5 >> 4) & 0xF];
+      (++v6)[v2] = ((char*)&byte_49BD08)[v5 & 0xF];
       result = v6 + 1;
       result[v2] = 93;
     }

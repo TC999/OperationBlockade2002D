@@ -29,11 +29,11 @@ char __cdecl sub_45AF60(_DWORD *self)
   v3 = self[19];
   if ( v3 )
   {
-    LOBYTE(v3) = byte_520A10;
+    *((char *)&v3) = byte_520A10;
     if ( !byte_520A10 )
     {
-      sub_44E900(*(_DWORD *)(dword_520970 + 240));
-      sub_44B470(*(_DWORD *)(dword_520970 + 276));
+      sub_44E900((_DWORD **)*(int *)(dword_520970 + 240));
+      sub_44B470((_DWORD **)*(int *)(dword_520970 + 276));
       v4 = *(_DWORD *)(self[19] + 364);
       if ( v4 )
         (*(void (__cdecl **)(int))(*(_DWORD *)v4 + 8))(v4);

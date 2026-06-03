@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00407710) --------------------------------------------------------
 char __cdecl sub_407710(float *self, int a2, int a3, int a4, int a5, int a6, int a7, int *a8, int a9)
 {
@@ -41,7 +43,7 @@ char __cdecl sub_407710(float *self, int a2, int a3, int a4, int a5, int a6, int
   int v47[3]; // [esp+96h] [ebp-64h] BYREF
   int v48[3]; // [esp+A2h] [ebp-58h] BYREF
   int v49[3]; // [esp+AEh] [ebp-4Ch] BYREF
-  _BYTE v50[64]; // [esp+BAh] [ebp-40h] BYREF
+  float v50[16]; // [esp+BAh] [ebp-40h] BYREF
 
   v9 = self;
   v48[0] = a2;
@@ -90,19 +92,19 @@ LABEL_9:
   v47[0] = *v13;
   v47[1] = v13[1];
   v47[2] = v13[2];
-  if ( !(unsigned __int8)sub_40C6F0((int)v48, (int)v49, (int)v47, v16) )
+  if ( !(unsigned __int8)sub_40C6F0((float *)v48, (float *)v49, (float *)v47) )
     goto LABEL_20;
   qmemcpy(v50, v13 + 4, sizeof(v50));
   v17 = 0;
-  sub_46B9FD(v50, 0, v50);
+  sub_46B9FD(v50, (float *)0, v50);
   v44[0] = a2;
   v44[1] = a3;
   v44[2] = a4;
   v45[0] = a5;
   v45[1] = a6;
   v45[2] = a7;
-  sub_46C5C5(v44, v44, v50);
-  sub_46C5C5(v45, v45, v50);
+  sub_46C5C5((float *)v44, (float *)v44, v50);
+  sub_46C5C5((float *)v45, (float *)v45, v50);
   v25 = 0;
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int *, _DWORD))(**(_DWORD **)(v14 + 44) + 44))(
     *(_DWORD *)(v14 + 44),
@@ -128,7 +130,7 @@ LABEL_9:
   v26 = 0;
   do
   {
-    if ( v26 >= *(_DWORD *)(v14 + 48) )
+    if ( v26 >= (int)*(_DWORD *)(v14 + 48) )
       break;
     v21 = *(_WORD *)(v17 + v19 + 2);
     v22 = *(_WORD *)(v17 + v19 + 4);
@@ -144,7 +146,7 @@ LABEL_9:
     v38 = *v32;
     v39 = v32[1];
     v40 = v32[2];
-    if ( (unsigned __int8)sub_40C910(v44, v45, &v35, &v41, &v38, a9) )
+    if ( (unsigned __int8)sub_40C910((float *)v44, (float *)v45, (intptr_t)&v35, (intptr_t)&v41, (intptr_t)&v38, (float *)a9) )
     {
       v19 = v28;
       v20 = v31;
@@ -161,7 +163,7 @@ LABEL_9:
     ++v26;
   }
   while ( !v25 );
-  *(float *)dword_520A58 = (double)*(int *)(v14 + 48) + *(float *)dword_520A58;
+  *(float *)dword_520A58 = (float)((double)*(int *)(v14 + 48) + *(float *)dword_520A58);
   (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(v14 + 44) + 48))(*(_DWORD *)(v14 + 44));
   (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(v14 + 36) + 48))(*(_DWORD *)(v14 + 36));
   if ( !v25 )

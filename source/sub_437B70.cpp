@@ -1,3 +1,6 @@
+extern char aCommandertakeb_0[];
+extern char aCommanderprovi_0[];
+
 //----- (00437B70) --------------------------------------------------------
 void __cdecl sub_437B70(_DWORD *self, float a2)
 {
@@ -81,6 +84,7 @@ void __cdecl sub_437B70(_DWORD *self, float a2)
     {
       case 5:
         v9 = *v5;
+        v10 = (v9 < 1.0f);
         if ( v10 )
         {
           v11 = v9 * 10.0;
@@ -103,7 +107,7 @@ LABEL_21:
         {
 LABEL_24:
           v30 = 1.0 - v11;
-          sub_438430(v4, 1065353216, LODWORD(v30), LODWORD(v30));
+          sub_438430((char *)self, v4, 1065353216, LODWORD(v30), LODWORD(v30));
           if ( *(_DWORD *)v5 == 1065353216 )
           {
             *((_DWORD *)v5 - 2) = 1;
@@ -117,16 +121,16 @@ LABEL_23:
         v11 = 0.0;
         goto LABEL_24;
       case 6:
-        sub_438460(v4, *v5, 0.0, 0.0);
+        sub_438460((_DWORD **)self, v4, *v5, 0.0, 0.0);
         v26 = 1.0 - *v5;
-        sub_438430(v4, 1065353216, LODWORD(v26), LODWORD(v26));
+        sub_438430((char *)self, v4, 1065353216, LODWORD(v26), LODWORD(v26));
         if ( *(_DWORD *)v5 == 1065353216 )
         {
           *((_DWORD *)v5 - 2) = 7;
           *v5 = 0.0;
           *(v5 - 1) = 0.0;
           v5[1] = 0.60000002;
-          v27 = self + 604;
+          v27 = (int *)(self + 604);
           v31 = 5;
           do
           {
@@ -157,14 +161,14 @@ LABEL_23:
         }
         break;
       case 7:
-        sub_438460(v4, 1.0, 0.0, *v5);
+        sub_438460((_DWORD **)self, v4, 1.0, 0.0, *v5);
 LABEL_35:
-        sub_438430(v4, 1065353216, 0, 0);
+        sub_438430((char *)self, v4, 1065353216, 0, 0);
         break;
       case 8:
         v19 = 1.0 - *v5;
-        sub_438460(v4, v19, 0.0, 1.0);
-        sub_438430(v4, 1065353216, 0, 0);
+        sub_438460((_DWORD **)self, v4, v19, 0.0, 1.0);
+        sub_438430((char *)self, v4, 1065353216, 0, 0);
         if ( *(_DWORD *)v5 == 1065353216 )
         {
           *((_DWORD *)v5 - 2) = 3;
@@ -175,7 +179,7 @@ LABEL_35:
         break;
       case 9:
         v28 = 1.0 - *v5;
-        sub_438430(v4, 1065353216, LODWORD(v28), LODWORD(v28));
+        sub_438430((char *)self, v4, 1065353216, LODWORD(v28), LODWORD(v28));
         if ( *(_DWORD *)v5 == 1065353216 )
         {
           *(v5 - 2) = 0.0;
@@ -185,16 +189,16 @@ LABEL_35:
         }
         break;
       case 2:
-        sub_438460(v4, 0.0, 1.0, 0.0);
-        sub_438430(v4, 1065353216, 1065353216, 1065353216);
+        sub_438460((_DWORD **)self, v4, 0.0, 1.0, 0.0);
+        sub_438430((char *)self, v4, 1065353216, 1065353216, 1065353216);
         break;
       case 3:
-        sub_438460(v4, 0.0, 0.0, 1.0);
+        sub_438460((_DWORD **)self, v4, 0.0, 0.0, 1.0);
         goto LABEL_35;
       case 4:
-        sub_438460(v4, 1.0, 0.0, 1.0);
+        sub_438460((_DWORD **)self, v4, 1.0, 0.0, 1.0);
         v32 = (sin(v38 * 3.1415927) + 1.0) * 0.5;
-        sub_438430(v4, 1065353216, LODWORD(v32), LODWORD(v32));
+        sub_438430((char *)self, v4, 1065353216, LODWORD(v32), LODWORD(v32));
         if ( *(_DWORD *)v5 == 1065353216 )
         {
           *((_DWORD *)v5 - 2) = 10;
@@ -206,8 +210,8 @@ LABEL_35:
       case 10:
         v33 = (1.0 - *v5) * ((sin(v38 * 3.1415927) + 1.0) * 0.5) + *v5;
         v20 = 1.0 - *v5;
-        sub_438460(v4, v20, 0.0, 1.0);
-        sub_438430(v4, 1065353216, LODWORD(v33), LODWORD(v33));
+        sub_438460((_DWORD **)self, v4, v20, 0.0, 1.0);
+        sub_438430((char *)self, v4, 1065353216, LODWORD(v33), LODWORD(v33));
         if ( *(_DWORD *)v5 == 1065353216 )
         {
           *((_DWORD *)v5 - 2) = 11;
@@ -218,13 +222,13 @@ LABEL_35:
         break;
       case 11:
         if ( *v5 == 0.0 )
-          sub_438460(v4, 0.0, 0.0, 1.0);
+          sub_438460((_DWORD **)self, v4, 0.0, 0.0, 1.0);
         else
-          sub_438460(v4, 0.0, *v5, 0.0);
+          sub_438460((_DWORD **)self, v4, 0.0, *v5, 0.0);
         if ( v37 == 0.0 && *v5 > 0.0 )
         {
           v34 = 5;
-          v29 = self + 604;
+          v29 = (int *)(self + 604);
           do
           {
             v15 = sub_413870(*(_DWORD **)(dword_520970 + 116), *v29);
@@ -262,20 +266,20 @@ LABEL_35:
             v18[33] = 0;
             v18[32] = 0x40000000;
             v18[34] = 1065353216;
-            sub_43A120(*(_DWORD *)(self[148] + 396) + 1);
+            sub_43A120(self[148], *(_DWORD *)(self[148] + 396) + 1);
             sub_4030B0(*(_DWORD **)(self[148] + 468), 0, aCommandertakeb_0, -1);
             sub_4030B0(*(_DWORD **)(self[148] + 468), 0, aCommanderprovi_0, *(_DWORD *)(self[148] + 396) + 1);
           }
           else
           {
-            sub_438D00();
+            sub_438D00((int *)self[148]);
           }
         }
         break;
       case 13:
         v35 = *v5 * ((sin(v38 * 3.1415927) + 1.0) * 0.5);
-        sub_438460(v4, *v5, 0.0, 1.0);
-        sub_438430(v4, 1065353216, LODWORD(v35), LODWORD(v35));
+        sub_438460((_DWORD **)self, v4, *v5, 0.0, 1.0);
+        sub_438430((char *)self, v4, 1065353216, LODWORD(v35), LODWORD(v35));
         if ( *(_DWORD *)v5 == 1065353216 && v37 < 1.0 )
           *(_BYTE *)(self[148] + 432) = 1;
         break;

@@ -1,4 +1,6 @@
 //----- (00472B0B) --------------------------------------------------------
+#include <malloc.h>
+#define alloca _alloca
 int __cdecl sub_472B0B(int self, const WCHAR *lpWideCharStr, LPSTR lpMultiByteStr)
 {
   void *v5; // esp
@@ -31,17 +33,17 @@ int __cdecl sub_472B0B(int self, const WCHAR *lpWideCharStr, LPSTR lpMultiByteSt
     else
 LABEL_8:
       FileW = CreateFileA((LPCSTR)lpWideCharStr, 0x80000000, 1u, 0, 3u, 0x10000000u, 0);
-    *(_DWORD *)self = FileW;
+    *(_DWORD *)self = (uint32)(uintptr_t)FileW;
     if ( FileW == (HANDLE)-1
       || (FileMappingA = CreateFileMappingA(FileW, 0, 2u, 0, 0, 0),
-          *(_DWORD *)(self + 4) = FileMappingA,
+          *(_DWORD *)(self + 4) = (uint32)(uintptr_t)FileMappingA,
           FileMappingA == (HANDLE)-1)
-      || (v8 = MapViewOfFile(FileMappingA, 4u, 0, 0, 0), (*(_DWORD *)(self + 8) = v8) == 0)
+      || (v8 = MapViewOfFile(FileMappingA, 4u, 0, 0, 0), (*(_DWORD *)(self + 8) = (uint32)(uintptr_t)v8) == 0)
       || (FileSize = GetFileSize(*(HANDLE *)self, 0), *(_DWORD *)(self + 12) = FileSize, FileSize == -1) )
     {
       LastError = GetLastError();
       FormatMessageA(0x1100u, 0, LastError, 0, Buffer, 0, 0);
-      sub_46D8FD(0, "%s", *(const char **)Buffer);
+      sub_46D8FD(0, (char *)"%s", *(const char **)Buffer);
       LocalFree(*(HLOCAL *)Buffer);
       return -2005529767;
     }
@@ -52,7 +54,7 @@ LABEL_8:
   }
   else
   {
-    sub_46D8FD(0, "Invalid file name");
+    sub_46D8FD(0, (char *)"Invalid file name");
     return -2005530516;
   }
 }

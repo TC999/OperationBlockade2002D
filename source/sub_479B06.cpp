@@ -165,7 +165,7 @@ unsigned int __cdecl sub_479B06(int a1, int a2, unsigned int a3, char a4)
             *v34 = *v33;
           }
           while ( !v13 );
-          LOBYTE(v8) = v47;
+          *(_BYTE*)&(v8) = v47;
         }
         v38 = v34 - 1;
         *v38 = v8;
@@ -267,7 +267,7 @@ unsigned int __cdecl sub_479B06(int a1, int a2, unsigned int a3, char a4)
             v15 = v17 - 1;
             v13 = v48-- == 1;
             *v15 = *v16;
-            LOBYTE(v8) = v47;
+            *(_BYTE*)&(v8) = v47;
           }
           while ( !v13 );
         }

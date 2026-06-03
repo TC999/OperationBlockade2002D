@@ -37,7 +37,7 @@ bool __cdecl sub_429E70(_DWORD *self, _BYTE *a2, int a3)
     v13 = *((_BYTE *)v3 + 9);
     if ( !isspace(v13) || *v3 )
       break;
-    v6 = sub_42A010(&v13);
+    v6 = sub_42A010(v3, (_BYTE*)&v13);
     *((_BYTE *)v3 + 8) = 0;
     if ( v6 && v13 == 10 )
       ++v3[1];

@@ -1,3 +1,10 @@
+extern char aHelptext[];
+extern char aMoveTheCursorO[];
+extern char aTcpipbutton[];
+extern char aInternetTcpIpC[];
+extern char aIpxbutton[];
+extern char aLanIpxClickThi[];
+
 //----- (0043BAF0) --------------------------------------------------------
 const char *__cdecl sub_43BAF0(_DWORD *self, char *String1)
 {
@@ -12,13 +19,25 @@ const char *__cdecl sub_43BAF0(_DWORD *self, char *String1)
     if ( result )
     {
       if ( !String1 )
-        return (const char *)sub_421110(*(LPVOID **)(v3 + 112), aMoveTheCursorO);
+      {
+        sub_421110(*(LPVOID **)(v3 + 112), aMoveTheCursorO);
+        return aMoveTheCursorO;
+      }
       if ( !_strcmpi(String1, aTcpipbutton) )
-        return (const char *)sub_421110(*(LPVOID **)(v3 + 112), aInternetTcpIpC);
+      {
+        sub_421110(*(LPVOID **)(v3 + 112), aInternetTcpIpC);
+        return aInternetTcpIpC;
+      }
       if ( _strcmpi(String1, aIpxbutton) )
-        return (const char *)sub_421110(*(LPVOID **)(v3 + 112), aMoveTheCursorO);
+      {
+        sub_421110(*(LPVOID **)(v3 + 112), aMoveTheCursorO);
+        return aMoveTheCursorO;
+      }
       else
-        return (const char *)sub_421110(*(LPVOID **)(v3 + 112), aLanIpxClickThi);
+      {
+        sub_421110(*(LPVOID **)(v3 + 112), aLanIpxClickThi);
+        return aLanIpxClickThi;
+      }
     }
   }
   return result;

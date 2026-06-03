@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004359A0) --------------------------------------------------------
 char __cdecl sub_4359A0(int self, int a2)
 {
@@ -62,6 +64,7 @@ char __cdecl sub_4359A0(int self, int a2)
   float v61; // edi
   double v62; // st7
   char v64; // c0
+  (void)v64;
   int v65; // ecx
   int v66; // ecx
   bool v67; // cc
@@ -150,13 +153,13 @@ char __cdecl sub_4359A0(int self, int a2)
 
   if ( *(float *)(self + 44) > 0.0 )
   {
-    v3 = *(float *)(self + 44) - *(float *)(dword_520970 + 68);
-    *(float *)(self + 44) = v3;
+    v3 = (float)(*(float *)(self + 44) - *(float *)(dword_520970 + 68));
+    *(float *)(self + 44) = (float)v3;
     if ( v3 < 0.0 )
-      v3 = 0.0;
-    *(float *)(self + 44) = v3;
+      v3 = 0.0f;
+    *(float *)(self + 44) = (float)v3;
   }
-  v4 = sub_421B20(1) + 2;
+  v4 = sub_421B20((_DWORD *)dword_520970, 1) + 2;
   v5 = *(_BYTE *)(self + 40) && *(_BYTE *)(self + 724);
   (*(void (__cdecl **)(_DWORD, BOOL))(**(_DWORD **)(self + 728) + 24))(*(_DWORD *)(self + 728), v5);
   if ( *(_BYTE *)(self + 40) && *(_BYTE *)(self + 724) )
@@ -177,10 +180,10 @@ char __cdecl sub_4359A0(int self, int a2)
   v10 = (double)v150;
   *(_DWORD *)(v9 + 12) = 0;
   *(_BYTE *)(v9 + 32) = 0;
-  *(float *)(v9 + 16) = v10;
-  LOBYTE(v9) = *(_BYTE *)(self + 40);
-  v147 = *(float *)(*(_DWORD *)(self + 732) + 24);
-  v11 = (_BYTE)v9 && *(_BYTE *)(self + 724);
+  *(float *)(v9 + 16) = (float)v10;
+   *(_BYTE *)&v9 = *(_BYTE *)(self + 40);
+   v147 = *(float *)(*(_DWORD *)(self + 732) + 24);
+   v11 = (_BYTE)v9 && *(_BYTE *)(self + 724);
   v12 = *(_DWORD *)(self + 736);
   *(_BYTE *)(v12 + 33) = v11;
   sub_421540((void **)v12);
@@ -190,15 +193,15 @@ char __cdecl sub_4359A0(int self, int a2)
   v15 = (double)v150;
   *(float *)(v14 + 12) = v147;
   *(_BYTE *)(v14 + 32) = 0;
-  *(float *)(v14 + 16) = v15;
-  while ( v13 < *(_DWORD *)(self + 704) )
+  *(float *)(v14 + 16) = (float)v15;
+  while ( v13 < (int)*(_DWORD *)(self + 704) )
   {
     v16 = *(_DWORD *)(*(_DWORD *)(self + 700) + 4 * v13);
     v17 = *(_DWORD *)(v16 + 8);
     *(float *)(v16 + 12) = *(float *)(v16 + 12) - *(float *)(dword_520970 + 68);
     *(_BYTE *)(v17 + 33) = *(_BYTE *)(self + 40);
-    v18 = sub_421540((void **)v17);
-    LOBYTE(v18) = *(_BYTE *)(self + 40);
+     v18 = sub_421540((void **)v17);
+     *(_BYTE *)v18 = *(_BYTE *)(self + 40);
     (*(void (__cdecl **)(_DWORD, _DWORD *))(**(_DWORD **)(v16 + 16) + 24))(*(_DWORD *)(v16 + 16), v18);
     if ( *(float *)(v16 + 12) >= 0.0 )
     {
@@ -207,14 +210,14 @@ char __cdecl sub_4359A0(int self, int a2)
     }
     else
     {
-      sub_437540(*(_DWORD *)(v16 + 16));
+       sub_437540((_DWORD *)self, *(_DWORD *)(v16 + 16));
       v19 = *(void **)(v16 + 8);
       if ( v19 )
       {
-        sub_4213B0((int)v19);
+        sub_4213B0((intptr_t)v19);
         sub_4885A6(v19);
       }
-      if ( v13 >= *(_DWORD *)(self + 704) )
+      if ( v13 >= (int)*(_DWORD *)(self + 704) )
         break;
       if ( *(_BYTE *)(self + 712) )
         sub_4885A6(*(LPVOID *)(*(_DWORD *)(self + 700) + 4 * v13));
@@ -240,7 +243,7 @@ char __cdecl sub_4359A0(int self, int a2)
       v23 = v144[1];
     else
       v23 = 0.0;
-    *v21++ = v23;
+    *v21++ = (float)v23;
     --v22;
   }
   while ( v22 );
@@ -303,7 +306,7 @@ char __cdecl sub_4359A0(int self, int a2)
       }
       else
       {
-        sub_413180(*v25, (__int64)(v39 * 255.0), 1);
+        sub_413180(*v25, (int)(__int64)(v39 * 255.0), 1);
         sub_4131B0((_DWORD *)*v25, *(_DWORD **)(self + 4 * v38 + 560));
         sub_4131B0((_DWORD *)*(v25 - 1), *(_DWORD **)(self + 4 * v37 + 560));
       }
@@ -311,7 +314,7 @@ char __cdecl sub_4359A0(int self, int a2)
       v150 = (unsigned int)(dword_5209F4 - 2);
       v121 = (float)(v40 + 62);
       v115 = (float)v150;
-      LODWORD(v147) = v40 - (__int64)(v144[1] * 60.0) + 62;
+      LODWORD(v147) = (uint32)(v40 - (__int64)(v144[1] * 60.0) + 62);
       v149 = (unsigned int)(dword_5209F4 - 8);
       v105 = (float)SLODWORD(v147);
       v100 = (float)v149;
@@ -337,8 +340,8 @@ char __cdecl sub_4359A0(int self, int a2)
   {
     if ( !*(_BYTE *)(self + 40) || *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
     {
-      LOBYTE(v133) = 0;
-      v43 = v42 + 5;
+      *(_BYTE *)&v133 = 0;
+      v43 = (_DWORD *)(v42 + 5);
       LODWORD(v144[0]) = 6;
       do
       {
@@ -350,15 +353,15 @@ char __cdecl sub_4359A0(int self, int a2)
     }
     else
     {
-      LOBYTE(v133) = 1;
+      *(_BYTE *)&v133 = 1;
     }
-    sub_45F3A0(LODWORD(v144[1]), &v131, &v132, &v146);
+     sub_45F3A0((char *)*(_DWORD *)(dword_520970 + 280), LODWORD(v144[1]), (bool *)&v131, (bool *)&v132, (_DWORD *)&v146);
     v44 = v42[11];
     LODWORD(v147) = v41 + 50;
     *(float *)(v44 + 12) = (float)v137;
     v45 = (double)SLODWORD(v147);
     *(_BYTE *)(v44 + 32) = 0;
-    *(float *)(v44 + 16) = v45;
+    *(float *)(v44 + 16) = (float)v45;
     if ( v131 )
     {
       v42[14] = 2;
@@ -377,8 +380,8 @@ char __cdecl sub_4359A0(int self, int a2)
       v48 = v42[11];
       *(_BYTE *)(v48 + 33) = v133;
       sub_421540((void **)v48);
-      sub_413120(1063675494);
-      sub_413120(1065353216);
+       sub_413120(v42[13], 1063675494);
+       sub_413120(v42[11], 1065353216);
 LABEL_87:
       (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v42[3] + 24))(v42[3], 0);
       goto LABEL_101;
@@ -388,7 +391,7 @@ LABEL_87:
       if ( v42[14] == 3 )
         goto LABEL_101;
       v42[14] = 3;
-      v49 = v42 + 5;
+      v49 = (_DWORD *)(v42 + 5);
       LODWORD(v144[0]) = 6;
       do
       {
@@ -403,14 +406,14 @@ LABEL_87:
       v51 = v42[11];
       *(_BYTE *)(v51 + 33) = 0;
       sub_421540((void **)v51);
-      sub_413120(1065353216);
-      sub_413120(1063675494);
-      goto LABEL_87;
+       sub_413120(v42[13], 1065353216);
+       sub_413120(v42[11], 1063675494);
+       goto LABEL_87;
     }
     if ( v146 <= 0.0 )
     {
       v42[14] = 1;
-      v57 = v42 + 5;
+      v57 = (_DWORD *)(v42 + 5);
       LODWORD(v144[0]) = 6;
       do
       {
@@ -451,10 +454,10 @@ LABEL_87:
       *(float *)(v55 + 12) = (float)SLODWORD(v136[1]);
       v56 = (double)SLODWORD(v147);
       *(_BYTE *)(v55 + 32) = 1;
-      *(float *)(v55 + 16) = v56;
-      sub_413120(1065353216);
-      sub_413120(1063675494);
-      (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
+      *(float *)(v55 + 16) = (float)v56;
+       sub_413120(v42[13], 1065353216);
+       sub_413120(v42[11], 1063675494);
+       (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
     }
 LABEL_101:
     if ( v42[14] == 1 || !(_BYTE)v133 )
@@ -516,24 +519,24 @@ LABEL_101:
       sub_413090(v42[10], v145[0], v111, v145[1], v127);
       if ( v42[14] == 4 )
       {
-        sub_421190(v42[13], "%d:%02d", (int)(__int64)v146 / 60, (int)(__int64)v146 % 60);
+        sub_421190(v42[13], (char *)"%d:%02d", (int)(__int64)v146 / 60, (int)(__int64)v146 % 60);
         sub_413090(v42[3], v144[0], v143, v136[0], v147);
         (*(void (__cdecl **)(int, int))(*(_DWORD *)v42[3] + 24))(v42[3], v133);
         v135 = *((float *)v42 + 12);
         v62 = *(float *)&a2 * 60.0 + v135;
-        v136[0] = v62;
-        if ( !v64 )
+        v136[0] = (float)v62;
+         if ( v62 >= 360.0 )
         {
           do
             v62 = v62 - 360.0;
           while ( v62 >= 360.0 );
-          v136[0] = v62;
+          v136[0] = (float)v62;
         }
-        *((float *)v42 + 12) = v62;
-        v128 = v62 * 0.017453292;
+        *((float *)v42 + 12) = (float)v62;
+        v128 = (float)(v62 * 0.017453292);
         v118 = (float)(int)v150;
         v112 = (float)SLODWORD(v136[1]);
-        sub_413100(LODWORD(v112), LODWORD(v118), LODWORD(v128));
+         sub_413100(v42[3], LODWORD(v112), LODWORD(v118), LODWORD(v128));
         if ( v136[0] >= (double)v135 )
         {
           if ( v135 >= 60.0 || v136[0] < 60.0 )
@@ -546,38 +549,38 @@ LABEL_101:
                 {
                   if ( v135 < 300.0 && v136[0] >= 300.0 )
                   {
-                    sub_413180(v42[10], 255, 1);
-                    sub_413240(1065353216, 1077936128, 255, 0);
+                     sub_413180(v42[10], 255, 1);
+                     sub_413240((_DWORD *)v42[10], 1065353216, 1077936128, 255, 0);
                   }
                 }
                 else
                 {
-                  sub_413180(v42[9], 255, 1);
-                  sub_413240(1065353216, 1077936128, 255, 0);
+                   sub_413180(v42[9], 255, 1);
+                   sub_413240((_DWORD *)v42[9], 1065353216, 1077936128, 255, 0);
                 }
               }
               else
               {
-                sub_413180(v42[8], 255, 1);
-                sub_413240(1065353216, 1077936128, 255, 0);
+                 sub_413180(v42[8], 255, 1);
+                 sub_413240((_DWORD *)v42[8], 1065353216, 1077936128, 255, 0);
               }
             }
             else
             {
-              sub_413180(v42[7], 255, 1);
-              sub_413240(1065353216, 1077936128, 255, 0);
+               sub_413180(v42[7], 255, 1);
+               sub_413240((_DWORD *)v42[7], 1065353216, 1077936128, 255, 0);
             }
           }
           else
           {
-            sub_413180(v42[6], 255, 1);
-            sub_413240(1065353216, 1077936128, 255, 0);
+             sub_413180(v42[6], 255, 1);
+             sub_413240((_DWORD *)v42[6], 1065353216, 1077936128, 255, 0);
           }
         }
         else
         {
-          sub_413180(v42[5], 255, 1);
-          sub_413240(1065353216, 1077936128, 255, 0);
+           sub_413180(v42[5], 255, 1);
+           sub_413240((_DWORD *)v42[5], 1065353216, 1077936128, 255, 0);
         }
       }
     }
@@ -608,7 +611,7 @@ LABEL_101:
   while ( v69 );
   v72 = *(_BYTE *)(self + 40) && byte_4A9F14 && *(int *)(self + 492) > -1 && !v70;
   v73 = *(_DWORD *)(self + 472);
-  LOBYTE(v147) = v72;
+   *(_BYTE *)&v147 = v72;
   (*(void (__cdecl **)(int, float))(*(_DWORD *)v73 + 24))(v73, COERCE_FLOAT(LODWORD(v147)));
   if ( v72 )
   {
@@ -620,7 +623,7 @@ LABEL_101:
     LODWORD(v150) = (unsigned int)(v76 + dword_5209F4) >> 1;
     v77 = (double)(int)v150;
     LODWORD(v150) = (unsigned int)(dword_5209D8 - v75) >> 1;
-    v119 = v77;
+    v119 = (float)v77;
     v113 = (float)(int)v150;
     LODWORD(v150) = (unsigned int)(dword_5209F4 - v76) >> 1;
     v103 = (float)(int)v150;
@@ -629,21 +632,21 @@ LABEL_101:
   v78 = 0;
   for ( i = 0; i < 160; i += 16 )
   {
-    v80 = v78 < *(_DWORD *)(self + 720) && *(_BYTE *)(self + 40) && !v131;
+    v80 = v78 < (int)*(_DWORD *)(self + 720) && *(_BYTE *)(self + 40) && !v131;
     v81 = *(_DWORD *)(*(_DWORD *)(self + 716) + i + 8);
     *(_BYTE *)(v81 + 33) = v80;
     sub_421540((void **)v81);
-    v82 = v78 < *(_DWORD *)(self + 720) && *(_BYTE *)(self + 40) && !v131;
+    v82 = v78 < (int)*(_DWORD *)(self + 720) && *(_BYTE *)(self + 40) && !v131;
     v83 = *(_DWORD *)(*(_DWORD *)(self + 716) + i + 12);
     (*(void (__cdecl **)(int, BOOL))(*(_DWORD *)v83 + 24))(v83, v82);
     ++v78;
   }
-  if ( *(_BYTE *)(self + 40) && sub_45F4A0(*(_DWORD *)(dword_520970 + 280)) >= 2.0 )
+  if ( *(_BYTE *)(self + 40) && sub_45F4A0(*(_DWORD **)(dword_520970 + 280)) >= 2.0 )
   {
     v84 = sub_45F520(*(_DWORD *)(dword_520970 + 280));
     v85 = *(int **)(self + 460);
     v86 = *v85;
-    v147 = 1.0 - v84;
+    v147 = (float)(1.0 - v84);
     (*(void (__cdecl **)(int *, int))(v86 + 24))(v85, 1);
     (*(void (__cdecl **)(_DWORD, int))(**(_DWORD **)(self + 456) + 24))(*(_DWORD *)(self + 456), 1);
     v150 = (unsigned int)(dword_5209D8 - 12);
@@ -655,9 +658,9 @@ LABEL_101:
     v104 = (float)(int)v149;
     sub_413090(*(_DWORD *)(self + 460), v104, v114, v120, v130);
     if ( v147 - 1.0 <= -0.0000099999997 )
-      sub_413160(255, 0, 0);
-    else
-      sub_413160(0, 178, 0);
+       sub_413160(*(_DWORD *)(self + 460), 255, 0, 0);
+     else
+       sub_413160(*(_DWORD *)(self + 460), 0, 178, 0);
   }
   else
   {
@@ -668,7 +671,7 @@ LABEL_101:
   v88 = v87[645];
   if ( v88 < 0
     || ((v89 = v87[642]) != 0 ? (v90 = (v87[643] - v89) >> 3) : (v90 = 0),
-        v88 >= v90 || (v91 = *(_DWORD *)(*(_DWORD *)(v87[642] + 8 * v88) + 296), v91 <= -1)) )
+        v88 >= (int)v90 || (v91 = *(_DWORD *)(*(_DWORD *)(v87[642] + 8 * v88) + 296), v91 <= -1)) )
   {
     (*(void (__cdecl **)(_DWORD, _DWORD))(**(_DWORD **)(self + 464) + 24))(*(_DWORD *)(self + 464), 0);
     v94 = *(_DWORD *)(self + 444);
@@ -676,19 +679,19 @@ LABEL_101:
   }
   else
   {
-    v92 = sub_4131B0(*(_DWORD **)(self + 464), *(_DWORD **)(self + 4 * v91 + 636));
-    LOBYTE(v92) = *(_BYTE *)(self + 40);
+     v92 = sub_4131B0(*(_DWORD **)(self + 464), *(_DWORD **)(self + 4 * v91 + 636));
+     *(_BYTE *)v92 = *(_BYTE *)(self + 40);
     (*(void (__cdecl **)(_DWORD, _DWORD *))(**(_DWORD **)(self + 464) + 24))(*(_DWORD *)(self + 464), v92);
-    v93 = sub_4629B0(v91);
-    sub_421190(*(_DWORD *)(self + 444), "%d", v93);
+     v93 = sub_4629B0(*(_DWORD *)(dword_520970 + 280), v91);
+    sub_421190(*(_DWORD *)(self + 444), (char *)"%d", v93);
     v94 = *(_DWORD *)(self + 444);
     *(_BYTE *)(v94 + 33) = *(_BYTE *)(self + 40);
   }
   sub_421540((void **)v94);
-  v95 = sub_4629B0(9);
+   v95 = sub_4629B0(*(_DWORD *)(dword_520970 + 280), 9);
   v96 = *(_BYTE *)(self + 40) && v95 > 0;
   (*(void (__cdecl **)(_DWORD, BOOL))(**(_DWORD **)(self + 468) + 24))(*(_DWORD *)(self + 468), v96);
-  sub_421190(*(_DWORD *)(self + 448), "%d", v95);
+  sub_421190(*(_DWORD *)(self + 448), (char *)"%d", v95);
   v97 = *(_BYTE *)(self + 40) && v95 > 0;
   v98 = *(_DWORD *)(self + 448);
   *(_BYTE *)(v98 + 33) = v97;

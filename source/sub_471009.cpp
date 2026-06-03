@@ -288,7 +288,7 @@ LABEL_82:
                     do
                     {
                       if ( (v35 & 1) != 0 )
-                        LOBYTE(v36) = v27[1] & 0xF;
+                        *(_BYTE *)&v36 = v27[1] & 0xF;
                       else
                         v36 = v27[1] >> 4;
                       v29[v35++] = v36;
@@ -317,7 +317,7 @@ LABEL_82:
                         {
                           v33 = v27[(v32 >> 1) + 2];
                           if ( (v32 & 1) != 0 )
-                            LOBYTE(v33) = v33 & 0xF;
+                            *(_BYTE *)&v33 = v33 & 0xF;
                           else
                             v33 >>= 4;
                           v29[v32++] = v33;
@@ -375,7 +375,7 @@ LABEL_82:
                   {
                     v44 = v27[j >> 1];
                     if ( (j & 1) != 0 )
-                      LOBYTE(v44) = v44 & 0xF;
+                      *(_BYTE *)&v44 = v44 & 0xF;
                     else
                       v44 >>= 4;
                     v29[j] = v44;
@@ -440,12 +440,12 @@ LABEL_133:
               if ( v29 < v62 )
                 return 0;
             }
-            LOBYTE(v27) = v27[1];
-            BYTE1(v27) = (_BYTE)v27;
+            *(_BYTE *)&v27 = v27[1];
+            ((_BYTE *)&v27)[1] = (_BYTE)v27;
             v39 = v37;
             v40 = v37 >> 2;
             v41 = (_DWORD)v27 << 16;
-            LOWORD(v41) = (_WORD)v27;
+            *(_WORD *)&v41 = (_WORD)v27;
             v27 = v47;
             memset32(v29, v41, v40);
             memset(&v29[4 * v40], v41, v39 & 3);
@@ -464,6 +464,6 @@ LABEL_66:
     v61 = 24;
     goto LABEL_76;
   }
-  sub_46D8FD(0, "LoadBMP: JPEG compression not supported");
+  sub_46D8FD(0, (char *)"LoadBMP: JPEG compression not supported");
   return -2147467263;
 }

@@ -50,7 +50,7 @@ _DWORD *__cdecl sub_47CB71(_DWORD *a1, unsigned int a2)
     {
       v7 = (_DWORD *)*v6;
       v8 = v6[2] + v6[1] + 16;
-      sub_47EDE6(a1, v6);
+      sub_47EDE6((int)a1, v6);
       v3[18] -= v8;
       v6 = v7;
     }
@@ -66,7 +66,7 @@ _DWORD *__cdecl sub_47CB71(_DWORD *a1, unsigned int a2)
     {
       v11 = (_DWORD *)*result;
       v12 = result[2] + result[1] + 16;
-      sub_47EDE6(a1, result);
+      sub_47EDE6((int)a1, result);
       v3[18] -= v12;
       result = v11;
     }

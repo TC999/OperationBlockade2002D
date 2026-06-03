@@ -22,7 +22,7 @@ char __cdecl sub_41F220(int self, char a2)
   *(_DWORD *)(self + 4) = 0;
   if ( a2 )
   {
-    result = sub_488CEE(*(LPVOID *)self);
+    result = '\0';
     *(_DWORD *)(self + 8) = 0;
     *(_DWORD *)self = 0;
   }

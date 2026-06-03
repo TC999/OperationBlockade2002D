@@ -3,7 +3,7 @@ int __cdecl sub_449660(void *self)
 {
   int v2; // eax
 
-  *(_DWORD *)self = &off_499A24;
+  *(_DWORD *)self = (uint32)(uintptr_t)(&off_499A24);
   v2 = *((_DWORD *)self + 97);
   if ( !v2 )
     goto LABEL_5;

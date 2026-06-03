@@ -28,7 +28,7 @@ int __cdecl sub_45EA80(int self, int a2)
   int v27; // [esp+68h] [ebp-44h]
   int v28[16]; // [esp+6Ch] [ebp-40h] BYREF
 
-  sub_462F90(self);
+  sub_462F90((_DWORD *)self);
   result = a2;
   v4 = 0;
   v12 = -1082130432;
@@ -85,8 +85,8 @@ int __cdecl sub_45EA80(int self, int a2)
       v5[6] = 0;
       v5[8] = 0;
       v5[2] = *(_DWORD *)(self + 424);
-      sub_407690(*(v5 - 3), *(_DWORD *)(self + 440), v28);
-      sub_4010D0(v5 - 1, (int)v28);
+      sub_407690(*(v5 - 3), *(_DWORD *)(self + 440), (_DWORD *)v28);
+      sub_4010D0((_DWORD *)(v5 - 1), (int)v28);
       result = *(_DWORD *)(self + 524);
       ++v4;
       v5 += 13;

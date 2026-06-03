@@ -1,4 +1,6 @@
 //----- (00402CB0) --------------------------------------------------------
+#include <cstring>
+
 int __cdecl sub_402CB0(int self)
 {
   int i; // edi
@@ -8,7 +10,7 @@ int __cdecl sub_402CB0(int self)
   int result; // eax
 
   if ( *(_DWORD *)(self + 104) )
-    sub_41D9A0();
+    sub_41D9A0(self);
   if ( *(_BYTE *)(self + 100) )
   {
     for ( i = 0; i < *(_DWORD *)(self + 92); ++i )
@@ -28,7 +30,8 @@ int __cdecl sub_402CB0(int self)
   memset(*(void **)(self + 72), 0, 4 * *(_DWORD *)(self + 76));
   v5 = *(void **)(self + 72);
   *(_DWORD *)(self + 76) = 0;
-  result = sub_488CEE(v5);
+  sub_488CEE(v5);
+  result = 0;
   *(_DWORD *)(self + 80) = 0;
   *(_DWORD *)(self + 72) = 0;
   return result;

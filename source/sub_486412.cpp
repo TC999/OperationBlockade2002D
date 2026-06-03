@@ -26,13 +26,13 @@ int __cdecl sub_486412(
   {
     if ( v12 == -3 )
     {
-      *(_DWORD *)(a9 + 24) = "oversubscribed literal/length tree";
+      *(_DWORD *)(a9 + 24) = (uint32)"oversubscribed literal/length tree";
       goto LABEL_20;
     }
     if ( v12 == -4 )
       goto LABEL_20;
 LABEL_18:
-    *(_DWORD *)(a9 + 24) = "incomplete literal/length tree";
+    *(_DWORD *)(a9 + 24) = (uint32)"incomplete literal/length tree";
     goto LABEL_19;
   }
   if ( !*a4 )
@@ -43,10 +43,10 @@ LABEL_18:
     switch ( v12 )
     {
       case -3:
-        *(_DWORD *)(a9 + 24) = "oversubscribed distance tree";
+        *(_DWORD *)(a9 + 24) = (uint32)"oversubscribed distance tree";
         break;
       case -5:
-        *(_DWORD *)(a9 + 24) = "incomplete distance tree";
+        *(_DWORD *)(a9 + 24) = (uint32)"incomplete distance tree";
 LABEL_19:
         v12 = -3;
         break;
@@ -54,7 +54,7 @@ LABEL_19:
         break;
       default:
 LABEL_14:
-        *(_DWORD *)(a9 + 24) = "empty distance tree with lengths";
+        *(_DWORD *)(a9 + 24) = (uint32)"empty distance tree with lengths";
         goto LABEL_19;
     }
 LABEL_20:

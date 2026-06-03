@@ -13,7 +13,7 @@ int __cdecl sub_455F20(int *self, int a2)
              (int *)(*(_DWORD *)(a2 + 16) + 14),
              *(_DWORD *)(*(_DWORD *)(a2 + 16) + 10));
   if ( v2 == 2306 )
-    return sub_455DC0(self, *(_DWORD *)(*(_DWORD *)(a2 + 16) + 6));
+    return sub_455DC0((_DWORD *)self, *(_DWORD *)(*(_DWORD *)(a2 + 16) + 6));
   result = *(_DWORD *)(*(_DWORD *)(a2 + 16) + 6);
   if ( result >= 0 )
   {

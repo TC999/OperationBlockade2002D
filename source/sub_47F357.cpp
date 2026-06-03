@@ -10,8 +10,8 @@ int __cdecl sub_47F357(int a1, char a2)
   int v9; // [esp+18h] [ebp+Ch]
 
   v3 = (_DWORD *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 80);
-  *(_DWORD *)(a1 + 384) = v3;
-  *v3 = sub_47F2ED;
+  *(_DWORD *)(a1 + 384) = (int)v3;
+  *v3 = (int)sub_47F2ED;
   if ( a2 )
   {
     *(_DWORD *)(*(_DWORD *)a1 + 20) = 4;

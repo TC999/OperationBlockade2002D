@@ -49,7 +49,7 @@ int __cdecl sub_466410(int self, int *a2, int *a3, int a4, int a5)
   }
   else
   {
-    sub_4666E0(v7, LODWORD(v6), *(_DWORD *)(*(_DWORD *)(a4 + 4) + 300), *(_BYTE *)(*(_DWORD *)(a4 + 4) + 312));
+    sub_4666E0((char *)self, v7, LODWORD(v6), *(float *)(*(_DWORD *)(a4 + 4) + 300), *(_BYTE *)(*(_DWORD *)(a4 + 4) + 312));
   }
   v11 = *(_DWORD *)(self + 416);
   memset(&v20[11], 0, 16);
@@ -59,7 +59,7 @@ int __cdecl sub_466410(int self, int *a2, int *a3, int a4, int a5)
   v20[10] = 1065353216;
   v20[5] = 1065353216;
   v20[0] = 1065353216;
-  sub_407690(v11, a5, v20);
-  sub_46C5C5(LODWORD(v6), LODWORD(v6), v20);
+  sub_407690(v11, a5, (uint32*)(v20));
+  sub_46C5C5((float *)LODWORD(v6), (float *)LODWORD(v6), (float *)v20);
   return 8;
 }

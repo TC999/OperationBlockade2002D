@@ -1,3 +1,5 @@
+extern char aSoundsNewspape[];
+
 //----- (0043A230) --------------------------------------------------------
 int __cdecl sub_43A230(int *self, int ArgList)
 {
@@ -18,7 +20,7 @@ int __cdecl sub_43A230(int *self, int ArgList)
   char Buffer[260]; // [esp+20h] [ebp-110h] BYREF
   int v18; // [esp+12Ch] [ebp-4h]
 
-  v3 = operator new(0x15Cu);
+  v3 = (_DWORD *)operator new(0x15Cu);
   v18 = 0;
   if ( v3 )
     v4 = sub_41C6A0(v3);
@@ -42,15 +44,15 @@ int __cdecl sub_43A230(int *self, int ArgList)
   do
   {
     v7 = v5 + 1;
-    sprintf(Buffer, ".\\Newspapers\\%s %03d.tga", off_4AAEC8[ArgList], v5 + 1);
-    *v6 = sub_409AF0(Buffer, 1);
+    sprintf(Buffer, ".\\Newspapers\\%s %03d.tga", ((const char **)off_4AAEC8)[ArgList], v5 + 1);
+    *v6 = sub_409AF0((_DWORD **)dword_520970, Buffer, 1);
     v5 = v7;
     ++v6;
   }
   while ( v7 < 3 );
   for ( i = 0; i < 4; ++i )
   {
-    v9 = operator new(0x80u);
+    v9 = (_DWORD *)operator new(0x80u);
     v18 = 1;
     if ( v9 )
       v10 = sub_412AB0(v9);
@@ -62,20 +64,20 @@ int __cdecl sub_43A230(int *self, int ArgList)
     if ( i >= 2 )
       v11 = 2;
     sub_4131B0(v10, (_DWORD *)v16[v11]);
-    sub_413120(1148862464);
-    sub_428680(self, self[i + 6]);
+    sub_413120(self[i + 6], 1148862464);
+    sub_428680((_DWORD*)self, self[i + 6]);
     (*(void (__cdecl **)(int, int))(*(_DWORD *)self[i + 6] + 24))(self[i + 6], 1);
     if ( (unsigned int)i < 2 )
     {
-      sub_413130(0, 0, 1065353216, 1065353216);
+      sub_413130(self[i + 6], 0, 0, 1065353216, 1065353216);
     }
     else if ( i == 2 )
     {
-      sub_413130(0, 0, 1065353216, 1056964608);
+      sub_413130(self[i + 6], 0, 0, 1065353216, 1056964608);
     }
     else if ( i == 3 )
     {
-      sub_413130(0, 1056964608, 1065353216, 1065353216);
+      sub_413130(self[i + 6], 0, 1056964608, 1065353216, 1065353216);
     }
   }
   v12 = (int **)v16;

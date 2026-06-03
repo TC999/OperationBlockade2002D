@@ -21,7 +21,7 @@ int __cdecl sub_421810(int self, const char *a2, int a3, int a4)
   v5 = (char *)operator new(0x114u);
   *((_DWORD *)v5 + 66) = a3;
   strcpy(v5, a2);
-  v6 = sub_422400(v5, 1);
+  v6 = sub_422400((_DWORD *)v5, 0, 1);
   *((_DWORD *)v5 + 65) = v6;
   if ( !v6 )
     return -1;
@@ -33,7 +33,7 @@ int __cdecl sub_421810(int self, const char *a2, int a3, int a4)
   {
     v10 = v8 + 8;
     *(_DWORD *)(self + 28) = v10;
-    v11 = sub_488DD7(*(LPVOID *)(self + 20), 4 * v10);
+      v11 = (int)(uintptr_t)sub_488DD7(*(LPVOID *)(self + 20), 4 * v10);
     if ( v11 )
     {
       v12 = *(_DWORD *)(self + 24);
@@ -42,7 +42,7 @@ int __cdecl sub_421810(int self, const char *a2, int a3, int a4)
       memset((void *)(v11 + 4 * v12), 0, 4 * v13);
     }
   }
-  *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = v5;
+  *(_DWORD *)(*(_DWORD *)(self + 20) + 4 * *(_DWORD *)(self + 24) - 4) = (uint32)(uintptr_t)v5;
   v14 = *((_DWORD *)v5 + 65);
   *((_DWORD *)v5 + 68) = 0;
   v15 = *((_DWORD *)v5 + 66);

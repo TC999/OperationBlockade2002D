@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00466AA0) --------------------------------------------------------
 int __cdecl sub_466AA0(int self)
 {
@@ -15,17 +17,17 @@ int __cdecl sub_466AA0(int self)
   *(_BYTE *)(self + 396) = 1;
   sub_407250(v2);
   sub_4074B0(*(_DWORD **)(self + 416), 0);
-  sub_408860(0);
+  sub_408860(0, 0);
   *(_BYTE *)(*(_DWORD *)(self + 416) + 48) = 0;
   *(_DWORD *)(*(_DWORD *)(self + 416) + 36) = 0;
   *(_DWORD *)(*(_DWORD *)(self + 416) + 32) = 0;
-  sub_408640(*(_DWORD *)(*(_DWORD *)(self + 412) + 1116), 1);
-  sub_408640(*(_DWORD *)(*(_DWORD *)(self + 412) + 1128), 1);
-  sub_408640(*(_DWORD *)(*(_DWORD *)(self + 412) + 1140), 1);
-  sub_407670(*(_DWORD *)(*(_DWORD *)(self + 412) + 1128), 1);
-  sub_407670(*(_DWORD *)(*(_DWORD *)(self + 412) + 1140), 1);
-  sub_46BF69((int)v9, 0.0);
-  sub_46BE62((int)v10, 0.0);
+  sub_408640((uint32 *)(*(_DWORD *)(self + 412) + 1116), 1, 0);
+  sub_408640((uint32 *)(*(_DWORD *)(self + 412) + 1128), 1, 0);
+  sub_408640((uint32 *)(*(_DWORD *)(self + 412) + 1140), 1, 0);
+  sub_407670((uint32 *)(*(_DWORD *)(self + 412) + 1128), 1, 0);
+  sub_407670((uint32 *)(*(_DWORD *)(self + 412) + 1140), 1, 0);
+  sub_46BF69((float *)v9, 0.0f);
+  sub_46BE62((float *)v10, 0.0f);
   sub_4073F0(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1128), v9);
   sub_4073C0(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1128), 1);
   sub_4073F0(*(_DWORD **)(self + 416), *(_DWORD *)(*(_DWORD *)(self + 412) + 1140), v10);

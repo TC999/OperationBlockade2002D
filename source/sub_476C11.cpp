@@ -41,8 +41,8 @@ int __cdecl sub_476C11(_DWORD *a1, int a2, int a3)
     --v4;
   }
   while ( v4 );
-  sub_478861(a1);
-  result = sub_47C29B(a1);
+  sub_478861((int)a1);
+  result = sub_47C29B((int)a1);
   if ( byte_4B15AC == 2 )
   {
     result = sub_47BD85();

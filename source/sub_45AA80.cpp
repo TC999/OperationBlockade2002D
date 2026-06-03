@@ -13,11 +13,11 @@ int __cdecl sub_45AA80(_DWORD *self)
   {
     v3 = rand() % 10;
     v4 = rand();
-    return sub_45B150(self[18], v4 % 10, v3);
+    return sub_45B150(self, self[18], v4 % 10, v3);
   }
   else if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
   {
-    sub_45ABF0(self);
+    sub_45ABF0((int)self);
     v5 = rand() % 10;
     v6 = rand();
     return sub_45A920(self, self[18], v6 % 10, v5);

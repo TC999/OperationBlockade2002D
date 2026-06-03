@@ -1,3 +1,7 @@
+extern char aArrowup[];
+extern char aArrowdown[];
+extern char aSavedgames_0[];
+
 //----- (0043B330) --------------------------------------------------------
 bool __cdecl sub_43B330(_DWORD *self)
 {

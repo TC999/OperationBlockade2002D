@@ -11,7 +11,7 @@ int __cdecl sub_4754C5(int self, int a2)
   v3 = *(_DWORD *)(self + 4144) & 0xFFFFFFFE;
   v4 = ((*(_DWORD *)(self + 4152) + 1) & 0xFFFFFFFE) - v3;
   *(_DWORD *)(self + 4208) = (*(_DWORD *)(self + 4152) + 1) & 0xFFFFFFFE;
-  *(_DWORD *)self = &off_49A7D8;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_49A7D8;
   *(_DWORD *)(self + 4200) = v3;
   *(_DWORD *)(self + 4204) = 0;
   *(_DWORD *)(self + 4216) = 0;
@@ -31,7 +31,7 @@ int __cdecl sub_4754C5(int self, int a2)
   {
     v6 = 0;
   }
-  *(_DWORD *)(self + 4196) = v6;
+  *(_DWORD *)(self + 4196) = (uint32)(uintptr_t)v6;
   if ( !v6 )
     *(_DWORD *)(self + 4232) = 0;
   if ( *(_DWORD *)(a2 + 4) == 1498831189 )

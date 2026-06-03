@@ -1,3 +1,5 @@
+extern char aConnectiontype[];
+
 //----- (0043D2F0) --------------------------------------------------------
 char __cdecl sub_43D2F0(_DWORD **self, char *String1, int a3)
 {

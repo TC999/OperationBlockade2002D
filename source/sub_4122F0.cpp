@@ -103,7 +103,7 @@ int __cdecl sub_4122F0(int self, int a2)
     v12 = v10[1];
     *v10 = 0;
     v10[1] = *(_DWORD *)(self + 28);
-    *(_DWORD *)(self + 28) = v10;
+    *(_DWORD *)(self + 28) = (int)v10;
     *(_DWORD *)(self + 32) = v12;
     if ( !v12 )
       *(_DWORD *)(self + 36) = 0;
@@ -118,7 +118,7 @@ int __cdecl sub_4122F0(int self, int a2)
       v15 = *(void **)(self + 68);
       v16 = v13 + 8;
       *(_DWORD *)(self + 76) = v16;
-      v17 = sub_488DD7(v15, 4 * v16);
+      v17 = (int)sub_488DD7(v15, 4 * v16);
       if ( v17 )
       {
         v18 = *(_DWORD *)(self + 72);
@@ -163,7 +163,7 @@ LABEL_22:
         }
       }
 LABEL_28:
-      sub_412620(v22);
+      sub_412620((void *)self, (int)v22);
     }
   }
   v27 = *(float *)(self + 952) - *(float *)(dword_520970 + 68);
@@ -171,7 +171,7 @@ LABEL_28:
   if ( v27 < 0.0 )
   {
     *(_DWORD *)(self + 952) = 1045220557;
-    v28 = sub_4118C0(self, v49, 4);
+    v28 = sub_4118C0(self, (_DWORD *)v49, 4);
     v46 = v28;
     if ( v28 > 0 )
     {
@@ -185,9 +185,9 @@ LABEL_28:
         {
           v31 = *v29;
           if ( v30 )
-            v32 = v31 + 2073;
+            v32 = (_DWORD *)(v31 + 2073);
           else
-            v32 = v31 + 2069;
+            v32 = (_DWORD *)(v31 + 2069);
           v33 = 0;
           v43 = 0;
           if ( (int)v32[1] > 0 )
@@ -235,5 +235,5 @@ LABEL_28:
     }
     sub_411920(self, v49, v28);
   }
-  return sub_428620(a2);
+  return sub_428620((_DWORD *)self, a2);
 }

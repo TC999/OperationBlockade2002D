@@ -31,7 +31,7 @@ char __cdecl sub_419A30(_DWORD *self, float a2, float a3, float a4)
     v15[0] = v8 + *(i - 2);
     v15[1] = v10 + *(i - 1);
     v15[2] = v11 + *i;
-    if ( !sub_416350((int)self, v15, 1) )
+    if ( !sub_416350((int)self, (_DWORD*)(v15), 1) )
       break;
     if ( ++v6 >= v5 )
       return 1;

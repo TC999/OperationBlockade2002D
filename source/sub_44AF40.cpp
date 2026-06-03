@@ -66,7 +66,7 @@ int __stdcall sub_44AF40(int a1)
       v42 = *(float *)(a1 + 88);
       v43 = *(float *)(a1 + 92);
       v44 = *(float *)(a1 + 96);
-      sub_46B970(&v42, &v42);
+      sub_46B970((int)&v42, (int)&v42);
       v50 = 0.0;
       v47 = 0.0;
       v48 = v43 - 0.0;
@@ -79,8 +79,8 @@ int __stdcall sub_44AF40(int a1)
       v52 = v55;
       v56 = v48 * v43 - v49 * v42;
       v53 = v56;
-      sub_46B970(&v45, &v45);
-      sub_46B970(&v51, &v51);
+      sub_46B970((int)&v45, (int)&v45);
+      sub_46B970((int)&v51, (int)&v51);
       v2 = *(_DWORD *)(a1 + 4);
       v3 = *(float *)(v2 + 408);
       v42 = v3 * v42;
@@ -136,8 +136,8 @@ int __stdcall sub_44AF40(int a1)
       *v21 = *v20;
       v21[1] = v20[1];
       v21[2] = v20[2];
-      sub_4010D0(&v51, a1 + 12);
-      sub_46B970(&v54, a1 + 88);
+      sub_4010D0((_DWORD *)&v51, a1 + 12);
+      sub_46B970((int)&v54, a1 + 88);
       v22 = *(_BYTE *)(a1 + 125);
       v23 = *(float *)(*(_DWORD *)(a1 + 4) + 412);
       v45 = v54 * v23;
@@ -159,7 +159,7 @@ int __stdcall sub_44AF40(int a1)
         v42 = v45;
         v46 = 0.0 - v54;
         v43 = v46;
-        sub_46B970(&v42, &v42);
+        sub_46B970((int)&v42, (int)&v42);
       }
       v24 = *(_DWORD *)(a1 + 120) + 100;
       v25 = *(float *)(*(_DWORD *)(a1 + 4) + 416);

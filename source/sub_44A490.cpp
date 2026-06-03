@@ -67,7 +67,7 @@ int __cdecl sub_44A490(char *self, int a2, _DWORD *a3, float *a4, char a5, char 
     else
       v19 = -1.0;
     v28 = v19 * v28;
-    sub_46B970(&v26, &v26);
+    sub_46B970((int)&v26, (int)&v26);
     v30 = *(float *)(a2 + 292);
     v31 = *(float *)(a2 + 296);
     if ( v30 == v31 )
@@ -85,8 +85,8 @@ int __cdecl sub_44A490(char *self, int a2, _DWORD *a3, float *a4, char a5, char 
     *(float *)v29 = v21 + v21 - 1.0;
     *(float *)&v29[1] = v24 + v24 - 1.0;
     *(float *)&v29[2] = v22 + v22 - 1.0;
-    sub_46B970(v29, v29);
-    sub_449C40(self, *(_DWORD *)(*(_DWORD *)(a2 + 308) + 4 * i), a3, &v26, a5, a6, 3.1415927, (int)v29);
+    sub_46B970((int)v29, (int)v29);
+    sub_449C40(self, *(_DWORD *)(*(_DWORD *)(a2 + 308) + 4 * i), a3, (_DWORD *)&v26, a5, a6, 3.1415927f, (int)v29);
   }
   return result;
 }

@@ -42,7 +42,7 @@ int __cdecl sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6
   float v47; // [esp+54h] [ebp-14h]
   float v48; // [esp+5Ch] [ebp-Ch]
   float v49; // [esp+60h] [ebp-8h]
-  float v50; // [esp+64h] [ebp-4h]
+  float v50 = 0.0f; // [esp+64h] [ebp-4h]
   int v51; // [esp+78h] [ebp+10h]
   int v52; // [esp+78h] [ebp+10h]
 
@@ -54,9 +54,9 @@ int __cdecl sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6
   v34 = v37;
   v38 = v10;
   v35 = v38;
-  sub_46B970(&v34, &v34);
-  v11 = sub_45A7E0(*(_DWORD *)(dword_520970 + 236));
-  v33 = sub_45A810(*(_DWORD *)(dword_520970 + 236));
+  sub_46B970((int)&v34, (int)&v34);
+  v11 = sub_45A7E0((_DWORD *)*(_DWORD *)(dword_520970 + 236));
+  v33 = sub_45A810((_DWORD *)*(_DWORD *)(dword_520970 + 236));
   if ( a2 > 0 )
   {
     *(float *)&v51 = -a7;
@@ -104,7 +104,7 @@ int __cdecl sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6
       v30 = v36 * v18;
       v27 = v35 * v18;
       v24 = v34 * v18;
-      sub_40F4A0(LODWORD(v24), LODWORD(v27), LODWORD(v30));
+      sub_40F4A0(NULL, LODWORD(v24), LODWORD(v27), LODWORD(v30));
       if ( 0.0 == a6 )
         v19 = 0.0;
       else
@@ -112,11 +112,11 @@ int __cdecl sub_455AC0(int *self, int a2, int a3, float *a4, float *a5, float a6
       v31 = v19 * a5[2];
       v28 = v19 * a5[1];
       v25 = v19 * *a5;
-      sub_40F4A0(LODWORD(v25), LODWORD(v28), LODWORD(v31));
+      sub_40F4A0(NULL, LODWORD(v25), LODWORD(v28), LODWORD(v31));
       v32 = v50 + a4[2];
       v29 = v49 + a4[1];
       v26 = v48 + *a4;
-      sub_40F4A0(LODWORD(v26), LODWORD(v29), LODWORD(v32));
+      sub_40F4A0(NULL, LODWORD(v26), LODWORD(v29), LODWORD(v32));
       v20 = sub_4162C0(&v43, &v40, &v46);
       v37 = *v20;
       v38 = v20[1];

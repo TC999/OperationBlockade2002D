@@ -1,4 +1,10 @@
 //----- (00427EB0) --------------------------------------------------------
+extern char aScreens[];
+extern char aWb[];
+extern char aFunctionScreen[];
+extern char aFunctionScreen_0[];
+extern char aFunctionScreen_1[];
+extern char aFunctionScreen_2[];
 bool __cdecl sub_427EB0(int *a1)
 {
   bool result; // al
@@ -83,7 +89,7 @@ bool __cdecl sub_427EB0(int *a1)
         v32 = 0;
         v33 = 0;
         v34 = 0;
-        v6 = operator new(ElementCount + 1);
+        v6 = (_DWORD*)operator new(ElementCount + 1);
         if ( v6 )
         {
           if ( (*(int (__stdcall **)(int, char *, _DWORD, int))(*(_DWORD *)v17 + 36))(v17, v35, 0, 16) >= 0 )
@@ -137,7 +143,7 @@ bool __cdecl sub_427EB0(int *a1)
                   {
                     fclose(v14);
                     sub_4885A6(v6);
-                    v16 = sub_450BF0(0, 4.0);
+                    v16 = sub_450BF0(0, 0, 4.0f);
                     sub_421190(v16, "'%s' written", Buffer);
                     return 1;
                   }

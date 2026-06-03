@@ -1,3 +1,8 @@
+#include "common.h"
+
+extern int __cdecl sub_408F30(_DWORD *self);
+extern _DWORD *__cdecl sub_463EB0(_DWORD *a1, float a2, _DWORD *a3);
+
 //----- (00463F60) --------------------------------------------------------
 void __cdecl sub_463F60(int a1, int a2, float a3)
 {
@@ -80,7 +85,7 @@ void __cdecl sub_463F60(int a1, int a2, float a3)
   float retaddr; // [esp+78h] [ebp+0h]
   float v81; // [esp+80h] [ebp+8h]
 
-  if ( (a3 >= 0.0000099999997 || a3 <= -0.0000099999997) && sub_408F30(dword_520970) )
+  if ( (a3 >= 0.0000099999997 || a3 <= -0.0000099999997) && sub_408F30((_DWORD*)dword_520970) )
   {
     v4 = a3 + *(float *)(a1 + 76);
     *(float *)(a1 + 76) = v4;
@@ -131,9 +136,9 @@ void __cdecl sub_463F60(int a1, int a2, float a3)
     v79 = 0.0;
     retaddr = 0.0;
     memset(v57, 0, 4 * ((unsigned int)(24 * v15) >> 2));
-    if ( sub_408F30(dword_520970) )
+    if ( sub_408F30((_DWORD*)dword_520970) )
     {
-      v16 = sub_408F30(dword_520970);
+      v16 = sub_408F30((_DWORD*)dword_520970);
       v17 = *(float *)(v16 + 36);
       v78 = *(float *)(v16 + 32);
       v79 = v17;
@@ -154,12 +159,12 @@ void __cdecl sub_463F60(int a1, int a2, float a3)
       *(float *)&v75 = 0.0;
       v76 = 0.0;
       v77 = 0.0;
-      sub_463EB0((_DWORD *)a1, v81, &v61);
+      sub_463EB0((_DWORD *)a1, v81, (uint32*)&v61);
       v19 = v81 + *(float *)(a1 + 72);
       if ( v19 <= *(float *)(a1 + 80) )
         v19 = *(float *)(a1 + 80);
       v60 = v19;
-      sub_463EB0((_DWORD *)a1, v60, &v75);
+      sub_463EB0((_DWORD *)a1, v60, (uint32*)&v75);
       if ( *(_BYTE *)(a1 + 48) )
       {
         v20 = *(float *)&v61 - v78;

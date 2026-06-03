@@ -1,4 +1,12 @@
 //----- (0041CA40) --------------------------------------------------------
+static char aSoundCanTLoadS[] = "Sound can't load sound\n";
+static char aSoundCanTLoadS_0[] = "Sound can't load sound: no name\n";
+static char aSoundCanTLoadS_1[] = "Sound can't load sound: file not found\n";
+static char aSoundCanTLoadS_2[] = "Sound can't load sound: can't open file\n";
+static char aSoundLoadedS[] = "Sound loaded %s\n";
+static char aSoundCanTReadW[] = "Sound can't read wave data\n";
+static char aSoundCanTLockS[] = "Sound can't lock sound buffer\n";
+
 char __cdecl sub_41CA40(int self)
 {
   __int64 v2; // rcx
@@ -15,7 +23,7 @@ char __cdecl sub_41CA40(int self)
   unsigned int v14; // edx
   int v15; // eax
   char v16; // [esp+3Ch] [ebp-48h]
-  char ArgList; // [esp+4Ch] [ebp-38h]
+  int ArgList; // [esp+4Ch] [ebp-38h]
   unsigned int v18; // [esp+50h] [ebp-34h] BYREF
   int v19; // [esp+54h] [ebp-30h] BYREF
   __int64 v20; // [esp+58h] [ebp-2Ch]
@@ -24,7 +32,7 @@ char __cdecl sub_41CA40(int self)
   sub_41C940(self);
   HIDWORD(v2) = 0;
   if ( *(_BYTE *)(self + 2) )
-    return sub_41D1A0(self);
+    return sub_41D1A0((char *)self);
   if ( !ppDS )
   {
     sub_4229D0(aSoundCanTLoadS, self + 40);
@@ -44,7 +52,7 @@ char __cdecl sub_41CA40(int self)
     return 0;
   }
   v5 = (_DWORD *)(self + 304);
-  v6 = sf_open_read(self + 40, self + 304);
+  v6 = ((int (__cdecl *)(int, int))sf_open_read)(self + 40, self + 304);
   *(_DWORD *)(self + 300) = v6;
   if ( !v6 )
   {
@@ -70,11 +78,11 @@ char __cdecl sub_41CA40(int self)
     v21[4] = v9;
     v21[0] = 36;
     v21[1] = 65762;
-    if ( ppDS->lpVtbl->CreateSoundBuffer(ppDS, (LPCDSBUFFERDESC)v21, (LPDIRECTSOUNDBUFFER *)(self + 32), 0) < 0 )
+    if ( ppDS->CreateSoundBuffer((LPCDSBUFFERDESC)v21, (LPDIRECTSOUNDBUFFER *)(self + 32), 0) < 0 )
     {
       if ( *(_DWORD *)(self + 300) )
       {
-        sf_close(*(_DWORD *)(self + 300));
+        sf_close((SNDFILE *)(uintptr_t)*(_DWORD *)(self + 300));
         *(_DWORD *)(self + 300) = 0;
         ++dword_5200DC;
       }
@@ -118,7 +126,7 @@ char __cdecl sub_41CA40(int self)
       (*(void (__stdcall **)(int, int, unsigned int, _DWORD, _DWORD))(*(_DWORD *)v13 + 76))(v13, v15, v14, 0, 0);
       if ( *(_DWORD *)(self + 300) )
       {
-        sf_close(*(_DWORD *)(self + 300));
+        sf_close((SNDFILE *)(uintptr_t)*(_DWORD *)(self + 300));
         *(_DWORD *)(self + 300) = 0;
         ++dword_5200DC;
       }
@@ -129,7 +137,7 @@ char __cdecl sub_41CA40(int self)
     {
       if ( *(_DWORD *)(self + 300) )
       {
-        sf_close(*(_DWORD *)(self + 300));
+        sf_close((SNDFILE *)(uintptr_t)*(_DWORD *)(self + 300));
         *(_DWORD *)(self + 300) = 0;
         ++dword_5200DC;
       }
@@ -141,7 +149,7 @@ char __cdecl sub_41CA40(int self)
   {
     if ( *(_DWORD *)(self + 300) )
     {
-      sf_close(*(_DWORD *)(self + 300));
+      sf_close((SNDFILE *)(uintptr_t)*(_DWORD *)(self + 300));
       *(_DWORD *)(self + 300) = 0;
       ++dword_5200DC;
     }

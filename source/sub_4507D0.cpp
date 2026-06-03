@@ -1,4 +1,8 @@
+#include "common.h"
+
 //----- (004507D0) --------------------------------------------------------
+extern char aUseAndToCycleA[];
+
 char __cdecl sub_4507D0(int self, int a2)
 {
   int v4; // eax
@@ -49,18 +53,18 @@ char __cdecl sub_4507D0(int self, int a2)
     v17 = (__int64)v10;
     if ( !v11
       || !*(_BYTE *)(v11 + 16)
-      || (v19 = (float)v17, sub_468BE0(LODWORD(v19), 0, 0) <= -3.4028235e38)
-      || (v12 = sub_468BE0(LODWORD(v19), 0, 0), v20 = v12, v12 == -3.4028235e38) )
+      || (v19 = (float)v17, sub_468BE0((int *)LODWORD(v19), 0, 0, 0) <= -3.4028235e38)
+      || (v12 = sub_468BE0((int *)LODWORD(v19), 0, 0, 0), v20 = v12, v12 == -3.4028235e38) )
     {
       v20 = 0.0;
     }
     *(float *)&v15 = (float)v17;
     sub_407600(*(_DWORD **)(self + 188), 0, v15, 0, SLODWORD(v20));
     sub_414C80(*(_DWORD **)(self + 116), *(_DWORD *)(self + 188));
-    v13 = sub_408880(*(_DWORD *)(self + 188));
+    v13 = sub_408880(*(_DWORD **)(self + 188));
     sub_421190(
       *(_DWORD *)(self + 288),
-      "Model '%s' - Anim %d: %0.1f/%0.1f",
+      (char *)"Model '%s' - Anim %d: %0.1f/%0.1f",
       (const char *)(*(_DWORD *)(self + 184) + 60),
       v13,
       *(float *)(*(_DWORD *)(self + 188) + 32),
@@ -72,8 +76,8 @@ char __cdecl sub_4507D0(int self, int a2)
     if ( *(_DWORD *)(self + 268) )
     {
       sub_406D30(*(_DWORD *)(self + 188), *(float *)&a2);
-      sub_4085B0(*(_DWORD *)(self + 188), *(_DWORD *)(self + 180), v18);
-      sub_402690(v18[0], v18[1], v18[2]);
+      sub_4085B0(*(_DWORD *)(self + 188), *(_DWORD *)(self + 180), (_DWORD *)v18);
+      sub_402690(*(_DWORD **)(self + 268), v18[0], v18[1], v18[2]);
     }
   }
   return sub_428620((_DWORD *)self, a2);

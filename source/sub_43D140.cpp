@@ -7,7 +7,7 @@ char __cdecl sub_43D140(_DWORD **self, char *String1, int a3)
   {
     if ( !_strcmpi(String1, aOkbutton) )
     {
-      sprintf(Buffer, ".\\Saved\\%s.sps", byte_521580);
+      sprintf(Buffer, ".\\Saved\\%s.sps", &byte_521580);
       if ( sub_422AE0(Buffer) )
         DeleteFileA(Buffer);
       goto LABEL_6;

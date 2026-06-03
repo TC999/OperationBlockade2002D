@@ -19,7 +19,7 @@ char __cdecl sub_43E540(int self, int a2)
     v4 = *(_DWORD *)(*(_DWORD *)(dword_520970 + 280) + 520);
     *(_DWORD *)(*(_DWORD *)(self + 52) + 132) = v4;
     *(_BYTE *)(*(_DWORD *)(self + 52) + 136) = 1;
-    v5 = sub_45E6F0(*(_DWORD *)(dword_4F5CC4 + 84));
+    v5 = sub_45E6F0((_DWORD *)(*(_DWORD *)(dword_4F5CC4 + 84)), 0);
     v6 = 0;
     v11 = 0;
     v7 = 0;

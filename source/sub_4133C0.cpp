@@ -8,7 +8,7 @@ char __cdecl sub_4133C0(_DWORD *self)
   void *v6; // edi
   char result; // al
 
-  v2 = operator new(0x18000u);
+  v2 = (_DWORD *)operator new(0x18000u);
   if ( v2 )
   {
     v3 = v2 + 19;
@@ -60,11 +60,11 @@ char __cdecl sub_4133C0(_DWORD *self)
   {
     v5 = 0;
   }
-  self[6] = v5;
+  self[6] = (int)v5;
   memset(v5, 0, 0x18000u);
   v6 = operator new(0x7800u);
   result = 1;
-  self[7] = v6;
+  self[7] = (int)v6;
   memset(v6, 0, 0x7800u);
   self[8] = 0;
   self[5] = 0;

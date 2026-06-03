@@ -13,14 +13,14 @@ int __cdecl sub_428680(_DWORD *self, int a2)
     result = a2;
     *(_DWORD *)(v2 + 8) = a2;
     *(_DWORD *)(a2 + 8) = 0;
-    *(_DWORD *)(a2 + 4) = self;
+    *(_DWORD *)(a2 + 4) = (uint32)self;
   }
   else
   {
     result = a2;
     self[3] = a2;
     *(_DWORD *)(a2 + 8) = 0;
-    *(_DWORD *)(a2 + 4) = self;
+    *(_DWORD *)(a2 + 4) = (uint32)self;
   }
   return result;
 }

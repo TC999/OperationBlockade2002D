@@ -12,7 +12,7 @@ int *__cdecl sub_470516(unsigned int a1, unsigned int a2, int a3)
   float v11; // [esp+14h] [ebp-10h]
   float v12; // [esp+18h] [ebp-Ch]
   float v13; // [esp+1Ch] [ebp-8h]
-  int v14; // [esp+20h] [ebp-4h]
+  int v14 = 0; // [esp+20h] [ebp-4h]
   unsigned int v15; // [esp+20h] [ebp-4h]
 
   result = (int *)operator new(16 * a1);
@@ -22,12 +22,12 @@ int *__cdecl sub_470516(unsigned int a1, unsigned int a2, int a3)
     v10 = result;
     v5 = v14;
     v15 = 0;
-    for ( dword_521728 = v5; v15 < a1; *((float *)v4 - 1) = 1.0 - v9 )
+    for ( dword_521728 = v5; v15 < a1; *((float *)v4 - 1) = (float)(1.0 - v9) )
     {
-      v11 = (double)a2 / (double)a1;
+      v11 = (float)((double)a2 / (double)a1);
       X = (double)v15 * v11 - 0.5;
-      v13 = X;
-      v12 = floor(X);
+      v13 = (float)X;
+      v12 = (float)floor(X);
       v7 = (int)v12;
       v8 = v7 + 1;
       if ( v7 < 0 )
@@ -39,7 +39,7 @@ int *__cdecl sub_470516(unsigned int a1, unsigned int a2, int a3)
       v4 += 4;
       ++v15;
       v9 = 1.0 - (v13 - v12);
-      *((float *)v4 - 3) = v9;
+      *((float *)v4 - 3) = (float)v9;
     }
     return v10;
   }

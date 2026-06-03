@@ -6,7 +6,7 @@ int __cdecl sub_428D50(_DWORD *self, const char *a2)
   char v5[256]; // [esp+10h] [ebp-100h] BYREF
 
   v3 = self + 71;
-  sub_429E70(v5, 256);
+  sub_429E70(v3, (_BYTE*)v5, 256);
   result = strcmp(a2, v5);
   if ( result )
   {

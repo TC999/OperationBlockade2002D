@@ -27,8 +27,8 @@ __int16 __cdecl sub_47B3C0(_BYTE *a1, int a2, unsigned __int16 a3)
       v4 *= 4;
     }
     while ( v3 < 16 );
-    sub_47B093(&v8, (_WORD *)a2);
-    LOWORD(v3) = *(_WORD *)a2;
+    sub_47B093((_BYTE*)&v8, (_WORD *)a2);
+    WORDn(v3, 0) = *(_WORD *)a2;
     *(_WORD *)(a2 + 2) = *(_WORD *)a2;
   }
   return v3;

@@ -14,7 +14,7 @@ int __cdecl sub_43A1E0(int *self)
     result = *v3;
     if ( *v3 )
     {
-      result = sub_4286C0(self, *v3);
+      result = sub_4286C0((uint32*)self, *v3);
       if ( *v3 )
         result = (**(int (__cdecl ***)(int, int))*v3)(*v3, 1);
       *v3 = 0;

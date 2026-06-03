@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00403D90) --------------------------------------------------------
 char *__cdecl sub_403D90(char *self, const char *a2)
 {

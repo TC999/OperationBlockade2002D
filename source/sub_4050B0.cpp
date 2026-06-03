@@ -1,3 +1,8 @@
+#include "common.h"
+
+extern char aNoMatchForNode[];
+extern char aWarningCanTFin[];
+
 //----- (004050B0) --------------------------------------------------------
 int __cdecl sub_4050B0(_DWORD *self)
 {
@@ -42,7 +47,7 @@ LABEL_6:
         v6 = *(_DWORD *)(v4 + 12);
         v7 = *v3 + v6;
         *(_DWORD *)(v4 + 12) = v7;
-        v8 = sub_488DD7(*(LPVOID *)(v4 + 16), 40 * v7);
+        v8 = (int)(uintptr_t)sub_488DD7(*(LPVOID *)(v4 + 16), 40 * v7);
         v9 = 0;
         if ( v8 )
         {

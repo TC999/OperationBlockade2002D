@@ -1,4 +1,5 @@
 //----- (004282E0) --------------------------------------------------------
+extern char aOperationBlock_1[];
 char sub_4282E0(char a1, char *Format, ...)
 {
   char result; // al

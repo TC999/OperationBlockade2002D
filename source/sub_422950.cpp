@@ -8,7 +8,7 @@ unsigned int __cdecl sub_422950(const char *a1)
   {
     if ( Stream )
     {
-      fclose(Stream);
+      fclose((FILE *)Stream);
       Stream = 0;
     }
     result = strlen(a1) + 1;

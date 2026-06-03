@@ -67,8 +67,8 @@ char *__cdecl sub_419CF0(char *self, char *a2, unsigned int a3, _DWORD *a4)
           v4 = self;
         }
         v32 = (_DWORD *)*((_DWORD *)v4 + 2);
-        v33 = (char *)&v32[v29 / 0xFFFFFFFC];
-        if ( a2 != (char *)&v32[v29 / 0xFFFFFFFC] )
+        v33 = (char *)&v32[v29 / 4];
+        if ( a2 != (char *)&v32[v29 / 4] )
         {
           do
           {
@@ -154,17 +154,17 @@ char *__cdecl sub_419CF0(char *self, char *a2, unsigned int a3, _DWORD *a4)
   else
   {
     v7 = *((_DWORD *)self + 1);
-    if ( !v7 || (v8 = (int)&result[-v7] >> 4, a3 >= v8) )
+    if ( !v7 || (v8 = (unsigned int)(result - (char*)v7) >> 4, a3 >= v8) )
       v8 = a3;
     if ( v7 )
-      v9 = (int)&result[-v7] >> 4;
+      v9 = (unsigned int)(result - (char*)v7) >> 4;
     else
       v9 = 0;
     v10 = v8 + v9;
     v39 = v10;
     if ( v10 < 0 )
       v10 = 0;
-    v37 = operator new(16 * v10);
+    v37 = (_DWORD *)operator new(16 * v10);
     v12 = v37;
     v13 = (char *)*((_DWORD *)v4 + 1);
     if ( v13 != a2 )
@@ -224,19 +224,19 @@ char *__cdecl sub_419CF0(char *self, char *a2, unsigned int a3, _DWORD *a4)
     }
     sub_4885A6(*((LPVOID *)self + 1));
     v18 = *((_DWORD *)self + 1);
-    *((_DWORD *)self + 3) = &v37[4 * v39];
+    *((_DWORD *)self + 3) = (uint32)&v37[4 * v39];
     if ( v18 )
     {
       v19 = *((_DWORD *)self + 2);
-      *((_DWORD *)self + 1) = v37;
+      *((_DWORD *)self + 1) = (uint32)v37;
       result = (char *)&v37[4 * v6 + 4 * ((v19 - v18) >> 4)];
     }
     else
     {
-      *((_DWORD *)self + 1) = v37;
+      *((_DWORD *)self + 1) = (uint32)v37;
       result = (char *)&v37[4 * v6];
     }
-    *((_DWORD *)self + 2) = result;
+    *((_DWORD *)self + 2) = (uint32)result;
   }
   return result;
 }

@@ -1,3 +1,8 @@
+extern char aSky08[];
+extern char aCloud08[];
+extern char aMesh05[];
+extern int dword_520A78;
+
 //----- (00406F00) --------------------------------------------------------
 char __cdecl sub_406F00(float *self, int a2)
 {
@@ -25,9 +30,9 @@ char __cdecl sub_406F00(float *self, int a2)
     if ( !*(_BYTE *)(96 * v6 + *((_DWORD *)self + 6) + 85) )
       break;
     if ( v7 && *(_BYTE *)v7 )
-      LOBYTE(v6) = *(_BYTE *)(v7 + 1);
+      v6 = (unsigned __int8)*(_BYTE *)(v7 + 1);
     else
-      LOBYTE(v6) = *(_BYTE *)v13;
+      v6 = (unsigned __int8)*(_BYTE *)v13;
     if ( (_BYTE)v6 )
     {
       v6 = *(_DWORD *)(v13 + 28);
@@ -82,7 +87,7 @@ LABEL_15:
   }
 LABEL_19:
   if ( *(_BYTE *)(v7 + 2) )
-    sub_46B97C(v8, v7 + 4, v8);
+    sub_46B97C((int)v8, (int)(v7 + 4), (int)v8);
   if ( *(_BYTE *)v7 )
   {
     v9 = *(_BYTE *)(v7 + 1);
@@ -95,15 +100,15 @@ LABEL_23:
 LABEL_24:
   if ( v9 && *((int *)v10 + 7) >= 0 )
   {
-    sub_406F00(*((float *)v10 + 7));
-    sub_46B97C(v8, v8, 96 * *((_DWORD *)v10 + 7) + *((_DWORD *)self + 6) + 16);
+    sub_406F00(self, *((int *)v10 + 7));
+    sub_46B97C((int)v8, (int)v8, (int)(96 * *((_DWORD *)v10 + 7) + *((_DWORD *)self + 6) + 16));
     *((float *)v5 + 20) = *(float *)(96 * *((_DWORD *)v10 + 7) + *((_DWORD *)self + 6) + 80) * *((float *)v5 + 20);
   }
   if ( _strcmpi(*((const char **)v10 + 2), aSky08) && _strcmpi(*((const char **)v10 + 2), aCloud08) )
     _strcmpi(*((const char **)v10 + 2), aMesh05);
-  sub_46C5C5(v5, v10 + 60, v8);
+  sub_46C5C5((float *)v5, (float *)(v10 + 60), (float *)v8);
   *((float *)v5 + 3) = *((float *)v5 + 20) * *((float *)v10 + 18);
-  LOBYTE(v6) = dword_520A78;
+  v6 = (unsigned __int8)dword_520A78;
   *(float *)dword_520A78 = *(float *)dword_520A78 + 1.0;
   *((_BYTE *)v5 + 85) = 1;
   return v6;

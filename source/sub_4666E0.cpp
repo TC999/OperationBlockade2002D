@@ -7,8 +7,8 @@ bool __cdecl sub_4666E0(char *self, int a2, int a3, float a4, char a5)
   int v9; // ecx
   int v10; // edi
   int v11; // eax
-  unsigned __int8 v13; // c0
-  unsigned __int8 v14; // c3
+  unsigned __int8 v13 = 0; // c0
+  unsigned __int8 v14 = 0; // c3
   float v15; // eax
   _DWORD *v16; // ecx
   int v17; // eax
@@ -65,7 +65,7 @@ bool __cdecl sub_4666E0(char *self, int a2, int a3, float a4, char a5)
     }
     if ( v27 )
     {
-      sub_467A50(1);
+      sub_467A50((int)self, 1);
       self[420] = 0;
       if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
       {
@@ -94,7 +94,7 @@ bool __cdecl sub_4666E0(char *self, int a2, int a3, float a4, char a5)
     {
       if ( !v22 )
         return !self[396] && !v23;
-      sub_467A50(1);
+      sub_467A50((int)self, 1);
       self[420] = 0;
       if ( !*(_BYTE *)(dword_4F5CC4 + 937) )
       {
@@ -105,10 +105,10 @@ bool __cdecl sub_4666E0(char *self, int a2, int a3, float a4, char a5)
       }
       v19 = *((_DWORD *)self + 103);
       self[421] = 0;
-      sub_408640(*(_DWORD *)(v19 + 1128), 0);
-      sub_408640(*(_DWORD *)(*((_DWORD *)self + 103) + 1140), 0);
-      sub_407670(*(_DWORD *)(*((_DWORD *)self + 103) + 1132), 0);
-      sub_407670(*(_DWORD *)(*((_DWORD *)self + 103) + 1144), 0);
+        sub_408640((_DWORD *)*(_DWORD *)(v19 + 1128), 0, 0);
+        sub_408640((_DWORD *)*(_DWORD *)(*((_DWORD *)self + 103) + 1140), 0, 0);
+        sub_407670((_DWORD *)*(_DWORD *)(*((_DWORD *)self + 103) + 1132), 0, 0);
+        sub_407670((_DWORD *)*(_DWORD *)(*((_DWORD *)self + 103) + 1144), 0, 0);
       v20 = *((_DWORD *)self + 103);
       if ( *(_DWORD *)(v20 + 1224) )
       {
@@ -132,7 +132,7 @@ bool __cdecl sub_4666E0(char *self, int a2, int a3, float a4, char a5)
   }
   self[436] = 1;
 LABEL_22:
-  sub_467A50(1);
+  sub_467A50((int)self, 1);
   (*(void (__cdecl **)(char *, _DWORD))(*(_DWORD *)self + 24))(self, 0);
   v15 = *(float *)(*((_DWORD *)self + 103) + 1232);
   if ( v15 != 0.0 )

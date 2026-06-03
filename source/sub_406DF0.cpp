@@ -10,12 +10,12 @@ int __cdecl sub_406DF0(_DWORD *self, float a2)
   int result; // eax
   _DWORD *v9; // ecx
 
-  v2 = self[6] + 96 * LODWORD(a2);
-  v3 = *(_DWORD *)(self[7] + 4) + 172 * LODWORD(a2);
+  v2 = self[6] + 96 * (int)a2;
+  v3 = *(_DWORD *)(self[7] + 4) + 172 * (int)a2;
   v4 = *(_BYTE *)(v2 + 84);
   if ( v4 && *(_DWORD *)(v2 + 88) )
   {
-    sub_409A00(*(_DWORD *)(v2 + 88));
+    sub_409A00(*(_DWORD *)(v2 + 88), 0);
     *(_DWORD *)(v2 + 88) = 0;
     goto LABEL_11;
   }
@@ -29,7 +29,7 @@ LABEL_11:
   }
   if ( !*(_DWORD *)(v2 + 88) )
   {
-    v5 = sub_409960(self);
+    v5 = (int)sub_409960((_DWORD *)dword_520970, (int)self);
     *(_DWORD *)(v2 + 88) = v5;
     v6 = *(_DWORD *)(v3 + 52);
     if ( v6 )
@@ -42,10 +42,10 @@ LABEL_11:
     goto LABEL_11;
   }
 LABEL_12:
-  sub_406F00(a2);
+  sub_406F00((float *)self, (int)a2);
   if ( *(_DWORD *)(v3 + 76) == 1 )
   {
-    sub_4085B0(a2, *(_DWORD *)(v2 + 88) + 16);
+    sub_4085B0((int)self, (int)a2, (_DWORD *)(*(_DWORD *)(v2 + 88) + 16));
     *(_DWORD *)(*(_DWORD *)(v2 + 88) + 28) = 0;
   }
   else

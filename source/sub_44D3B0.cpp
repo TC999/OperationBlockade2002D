@@ -22,17 +22,17 @@ int __cdecl sub_44D3B0(_DWORD *self, int a2)
   float v21; // [esp+20h] [ebp-44h]
   _DWORD v22[16]; // [esp+24h] [ebp-40h] BYREF
 
-  result = sub_408F30(dword_520970);
+  result = sub_408F30((_DWORD *)dword_520970);
   if ( result )
   {
     v4 = *(_DWORD *)(a2 + 40);
-    v5 = (float *)sub_408F30(dword_520970);
+    v5 = (float *)sub_408F30((_DWORD *)dword_520970);
     v6 = v5[10] - *(float *)(v4 + 16);
     v7 = v5[9] - *(float *)(v4 + 12);
     v19 = v5[8] - *(float *)(v4 + 8);
     v20 = v7;
     v21 = v6;
-    sub_46B970(&v19, &v19);
+    sub_46B970((int)&v19, (int)&v19);
     v19 = v19 * 18.0;
     v20 = v20 * 18.0;
     v21 = v21 * 18.0;

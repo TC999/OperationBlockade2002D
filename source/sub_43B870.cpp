@@ -1,3 +1,8 @@
+extern char aLevellist[];
+extern char aObjectives[];
+extern char aLevelup[];
+extern char aLeveldown[];
+
 //----- (0043B870) --------------------------------------------------------
 char __cdecl sub_43B870(int self, char *String1, int a3)
 {
@@ -44,7 +49,7 @@ char __cdecl sub_43B870(int self, char *String1, int a3)
     {
 LABEL_12:
       *((_BYTE *)v6 + 136) = 1;
-      sub_43B9E0(self);
+      sub_43B9E0((_DWORD *)self);
       return 1;
     }
     v8 = v10 - v9;

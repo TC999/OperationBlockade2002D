@@ -1,4 +1,9 @@
 //----- (0040C310) --------------------------------------------------------
+static char aKeyboardLost[] = "Keyboard Lost";
+static char aCouldnTAcquire[] = "Couldn't Acquire Keyboard";
+static char aRecquiredKeybo[] = "Reacquired Keyboard";
+static char aReacquiredKeyb[] = "Reacquired Keyboard";
+
 _DWORD *__cdecl sub_40C310(_DWORD *self, _DWORD *a2)
 {
   int v3; // eax
@@ -66,7 +71,7 @@ _DWORD *__cdecl sub_40C310(_DWORD *self, _DWORD *a2)
               v11 = *self;
               v12 = *v10;
               v13 = *self == 0;
-              LOBYTE(v18) = (v10[1] & 0x80) != 0;
+              *(_BYTE*)&(v18) = (v10[1] & 0x80) != 0;
               if ( !v13 )
               {
                 do

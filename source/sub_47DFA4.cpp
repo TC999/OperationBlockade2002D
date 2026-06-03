@@ -29,7 +29,7 @@ char __cdecl sub_47DFA4(int a1, int a2, _BYTE *a3, unsigned __int8 *a4, int a5)
   unsigned __int8 *v31; // [esp+18h] [ebp-4h]
   unsigned __int8 *v32; // [esp+34h] [ebp+18h]
 
-  LOBYTE(v5) = a5;
+  BYTEn(v5, 0) = a5;
   if ( a5 )
   {
     switch ( a5 )
@@ -44,7 +44,7 @@ char __cdecl sub_47DFA4(int a1, int a2, _BYTE *a3, unsigned __int8 *a4, int a5)
           v25 = v22 - v5;
           do
           {
-            LOBYTE(v5) = *v24;
+            BYTEn(v5, 0) = *v24;
             *v23++ += *v24++;
             --v25;
           }
@@ -86,7 +86,7 @@ char __cdecl sub_47DFA4(int a1, int a2, _BYTE *a3, unsigned __int8 *a4, int a5)
           v9 = (*(unsigned __int8 *)(a2 + 11) + 7) >> 3;
           do
           {
-            LOBYTE(v5) = *v7;
+            BYTEn(v5, 0) = *v7;
             *v6++ += *v7++;
             --v9;
           }
@@ -116,12 +116,12 @@ char __cdecl sub_47DFA4(int a1, int a2, _BYTE *a3, unsigned __int8 *a4, int a5)
               v14 = -v14;
             if ( v30 > v13 || v30 > v14 )
             {
-              LOBYTE(v10) = v27;
+              BYTEn(v10, 0) = v27;
               if ( v13 > v14 )
-                LOBYTE(v10) = v11;
+                BYTEn(v10, 0) = v11;
             }
             *v29 += v10;
-            LOBYTE(v5) = (_BYTE)v29 + 1;
+            BYTEn(v5, 0) = (_BYTE)v29 + 1;
             v15 = v28-- == 1;
             ++v29;
           }
@@ -130,7 +130,7 @@ char __cdecl sub_47DFA4(int a1, int a2, _BYTE *a3, unsigned __int8 *a4, int a5)
         break;
       default:
         sub_478B0A(a1, (int)"Ignoring bad adaptive filter type");
-        LOBYTE(v5) = (_BYTE)a3;
+        BYTEn(v5, 0) = (_BYTE)a3;
         *a3 = 0;
         break;
     }

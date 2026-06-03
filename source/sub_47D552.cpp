@@ -63,9 +63,8 @@ int __cdecl sub_47D552(unsigned __int8 **a1, int a2)
         a1[1] = v4 - 1;
         *((_DWORD *)v5 + 1) = **a1;
         v6 = a1[7];
-        LOBYTE(v5) = *((_DWORD *)v6 + 1) & 0xF;
         ++*a1;
-        if ( (_BYTE)v5 == 8 )
+        if ( (*((_DWORD *)v6 + 1) & 0xF) == 8 )
         {
           if ( (unsigned int)((*((_DWORD *)v6 + 1) >> 4) + 8) <= *((_DWORD *)v6 + 4) )
           {
@@ -140,18 +139,18 @@ LABEL_48:
             }
             v3 = v40;
             *(_DWORD *)v9 = 13;
-            a1[6] = "incorrect header check";
+            a1[6] = (unsigned __int8*)"incorrect header check";
           }
           else
           {
             *(_DWORD *)v6 = 13;
-            a1[6] = "invalid window size";
+            a1[6] = (unsigned __int8*)"invalid window size";
           }
         }
         else
         {
           *(_DWORD *)v6 = 13;
-          a1[6] = "unknown compression method";
+          a1[6] = (unsigned __int8*)"unknown compression method";
         }
 LABEL_36:
         *((_DWORD *)a1[7] + 1) = 5;
@@ -171,11 +170,11 @@ LABEL_37:
       case 6:
         *(_DWORD *)a1[7] = 13;
         v38 = a1[7];
-        a1[6] = "need dictionary";
+        a1[6] = (unsigned __int8*)"need dictionary";
         *((_DWORD *)v38 + 1) = 0;
         return -2;
       case 7:
-        v11 = sub_4847CB(*((_DWORD *)a1[7] + 5), a1, v3);
+        v11 = sub_4847CB((int*)*((_DWORD *)a1[7] + 5), (int*)a1, v3);
         v3 = v11;
         if ( v11 == -3 )
         {
@@ -188,7 +187,7 @@ LABEL_37:
         if ( v3 != 1 )
           return v3;
         v3 = v40;
-        sub_4846D1(*((_DWORD *)a1[7] + 5), a1, a1[7] + 4);
+        sub_4846D1((uint32*)*((_DWORD *)a1[7] + 5), (int)a1, (uint32*)(a1[7] + 4));
         v12 = a1[7];
         if ( *((_DWORD *)v12 + 3) )
         {
@@ -246,7 +245,7 @@ LABEL_33:
         if ( *((_DWORD *)v24 + 1) != *((_DWORD *)v24 + 2) )
         {
           *(_DWORD *)v24 = 13;
-          a1[6] = "incorrect data check";
+          a1[6] = (unsigned __int8*)"incorrect data check";
           goto LABEL_36;
         }
         *(_DWORD *)a1[7] = 12;

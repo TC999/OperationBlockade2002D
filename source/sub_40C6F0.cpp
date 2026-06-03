@@ -1,17 +1,17 @@
 //----- (0040C6F0) --------------------------------------------------------
 bool __cdecl sub_40C6F0(float *a1, float *a2, float *a3)
 {
-  unsigned __int8 v6; // c0
-  unsigned __int8 v7; // c3
+  unsigned __int8 v6 = 0; // c0
+  unsigned __int8 v7 = 0; // c3
   bool result; // al
-  unsigned __int8 v10; // c0
-  unsigned __int8 v11; // c3
+  unsigned __int8 v10 = 0; // c0
+  unsigned __int8 v11 = 0; // c3
   double v12; // st7
   double v13; // st5
   double v14; // st4
   double v15; // st3
-  unsigned __int8 v17; // c0
-  unsigned __int8 v18; // c3
+  unsigned __int8 v17 = 0; // c0
+  unsigned __int8 v18 = 0; // c3
   float v19; // [esp+4h] [ebp-1Ch]
   int v20; // [esp+24h] [ebp+4h]
   float v21; // [esp+28h] [ebp+8h]

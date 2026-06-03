@@ -25,7 +25,7 @@ _DWORD *__cdecl sub_40BB60(_DWORD *self, _DWORD *a2, int a3)
     for ( i = a3 - (_DWORD)a2; ; v8 = i )
     {
       *v6 = *(_DWORD *)v5;
-      sub_40BCC0((char *)v7 + v8);
+      sub_40BCC0((int *)v7, (int *)((char *)v7 + v8));
       v9 = *(_BYTE *)(v5 + 20);
       v5 += 24;
       *((_BYTE *)v7 + 16) = v9;
@@ -41,7 +41,7 @@ _DWORD *__cdecl sub_40BB60(_DWORD *self, _DWORD *a2, int a3)
   v11 = (int)v6;
   if ( v6 == v10 )
   {
-    self[2] = v6;
+    self[2] = (uint32)(uintptr_t)v6;
   }
   else
   {
@@ -52,7 +52,7 @@ _DWORD *__cdecl sub_40BB60(_DWORD *self, _DWORD *a2, int a3)
     }
     while ( (_DWORD *)v11 != v10 );
     result = a2;
-    v12[2] = v6;
+    v12[2] = (uint32)(uintptr_t)v6;
   }
   return result;
 }

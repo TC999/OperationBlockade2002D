@@ -23,10 +23,10 @@ int __stdcall sub_405E20(int a1, int a2, int a3, int a4)
   qmemcpy(v13, (const void *)(a3 + 16), sizeof(v13));
   v9 = -*(float *)(a2 + 8);
   v8 = -*(float *)(a2 + 4);
-  sub_40E880(LODWORD(v8), LODWORD(v9), 0);
+  sub_40E880(v13, LODWORD(v8), LODWORD(v9), 0);
   v10 = -*(float *)(a2 + 20);
-  sub_40E850(v10);
-  sub_40E880(*(_DWORD *)(a2 + 16), *(_DWORD *)(a2 + 16), 0);
+  sub_40E850(v13, v10);
+  sub_40E880(v13, *(_DWORD *)(a2 + 16), *(_DWORD *)(a2 + 16), 0);
   v5 = *(float *)(a2 + 16);
   if ( v5 == 0.0 )
     v12 = 1.0;
@@ -35,18 +35,18 @@ int __stdcall sub_405E20(int a1, int a2, int a3, int a4)
   v6 = *(float *)(a2 + 16);
   if ( v6 == 0.0 )
   {
-    sub_40E8B0(1065353216, LODWORD(v12), 0);
+    sub_40E8B0(v13, 1065353216, LODWORD(v12), 0);
   }
   else
   {
     v11 = 1.0 / v6;
-    sub_40E8B0(LODWORD(v11), LODWORD(v12), 0);
+    sub_40E8B0(v13, LODWORD(v11), LODWORD(v12), 0);
   }
-  sub_40E880(-1090519040, -1082130432, 1065353216);
-  sub_40E8B0(1065353216, -1082130432, 1065353216);
-  sub_40E880(0, 1056964608, 0);
-  sub_41BEF0(a4, *(_DWORD *)a2, 1, 1);
-  sub_41BC00(1, (*(_BYTE *)(a2 + 24) != 0) + 1, 0, 0, 1, -1, 1);
+  sub_40E880(v13, -1090519040, -1082130432, 1065353216);
+  sub_40E8B0(v13, 1065353216, -1082130432, 1065353216);
+  sub_40E880(v13, 0, 1056964608, 0);
+  sub_41BEF0((_DWORD *)dword_520A50, a4, *(_DWORD *)a2, 1, 1);
+  sub_41BC00((_DWORD *)dword_520A50, 1, (*(_BYTE *)(a2 + 24) != 0) + 1, 0, 0, 1, -1, 1);
   (*(void (__stdcall **)(_DWORD, int, int, int))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, a4, 11, 2);
   (*(void (__stdcall **)(_DWORD, int, int, int))(**(_DWORD **)ArgList + 252))(*(_DWORD *)ArgList, a4, 24, 2);
   return (*(int (__stdcall **)(_DWORD, int, _BYTE *))(**(_DWORD **)ArgList + 148))(*(_DWORD *)ArgList, a4 + 16, v13);

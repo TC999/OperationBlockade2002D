@@ -40,7 +40,7 @@ char __cdecl sub_4665E0(int self, int *a2, float a3, float a4, char a5, int a6)
       else
       {
         v10 = *(float *)&v11 * a4;
-        result = sub_4666E0(v7, &v12, LODWORD(v10), a5);
+        result = sub_4666E0((char *)self, v7, (int)&v12, v10, a5);
       }
     }
     ++v7;

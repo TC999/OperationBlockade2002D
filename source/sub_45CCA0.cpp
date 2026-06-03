@@ -15,7 +15,7 @@ int __cdecl sub_45CCA0(int self)
   memset(*(void **)(self + 36), 0, 4 * *(_DWORD *)(self + 40));
   v3 = *(void **)(self + 36);
   *(_DWORD *)(self + 40) = 0;
-  sub_488CEE(v3);
+  (void)sub_488CEE(v3);
   *(_DWORD *)(self + 44) = 0;
   *(_DWORD *)(self + 36) = 0;
   if ( *(_BYTE *)(self + 32) )
@@ -26,8 +26,8 @@ int __cdecl sub_45CCA0(int self)
   memset(*(void **)(self + 20), 0, 4 * *(_DWORD *)(self + 24));
   v5 = *(void **)(self + 20);
   *(_DWORD *)(self + 24) = 0;
-  result = sub_488CEE(v5);
+  (void)sub_488CEE(v5);
   *(_DWORD *)(self + 28) = 0;
   *(_DWORD *)(self + 20) = 0;
-  return result;
+  return 0;
 }

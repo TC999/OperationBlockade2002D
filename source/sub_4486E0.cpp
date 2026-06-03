@@ -22,6 +22,6 @@ char *__cdecl sub_4486E0(_DWORD *self, char *a2, char *a3)
     }
     while ( v3 != v5 );
   }
-  self[2] = v4;
+  self[2] = (uint32)(uintptr_t)(v4);
   return a2;
 }

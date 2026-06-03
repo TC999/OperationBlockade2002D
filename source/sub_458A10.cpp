@@ -57,7 +57,7 @@ int __cdecl sub_458A10(int *self, _DWORD *a2)
     v18 = v8;
     if ( v8 < 0 )
       v8 = 0;
-    v9 = operator new(8 * v8);
+    v9 = (_DWORD *)operator new(8 * v8);
     v10 = (_DWORD *)self[1];
     v17 = (int)v9;
     for ( i = v9; v10 != v4; i += 2 )

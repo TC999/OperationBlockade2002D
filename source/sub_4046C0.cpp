@@ -1,4 +1,7 @@
 //----- (004046C0) --------------------------------------------------------
+extern char aSFailedToLoad[];
+extern char aUnknownFailedT[];
+
 bool __cdecl sub_4046C0(_DWORD *self, int a2, int ArgList)
 {
   _DWORD *v3; // ebp
@@ -23,7 +26,7 @@ bool __cdecl sub_4046C0(_DWORD *self, int a2, int ArgList)
   int v23; // [esp+20h] [ebp+4h]
 
   v3 = self;
-  v4 = (unsigned __int8)sub_405820(-15891371) && (unsigned __int8)sub_4057E0(&Buffer);
+  v4 = (unsigned __int8)sub_405820((FILE **)self, (FILE **)-15891371) && (unsigned __int8)sub_4057E0((FILE **)self, &Buffer);
   v5 = v3[8] + 172 * Buffer;
   *(_DWORD *)(v5 + 28) = a2;
   *(_DWORD *)(v5 + 32) = ArgList;
@@ -31,28 +34,28 @@ bool __cdecl sub_4046C0(_DWORD *self, int a2, int ArgList)
   v6 = 0;
   if ( v4 )
   {
-    if ( (unsigned __int8)sub_4057E0(&v22) )
-    {
-      *(_DWORD *)(v5 + 4) = v22;
-      if ( (unsigned __int8)sub_405770(v5 + 8) )
-        v6 = 1;
-    }
+      if ( (unsigned __int8)sub_4057E0((FILE **)self, &v22) )
+      {
+        *(_DWORD *)(v5 + 4) = v22;
+        if ( (unsigned __int8)sub_405770((FILE **)self, v5 + 8) )
+          v6 = 1;
+      }
   }
   *(_BYTE *)v5 = 1;
   if ( !v6 )
     goto LABEL_22;
   v7 = (int *)(v5 + 12);
-  if ( !(unsigned __int8)sub_4057E0((void *)(v5 + 12)) )
+  if ( !(unsigned __int8)sub_4057E0((FILE **)self, (void *)(v5 + 12)) )
     goto LABEL_22;
   v8 = 1;
-  *(_DWORD *)(v5 + 16) = malloc(40 * *v7);
+  *(_DWORD *)(v5 + 16) = (unsigned int)malloc(40 * *v7);
   v23 = 0;
   if ( *v7 > 0 )
   {
     v9 = 0;
     do
     {
-      v8 = v8 && (unsigned __int8)sub_405850(v9 + *(_DWORD *)(v5 + 16));
+        v8 = v8 && (unsigned __int8)sub_405850((int)self, v9 + *(_DWORD *)(v5 + 16));
       v9 += 40;
       ++v23;
     }
@@ -61,7 +64,7 @@ bool __cdecl sub_4046C0(_DWORD *self, int a2, int ArgList)
     if ( !v8 )
       goto LABEL_22;
   }
-  if ( (unsigned __int8)sub_405820(-536964205) )
+  if ( (unsigned __int8)sub_405820((FILE **)self, (FILE **)-536964205) )
     v10 = 1;
   else
 LABEL_22:
@@ -76,20 +79,20 @@ LABEL_22:
     if ( !v10 )
       goto LABEL_35;
     v11 = (int *)(v5 + 20);
-    if ( !(unsigned __int8)sub_4057E0((void *)(v5 + 20)) )
+    if ( !(unsigned __int8)sub_4057E0((FILE **)self, (void *)(v5 + 20)) )
       goto LABEL_35;
     v12 = 1;
-    *(_DWORD *)(v5 + 24) = operator new(8 * *v11);
+    *(_DWORD *)(v5 + 24) = (unsigned int)operator new(8 * *v11);
     v13 = 0;
     if ( *v11 > 0 )
     {
       do
-        v12 = v12 && (unsigned __int8)sub_4059A0(*(_DWORD *)(v5 + 24) + 8 * v13++);
+        v12 = v12 && (unsigned __int8)sub_4059A0((FILE **)self, *(_DWORD *)(v5 + 24) + 8 * v13++);
       while ( v13 < *v11 );
       if ( !v12 )
         goto LABEL_35;
     }
-    if ( !(unsigned __int8)sub_405820(734614648) )
+    if ( !(unsigned __int8)sub_405820((FILE **)self, (FILE **)734614648) )
     {
 LABEL_35:
       v10 = 0;
@@ -109,7 +112,7 @@ LABEL_35:
   }
 LABEL_40:
   if ( *(_DWORD *)(v5 + 4) == -267452414 )
-    v10 = v10 && (unsigned __int8)sub_404950(v5);
+    v10 = v10 && (unsigned __int8)sub_404950((int *)self, v5);
   else
     *(_DWORD *)(v5 + 76) = 0;
   if ( !*(_DWORD *)(v5 + 48) || !*(_DWORD *)(v5 + 40) )
@@ -119,7 +122,7 @@ LABEL_40:
   }
   if ( v10 )
   {
-    if ( !(unsigned __int8)sub_4057E0(&v21) )
+    if ( !(unsigned __int8)sub_4057E0((FILE **)self, &v21) )
       return 0;
     v15 = v21;
     result = 1;
@@ -130,7 +133,7 @@ LABEL_40:
       {
         if ( result )
         {
-          v17 = sub_4046C0(Buffer, ArgList + 1);
+          v17 = sub_4046C0(self, Buffer, ArgList + 1);
           v15 = v21;
           result = v17 != 0;
         }

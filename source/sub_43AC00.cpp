@@ -1,3 +1,5 @@
+extern char aVolume[];
+
 //----- (0043AC00) --------------------------------------------------------
 char __cdecl sub_43AC00(int self, char *String1, int a3)
 {
@@ -16,7 +18,7 @@ char __cdecl sub_43AC00(int self, char *String1, int a3)
   if ( String1 && !_strcmpi(String1, aOkbutton) )
   {
     sub_43AB00((_DWORD *)self);
-    sub_4261C0(*(_DWORD **)(self + 40), byte_521688, 0);
+    sub_4261C0(*(_DWORD **)(self + 40), &byte_521688, 0);
     return 1;
   }
   if ( String1 == *(char **)(self + 56) )
@@ -46,16 +48,16 @@ char __cdecl sub_43AC00(int self, char *String1, int a3)
       v13 = 0;
       v14 = 0;
       memset(v15, 0, sizeof(v15));
-      if ( sub_408F30(dword_520970) )
+      if ( sub_408F30((_DWORD *)dword_520970) )
       {
-        v6 = (_DWORD *)sub_408F30(dword_520970);
+        v6 = (_DWORD *)sub_408F30((_DWORD *)dword_520970);
         v7 = v6[8];
         v6 += 8;
         v12 = v7;
         v13 = v6[1];
         v14 = v6[2];
       }
-      sub_41D960(*(_DWORD **)(self + 80), &v12, v15);
+      sub_41D960(*(_DWORD **)(self + 80), (uint32 *)&v12, v15);
       sub_41D840(*(_DWORD *)(self + 80));
       return 1;
     }

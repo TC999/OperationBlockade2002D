@@ -6,7 +6,7 @@ int __cdecl sub_463E00(void *self)
   int v4; // eax
   int result; // eax
 
-  *(_DWORD *)self = &off_499BDC;
+  *(_DWORD *)self = (uint32)&off_499BDC;
   for ( i = 0; i < *((_DWORD *)self + 30); ++i )
     sub_409A00(dword_520970, *(void **)(*((_DWORD *)self + 24) + 4 * i));
   v3 = (int *)*((_DWORD *)self + 5);
@@ -29,6 +29,6 @@ int __cdecl sub_463E00(void *self)
     result = (*(int (__stdcall **)(_DWORD))(*(_DWORD *)result + 8))(*((_DWORD *)self + 27));
     *((_DWORD *)self + 27) = 0;
   }
-  *(_DWORD *)self = &off_499040;
+  *(_DWORD *)self = (uint32)&off_499040;
   return result;
 }

@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00465E00) --------------------------------------------------------
 int __cdecl sub_465E00(_DWORD *self, int a2, int a3)
 {
@@ -17,9 +19,9 @@ int __cdecl sub_465E00(_DWORD *self, int a2, int a3)
   {
     v4 = self[6];
     if ( v4 )
-      v5 = sub_465FF0(a2, (self[7] - v4) >> 2);
+      v5 = (int)(uintptr_t)sub_465FF0((_DWORD *)(uintptr_t)a2, (self[7] - v4) >> 2, 0);
     else
-      v5 = sub_465FF0(a2, 0);
+      v5 = (int)(uintptr_t)sub_465FF0((_DWORD *)(uintptr_t)a2, 0, 0);
   }
   else
   {
@@ -28,7 +30,7 @@ int __cdecl sub_465E00(_DWORD *self, int a2, int a3)
   v6 = (_DWORD *)self[7];
   v8 = v5;
   v13 = -1;
-  sub_44F190((int)(self + 5), v6, 1u, &v8);
+  sub_44F190((int)(self + 5), v6, 1u, (_DWORD *)&v8);
   sub_466AA0(v8);
   sub_428680(self, v8);
   if ( a3 <= -1 )
@@ -38,7 +40,7 @@ int __cdecl sub_465E00(_DWORD *self, int a2, int a3)
   else
   {
     *(_BYTE *)(v8 + 436) = 0;
-    sub_4431F0(a3, v8);
+    sub_4431F0(self, a3, v8);
   }
   if ( *(_BYTE *)(dword_4F5CC4 + 936) )
   {

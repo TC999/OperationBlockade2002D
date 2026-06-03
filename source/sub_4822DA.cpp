@@ -1,4 +1,11 @@
 //----- (004822DA) --------------------------------------------------------
+extern __int64 qword_4B15B0;
+extern __int64 qword_4B15B8;
+extern __int64 qword_4B15C0;
+extern __int64 qword_4B15C8;
+extern __int64 qword_4B15D0;
+extern __int64 qword_522318;
+
 _BYTE *__cdecl sub_4822DA(_DWORD *a1, _DWORD *a2, int a3, int *a4, int a5)
 {
   _DWORD *v5; // eax
@@ -103,26 +110,26 @@ _BYTE *__cdecl sub_4822DA(_DWORD *a1, _DWORD *a2, int a3, int *a4, int a5)
         v17 = v59;
         do
         {
-          v18 = _m_punpcklbw(_mm_cvtsi32_si64(*v14), 0);
-          v19 = _m_psubsw(_m_punpcklbw(_mm_cvtsi32_si64(*v12), 0), (__m64)qword_4B15B0);
-          v20 = _m_psubsw(_m_punpcklbw(_mm_cvtsi32_si64(*v15), 0), (__m64)qword_4B15B0);
+          v18 = _m_punpcklbw(_mm_cvtsi32_si64(*v14), _mm_cvtsi32_si64(0));
+          v19 = _m_psubsw(_m_punpcklbw(_mm_cvtsi32_si64(*v12), _mm_cvtsi32_si64(0)), *(__m64*)&qword_4B15B0);
+          v20 = _m_psubsw(_m_punpcklbw(_mm_cvtsi32_si64(*v15), _mm_cvtsi32_si64(0)), *(__m64*)&qword_4B15B0);
           v21 = _m_psllwi(v18, 8u);
-          v22 = _m_psradi(_m_paddd(_m_pmaddwd(_m_punpcklwd(v20, v19), (__m64)qword_4B15B8), _m_punpcklwd(v21, 0)), 8u);
-          v23 = _m_psradi(_m_paddd(_m_pmaddwd(_m_punpckhwd(v20, v19), (__m64)qword_4B15B8), _m_punpckhwd(v21, 0)), 8u);
-          v24 = _m_psradi(_m_pmaddwd(_m_punpcklwd(v19, v18), (__m64)qword_4B15C0), 8u);
-          v25 = _m_pmaddwd(_m_punpckhwd(v20, v18), (__m64)qword_4B15C8);
-          v26 = _m_pmaddwd(_m_punpckhwd(v19, v18), (__m64)qword_4B15C0);
-          v27 = _m_psradi(_m_pmaddwd(_m_punpcklwd(v20, v18), (__m64)qword_4B15C8), 8u);
+          v22 = _m_psradi(_m_paddd(_m_pmaddwd(_m_punpcklwd(v20, v19), *(__m64*)&qword_4B15B8), _m_punpcklwd(v21, _mm_cvtsi32_si64(0))), 8u);
+          v23 = _m_psradi(_m_paddd(_m_pmaddwd(_m_punpckhwd(v20, v19), *(__m64*)&qword_4B15B8), _m_punpckhwd(v21, _mm_cvtsi32_si64(0))), 8u);
+          v24 = _m_psradi(_m_pmaddwd(_m_punpcklwd(v19, v18), *(__m64*)&qword_4B15C0), 8u);
+          v25 = _m_pmaddwd(_m_punpckhwd(v20, v18), *(__m64*)&qword_4B15C8);
+          v26 = _m_pmaddwd(_m_punpckhwd(v19, v18), *(__m64*)&qword_4B15C0);
+          v27 = _m_psradi(_m_pmaddwd(_m_punpcklwd(v20, v18), *(__m64*)&qword_4B15C8), 8u);
           v28 = _m_psradi(v26, 8u);
           v29 = _m_psradi(v25, 8u);
           v30 = _m_packuswb(
-                  _m_packssdw(_m_punpckldq(v24, v22), _m_punpckldq(v27, (__m64)(unsigned int)qword_522318)),
-                  _m_packssdw(_m_punpckhdq(v24, v22), _m_punpckhdq(v27, (__m64)qword_522318)));
-          v31 = _m_psrlqi(_m_pand(v30, (__m64)qword_4B15D0), 8u);
+                  _m_packssdw(_m_punpckldq(v24, v22), _m_punpckldq(v27, _mm_cvtsi32_si64((unsigned int)qword_522318))),
+                  _m_packssdw(_m_punpckhdq(v24, v22), _m_punpckhdq(v27, *(__m64*)&qword_522318)));
+          v31 = _m_psrlqi(_m_pand(v30, *(__m64*)&qword_4B15D0), 8u);
           v17 += 12;
           v32 = _m_packuswb(
-                  _m_packssdw(_m_punpckldq(v28, v23), _m_punpckldq(v29, (__m64)(unsigned int)qword_522318)),
-                  _m_packssdw(_m_punpckhdq(v28, v23), _m_punpckhdq(v29, (__m64)qword_522318)));
+                  _m_packssdw(_m_punpckldq(v28, v23), _m_punpckldq(v29, _mm_cvtsi32_si64((unsigned int)qword_522318))),
+                  _m_packssdw(_m_punpckhdq(v28, v23), _m_punpckhdq(v29, *(__m64*)&qword_522318)));
           ++v14;
           *(_DWORD *)(v17 - 12) = _mm_cvtsi64_si32(_m_por(v30, v31));
           v33 = _m_punpcklwd(_m_psrlqi(v31, 0x20u), v32);
@@ -138,7 +145,7 @@ _BYTE *__cdecl sub_4822DA(_DWORD *a1, _DWORD *a2, int a3, int *a4, int a5)
         if ( v60 < v58 )
         {
           v35 = (char *)v65 - (char *)v69;
-          result = (char *)v69 + v60;
+          result = (_BYTE*)((char *)v69 + v60);
           v66 = (char *)((char *)v65 - (char *)v69);
           v62 = (char *)v61 - (char *)v69;
           v56 = v58 - v60;

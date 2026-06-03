@@ -40,7 +40,7 @@ int __cdecl sub_455850(int *self, int a2, int *a3, int a4)
     v27 = a4;
     v29 = v6;
     v30 = a3[2];
-    sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x901, v25, 26, 15, 0);
+    sub_4117A0((_DWORD *)dword_4F5CC4, (_DWORD *)0x901, (_WORD *)v25, 26, 15, 0);
   }
   v7 = operator new(0x564u);
   v31 = 0;
@@ -48,9 +48,9 @@ int __cdecl sub_455850(int *self, int a2, int *a3, int a4)
   {
     v8 = v4[100];
     if ( v8 )
-      v9 = sub_4560B0((int)v7, a2, a3, (self[101] - v8) >> 2, v5);
+      v9 = sub_4560B0((int)v7, a2, (_DWORD *)a3, (self[101] - v8) >> 2, v5);
     else
-      v9 = sub_4560B0((int)v7, a2, a3, 0, v5);
+      v9 = sub_4560B0((int)v7, a2, (_DWORD *)a3, 0, v5);
     v4 = self;
   }
   else
@@ -66,7 +66,7 @@ int __cdecl sub_455850(int *self, int a2, int *a3, int a4)
   if ( (v10 - (int)v12) >> 2 )
   {
     sub_448B80(v12, v12, v12 + 1);
-    sub_44B480((_DWORD *)v11[2], (_DWORD *)(1 - ((v11[2] - (int)v13) >> 2)), &a4);
+    sub_44B480((_DWORD *)v11[2], (_DWORD *)(1 - ((v11[2] - (int)v13) >> 2)), (_DWORD *)&a4);
     for ( i = (_DWORD *)v11[2]; v13 != i; ++v13 )
       *v13 = a4;
     v11[2] += 4;
@@ -84,19 +84,19 @@ int __cdecl sub_455850(int *self, int a2, int *a3, int a4)
     v32 = v17;
     if ( v17 < 0 )
       v17 = 0;
-    v18 = operator new(4 * v17);
+    v18 = (_DWORD *)operator new(4 * v17);
     v19 = (_DWORD *)v11[1];
     v33 = v18;
     for ( j = v18; v19 != v13; ++j )
       sub_448BE0(j, v19++);
-    sub_44B480(j, (_DWORD *)1, &a4);
+    sub_44B480(j, (_DWORD *)1, (_DWORD *)&a4);
     sub_448B80(v13, (_DWORD *)v11[2], j + 1);
     nullsub_8(v11[1], v11[2]);
     sub_4885A6((LPVOID)v11[1]);
     v11[3] = (int)&v33[v32];
-    v21 = sub_4481C0(v11);
+    v21 = sub_4481C0((_DWORD *)v11);
     v11[1] = (int)v33;
     v11[2] = (int)&v33[v21 + 1];
   }
-  return sub_428680(self, a4);
+  return sub_428680((_DWORD *)self, a4);
 }

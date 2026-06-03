@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004638A0) --------------------------------------------------------
 char *__cdecl sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
 {
@@ -52,8 +54,8 @@ char *__cdecl sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
           i += 8;
         }
         v30 = *(_DWORD **)(v5 + 8);
-        v31 = (char *)&v30[v27 / 0xFFFFFFFC];
-        if ( a2 != (char *)&v30[v27 / 0xFFFFFFFC] )
+        v31 = (char *)&v30[-(int)(v27 / 4)];
+        if ( a2 != (char *)&v30[-(int)(v27 / 4)] )
         {
           do
           {
@@ -110,7 +112,7 @@ char *__cdecl sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
         *((_DWORD *)k + 1) = a4[1];
       }
       result = (char *)(v20 + *(_DWORD *)(v5 + 8));
-      *(_DWORD *)(v5 + 8) = result;
+      *(_DWORD *)(v5 + 8) = (uint32)(uintptr_t)result;
     }
   }
   else
@@ -126,7 +128,7 @@ char *__cdecl sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
     v34 = v10;
     if ( v10 < 0 )
       v10 = 0;
-    v35 = operator new(8 * v10);
+    v35 = (_DWORD *)operator new(8 * v10);
     v11 = v35;
     for ( m = *(char **)(v5 + 4); m != a2; v11 += 2 )
     {
@@ -172,20 +174,20 @@ char *__cdecl sub_4638A0(int self, char *a2, unsigned int a3, _DWORD *a4)
       while ( v17 != v15 );
     }
     sub_4885A6(*(LPVOID *)(self + 4));
-    *(_DWORD *)(self + 12) = &v35[2 * v34];
+    *(_DWORD *)(self + 12) = (uint32)(uintptr_t)&v35[2 * v34];
     v18 = *(_DWORD *)(self + 4);
     if ( v18 )
     {
       v19 = *(_DWORD *)(self + 8);
-      *(_DWORD *)(self + 4) = v35;
+      *(_DWORD *)(self + 4) = (uint32)(uintptr_t)v35;
       result = (char *)&v35[2 * a3 + 2 * ((v19 - v18) >> 3)];
     }
     else
     {
-      *(_DWORD *)(self + 4) = v35;
+      *(_DWORD *)(self + 4) = (uint32)(uintptr_t)v35;
       result = (char *)&v35[2 * a3];
     }
-    *(_DWORD *)(self + 8) = result;
+    *(_DWORD *)(self + 8) = (uint32)(uintptr_t)result;
   }
   return result;
 }

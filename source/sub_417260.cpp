@@ -65,7 +65,7 @@ void __cdecl sub_417260(float *self)
   {
     for ( i = self + 34; ; i += 5 )
     {
-      v4 = i + 4;
+      v4 = (uint8*)(i + 4);
       if ( !*((_BYTE *)i - 4) )
         break;
 LABEL_41:

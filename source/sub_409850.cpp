@@ -16,7 +16,7 @@ int __cdecl sub_409850(int self, _DWORD *a2)
 
   if ( a2 && *a2 )
   {
-    sub_422230();
+    sub_422230((int *)a2);
     *a2 = 0;
   }
   v3 = 0;
@@ -49,7 +49,7 @@ LABEL_11:
   {
     v10 = v8 + 8;
     *(_DWORD *)(self + 160) = v10;
-    v11 = sub_488DD7(*(LPVOID *)(self + 152), 4 * v10);
+    v11 = (int)sub_488DD7(*(LPVOID *)(self + 152), 4 * v10);
     if ( v11 )
     {
       v12 = *(_DWORD *)(self + 156);
@@ -59,6 +59,6 @@ LABEL_11:
     }
   }
   result = *(_DWORD *)(self + 156);
-  *(_DWORD *)(*(_DWORD *)(self + 152) + 4 * result - 4) = a2;
+  *(_DWORD *)(*(_DWORD *)(self + 152) + 4 * result - 4) = *(uint32*)(a2);
   return result;
 }

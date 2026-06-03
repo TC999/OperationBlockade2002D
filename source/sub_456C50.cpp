@@ -41,7 +41,7 @@ char __cdecl sub_456C50(int self, float *a2, float a3, char a4, _DWORD *a5)
       if ( v20 )
       {
         if ( v20 != 1 )
-          sub_4281B0(aInvalidInfantr);
+          sub_4281B0((char*)"Invalid infantry type");
         v21 = *(_DWORD *)(self + 456);
         if ( v21 < 9 || v21 > 11 )
           *(_DWORD *)(self + 456) = 19;

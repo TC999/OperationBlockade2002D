@@ -51,17 +51,17 @@ _DWORD *__cdecl sub_462B20(_DWORD *self)
     v14 = 1.0;
     *((_BYTE *)v4 + 2720) = 1;
     v15 = 0.0;
-    sub_406BE0(v27);
+    sub_406BE0((_DWORD *)v27);
     v5 = *(_DWORD *)(self[642] + 8 * self[645]);
-    sub_407690(*(_DWORD *)(v5 + 652), *(_DWORD *)(v5 + 812), v27);
-    sub_46C5C5(&v17, &v17, v27);
-    sub_46B976(&v13, &v13, v27);
+    sub_407690(*(_DWORD *)(v5 + 652), *(_DWORD *)(v5 + 812), (_DWORD *)v27);
+    sub_46C5C5((float *)&v17, (float *)&v17, (float *)v27);
+    sub_46B976((int)&v13, (int)&v13, (int)v27);
     v25 = fabs((double)rand() * 0.000030518509) * 0.73919827 - 0.36959913;
     v24 = fabs((double)rand() * 0.000030518509) * 0.73919827 - 0.36959913;
     v12 = fabs((double)rand() * 0.000030518509) * 0.73919827 - 0.36959913;
-    sub_46C69B((int)v26, v12, v24, v25);
-    sub_46B976(&v13, &v13, v26);
-    sub_46B970(&v13, &v13);
+    sub_46C69B((float *)v26, v12, v24, v25);
+    sub_46B976((int)&v13, (int)&v13, (int)v26);
+    sub_46B970((int)&v13, (int)&v13);
     v4 += 697;
     v21 = v13 * 50.0;
     v6 = v14 * 50.0;
@@ -74,7 +74,7 @@ _DWORD *__cdecl sub_462B20(_DWORD *self)
     v8 = *(_DWORD *)(self[642] + 8 * self[645]);
     v9 = *(_DWORD *)(v8 + 808);
     if ( v9 >= 0 )
-      sub_407690(*(_DWORD *)(v8 + 652), v9, v27);
+      sub_407690(*(_DWORD *)(v8 + 652), v9, (_DWORD *)v27);
     qmemcpy(v26, v27, sizeof(v26));
     v26[12] = v17;
     v26[13] = v18;
@@ -82,9 +82,9 @@ _DWORD *__cdecl sub_462B20(_DWORD *self)
     qmemcpy(v16 + 681, v26, 0x40u);
     v10 = sub_409960((_DWORD *)dword_520970, (int)self);
     v11 = v20;
-    v16[701] = v10;
-    v10[10] = v11;
-    return (_DWORD *)sub_462DD0(v3);
+    v16[701] = (DWORD)(uintptr_t)v10;
+    v10[10] = (DWORD)(uintptr_t)v11;
+    return (_DWORD *)sub_462DD0(self, v3);
   }
   return result;
 }

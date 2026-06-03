@@ -115,7 +115,7 @@ char __cdecl sub_482A35(_DWORD *a1, _DWORD *a2, int a3, int a4)
     v27 = *v40;
     *v13 = *(_BYTE *)(v27 + v43 + v5);
     v13[1] = *(_BYTE *)(v27 + v25 + v5);
-    LOBYTE(v5) = *(_BYTE *)(v37 + v27 + v5);
+    *(_BYTE*)&v5 = *(_BYTE *)(v37 + v27 + v5);
     v13[2] = v5;
   }
   return v5;

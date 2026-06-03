@@ -208,8 +208,8 @@ void __stdcall sub_42E480(int ArgList, int a2, void *a3)
     v5 = v194;
     do
     {
-      v6 = (_DWORD *)sub_42FCC0(a2, LODWORD(v4), -1);
-      *v5 = v6;
+      v6 = (_DWORD *)sub_42FCC0((_DWORD*)a2, LODWORD(v4), -1, -1);
+      *v5 = (_DWORD)(INT_PTR)v6;
       v6 += 104;
       ++v5;
       --v3;
@@ -269,7 +269,7 @@ void __stdcall sub_42E480(int ArgList, int a2, void *a3)
       v16[2] = *((_DWORD *)a3 + 2);
       while ( sub_4196F0(*(_DWORD *)(v9 + 468), (float *)a3, 3.1415927, COERCE_FLOAT(1), 1, 0) )
       {
-        v18 = sub_417140(0);
+        v18 = sub_417140((_DWORD*)*(_DWORD*)(v9 + 468), 0);
         v137 = *(float *)v18;
         v19 = *(float *)(v18 + 4);
         v20 = *(_DWORD *)(v18 + 8);
@@ -306,7 +306,7 @@ void __stdcall sub_42E480(int ArgList, int a2, void *a3)
           {
             while ( 1 )
             {
-              v25 = (float *)sub_417120(v24);
+              v25 = (float *)sub_417120((void*)*(_DWORD*)(v9 + 468), v24);
               if ( v24 <= 2 )
               {
                 v114 = *(float *)a3;
@@ -315,13 +315,13 @@ void __stdcall sub_42E480(int ArgList, int a2, void *a3)
               }
               else
               {
-                v26 = (float *)sub_417120(v24 - 1);
+                v26 = (float *)sub_417120((void*)*(_DWORD*)(v9 + 468), v24 - 1);
                 v27 = v25[2] - v26[2];
                 v28 = v25[1] - v26[1];
                 v151[0] = *v25 - *v26;
                 v151[1] = v28;
                 v151[2] = v27;
-                sub_46B970(&v114, v151);
+                sub_46B970((int)&v114, (int)v151);
               }
               v130 = 0;
               v120 = 0.0;
@@ -356,11 +356,11 @@ LABEL_45:
                   v88 = v120 * v31;
                   v67 = v119 * v31;
                   v45 = v118 * v31;
-                  sub_40F4A0(LODWORD(v45), LODWORD(v67), LODWORD(v88));
+                  sub_40F4A0(NULL, LODWORD(v45), LODWORD(v67), LODWORD(v88));
                   v89 = v151[8] + v133;
                   v68 = v151[7] + v132;
                   v46 = v151[6] + v131;
-                  sub_40F4A0(LODWORD(v46), LODWORD(v68), LODWORD(v89));
+                  sub_40F4A0(NULL, LODWORD(v46), LODWORD(v68), LODWORD(v89));
                   v111 = *(float *)&v192[6] + v111;
                   v112 = v112 + *(float *)&v192[7];
                   v113 = v113 + *(float *)&v192[8];
@@ -370,20 +370,20 @@ LABEL_45:
                   v90 = v116 * v32;
                   v69 = v115 * v32;
                   v47 = v114 * v32;
-                  sub_40F4A0(LODWORD(v47), LODWORD(v69), LODWORD(v90));
+                  sub_40F4A0(NULL, LODWORD(v47), LODWORD(v69), LODWORD(v90));
                   v91 = v154 + v154;
                   v70 = v153 + v153;
                   v48 = v152 + v152;
-                  sub_40F4A0(LODWORD(v48), LODWORD(v70), LODWORD(v91));
+                  sub_40F4A0(NULL, LODWORD(v48), LODWORD(v70), LODWORD(v91));
                   v33 = -*(float *)(a2 + 784);
                   v92 = v120 * v33;
                   v71 = v119 * v33;
                   v49 = v33 * v118;
-                  sub_40F4A0(LODWORD(v49), LODWORD(v71), LODWORD(v92));
+                  sub_40F4A0(NULL, LODWORD(v49), LODWORD(v71), LODWORD(v92));
                   v93 = *(float *)&v192[5] + v142;
                   v72 = *(float *)&v192[4] + v141;
                   v50 = *(float *)&v192[3] + v140;
-                  sub_40F4A0(LODWORD(v50), LODWORD(v72), LODWORD(v93));
+                  sub_40F4A0(NULL, LODWORD(v50), LODWORD(v72), LODWORD(v93));
                   v111 = v189 + v111;
                   v112 = v112 + v190;
                   v113 = v113 + v191;
@@ -393,24 +393,24 @@ LABEL_45:
                   v94 = v116 * v34;
                   v73 = v115 * v34;
                   v51 = v34 * v114;
-                  sub_40F4A0(LODWORD(v51), LODWORD(v73), LODWORD(v94));
+                  sub_40F4A0(NULL, LODWORD(v51), LODWORD(v73), LODWORD(v94));
                   v95 = v165 * 4.0;
                   v74 = v164 * 4.0;
                   v52 = v163 * 4.0;
-                  sub_40F4A0(LODWORD(v52), LODWORD(v74), LODWORD(v95));
+                  sub_40F4A0(NULL, LODWORD(v52), LODWORD(v74), LODWORD(v95));
                   v35 = *(float *)(a2 + 784);
                   v96 = v120 * v35;
                   v75 = v119 * v35;
                   v53 = v35 * v118;
-                  sub_40F4A0(LODWORD(v53), LODWORD(v75), LODWORD(v96));
+                  sub_40F4A0(NULL, LODWORD(v53), LODWORD(v75), LODWORD(v96));
                   v97 = v185 + v185;
                   v76 = v184 + v184;
                   v54 = v183 + v183;
-                  sub_40F4A0(LODWORD(v54), LODWORD(v76), LODWORD(v97));
+                  sub_40F4A0(NULL, LODWORD(v54), LODWORD(v76), LODWORD(v97));
                   v98 = v171 + v188;
                   v77 = v170 + v187;
                   v55 = v169 + v186;
-                  sub_40F4A0(LODWORD(v55), LODWORD(v77), LODWORD(v98));
+                  sub_40F4A0(NULL, LODWORD(v55), LODWORD(v77), LODWORD(v98));
                   v111 = v175 + v111;
                   v112 = v112 + v176;
                   v113 = v113 + v177;
@@ -420,24 +420,24 @@ LABEL_45:
                   v99 = v116 * v36;
                   v78 = v115 * v36;
                   v56 = v36 * v114;
-                  sub_40F4A0(LODWORD(v56), LODWORD(v78), LODWORD(v99));
+                  sub_40F4A0(NULL, LODWORD(v56), LODWORD(v78), LODWORD(v99));
                   v100 = v145 * 4.0;
                   v79 = v144 * 4.0;
                   v57 = v143 * 4.0;
-                  sub_40F4A0(LODWORD(v57), LODWORD(v79), LODWORD(v100));
+                  sub_40F4A0(NULL, LODWORD(v57), LODWORD(v79), LODWORD(v100));
                   v37 = -*(float *)(a2 + 784);
                   v101 = v120 * v37;
                   v80 = v119 * v37;
                   v58 = v37 * v118;
-                  sub_40F4A0(LODWORD(v58), LODWORD(v80), LODWORD(v101));
+                  sub_40F4A0(NULL, LODWORD(v58), LODWORD(v80), LODWORD(v101));
                   v102 = v150 + v150;
                   v81 = v149 + v149;
                   v59 = v148 + v148;
-                  sub_40F4A0(LODWORD(v59), LODWORD(v81), LODWORD(v102));
+                  sub_40F4A0(NULL, LODWORD(v59), LODWORD(v81), LODWORD(v102));
                   v103 = v151[5] + v151[11];
                   v82 = v151[4] + v151[10];
                   v60 = v151[3] + v151[9];
-                  sub_40F4A0(LODWORD(v60), LODWORD(v82), LODWORD(v103));
+                  sub_40F4A0(NULL, LODWORD(v60), LODWORD(v82), LODWORD(v103));
                   v111 = v155 + v111;
                   v112 = v112 + v156;
                   v113 = v113 + v157;
@@ -447,24 +447,24 @@ LABEL_45:
                   v104 = v116 * v38;
                   v83 = v115 * v38;
                   v61 = v38 * v114;
-                  sub_40F4A0(LODWORD(v61), LODWORD(v83), LODWORD(v104));
+                  sub_40F4A0(NULL, LODWORD(v61), LODWORD(v83), LODWORD(v104));
                   v105 = v162 * 6.0;
                   v84 = v161 * 6.0;
                   v62 = v160 * 6.0;
-                  sub_40F4A0(LODWORD(v62), LODWORD(v84), LODWORD(v105));
+                  sub_40F4A0(NULL, LODWORD(v62), LODWORD(v84), LODWORD(v105));
                   v39 = *(float *)(a2 + 784);
                   v106 = v120 * v39;
                   v85 = v119 * v39;
                   v63 = v39 * v118;
-                  sub_40F4A0(LODWORD(v63), LODWORD(v85), LODWORD(v106));
+                  sub_40F4A0(NULL, LODWORD(v63), LODWORD(v85), LODWORD(v106));
                   v107 = v168 * 3.0;
                   v86 = v167 * 3.0;
                   v64 = v166 * 3.0;
-                  sub_40F4A0(LODWORD(v64), LODWORD(v86), LODWORD(v107));
+                  sub_40F4A0(NULL, LODWORD(v64), LODWORD(v86), LODWORD(v107));
                   v108 = v174 + v180;
                   v87 = v173 + v179;
                   v65 = v172 + v178;
-                  sub_40F4A0(LODWORD(v65), LODWORD(v87), LODWORD(v108));
+                  sub_40F4A0(NULL, LODWORD(v65), LODWORD(v87), LODWORD(v108));
                   sub_418E20(&v111, v193);
                   break;
                 case 6:
@@ -478,7 +478,7 @@ LABEL_45:
                   sub_418E20(&v111, v110);
                   break;
               }
-              if ( !sub_416350(*(_DWORD *)(v194[v29] + 468), &v111, 1) )
+              if ( !sub_416350(*(_DWORD *)(v194[v29] + 468), (_DWORD*)&v111, 1) )
                 break;
               if ( ++v29 >= ArgList )
               {
@@ -493,8 +493,8 @@ LABEL_45:
         if ( ++v17 >= 100 )
           break;
       }
-      ++LODWORD(v117);
+      ++*(_DWORD *)&v117;
     }
-    while ( SLODWORD(v117) < 100 );
+    while ( *(int *)&v117 < 100 );
   }
 }

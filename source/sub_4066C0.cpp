@@ -52,7 +52,7 @@ float *__cdecl sub_4066C0(
       {
         sub_406620(a1, v11, &v32, v26, 0.0, 0);
         v31 = 0;
-        LODWORD(v29) = v12 + 84;
+        LODWORD(v29) = (int)(v12 + 84);
         (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int *, _DWORD, int))(**((_DWORD **)v12 + 9) + 44))(
           *((_DWORD *)v12 + 9),
           0,
@@ -75,7 +75,7 @@ float *__cdecl sub_4066C0(
             v27 = *v13;
             v28 = v13[1];
             v29 = v13[2];
-            sub_46C5C5(&v27, &v27, v33);
+            sub_46C5C5(&v27, &v27, (float*)(v33));
             if ( *a4 >= (double)v27 )
               v16 = v27;
             else

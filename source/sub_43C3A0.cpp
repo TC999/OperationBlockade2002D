@@ -8,7 +8,7 @@ int __cdecl sub_43C3A0(_DWORD *self, int a2, int a3, LPVOID *a4, int a5)
   {
     result = a3;
     if ( a3 < self[28] )
-      return sub_421110(a4, (const char *)self[a3 + 12]);
+      return 0;
   }
   return result;
 }

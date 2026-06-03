@@ -1,5 +1,5 @@
 //----- (0040AAF0) --------------------------------------------------------
-bool __cdecl sub_40AAF0(_DWORD *self, char *String2, char a3)
+bool __cdecl sub_40AAF0(int self, char *String2, char a3)
 {
   int v4; // esi
   unsigned int v5; // edx
@@ -10,12 +10,12 @@ bool __cdecl sub_40AAF0(_DWORD *self, char *String2, char a3)
 
   if ( a3 )
   {
-    v4 = self[1];
+    v4 = *(_DWORD *)(self + 4);
     if ( v4 )
-      v5 = (self[2] - v4) / 24;
+      v5 = (*(_DWORD *)(self + 8) - v4) / 24;
     else
       v5 = 0;
-    v6 = self[70] + 1;
+    v6 = *(_DWORD *)(self + 280) + 1;
     return v6 < v5 && !_strcmpi(*(const char **)(v4 + 24 * v6), String2);
   }
   else
@@ -23,10 +23,10 @@ bool __cdecl sub_40AAF0(_DWORD *self, char *String2, char a3)
     v8 = 0;
     for ( i = 0; ; i += 24 )
     {
-      v10 = self[1];
-      if ( !v10 || v8 >= (self[2] - v10) / 24 )
+      v10 = *(_DWORD *)(self + 4);
+      if ( !v10 || v8 >= (*(_DWORD *)(self + 8) - v10) / 24 )
         break;
-      if ( !_strcmpi(*(const char **)(i + v10), String2) && !*(_BYTE *)(self[1] + i + 20) )
+      if ( !_strcmpi(*(const char **)(i + v10), String2) && !*(_BYTE *)(*(_DWORD *)(self + 4) + i + 20) )
         return 1;
       ++v8;
     }

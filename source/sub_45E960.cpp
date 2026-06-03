@@ -8,7 +8,8 @@ int __cdecl sub_45E960(_DWORD *self, int a2)
   self[126] = 0;
   self[125] = a2;
   self[124] = -1;
-  result = sub_488CEE(v3);
+  (void)sub_488CEE(v3);
+  result = 0;
   self[127] = 0;
   *(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 20) = a2;
   return result;

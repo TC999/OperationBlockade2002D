@@ -1,3 +1,7 @@
+extern char aFindsoundresou[];
+extern char aFindsoundresou_0[];
+extern char aFindsoundresou_1[];
+
 //----- (0041E250) --------------------------------------------------------
 int __cdecl sub_41E250(_DWORD *self, char *String2)
 {

@@ -60,7 +60,7 @@ int __cdecl sub_481286(int *a1)
   v22 = 0;
   if ( a1[72] > 0 )
   {
-    v19 = a1 + 73;
+    v19 = (_DWORD *)(a1 + 73);
     do
     {
       v8 = *(_DWORD *)(*v19 + 4);
@@ -98,17 +98,17 @@ int __cdecl sub_481286(int *a1)
   if ( a1[92] )
   {
     if ( v24 )
-      *(_DWORD *)(v3 + 4) = sub_480E36;
+      *(_DWORD *)(v3 + 4) = (uint32)(size_t)sub_480E36;
     else
-      *(_DWORD *)(v3 + 4) = sub_480F18;
+      *(_DWORD *)(v3 + 4) = (uint32)(size_t)sub_480F18;
   }
   else if ( v24 )
   {
-    *(_DWORD *)(v3 + 4) = sub_480A10;
+    *(_DWORD *)(v3 + 4) = (uint32)(size_t)sub_480A10;
   }
   else
   {
-    *(_DWORD *)(v3 + 4) = sub_480C0D;
+    *(_DWORD *)(v3 + 4) = (uint32)(size_t)sub_480C0D;
   }
   v23 = 0;
   if ( a1[72] > 0 )

@@ -15,7 +15,7 @@ int __cdecl sub_456F30(int self, float a2)
   *(_BYTE *)(self + 488) = 0;
   HIDWORD(v4) = *(_DWORD *)(v3 + 292);
   LODWORD(v4) = *(_DWORD *)(self + 456);
-  v5 = dword_5216EC[HIDWORD(v4)];
+  v5 = ((int *)dword_5216EC)[HIDWORD(v4)];
   if ( (_DWORD)v4 )
   {
     if ( (int)v4 < 12 )
@@ -64,5 +64,5 @@ int __cdecl sub_456F30(int self, float a2)
     *(_DWORD *)(self + 468) = 0;
     *(_BYTE *)(self + 488) = 1;
   }
-  return v4;
+  return (int)v4;
 }

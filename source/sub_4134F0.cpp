@@ -9,10 +9,10 @@ void __cdecl sub_4134F0(_DWORD *self)
   {
     if ( *(_DWORD *)(v2 + 360) )
     {
-      sub_422230();
+      sub_422230((int *)*(_DWORD *)(v2 + 360));
       *(_DWORD *)(v2 + 360) = 0;
     }
-    *(_DWORD *)(v2 + 360) = sub_422400((char *)(v2 + 33), 0);
+    *(_DWORD *)(v2 + 360) = sub_422400(self, (char *)(v2 + 33), 0);
     v3 = self[11];
     if ( v3 )
       self[11] = *(_DWORD *)(v3 + 692);

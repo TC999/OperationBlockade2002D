@@ -1,3 +1,20 @@
+#include "common.h"
+
+extern _DWORD *__cdecl sub_43EF90(void *self, _DWORD *a2, int a3);
+extern _DWORD *__cdecl sub_43EFC0(void *self, _DWORD *a2, const CHAR *a3, int a4);
+
+extern char aCancelbutton[];
+extern char aJoinbutton[];
+extern char aCreatebutton[];
+extern char aTcpip_0[];
+extern char aUnableToHost[];
+extern char aErrormsg[];
+extern char aStaging[];
+extern char aHostip[];
+extern char aUnableToConnec[];
+extern char aConnecting[];
+extern char aNetnameentry[];
+
 //----- (0043C4D0) --------------------------------------------------------
 char __cdecl sub_43C4D0(int self, char *String1, int a3)
 {
@@ -18,14 +35,14 @@ char __cdecl sub_43C4D0(int self, char *String1, int a3)
         if ( !_strcmpi(String1, aCreatebutton) )
         {
           sub_4246F0(*(LPVOID ***)(self + 40));
-          sub_43EF90(&v9, 52973);
+          sub_43EF90((void *)dword_4F5CC4, (uint32*)&v9, 52973);
           v11 = 1;
           if ( v9 )
           {
             v6 = aErrormsg;
-            strcpy(byte_520D40, aTcpip_0);
-            strcpy(byte_520D80, aUnableToHost);
-            strcpy(byte_521180, (const char *)lpMem);
+            strcpy(&byte_520D40, aTcpip_0);
+            strcpy(&byte_520D80, aUnableToHost);
+            strcpy(&byte_521180, (const char *)lpMem);
           }
           else
           {
@@ -43,13 +60,13 @@ char __cdecl sub_43C4D0(int self, char *String1, int a3)
         if ( v4 )
         {
           sub_422E60(AppName, aHostip, *(LPCSTR *)(*((_DWORD *)v4 + 28) + 8));
-          sub_43EFC0(&v7, *(_DWORD *)(*((_DWORD *)v4 + 28) + 8), 52973);
+          sub_43EFC0((void *)dword_4F5CC4, (uint32*)&v7, *(const CHAR **)(*((_DWORD *)v4 + 28) + 8), 52973);
           v11 = 0;
           if ( v7 )
           {
-            strcpy(byte_520D40, aTcpip_0);
-            strcpy(byte_520D80, aUnableToConnec);
-            strcpy(byte_521180, v8);
+            strcpy(&byte_520D40, aTcpip_0);
+            strcpy(&byte_520D80, aUnableToConnec);
+            strcpy(&byte_521180, v8);
             sub_4261C0(*(_DWORD **)(self + 40), aErrormsg, 0);
           }
           else

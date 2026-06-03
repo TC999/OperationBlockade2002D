@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00411820) --------------------------------------------------------
 char __cdecl sub_411820(int self, __int16 a2, int a3, unsigned int a4)
 {
@@ -18,18 +20,18 @@ char __cdecl sub_411820(int self, __int16 a2, int a3, unsigned int a4)
   }
   else
   {
-    v6 = operator new(8u);
+    v6 = (_DWORD *)operator new(8u);
     *v6 = 0;
   }
   v6[1] = 0;
-  *v6 = v5;
+  *v6 = (uint32)(uintptr_t)v5;
   v6[1] = 0;
   if ( *(_DWORD *)(self + 32) )
-    *(_DWORD *)(*(_DWORD *)(self + 36) + 4) = v6;
+    *(_DWORD *)(*(_DWORD *)(self + 36) + 4) = (uint32)(uintptr_t)v6;
   else
-    *(_DWORD *)(self + 32) = v6;
+    *(_DWORD *)(self + 32) = (uint32)(uintptr_t)v6;
   v7 = *(_DWORD *)(self + 40) + 1;
-  *(_DWORD *)(self + 36) = v6;
+  *(_DWORD *)(self + 36) = (uint32)(uintptr_t)v6;
   *(_DWORD *)(self + 40) = v7;
   LeaveCriticalSection((LPCRITICAL_SECTION)(self + 44));
   return 1;

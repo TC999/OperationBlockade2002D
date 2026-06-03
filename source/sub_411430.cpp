@@ -13,9 +13,9 @@ _DWORD *__cdecl sub_411430(_DWORD *self, int a2)
     {
       v5 = (_DWORD *)result[3];
       if ( v3 )
-        v3[3] = v5;
+        v3[3] = (uint32)(uintptr_t)v5;
       else
-        self[5] = v5;
+        self[5] = (uint32)(uintptr_t)v5;
       sub_4885A6(result);
       result = v5;
     }

@@ -28,7 +28,7 @@ _DWORD *__cdecl sub_44F0E0(_DWORD *self, _DWORD *a2, _DWORD *a3)
       v6[1] = *(_DWORD *)((char *)v6 + v7 + 4);
       v6[2] = v4[4];
       v6[3] = v4[5];
-      sub_44F490(v4 + 6);
+      sub_44F490(v4 + 6, v4 + 6);
       v4 += 10;
       v5 += 10;
       v6 += 10;
@@ -41,7 +41,7 @@ _DWORD *__cdecl sub_44F0E0(_DWORD *self, _DWORD *a2, _DWORD *a3)
   v9 = (int)v5;
   if ( v5 == v8 )
   {
-    self[2] = v5;
+    self[2] = (uint32)(uintptr_t)v5;
   }
   else
   {
@@ -51,7 +51,7 @@ _DWORD *__cdecl sub_44F0E0(_DWORD *self, _DWORD *a2, _DWORD *a3)
       v9 += 40;
     }
     while ( (_DWORD *)v9 != v8 );
-    v10[2] = v5;
+    v10[2] = (uint32)(uintptr_t)v5;
     return a2;
   }
   return result;

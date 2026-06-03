@@ -21,7 +21,7 @@ int __cdecl sub_476F95(_DWORD *a1, char a2)
       *(_DWORD *)(*a1 + 20) = 50;
       (*(void (__cdecl **)(_DWORD *))*a1)(a1);
     }
-    sub_47CD3C(a1);
+    sub_47CD3C((int)a1);
     return 2;
   }
   return result;

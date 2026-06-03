@@ -1,4 +1,10 @@
+#include "common.h"
+
 //----- (0041F3D0) --------------------------------------------------------
+extern float flt_4A35C4[];
+extern float flt_4A35C8[];
+extern float flt_4A35D8[];
+
 int __cdecl sub_41F3D0(float a1, float a2, float a3, float a4, float a5, float a6, float a7, int a8)
 {
   int i; // eax
@@ -6,14 +12,14 @@ int __cdecl sub_41F3D0(float a1, float a2, float a3, float a4, float a5, float a
   float v11[17]; // [esp+0h] [ebp-44h] BYREF
 
   memset(v11, 0, sizeof(v11));
-  v11[4] = (double)SLODWORD(a5) * 0.0039215689;
-  a5 = (double)SLODWORD(a6) * 0.0039215689;
+  v11[4] = (float)((double)SLODWORD(a5) * 0.0039215689);
+  a5 = (float)((double)SLODWORD(a6) * 0.0039215689);
   v11[5] = a5;
   v11[1] = a5;
-  a6 = (double)SLODWORD(a7) * 0.0039215689;
+  a6 = (float)((double)SLODWORD(a7) * 0.0039215689);
   v11[6] = a6;
   v11[2] = a6;
-  a7 = (double)a8 * 0.0039215689;
+  a7 = (float)((double)a8 * 0.0039215689);
   v11[7] = a7;
   v11[3] = a7;
   v11[0] = v11[4];
@@ -27,15 +33,15 @@ int __cdecl sub_41F3D0(float a1, float a2, float a3, float a4, float a5, float a
     0,
     &a5,
     0);
-  for ( i = 0; i < 372; *(_DWORD *)(i * 4 + LODWORD(a5) - 4) = dword_4A35D4[i] )
+  for ( i = 0; i < 372; *(_DWORD *)(i * 4 + LODWORD(a5) - 4) = ((int*)&dword_4A35D4)[i] )
   {
     v9 = a4 * flt_4A35D8[i];
     i += 6;
-    *(float *)(i * 4 + LODWORD(a5) - 24) = v9 + a1;
+    *(float *)(i * 4 + LODWORD(a5) - 24) = (float)(v9 + a1);
     *(float *)(i * 4 + LODWORD(a5) - 20) = a4 * flt_4A35C4[i] + a2;
     *(float *)(i * 4 + LODWORD(a5) - 16) = a4 * flt_4A35C8[i] + a3;
-    *(_DWORD *)(i * 4 + LODWORD(a5) - 12) = dword_4A35CC[i];
-    *(_DWORD *)(i * 4 + LODWORD(a5) - 8) = dword_4A35D0[i];
+    *(_DWORD *)(i * 4 + LODWORD(a5) - 12) = ((int*)&dword_4A35CC)[i];
+    *(_DWORD *)(i * 4 + LODWORD(a5) - 8) = ((int*)&dword_4A35D0)[i];
   }
   (*(void (__stdcall **)(int))(*(_DWORD *)dword_5200EC + 48))(dword_5200EC);
   (*(void (__stdcall **)(_DWORD, int))(**(_DWORD **)ArgList + 304))(*(_DWORD *)ArgList, 18);
@@ -52,6 +58,6 @@ int __cdecl sub_41F3D0(float a1, float a2, float a3, float a4, float a5, float a
     62,
     0,
     120);
-  *(float *)dword_520A20 = *(float *)dword_520A20 + 1.0;
+  *(float *)dword_520A20 = (float)(*(float *)dword_520A20 + 1.0);
   return 120;
 }

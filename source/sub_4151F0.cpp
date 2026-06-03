@@ -23,7 +23,7 @@ int __cdecl sub_4151F0(int self)
   memset(*(void **)(self + 20), 0, 4 * *(_DWORD *)(self + 24));
   v5 = *(void **)(self + 20);
   *(_DWORD *)(self + 24) = 0;
-  result = sub_488CEE(v5);
+  result = 0;
   *(_DWORD *)(self + 28) = 0;
   *(_DWORD *)(self + 20) = 0;
   return result;

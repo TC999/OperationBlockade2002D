@@ -19,7 +19,7 @@ _DWORD *__cdecl sub_463EB0(_DWORD *self, float a2, _DWORD *a3)
     *a3 = *v4;
     a3[1] = v4[1];
     result = (_DWORD *)v4[2];
-    a3[2] = result;
+    a3[2] = *(uint32*)(result);
   }
   else
   {

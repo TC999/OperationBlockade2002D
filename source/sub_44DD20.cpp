@@ -21,14 +21,14 @@ void __cdecl sub_44DD20(char *self, float *a2, _DWORD *a3)
   if ( a2 )
   {
     v4 = 0;
-    for ( i = self + 27416; *i; i += 40 )
+    for ( i = (_BYTE *)(self + 27416); *i; i += 40 )
     {
       if ( ++v4 >= 64 )
         return;
     }
     v6 = &self[40 * v4];
     v6[27416] = 1;
-    *((_DWORD *)v6 + 6855) = a2;
+    *((_DWORD *)v6 + 6855) = (uint32)(uintptr_t)a2;
     *((_DWORD *)v6 + 6856) = *a3;
     *((_DWORD *)v6 + 6857) = a3[1];
     *((_DWORD *)v6 + 6858) = a3[2];
@@ -61,8 +61,8 @@ void __cdecl sub_44DD20(char *self, float *a2, _DWORD *a3)
       v10 = fabs((double)rand() * 0.000030518509) * (v20 - v16) + v16;
     *((float *)v6 + 6862) = v10;
     v11 = sub_409960((_DWORD *)dword_520970, (int)self);
-    *((_DWORD *)v6 + 6863) = v11;
-    v11[10] = v6 + 27416;
+    *((_DWORD *)v6 + 6863) = (uint32)(uintptr_t)v11;
+    v11[10] = (uint32)(uintptr_t)(v6 + 27416);
     *(_DWORD *)(*((_DWORD *)v6 + 6863) + 28) = 0;
     *(_DWORD *)(*((_DWORD *)v6 + 6863) + 36) = 0;
     *(_DWORD *)(*((_DWORD *)v6 + 6863) + 12) = 3;

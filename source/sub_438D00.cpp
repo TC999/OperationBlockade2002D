@@ -1,3 +1,5 @@
+extern char aSoundsDialogue[];
+
 //----- (00438D00) --------------------------------------------------------
 int __cdecl sub_438D00(int *self)
 {
@@ -6,7 +8,7 @@ int __cdecl sub_438D00(int *self)
   float v5; // [esp+0h] [ebp-18h]
 
   self[121] = 7;
-  v2 = operator new(0x15Cu);
+  v2 = (_DWORD *)operator new(0x15Cu);
   if ( v2 )
     v3 = sub_41C6A0(v2);
   else

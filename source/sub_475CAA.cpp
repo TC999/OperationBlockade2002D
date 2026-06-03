@@ -44,7 +44,7 @@ int __cdecl sub_475CAA(_DWORD *self)
       {
         v15[16] = v25 | 0xC00;
         dword_52230C = v25;
-        v4 = v15;
+        v4 = (int *)v15;
         if ( v24 )
         {
           v28 = self + 1049;
@@ -125,15 +125,15 @@ int __cdecl sub_475CAA(_DWORD *self)
         switch ( v13 )
         {
           case 827611204:
-            sub_47AFCE(v15, self[6] + self[1043] * self[1057] + self[1042] * (self[1054] >> 2) + 8 * (v29 >> 2));
+            sub_47AFCE((int)(intptr_t)v15, self[6] + self[1043] * self[1057] + self[1042] * (self[1054] >> 2) + 8 * (v29 >> 2));
             break;
           case 844388420:
           case 861165636:
-            sub_47BB23(v15, self[6] + 16 * (v29 >> 2) + self[1043] * self[1057] + self[1042] * (self[1054] >> 2));
+            sub_47BB23((uint8 *)v15, (uint16 *)(self[6] + 16 * (v29 >> 2) + self[1043] * self[1057] + self[1042] * (self[1054] >> 2)));
             break;
           case 877942852:
           case 894720068:
-            sub_47BB7C(v15, self[6] + 16 * (v29 >> 2) + self[1043] * self[1057] + self[1042] * (self[1054] >> 2));
+            sub_47BB7C((uint8 *)v15, self[6] + 16 * (v29 >> 2) + self[1043] * self[1057] + self[1042] * (self[1054] >> 2));
             break;
         }
         v29 += 4;

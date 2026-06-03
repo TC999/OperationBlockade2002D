@@ -9,18 +9,18 @@ _DWORD *__cdecl sub_437450(int self, char a2)
   v3 = *(_DWORD *)(self + 28);
   if ( v3 <= 0 )
   {
-    v6 = operator new(0x80u);
+    v6 = (_DWORD *)operator new(0x80u);
     if ( v6 )
       v5 = sub_412AB0(v6);
     else
       v5 = 0;
     *((_BYTE *)v5 + 104) = 1;
-    sub_413120(1065017672);
+    sub_413120((int)v5, 1065017672);
     sub_4131B0(v5, *(_DWORD **)(self + 20));
     if ( a2 )
-      sub_413130(1056964608, 0, 1065353216, 1056964608);
+      sub_413130((int)v5, 1056964608, 0, 1065353216, 1056964608);
     else
-      sub_413130(0, 0, 1056964608, 1056964608);
+      sub_413130((int)v5, 0, 0, 1056964608, 1056964608);
     sub_428680((_DWORD *)self, (int)v5);
   }
   else

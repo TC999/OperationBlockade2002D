@@ -8,5 +8,5 @@ int __cdecl sub_4085B0(int self, int a2, _DWORD *a3)
   a3[2] = 0;
   a3[1] = 0;
   *a3 = 0;
-  return sub_46C5C5(a3, a3, v4 + 16);
+  return (int)(intptr_t)sub_46C5C5((float *)a3, (float *)a3, (float *)(v4 + 16));
 }

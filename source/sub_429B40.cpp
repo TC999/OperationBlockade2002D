@@ -1,4 +1,6 @@
 //----- (00429B40) --------------------------------------------------------
+extern char asc_4A5C78[];
+extern char a0xX[];
 int __cdecl sub_429B40(void **a1, int a2, int a3, int a4, char *a5, int a6)
 {
   int *i; // esi
@@ -35,7 +37,7 @@ int __cdecl sub_429B40(void **a1, int a2, int a3, int a4, char *a5, int a6)
   {
     for ( i = (int *)&v30; ; i = v26 )
     {
-      v7 = sub_429DD0(v22);
+      v7 = sub_429DD0();
       *i = v7;
       v26 = i + 1;
       v8 = 0;
@@ -100,8 +102,8 @@ LABEL_22:
       v20 = *v24;
       if ( v27 )
       {
-        v17 = sub_428EE0(v13);
-        v19 = (const char *)sub_429B00(v17, v20);
+        v17 = sub_428EE0(*v15, v13);
+        v19 = (const char *)sub_429B00((char*)v17);
         sprintf(&Buffer[strlen(Buffer)], "%s (%x)\n", v19, v21);
       }
       else

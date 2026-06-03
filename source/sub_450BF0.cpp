@@ -11,7 +11,7 @@ int __cdecl sub_450BF0(_DWORD *self, int a2, float a3)
   else
   {
     v5 = a3 + 0.5;
-    sub_421430(LODWORD(a3), LODWORD(v5), 255, 0);
+    sub_421430((_DWORD *)self[a2 + 75], LODWORD(a3), LODWORD(v5), 255, 0);
   }
   return self[a2 + 75];
 }

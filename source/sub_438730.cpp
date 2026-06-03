@@ -7,7 +7,7 @@ int __cdecl sub_438730(int self)
   int i; // edi
   void *v6; // eax
 
-  *(_DWORD *)self = &off_49951C;
+  *(_DWORD *)self = (int)&off_49951C;
   v2 = *(_DWORD **)(self + 404);
   if ( v2 )
   {

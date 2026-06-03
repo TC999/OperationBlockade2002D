@@ -2,7 +2,7 @@
 int __cdecl sub_41D9A0(int self)
 {
   int v2; // ecx
-  int result; // eax
+  int result = 0; // eax
 
   v2 = *(_DWORD *)(self + 12);
   if ( v2 )

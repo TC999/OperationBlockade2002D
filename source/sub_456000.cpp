@@ -13,7 +13,7 @@ int __cdecl sub_456000(_DWORD *self, int a2, int a3, int a4, int a5)
       break;
     if ( i >= (self[101] - v8) >> 2 )
       break;
-    result = sub_456870(a2, a3, a4, a5);
+    result = sub_456870(*(_DWORD *)(v8 + 4 * i), a2, (int *)a3, a4, a5);
     if ( result )
       break;
   }

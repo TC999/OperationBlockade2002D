@@ -22,7 +22,7 @@ void __cdecl sub_4164D0(float *self)
     v12 = 0.0;
     v10 = v5;
     v11 = v4;
-    sub_46B970(&v10, &v10);
+    sub_46B970((int)(intptr_t)(&v10), (int)(intptr_t)&v10);
     v6 = v10 * v10 + v11 * v11 + v12 * v12;
     if ( v6 >= 0.0000099999997 || v6 <= -0.0000099999997 )
     {

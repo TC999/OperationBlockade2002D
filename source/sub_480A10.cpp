@@ -59,7 +59,7 @@ char __cdecl sub_480A10(_DWORD *a1, int a2)
   qmemcpy(v26, v4 + 8, sizeof(v26));
   if ( !v8 )
   {
-    v30 = a1 + 80;
+    v30 = (int *)(a1 + 80);
     do
     {
       v27 = *(_WORD **)(a2 + 4 * v31);
@@ -109,21 +109,21 @@ LABEL_17:
         v33 = (1 << v14) - 1;
         v15 = v14;
         v16 = (v34 >> v9) & v33;
-        if ( v16 >= dword_49CD08[v15] )
+        if ( v16 >= ((int*)&dword_49CD08)[v15] )
           v14 = (v34 >> v9) & v33;
         else
-          v14 = v16 + dword_49CD48[v15];
+          v14 = v16 + ((int*)&dword_49CD48)[v15];
       }
       ++v30;
       v17 = &v26[v29 + 1];
       *v17 += v14;
       v18 = *v17 << v28;
       ++v31;
-      *v27 = v18;
+      *v27 = (_WORD)v18;
     }
     while ( v31 < a1[79] );
   }
-  *(_DWORD *)a1[5] = v19;
+  *(_DWORD *)a1[5] = (uint32)(size_t)v19;
   *(_DWORD *)(a1[5] + 4) = v20;
   a1[94] = v21;
   --v4[13];

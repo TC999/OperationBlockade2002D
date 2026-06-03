@@ -1,3 +1,8 @@
+extern char aTcpip[];
+extern char aHelptext[];
+extern char aToHostANewGame[];
+extern char aUserip[];
+
 //----- (0043C3D0) --------------------------------------------------------
 _DWORD *__cdecl sub_43C3D0(_DWORD *self, int a2)
 {
@@ -7,7 +12,7 @@ _DWORD *__cdecl sub_43C3D0(_DWORD *self, int a2)
   LPVOID *v6; // eax
 
   sub_4233C0(self, a2, aTcpip);
-  *self = &off_499748;
+  *self = (int)&off_499748;
   v3 = sub_424350(self, aHelptext);
   if ( v3 )
   {

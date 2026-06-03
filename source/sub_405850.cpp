@@ -35,7 +35,7 @@ char __cdecl sub_405850(int self, int Buffer)
   v17 = v9;
   v15 = -v10;
   v4 = v11;
-  *(_DWORD *)(v2 + 8) = Buffer;
+  *(_DWORD *)(v2 + 8) = (_DWORD)Buffer;
   *(float *)(v2 + 12) = v16;
   v16 = -v4;
   v5 = v12;
@@ -49,6 +49,6 @@ char __cdecl sub_405850(int self, int Buffer)
   *(float *)(v2 + 28) = v17;
   *(float *)(v2 + 32) = v18;
   *(_DWORD *)(v2 + 36) = v14;
-  *(_DWORD *)v2 = *(_DWORD *)(self + 52);
+  *(_DWORD *)v2 = *(_DWORD *)((char *)self + 52);
   return result;
 }

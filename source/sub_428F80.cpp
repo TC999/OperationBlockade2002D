@@ -16,16 +16,16 @@ int __cdecl sub_428F80(void *self, int a2)
 
   v2 = 0;
   v13 = 0;
-  if ( ((int (*)(void))sub_428F00)() <= 0 )
+  if ( sub_428F00(self) <= 0 )
     return -1;
   while ( 1 )
   {
-    v4 = sub_428EC0(v2);
-    v14 = sub_429AD0(v4);
-    v5 = sub_429AD0(v4) << 12;
-    v6 = sub_429AE0(v4) + v5;
+    v4 = sub_428EC0(self, v2);
+    v14 = sub_429AD0((void*)v4);
+    v5 = sub_429AD0((void*)v4) << 12;
+    v6 = sub_429AE0((_DWORD*)v4) + v5;
     v7 = sub_428EB0(self) + v6;
-    v8 = v7 + sub_429AF0(v4);
+    v8 = v7 + sub_429AF0((_DWORD*)v4);
     if ( a2 < v7 || a2 >= v8 )
       goto LABEL_9;
     v9 = sub_428F10(self) - 1;
@@ -40,12 +40,12 @@ LABEL_9:
   }
   while ( 1 )
   {
-    qmemcpy(v15, (const void *)sub_428EE0(v9), sizeof(v15));
+    qmemcpy(v15, (const void *)sub_428EE0(self, v9), sizeof(v15));
     if ( sub_429AD0(v15) == v14 )
     {
       v10 = sub_429AD0(v15) << 12;
       v11 = sub_428EB0(self) + v10;
-      if ( sub_429AE0(v15) + v11 <= a2 )
+      if ( sub_429AE0((_DWORD*)v15) + v11 <= a2 )
         return v9;
     }
     if ( --v9 < 0 )

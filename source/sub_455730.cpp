@@ -1,7 +1,7 @@
 //----- (00455730) --------------------------------------------------------
 void __cdecl sub_455730(_DWORD *self)
 {
-  *(_BYTE *)self = HIBYTE(self);
+  *(_BYTE *)self = BYTE3(self);
   self[1] = 0;
   self[2] = 0;
   self[3] = 0;

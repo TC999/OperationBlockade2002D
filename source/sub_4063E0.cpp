@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (004063E0) --------------------------------------------------------
 float *__cdecl sub_4063E0(_DWORD *self, int a2, void *a3, float *a4, float a5, int a6)
 {
@@ -93,13 +95,13 @@ LABEL_18:
   v24 = (v16[3] - v15[3]) * v21 + v15[3];
   v25 = (v16[4] - v15[4]) * v21 + v15[4];
   v22 = (1.0 - v21) * v15[9] + v21 * v16[9];
-  sub_46C3AA((int)v26, (int)(v15 + 5), (int)(v16 + 5), v21);
-  sub_46C107(v27, v26);
-  sub_46BE02(v28, LODWORD(v23), LODWORD(v24), LODWORD(v25));
-  sub_46BDA2(v29, LODWORD(v22), LODWORD(v22), LODWORD(v22));
-  sub_46B97C(v31, v29, v27);
+  sub_46C3AA((float *)v26, v15 + 5, v16 + 5, v21);
+  sub_46C107((float *)v27, (float *)v26);
+  sub_46BE02((int)(uintptr_t)v28, LODWORD(v23), LODWORD(v24), LODWORD(v25));
+  sub_46BDA2((int)(uintptr_t)v29, LODWORD(v22), LODWORD(v22), LODWORD(v22));
+  sub_46B97C((int)(uintptr_t)v31, (int)(uintptr_t)v29, (int)(uintptr_t)v27);
   qmemcpy(v30, v31, sizeof(v30));
-  sub_46B97C(v32, v30, v28);
+  sub_46B97C((int)(uintptr_t)v32, (int)(uintptr_t)v30, (int)(uintptr_t)v28);
   result = a4;
   qmemcpy(a3, v32, 0x40u);
   *a4 = v22;

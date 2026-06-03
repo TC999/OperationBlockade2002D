@@ -11,7 +11,7 @@ _DWORD *__cdecl sub_464730(_DWORD *self)
   self[5] = 0;
   self[6] = 0;
   self[8] = 0;
-  *self = &off_499C4C;
+  *self = (uint32)&off_499C4C;
   self[7] = 0;
   return result;
 }

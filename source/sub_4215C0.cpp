@@ -8,7 +8,7 @@ _DWORD *__cdecl sub_4215C0(_DWORD *self)
   _DWORD v7[2]; // [esp+44h] [ebp-14h] BYREF
   int v8; // [esp+54h] [ebp-4h]
 
-  v7[1] = self;
+  v7[1] = (uint32)self;
   self[1] = 0;
   self[2] = 0;
   self[3] = 0;
@@ -23,10 +23,10 @@ _DWORD *__cdecl sub_4215C0(_DWORD *self)
   self[11] = 0;
   *((_BYTE *)self + 48) = 1;
   v2 = self + 14;
-  *self = &off_499314;
+  *self = (uint32)&off_499314;
   v5 = (char *)(self + 14);
   v3 = **(_DWORD **)ArgList;
-  LOBYTE(v8) = 2;
+  *((_BYTE *)&v8) = 2;
   if ( !(*(int (__stdcall **)(_DWORD, int, int, int, int, char *))(v3 + 96))(*(_DWORD *)ArgList, 12, 8, 101, 1, v5)
     && !(*(int (__stdcall **)(_DWORD, int, int, int, int, _DWORD *))(**(_DWORD **)ArgList + 92))(
           *(_DWORD *)ArgList,

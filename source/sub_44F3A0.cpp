@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (0044F3A0) --------------------------------------------------------
 void __cdecl sub_44F3A0(int a1, int a2)
 {
@@ -27,7 +29,7 @@ void __cdecl sub_44F3A0(int a1, int a2)
     if ( v3 < 0 )
       v4 = 0;
     v5 = (char *)operator new(268 * v4);
-    *(_DWORD *)(a1 + 28) = v5;
+    *(_DWORD *)(a1 + 28) = (uint32)(uintptr_t)v5;
     v6 = *(char **)(a2 + 32);
     v7 = v5;
     for ( i = *(char **)(a2 + 28); i != v6; v7 += 268 )
@@ -36,7 +38,7 @@ void __cdecl sub_44F3A0(int a1, int a2)
         qmemcpy(v7, i, 0x10Cu);
       i += 268;
     }
-    *(_DWORD *)(a1 + 32) = v7;
-    *(_DWORD *)(a1 + 36) = v7;
+    *(_DWORD *)(a1 + 32) = (uint32)(uintptr_t)v7;
+    *(_DWORD *)(a1 + 36) = (uint32)(uintptr_t)v7;
   }
 }

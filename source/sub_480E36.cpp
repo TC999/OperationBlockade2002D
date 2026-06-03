@@ -51,7 +51,7 @@ char __cdecl sub_480E36(_DWORD *a1, int a2)
     }
     while ( v19 < a1[79] );
   }
-  *(_DWORD *)a1[5] = v11;
+  *(_DWORD *)a1[5] = (uint32)(size_t)v11;
   *(_DWORD *)(a1[5] + 4) = v12;
   a1[94] = v13;
   --v3[13];

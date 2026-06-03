@@ -1,3 +1,11 @@
+extern char aHelpscreen[];
+extern char aSpecialAttack[];
+extern char aAirstrikefight[];
+extern char aAirstriketorpe[];
+extern char aAirstrikebombe[];
+extern int dword_520970;
+extern int dword_4F5CC4;
+
 //----- (0045F620) --------------------------------------------------------
 void __cdecl sub_45F620(int self, int a2, char a3)
 {
@@ -16,7 +24,7 @@ void __cdecl sub_45F620(int self, int a2, char a3)
   int v16; // [esp+18h] [ebp-8h]
   int v17; // [esp+1Ch] [ebp-4h]
 
-  if ( *(_BYTE *)(dword_520970 + 296) || sub_408F30(dword_520970) != self )
+  if ( *(_BYTE *)(dword_520970 + 296) || sub_408F30((_DWORD *)dword_520970) != self )
     return;
   if ( a2 == 59 )
   {
@@ -92,7 +100,7 @@ LABEL_35:
         *(_DWORD *)(self + 11540) = *(_DWORD *)(self + 11532);
         *(_DWORD *)(self + 11544) = *(_DWORD *)(self + 11536);
         v8 = sub_403620((_DWORD *)dword_4B5AB0, aSpecialAttack);
-        sub_4030B0(v8, 0, aAirstrikefight, -1);
+        sub_4030B0((uint32 *)v8, 0, aAirstrikefight, -1);
       }
       else if ( *(_DWORD *)(self + 11548) && (a2 == 17 || a2 == 20) && *(float *)(self + 11568) <= 0.0 )
       {
@@ -107,7 +115,7 @@ LABEL_35:
         *(_DWORD *)(self + 11552) = 0;
         *(_DWORD *)(self + 11568) = *(_DWORD *)(self + 11560);
         v10 = sub_403620((_DWORD *)dword_4B5AB0, aSpecialAttack);
-        sub_4030B0(v10, 0, aAirstriketorpe, -1);
+        sub_4030B0((uint32 *)v10, 0, aAirstriketorpe, -1);
       }
       else if ( *(_DWORD *)(self + 11576) && (a2 == 18 || a2 == 48) && *(float *)(self + 11596) <= 0.0 )
       {
@@ -122,7 +130,7 @@ LABEL_35:
         *(_DWORD *)(self + 11580) = 0;
         *(_DWORD *)(self + 11596) = *(_DWORD *)(self + 11588);
         v12 = sub_403620((_DWORD *)dword_4B5AB0, aSpecialAttack);
-        sub_4030B0(v12, 0, aAirstrikebombe, -1);
+        sub_4030B0((uint32 *)v12, 0, aAirstrikebombe, -1);
       }
     }
   }

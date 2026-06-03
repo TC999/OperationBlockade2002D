@@ -1,4 +1,49 @@
 //----- (004102F0) --------------------------------------------------------
+extern char aMpCreatingPeer[];
+extern char aMpCreatingPeer_0[];
+extern char aMpInitPeer[];
+extern char aMpInitPeerDone[];
+extern char aMpCreatingHost[];
+extern char aMpDoneCreating[];
+extern char aMpSetSp[];
+extern char aMpCreateDevice[];
+extern char aMpDoneCreating_0[];
+extern char aMpSettingSp[];
+extern char aMpSettingHosts[];
+extern char aMpDoneSettingH[];
+extern char aMpSettingPort[];
+extern char aMpDoneSettingP[];
+extern char aMpSettingPeerI[];
+extern char aMpDoneSettingS[];
+extern char aMpEnumhosts[];
+extern char aMpDoneEnumhost[];
+extern char aMpHosting[];
+extern char aMpDoneHostIng[];
+extern char aMpLaunchSucces[];
+extern char aCouldnTCreateD[];
+extern char aCouldnTCreateD_0[];
+extern char aCouldnTCreateD_1[];
+extern char aCouldnTInitPee[];
+extern char aCouldnTInitDpl[];
+extern char aCouldnTCreateH[];
+extern char aCouldnTSetHost[];
+extern char aCouldnTSetHost_0[];
+extern char aCouldnTSetHost_1[];
+extern char aCouldnTSetDevi[];
+extern char aCouldnTSetPeer[];
+extern char aCouldnTGetspca[];
+extern char aCouldnTHost[];
+extern char aInvalidDeviceA[];
+extern char aInvalidParam[];
+extern char aInvalidIpAddre[];
+extern char aDataTooLarge[];
+extern char aCanTEnumhosts[];
+extern wchar_t aHostname[];
+extern wchar_t aPort[];
+extern GUID stru_499DF4;
+extern GUID stru_499DE4;
+extern GUID stru_499E14;
+extern GUID stru_499E04;
 _DWORD *__cdecl sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int a4)
 {
   _DWORD *v5; // ebx
@@ -44,14 +89,14 @@ _DWORD *__cdecl sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int
 
   v37 = 0;
   sub_411C50(self);
-  *(_DWORD *)(self + 984) = CreateEventA(0, 0, 0, 0);
+  *(_DWORD *)(self + 984) = (int)CreateEventA(0, 0, 0, 0);
   v38[0] = -335643744;
   v38[1] = 299000461;
   v38[2] = 1610616750;
   v38[3] = 286568599;
   sub_4229D0(aMpCreatingPeer, v17);
   v5 = (_DWORD *)(self + 24);
-  if ( CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID *)(self + 24)) < 0 )
+  if ( CoCreateInstance(stru_499DF4, 0, 1u, stru_499DE4, (LPVOID *)(self + 24)) < 0 )
   {
     sub_4229D0(aCouldnTCreateD, v18);
     sub_403A30(a2, 1, aCouldnTCreateD_0);
@@ -62,7 +107,7 @@ _DWORD *__cdecl sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int
   if ( (*(int (__stdcall **)(_DWORD, int, int (__stdcall *)(int, int, int), _DWORD))(*(_DWORD *)*v5 + 12))(
          *v5,
          self,
-         sub_410A90,
+         (int (__stdcall *)(int, int, int))sub_410A90,
          0) < 0 )
   {
     sub_4229D0(aCouldnTInitPee, v20);
@@ -73,7 +118,7 @@ _DWORD *__cdecl sub_4102F0(int self, _DWORD *a2, const CHAR *lpMultiByteStr, int
   if ( lpMultiByteStr )
   {
     sub_4229D0(aMpCreatingHost, v21);
-    if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 92)) < 0 )
+    if ( CoCreateInstance(stru_499E14, 0, 1u, stru_499E04, (LPVOID *)(self + 92)) < 0 )
     {
       sub_403A30(a2, 3, aCouldnTCreateH);
       return a2;
@@ -91,7 +136,7 @@ LABEL_54:
   }
   sub_4229D0(aMpCreateDevice, v21);
   v7 = (_DWORD *)(self + 96);
-  if ( CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID *)(self + 96)) < 0 )
+  if ( CoCreateInstance(stru_499E14, 0, 1u, stru_499E04, (LPVOID *)(self + 96)) < 0 )
   {
     sub_403A30(a2, 5, aCouldnTCreateD_1);
     return a2;
@@ -142,12 +187,12 @@ LABEL_54:
   v40[0] = 72;
   sub_428820(WideCharStr, (LPCCH)(self + 140), -1);
   memset(v39, 0, sizeof(v39));
-  v39[2] = WideCharStr;
+  v39[2] = (int)WideCharStr;
   v39[4] = strlen(byte_520A60);
   ++v39[4];
   v39[0] = 24;
   v39[1] = 3;
-  v39[3] = byte_520A60;
+  v39[3] = (int)byte_520A60;
   sub_4229D0(aMpSettingPeerI, v31);
   if ( (*(int (__stdcall **)(_DWORD, _DWORD *, _DWORD, _DWORD, unsigned int))(*(_DWORD *)*v5 + 80))(
          *v5,
@@ -236,7 +281,7 @@ LABEL_54:
     {
       sub_428820(String, (LPCCH)(self + 400), -1);
       v10 = wcslen(String);
-      v40[12] = operator new(2 * v10 + 2);
+      v40[12] = (int)operator new(2 * v10 + 2);
       wcscpy((wchar_t *)v40[12], String);
     }
     else

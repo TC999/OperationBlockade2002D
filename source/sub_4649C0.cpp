@@ -11,7 +11,7 @@ char __cdecl sub_4649C0(int self, int a2)
 
   if ( *(_DWORD *)(self + 32) )
   {
-    v3 = sub_408F30(dword_520970);
+    v3 = sub_408F30((uint32*)(uintptr_t)(dword_520970));
     if ( v3 )
     {
       v4 = (int *)(v3 + 32);

@@ -6,5 +6,6 @@ int __cdecl sub_422200(int self)
   (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(self + 8) + 8))(*(_DWORD *)(self + 8));
   v2 = *(void **)(self + 12);
   *(_DWORD *)(self + 8) = 0;
-  return sub_4885A6(v2);
+  sub_4885A6(v2);
+  return 0;
 }

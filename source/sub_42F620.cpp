@@ -72,7 +72,7 @@ void __stdcall sub_42F620(int ArgList, int a2)
     v3 = v63;
     do
     {
-      *v3++ = sub_42FCC0(a2, LODWORD(v20), -1);
+      *v3++ = sub_42FCC0((_DWORD *)a2, LODWORD(v20), -1, -1);
       --v2;
     }
     while ( v2 );
@@ -174,7 +174,7 @@ void __stdcall sub_42F620(int ArgList, int a2)
         v24 = v18 + (float)0.0;
         v25 = v25 + v61;
         v26 = v26 + v62;
-        if ( !sub_416350(*(_DWORD *)(v8 + 468), &v24, 1) )
+        if ( !sub_416350(*(_DWORD *)(v8 + 468), (_DWORD*)(&v24), 1) )
           break;
         v15 = *(_DWORD **)(v8 + 468);
         v45 = 0;
@@ -192,7 +192,7 @@ void __stdcall sub_42F620(int ArgList, int a2)
           v60[2] = 0.0;
           if ( !sub_4196F0(*(_DWORD *)(v8 + 468), v60, 3.1415927, COERCE_FLOAT(1), 1, 0) )
             break;
-          if ( -*(float *)(a2 + 796) < *(float *)(sub_417140(0) + 4) )
+          if ( -*(float *)(a2 + 796) < *(float *)(sub_417140(*(_DWORD **)(v8 + 468), 0) + 4) )
           {
             v17 = 1;
             break;

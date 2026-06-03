@@ -1,3 +1,12 @@
+extern char aAddbutton[];
+extern char aAddplayer[];
+extern char aDeletebutton[];
+extern char aDeletechar[];
+extern char aArrowup[];
+extern char aArrowdown[];
+extern char aSavedgames_0[];
+extern char aUsername[];
+
 //----- (0043AF30) --------------------------------------------------------
 char __cdecl sub_43AF30(int self, char *String1, int a3)
 {
@@ -22,7 +31,7 @@ char __cdecl sub_43AF30(int self, char *String1, int a3)
     v5 = *(_DWORD *)(*(_DWORD *)(self + 52) + 124);
     if ( v5 > -1 && v5 < *(_DWORD *)(self + 48) )
     {
-      strcpy(byte_521580, *(const char **)(*(_DWORD *)(self + 44) + 4 * v5));
+      strcpy(&byte_521580, *(const char **)(*(_DWORD *)(self + 44) + 4 * v5));
       sub_4261C0(*(_DWORD **)(self + 40), aDeletechar, 0);
       return 1;
     }
@@ -48,7 +57,7 @@ char __cdecl sub_43AF30(int self, char *String1, int a3)
       {
 LABEL_20:
         *((_BYTE *)v7 + 136) = 1;
-        sub_43B330(self);
+        sub_43B330((_DWORD *)self);
         return 1;
       }
       v9 = v11 - v10;
@@ -69,7 +78,7 @@ LABEL_20:
     strcpy(String, *(const char **)(*(_DWORD *)(self + 44) + 4 * v6));
     sub_422E60(AppName, aUsername, String);
     sub_4229D0("UI NameEntry: current name=%s", String);
-    sub_45E720(String, 1);
+    sub_45E720((char *)*(_DWORD *)(dword_520970 + 280), String, 1);
     sub_45E760(*(_DWORD *)(dword_520970 + 280));
     sub_4261C0(*(_DWORD **)(self + 40), aLevelselect, 0);
     return 1;

@@ -10,11 +10,11 @@ unsigned int __cdecl sub_47B0C6(unsigned __int16 *a1, unsigned int *a2)
 
   v2 = *a1;
   v3 = 8 * v2;
-  HIWORD(v7) = HIWORD(v2);
-  LOWORD(v7) = (unsigned __int16)v2 >> 5;
+  WORDn(v7, 1) = WORDn(v2, 1);
+  WORDn(v7, 0) = (unsigned __int16)v2 >> 5;
   v4 = (unsigned __int16)v2 >> 5;
   v5 = v7;
-  LOBYTE(v7) = (v3 >> 5) | v3;
+  BYTEn(v7, 0) = (v3 >> 5) | v3;
   BYTE1(v7) = ((unsigned __int8)(4 * v4) >> 6) | (4 * v4);
   BYTE2(v7) = ((unsigned __int8)(8 * (v5 >> 6)) >> 5) | (8 * (v5 >> 6));
   result = v7;

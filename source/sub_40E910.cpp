@@ -37,7 +37,7 @@ int *__cdecl sub_40E910(int a1)
   else
   {
     v3 = *(_BYTE *)v1;
-    v4 = (int *)((char *)v1 + v2 + 4);
+    v4 = (_DWORD *)((char *)v1 + v2 + 4);
     dword_4F5C88 = (int)v4;
     v5 = (*v1 & 0xFFFFFFFC) - v2;
     *v4 &= 3u;

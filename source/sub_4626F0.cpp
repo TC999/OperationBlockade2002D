@@ -1,3 +1,32 @@
+extern char aWritemissionst[];
+extern char aMissionTxt[];
+extern char aA[];
+extern char aMissionS[];
+extern char aPlayerS[];
+extern char aDifficultyD[];
+extern char aHealthStarting[];
+extern char aHealthEnding02[];
+extern char aHealthLow02f[];
+extern char aHealthResuppli[];
+extern char aHealthLost02f[];
+extern char aAmmoNameS[];
+extern char aAmmoStartingD[];
+extern char aAmmoEndingD[];
+extern char aAmmoLowD[];
+extern char aAmmoResupplied[];
+extern char aAmmoUsedD[];
+extern char asc_4AE234[];
+extern char a30cal[];
+extern char a45cal[];
+extern char a50cal[];
+extern char a40mm[];
+extern char a105mm[];
+extern char a155mm[];
+extern char a203mm[];
+extern char aBazooka[];
+extern char aSuperbazooka[];
+extern char aGrenade[];
+
 //----- (004626F0) --------------------------------------------------------
 INT __cdecl sub_4626F0(int a1, int a2)
 {
@@ -20,7 +49,7 @@ INT __cdecl sub_4626F0(int a1, int a2)
   if ( result == 1 )
   {
     v4 = fopen(aMissionTxt, aA);
-    v5 = sub_45A870(*(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 72));
+    v5 = sub_45A870(NULL, *(_DWORD *)(*(_DWORD *)(dword_520970 + 236) + 72));
     sub_48B1FD(v4, (int)aMissionS, v5);
     v6 = *(_DWORD *)(dword_520970 + 280);
     v7 = (CHAR *)(v6 + 472);
@@ -90,7 +119,7 @@ INT __cdecl sub_4626F0(int a1, int a2)
         }
         sub_48B1FD(v4, (int)aAmmoNameS, (int)v13);
         sub_48B1FD(v4, (int)aAmmoStartingD, v12[2905]);
-        v14 = sub_4629B0(i);
+        v14 = sub_4629B0(a1, i);
         sub_48B1FD(v4, (int)aAmmoEndingD, v14);
         sub_48B1FD(v4, (int)aAmmoLowD, v12[2906]);
         sub_48B1FD(v4, (int)aAmmoResupplied, v12[2907]);

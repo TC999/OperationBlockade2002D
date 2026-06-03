@@ -19,10 +19,10 @@ int __cdecl sub_4744C4(_DWORD *self, int a2, int a3, float *a4)
     do
     {
       v12 = *a4 * 128.0 + *(float *)(v6 + 4 * (v11 & 3));
-      LOBYTE(v9) = (int)v12;
+      ((_BYTE*)&(v9))[0] = (int)v12;
       v13 = a4[1] * 128.0 + *(float *)(v6 + 4 * (v11 & 3));
       a4 += 4;
-      HIBYTE(v9) = (int)v13;
+      ((_BYTE*)&(v9))[1] = (int)v13;
       *v5++ = v9;
       ++v11;
     }

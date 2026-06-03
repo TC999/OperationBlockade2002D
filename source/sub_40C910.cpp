@@ -21,7 +21,7 @@ char __cdecl sub_40C910(float *a1, float *a2, int a3, int a4, int a5, float *a6)
   v15 = v7;
   v14 = v8;
   v15 = v7 - a1[2];
-  if ( !(unsigned __int8)sub_40C9E0(a1, &v13, a3, a4, a5, &a2) || *(float *)&a2 < 0.0 || *(float *)&a2 > 1.0 )
+  if ( !(unsigned __int8)sub_40C9E0(a1, &v13, (float *)a3, (float *)a4, (float *)a5, (float *)&a2) || *(float *)&a2 < 0.0 || *(float *)&a2 > 1.0 )
     return 0;
   v9 = a6;
   result = 1;

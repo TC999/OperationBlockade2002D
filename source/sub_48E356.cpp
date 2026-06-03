@@ -25,7 +25,7 @@ void __cdecl sub_48E356(int a1)
           --dword_5223BC;
           v4 = v1[3];
           if ( !v4 || v4 > (unsigned int)v2 )
-            v1[3] = v2;
+            v1[3] = (uint32)v2;
           ++v8;
           if ( !--a1 )
             break;

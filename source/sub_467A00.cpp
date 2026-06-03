@@ -11,7 +11,7 @@ int __cdecl sub_467A00(int self, int a2)
     {
       if ( *(int *)(v3 + 4132) > 0 )
       {
-        sub_415910();
+        sub_415910((void *)v3);
         *(_DWORD *)(self + 452) = 0;
       }
     }

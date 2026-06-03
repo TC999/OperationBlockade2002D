@@ -52,8 +52,8 @@ char __cdecl sub_477579(_DWORD *a1)
     v29 = v1[1];
   }
   v30 = v29 - 1;
-  LOBYTE(v3) = 0;
-  HIBYTE(v3) = *v2;
+  ((_BYTE*)&(v3))[0] = 0;
+  ((_BYTE*)&(v3))[1] = *v2;
   v4 = v2 + 1;
   v26 = v3;
   if ( !v30 )
@@ -138,7 +138,7 @@ LABEL_27:
             goto LABEL_27;
         }
       }
-      *v24 = v11;
+      *v24 = (uint32)v11;
       v11[6] = v10 & 0xF;
       v11[5] = (v10 >> 4) & 0xF;
       v12 = (_DWORD *)(*a1 + 24);

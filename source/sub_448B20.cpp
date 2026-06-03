@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (00448B20) --------------------------------------------------------
 char *__cdecl sub_448B20(_DWORD *self, char *a2, char *a3)
 {
@@ -27,8 +29,8 @@ char *__cdecl sub_448B20(_DWORD *self, char *a2, char *a3)
   }
   v9 = (char *)self[2];
   for ( i = v4; i != v9; i += 860 )
-    sub_444A90(i);
+    ((void(__cdecl*)(intptr_t))sub_444A90)((intptr_t)i);
   result = a2;
-  self[2] = v4;
+  self[2] = (uint32)(uintptr_t)v4;
   return result;
 }

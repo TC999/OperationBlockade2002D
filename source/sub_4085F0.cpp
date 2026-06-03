@@ -14,7 +14,7 @@ _DWORD *__cdecl sub_4085F0(int self, int a2, _DWORD *a3, _DWORD *a4)
     *a4 = *v6;
     a4[1] = v6[1];
     result = (_DWORD *)v6[2];
-    a4[2] = result;
+    a4[2] = *(uint32*)(result);
   }
   return result;
 }

@@ -31,7 +31,7 @@ void __cdecl sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
       if ( v8 )
       {
         if ( v9 < (a1[643] - v8) >> 3 )
-          sub_463AF0(v8 + 8 * v9, a1[643]);
+          sub_463AF0((_DWORD *)(v8 + 8 * v9), (_DWORD *)a1[643], 0);
         v4 = a4;
       }
     }
@@ -41,14 +41,14 @@ void __cdecl sub_45ED50(_DWORD *a1, int a2, _DWORD *a3, _DWORD *a4)
         v11 = (a1[643] - v8) >> 3;
       else
         v11 = 0;
-      sub_4638A0(a1[643], v9 - v11, v13);
+      sub_4638A0(a1[643], (char *)(v9 - v11), 0, (_DWORD *)v13);
     }
-    *(_DWORD *)(a1[642] + 8 * v7) = v4;
+    *(_DWORD *)(a1[642] + 8 * v7) = (DWORD)(uintptr_t)v4;
     sub_428680(a1, *(_DWORD *)(*(_DWORD *)(a1[642] + 8 * v7) + 652));
     v12 = *(_DWORD *)(*(_DWORD *)(a1[642] + 8 * v7) + 652);
     (*(void (__cdecl **)(int, _DWORD))(*(_DWORD *)v12 + 24))(v12, 0);
     *(_DWORD *)(a1[642] + 8 * v7 + 4) = 0;
     if ( !v7 )
-      sub_45EE50(0);
+      sub_45EE50((int)a1, 0);
   }
 }

@@ -1,3 +1,11 @@
+#include "common.h"
+
+static char aCommander[] = "Commander";
+static char aObjectivedialo[] = "ObjectiveDialogue";
+static char aLine[] = "Line";
+static char aDialogue[] = "Dialogue";
+extern char aControl[];
+
 //----- (0043CB00) --------------------------------------------------------
 int __cdecl sub_43CB00(_DWORD *self)
 {
@@ -22,7 +30,7 @@ int __cdecl sub_43CB00(_DWORD *self)
 
   v1 = self;
   v15 = self;
-  self[16] = sub_403620((_DWORD *)dword_4B5AB0, aCommander);
+  self[16] = (uint32)sub_403620((_DWORD *)dword_4B5AB0, aCommander);
   result = v1[12];
   v3 = 0;
   if ( !result )
@@ -38,27 +46,27 @@ int __cdecl sub_43CB00(_DWORD *self)
         v5 = v4 + 1;
         v14 = v4 + 1;
         sprintf(Buffer, "mission %d", v4 + 1);
-        if ( sub_40AAF0(v16, Buffer, 0) )
+        if ( sub_40AAF0((int)v16, Buffer, 0) )
         {
           v6 = operator new(0x10u);
           *(_DWORD *)v6 = v4;
           *((_DWORD *)v6 + 3) = 0;
           *((_DWORD *)v6 + 2) = 0;
           sub_40AA40((int)v16, Buffer);
-          for ( ; sub_40ABC0(v16, aLine, 0); ++*((_DWORD *)v6 + 2) )
-            sub_40AFC0(aLine, (int)&v13);
-          *((_DWORD *)v6 + 3) = operator new(4 * *((_DWORD *)v6 + 2));
+          for ( ; sub_40ABC0((int)v16, aLine, 0); ++*((_DWORD *)v6 + 2) )
+            sub_40AFC0((void *)v16, aLine, (_DWORD *)&v13);
+          *((_DWORD *)v6 + 3) = (int)operator new(4 * *((_DWORD *)v6 + 2));
           sub_40ADB0(v16);
-          if ( sub_40ABC0(v16, aLine, 0) )
+          if ( sub_40ABC0((int)v16, aLine, 0) )
           {
             do
             {
-              sub_40AFC0(aLine, (int)&v13);
-              *(_DWORD *)(*((_DWORD *)v6 + 3) + v3) = operator new(strlen((const char *)v13) + 1);
+              sub_40AFC0((void *)v16, aLine, (_DWORD *)&v13);
+              *(_DWORD *)(*((_DWORD *)v6 + 3) + v3) = (int)operator new(strlen((const char *)v13) + 1);
               strcpy(*(char **)(*((_DWORD *)v6 + 3) + v3), (const char *)v13);
               v3 += 4;
             }
-            while ( sub_40ABC0(v16, aLine, 0) );
+            while ( sub_40ABC0((int)v16, aLine, 0) );
             v1 = v15;
             v3 = 0;
           }
@@ -70,7 +78,7 @@ int __cdecl sub_43CB00(_DWORD *self)
           {
             v9 = v7 + 8;
             v1[13] = v9;
-            v10 = sub_488DD7((LPVOID)v1[11], 4 * v9);
+            v10 = (int)sub_488DD7((LPVOID)v1[11], 4 * v9);
             if ( v10 )
             {
               v11 = v1[12];
@@ -79,7 +87,7 @@ int __cdecl sub_43CB00(_DWORD *self)
               memset((void *)(v10 + 4 * v11), 0, 4 * v12);
             }
           }
-          *(_DWORD *)(v1[11] + 4 * v1[12] - 4) = v6;
+          *(_DWORD *)(v1[11] + 4 * v1[12] - 4) = (uint32)v6;
           v5 = v14;
         }
         v4 = v5;
@@ -88,7 +96,7 @@ int __cdecl sub_43CB00(_DWORD *self)
                              + *(_DWORD *)(dword_520970 + 236)
                              + 28) );
     }
-    while ( sub_40AAF0(v16, aControl, 0) )
+    while ( sub_40AAF0((int)v16, aControl, 0) )
       sub_40AA40((int)v16, aControl);
     v18 = -1;
     return sub_40A830((int)v16);

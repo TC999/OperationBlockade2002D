@@ -44,7 +44,7 @@ LABEL_8:
   {
     v10 = v8 + 8;
     *(_DWORD *)(self + 52) = v10;
-    v11 = sub_488DD7(*(LPVOID *)(self + 44), 4 * v10);
+    v11 = (int)sub_488DD7(*(LPVOID *)(self + 44), 4 * v10);
     if ( v11 )
     {
       v12 = *(_DWORD *)(self + 48);
@@ -54,6 +54,6 @@ LABEL_8:
     }
   }
   result = *(_DWORD *)(self + 48);
-  *(_DWORD *)(*(_DWORD *)(self + 44) + 4 * result - 4) = a2;
+  *(_DWORD *)(*(_DWORD *)(self + 44) + 4 * result - 4) = (uint32)(uintptr_t)(a2);
   return result;
 }

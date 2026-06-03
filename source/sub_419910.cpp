@@ -33,7 +33,7 @@ char __cdecl sub_419910(int self, float a2, float a3, float a4, char a5, char a6
   if ( v7 )
     v10 = v10 * *(float *)(self + 4296);
   v15 = tan(v10);
-  sub_46B970(&v13, &v13);
+  sub_46B970((int)(uintptr_t)&v13, (int)(uintptr_t)&v13);
   v11 = *(float *)(self + 4288) * *(float *)(self + 4284);
   *(float *)&v13 = *(float *)&v13 * v11;
   v14 = v14 * v11;
@@ -41,9 +41,9 @@ char __cdecl sub_419910(int self, float a2, float a3, float a4, char a5, char a6
   v14 = v14 + v17;
   v15 = v18 + v11 * v15;
   if ( !a6 )
-    return sub_416350(self, &v13, a5) != 0;
-  result = sub_419C40(&v13);
+    return sub_416350(self, (_DWORD *)(uintptr_t)&v13, a5) != 0;
+  result = sub_419C40(self, (float *)(uintptr_t)&v13);
   if ( result )
-    return sub_416350(self, &v13, a5) != 0;
+    return sub_416350(self, (_DWORD *)(uintptr_t)&v13, a5) != 0;
   return result;
 }

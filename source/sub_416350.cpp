@@ -33,9 +33,9 @@ char __cdecl sub_416350(int self, _DWORD *a2, char a3)
     else
     {
       *(_BYTE *)(self + 12) = 1;
-      sub_4164D0(self);
+      sub_4164D0((float *)self);
       if ( *(_DWORD *)(self + 4132) == 6 )
-        sub_416570(self);
+        sub_416570((float *)self);
       return 1;
     }
   }

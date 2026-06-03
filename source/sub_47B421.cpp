@@ -89,7 +89,7 @@ __int16 __cdecl sub_47B421(_BYTE *a1, int a2, int a3, int a4)
   int v90; // [esp+19Ch] [ebp-8h]
   int v91; // [esp+1A0h] [ebp-4h]
 
-  LOWORD(v4) = 0;
+  WORDn(v4, 0) = 0;
   v91 = 0;
   if ( !a2 )
     return v4;
@@ -122,7 +122,7 @@ __int16 __cdecl sub_47B421(_BYTE *a1, int a2, int a3, int a4)
   while ( v7 );
   if ( !v88 )
   {
-    LOWORD(v4) = a2;
+    WORDn(v4, 0) = a2;
     *(_WORD *)a2 = 0;
     *(_WORD *)(a2 + 2) = -1;
     *(_DWORD *)(a2 + 4) = -1;
@@ -367,7 +367,7 @@ LABEL_61:
               }
               *(_DWORD *)(a2 + 4) *= 4;
               v74 = *(_DWORD *)(a2 + 4);
-              v75 = dword_4B158C[(unsigned int)(__int64)v73];
+              v75 = ((int*)&dword_4B158C)[(unsigned int)(__int64)v73];
             }
             else
             {
@@ -383,7 +383,7 @@ LABEL_61:
               }
               *(_DWORD *)(a2 + 4) *= 4;
               v74 = *(_DWORD *)(a2 + 4);
-              v75 = dword_4B159C[(unsigned int)(__int64)v76];
+              v75 = ((int*)&dword_4B159C)[(unsigned int)(__int64)v76];
             }
             v4 = v74 | v75;
           }
@@ -391,7 +391,7 @@ LABEL_61:
           {
             v4 = (4 * *(_DWORD *)(a2 + 4)) | 3;
           }
-          LOWORD(v90) = (unsigned __int16)v90 >> 1;
+          WORDn(v90, 0) = (unsigned __int16)v90 >> 1;
           v66 -= 4;
           v77 = v86-- == 1;
           *(_DWORD *)(a2 + 4) = v4;
@@ -407,6 +407,6 @@ LABEL_61:
   }
   v13 = a2;
 LABEL_24:
-  LOWORD(v4) = sub_47B3C0(v5, v13, v91);
+  WORDn(v4, 0) = sub_47B3C0(v5, v13, v91);
   return v4;
 }

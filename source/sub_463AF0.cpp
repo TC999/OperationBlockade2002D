@@ -23,6 +23,6 @@ _DWORD *__cdecl sub_463AF0(_DWORD *self, _DWORD *a2, int *a3)
     }
     while ( v3 != v5 );
   }
-  self[2] = v6;
+  self[2] = *(uint32*)(v6);
   return result;
 }

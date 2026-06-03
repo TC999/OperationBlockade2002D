@@ -105,7 +105,7 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
     v44 = *(float *)(v11 + 88);
     v45 = v14;
     v46 = v15;
-    sub_46B970(&v44, &v44);
+    sub_46B970((int)&v44, (int)&v44);
     v52 = 0;
     v49 = 0.0;
     v50 = v45 - 0.0;
@@ -118,8 +118,8 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
     v54 = v57;
     v58 = v50 * v45 - v51 * v44;
     v55 = v58;
-    sub_46B970(&v47, &v47);
-    sub_46B970(&v53, &v53);
+    sub_46B970((int)&v47, (int)&v47);
+    sub_46B970((int)&v53, (int)&v53);
     v16 = *(_DWORD *)(v11 + 4);
     v17 = *(float *)(v16 + 408);
     v44 = v17 * v44;
@@ -162,7 +162,7 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
   *(_BYTE *)(v11 + 124) = a6;
   *(_BYTE *)(v11 + 125) = a6;
   v31 = sub_409960((_DWORD *)dword_520970, (int)self);
-  *(_DWORD *)(v11 + 120) = v31;
+  *(_DWORD *)(v11 + 120) = (uint32)v31;
   v31[10] = v11;
   *(_DWORD *)(*(_DWORD *)(v11 + 120) + 28) = 0;
   *(_DWORD *)(*(_DWORD *)(v11 + 120) + 36) = 0;
@@ -195,7 +195,7 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
   *(_DWORD *)(v11 + 128) = 0;
   v33 = *(_DWORD *)(v32 + 336);
   if ( v33 )
-    *(_DWORD *)(v11 + 128) = sub_44E3D0(v33, v11 + 12);
+    *(_DWORD *)(v11 + 128) = sub_44E3D0((char *)v33, v11 + 12, NULL);
   *(_DWORD *)(v11 + 132) = 0;
   if ( *(_DWORD *)(a2 + 348) )
   {
@@ -203,10 +203,10 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
     v68 = 0;
     if ( v69 )
     {
-      LOBYTE(v34) = *(_BYTE *)(a2 + 381);
-      v35 = sub_463B30(
-              *(_DWORD *)(a2 + 348),
-              *(_DWORD *)(a2 + 352),
+      *(_BYTE *)&v34 = *(_BYTE *)(a2 + 381);
+      v35 = (int)sub_463B30(
+              (_DWORD *)*(_DWORD *)(a2 + 348),
+              (_DWORD *)*(_DWORD *)(a2 + 352),
               *(_DWORD *)(a2 + 356),
               *(_DWORD *)(a2 + 360),
               *(_DWORD *)(a2 + 364),
@@ -214,8 +214,9 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
               *(_DWORD *)(a2 + 372),
               *(_DWORD *)(a2 + 376),
               *(_BYTE *)(a2 + 380),
-              v34,
-              *(_DWORD *)(a2 + 384));
+              (char *)v34,
+              *(_DWORD *)(a2 + 384),
+              0);
     }
     else
     {
@@ -223,14 +224,14 @@ char __cdecl sub_449C40(char *self, int a2, _DWORD *a3, _DWORD *a4, char a5, cha
     }
     *(_DWORD *)(v11 + 132) = v35;
     v68 = -1;
-    sub_4010D0(&v56, v11 + 12);
+    sub_4010D0((_DWORD *)&v56, v11 + 12);
     v36 = (float *)(*(_DWORD *)(v11 + 132) + 84);
     *v36 = v56;
     v36[1] = v57;
     v36[2] = v58;
     v37 = *(_DWORD *)(v11 + 132);
     v38 = self;
-    sub_428680(self, v37);
+    sub_428680((_DWORD *)self, v37);
   }
   else
   {

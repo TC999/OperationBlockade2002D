@@ -49,17 +49,17 @@ bool __cdecl sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
   v10 = v7 + 172 * a2;
   v25 = *(float *)(v8 + 8);
   v44 = v10;
-  if ( !(unsigned __int8)sub_40CC80((int)a3, a4, (int)&v23, v9) )
+  if ( !(unsigned __int8)sub_40CC80() )
     return 0;
   qmemcpy(v45, (const void *)(v8 + 16), sizeof(v45));
   v11 = 0;
-  sub_46B9FD(v45, 0, v45);
+  sub_46B9FD((float *)v45, (float *)0, (float *)v45);
   v12 = *((float *)a3 + 1);
   v13 = *((float *)a3 + 2);
   v23 = *a3;
   v24 = v12;
   v25 = v13;
-  sub_46C5C5(&v23, &v23, v45);
+  sub_46C5C5((float *)&v23, (float *)&v23, (float *)v45);
   v22 = 0;
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int *, _DWORD))(**(_DWORD **)(v10 + 44) + 44))(
     *(_DWORD *)(v10 + 44),
@@ -104,7 +104,7 @@ bool __cdecl sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
       v40 = *v30;
       v41 = v30[1];
       v42 = v30[2];
-      if ( (unsigned __int8)sub_40CCD0((int)&v23, a4, (int)&v31, (int)&v34, (int)&v40, (int)&v37, (int)&v26) )
+      if ( (unsigned __int8)sub_40CCD0((float *)&v23, a4, (float *)&v31, (float *)&v34, (float *)&v40, (float *)&v37, (float *)&v26) )
       {
         if ( *(float *)&v26 > (double)*a6 )
         {
@@ -124,7 +124,7 @@ bool __cdecl sub_407F00(int self, int a2, int *a3, float a4, int *a5, float *a6)
     }
     while ( v27 < v20 );
   }
-  *(float *)dword_520A58 = (double)*(int *)(v10 + 48) + *(float *)dword_520A58;
+  *(float *)dword_520A58 = (float)((double)*(int *)(v10 + 48) + *(float *)dword_520A58);
   (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(v10 + 44) + 48))(*(_DWORD *)(v10 + 44));
   (*(void (__stdcall **)(_DWORD))(**(_DWORD **)(v10 + 36) + 48))(*(_DWORD *)(v10 + 36));
   return v22 != 0;

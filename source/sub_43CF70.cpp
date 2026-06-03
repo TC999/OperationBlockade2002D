@@ -23,9 +23,9 @@ int __cdecl sub_43CF70(int *self)
   if ( v4 )
     sub_402FC0(v4);
   if ( byte_5216E4 )
-    return sub_45A9D0(*(_DWORD *)(dword_520970 + 236));
+    return sub_45A9D0((_DWORD *)*(_DWORD *)(dword_520970 + 236));
   sub_45ABF0(*(_DWORD *)(dword_520970 + 236));
   v6 = rand() % 10;
   v7 = rand();
-  return sub_45A890(dword_5216E0[0], v7 % 10, v6);
+  return sub_45A890(dword_5216E0, v7 % 10, v6);
 }

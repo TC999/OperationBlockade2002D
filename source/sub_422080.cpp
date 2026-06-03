@@ -8,7 +8,7 @@ int __cdecl sub_422080(char *FileName, _DWORD *Buffer)
   FILE *v6; // edi
   void *v8; // esi
 
-  v2 = Buffer;
+  v2 = (_BYTE *)Buffer;
   v3 = Buffer;
   v4 = FileName;
   *Buffer = 0;
@@ -16,7 +16,7 @@ int __cdecl sub_422080(char *FileName, _DWORD *Buffer)
   v3[2] = 0;
   v3[3] = 0;
   v3[4] = 0;
-  v5 = fopen(v4, Mode);
+  v5 = fopen(v4, (const char *)Mode);
   v6 = v5;
   if ( !v5 )
     return -1;
@@ -39,8 +39,8 @@ int __cdecl sub_422080(char *FileName, _DWORD *Buffer)
   if ( v2[2] )
     v2[18] = 8;
   sub_4898CA(&Buffer, 1u, 1u, v6);
-  v8 = operator new((unsigned __int8)FileName + 1);
-  sub_4898CA(v8, (unsigned __int8)FileName, 1u, v6);
+  v8 = operator new((unsigned __int8)(int)FileName + 1);
+  sub_4898CA(v8, (unsigned __int8)(int)FileName, 1u, v6);
   sub_4885A6(v8);
   fclose(v6);
   return 1;

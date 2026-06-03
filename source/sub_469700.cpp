@@ -12,7 +12,7 @@ int __cdecl sub_469700(_DWORD *self, int a2, const char *a3)
   int result; // eax
 
   v4 = (char *)operator new(0x80u);
-  *(_DWORD *)(a2 + 4) = v4;
+  *(_DWORD *)(a2 + 4) = (uint32)(uintptr_t)v4;
   sprintf(v4, "%s %d", a3, self[9]);
   v5 = self[7];
   v6 = self[6] + 1;
@@ -22,7 +22,7 @@ int __cdecl sub_469700(_DWORD *self, int a2, const char *a3)
     v7 = (void *)self[5];
     v8 = v5 + 8;
     self[7] = v8;
-    v9 = sub_488DD7(v7, 4 * v8);
+    v9 = (int)(intptr_t)sub_488DD7(v7, 4 * v8);
     if ( v9 )
     {
       v10 = self[6];

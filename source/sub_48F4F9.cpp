@@ -14,8 +14,8 @@ SIZE_T __cdecl sub_48F4F9(_DWORD *lpMem)
   if ( dword_523A84 == 3 )
   {
     _lock(9);
-    ms_exc.registration.TryLevel = 0;
-    block = __sbh_find_block((int)lpMem);
+    *((int*)&ms_exc + 5) = 0;
+    block = (char *)__sbh_find_block((void*)lpMem, (void*)lpMem);
     if ( block )
     {
       v1 = *(lpMem - 1) - 9;
@@ -25,7 +25,7 @@ SIZE_T __cdecl sub_48F4F9(_DWORD *lpMem)
     {
       v1 = v8;
     }
-    ms_exc.registration.TryLevel = -1;
+    *((int*)&ms_exc + 5) = -1;
     _unlock(9);
     v2 = block == 0;
   }
@@ -34,8 +34,8 @@ SIZE_T __cdecl sub_48F4F9(_DWORD *lpMem)
     if ( dword_523A84 != 2 )
       return HeapSize(hHeap, 0, lpMem);
     _lock(9);
-    ms_exc.registration.TryLevel = 1;
-    v3 = (unsigned __int8 *)sub_48E418((unsigned int)lpMem, &v5, &v7);
+    *((int*)&ms_exc + 5) = 1;
+    v3 = (unsigned __int8 *)sub_48E418((unsigned int)lpMem, (_DWORD *)&v5, &v7);
     v6 = v3;
     if ( v3 )
     {
@@ -46,7 +46,7 @@ SIZE_T __cdecl sub_48F4F9(_DWORD *lpMem)
     {
       v1 = v8;
     }
-    ms_exc.registration.TryLevel = -1;
+    *((int*)&ms_exc + 5) = -1;
     _unlock(9);
     v2 = v6 == 0;
   }

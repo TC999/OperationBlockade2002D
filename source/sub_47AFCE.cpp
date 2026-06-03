@@ -13,7 +13,7 @@ int __cdecl sub_47AFCE(int a1, int a2)
       break;
   }
   if ( i == 16 )
-    return sub_47BAF1(a1, a2);
+    return sub_47BAF1((_BYTE*)a1, a2);
   for ( j = 0; ; ++j )
   {
     for ( k = 0; k < 16; ++k )
@@ -30,5 +30,5 @@ int __cdecl sub_47AFCE(int a1, int a2)
     if ( *(int *)(a1 + 4 * m) >= 0 )
       *(_DWORD *)(a1 + 4 * m) = j;
   }
-  return sub_47B421(a1, a2, j, j);
+  return sub_47B421((_BYTE*)a1, a2, j, j);
 }

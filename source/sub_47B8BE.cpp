@@ -27,8 +27,8 @@ char __cdecl sub_47B8BE(unsigned __int16 *a1, char *a2)
     sub_47B0C6(a1 + 1, &v16);
     v4 = *a1;
     v17 = -1;
-    HIBYTE(v16) = -1;
-    HIBYTE(v15) = -1;
+    BYTEn(v16, 1) = -1;
+    BYTEn(v15, 1) = -1;
     if ( v4 <= a1[1] )
     {
       for ( i = 0; i < 3; ++i )

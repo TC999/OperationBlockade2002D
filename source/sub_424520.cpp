@@ -8,16 +8,16 @@ int __cdecl sub_424520(void **self)
   void *v6; // eax
   int result; // eax
 
-  *self = &off_4993AC;
-  sub_4246F0();
-  sub_425F60(self);
+  *self = (void *)&off_4993AC;
+  sub_4246F0((LPVOID **)self);
+  sub_425F60((int)self);
   if ( *((_BYTE *)self + 48) )
   {
     for ( i = 0; i < (int)self[10]; ++i )
     {
       v3 = (void (__cdecl ***)(_DWORD, int))*((_DWORD *)self[9] + i);
       if ( v3 )
-        (**v3)(v3, 1);
+        (**v3)((_DWORD)v3, 1);
     }
   }
   memset(self[9], 0, 4 * (_DWORD)self[10]);
@@ -34,9 +34,10 @@ int __cdecl sub_424520(void **self)
   memset(self[5], 0, 4 * (_DWORD)self[6]);
   v6 = self[5];
   self[6] = 0;
-  result = sub_488CEE(v6);
+  sub_488CEE(v6);
   self[7] = 0;
   self[5] = 0;
-  *self = &off_499040;
+  result = 0;
+  *self = (void *)&off_499040;
   return result;
 }

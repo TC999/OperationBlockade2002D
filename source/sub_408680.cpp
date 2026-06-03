@@ -56,7 +56,7 @@ char __cdecl sub_408680(int self, int a2, float *a3, float *a4, float *a5, float
       v23 = *v12;
       v24 = v12[1];
       v25 = v12[2];
-      sub_46C5C5(&v23, &v23, v29);
+      sub_46C5C5(&v23, &v23, (float *)v29);
       if ( *a3 >= (double)v23 )
         v15 = v23;
       else

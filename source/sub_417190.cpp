@@ -39,7 +39,7 @@ char __cdecl sub_417190(int self, int a2, _DWORD *a3, unsigned __int8 a4)
   }
   if ( v8 < 6 && *(int *)(self + 4132) >= 6 && !*(_DWORD *)(self + 4136) )
     v7 = 1;
-  sub_417260(self);
+  sub_417260((float *)self);
   if ( *(int *)(self + 4132) >= 6 )
     sub_416570((float *)self);
   return v7;

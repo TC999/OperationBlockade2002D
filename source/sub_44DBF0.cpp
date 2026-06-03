@@ -14,7 +14,7 @@ void __cdecl sub_44DBF0(char *self, int a2, float *a3, float a4)
   if ( a2 )
   {
     v6 = 0;
-    for ( i = self + 27160; *i; i += 16 )
+    for ( i = (uint8 *)(self + 27160); *i; i += 16 )
     {
       if ( ++v6 >= 16 )
         return;
@@ -27,7 +27,7 @@ void __cdecl sub_44DBF0(char *self, int a2, float *a3, float a4)
       v9 = fabs((double)rand() * 0.000030518509) * (v8 - *(float *)&v13) + *(float *)&v13;
     *(float *)&v12 = v9 * a4;
     v10 = sub_44DAD0(*(int **)(a2 + 292), a3, a4, v12);
-    *(_DWORD *)&self[16 * v6 + 27168] = v10;
+    *(_DWORD *)&self[16 * v6 + 27168] = (uint32)(uintptr_t)v10;
     if ( v10 )
     {
       v11 = &self[16 * v6];

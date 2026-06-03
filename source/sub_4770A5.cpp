@@ -28,7 +28,7 @@ _DWORD *__cdecl sub_4770A5(_DWORD *a1, int a2, int a3)
     a1 = 0;
     (*(void (__cdecl **)(_DWORD *, int, _DWORD **, int))(v7 + 4))(v3, a2, &a1, a3);
     result = a1;
-    v3[30] += a1;
+    v3[30] += (uint32)a1;
   }
   else
   {

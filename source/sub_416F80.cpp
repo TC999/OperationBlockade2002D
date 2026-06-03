@@ -86,8 +86,8 @@ char __cdecl sub_416F80(_DWORD *self, char a2)
     else
     {
       self[1033] = v7 + 1;
-      LOBYTE(self[5 * v7 + 33]) = 0;
-      sub_417260(self);
+      *((_BYTE *)&self[5 * v7 + 33]) = 0;
+      sub_417260((float *)self);
     }
     v7 = self[1033];
     if ( v7 >= self[1069] )

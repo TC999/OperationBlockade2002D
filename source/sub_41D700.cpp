@@ -46,7 +46,7 @@ LABEL_11:
       if ( self )
       {
         sub_403880((int)self);
-        return sub_4885A6(self);
+        return 0;
       }
     }
   }

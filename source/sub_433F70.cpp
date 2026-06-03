@@ -140,7 +140,7 @@ char *__cdecl sub_433F70(_DWORD *self, char *a2, unsigned int a3, const void *a4
     v5 = self;
 LABEL_54:
     result = (char *)(v39 + v5[2]);
-    v5[2] = result;
+v5[2] = (uint32)(uintptr_t)result;
     return result;
   }
   v7 = self[1];
@@ -203,18 +203,18 @@ LABEL_54:
   }
   sub_4885A6((LPVOID)v5[1]);
   v18 = v5[1];
-  v5[3] = &v38[32 * v37];
+  v5[3] = (uint32)(uintptr_t)&v38[32 * v37];
   if ( v18 )
   {
     v19 = v5[2];
-    v5[1] = v38;
+    v5[1] = (uint32)(uintptr_t)v38;
     result = &v38[32 * v4 + 32 * ((v19 - v18) >> 5)];
   }
   else
   {
-    v5[1] = v38;
+    v5[1] = (uint32)(uintptr_t)v38;
     result = &v38[32 * v4];
   }
-  v5[2] = result;
+  v5[2] = (uint32)(uintptr_t)result;
   return result;
 }

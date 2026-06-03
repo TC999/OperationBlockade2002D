@@ -1,4 +1,8 @@
+struct Iostream_init { int _dummy[3]; Iostream_init(Iostream_init* p) { memset(p, 0, sizeof(Iostream_init)); } };
+
 //----- (00443250) --------------------------------------------------------
+extern char aWakestripTga[];
+
 int __cdecl sub_443250(int self, int a2, int ArgList)
 {
   _DWORD *v4; // eax
@@ -32,34 +36,35 @@ int __cdecl sub_443250(int self, int a2, int ArgList)
   *(_BYTE *)(self + 1428) = a2;
   *(_DWORD *)(self + 1436) = 0;
   *(_DWORD *)(self + 1440) = 0;
-  *(_DWORD *)self = &off_4999E8;
-  LOBYTE(v18) = 4;
-  sub_4229D0("New Boat: %d %s", ArgList, *(const char **)(a2 + 4));
+  *(_DWORD *)self = (uintptr_t)&off_4999E8;
+  *(_BYTE *)&v18 = 4;
+  sub_4229D0((char *)"New Boat: %d %s", ArgList, *(const char **)(a2 + 4));
   *(_DWORD *)(self + 1456) = ArgList;
   *(_DWORD *)(self + 408) = a2;
   sub_4282E0(
     *(_DWORD *)(a2 + 564) != 0,
-    "model for %s not loaded, try deleting ExtraData.dat",
+    (char *)"model for %s not loaded, try deleting ExtraData.dat",
     *(const char **)(a2 + 4));
-  v4 = operator new(0x34u);
-  LOBYTE(v18) = 5;
+  v4 = (_DWORD *)operator new(0x34u);
+  *(_BYTE *)&v18 = 5;
   if ( v4 )
     v5 = sub_406B00(v4, *(_DWORD *)(a2 + 564), 0);
   else
     v5 = 0;
-  LOBYTE(v18) = 4;
-  *(_DWORD *)(self + 412) = v5;
+  *(_BYTE *)&v18 = 4;
+  *(_DWORD *)(self + 412) = (uint32)(uintptr_t)v5;
   sub_428680((_DWORD *)self, (int)v5);
   *(_DWORD *)(self + 432) = *(_DWORD *)(*(_DWORD *)(self + 408) + 680);
   *(_DWORD *)(self + 444) = sub_415270(*(_DWORD *)(dword_520970 + 244), *(_DWORD *)(a2 + 744));
   *(_DWORD *)(self + 416) = 0;
   v6 = (int *)sub_422400(*(_DWORD **)(dword_520970 + 124), aWakestripTga, 0);
-  LOBYTE(v18) = 6;
-  if ( operator new(0x7Cu) )
-    v7 = sub_463B30((int)v6, 255, 255, 255, 1077936128, 0.30000001, 1138819072, 1153138688, 0, 1, 1045220557);
+  *(_BYTE *)&v18 = 6;
+  v4 = (_DWORD *)operator new(0x7Cu);
+  if ( v4 )
+    v7 = (int)sub_463B30(v4, (_DWORD *)v6, 255, 255, 255, 0.30000001f, 464.0f, 1440.0f, 0, (char *)1, 1045220557, 0);
   else
     v7 = 0;
-  LOBYTE(v18) = 4;
+  *(_BYTE *)&v18 = 4;
   *(_DWORD *)(self + 416) = v7;
   sub_422230(v6);
   sub_428680((_DWORD *)self, *(_DWORD *)(self + 416));
@@ -70,19 +75,19 @@ int __cdecl sub_443250(int self, int a2, int ArgList)
   {
     sub_4282E0(
       *(_BYTE *)(v9 + 301),
-      "engine sound did not set 'engine = true', see %s : %s",
+      (char *)"engine sound did not set 'engine = true', see %s : %s",
       *(const char **)(v8 + 4),
       (const char *)(v8 + 16));
     v10 = *(_DWORD *)(self + 408);
     memset(v17, 0, sizeof(v17));
-    sub_44D850(*(_DWORD *)(v10 + 788), (int)v17, COERCE_FLOAT(&v15), (int)v16);
+    sub_44D850(*(_DWORD *)(v10 + 788), (float *)v17, (_DWORD *)&v15, (_DWORD *)v16);
     if ( v15 )
     {
       v11 = sub_41E2D0(*(_DWORD **)(dword_520970 + 120), v15, 0, 1);
       *(_DWORD *)(self + 1452) = v11;
       if ( v11 )
       {
-        sub_41D8A0(*(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 788) + 330));
+        sub_41D8A0(*(_BYTE **)(self + 1452), *(_BYTE *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 788) + 330));
         sub_41D8B0(
           *(_DWORD **)(self + 1452),
           *(_DWORD *)v16[0],

@@ -52,7 +52,7 @@ void __cdecl sub_412620(void *self, int a2)
   if ( (v5 & 1) != 0 )
   {
     v6 = sub_411B60((int)self, *(_DWORD *)(a2 + 4));
-    v42[0] = v6;
+    v42[0] = (int)v6;
     if ( v6 )
     {
       v7 = v6 + 2073;
@@ -107,15 +107,15 @@ LABEL_51:
   if ( (v5 & 2) == 0 )
   {
 LABEL_50:
-    sub_4129B0(v2);
+    sub_4129B0((_DWORD *)self, v2);
     goto LABEL_51;
   }
-  v15 = sub_411B60((int)self, *(_DWORD *)(a2 + 4));
+  v15 = (int *)sub_411B60((int)self, *(_DWORD *)(a2 + 4));
   if ( !v15 )
     sub_4113D0(v2);
   v16 = *(_DWORD *)(v3 + 2);
   v17 = v16 & 0xFFFFFFF0 ^ (BYTE2(v42[0]) & 0xC | 1);
-  LOWORD(v42[0]) = -35;
+  *(_WORD *)v42 = (uint16)-35;
   *(_DWORD *)((char *)v42 + 2) = (((unsigned __int8)v17
                                  ^ (unsigned __int8)v16)
                                 & 8
@@ -126,7 +126,7 @@ LABEL_50:
                                 ^ (unsigned __int8)v16)
                                & 8
                                ^ v17;
-  v44[1] = v42;
+  v44[1] = (int)v42;
   v18 = *(_DWORD *)(v4 + 24);
   v44[0] = 6;
   (*(void (__stdcall **)(int, int, _DWORD *, int, int, _DWORD, int *, int))(*(_DWORD *)v18 + 28))(
@@ -138,9 +138,9 @@ LABEL_50:
     0,
     &a2,
     144);
-  v19 = v15 + 1038;
+  v19 = (_DWORD *)(v15 + 1038);
   if ( (v42[0] & 0x40000) == 0 )
-    v19 = v15 + 14;
+    v19 = (_DWORD *)(v15 + 14);
   v20 = 0;
   v21 = v19;
   do
@@ -171,7 +171,7 @@ LABEL_50:
     v25 = (void *)v15[2062];
     v26 = v23 + 8;
     v15[2064] = v26;
-    v27 = sub_488DD7(v25, 4 * v26);
+    v27 = (int)sub_488DD7(v25, 4 * v26);
     if ( v27 )
     {
       v28 = v15[2063];
@@ -205,7 +205,7 @@ LABEL_50:
     v4 = (int)self;
     v40 = *(_DWORD *)v33;
     v15[2066] = v32 + 1;
-    sub_4129B0(v40);
+    sub_4129B0((_DWORD *)self, v40);
     v35 = v15[2063];
     v36 = 0;
     if ( v35 > 0 )

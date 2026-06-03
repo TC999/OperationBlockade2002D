@@ -50,17 +50,18 @@ bool __cdecl sub_443CD0(int self, int a2, int a3, float a4, float a5)
             v14 = *(_DWORD *)(self + 408);
             memset(v23, 0, sizeof(v23));
             sub_44E040(
-              v13,
+              (char *)v13,
               self + 480,
               *(_DWORD *)(self + 412),
               *(float *)(*(_DWORD *)(*(_DWORD *)(v14 + 924) + 4 * i) + 28),
-              (int)v23);
+              (int)v23,
+              0);
           }
-          sub_408640(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * i) + 28), 0);
+          sub_408640(*(_DWORD **)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * i) + 28), 0, 0);
           v15 = *(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * i) + 32);
           if ( v15 != -1 )
-            sub_408640(v15, 0);
-          sub_407670(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * i) + 52), 0);
+            sub_408640((_DWORD *)v15, 0, 0);
+          sub_407670(*(_DWORD **)(*(_DWORD *)(*(_DWORD *)(*(_DWORD *)(self + 408) + 924) + 4 * i) + 52), 0, 0);
         }
       }
       break;
@@ -75,7 +76,7 @@ bool __cdecl sub_443CD0(int self, int a2, int a3, float a4, float a5)
         a4 = 0.0;
     }
   }
-  if ( (unsigned __int8)sub_4438C0(self) )
+  if ( (unsigned __int8)sub_4438C0((float *)self) )
   {
     v17 = *(_DWORD *)(self + 408);
     if ( a2 == *(_DWORD *)(v17 + 616) )
@@ -87,20 +88,20 @@ bool __cdecl sub_443CD0(int self, int a2, int a3, float a4, float a5)
       *(float *)(self + 420) = *(float *)(self + 420) - a4;
     if ( *(_BYTE *)(dword_4F5CC4 + 937) )
     {
-      if ( !(unsigned __int8)sub_4438C0(self) )
+      if ( !(unsigned __int8)sub_4438C0((float *)self) )
       {
-        sub_4477F0(1);
+        sub_4477F0(self, 1);
         *(_DWORD *)(self + 428) = 2139095039;
       }
     }
-    else if ( *(float *)(v17 + 676) != 0.0 || (unsigned __int8)sub_4438C0(self) )
+    else if ( *(float *)(v17 + 676) != 0.0 || (unsigned __int8)sub_4438C0((float *)self) )
     {
       if ( *(_BYTE *)(self + 392) )
       {
         v24 = *(float *)(*(_DWORD *)(self + 408) + 668);
-        v18 = v24 == 0.0 ? 0.0 : sub_4438E0(self) / v24;
+        v18 = v24 == 0.0 ? 0.0 : sub_4438E0((float *)self) / v24;
         if ( v18 <= *(float *)(*(_DWORD *)(self + 408) + 676) )
-          sub_4477F0(1);
+            sub_4477F0(self, 1);
       }
       if ( *(float *)(self + 424) <= 0.1 )
         v19 = 0.1;
@@ -114,7 +115,7 @@ bool __cdecl sub_443CD0(int self, int a2, int a3, float a4, float a5)
     }
     else
     {
-      sub_4440B0(0);
+      sub_4440B0(self, 0);
     }
   }
   return v22 && !*(_BYTE *)(self + 392);

@@ -4,7 +4,7 @@ int __cdecl sub_43BE50(LPVOID *self)
   LPVOID *v2; // esi
   int v3; // edi
 
-  *self = &off_499710;
+  *self = (LPVOID)(&off_499710);
   v2 = self + 12;
   v3 = 16;
   do

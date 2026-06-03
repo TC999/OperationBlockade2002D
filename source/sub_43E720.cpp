@@ -1,3 +1,11 @@
+extern char aHostipleft[];
+extern char aHostipright[];
+extern char aHostip_0[];
+extern char aMonth[];
+extern char aMultiplayermis[];
+extern char aMultiplayersky[];
+extern char aTimeOfDay[];
+
 //----- (0043E720) --------------------------------------------------------
 bool __cdecl sub_43E720(int self)
 {
@@ -32,7 +40,7 @@ bool __cdecl sub_43E720(int self)
     v5 = sub_424350((_DWORD *)self, aMonth);
     if ( v5 )
     {
-      v6 = (const char *)sub_45A870(*(_DWORD *)(self + 100));
+      v6 = (const char *)sub_45A870((_DWORD *)self, *(_DWORD *)(self + 100));
       sub_421110(*((LPVOID **)v5 + 28), v6);
     }
     *(_DWORD *)(self + 104) = sub_422BA0(AppName, aMultiplayersky, 0);
@@ -51,7 +59,7 @@ bool __cdecl sub_43E720(int self)
     *(_BYTE *)(*(_DWORD *)(self + 64) + 44) = 0;
     *(_BYTE *)(*(_DWORD *)(self + 60) + 44) = 0;
   }
-  sub_411EE0(dword_4F5CC4, 0, &v14, &v16, &v15);
+  sub_411EE0(dword_4F5CC4, 0, (_DWORD*)(&v14), (uint32*)&v16, (uint32*)&v15);
   v9 = 0;
   v10 = *(_DWORD *)(dword_520970 + 280);
   if ( *(int *)(v10 + 520) > 0 )

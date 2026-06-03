@@ -25,7 +25,7 @@ _DWORD *__cdecl sub_462DD0(_DWORD *self, int a2)
   v7 = &self[22 * a2];
   v8 = *(_DWORD *)(v6 + 808);
   if ( v8 >= 0 )
-    sub_407690(*(_DWORD *)(v6 + 652), v8, v11);
+    sub_407690(*(_DWORD *)(v6 + 652), v8, (uint32*)(v11));
   v5[7] = 1;
   v5[4] = v7[693];
   v5[5] = v7[694];

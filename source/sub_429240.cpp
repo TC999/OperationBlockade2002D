@@ -2,10 +2,10 @@
 int __cdecl sub_429240(int self, int a2)
 {
   int v2; // esi
-  Concurrency::details::TaskStack *v4; // eax
-  Concurrency::details::TaskStack *v5; // ebp
+  void *v4; // eax
+  void *v5; // ebp
   int v6; // esi
-  Concurrency::details::TaskStack *v7; // edi
+  void *v7; // edi
   int v8; // esi
   int v9; // edx
   int v10; // eax
@@ -22,7 +22,7 @@ int __cdecl sub_429240(int self, int a2)
     v2 = 8;
   }
   *(_DWORD *)(self + 8) = v2;
-  v4 = (Concurrency::details::TaskStack *)operator new(272 * v2);
+  v4 = operator new(272 * v2);
   v5 = v4;
   if ( v4 )
   {
@@ -33,8 +33,8 @@ int __cdecl sub_429240(int self, int a2)
       v8 = v6 + 1;
       do
       {
-        Concurrency::details::TaskStack::TaskStack(v7);
-        v7 = (Concurrency::details::TaskStack *)((char *)v7 + 272);
+        memset(v7, 0, 272);
+        v7 = (char *)v7 + 272;
         --v8;
       }
       while ( v8 );
@@ -56,7 +56,7 @@ int __cdecl sub_429240(int self, int a2)
     }
     while ( v9 < *(_DWORD *)(self + 4) );
   }
-  result = sub_4885A6(*(LPVOID *)self);
-  *(_DWORD *)self = v5;
-  return result;
+  sub_4885A6(*(LPVOID *)self);
+  *(_DWORD *)self = (uint32)v5;
+  return 0;
 }

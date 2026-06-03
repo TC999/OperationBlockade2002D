@@ -3,5 +3,5 @@ int __cdecl sub_421300(int self, unsigned __int8 a2, unsigned __int8 a3, unsigne
 {
   *(_DWORD *)(self + 52) = a4 | ((a3 | (((a5 << 8) | a2) << 8)) << 8);
   *(_BYTE *)(self + 34) = a5 == 0;
-  return sub_421540();
+  return (int)(uintptr_t)sub_421540((void **)self);
 }

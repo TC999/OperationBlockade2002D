@@ -1,3 +1,6 @@
+extern char aSoundsWarmapLo[];
+extern char aCommanderspeci[];
+
 //----- (0043CDE0) --------------------------------------------------------
 int __cdecl sub_43CDE0(int self)
 {
@@ -12,12 +15,12 @@ int __cdecl sub_43CDE0(int self)
   sub_4246F0(*(LPVOID ***)(self + 40));
   if ( *(_BYTE *)(dword_4F5CC4 + 936) || *(_BYTE *)(dword_4F5CC4 + 937) )
     return sub_4262D0(*(_DWORD *)(self + 40));
-  v2 = operator new(0x15Cu);
+  v2 = (_DWORD *)operator new(0x15Cu);
   if ( v2 )
     v3 = sub_41C6A0(v2);
   else
     v3 = 0;
-  *(_DWORD *)(self + 76) = v3;
+  *(_DWORD *)(self + 76) = (_DWORD)v3;
   sub_41C7A0((int)v3, 1);
   sub_41C760(*(_DWORD *)(self + 76), aSoundsWarmapLo);
   **(_BYTE **)(self + 76) = 1;
@@ -34,7 +37,7 @@ int __cdecl sub_43CDE0(int self)
     do
     {
       v6 = *v5;
-      *(_DWORD *)(self + 60) = *v5;
+      *(_DWORD *)(self + 60) = (_DWORD)*v5;
       if ( *v6 == *(_DWORD *)dword_5216E0 )
         break;
       *(_DWORD *)(self + 60) = 0;

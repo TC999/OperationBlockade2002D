@@ -3,7 +3,7 @@ int __cdecl sub_4074B0(_DWORD *self, int a2)
 {
   _BYTE *v3; // eax
 
-  v3 = sub_407190(self, a2, 1);
+  v3 = (_BYTE *)sub_407190(self, a2, 1);
   v3[2] = 1;
   *((_DWORD *)v3 + 15) = 0;
   *((_DWORD *)v3 + 14) = 0;

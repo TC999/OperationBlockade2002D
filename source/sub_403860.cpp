@@ -1,7 +1,9 @@
+#include "common.h"
+
 //----- (00403860) --------------------------------------------------------
 void *__cdecl sub_403860(void *self, char a2)
 {
-  sub_403880();
+  sub_403880((int)self);
   if ( (a2 & 1) != 0 )
     sub_4885A6(self);
   return self;

@@ -1,3 +1,8 @@
+#include "common.h"
+
+extern char aSetstreamsourc[];
+extern char aSetindicesFail[];
+
 //----- (00406000) --------------------------------------------------------
 int __stdcall sub_406000(_DWORD *a1, int a2)
 {
@@ -17,7 +22,7 @@ int __stdcall sub_406000(_DWORD *a1, int a2)
     if ( v4 )
       v3 = *(_BYTE *)(v4 + 73) != 0;
   }
-  sub_41BC00(a1[19] == 1, -1, -1, 0, (v3 != 0) + 1, -1, -1);
+  sub_41BC00((_DWORD *)dword_520A50, a1[19] == 1, -1, -1, 0, (v3 != 0) + 1, -1, -1);
   if ( (*(int (__stdcall **)(_DWORD, _DWORD))(**(_DWORD **)ArgList + 304))(*(_DWORD *)ArgList, a1[21]) )
     sub_4229D0(aSetstreamsourc, v6);
   if ( (*(int (__stdcall **)(_DWORD, _DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 332))(

@@ -21,8 +21,8 @@ char __cdecl sub_4782CC(_DWORD *a1)
     v9 = v2[1];
   }
   v10 = v9 - 1;
-  LOBYTE(v4) = 0;
-  HIBYTE(v4) = *v3;
+  ((_BYTE*)&(v4))[0] = 0;
+  ((_BYTE*)&(v4))[1] = *v3;
   v5 = v3 + 1;
   v7 = v4;
   if ( !v10 )

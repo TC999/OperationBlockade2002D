@@ -43,7 +43,7 @@ void __cdecl sub_47A9FD(jmp_buf Buf)
     Bufa = 8 - *((_BYTE *)Buf + 337);
     v11 = 8 - *((_BYTE *)Buf + 338);
     if ( v5 > 8 )
-      LOBYTE(v5) = 0;
+      BYTEn(v5, 0) = 0;
     if ( v6 > 8 )
       Bufa = 0;
     if ( v7 > 8 )

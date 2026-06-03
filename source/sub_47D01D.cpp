@@ -70,7 +70,7 @@ int __cdecl sub_47D01D(int a1)
 LABEL_12:
     if ( *(_BYTE *)(a1 + 88) )
     {
-      sub_484647(a1);
+      sub_484647((uint32*)a1);
       *(_DWORD *)(v10 + 20) = *(_DWORD *)(a1 + 420);
     }
     if ( *(_BYTE *)(a1 + 90) || *(_BYTE *)(a1 + 89) )
@@ -106,7 +106,7 @@ LABEL_12:
   {
     sub_48097A(a1);
   }
-  LOBYTE(v10) = *(_BYTE *)(*(_DWORD *)(a1 + 396) + 16) || *(_BYTE *)(a1 + 64);
+  BYTEn(v10, 0) = *(_BYTE *)(*(_DWORD *)(a1 + 396) + 16) || *(_BYTE *)(a1 + 64);
   sub_47FFA9(a1, v10);
   if ( !*(_BYTE *)(a1 + 65) )
     sub_47F357(a1, 0);

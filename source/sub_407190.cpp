@@ -16,7 +16,7 @@ void *__cdecl sub_407190(_DWORD *self, int a2, char a3)
     if ( a3 )
     {
       v4 = operator new(0x5Cu);
-      *(_DWORD *)(v3 + 92) = v4;
+      *(_DWORD *)(v3 + 92) = (uint32)(uintptr_t)(v4);
       memset(v4, 0, 0x5Cu);
       *((_DWORD *)v4 + 15) = 0;
       *((_DWORD *)v4 + 14) = 0;

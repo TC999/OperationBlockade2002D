@@ -70,7 +70,7 @@ int __cdecl sub_421B70(_DWORD *self, int a2)
           {
             v17 = floor(X);
             v16 = floor(v16);
-            v9 = sub_421DB0(*(_DWORD *)v2, *v7);
+            v9 = (int)sub_421DB0(*(_DWORD *)v2, *v7);
             if ( v9 )
             {
               if ( v21 )
@@ -79,7 +79,7 @@ int __cdecl sub_421B70(_DWORD *self, int a2)
                 v10 = *((_DWORD *)v2 + 14);
               v15 = (double)*((int *)v2 + 10) + v16;
               v14 = (double)*((int *)v2 + 9) + v17;
-              sub_421E30(v14, v15, 0.5, v10, v9);
+              sub_421E30((_DWORD **)v2, v14, v15, 0.5f, v10, (float *)v9);
               v11 = v7[1];
               X = v17 + *(float *)(v9 + 20) - 2.0;
               v23 += 2;

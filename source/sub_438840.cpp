@@ -1,3 +1,9 @@
+extern char aCanTLoadWorldM[];
+extern char aIntrocamera[];
+extern char aCameratrack[];
+extern char aPlayeremblem[];
+extern char aEnemyInsignia[];
+
 //----- (00438840) --------------------------------------------------------
 BOOL __cdecl sub_438840(_DWORD *self)
 {
@@ -14,12 +20,12 @@ BOOL __cdecl sub_438840(_DWORD *self)
 
   if ( !self[101] )
   {
-    v2 = operator new(0x988u);
+    v2 = (_DWORD *)operator new(0x988u);
     if ( v2 )
       v3 = sub_4376B0(v2, (int)self);
     else
       v3 = 0;
-    self[101] = v3;
+    self[101] = (int)v3;
     sub_4282E0(v3 != 0, aCanTLoadWorldM);
     v4 = sub_405A30((_DWORD *)self[101], aIntrocamera, -1, 1);
     v5 = (_DWORD *)self[101];

@@ -1,4 +1,6 @@
 //----- (00424630) --------------------------------------------------------
+extern const char aSoundsUiMusicW[];
+
 char __cdecl sub_424630(int *self)
 {
   int v2; // eax
@@ -9,7 +11,7 @@ char __cdecl sub_424630(int *self)
   v2 = self[20];
   if ( !v2 )
   {
-    v3 = operator new(0x15Cu);
+    v3 = (_DWORD*)operator new(0x15Cu);
     if ( v3 )
       v4 = sub_41C6A0(v3);
     else
@@ -21,7 +23,7 @@ char __cdecl sub_424630(int *self)
     sub_41CA40(self[20]);
     v6 = (double)*(int *)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
     sub_41CFD0(self[20], v6);
-    LOBYTE(v2) = sub_41CD90(self[20]);
+    *(char*)&v2 = sub_41CD90(self[20]);
   }
   return v2;
 }

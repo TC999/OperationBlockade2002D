@@ -1,3 +1,9 @@
+#include "common.h"
+
+static char aSoundmanagerDe[] = "SoundManager Destroying sound";
+static char aSoundmanagerDe_0[] = "SoundManager Destroying dup";
+static char aSoundmanagerDo[] = "SoundManager Done";
+
 //----- (0041DB10) --------------------------------------------------------
 int __cdecl sub_41DB10(_DWORD *self)
 {
@@ -36,7 +42,7 @@ int __cdecl sub_41DB10(_DWORD *self)
   LPVOID *v34; // [esp+1Ch] [ebp-10h]
 
   v1 = self;
-  *self = &off_4992B4;
+  *self = (uint32)off_4992B4;
   for ( i = 0; i < 17920; i += 140 )
   {
     v3 = v1[9];
@@ -154,7 +160,7 @@ LABEL_20:
 LABEL_37:
       if ( v9 )
       {
-        sub_41F1A0(1);
+        sub_41F1A0(v9, 1);
         sub_4885A6((LPVOID)v9);
       }
       sub_4229D0(aSoundmanagerDo, v30);
@@ -180,8 +186,8 @@ LABEL_37:
   v1[7] = 0;
   *v24 = 0;
   dword_5200E8 = 0;
-  sub_45CF30(1);
-  result = sub_41F220(1);
-  *v1 = &off_499040;
+  sub_45CF30(0, 1);
+  result = sub_41F220(0, 1);
+  *v1 = (uint32)off_499040;
   return result;
 }

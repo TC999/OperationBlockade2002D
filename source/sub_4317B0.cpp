@@ -12,7 +12,7 @@ int __cdecl sub_4317B0(_DWORD *self, int a2)
   if ( *(_DWORD *)(result + 896) && !self[567] && a2 == 1 )
   {
     memset(v8, 0, sizeof(v8));
-    result = sub_44E040(*(_DWORD *)(result + 896), (int)(self + 335), self[108], **(float **)(result + 636), (int)v8);
+    result = sub_44E040(*(char **)(dword_520970 + 240), *(_DWORD *)(result + 896), (int)(self + 335), self[108], **(float **)(result + 636), v8);
   }
   v4 = self[568];
   self[567] = a2;

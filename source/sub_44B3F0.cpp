@@ -22,7 +22,7 @@ int __cdecl sub_44B3F0(_DWORD *self)
         result = sub_4286C0(self, v3[3]);
         v5 = (int (__cdecl ***)(_DWORD, int))v3[3];
         if ( v5 )
-          result = (**v5)(v5, 1);
+          result = (**v5)((_DWORD)(uintptr_t)v5, 1);
         v3[3] = 0;
       }
     }

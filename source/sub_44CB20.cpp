@@ -1,4 +1,7 @@
 //----- (0044CB20) --------------------------------------------------------
+extern char aGore[];
+extern char aAmbientSounds[];
+
 char __cdecl sub_44CB20(int self)
 {
   INT v2; // eax

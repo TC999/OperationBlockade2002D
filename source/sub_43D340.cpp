@@ -1,3 +1,5 @@
+extern char aStaging[];
+
 //----- (0043D340) --------------------------------------------------------
 char __cdecl sub_43D340(int self, int a2)
 {
@@ -12,7 +14,7 @@ char __cdecl sub_43D340(int self, int a2)
   *(float *)(self + 44) = v3;
   if ( v3 < 0.0 )
   {
-    sub_43EFF0(&v5);
+    sub_43EFF0((_DWORD *)dword_4F5CC4, (_DWORD*)(&v5));
     v9 = 0;
     if ( v5 )
     {
@@ -24,7 +26,7 @@ char __cdecl sub_43D340(int self, int a2)
       {
         if ( byte_520C3C )
         {
-          sub_43EFC0(v7, &byte_520C3C, 52973);
+          sub_43EFC0((void *)dword_4F5CC4, (_DWORD *)v7, &byte_520C3C, 52973);
           sub_488CEE(lpMem);
         }
       }

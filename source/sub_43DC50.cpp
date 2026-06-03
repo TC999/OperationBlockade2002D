@@ -1,3 +1,6 @@
+extern char aIconup[];
+extern char aIcondown[];
+
 //----- (0043DC50) --------------------------------------------------------
 const char *__cdecl sub_43DC50(_DWORD *self)
 {

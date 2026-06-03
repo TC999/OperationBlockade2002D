@@ -31,7 +31,7 @@ _DWORD *__cdecl sub_4436D0(int *self, int a2)
   if ( (v4 - (int)v3) >> 2 )
   {
     sub_448B80(v3, v3, v3 + 1);
-    sub_44B480((_DWORD *)v5[2], (_DWORD *)(1 - ((v5[2] - (int)v6) >> 2)), &a2);
+    sub_44B480((_DWORD *)v5[2], (_DWORD *)(1 - ((v5[2] - (int)v6) >> 2)), (_DWORD *)&a2);
     v17 = (_DWORD *)v5[2];
     if ( v6 == v17 )
     {
@@ -60,12 +60,12 @@ _DWORD *__cdecl sub_4436D0(int *self, int a2)
     v19 = v10;
     if ( v10 < 0 )
       v10 = 0;
-    v11 = operator new(4 * v10);
+    v11 = (_DWORD *)operator new(4 * v10);
     v12 = (_DWORD *)v5[1];
     v18 = v11;
     for ( i = v11; v12 != v6; ++i )
       sub_448BE0(i, v12++);
-    sub_44B480(i, (_DWORD *)1, &a2);
+    sub_44B480(i, (_DWORD *)1, (_DWORD *)&a2);
     sub_448B80(v6, (_DWORD *)v5[2], i + 1);
     nullsub_8(v5[1], v5[2]);
     sub_4885A6((LPVOID)v5[1]);

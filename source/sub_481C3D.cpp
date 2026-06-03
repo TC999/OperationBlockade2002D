@@ -22,7 +22,7 @@ _BYTE ***__cdecl sub_481C3D(int a1, int a2, int a3, _BYTE ***a4)
     do
     {
       v8 = *v6;
-      v9 = *(_BYTE **)((char *)v6 + v7);
+      v9 = (char *)*(_BYTE **)((char *)v6 + v7);
       v10 = (unsigned int)&(*v6)[*(_DWORD *)(a1 + 92)];
       if ( (unsigned int)*v6 < v10 )
       {

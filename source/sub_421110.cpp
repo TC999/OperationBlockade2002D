@@ -11,5 +11,5 @@ int __cdecl sub_421110(LPVOID *self, const char *a2)
     self[1] = (LPVOID)v3;
   }
   strcpy((char *)self[2], a2);
-  return sub_421AB0(*self, self[2], self + 6, self + 7);
+  return sub_421AB0((int)*self, (char*)self[2], (float*)(self + 6), (_DWORD*)(self + 7));
 }

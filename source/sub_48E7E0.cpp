@@ -43,12 +43,12 @@ int __cdecl sub_48E7E0(int a1, _DWORD *a2, _BYTE *a3, unsigned int a4)
           if ( v6 >= (_BYTE *)a2 + 248 )
           {
             a2[1] = 0;
-            *a2 = a2 + 2;
+            *a2 = (uint32)(a2 + 2);
           }
           else
           {
             v9 = 0;
-            *a2 = v6;
+            *a2 = (uint32)v6;
             if ( !*v6 )
             {
               do

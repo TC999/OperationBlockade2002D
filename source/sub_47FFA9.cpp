@@ -19,10 +19,10 @@ int __cdecl sub_47FFA9(int a1, char a2)
   int *v18; // [esp+1Ch] [ebp+Ch]
 
   v3 = (_DWORD *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 116);
-  *(_DWORD *)(a1 + 388) = v3;
+  *(_DWORD *)(a1 + 388) = (uint32)(size_t)v3;
   v16 = v3;
-  *v3 = sub_47F469;
-  v3[2] = sub_47FF6B;
+  *v3 = (uint32)(size_t)sub_47F469;
+  v3[2] = (uint32)(size_t)sub_47FF6B;
   v3[28] = 0;
   if ( a2 )
   {
@@ -31,7 +31,7 @@ int __cdecl sub_47FFA9(int a1, char a2)
     if ( *(int *)(a1 + 32) > 0 )
     {
       v5 = (int *)(v4 + 12);
-      v18 = v3 + 18;
+      v18 = (int *)(v3 + 18);
       do
       {
         v6 = *v5;
@@ -51,14 +51,14 @@ int __cdecl sub_47FFA9(int a1, char a2)
       v3 = v16;
     }
     result = (int)(v3 + 18);
-    v3[1] = sub_47F659;
-    v3[3] = sub_47F7F8;
-    v3[4] = v3 + 18;
+    v3[1] = (uint32)(size_t)sub_47F659;
+    v3[3] = (uint32)(size_t)sub_47F7F8;
+    v3[4] = (uint32)(size_t)(v3 + 18);
   }
   else
   {
     result = (*(int (__cdecl **)(int, int, int))(*(_DWORD *)(a1 + 4) + 4))(a1, 1, 1280);
-    v12 = v3 + 8;
+    v12 = (int *)(v3 + 8);
     v13 = 10;
     do
     {
@@ -67,8 +67,8 @@ int __cdecl sub_47FFA9(int a1, char a2)
       --v13;
     }
     while ( v13 );
-    v3[1] = sub_47F656;
-    v3[3] = sub_47F47C;
+    v3[1] = (uint32)(size_t)sub_47F656;
+    v3[3] = (uint32)(size_t)sub_47F47C;
     v3[4] = 0;
   }
   return result;

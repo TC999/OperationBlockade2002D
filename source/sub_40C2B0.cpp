@@ -6,9 +6,9 @@ _DWORD *__cdecl sub_40C2B0(_BYTE *self, _DWORD *a2)
   LPVOID lpMem; // [esp+8h] [ebp-4h]
 
   v4 = 0;
-  sub_40C310(&v4);
+  sub_40C310((_DWORD *)&v4, a2);
   sub_488CEE(lpMem);
-  sub_40C4C0(&v4);
+  sub_40C4C0((_DWORD *)&v4, a2);
   sub_488CEE(lpMem);
   result = a2;
   self[292] = 0;

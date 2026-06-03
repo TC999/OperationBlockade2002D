@@ -1,3 +1,7 @@
+extern char aTcpipbutton[];
+extern char aIpxbutton[];
+extern char aNetnameentry[];
+
 //----- (0043BA60) --------------------------------------------------------
 char __cdecl sub_43BA60(_DWORD **self, char *String1, int a3)
 {

@@ -47,7 +47,7 @@ int __cdecl sub_47A08C(int *a1, int a2, int a3, int a4, int a5)
           if ( v9 == 2 )
           {
             v28 = (_BYTE *)(result + a2 - 1);
-            LOBYTE(v10) = 4 * (result & 1);
+            *(_BYTE*)&(v10) = 4 * (result & 1);
             v11 = (_BYTE *)(a2 + ((unsigned int)(result - 1) >> 1));
             v31 = 4 * (*a1 & 1);
             if ( result )
@@ -76,7 +76,7 @@ int __cdecl sub_47A08C(int *a1, int a2, int a3, int a4, int a5)
         else
         {
           v29 = (_BYTE *)(result + a2 - 1);
-          LOBYTE(v13) = 2 * (3 - ((result - 1) & 3));
+          *(_BYTE*)&(v13) = 2 * (3 - ((result - 1) & 3));
           v14 = (_BYTE *)(a2 + ((unsigned int)(result - 1) >> 2));
           v32 = 2 * (3 - (((_BYTE)result - 1) & 3));
           if ( result )
@@ -105,7 +105,7 @@ int __cdecl sub_47A08C(int *a1, int a2, int a3, int a4, int a5)
       else
       {
         v30 = (_BYTE *)(result + a2 - 1);
-        LOBYTE(v15) = 7 - ((result - 1) & 7);
+        *(_BYTE*)&(v15) = 7 - ((result - 1) & 7);
         v16 = (_BYTE *)(a2 + ((unsigned int)(result - 1) >> 3));
         v33 = 7 - (((_BYTE)result - 1) & 7);
         if ( result )

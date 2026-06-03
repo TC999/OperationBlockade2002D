@@ -5,7 +5,7 @@ int __cdecl sub_45A920(_DWORD *self, int ArgList, int a3, int a4)
   _DWORD *v6; // eax
   int v7; // ecx
 
-  sub_4229D0("StartMission(mission=%d, sky=%d, clouds=%d)", ArgList, a3, a4);
+  sub_4229D0((char*)"StartMission(mission=%d, sky=%d, clouds=%d)", ArgList, a3, a4);
   v5 = self[5];
   self[21] = a3;
   v6 = &self[4 * v5];
@@ -17,8 +17,8 @@ int __cdecl sub_45A920(_DWORD *self, int ArgList, int a3, int a4)
   self[19] = *(_DWORD *)(v6[6] + 4 * v7);
   sub_436FA0(*(float **)(dword_520970 + 224), 0.0, 0.0);
   self[25] = 2;
-  sub_4630D0(*(_DWORD *)(dword_520970 + 280));
-  sub_463150(*(_DWORD *)(dword_520970 + 280));
+  sub_4630D0((char *)*(_DWORD *)(dword_520970 + 280));
+  sub_463150((_DWORD *)*(_DWORD *)(dword_520970 + 280));
   *(_BYTE *)(*(_DWORD *)(dword_520970 + 224) + 40) = 1;
   return sub_4262D0(*(_DWORD *)(dword_520970 + 232));
 }

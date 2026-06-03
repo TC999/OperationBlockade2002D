@@ -23,9 +23,9 @@ float *__stdcall sub_46C6DE(float *a1, float *a2, float *a3, float *a4)
   v17 = *a2 - *a3;
   v18 = a2[1] - a3[1];
   v19 = a2[2] - a3[2];
-  sub_46B970(&v17, &v17);
+  sub_46B970((int)(void*)&v17, (int)(void*)&v17);
   sub_419690(&v14, a4, &v17);
-  sub_46B970(&v14, &v14);
+  sub_46B970((int)(void*)&v14, (int)(void*)&v14);
   sub_419690(&v11, &v17, &v14);
   v4 = v14;
   *a1 = v14;

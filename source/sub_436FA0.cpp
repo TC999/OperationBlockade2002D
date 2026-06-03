@@ -5,5 +5,5 @@ int __cdecl sub_436FA0(float *self, float a2, float a3)
 
   v4 = a2 + a3;
   self[11] = v4;
-  return sub_413240(LODWORD(a2), LODWORD(v4), 0, 255);
+  return sub_413240((_DWORD *)self, LODWORD(a2), LODWORD(v4), 0, 255);
 }

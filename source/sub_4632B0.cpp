@@ -27,6 +27,7 @@ char __cdecl sub_4632B0(int self, int ArgList)
   int v26; // ebx
   char *v27; // edx
   int v28; // eax
+  _BYTE v7b;
   const char *v30; // [esp-8h] [ebp-20h]
   int v31; // [esp-4h] [ebp-1Ch]
   int i; // [esp+10h] [ebp-8h]
@@ -59,10 +60,10 @@ char __cdecl sub_4632B0(int self, int ArgList)
           {
             v25 = 352 * v24 + self;
             *(_BYTE *)(v25 + 898) = 0;
-            LOBYTE(v7) = *(_BYTE *)(dword_4F5CC4 + 936);
-            if ( (_BYTE)v7 )
+            v7b = *(_BYTE *)(dword_4F5CC4 + 936);
+            if ( v7b )
             {
-              sub_4229D0("Deleting player '%s'", (const char *)(v25 + 899));
+              sub_4229D0((char*)"Deleting player '%s'", (const char *)(v25 + 899));
               v26 = v24;
               if ( v24 < *(_DWORD *)(self + 520) - 1 )
               {
@@ -77,7 +78,7 @@ char __cdecl sub_4632B0(int self, int ArgList)
                 while ( v26 < *(_DWORD *)(self + 520) - 1 );
               }
               --*(_DWORD *)(self + 520);
-              LOBYTE(v7) = sub_463180((_BYTE *)self);
+              sub_463180((_BYTE *)self);
             }
           }
         }
@@ -85,8 +86,8 @@ char __cdecl sub_4632B0(int self, int ArgList)
     }
     else
     {
-      LOBYTE(v7) = *(_BYTE *)(dword_4F5CC4 + 936);
-      if ( (_BYTE)v7 )
+      v7b = *(_BYTE *)(dword_4F5CC4 + 936);
+      if ( v7b )
       {
         v28 = *(_DWORD *)(self + 520);
         *(_DWORD *)(self + 520) = v28 + 1;
@@ -96,15 +97,15 @@ char __cdecl sub_4632B0(int self, int ArgList)
         *(_DWORD *)(352 * v28 + self + 928) = 0;
         *(_DWORD *)(352 * v28 + self + 1228) = 0;
         sub_4621B0((int *)self);
-        LOBYTE(v7) = sub_463180((_BYTE *)self);
+        sub_463180((_BYTE *)self);
       }
     }
   }
   else if ( (unsigned __int16)v3 == 1541 )
   {
-    LOBYTE(v7) = *(_BYTE *)(dword_4F5CC4 + 937);
-    if ( (_BYTE)v7 )
-      LOBYTE(v7) = sub_462520(
+    v7b = *(_BYTE *)(dword_4F5CC4 + 937);
+    if ( v7b )
+      sub_462520(
                      (_DWORD *)self,
                      *(_DWORD *)(*(_DWORD *)(self + 11780) + 4 * *(unsigned __int8 *)(v4 + 6)),
                      0);
@@ -125,7 +126,7 @@ char __cdecl sub_4632B0(int self, int ArgList)
           {
             v30 = (const char *)(352 * v7 + self + 899);
             v8 = sub_436A90(*(_DWORD *)(dword_520970 + 224));
-            LOBYTE(v7) = sub_421190(v8, "%s: %s", v30, (const char *)(v4 + 6));
+            sub_421190(v8, (char*)"%s: %s", v30, (const char *)(v4 + 6));
           }
         }
       }
@@ -140,7 +141,7 @@ char __cdecl sub_4632B0(int self, int ArgList)
           v10 = *(_DWORD *)(352 * v7 + self + 884);
           ArgListb = *(int *)(v4 + 10);
           *(float *)(v9 + 48) = *(float *)&ArgListb;
-          LOBYTE(v7) = sub_436EC0(*(_DWORD **)(dword_520970 + 224), v10, ArgListb, v31);
+          sub_436EC0(*(_DWORD **)(dword_520970 + 224), v10, ArgListb, v31);
           v11 = *(_DWORD *)v9;
           if ( *(int *)v9 > -1 )
           {
@@ -191,8 +192,8 @@ char __cdecl sub_4632B0(int self, int ArgList)
           *v16 = *(_BYTE *)v15;
           v16[2] = *(_BYTE *)(v15 + 1);
           *((_DWORD *)v16 - 1) = *(_DWORD *)(v15 + 3);
-          strcpy(v16 + 3, (const char *)(v15 - 24));
-          sub_4229D0("%d: %s", ArgLista, v16 + 3);
+          strcpy((char *)(v16 + 3), (const char *)(v15 - 24));
+          sub_4229D0((char*)"%d: %s", ArgLista, v16 + 3);
           v18 = ArgLista;
           *((_DWORD *)v16 - 3) = ArgLista;
           v19 = *(char *)(i + 2);
@@ -206,7 +207,7 @@ char __cdecl sub_4632B0(int self, int ArgList)
             break;
         }
       }
-      sub_436E20(*(_DWORD *)(dword_520970 + 224));
+      sub_436E20((char *)*(_DWORD *)(dword_520970 + 224));
       v7 = *(_DWORD *)(self + 520);
       v20 = 0;
       if ( v7 > 0 )

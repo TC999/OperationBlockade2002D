@@ -1,4 +1,6 @@
 //----- (0048261E) --------------------------------------------------------
+static void __cdecl _nullsub_2_stub() {}
+
 int __cdecl sub_48261E(int a1)
 {
   _DWORD *v1; // edi
@@ -10,8 +12,8 @@ int __cdecl sub_48261E(int a1)
   int v7; // ecx
 
   v1 = (_DWORD *)(**(int (__cdecl ***)(int, int, int))(a1 + 4))(a1, 1, 24);
-  *(_DWORD *)(a1 + 416) = v1;
-  *v1 = nullsub_2;
+  *(_DWORD *)(a1 + 416) = (uint32)(size_t)v1;
+  *v1 = (uintptr_t)_nullsub_2_stub;
   v2 = *(_DWORD *)(a1 + 36);
   if ( v2 == 1 )
   {
@@ -48,7 +50,7 @@ LABEL_12:
       *(_DWORD *)(a1 + 100) = 3;
       if ( result == 3 )
       {
-        v1[1] = sub_4822DA;
+        v1[1] = (uintptr_t)sub_4822DA;
         goto LABEL_23;
       }
       v5 = result == 2;
@@ -62,7 +64,7 @@ LABEL_12:
           result = *(_DWORD *)(a1 + 32);
           *(_DWORD *)(a1 + 100) = result;
 LABEL_26:
-          v1[1] = sub_48211A;
+          v1[1] = (uintptr_t)sub_48211A;
           goto LABEL_32;
         }
 LABEL_17:
@@ -74,7 +76,7 @@ LABEL_17:
       *(_DWORD *)(a1 + 100) = 4;
       if ( result == 5 )
       {
-        v1[1] = sub_4821A8;
+        v1[1] = (uintptr_t)sub_4821A8;
 LABEL_23:
         result = sub_48206A(a1);
         goto LABEL_32;
@@ -89,7 +91,7 @@ LABEL_23:
   *(_DWORD *)(a1 + 100) = 1;
   if ( v6 != 1 && v6 != 3 )
     goto LABEL_17;
-  v1[1] = sub_482185;
+  v1[1] = (uintptr_t)sub_482185;
   result = 1;
   if ( *(int *)(a1 + 32) > 1 )
   {

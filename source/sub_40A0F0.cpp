@@ -1,3 +1,7 @@
+extern char Operation[];
+extern char File[];
+extern char aIniFileErrorsS[];
+
 //----- (0040A0F0) --------------------------------------------------------
 char sub_40A0F0()
 {

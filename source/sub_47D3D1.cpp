@@ -12,6 +12,6 @@ int __cdecl sub_47D3D1(_DWORD *a1)
   a1[2] = 0;
   a1[6] = 0;
   *v1 = v1[3] != 0 ? 7 : 0;
-  sub_4846D1(*(_DWORD *)(a1[7] + 20), a1, 0);
+  sub_4846D1((uint32*)(*(_DWORD *)(a1[7] + 20)), (int)a1, 0);
   return 0;
 }

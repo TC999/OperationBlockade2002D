@@ -24,18 +24,18 @@ int __cdecl sub_438460(_DWORD **self, int a2, float a3, float a4, float a5)
   sub_4074B0(self[147], (int)self[35 * a2 + 170]);
   if ( a4 == 0.0 )
   {
-    sub_408640(self[35 * a2 + 170], 0);
+    sub_408640(self[35 * a2 + 170], 0, 0);
   }
   else
   {
-    sub_408640(self[35 * a2 + 170], 1);
+    sub_408640(self[35 * a2 + 170], 1, 0);
     *(float *)&v9 = *(float *)&v11 - 110.0 + 110.0 * a4;
     sub_407600(self[147], (int)self[35 * a2 + 170], 0, 0, v9);
   }
   sub_4074B0(self[147], (int)self[35 * a2 + 171]);
   if ( a5 == 0.0 )
-    return sub_408640(self[35 * a2 + 171], 0);
-  sub_408640(self[35 * a2 + 171], 1);
+    return sub_408640(self[35 * a2 + 171], 0, 0);
+  sub_408640(self[35 * a2 + 171], 1, 0);
   *(float *)&v10 = *(float *)&v11 - 110.0 + 110.0 * a5;
   return sub_407600(self[147], (int)self[35 * a2 + 171], 0, 0, v10);
 }

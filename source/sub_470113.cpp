@@ -4,7 +4,7 @@ int __cdecl sub_470113(_DWORD *self)
   _DWORD *v2; // edx
   _DWORD *v3; // ecx
   unsigned int v4; // eax
-  int v5; // esi
+  unsigned int v5; // esi
   int v6; // esi
   _DWORD *v7; // ecx
   _DWORD *v8; // ecx
@@ -78,7 +78,7 @@ int __cdecl sub_470113(_DWORD *self)
   if ( v5 != v4 >> 1 && (v5 != 1 || v4 != 1) )
     return -2147467259;
   v6 = v2[1045];
-  if ( v6 != v3[1045] >> 1 && (v6 != 1 || v3[1045] != 1) )
+  if ( v6 != (int)(v3[1045] >> 1) && (v6 != 1 || v3[1045] != 1) )
     return -2147467259;
   if ( v2[1046] != v3[1046] >> 1 )
     return -2147467259;

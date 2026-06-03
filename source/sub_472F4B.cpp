@@ -5,6 +5,7 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
   _BYTE *v4; // ebx
   _BYTE *v10; // ebx
   int v13; // edi
+  int rECX, rEDX, rESI, rEDI;
   _BYTE v16[64]; // [esp+Ch] [ebp-40h] BYREF
 
   result = a1;
@@ -15,14 +16,16 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
     if ( a2 != a1 )
     {
       v4 = a1;
-      _ECX = a2;
-      _EDX = a3;
-      _EDI = -4;
+      rECX = (int)a2;
+      rEDX = (int)a3;
+      rEDI = -4;
       do
       {
-        _ESI = -16;
+        rESI = -16;
         __asm
         {
+          mov edx, rEDX
+          mov edi, rEDI
           fld     dword ptr [edx+edi*4+10h]
           fld     dword ptr [edx+edi*4+20h]
           fld     dword ptr [edx+edi*4+30h]
@@ -32,6 +35,8 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
         {
           __asm
           {
+            mov ecx, rECX
+            mov esi, rESI
             fld     st(3)
             fmul    dword ptr [ecx+esi*4+40h]
             fld     st(3)
@@ -45,12 +50,11 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
             fxch    st(2)
             faddp   st(1), st
             faddp   st(1), st
-            fstp    dword ptr [ebx+esi*4+40h]
+            fstp    dword ptr [v4+esi*4+64]
           }
-          *(float *)&v4[4 * _ESI + 64] = _ET1;
-          _ESI += 4;
+          rESI += 4;
         }
-        while ( _ESI );
+        while ( rESI );
         __asm
         {
           ffree   st(3)
@@ -59,23 +63,24 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
           ffree   st
         }
         v4 += 4;
-        ++_EDI;
+        ++rEDI;
       }
-      while ( _EDI );
+      while ( rEDI );
       return result;
     }
     qmemcpy(v16, a3, sizeof(v16));
     a3 = v16;
   }
   v10 = a1;
-  _ECX = a2;
-  _EDX = a3;
+  rECX = (int)a2;
+  rEDX = (int)a3;
   v13 = -4;
   do
   {
-    _ESI = -4;
+    rESI = -4;
     __asm
     {
+      mov ecx, rECX
       fld     dword ptr [ecx]
       fld     dword ptr [ecx+4]
       fld     dword ptr [ecx+8]
@@ -85,6 +90,8 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
     {
       __asm
       {
+        mov edx, rEDX
+        mov esi, rESI
         fld     st(3)
         fmul    dword ptr [edx+esi*4+10h]
         fld     st(3)
@@ -98,11 +105,11 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
         fxch    st(2)
         faddp   st(1), st
         faddp   st(1), st
-        fstp    dword ptr [ebx+esi*4+10h]
+        fstp    dword ptr [v10+esi*4+16]
       }
-      *(float *)&v10[4 * _ESI++ + 16] = _ET1;
+      ++rESI;
     }
-    while ( _ESI );
+    while ( rESI );
     __asm
     {
       ffree   st(3)
@@ -110,7 +117,7 @@ _BYTE *__stdcall sub_472F4B(_BYTE *a1, _BYTE *a2, _BYTE *a3)
       ffree   st(1)
       ffree   st
     }
-    _ECX += 16;
+    rECX += 16;
     v10 += 16;
     ++v13;
   }

@@ -49,8 +49,8 @@ char __cdecl sub_477D38(_DWORD *a1)
     v34 = *(_DWORD *)(v1 + 4);
   }
   --v34;
-  LOBYTE(v4) = 0;
-  HIBYTE(v4) = *v3;
+  ((_BYTE*)&(v4))[0] = 0;
+  ((_BYTE*)&(v4))[1] = *v3;
   v5 = v3 + 1;
   v32 = v4;
   if ( v34 )
@@ -84,7 +84,7 @@ LABEL_7:
     *(_DWORD *)(v10 + 24) = v8;
     v11 = (unsigned __int8 *)(v7 + 1);
     (*(void (__cdecl **)(_DWORD *, int))(*a1 + 4))(a1, 1);
-    LOBYTE(v25) = 0;
+    ((_BYTE*)&(v25))[0] = 0;
     v30 = 0;
     v31 = 1;
     do
@@ -152,7 +152,7 @@ LABEL_7:
     if ( (v23 & 0x10) != 0 )
     {
       v17 = v23 - 16;
-      v18 = &a1[v23 + 28];
+      v18 = (int *)&a1[v23 + 28];
       v31 = (int)v18;
     }
     else
@@ -167,7 +167,7 @@ LABEL_7:
       (*(void (__cdecl **)(_DWORD *))*a1)(a1);
     }
     if ( !*v18 )
-      *v18 = sub_47CD9E(a1);
+      *v18 = sub_47CD9E((int)a1);
     v19 = *v18;
     v20 = v31;
     *(_DWORD *)v19 = v25;
@@ -183,6 +183,6 @@ LABEL_7:
     v1 = v24;
   }
   *(_DWORD *)(v1 + 4) = v34;
-  *(_DWORD *)v1 = v7;
+  *(_DWORD *)v1 = (uint32)v7;
   return 1;
 }

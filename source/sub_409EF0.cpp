@@ -11,9 +11,9 @@ int __cdecl sub_409EF0(_DWORD *self, int a2)
   v4[5] = 1065353216;
   v4[0] = 1065353216;
   (*(void (__stdcall **)(_DWORD, int, _DWORD *))(**(_DWORD **)ArgList + 148))(*(_DWORD *)ArgList, 256, v4);
-  sub_41BC00(1, 0, 1, 0, 1, 1, 1);
-  sub_41BEF0(0, 0, -1, -1);
-  sub_41BEF0(1, 0, -1, -1);
+  sub_41BC00(0, 1, 0, 1, 0, 1, 1, 1);
+  sub_41BEF0(0, 0, 0, -1, -1);
+  sub_41BEF0(0, 1, 0, -1, -1);
   (*(void (__stdcall **)(_DWORD, int))(**(_DWORD **)ArgList + 304))(*(_DWORD *)ArgList, 66);
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD, int))(**(_DWORD **)ArgList + 332))(*(_DWORD *)ArgList, 0, self[12], 16);
   (*(void (__stdcall **)(_DWORD, _DWORD, _DWORD))(**(_DWORD **)ArgList + 340))(*(_DWORD *)ArgList, self[13], 0);

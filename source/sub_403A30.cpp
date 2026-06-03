@@ -1,4 +1,11 @@
 //----- (00403A30) --------------------------------------------------------
+#include <cstdio>
+#include <cstdlib>
+#include <cstdarg>
+#include <cstdint>
+
+typedef uint32_t _DWORD;
+
 _DWORD *sub_403A30(_DWORD *a1, int a2, char *Format, ...)
 {
   char *v3; // eax
@@ -7,7 +14,8 @@ _DWORD *sub_403A30(_DWORD *a1, int a2, char *Format, ...)
   va_start(va, Format);
   *a1 = a2;
   v3 = (char *)malloc(0x100u);
-  a1[1] = v3;
+  a1[1] = (_DWORD)(uintptr_t)v3;
   _vsnprintf(v3, 0xFFu, Format, va);
+  va_end(va);
   return a1;
 }

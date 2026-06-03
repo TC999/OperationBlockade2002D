@@ -42,13 +42,13 @@ _DWORD *__cdecl sub_48E4B4(unsigned int a1)
           v5 = a1;
           if ( *(_DWORD *)v3 >= (signed int)a1 && *((_DWORD *)v3 + 1) > a1 )
           {
-            result = (_DWORD *)sub_48E6BC(v4, *(_DWORD *)v3, a1);
+            result = (_DWORD *)sub_48E6BC((int)v4, *(_DWORD *)v3, a1);
             if ( result )
             {
 LABEL_21:
               off_4B4988 = (_UNKNOWN **)v1;
               *(_DWORD *)v3 -= v5;
-              *((_DWORD *)v1 + 2) = v3;
+              *((_DWORD *)v1 + 2) = (uint32)v3;
               return result;
             }
             v4 = v18;
@@ -72,7 +72,7 @@ LABEL_11:
         {
           if ( *(_DWORD *)v3 >= (signed int)v5 && *((_DWORD *)v3 + 1) > v5 )
           {
-            result = (_DWORD *)sub_48E6BC(v19, *(_DWORD *)v3, v5);
+            result = (_DWORD *)sub_48E6BC((int)v19, *(_DWORD *)v3, v5);
             if ( result )
               goto LABEL_21;
             *((_DWORD *)v3 + 1) = v5;
@@ -124,7 +124,7 @@ LABEL_11:
     do
     {
       *((_BYTE *)v12 + 244) = -1;
-      *(v12 - 1) = v12 + 1;
+      *(v12 - 1) = (uint32)(v12 + 1);
       *v12 = 240;
       *v11 = 240;
       v11[1] = 241;
@@ -138,22 +138,22 @@ LABEL_11:
   v13 = (_UNKNOWN **)(v7 + 8216);
   while ( 1 )
   {
-    v14 = v11 < v13;
-    if ( v11 >= v13 )
+    v14 = (char *)v11 < (char *)v13;
+    if ( (char *)v11 >= (char *)v13 )
       break;
     if ( *v11 == -1 )
     {
-      v14 = v11 < v13;
+      v14 = (char *)v11 < (char *)v13;
       break;
     }
     v11 += 2;
   }
-  *((_DWORD *)v7 + 3) = v14 ? v11 : 0;
+  *((_DWORD *)v7 + 3) = v14 ? (uint32)v11 : 0;
   *((_BYTE *)i + 8) = a1;
-  *((_DWORD *)v7 + 2) = v8;
+  *((_DWORD *)v7 + 2) = (uint32)v8;
   *v8 -= a1;
   i[1] -= a1;
   result = i + 64;
-  *i = (char *)i + a1 + 8;
+  *i = (uint32)((char *)i + a1 + 8);
   return result;
 }

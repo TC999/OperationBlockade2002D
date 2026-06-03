@@ -46,18 +46,18 @@ int __cdecl sub_47B9F1(unsigned __int16 *a1, char *a2)
   {
     if ( (result & 7) == 0 )
     {
-      HIWORD(v6) = 0;
+      WORDn(v6, 1) = 0;
       if ( result )
       {
         BYTE1(v6) = *((_BYTE *)a1 + 7);
         v7 = *((unsigned __int8 *)a1 + 5);
-        LOBYTE(v6) = *((_BYTE *)a1 + 6);
+        BYTEn(v6, 0) = *((_BYTE *)a1 + 6);
       }
       else
       {
         BYTE1(v6) = *((_BYTE *)a1 + 4);
         v7 = *((unsigned __int8 *)a1 + 2);
-        LOBYTE(v6) = *((_BYTE *)a1 + 3);
+        BYTEn(v6, 0) = *((_BYTE *)a1 + 3);
       }
       v4 = v7 | (v6 << 8);
     }

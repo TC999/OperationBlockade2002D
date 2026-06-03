@@ -8,6 +8,6 @@ double __cdecl sub_4022C0(char *self, int a2, int a3, int a4)
   v5[1] = a3;
   v5[0] = a2;
   v5[2] = a4;
-  sub_46C5C5(v6, v5, self + 328);
-  return v7;
+  sub_46C5C5((float *)&v6, (float *)&v5, (float *)(self + 328));
+  return (double)v7;
 }

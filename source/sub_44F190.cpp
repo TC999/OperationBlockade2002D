@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (0044F190) --------------------------------------------------------
 _DWORD *__cdecl sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
 {
@@ -34,7 +36,7 @@ _DWORD *__cdecl sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
 
   v5 = self;
   result = *(_DWORD **)(self + 8);
-  if ( (*(_DWORD *)(self + 12) - (int)result) >> 2 >= a3 )
+  if ( (*(_DWORD *)(self + 12) - (uintptr_t)result) >> 2 >= a3 )
   {
     if ( result - a2 >= a3 )
     {
@@ -89,23 +91,23 @@ _DWORD *__cdecl sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
       for ( m = a2; m != v25; ++m )
         *m = *a4;
       result = (_DWORD *)(v20 + *(_DWORD *)(v5 + 8));
-      *(_DWORD *)(v5 + 8) = result;
+      *(_DWORD *)(v5 + 8) = (uint32)(uintptr_t)result;
     }
   }
   else
   {
     v7 = *(_DWORD *)(self + 4);
-    if ( !v7 || (v8 = ((int)result - v7) >> 2, a3 >= v8) )
+    if ( !v7 || (v8 = ((uintptr_t)result - v7) >> 2, a3 >= v8) )
       v8 = a3;
     if ( v7 )
-      v9 = ((int)result - v7) >> 2;
+      v9 = ((uintptr_t)result - v7) >> 2;
     else
       v9 = 0;
     v10 = v8 + v9;
     v34 = v10;
     if ( v10 < 0 )
       v10 = 0;
-    v35 = operator new(4 * v10);
+    v35 = (_DWORD *)operator new(4 * v10);
     v11 = v35;
     for ( n = *(_DWORD **)(v5 + 4); n != a2; ++v11 )
     {
@@ -144,20 +146,20 @@ _DWORD *__cdecl sub_44F190(int self, _DWORD *a2, unsigned int a3, _DWORD *a4)
       while ( v17 != v15 );
     }
     sub_4885A6(*(LPVOID *)(self + 4));
-    *(_DWORD *)(self + 12) = &v35[v34];
+    *(_DWORD *)(self + 12) = (uint32)(uintptr_t)&v35[v34];
     v18 = *(_DWORD *)(self + 4);
     if ( v18 )
     {
       v19 = *(_DWORD *)(self + 8);
-      *(_DWORD *)(self + 4) = v35;
+      *(_DWORD *)(self + 4) = (uint32)(uintptr_t)v35;
       result = &v35[a3 + ((v19 - v18) >> 2)];
     }
     else
     {
-      *(_DWORD *)(self + 4) = v35;
+      *(_DWORD *)(self + 4) = (uint32)(uintptr_t)v35;
       result = &v35[a3];
     }
-    *(_DWORD *)(self + 8) = result;
+    *(_DWORD *)(self + 8) = (uint32)(uintptr_t)result;
   }
   return result;
 }

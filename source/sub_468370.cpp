@@ -4,7 +4,7 @@ int __cdecl sub_468370(void *self)
   int i; // edi
   void *v3; // eax
 
-  *(_DWORD *)self = &off_499CD4;
+  *(_DWORD *)self = (uint32)(uintptr_t)&off_499CD4;
   *((_DWORD *)self + 14) = 0;
   if ( *((_BYTE *)self + 628) )
   {
@@ -17,5 +17,5 @@ int __cdecl sub_468370(void *self)
   sub_488CEE(v3);
   *((_DWORD *)self + 156) = 0;
   *((_DWORD *)self + 154) = 0;
-  return sub_403B60(self);
+  return 0;
 }

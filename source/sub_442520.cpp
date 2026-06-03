@@ -1,4 +1,6 @@
 //----- (00442520) --------------------------------------------------------
+extern char aBoatturretdebu[];
+
 char __cdecl sub_442520(int self)
 {
   int v2; // eax
@@ -28,14 +30,14 @@ char __cdecl sub_442520(int self)
   v3 = self + 36;
   if ( v2 && (unsigned int)((*(_DWORD *)(self + 44) - v2) >> 4) >= 4 )
   {
-    if ( (unsigned int)sub_448730(v3) > 4 )
-      sub_448750(*(_DWORD *)(v3 + 4) + 64, *(_DWORD *)(v3 + 8));
+    if ( (unsigned int)sub_448730((_DWORD *)v3) > 4 )
+      sub_448750((_DWORD *)v3, *(_DWORD **)(v3 + 4), *(_DWORD **)(v3 + 8));
   }
   else
   {
     v4 = *(char **)(self + 44);
-    v5 = sub_448730(v3);
-    sub_419CF0((char *)v3, v4, 4 - v5, &v22);
+    v5 = sub_448730((uint32 *)v3);
+    sub_419CF0((char *)v3, v4, 4 - v5, (uint32 *)&v22);
   }
   v6 = *(_DWORD **)(self + 40);
   *v6 = 1175210701;
@@ -77,7 +79,7 @@ char __cdecl sub_442520(int self)
   v19[1] = v18;
   v19[2] = v20;
   *(_DWORD *)(*(_DWORD *)(self + 40) + 60) = 1149861888;
-  sub_4113F0((_DWORD *)dword_4F5CC4, self, 65280, 512, 0);
+  sub_4113F0((_DWORD *)dword_4F5CC4, self, (__int16)65280, (__int16)512, (char)0);
   *(_BYTE *)(self + 52) = sub_422BA0(AppName, aBoatturretdebu, 0) != 0;
   return 1;
 }

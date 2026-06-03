@@ -16,17 +16,17 @@ int __cdecl sub_4560B0(int self, int a2, _DWORD *a3, int a4, int a5)
   float v18; // [esp+38h] [ebp+10h]
 
   sub_401270((_DWORD *)self);
-  Iostream_init::Iostream_init((Iostream_init *)(self + 492));
+  qmemcpy((void *)(self + 492), (const void *)0, 0x10u); // Iostream_init placeholder
   *(_DWORD *)(self + 396) = a4;
   *(_DWORD *)(self + 400) = a5;
   *(_DWORD *)(self + 392) = a2;
-  *(_DWORD *)self = &off_499B10;
+  *(_DWORD *)self = (DWORD)&off_499B10;
   *(_BYTE *)(self + 404) = 1;
   *(_BYTE *)(self + 420) = 0;
   *(_DWORD *)(self + 428) = *a3;
   *(_DWORD *)(self + 432) = a3[1];
   *(_DWORD *)(self + 436) = a3[2];
-  *(float *)(self + 436) = sub_468BE0(*(_DWORD *)(self + 428), *(_DWORD *)(self + 432), 0);
+  *(float *)(self + 436) = sub_468BE0((int *)*(_DWORD *)(self + 428), *(_DWORD *)(self + 432), 0, NULL);
   *(_DWORD *)(self + 440) = 0;
   *(_DWORD *)(self + 452) = 0;
   *(_DWORD *)(self + 456) = 0;
@@ -57,7 +57,7 @@ int __cdecl sub_4560B0(int self, int a2, _DWORD *a3, int a4, int a5)
   *(float *)(self + 1336) = *(float *)(v14 + 328) - *(float *)(v14 + 324) + v13;
   *(_DWORD *)(self + 1340) = *(_DWORD *)(v14 + 312);
   v15 = sub_409960((_DWORD *)dword_520970, self);
-  *(_DWORD *)(self + 1376) = v15;
+  *(_DWORD *)(self + 1376) =(DWORD)(uintptr_t)v15;
   v15[3] = 5;
   *(_DWORD *)(*(_DWORD *)(self + 1376) + 48) = *(_DWORD *)(*(_DWORD *)(self + 392) + 316);
   *(_DWORD *)(*(_DWORD *)(self + 1376) + 52) = 0;

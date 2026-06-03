@@ -60,7 +60,7 @@ _BYTE *__cdecl sub_4828DF(_DWORD *a1, _DWORD *a2, int a3, _BYTE **a4)
       v15 = *v14;
       v16 = result + 3;
       *v16 = *(_BYTE *)(v15 + v26 + v5);
-      LOBYTE(v10) = *(_BYTE *)(v15 + v12 + v5);
+      *(_BYTE*)&v10 = *(_BYTE *)(v15 + v12 + v5);
       v8 = v24;
       v16[1] = v10;
       v16[2] = *(_BYTE *)(v27 + v15 + v5);

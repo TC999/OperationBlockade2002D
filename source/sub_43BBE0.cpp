@@ -1,3 +1,7 @@
+extern char aNameedit[];
+extern char aNetusername[];
+extern char aUiNetnameentry[];
+
 //----- (0043BBE0) --------------------------------------------------------
 char __cdecl sub_43BBE0(_DWORD *self)
 {

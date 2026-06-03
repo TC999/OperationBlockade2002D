@@ -7,8 +7,8 @@ int sub_40EBA0()
   v0 = (struct _RTL_CRITICAL_SECTION *)operator new(0x18u);
   InitializeCriticalSection(v0);
   lpCriticalSection = v0;
-  v1 = malloc(0x200000u);
-  dword_4F5C8C = v1;
+  v1 = (_DWORD *)malloc(0x200000u);
+  dword_4F5C8C = (int)(DWORD_PTR)v1;
   if ( !v1 )
     return -1;
   dword_4F5C88 = (int)v1;

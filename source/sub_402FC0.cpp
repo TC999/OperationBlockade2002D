@@ -17,7 +17,7 @@ int __cdecl sub_402FC0(int self)
 
   if ( *(_DWORD *)(self + 104) )
   {
-    sub_41D9A0();
+    sub_41D9A0(self);
     *(_DWORD *)(self + 104) = 0;
   }
   for ( result = *(_DWORD *)(self + 76); result > 0; result = *(_DWORD *)(self + 76) )
@@ -40,7 +40,7 @@ int __cdecl sub_402FC0(int self)
       *(_DWORD *)(self + 76) = v8;
       if ( v5 != v8 )
       {
-        memcpy(&v6[v5], &v6[v5 + 1], 4 * (v8 + 0x3FFFFFFF * v5));
+        memcpy(&v6[v5], &v6[v5 + 1], 4 * (v8 - v5));
         *(_DWORD *)(*(_DWORD *)(self + 72) + 4 * *(_DWORD *)(self + 76)) = 0;
       }
     }
@@ -52,7 +52,7 @@ LABEL_11:
     {
       v11 = v9 + 8;
       *(_DWORD *)(self + 96) = v11;
-      v12 = sub_488DD7(*(LPVOID *)(self + 88), 4 * v11);
+      v12 = (int)sub_488DD7(*(LPVOID *)(self + 88), 4 * v11);
       if ( v12 )
       {
         v13 = *(_DWORD *)(self + 92);

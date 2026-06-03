@@ -28,9 +28,9 @@ int __cdecl sub_474686(_DWORD *self, int a2, int a3, int a4)
       v7 = (int)v10;
       v11 = *(v6 - 2) * 128.0 + v14;
       v15 = *v6 * 255.0 + v14;
-      HIBYTE(v8) = (int)v15;
+      ((_BYTE*)&(v8))[1] = (int)v15;
       v6 += 4;
-      LOBYTE(v8) = (int)v11;
+      ((_BYTE*)&(v8))[0] = (int)v11;
       *v4++ = v7 | (v8 << 8);
       ++v13;
     }

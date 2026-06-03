@@ -24,7 +24,7 @@ int __cdecl sub_48B813(int a1, int a2)
         if ( v5 > dword_523A7C )
           goto LABEL_14;
         _lock(9);
-        v4 = (LPVOID)__sbh_alloc_block(v5);
+        v4 = (LPVOID)__sbh_alloc_block((void*)v5, 0, 0);
         _unlock(9);
         if ( v4 )
         {

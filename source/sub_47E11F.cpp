@@ -1,6 +1,8 @@
 //----- (0047E11F) --------------------------------------------------------
 char *__cdecl sub_47E11F(jmp_buf Buf)
 {
+  int *x_offset_table = (int*)&dword_49C320;
+  int *x_sample_table = (int*)&dword_49C33C;
   unsigned int v1; // eax
   int v2; // edi
   unsigned int v3; // eax
@@ -24,8 +26,8 @@ char *__cdecl sub_47E11F(jmp_buf Buf)
       v1 = (v1 + 7) >> 3;
     v2 = Buf[46];
     Buf[48] = v1;
-    v3 = (v2 - dword_49C320[*((unsigned __int8 *)Buf + 276)] + dword_49C33C[*((unsigned __int8 *)Buf + 276)] - 1)
-       / (unsigned int)dword_49C33C[*((unsigned __int8 *)Buf + 276)];
+    v3 = (v2 - x_offset_table[*((unsigned __int8 *)Buf + 276)] + x_sample_table[*((unsigned __int8 *)Buf + 276)] - 1)
+       / (unsigned int)x_sample_table[*((unsigned __int8 *)Buf + 276)];
     v4 = ((v3 * *((unsigned __int8 *)Buf + 281) + 7) >> 3) + 1;
     Buf[52] = v3;
     Buf[51] = v4;

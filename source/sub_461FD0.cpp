@@ -31,7 +31,7 @@ void __cdecl sub_461FD0(_DWORD *self, float *a2, float a3, float a4, int a5, int
       else
         v14 = v13 / a3;
       v15 = (1.0 - v14) * a4;
-      sub_462090(v15);
+      sub_462090((int)self, v15);
     }
   }
 }

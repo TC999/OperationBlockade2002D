@@ -1,3 +1,5 @@
+#include "common.h"
+
 //----- (0040EDB0) --------------------------------------------------------
 int __cdecl sub_40EDB0(int self, int a2)
 {
@@ -72,13 +74,13 @@ int __cdecl sub_40EDB0(int self, int a2)
   if ( !*(_BYTE *)(dword_520970 + 296) )
   {
     v37 = *(float *)(dword_520970 + 24);
-    v4 = sub_408F80(0);
+    v4 = sub_408F80(0, 0);
     if ( v37 == 0.0 )
       v40 = 0.0;
     else
       v40 = v4 / v37;
     v38 = *(float *)(dword_520970 + 24);
-    v5 = sub_408F80(1);
+    v5 = sub_408F80(0, 1);
     if ( v38 == 0.0 )
       v61 = 0.0;
     else
@@ -102,7 +104,7 @@ int __cdecl sub_40EDB0(int self, int a2)
   *(float *)&v52 = *(float *)(self + 44) - *(float *)(self + 32);
   v53 = *(float *)(self + 48) - *(float *)(self + 36);
   v54 = *(float *)(self + 52) - *(float *)(self + 40);
-  sub_46B970(&v52, &v52);
+  sub_46B970((int)(uintptr_t)&v52, (int)(uintptr_t)&v52);
   if ( *(float *)&v52 < 0.0000099999997
     && *(float *)&v52 > -0.0000099999997
     && v53 < 0.0000099999997
@@ -123,7 +125,7 @@ int __cdecl sub_40EDB0(int self, int a2)
   v58 = v44;
   v46 = 0.0 - *(float *)&v52;
   v59 = v46;
-  sub_46B970(&v58, &v58);
+  sub_46B970((int)(uintptr_t)&v58, (int)(uintptr_t)&v58);
   v10 = v61;
   if ( *(_BYTE *)(self + 416) )
     v11 = v10 * 0.5 * 0.017453292;
@@ -131,7 +133,7 @@ int __cdecl sub_40EDB0(int self, int a2)
     v11 = v10 * -0.5 * 0.017453292;
   v32 = v11;
   sub_46BFED((int)v65, (int)&v58, v32);
-  sub_46C5C5(&v52, &v52, v65);
+  sub_46C5C5((float *)(void *)&v52, (float *)(void *)&v52, (float *)(void *)v65);
   v45 = v59 * v54 - v60 * v53;
   v12 = v60 * *(float *)&v52;
   v13 = *(float *)&v58 * v54;
@@ -189,16 +191,16 @@ int __cdecl sub_40EDB0(int self, int a2)
       v33 = v60 * v39;
       v27 = v59 * v39;
       v23 = *(float *)&v58 * v39;
-      sub_40F4A0(LODWORD(v23), LODWORD(v27), LODWORD(v33));
+      sub_40F4A0((_DWORD *)&v62, LODWORD(v23), LODWORD(v27), LODWORD(v33));
       v16 = *(float *)(self + 412);
       v34 = v57 * v16;
       v28 = v56 * v16;
       v24 = v55 * v16;
-      sub_40F4A0(LODWORD(v24), LODWORD(v28), LODWORD(v34));
+      sub_40F4A0((_DWORD *)&v62, LODWORD(v24), LODWORD(v28), LODWORD(v34));
       v35 = v50 * v66;
       v29 = v47 * v66;
       v25 = v45 * v66;
-      sub_40F4A0(LODWORD(v25), LODWORD(v29), LODWORD(v35));
+      sub_40F4A0((_DWORD *)&v62, LODWORD(v25), LODWORD(v29), LODWORD(v35));
       *v6 = v62 + *v6;
       *(float *)(self + 36) = v63 + *(float *)(self + 36);
       *(float *)(self + 40) = v64 + *(float *)(self + 40);
@@ -211,7 +213,7 @@ int __cdecl sub_40EDB0(int self, int a2)
   v36 = v54 + *(float *)(self + 40);
   v30 = v53 + *(float *)(self + 36);
   v26 = *(float *)&v52 + *v6;
-  sub_40F4A0(LODWORD(v26), LODWORD(v30), LODWORD(v36));
+  sub_40F4A0((_DWORD *)&v62, LODWORD(v26), LODWORD(v30), LODWORD(v36));
   v17 = v63;
   v18 = v64;
   *(float *)(self + 44) = v62;
@@ -223,5 +225,5 @@ int __cdecl sub_40EDB0(int self, int a2)
   v21 = *(_DWORD *)(self + 40);
   *(_DWORD *)(self + 396) = v20;
   *(_DWORD *)(self + 400) = v21;
-  return sub_428620(LODWORD(v66));
+  return sub_428620((_DWORD *)self, LODWORD(v66));
 }

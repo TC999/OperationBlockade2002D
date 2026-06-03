@@ -7,7 +7,7 @@ _DWORD *__cdecl sub_41C6A0(_DWORD *self)
   *((_BYTE *)self + 2) = 0;
   *(_BYTE *)self = 0;
   *((_BYTE *)self + 3) = 0;
-  self[9] = operator new(0x12u);
+  self[9] = (uint32)(uintptr_t)operator new(0x12u);
   self[1] = 0;
   self[3] = 1065353216;
   self[4] = 1065353216;

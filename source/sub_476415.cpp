@@ -5,19 +5,22 @@ LPVOID __cdecl sub_476415(LPVOID *self)
   int v3; // ebx
   LPVOID result; // eax
 
-  *self = &off_49A818;
-  sub_475CAA(self);
+  *self = (LPVOID)&off_49A818;
+  sub_475CAA((_DWORD *)self);
   v2 = self + 1049;
   v3 = 4;
   do
   {
     result = *v2;
     if ( *v2 )
-      result = (LPVOID)sub_4885A6(*v2);
+    {
+      sub_4885A6(*v2);
+      result = 0;
+    }
     ++v2;
     --v3;
   }
   while ( v3 );
-  *self = &off_49A774;
+  *self = (LPVOID)&off_49A774;
   return result;
 }

@@ -6,7 +6,7 @@ int __cdecl sub_4134A0(_DWORD *self)
   void *v4; // edi
   int result; // eax
 
-  sub_4139B0();
+  sub_4139B0(self);
   v2 = 0;
   if ( (int)self[8] > 0 )
   {

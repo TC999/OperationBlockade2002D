@@ -1,3 +1,7 @@
+#include "common.h"
+
+extern char aIpx[];
+
 //----- (0043BDB0) --------------------------------------------------------
 _DWORD *__cdecl sub_43BDB0(_DWORD *self, int a2)
 {
@@ -7,13 +11,13 @@ _DWORD *__cdecl sub_43BDB0(_DWORD *self, int a2)
 
   sub_4233C0(self, a2, aIpx);
   v3 = self + 12;
-  *self = &off_499710;
+  *self = (uint32)(uintptr_t)&off_499710;
   memset(self + 12, 0, 0x40u);
   v4 = 16;
   do
   {
-    v5 = operator new(0x104u);
-    *v3++ = v5;
+    v5 = (_BYTE *)operator new(0x104u);
+    *v3++ = (uint32)(uintptr_t)v5;
     --v4;
     *v5 = 0;
   }

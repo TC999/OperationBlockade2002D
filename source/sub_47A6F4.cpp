@@ -61,7 +61,7 @@ void __cdecl sub_47A6F4(jmp_buf Buf)
         v8 = 1.0;
       else
         v8 = 1.0 / (*((float *)Buf + 77) * *((float *)Buf + 76));
-      v9 = sub_47D91C(Buf, 4 * v7);
+      v9 = (int)sub_47D91C(Buf, 4 * v7);
       v10 = (Buf[24] & 0x480) == 0;
       Buf[81] = v9;
       Bufb = 0;
@@ -71,9 +71,9 @@ void __cdecl sub_47A6F4(jmp_buf Buf)
         {
           do
           {
-            *(_DWORD *)(Buf[81] + 4 * (_DWORD)Bufb) = sub_47D91C(Buf, 0x200u);
+            *(_DWORD *)(Buf[81] + 4 * (_DWORD)Bufb) = (uint32)sub_47D91C(Buf, 0x200u);
             v16 = 0;
-            v22 = (unsigned int)((_DWORD)Bufb * dword_4B1560[v23]) >> 4;
+            v22 = (unsigned int)((_DWORD)Bufb * ((int*)&dword_4B1560)[v23]) >> 4;
             do
             {
               v17 = (__int64)(pow((double)v22 * 0.00001525902189669642, v8) * 65535.0 + 0.5);
@@ -93,7 +93,7 @@ void __cdecl sub_47A6F4(jmp_buf Buf)
         {
           do
           {
-            v11 = sub_47D91C(Buf, 0x200u);
+            v11 = (int)sub_47D91C(Buf, 0x200u);
             v12 = Bufb;
             Bufb = (int *)((char *)Bufb + 1);
             *(_DWORD *)(Buf[81] + 4 * (_DWORD)v12) = v11;
@@ -109,8 +109,8 @@ void __cdecl sub_47A6F4(jmp_buf Buf)
           v19 = (__int64)(pow(((double)(int)Bufc + 0.5) * 0.00390625, 1.0 / v8) * v18);
           if ( v6 <= v19 )
           {
-            LOBYTE(v13) = 0;
-            HIBYTE(v13) = (_BYTE)Bufc;
+            *(_BYTE*)&(v13) = 0;
+            *((_BYTE*)&(v13)+1) = (_BYTE)Bufc;
             do
             {
               v14 = v6 >> v21;
@@ -132,13 +132,13 @@ void __cdecl sub_47A6F4(jmp_buf Buf)
         v2 = 1.0;
       else
         v2 = 1.0 / (*((float *)Buf + 77) * *((float *)Buf + 76));
-      v3 = sub_47D91C(Buf, 0x100u);
+      v3 = (int)sub_47D91C(Buf, 0x100u);
       Bufa = 0;
       Buf[78] = v3;
       do
       {
         v4 = (__int64)(pow((double)(int)Bufa * 0.00392156862745098, v2) * 255.0 + 0.5);
-        HIDWORD(v4) = Bufa;
+        HIDWORD(v4) = (uint32)Bufa;
         Bufa = (int *)((char *)Bufa + 1);
         *(_BYTE *)(HIDWORD(v4) + Buf[78]) = v4;
       }

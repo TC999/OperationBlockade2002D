@@ -30,7 +30,7 @@ int __cdecl sub_47C53E(_DWORD *a1, unsigned int a2, int a3, signed int a4)
       v9 = v5;
       do
       {
-        *(_DWORD *)(v11 + 4 * v7) = v8;
+        *(_DWORD *)(v11 + 4 * v7) = (uint32)(size_t)v8;
         v8 += 32 * a3;
         ++v7;
         --v9;

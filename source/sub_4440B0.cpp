@@ -17,7 +17,7 @@ char __cdecl sub_4440B0(int self, char a2)
     return v3;
   if ( *(_BYTE *)(self + 392) )
     sub_444030((_DWORD *)self, 1);
-  sub_4477F0(1);
+  sub_4477F0(self, 1);
   v4 = *(_DWORD *)(self + 444);
   *(float *)(self + 428) = (1.0 - *(float *)(v4 + 16)) * *(float *)(v4 + 4288) + *(float *)(v4 + 4288) * 4.0;
   if ( *(_BYTE *)(dword_4F5CC4 + 937) )
@@ -64,16 +64,16 @@ LABEL_11:
     *(_DWORD *)(*(_DWORD *)(self + 444) + 4284) = v12;
     v10 = *(_DWORD *)(self + 444);
     *(float *)(self + 428) = *(float *)(v10 + 4288) * 3.0 + *(float *)(self + 428);
-    LOBYTE(v3) = sub_416F80((_DWORD *)v10, 1);
+    v3 = sub_416F80((_DWORD *)v10, 1);
     *(_BYTE *)(self + 440) = 2;
   }
   else
   {
-    LOBYTE(v3) = *(_BYTE *)(dword_4F5CC4 + 937);
+    v3 = *(_BYTE *)(dword_4F5CC4 + 937);
     if ( !(_BYTE)v3 )
     {
       sub_4164A0((_DWORD *)v4, 6);
-      LOBYTE(v3) = sub_416F80(*(_DWORD **)(self + 444), 1);
+      v3 = sub_416F80(*(_DWORD **)(self + 444), 1);
     }
     *(_BYTE *)(self + 440) = 1;
   }

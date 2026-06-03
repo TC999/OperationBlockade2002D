@@ -7,7 +7,7 @@ char __cdecl sub_422B20(char *FileName)
   result = sub_422AE0(FileName);
   if ( result )
   {
-    v2 = fopen(FileName, Mode);
+    v2 = fopen(FileName, (const char *)Mode);
     if ( v2 )
     {
       fclose(v2);

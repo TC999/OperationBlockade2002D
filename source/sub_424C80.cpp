@@ -58,7 +58,7 @@ LABEL_13:
   v15 = (double)(v9 + v6[77]) / v22;
   v13 = (double)v21 / v10;
   v12 = (double)v9 / v22;
-  sub_413130(LODWORD(v12), LODWORD(v13), LODWORD(v15), LODWORD(v17));
+  sub_413130((int)v4, LODWORD(v12), LODWORD(v13), LODWORD(v15), LODWORD(v17));
 LABEL_14:
   if ( a2 != self[14] )
   {
@@ -70,5 +70,5 @@ LABEL_14:
     sub_413090(*(_DWORD *)(a2 + 176), v14, v16, v18, v19);
   }
   v20 = *(float *)(a2 + 64) + 1000.0;
-  sub_413120(LODWORD(v20));
+  sub_413120((int)v4, LODWORD(v20));
 }
