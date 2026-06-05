@@ -1,3 +1,7 @@
+// AUTO-FIX: LNK2001 - Alias stdcall Direct3DCreate8@4 to cdecl Direct3DCreate8
+#pragma comment(linker, "/ALTERNATENAME:__imp__Direct3DCreate8@4=__imp__Direct3DCreate8")
+#pragma comment(linker, "/ALTERNATENAME:_Direct3DCreate8@4=_Direct3DCreate8")
+
 //----- (004268C0) --------------------------------------------------------
 char sub_4268C0()
 {
